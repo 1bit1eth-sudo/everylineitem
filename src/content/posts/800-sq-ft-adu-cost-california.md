@@ -1,8 +1,7 @@
 ---
 title: "800 sq ft ADU Cost in California: A Full 2026 Line-Item Breakdown"
-description: "We modeled an 800 sq ft detached ADU in Los Angeles County and priced every phase. Total: $320,000. Here's where each dollar goes — and why smaller isn't cheaper."
+description: "We modeled an 800 sq ft detached ADU in Los Angeles County and priced every phase. Total: $320,000. Here is where each dollar goes and why smaller is not cheaper."
 pubDatetime: 2026-08-26T00:00:00Z
-modDatetime: 2026-08-26T00:00:00Z
 tags: ["adu cost", "800 sq ft adu", "los angeles", "california", "2026"]
 draft: false
 ---
