@@ -24,7 +24,7 @@ The total came to **$320,000, or $400 per square foot.**
 
 That last row is the one worth sitting with. Nearly half of an ADU budget goes into two rooms, and that share does not shrink when the building does. We will come back to it.
 
-<iframe src="https://www.youtube.com/embed/YOUTUBE_ID_HERE" title="What an 800 sq ft ADU Actually Costs in California" loading="lazy" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;border-radius:8px;"></iframe>
+<iframe src="https://www.youtube.com/embed/everylineitem" title="What an 800 sq ft ADU Actually Costs in California" loading="lazy" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;border-radius:8px;"></iframe>
 
 *Every line item below is built at 1:24 scale in the video above. No narration — the numbers carry it.*
 
