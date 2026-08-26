@@ -1,7 +1,13 @@
 ---
-title: "800 sq ft ADU Cost California"
-description: "California에서 800 sq ft ADU 비용 정리"
+author: Sat Naing
 pubDatetime: 2026-08-26T00:00:00.000Z
+title: "800 sq ft ADU Cost California"
+featured: false
+draft: false
+tags:
+  - adu
+  - cost
+description: "California 800 sq ft ADU cost breakdown"
 ---
 
 Description
