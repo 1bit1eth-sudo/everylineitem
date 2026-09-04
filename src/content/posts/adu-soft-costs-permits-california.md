@@ -26,6 +26,10 @@ Notice the pattern: doubling the floor area from 400 to 800 only adds about **$4
 - [400 sq ft ADU Cost in California (2026)](/posts/400-sq-ft-adu-cost-california/)
 - [Garage Conversion ADU Cost in California (2026)](/posts/garage-conversion-adu-cost-california/)
 - **ADU Soft Costs** — this post
+- [Modular vs Site-Built ADU Cost in California (2026)](/posts/modular-vs-site-built-adu-cost-california/)
+- [ADU All-In Cost in California (2026)](/posts/adu-all-in-cost-california/)
+- [Coastal vs Inland ADU Cost in Southern California (2026)](/posts/coastal-vs-inland-adu-cost-california/)
+- [ADU Rent Payback ROI in California (2026)](/posts/adu-rent-payback-roi-california/)
 
 ## What counts as soft cost
 
