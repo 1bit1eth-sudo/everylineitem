@@ -1,7 +1,7 @@
 ---
 title: "ADU Soft Costs in California: Permits, Design, and Plan Check Line Items (2026)"
 description: "Soft costs on California ADUs typically land around $28,000–$40,000 before construction starts. Here is every design, engineering, plan check, and fee line — with ranges by jurisdiction type."
-pubDatetime: 2026-09-04T15:00:00Z
+pubDatetime: 2026-09-04T10:00:00Z
 tags: ["adu permits", "soft costs", "california", "2026"]
 draft: false
 featured: false
