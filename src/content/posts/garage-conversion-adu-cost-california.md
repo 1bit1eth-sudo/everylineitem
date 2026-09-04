@@ -1,7 +1,7 @@
 ---
 title: "Garage Conversion ADU Cost in California: Full 2026 Line-Item Breakdown"
 description: "We modeled a typical 2-car garage conversion ADU in Los Angeles County (~450 sq ft living). Total: $190,000. See which phases shrink vs a new detached build — and which grow."
-pubDatetime: 2026-09-05T00:00:00Z
+pubDatetime: 2026-09-04T12:00:00Z
 tags: ["garage conversion", "adu cost", "california", "2026"]
 draft: false
 featured: false
