@@ -13,6 +13,14 @@ So we did something different. We modeled one specific unit: **800 square feet, 
 
 The total came to **$320,000, or $400 per square foot.**
 
+
+## In this series
+
+- **800 sq ft ADU Cost in California** — this post (featured)
+- [400 sq ft ADU Cost in California (2026)](/posts/400-sq-ft-adu-cost-california/) — why smaller is not cheaper
+- [Garage Conversion ADU Cost in California (2026)](/posts/garage-conversion-adu-cost-california/)
+- [ADU Soft Costs: Permits, Design, and Plan Check (2026)](/posts/adu-soft-costs-permits-california/)
+
 ## The short answer
 
 | 800 sq ft detached ADU · Los Angeles County · 2026 | Amount |
@@ -58,7 +66,7 @@ This is the whole reason the next table exists.
 
 The most common piece of advice a homeowner gets is to shrink the plan. Cut it in half and cut the cost in half. It sounds obvious.
 
-Here is the same unit at 400 square feet, priced with the same six phases.
+Here is the same unit at 400 square feet, priced with the same six phases. For the full standalone write-up, see [400 sq ft ADU cost in California](/posts/400-sq-ft-adu-cost-california/).
 
 | Phase | 400 sq ft | 800 sq ft |
 | --- | --- | --- |
