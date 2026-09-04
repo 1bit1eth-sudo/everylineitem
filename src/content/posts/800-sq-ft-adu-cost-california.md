@@ -20,6 +20,10 @@ The total came to **$320,000, or $400 per square foot.**
 - [400 sq ft ADU Cost in California (2026)](/posts/400-sq-ft-adu-cost-california/) — why smaller is not cheaper
 - [Garage Conversion ADU Cost in California (2026)](/posts/garage-conversion-adu-cost-california/)
 - [ADU Soft Costs: Permits, Design, and Plan Check (2026)](/posts/adu-soft-costs-permits-california/)
+- [Modular vs Site-Built ADU Cost in California (2026)](/posts/modular-vs-site-built-adu-cost-california/)
+- [ADU All-In Cost in California (2026)](/posts/adu-all-in-cost-california/)
+- [Coastal vs Inland ADU Cost in Southern California (2026)](/posts/coastal-vs-inland-adu-cost-california/)
+- [ADU Rent Payback ROI in California (2026)](/posts/adu-rent-payback-roi-california/)
 
 ## The short answer
 
