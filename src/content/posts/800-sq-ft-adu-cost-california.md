@@ -4,11 +4,12 @@ description: "We modeled an 800 sq ft detached ADU in Los Angeles County and pri
 pubDatetime: 2026-08-26T00:00:00Z
 tags: ["adu cost", "800 sq ft adu", "los angeles", "california", "2026"]
 draft: false
+featured: true
 ---
 
 Most ADU cost articles give you a range and stop. "$150,000 to $400,000." That range is technically correct and practically useless — it is wide enough to include both a garage conversion and a coastal custom build.
 
-So we did something different. We modeled one specific unit: **800 square feet, detached, new construction, single story, Los Angeles County, mid-grade finishes.** Then we priced every phase and built the whole thing as a 1:24 scale model so you can see what each number actually buys.
+So we did something different. We modeled one specific unit: **800 square feet, detached, new construction, single story, Los Angeles County, mid-grade finishes.** Then we priced every phase so you can see what each number actually buys.
 
 The total came to **$320,000, or $400 per square foot.**
 
@@ -22,10 +23,6 @@ The total came to **$320,000, or $400 per square foot.**
 | Share of budget in one kitchen and one bathroom | **46%** |
 
 That last row is the one worth sitting with. Nearly half of an ADU budget goes into two rooms, and that share does not shrink when the building does. We will come back to it.
-
-<iframe src="https://www.youtube.com/embed/everylineitem" title="What an 800 sq ft ADU Actually Costs in California" loading="lazy" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;border-radius:8px;"></iframe>
-
-*Every line item below is built at 1:24 scale in the video above. No narration — the numbers carry it.*
 
 ## The full line-item breakdown
 
@@ -41,9 +38,9 @@ Six phases. Every project in this series uses the same six, so you can hold any 
 | Landscaping & hardscape | $13,000 | 4% |
 | **Total** | **$320,000** | **$400 / sq ft** |
 
-Notice what is *not* the biggest number. The foundation everybody worries about is 12%. The framing you watch go up in every construction video is 15%. The roof and siding together are 13%.
+Notice what is *not* the biggest number. The foundation everybody worries about is 12%. Framing is 15%. The roof and siding together are 13%.
 
-The money is inside the walls, after the interesting part is over.
+The money is inside the walls, after the shell is up.
 
 ## Where 46% of the budget goes
 
