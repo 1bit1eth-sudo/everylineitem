@@ -1,1 +1,1 @@
-PLACEHOLDER
+file:///workspace/posts-publish/400-sq-ft-adu-cost-california.md
