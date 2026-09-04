@@ -1,37 +1,20 @@
 ---
 title: "About"
-description: "A bit about me and this blog."
+description: "What Every Line Item covers — line-item cost breakdowns for real builds."
 ---
 
-AstroPaper is a minimal, accessible and SEO-friendly blog theme built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+**Every Line Item** publishes line-item cost breakdowns for real construction projects — starting with California ADUs and residential builds.
 
-![Astro Paper](@/assets/images/astropaper-og.jpg)
+Most cost articles give a wide range and stop. We pick one specific build, price every phase, and show where the money actually goes: permits, foundation, framing, envelope, systems, and finishes.
 
-AstroPaper provides a solid foundation for blogs, or even portfolios\_ with full markdown support, built-in dark mode, and a clean layout that works out-of-the-box.
+## What you'll find here
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
+- Phase-by-phase cost tables you can compare across projects
+- Notes on what scales with size and what doesn't
+- Methodology and sources so you can check the numbers yourself
 
-## Features
+This site is built with [Astro](https://astro.build/) using the AstroPaper theme layout. Content is about construction costs — not theme documentation.
 
-AstroPaper comes with a set of useful features that make content publishing easy and effective:
+## Start here
 
-- SEO-friendly
-- Fast performance
-- Light & dark mode
-- Highly customizable
-- Organizable blog posts
-- Responsive & accessible
-- Static search with [PageFind](https://pagefind.app/)
-- Automatic social image generation
-
-and so much more.
-
-## Show your support
-
-If you like [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
-
-Found a bug 🐛 or have an improvement ✨ in mind? Feel free to open an [issue](https://github.com/satnaing/astro-paper/issues), submit a [pull request](https://github.com/satnaing/astro-paper/pulls) or start a [discussion](https://github.com/satnaing/astro-paper/discussions).
-
-If you find this theme helpful, you can also [sponsor me on GitHub](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
-
-Kyay zuu! 🙏🏼
+Read the first breakdown: [800 sq ft ADU Cost in California](/posts/800-sq-ft-adu-cost-california/).
