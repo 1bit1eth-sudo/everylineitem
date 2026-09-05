@@ -135,8 +135,6 @@ constraints are decided by your street width and overhead lines.
 finishes across a full unit is typically $15,000 to $30,000. This is the
 only variable on the list you fully control after permits are pulled.
 
-**5b. Temporary note to force unique content while restoring:** removed.
-
 ## What this number does not include
 
 This is the section most cost articles leave out, and leaving it out is how a $320,000 build becomes a $380,000 surprise.
