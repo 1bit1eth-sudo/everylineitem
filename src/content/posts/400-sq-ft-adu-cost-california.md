@@ -2,10 +2,14 @@
 title: "400 sq ft ADU Cost in California: Why Smaller Is Not Cheaper (2026)"
 description: "We modeled a 400 sq ft detached ADU in Los Angeles County. Total: $215,000 — or $537 per square foot. Here is every phase, why fixed costs dominate, and when 400 still makes sense."
 pubDatetime: 2026-09-02T00:00:00Z
+modDatetime: 2026-09-05T00:00:00Z
 tags: ["adu cost", "400 sq ft adu", "california", "2026", "cost per square foot"]
 draft: false
 featured: false
 ---
+> **Published:** 2 Sep 2026 · **Last verified:** 5 Sep 2026 · **Next review:** Dec 2026
+> Cost figures are re-checked against permit records quarterly. Changes are
+> logged in [Corrections](/corrections/).
 
 Most homeowners hear "build smaller" and hear "spend less." On a California ADU, those are not the same sentence.
 
@@ -15,14 +19,22 @@ That is two-thirds the cost of the 800 sq ft unit ($320,000) for half the floor 
 
 ## In this series
 
-- [800 sq ft ADU Cost in California (2026)](/posts/800-sq-ft-adu-cost-california/) — the featured full breakdown
-- **400 sq ft ADU Cost in California** — this post
-- [Garage Conversion ADU Cost in California (2026)](/posts/garage-conversion-adu-cost-california/)
-- [ADU Soft Costs: Permits, Design, and Plan Check (2026)](/posts/adu-soft-costs-permits-california/)
-- [Modular vs Site-Built ADU Cost in California (2026)](/posts/modular-vs-site-built-adu-cost-california/)
-- [ADU All-In Cost in California (2026)](/posts/adu-all-in-cost-california/)
-- [Coastal vs Inland ADU Cost in Southern California (2026)](/posts/coastal-vs-inland-adu-cost-california/)
-- [ADU Rent Payback ROI in California (2026)](/posts/adu-rent-payback-roi-california/)
+Every build below uses the same six-phase ledger, so you can compare any two
+directly.
+
+**New construction**
+- [800 sq ft detached](/posts/800-sq-ft-adu-cost-california/) — $320,000 · $400/sq ft
+- [400 sq ft detached](/posts/400-sq-ft-adu-cost-california/) — $215,000 · $537/sq ft **(this post)**
+- [Garage conversion, ~450 sq ft](/posts/garage-conversion-adu-cost-california/) — $190,000 · $422/sq ft
+
+**Cost drivers**
+- [Soft costs: permits, design, plan check](/posts/adu-soft-costs-permits-california/)
+- [Modular vs site-built](/posts/modular-vs-site-built-adu-cost-california/)
+- [Coastal vs inland](/posts/coastal-vs-inland-adu-cost-california/)
+
+**Ownership**
+- [All-in cost, year one](/posts/adu-all-in-cost-california/)
+- [Rent payback and ROI](/posts/adu-rent-payback-roi-california/)
 
 ## The short answer
 
@@ -93,7 +105,9 @@ These numbers match the comparison table in the [800 sq ft post](/posts/800-sq-f
 
 **Half the size. Two-thirds the cost.**
 
-You gave up 400 square feet of living space and saved $105,000. On a dollars-per-foot basis the small unit is 34% more expensive to build. Regional project data across Southern California shows the same curve: smaller studios often land near $500–$600 per square foot, while 800–1,000 sq ft units commonly land closer to $375–$450 when site conditions are comparable.
+You gave up 400 square feet of living space and saved $105,000. On a dollars-per-foot basis the small unit is 34% more expensive to build. And the market agrees. In San Diego, a 500 sq ft one-bedroom ADU commonly runs around $300,000, which is roughly $600 per square foot, while a 1,000 sq ft unit lands near $425,000, or about $425 per square foot. The curve bends the same way everywhere in Southern California.
+
+Regional project data across Southern California shows the same curve: smaller studios often land near $500–$600 per square foot, while 800–1,000 sq ft units commonly land closer to $375–$450 when site conditions are comparable.
 
 ## When 400 still makes sense
 
@@ -141,19 +155,48 @@ Garage conversions are a different animal — often lower absolute cost, differe
 
 ## Methodology and sources
 
-Every figure above is a modeled median, not a quote. The 400 and 800 models share the same methodology so the comparison is apples-to-apples.
+Every figure on this page is a **modeled median, not a quote.** Here is
+exactly how it was built, so you can check it or reproduce it yourself.
 
 | Input | Source |
 | --- | --- |
-| Declared valuations on comparable ADU builds | Los Angeles County and city building department permit portals |
-| Assembly-level unit costs by phase | RSMeans residential construction cost data |
-| Regional cost multipliers | NAHB construction cost survey |
-| Per-square-foot ranges, Southern California | 2026 contractor estimate data, site-built detached ADUs |
-| Statewide rules, fees and exemptions | California HCD ADU Handbook |
+| Statewide ADU rules, size limits, and fee exemptions | [California HCD ADU Handbook](https://www.hcd.ca.gov/building-standards/adu/handbook) |
+| 2026 changes to State ADU Law | [HCD Handbook Addendum, December 2025](https://www.hcd.ca.gov/building-standards/adu) |
+| Declared construction valuations on comparable local builds | [LA County EPIC-LA permit portal](https://epicla.lacounty.gov/) · [LADBS Permit & Inspection Report](https://www.ladbsservices2.lacity.org/onlineservices/?service=plr) |
+| Permit record datasets | [LA County Open Data — EPIC-LA Permit Finder](https://data.lacounty.gov/datasets/epic-la-permit-finder) |
+| Phase-level cost shares for residential construction | [NAHB Cost of Construction Survey](https://eyeonhousing.org/2025/01/cost-of-constructing-a-home-in-2024/) |
+| Per-square-foot construction price benchmarks | [NAHB Survey of Construction](https://eyeonhousing.org/2025/10/square-foot-prices-moderate-in-2024/) |
+| Regulatory cost share of a finished build | [NAHB regulatory cost study, June 2026](https://eyeonhousing.org/2026/06/home-building-regulatory-cost-burdens-increased-40-from-2021-to-2026/) |
+| Zoning and parcel constraints | [ZIMAS (City of Los Angeles)](https://zimas.lacity.org/) |
 
-**How to check your own number.** Search your city's permit portal for recent ADU permits near your address and read the declared construction valuation. That is the closest local baseline you can get without paying for a bid.
+### How to check this number against your own address
 
-*Figures are Los Angeles County, 2026, stated as medians of contractor ranges. Costs vary by jurisdiction, site access, and finish level. This is construction cost information — not a quote, and not legal, engineering, or financial advice. Confirm requirements with your local building department and a licensed California contractor.*
+Most California jurisdictions publish permit records online, including the
+**declared construction valuation** for each project. That declared valuation
+is the closest thing to a real local baseline you can get without paying
+anyone.
+
+1. Open [EPIC-LA](https://epicla.lacounty.gov/) for unincorporated LA County,
+   or the [LADBS Permit & Inspection Report](https://www.ladbsservices2.lacity.org/onlineservices/?service=plr)
+   for addresses inside the City of Los Angeles.
+2. Search recent ADU permits within about a mile of your address.
+3. Compare the declared valuation to the phase totals on this page.
+
+If your local numbers diverge meaningfully from ours, **we want to know.**
+See [Corrections](/corrections/).
+
+### Our position
+
+We don't build ADUs. We don't sell plans. We don't sell your information to
+contractors. No figure on this site has been paid for or reviewed by anyone
+whose costs we publish. Full detail on [Methodology](/methodology/) and
+[About](/about/).
+
+*Figures are Los Angeles County, 2026, stated as medians of contractor
+ranges. Costs vary by jurisdiction, site access, and finish level. This is
+construction cost information — not a quote, and not legal, engineering, or
+financial advice. Confirm requirements with your local building department
+and a licensed California contractor.*
 
 ## Frequently asked questions
 
