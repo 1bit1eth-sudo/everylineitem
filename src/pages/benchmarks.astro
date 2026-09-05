@@ -1,0 +1,36 @@
+---
+import { getEntry, render } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Main from "@/components/Main.astro";
+import Footer from "@/components/Footer.astro";
+import config from "@/config";
+
+const benchmarks = await getEntry("pages", "benchmarks");
+
+if (!benchmarks) {
+  throw new Error(
+    "Missing content entry: `benchmarks.md` or `benchmarks.mdx` in `src/content/pages/`"
+  );
+}
+
+const { Content } = await render(benchmarks);
+---
+
+<Layout
+  title={`${benchmarks.data.title} | ${config.site.title}`}
+  description={benchmarks.data.description}
+  ogImage={benchmarks.data.ogImage}
+  canonicalURL={benchmarks.data.canonicalURL}
+>
+  <Header />
+
+  <Breadcrumb />
+
+  <Main pageTitle={benchmarks.data.title} class="app-prose">
+    <Content />
+  </Main>
+
+  <Footer />
+</Layout>
