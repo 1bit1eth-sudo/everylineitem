@@ -149,6 +149,21 @@ Smaller units can show **faster gross payback** because absolute cost falls more
 
 **This article is for educational construction-cost and planning context only.** It is **not** financial advice, investment advice, tax advice, legal advice, or a lending offer. Figures are modeled medians and illustrations. Rents, interest rates, occupancy, taxes, insurance, construction costs, and regulations change. Past or modeled performance does not predict your results. **Do not build, buy, or borrow based solely on these tables.** Consult licensed California professionals: contractor, architect, CPA/tax advisor, and a fiduciary financial advisor as appropriate.
 
+---
+
+## Put your own quote in these six rows
+
+We made a blank version of the six-phase ledger. Drop your contractor's
+numbers into it and see which line doesn't match ours.
+
+**[Download the worksheet — CSV (import to Google Sheets), no email required](/worksheet/)**
+
+Want the regional benchmark ranges for each phase, updated quarterly?
+
+**[Get the benchmark sheet →](/benchmarks/)**
+
+---
+
 ## Methodology and sources
 
 Every figure on this page is a **modeled median, not a quote.** Here is
