@@ -2,10 +2,14 @@
 title: "Garage Conversion ADU Cost in California: Full 2026 Line-Item Breakdown"
 description: "We modeled a typical 2-car garage conversion ADU in Los Angeles County (~450 sq ft living). Total: $190,000. See which phases shrink vs a new detached build — and which grow."
 pubDatetime: 2026-09-04T12:00:00Z
+modDatetime: 2026-09-05T00:00:00Z
 tags: ["garage conversion", "adu cost", "california", "2026"]
 draft: false
 featured: false
 ---
+> **Published:** 4 Sep 2026 · **Last verified:** 5 Sep 2026 · **Next review:** Dec 2026
+> Cost figures are re-checked against permit records quarterly. Changes are
+> logged in [Corrections](/corrections/).
 
 A garage conversion is not a discounted detached ADU. It is a different project with a different phase mix: you reuse a shell, then spend hard on insulation, egress, fire separation, wet rooms, and — often — replacing the parking you just eliminated.
 
@@ -15,14 +19,22 @@ That is less cash than a new [400 sq ft detached ADU](/posts/400-sq-ft-adu-cost-
 
 ## In this series
 
-- [800 sq ft ADU Cost in California (2026)](/posts/800-sq-ft-adu-cost-california/)
-- [400 sq ft ADU Cost in California (2026)](/posts/400-sq-ft-adu-cost-california/)
-- **Garage Conversion ADU Cost** — this post
-- [ADU Soft Costs: Permits, Design, and Plan Check (2026)](/posts/adu-soft-costs-permits-california/)
-- [Modular vs Site-Built ADU Cost in California (2026)](/posts/modular-vs-site-built-adu-cost-california/)
-- [ADU All-In Cost in California (2026)](/posts/adu-all-in-cost-california/)
-- [Coastal vs Inland ADU Cost in Southern California (2026)](/posts/coastal-vs-inland-adu-cost-california/)
-- [ADU Rent Payback ROI in California (2026)](/posts/adu-rent-payback-roi-california/)
+Every build below uses the same six-phase ledger, so you can compare any two
+directly.
+
+**New construction**
+- [800 sq ft detached](/posts/800-sq-ft-adu-cost-california/) — $320,000 · $400/sq ft
+- [400 sq ft detached](/posts/400-sq-ft-adu-cost-california/) — $215,000 · $537/sq ft
+- [Garage conversion, ~450 sq ft](/posts/garage-conversion-adu-cost-california/) — $190,000 · $422/sq ft **(this post)**
+
+**Cost drivers**
+- [Soft costs: permits, design, plan check](/posts/adu-soft-costs-permits-california/)
+- [Modular vs site-built](/posts/modular-vs-site-built-adu-cost-california/)
+- [Coastal vs inland](/posts/coastal-vs-inland-adu-cost-california/)
+
+**Ownership**
+- [All-in cost, year one](/posts/adu-all-in-cost-california/)
+- [Rent payback and ROI](/posts/adu-rent-payback-roi-california/)
 
 ## The short answer
 
@@ -128,17 +140,48 @@ A 12% contingency here is about $22,800. If parking replacement bids come in ugl
 
 ## Methodology and sources
 
-Modeled median for a typical two-car garage conversion in Los Angeles County, 2026, mid-grade finishes. Not a quote for your address.
+Every figure on this page is a **modeled median, not a quote.** Here is
+exactly how it was built, so you can check it or reproduce it yourself.
 
 | Input | Source |
 | --- | --- |
-| Declared valuations on garage-conversion ADU permits | Los Angeles County and city building department permit portals |
-| Assembly-level costs for insulation, openings, wet rooms | RSMeans residential construction cost data |
-| Regional multipliers | NAHB construction cost survey |
-| Statewide ADU conversion and parking rules | California HCD ADU Handbook |
-| Phase comparison baseline | Every Line Item 400 and 800 detached models |
+| Statewide ADU rules, size limits, and fee exemptions | [California HCD ADU Handbook](https://www.hcd.ca.gov/building-standards/adu/handbook) |
+| 2026 changes to State ADU Law | [HCD Handbook Addendum, December 2025](https://www.hcd.ca.gov/building-standards/adu) |
+| Declared construction valuations on comparable local builds | [LA County EPIC-LA permit portal](https://epicla.lacounty.gov/) · [LADBS Permit & Inspection Report](https://www.ladbsservices2.lacity.org/onlineservices/?service=plr) |
+| Permit record datasets | [LA County Open Data — EPIC-LA Permit Finder](https://data.lacounty.gov/datasets/epic-la-permit-finder) |
+| Phase-level cost shares for residential construction | [NAHB Cost of Construction Survey](https://eyeonhousing.org/2025/01/cost-of-constructing-a-home-in-2024/) |
+| Per-square-foot construction price benchmarks | [NAHB Survey of Construction](https://eyeonhousing.org/2025/10/square-foot-prices-moderate-in-2024/) |
+| Regulatory cost share of a finished build | [NAHB regulatory cost study, June 2026](https://eyeonhousing.org/2026/06/home-building-regulatory-cost-burdens-increased-40-from-2021-to-2026/) |
+| Zoning and parcel constraints | [ZIMAS (City of Los Angeles)](https://zimas.lacity.org/) |
 
-*Figures are Los Angeles County, 2026, stated as medians of contractor ranges. Parking replacement, HOA rules, slab condition, and fire/egress requirements can change the total dramatically or make the project infeasible. This is construction cost information — not a quote, and not legal, engineering, or financial advice. Confirm requirements with your local building department, HOA if applicable, and a licensed California contractor.*
+### How to check this number against your own address
+
+Most California jurisdictions publish permit records online, including the
+**declared construction valuation** for each project. That declared valuation
+is the closest thing to a real local baseline you can get without paying
+anyone.
+
+1. Open [EPIC-LA](https://epicla.lacounty.gov/) for unincorporated LA County,
+   or the [LADBS Permit & Inspection Report](https://www.ladbsservices2.lacity.org/onlineservices/?service=plr)
+   for addresses inside the City of Los Angeles.
+2. Search recent ADU permits within about a mile of your address.
+3. Compare the declared valuation to the phase totals on this page.
+
+If your local numbers diverge meaningfully from ours, **we want to know.**
+See [Corrections](/corrections/).
+
+### Our position
+
+We don't build ADUs. We don't sell plans. We don't sell your information to
+contractors. No figure on this site has been paid for or reviewed by anyone
+whose costs we publish. Full detail on [Methodology](/methodology/) and
+[About](/about/).
+
+*Figures are Los Angeles County, 2026, stated as medians of contractor
+ranges. Costs vary by jurisdiction, site access, and finish level. This is
+construction cost information — not a quote, and not legal, engineering, or
+financial advice. Confirm requirements with your local building department
+and a licensed California contractor.*
 
 ## Frequently asked questions
 
