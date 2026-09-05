@@ -137,6 +137,21 @@ The [400 sq ft post](/posts/400-sq-ft-adu-cost-california/) noted that coastal v
 
 Geography multiplies the same structure. It does not invent a new one.
 
+---
+
+## Put your own quote in these six rows
+
+We made a blank version of the six-phase ledger. Drop your contractor's
+numbers into it and see which line doesn't match ours.
+
+**[Download the worksheet — CSV (import to Google Sheets), no email required](/worksheet/)**
+
+Want the regional benchmark ranges for each phase, updated quarterly?
+
+**[Get the benchmark sheet →](/benchmarks/)**
+
+---
+
 ## Methodology and sources
 
 Every figure on this page is a **modeled median, not a quote.** Here is
