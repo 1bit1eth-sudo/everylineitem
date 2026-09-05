@@ -115,6 +115,21 @@ Site-built detached ADUs in this series commonly run **nine to fourteen months**
 
 A 12% contingency on the modular total is about **$34,600**. Budget it. Modules that arrive damaged or out of sequence are exactly why.
 
+---
+
+## Put your own quote in these six rows
+
+We made a blank version of the six-phase ledger. Drop your contractor's
+numbers into it and see which line doesn't match ours.
+
+**[Download the worksheet — CSV (import to Google Sheets), no email required](/worksheet/)**
+
+Want the regional benchmark ranges for each phase, updated quarterly?
+
+**[Get the benchmark sheet →](/benchmarks/)**
+
+---
+
 ## Methodology and sources
 
 Every figure on this page is a **modeled median, not a quote.** Here is
