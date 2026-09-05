@@ -176,6 +176,21 @@ In these assumptions, all-in year-one sits about **19% above** hard construction
 4. **Slow lease-up.** Three months vacant at peak rent assumptions hurts more than one.
 5. **Geography.** [Coastal vs inland](/posts/coastal-vs-inland-adu-cost-california/) changes the construction base before any of these add-ons apply.
 
+---
+
+## Put your own quote in these six rows
+
+We made a blank version of the six-phase ledger. Drop your contractor's
+numbers into it and see which line doesn't match ours.
+
+**[Download the worksheet — CSV (import to Google Sheets), no email required](/worksheet/)**
+
+Want the regional benchmark ranges for each phase, updated quarterly?
+
+**[Get the benchmark sheet →](/benchmarks/)**
+
+---
+
 ## Methodology and sources
 
 Every figure on this page is a **modeled median, not a quote.** Here is
