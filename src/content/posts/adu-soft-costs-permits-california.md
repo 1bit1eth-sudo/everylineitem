@@ -2,10 +2,14 @@
 title: "ADU Soft Costs in California: Permits, Design, and Plan Check Line Items (2026)"
 description: "Soft costs on California ADUs typically land around $28,000–$40,000 before construction starts. Here is every design, engineering, plan check, and fee line — with ranges by jurisdiction type."
 pubDatetime: 2026-09-04T10:00:00Z
+modDatetime: 2026-09-05T00:00:00Z
 tags: ["adu permits", "soft costs", "california", "2026"]
 draft: false
 featured: false
 ---
+> **Published:** 4 Sep 2026 · **Last verified:** 5 Sep 2026 · **Next review:** Dec 2026
+> Cost figures are re-checked against permit records quarterly. Changes are
+> logged in [Corrections](/corrections/).
 
 Soft costs are the money you spend before a foundation forms. On California ADUs they are easy to underestimate and hard to avoid: architecture, structural engineering, energy calculations, plan check, permit fees, and a cluster of utility and impact charges that vary by city more than by floor plan.
 
@@ -22,14 +26,22 @@ Notice the pattern: doubling the floor area from 400 to 800 only adds about **$4
 
 ## In this series
 
-- [800 sq ft ADU Cost in California (2026)](/posts/800-sq-ft-adu-cost-california/)
-- [400 sq ft ADU Cost in California (2026)](/posts/400-sq-ft-adu-cost-california/)
-- [Garage Conversion ADU Cost in California (2026)](/posts/garage-conversion-adu-cost-california/)
-- **ADU Soft Costs** — this post
-- [Modular vs Site-Built ADU Cost in California (2026)](/posts/modular-vs-site-built-adu-cost-california/)
-- [ADU All-In Cost in California (2026)](/posts/adu-all-in-cost-california/)
-- [Coastal vs Inland ADU Cost in Southern California (2026)](/posts/coastal-vs-inland-adu-cost-california/)
-- [ADU Rent Payback ROI in California (2026)](/posts/adu-rent-payback-roi-california/)
+Every build below uses the same six-phase ledger, so you can compare any two
+directly.
+
+**New construction**
+- [800 sq ft detached](/posts/800-sq-ft-adu-cost-california/) — $320,000 · $400/sq ft
+- [400 sq ft detached](/posts/400-sq-ft-adu-cost-california/) — $215,000 · $537/sq ft
+- [Garage conversion, ~450 sq ft](/posts/garage-conversion-adu-cost-california/) — $190,000 · $422/sq ft
+
+**Cost drivers**
+- [Soft costs: permits, design, plan check](/posts/adu-soft-costs-permits-california/) **(this post)**
+- [Modular vs site-built](/posts/modular-vs-site-built-adu-cost-california/)
+- [Coastal vs inland](/posts/coastal-vs-inland-adu-cost-california/)
+
+**Ownership**
+- [All-in cost, year one](/posts/adu-all-in-cost-california/)
+- [Rent payback and ROI](/posts/adu-rent-payback-roi-california/)
 
 ## What counts as soft cost
 
@@ -46,6 +58,9 @@ In Every Line Item's six-phase structure, **soft costs** are phase one: everythi
 | Some utility *connection application fees* | Contingency on hard costs |
 
 Jurisdictions disagree about labels. Some put sewer capacity charges with utilities; some bundle them into building fees. For budgeting, put every pre-construction agency payment and design invoice in one bucket so you do not "save" money by forgetting a line.
+
+
+For context on how large the regulatory layer can get on a finished home, NAHB's June 2026 study puts regulatory costs at **26.4% / $131,734** of the finished single-family price ([Eye on Housing](https://eyeonhousing.org/2026/06/home-building-regulatory-cost-burdens-increased-40-from-2021-to-2026/)). ADU soft costs are a related but narrower slice — permits, design, and plan check on the accessory unit itself — so treat that figure as industry context, not as this model's soft-cost total.
 
 ## Soft cost line items with 2026 ranges
 
@@ -134,15 +149,48 @@ HOA fees are not a city soft cost, but they are real money and real schedule ris
 
 ## Methodology and sources
 
+Every figure on this page is a **modeled median, not a quote.** Here is
+exactly how it was built, so you can check it or reproduce it yourself.
+
 | Input | Source |
 | --- | --- |
-| Soft-cost totals in series models | Every Line Item 400 / 800 / garage conversion models |
-| Fee and permit practice | California HCD ADU Handbook; local building department fee schedules |
-| Design and engineering bands | 2026 contractor and design professional estimate ranges, Southern California |
-| Assembly and regional context | RSMeans; NAHB construction cost survey |
-| Declared valuations for calibration | Los Angeles County and city permit portals |
+| Statewide ADU rules, size limits, and fee exemptions | [California HCD ADU Handbook](https://www.hcd.ca.gov/building-standards/adu/handbook) |
+| 2026 changes to State ADU Law | [HCD Handbook Addendum, December 2025](https://www.hcd.ca.gov/building-standards/adu) |
+| Declared construction valuations on comparable local builds | [LA County EPIC-LA permit portal](https://epicla.lacounty.gov/) · [LADBS Permit & Inspection Report](https://www.ladbsservices2.lacity.org/onlineservices/?service=plr) |
+| Permit record datasets | [LA County Open Data — EPIC-LA Permit Finder](https://data.lacounty.gov/datasets/epic-la-permit-finder) |
+| Phase-level cost shares for residential construction | [NAHB Cost of Construction Survey](https://eyeonhousing.org/2025/01/cost-of-constructing-a-home-in-2024/) |
+| Per-square-foot construction price benchmarks | [NAHB Survey of Construction](https://eyeonhousing.org/2025/10/square-foot-prices-moderate-in-2024/) |
+| Regulatory cost share of a finished build | [NAHB regulatory cost study, June 2026](https://eyeonhousing.org/2026/06/home-building-regulatory-cost-burdens-increased-40-from-2021-to-2026/) |
+| Zoning and parcel constraints | [ZIMAS (City of Los Angeles)](https://zimas.lacity.org/) |
 
-*Figures are modeled medians and common ranges for Los Angeles County–area projects in 2026. Actual fees are set by your local agencies and utility districts and change when councils update fee schedules. This is construction cost information — not a quote, and not legal, engineering, or financial advice. Confirm every fee line on the current local schedule and with a licensed California design professional or contractor.*
+### How to check this number against your own address
+
+Most California jurisdictions publish permit records online, including the
+**declared construction valuation** for each project. That declared valuation
+is the closest thing to a real local baseline you can get without paying
+anyone.
+
+1. Open [EPIC-LA](https://epicla.lacounty.gov/) for unincorporated LA County,
+   or the [LADBS Permit & Inspection Report](https://www.ladbsservices2.lacity.org/onlineservices/?service=plr)
+   for addresses inside the City of Los Angeles.
+2. Search recent ADU permits within about a mile of your address.
+3. Compare the declared valuation to the phase totals on this page.
+
+If your local numbers diverge meaningfully from ours, **we want to know.**
+See [Corrections](/corrections/).
+
+### Our position
+
+We don't build ADUs. We don't sell plans. We don't sell your information to
+contractors. No figure on this site has been paid for or reviewed by anyone
+whose costs we publish. Full detail on [Methodology](/methodology/) and
+[About](/about/).
+
+*Figures are Los Angeles County, 2026, stated as medians of contractor
+ranges. Costs vary by jurisdiction, site access, and finish level. This is
+construction cost information — not a quote, and not legal, engineering, or
+financial advice. Confirm requirements with your local building department
+and a licensed California contractor.*
 
 ## Frequently asked questions
 
