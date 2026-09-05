@@ -138,6 +138,21 @@ You spend **$130,000 less** than the 800 detached model and get roughly half the
 
 A 12% contingency here is about $22,800. If parking replacement bids come in ugly, that contingency gets used fast.
 
+---
+
+## Put your own quote in these six rows
+
+We made a blank version of the six-phase ledger. Drop your contractor's
+numbers into it and see which line doesn't match ours.
+
+**[Download the worksheet — CSV (import to Google Sheets), no email required](/worksheet/)**
+
+Want the regional benchmark ranges for each phase, updated quarterly?
+
+**[Get the benchmark sheet →](/benchmarks/)**
+
+---
+
 ## Methodology and sources
 
 Every figure on this page is a **modeled median, not a quote.** Here is
