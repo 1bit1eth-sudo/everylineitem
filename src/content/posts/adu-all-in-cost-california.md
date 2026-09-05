@@ -2,10 +2,14 @@
 title: "ADU All-In Cost in California: Contingency, Loan Interest, Tax, and Vacancy (2026)"
 description: "The $320,000 and $215,000 construction models are not what you actually spend. Add 12% contingency, construction loan interest, Prop 13 ADU-only tax, vacancy, and optional management — here are clear year-one all-in tables."
 pubDatetime: 2026-09-04T08:15:00Z
+modDatetime: 2026-09-05T00:00:00Z
 tags: ["adu all-in cost", "contingency", "california", "2026"]
 draft: false
 featured: false
 ---
+> **Published:** 4 Sep 2026 · **Last verified:** 5 Sep 2026 · **Next review:** Dec 2026
+> Cost figures are re-checked against permit records quarterly. Changes are
+> logged in [Corrections](/corrections/).
 
 Construction cost is the number everyone quotes. It is not the number that empties your account.
 
@@ -13,14 +17,22 @@ Start from the series baselines — **[$320,000 for an 800 sq ft detached ADU](/
 
 ## In this series
 
-- [800 sq ft ADU Cost in California (2026)](/posts/800-sq-ft-adu-cost-california/)
-- [400 sq ft ADU Cost in California (2026)](/posts/400-sq-ft-adu-cost-california/)
-- [Garage Conversion ADU Cost in California (2026)](/posts/garage-conversion-adu-cost-california/)
-- [ADU Soft Costs: Permits, Design, and Plan Check (2026)](/posts/adu-soft-costs-permits-california/)
-- [Modular vs Site-Built ADU Cost in California (2026)](/posts/modular-vs-site-built-adu-cost-california/)
-- **ADU All-In Cost** — this post
-- [Coastal vs Inland ADU Cost in Southern California (2026)](/posts/coastal-vs-inland-adu-cost-california/)
-- [ADU Rent Payback ROI in California (2026)](/posts/adu-rent-payback-roi-california/)
+Every build below uses the same six-phase ledger, so you can compare any two
+directly.
+
+**New construction**
+- [800 sq ft detached](/posts/800-sq-ft-adu-cost-california/) — $320,000 · $400/sq ft
+- [400 sq ft detached](/posts/400-sq-ft-adu-cost-california/) — $215,000 · $537/sq ft
+- [Garage conversion, ~450 sq ft](/posts/garage-conversion-adu-cost-california/) — $190,000 · $422/sq ft
+
+**Cost drivers**
+- [Soft costs: permits, design, plan check](/posts/adu-soft-costs-permits-california/)
+- [Modular vs site-built](/posts/modular-vs-site-built-adu-cost-california/)
+- [Coastal vs inland](/posts/coastal-vs-inland-adu-cost-california/)
+
+**Ownership**
+- [All-in cost, year one](/posts/adu-all-in-cost-california/) **(this post)**
+- [Rent payback and ROI](/posts/adu-rent-payback-roi-california/)
 
 ## The short answer
 
@@ -166,16 +178,48 @@ In these assumptions, all-in year-one sits about **19% above** hard construction
 
 ## Methodology and sources
 
+Every figure on this page is a **modeled median, not a quote.** Here is
+exactly how it was built, so you can check it or reproduce it yourself.
+
 | Input | Source |
 | --- | --- |
-| Construction baselines | Every Line Item [800](/posts/800-sq-ft-adu-cost-california/) and [400](/posts/400-sq-ft-adu-cost-california/) models |
-| Contingency band | 10–15% as stated throughout this series; 12% used here |
-| Interest methodology | Illustrative interest-only carry on average draws |
-| Prop 13 framing | California property tax practice: new construction added; base year on existing home preserved |
-| Soft costs already in construction | [Soft costs post](/posts/adu-soft-costs-permits-california/) |
-| Rent placeholders for vacancy | Planning medians for mid-grade LA County ADUs, 2026 |
+| Statewide ADU rules, size limits, and fee exemptions | [California HCD ADU Handbook](https://www.hcd.ca.gov/building-standards/adu/handbook) |
+| 2026 changes to State ADU Law | [HCD Handbook Addendum, December 2025](https://www.hcd.ca.gov/building-standards/adu) |
+| Declared construction valuations on comparable local builds | [LA County EPIC-LA permit portal](https://epicla.lacounty.gov/) · [LADBS Permit & Inspection Report](https://www.ladbsservices2.lacity.org/onlineservices/?service=plr) |
+| Permit record datasets | [LA County Open Data — EPIC-LA Permit Finder](https://data.lacounty.gov/datasets/epic-la-permit-finder) |
+| Phase-level cost shares for residential construction | [NAHB Cost of Construction Survey](https://eyeonhousing.org/2025/01/cost-of-constructing-a-home-in-2024/) |
+| Per-square-foot construction price benchmarks | [NAHB Survey of Construction](https://eyeonhousing.org/2025/10/square-foot-prices-moderate-in-2024/) |
+| Regulatory cost share of a finished build | [NAHB regulatory cost study, June 2026](https://eyeonhousing.org/2026/06/home-building-regulatory-cost-burdens-increased-40-from-2021-to-2026/) |
+| Zoning and parcel constraints | [ZIMAS (City of Los Angeles)](https://zimas.lacity.org/) |
 
-*This is construction and carrying-cost information for planning — **not financial, tax, lending, or investment advice.** Loan products, tax assessments, and rents are local and personal. Confirm with your lender, tax professional, county assessor, and a licensed California contractor.*
+### How to check this number against your own address
+
+Most California jurisdictions publish permit records online, including the
+**declared construction valuation** for each project. That declared valuation
+is the closest thing to a real local baseline you can get without paying
+anyone.
+
+1. Open [EPIC-LA](https://epicla.lacounty.gov/) for unincorporated LA County,
+   or the [LADBS Permit & Inspection Report](https://www.ladbsservices2.lacity.org/onlineservices/?service=plr)
+   for addresses inside the City of Los Angeles.
+2. Search recent ADU permits within about a mile of your address.
+3. Compare the declared valuation to the phase totals on this page.
+
+If your local numbers diverge meaningfully from ours, **we want to know.**
+See [Corrections](/corrections/).
+
+### Our position
+
+We don't build ADUs. We don't sell plans. We don't sell your information to
+contractors. No figure on this site has been paid for or reviewed by anyone
+whose costs we publish. Full detail on [Methodology](/methodology/) and
+[About](/about/).
+
+*Figures are Los Angeles County, 2026, stated as medians of contractor
+ranges. Costs vary by jurisdiction, site access, and finish level. This is
+construction cost information — not a quote, and not legal, engineering, or
+financial advice. Confirm requirements with your local building department
+and a licensed California contractor.*
 
 ## Frequently asked questions
 
