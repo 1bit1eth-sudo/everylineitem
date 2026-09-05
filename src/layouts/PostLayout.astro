@@ -2,6 +2,11 @@
 import Layout from "./Layout.astro";
 import config from "@/config";
 
+type Faq = {
+  question: string;
+  answer: string;
+};
+
 type Props = {
   title?: string;
   description?: string;
@@ -9,12 +14,20 @@ type Props = {
   canonicalURL?: string;
   pubDatetime?: Date;
   modDatetime?: Date | null;
+  faqs?: Faq[];
 };
 
 const { site } = config;
 
-const { title, description, ogImage, canonicalURL, pubDatetime, modDatetime } =
-  Astro.props;
+const {
+  title,
+  description,
+  ogImage,
+  canonicalURL,
+  pubDatetime,
+  modDatetime,
+  faqs,
+} = Astro.props;
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -31,6 +44,22 @@ const structuredData = {
     },
   ],
 };
+
+const faqPage =
+  faqs && faqs.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqs.map(faq => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      }
+    : null;
 ---
 
 <Layout {title} {description} {ogImage} {canonicalURL}>
@@ -60,6 +89,15 @@ const structuredData = {
       is:inline
       set:html={JSON.stringify(structuredData)}
     />
+    {
+      faqPage && (
+        <script
+          type="application/ld+json"
+          is:inline
+          set:html={JSON.stringify(faqPage)}
+        />
+      )
+    }
   </Fragment>
 
   <slot />
