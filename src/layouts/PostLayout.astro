@@ -1,6 +1,8 @@
 ---
 import Layout from "./Layout.astro";
 import config from "@/config";
+import { getCollection } from "astro:content";
+import { getPostUrl } from "@/utils/getPostPaths";
 
 type Faq = {
   question: string;
@@ -26,8 +28,27 @@ const {
   canonicalURL,
   pubDatetime,
   modDatetime,
-  faqs,
+  faqs: faqsProp,
 } = Astro.props;
+
+// Resolve faqs from prop OR by matching the current post URL (so markdown
+// frontmatter works even if the post page forgets to pass faqs through).
+let faqs = faqsProp;
+if (!faqs || faqs.length === 0) {
+  const posts = await getCollection("posts");
+  const locale = Astro.currentLocale ?? config.site.lang;
+  const currentPath = Astro.url.pathname.replace(/\/+$/, "") || "/";
+  for (const post of posts) {
+    const postPath = getPostUrl(post.id, post.filePath, locale).replace(
+      /\/+$/,
+      ""
+    );
+    if (postPath === currentPath && post.data.faqs?.length) {
+      faqs = post.data.faqs;
+      break;
+    }
+  }
+}
 
 const structuredData = {
   "@context": "https://schema.org",
