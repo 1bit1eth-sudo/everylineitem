@@ -32,6 +32,8 @@ site exists.**
 It also means you can take your own contractor quote, sort it into these six
 rows, and see exactly which line doesn't match.
 
+**→ [Download the six-phase worksheet (CSV)](/worksheet/)** · **[Get quarterly benchmark ranges](/benchmarks/)**
+
 ## What we don't do
 
 This matters more than what we do, because it's what makes the numbers worth
