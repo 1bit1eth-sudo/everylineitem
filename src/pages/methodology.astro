@@ -1,0 +1,36 @@
+---
+import { getEntry, render } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Main from "@/components/Main.astro";
+import Footer from "@/components/Footer.astro";
+import config from "@/config";
+
+const methodology = await getEntry("pages", "methodology");
+
+if (!methodology) {
+  throw new Error(
+    "Missing content entry: `methodology.md` or `methodology.mdx` in `src/content/pages/`"
+  );
+}
+
+const { Content } = await render(methodology);
+---
+
+<Layout
+  title={`${methodology.data.title} | ${config.site.title}`}
+  description={methodology.data.description}
+  ogImage={methodology.data.ogImage}
+  canonicalURL={methodology.data.canonicalURL}
+>
+  <Header />
+
+  <Breadcrumb />
+
+  <Main pageTitle={methodology.data.title} class="app-prose">
+    <Content />
+  </Main>
+
+  <Footer />
+</Layout>
