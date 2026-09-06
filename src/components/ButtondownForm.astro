@@ -1,0 +1,52 @@
+---
+interface Props {
+  /** Buttondown newsletter username (defaults to everylineitem). */
+  username?: string;
+  /** Optional subscriber tag applied on signup. */
+  tag?: string;
+  /** Submit button label. */
+  buttonLabel?: string;
+  /** Unique id prefix so multiple forms on one page don't clash. */
+  idPrefix?: string;
+}
+
+const {
+  username = "everylineitem",
+  tag = "benchmarks",
+  buttonLabel = "Get the benchmark sheet",
+  idPrefix = "bd",
+} = Astro.props;
+
+const emailId = `${idPrefix}-email`;
+const action = `https://buttondown.com/api/emails/embed-subscribe/${username}`;
+---
+
+<form
+  action={action}
+  method="post"
+  class="embeddable-buttondown-form border-border bg-background mt-6 space-y-4 rounded-lg border p-4 sm:p-6"
+>
+  <label for={emailId} class="flex flex-col gap-2 text-sm font-medium">
+    <span>Email</span>
+    <input
+      id={emailId}
+      type="email"
+      name="email"
+      placeholder="you@example.com"
+      required
+      autocomplete="email"
+      class="border-border bg-background focus:border-accent focus:ring-accent w-full rounded-md border px-3 py-2 text-base font-normal focus:ring-1 focus:outline-none"
+    />
+  </label>
+  <input type="hidden" name="embed" value="1" />
+  {tag && <input type="hidden" name="tag" value={tag} />}
+  <button
+    type="submit"
+    class="bg-accent text-accent-foreground hover:opacity-90 focus-outline inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-opacity"
+  >
+    {buttonLabel}
+  </button>
+</form>
+<p class="text-foreground/80 mt-3 text-sm">
+  We'll email the current quarterly ranges. Unsubscribe anytime.
+</p>

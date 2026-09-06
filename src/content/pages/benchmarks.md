@@ -17,13 +17,7 @@ Figures are modeled medians of contractor ranges, not quotes. Same methodology a
 
 ## Get the benchmark sheet
 
-We don't have a live email list provider wired up yet (no Buttondown, ConvertKit, Mailchimp, or Formspree form on this site). Until we do, the honest path is email:
-
-**[Email us for the ADU benchmark sheet →](mailto:corrections@everylineitem.com?subject=Send%20me%20the%20ADU%20benchmark%20sheet)**
-
-Use subject **Send me the ADU benchmark sheet** (the link above fills that in). We'll reply with the current quarterly ranges.
-
-When we pick an ESP, this page will swap to a proper signup form. Until then, `corrections@everylineitem.com` is the address we already publish for figure feedback — same inbox.
+Enter your email in the form below and we'll send the current quarterly ranges. Unsubscribe anytime.
 
 ## Related
 
