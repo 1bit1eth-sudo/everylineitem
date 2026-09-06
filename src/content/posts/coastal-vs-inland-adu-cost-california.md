@@ -46,7 +46,7 @@ directly.
 The plan did not change. The labor market, fee stack, coastal review path, and how hard it is to get a truck to the pad did.
 
 
-![Coastal vs inland ADU cost — $380,000 vs $300,000](/images/pinterest/coastal-vs-inland-adu-cost.svg)
+![Coastal vs inland ADU cost — $380,000 vs $300,000](/images/pinterest/coastal-vs-inland-adu-cost.png)
 
 *Pin this breakdown: right-click / long-press the image, or use the Pinterest share button.*
 
