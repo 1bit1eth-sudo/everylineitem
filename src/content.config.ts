@@ -16,6 +16,9 @@ const posts = defineCollection({
       featured: z.boolean().optional(),
       draft: z.boolean().optional(),
       tags: z.array(z.string()).default(["others"]),
+      // Remote/public paths must be plain absolute URL strings (https://...).
+      // Relative /images/... under public/ is NOT resolved by Astro's image()
+      // helper and can fail the build with ImageNotFound.
       ogImage: image().or(z.string()).optional(),
       description: z.string(),
       canonicalURL: z.string().optional(),
