@@ -111,7 +111,7 @@ Application fees, capacity charges, and meter fees belong here. The trench, cond
 ## How soft costs compare across this series
 
 | Line (illustrative split) | 400 sq ft ($28k) | 800 sq ft ($32k) | Garage conv. ($24k) |
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | Design + engineering + energy + survey | ~$16,000 | ~$18,000 | ~$14,000 |
 | Plan check + building permits | ~$7,000 | ~$8,000 | ~$6,000 |
 | Impact / ADU / school fees | ~$2,000 | ~$3,000 | ~$1,500 |
