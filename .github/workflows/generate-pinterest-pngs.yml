@@ -15,7 +15,7 @@ permissions:
 
 concurrency:
   group: generate-pinterest-pngs
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   generate:
@@ -24,6 +24,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -36,8 +40,26 @@ jobs:
       - name: Rasterize SVGs to PNGs
         run: node scripts/generate-pinterest-pngs.mjs
 
-      - name: Commit generated PNGs if changed
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: Add generated Pinterest pin PNGs
-          file_pattern: public/images/pinterest/*.png
+      - name: Commit and push PNGs if changed
+        run: |
+          set -eux
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/images/pinterest/*.png
+          if git diff --cached --quiet; then
+            echo "No PNG changes to commit"
+            exit 0
+          fi
+          git commit -m "Add generated Pinterest pin PNGs"
+          for i in 1 2 3 4 5; do
+            if git push origin HEAD:main; then
+              echo "Pushed successfully"
+              exit 0
+            fi
+            echo "Push failed (attempt $i); rebasing onto origin/main"
+            git fetch origin main
+            git rebase origin/main
+            sleep 3
+          done
+          echo "Failed to push after retries"
+          exit 1
