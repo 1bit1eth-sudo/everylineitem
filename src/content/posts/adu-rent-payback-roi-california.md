@@ -171,48 +171,37 @@ Want the regional benchmark ranges for each phase, updated quarterly?
 
 ## Methodology and sources
 
-Every figure on this page is a **modeled median, not a quote.** Here is
-exactly how it was built, so you can check it or reproduce it yourself.
+Every figure on this page is a **modeled median, not a quote.** Here is exactly how it was built, so you can check it or reproduce it yourself.
 
 | Input | Source |
 | --- | --- |
 | Statewide ADU rules, size limits, and fee exemptions | [California HCD ADU Handbook](https://www.hcd.ca.gov/building-standards/adu/handbook) |
-| 2026 changes to State ADU Law | [HCD Handbook Addendum, December 2025](https://www.hcd.ca.gov/building-standards/adu) |
-| Declared construction valuations on comparable local builds | [LA County EPIC-LA permit portal](https://epicla.lacounty.gov/) · [LADBS Permit & Inspection Report](https://www.ladbsservices2.lacity.org/onlineservices/?service=plr) |
-| Permit record datasets | [LA County Open Data — EPIC-LA Permit Finder](https://data.lacounty.gov/datasets/epic-la-permit-finder) |
+| 2026 changes to State ADU Law | [HCD Addendum, December 2025](https://www.hcd.ca.gov/building-standards/adu) |
+| Declared construction valuations, unincorporated LA County | [EPIC-LA permit portal](https://epicla.lacounty.gov/) |
+| Declared construction valuations, City of Los Angeles | [LADBS Permit & Inspection Report](https://www.ladbsservices2.lacity.org/onlineservices/?service=plr) |
+| Permit record dataset | [LA County Open Data — EPIC-LA Permit Finder](https://data.lacounty.gov/datasets/epic-la-permit-finder) |
 | Phase-level cost shares for residential construction | [NAHB Cost of Construction Survey](https://eyeonhousing.org/2025/01/cost-of-constructing-a-home-in-2024/) |
 | Per-square-foot construction price benchmarks | [NAHB Survey of Construction](https://eyeonhousing.org/2025/10/square-foot-prices-moderate-in-2024/) |
-| Regulatory cost share of a finished build | [NAHB regulatory cost study, June 2026](https://eyeonhousing.org/2026/06/home-building-regulatory-cost-burdens-increased-40-from-2021-to-2026/) |
-| Zoning and parcel constraints | [ZIMAS (City of Los Angeles)](https://zimas.lacity.org/) |
+| Regulatory share of finished build cost | [NAHB regulatory cost study, June 2026](https://eyeonhousing.org/2026/06/home-building-regulatory-cost-burdens-increased-40-from-2021-to-2026/) |
+| Zoning and parcel constraints | [ZIMAS](https://zimas.lacity.org/) |
 
-### How to check this number against your own address
+### Check this number against your own address
 
-Most California jurisdictions publish permit records online, including the
-**declared construction valuation** for each project. That declared valuation
-is the closest thing to a real local baseline you can get without paying
-anyone.
+Most California jurisdictions publish permit records online, including the **declared construction valuation** for each project. That declared valuation is the closest thing to a real local baseline you can get without paying anyone.
 
-1. Open [EPIC-LA](https://epicla.lacounty.gov/) for unincorporated LA County,
-   or the [LADBS Permit & Inspection Report](https://www.ladbsservices2.lacity.org/onlineservices/?service=plr)
-   for addresses inside the City of Los Angeles.
+1. Open [EPIC-LA](https://epicla.lacounty.gov/) for unincorporated LA County, or the [LADBS Permit & Inspection Report](https://www.ladbsservices2.lacity.org/onlineservices/?service=plr) for addresses inside the City of Los Angeles.
 2. Search recent ADU permits within about a mile of your address.
 3. Compare the declared valuation to the phase totals on this page.
 
-If your local numbers diverge meaningfully from ours, **we want to know.**
-See [Corrections](/corrections/).
+Declared valuations run below contract price — treat them as a floor, not a total. Full detail on [Methodology](/methodology/).
+
+If your local numbers diverge meaningfully from ours, we want to know. See [Corrections](/corrections/).
 
 ### Our position
 
-We don't build ADUs. We don't sell plans. We don't sell your information to
-contractors. No figure on this site has been paid for or reviewed by anyone
-whose costs we publish. Full detail on [Methodology](/methodology/) and
-[About](/about/).
+We don't build ADUs. We don't sell plans. We don't sell your information to contractors. No figure on this site has been paid for or reviewed by anyone whose costs we publish. More on [About](/about/).
 
-*Figures are Los Angeles County, 2026, stated as medians of contractor
-ranges. Costs vary by jurisdiction, site access, and finish level. This is
-construction cost information — not a quote, and not legal, engineering, or
-financial advice. Confirm requirements with your local building department
-and a licensed California contractor.*
+*Figures are Los Angeles County, 2026, stated as medians of contractor ranges. Costs vary by jurisdiction, site access, and finish level. This is construction cost information — not a quote, and not legal, engineering, or financial advice. Confirm requirements with your local building department and a licensed California contractor.*
 
 ## Frequently asked questions
 
