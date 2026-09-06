@@ -46,7 +46,7 @@ directly.
 The plan did not change. The labor market, fee stack, coastal review path, and how hard it is to get a truck to the pad did.
 
 
-![Coastal vs inland ADU cost — $380,000 vs $300,000](/images/pinterest/coastal-vs-inland-adu-cost.png)
+<img src="/images/pinterest/coastal-vs-inland-adu-cost.png" alt="Coastal vs inland ADU cost — $380,000 vs $300,000" width="1000" height="1500" />
 
 *Pin this breakdown: right-click / long-press the image, or use the Pinterest share button.*
 
@@ -223,3 +223,4 @@ Use $320k as the **LA County median** anchor, then stress-test toward **$450–$
 **Where should I read next?**
 
 Stack geography on top of carrying costs in [all-in cost](/posts/adu-all-in-cost-california/), then test rent payback in [ADU ROI](/posts/adu-rent-payback-roi-california/). Higher build cost needs higher rent — or a longer payback — to clear the same return bar.
+
