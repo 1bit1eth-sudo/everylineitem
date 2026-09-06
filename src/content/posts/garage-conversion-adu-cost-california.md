@@ -48,7 +48,7 @@ directly.
 | Phases that often grow | Envelope, landscaping / parking replacement |
 
 
-![Garage conversion ADU cost breakdown — $190,000](/images/pinterest/garage-conversion-adu-cost.png)
+<img src="/images/pinterest/garage-conversion-adu-cost.png" alt="Garage conversion ADU cost breakdown — $190,000" width="1000" height="1500" />
 
 *Pin this breakdown: right-click / long-press the image, or use the Pinterest share button.*
 

@@ -126,7 +126,7 @@ Rent assumptions here are **planning medians** for mid-grade LA County ADUs in 2
 Self-manage and this line is $0 plus your time. Use a property manager and you typically pay **8–10% of collected rent**, sometimes with leasing fees on top. We show 9% on a full year of modeled rent as a clean optional add — even though real year one may collect fewer than twelve months.
 
 
-![ADU all-in year-one cost — about $381,000](/images/pinterest/adu-all-in-year-one.png)
+<img src="/images/pinterest/adu-all-in-year-one.png" alt="ADU all-in year-one cost — about $381,000" width="1000" height="1500" />
 
 *Pin this breakdown: right-click / long-press the image, or use the Pinterest share button.*
 

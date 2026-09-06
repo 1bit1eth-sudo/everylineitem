@@ -63,7 +63,7 @@ Jurisdictions disagree about labels. Some put sewer capacity charges with utilit
 For context on how large the regulatory layer can get on a finished home, NAHB's June 2026 study puts regulatory costs at **26.4% / $131,734** of the finished single-family price ([Eye on Housing](https://eyeonhousing.org/2026/06/home-building-regulatory-cost-burdens-increased-40-from-2021-to-2026/)). ADU soft costs are a related but narrower slice — permits, design, and plan check on the accessory unit itself — so treat that figure as industry context, not as this model's soft-cost total.
 
 
-![ADU soft costs in California — $28,000–$40,000](/images/pinterest/adu-soft-costs.png)
+<img src="/images/pinterest/adu-soft-costs.png" alt="ADU soft costs in California — $28,000–$40,000" width="1000" height="1500" />
 
 *Pin this breakdown: right-click / long-press the image, or use the Pinterest share button.*
 

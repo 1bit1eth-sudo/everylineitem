@@ -47,7 +47,7 @@ directly.
 Modular wins on factory labor efficiency and schedule. It does not delete the foundation, the utility trench, the permit, or the day a crane sits in your driveway.
 
 
-![Modular vs site-built ADU cost — $288,000 vs $320,000](/images/pinterest/modular-vs-site-built-adu.png)
+<img src="/images/pinterest/modular-vs-site-built-adu.png" alt="Modular vs site-built ADU cost — $288,000 vs $320,000" width="1000" height="1500" />
 
 *Pin this breakdown: right-click / long-press the image, or use the Pinterest share button.*
 
