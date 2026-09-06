@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1500" viewBox="0 0 1000 1500">
+<rect width="1000" height="1500" fill="#212737"/>
+<rect width="1000" height="8" fill="#ff6b01"/>
+<text x="60" y="48" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="48" font-weight="700" fill="#ffffff">ADU Rent Payback</text>
+<text x="60" y="114" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" fill="#afb9ca">800 sq ft · LA County · mid rent $3,200/mo</text>
+<line x1="60" y1="162" x2="940" y2="162" stroke="#343f60" stroke-width="2"/><rect x="60" y="190" width="282" height="150" rx="12" fill="#343f60"/>
+<text x="78" y="226" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="16" fill="#afb9ca">MID RENT</text>
+<text x="78" y="274" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="#ff6b01">$3,200/mo</text>
+<text x="78" y="310" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="16" fill="#eaedf3">$38,400 / yr</text>
+<rect x="358" y="190" width="282" height="150" rx="12" fill="#343f60"/>
+<text x="376" y="226" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="16" fill="#afb9ca">GROSS @ $320k</text>
+<text x="376" y="274" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="#ff6b01">~8.3 yrs</text>
+<text x="376" y="310" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="16" fill="#eaedf3">construction</text>
+<rect x="656" y="190" width="282" height="150" rx="12" fill="#343f60"/>
+<text x="674" y="226" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="16" fill="#afb9ca">HONEST ALL-IN</text>
+<text x="674" y="274" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="#ff6b01">~13–15 yrs</text>
+<text x="674" y="310" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="16" fill="#eaedf3">after OpEx</text><rect x="60" y="368" width="880" height="60" rx="8" fill="#ff6b01"/>
+<text x="76" y="406" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Basis</text>
+<text x="620" y="406" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Mid rent payback</text>
+<rect x="60" y="432" width="880" height="60" rx="6" fill="#283046"/>
+<text x="76" y="470" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#eaedf3">$320k construction (gross)</text>
+<text x="620" y="470" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#eaedf3">8.3 years</text>
+<rect x="60" y="496" width="880" height="60" rx="6" fill="#343f60"/>
+<text x="76" y="534" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#eaedf3">$381k all-in (gross)</text>
+<text x="620" y="534" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#eaedf3">9.9 years</text>
+<rect x="60" y="560" width="880" height="60" rx="6" fill="#283046"/>
+<text x="76" y="598" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#eaedf3">All-in after vacancy/tax/OpEx</text>
+<text x="620" y="598" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#eaedf3">13–15 years</text>
+<rect x="60" y="624" width="880" height="60" rx="6" fill="#343f60"/>
+<text x="76" y="662" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#eaedf3">Cash-on-cash (25% equity)*</text>
+<text x="620" y="662" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#eaedf3">~8.6–12.1%</text><text x="60" y="716" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#ff6b01">*Illustrative — not financial advice.</text>
+<text x="60" y="748" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#afb9ca">Rent band stress test: $2,600 – $3,800 / mo</text>
+<rect x="0" y="1370" width="1000" height="130" fill="#1a1f2c"/>
+<line x1="60" y1="1370" x2="940" y2="1370" stroke="#ff6b01" stroke-width="4"/>
+<text x="60" y="1412" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#ff6b01">Every Line Item</text>
+<text x="60" y="1448" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="22" fill="#afb9ca">everylineitem.com</text>
+<text x="940" y="1448" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">California ADU Costs · 2026</text>
+</svg>
