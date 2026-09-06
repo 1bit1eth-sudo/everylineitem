@@ -89,7 +89,7 @@ What *does* scale: framing lumber, sheathing, drywall sheets, flooring square fo
 That split is why **half the size is not half the price.** It is also why the per-square-foot number rises as the unit shrinks.
 
 
-![400 vs 800 sq ft ADU cost comparison — $215,000 vs $320,000](/images/pinterest/400-vs-800-adu-cost.svg)
+![400 vs 800 sq ft ADU cost comparison — $215,000 vs $320,000](/images/pinterest/400-vs-800-adu-cost.png)
 
 *Pin this breakdown: right-click / long-press the image, or use the Pinterest share button.*
 
