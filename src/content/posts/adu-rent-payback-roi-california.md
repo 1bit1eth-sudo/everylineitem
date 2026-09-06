@@ -71,7 +71,7 @@ Details of the all-in stack — 12% contingency, modeled loan interest, Prop 13 
 These are **planning bands** for a legal, mid-grade detached ADU in Los Angeles County in 2026 — roughly a generous one-bed or compact two-bed depending on plan. Coastal ZIPs and new luxury finishes can clear the high end; weaker locations, awkward conversions, and oversupplied pockets sit at the low end. **Pull comps within a mile of your parcel** before you believe any row.
 
 
-![ADU rent payback ROI — about 8.3 years gross on $320k](/images/pinterest/adu-rent-payback-roi.svg)
+![ADU rent payback ROI — about 8.3 years gross on $320k](/images/pinterest/adu-rent-payback-roi.png)
 
 *Pin this breakdown: right-click / long-press the image, or use the Pinterest share button.*
 
