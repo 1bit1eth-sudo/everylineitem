@@ -6,7 +6,7 @@ modDatetime: 2026-09-06T00:00:00Z
 tags: ["adu cost", "800 sq ft adu", "los angeles", "california", "2026"]
 draft: false
 featured: true
-ogImage: "/images/pinterest/800-sq-ft-adu-cost.svg"
+ogImage: "/images/pinterest/800-sq-ft-adu-cost.png"
 faqs:
   - question: "How much does an 800 sq ft ADU cost in California?"
     answer: "Roughly $320,000 in Los Angeles County in 2026, or about $400 per square foot for a detached, single-story, new-construction unit with mid-grade finishes. Southern California site-built ADUs generally fall between $375 and $600 per square foot depending on region, site slope, and utility distance."
@@ -63,7 +63,7 @@ directly.
 That last row is the one worth sitting with. Nearly half of an ADU budget goes into two rooms, and that share does not shrink when the building does. We will come back to it.
 
 
-![800 sq ft ADU cost breakdown — $320,000](/images/pinterest/800-sq-ft-adu-cost.svg)
+![800 sq ft ADU cost breakdown — $320,000](/images/pinterest/800-sq-ft-adu-cost.png)
 
 *Pin this breakdown: right-click / long-press the image, or use the Pinterest share button.*
 
