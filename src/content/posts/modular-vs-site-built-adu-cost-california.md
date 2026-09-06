@@ -2,7 +2,7 @@
 title: "Modular vs Site-Built ADU Cost in California: 2026 Line-Item Comparison"
 description: "Same 800 sq ft detached ADU, two delivery methods. Site-built baseline $320,000. Modular lands near $288,000 after crane and transport — here is where each phase saves or grows."
 pubDatetime: 2026-09-04T08:00:00Z
-modDatetime: 2026-09-05T00:00:00Z
+modDatetime: 2026-09-06T00:00:00Z
 tags: ["modular adu", "site-built", "adu cost", "california", "2026"]
 draft: false
 featured: false
@@ -45,6 +45,11 @@ directly.
 | New lines modular adds | — | Crane, transport, staging (~$22,000 here) |
 
 Modular wins on factory labor efficiency and schedule. It does not delete the foundation, the utility trench, the permit, or the day a crane sits in your driveway.
+
+
+![Modular vs site-built ADU cost — $288,000 vs $320,000](/images/pinterest/modular-vs-site-built-adu.svg)
+
+*Pin this breakdown: right-click / long-press the image, or use the Pinterest share button.*
 
 ## Phase-by-phase comparison
 
