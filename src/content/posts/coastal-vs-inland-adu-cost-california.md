@@ -2,7 +2,7 @@
 title: "Coastal vs Inland ADU Cost in Southern California: Same Plan, Different Bill (2026)"
 description: "Same 800 sq ft ADU plan priced two ways: LA coastal band near $380,000 ($475/sq ft) vs Inland Empire near $300,000 ($375/sq ft). Six phases, same drawings — labor, fees, coastal review, and access drive the swing."
 pubDatetime: 2026-09-04T08:30:00Z
-modDatetime: 2026-09-05T00:00:00Z
+modDatetime: 2026-09-06T00:00:00Z
 tags: ["coastal california", "inland empire", "adu cost", "2026"]
 draft: false
 featured: false
@@ -44,6 +44,11 @@ directly.
 | vs series median | −$20,000 | — | +$60,000 |
 
 The plan did not change. The labor market, fee stack, coastal review path, and how hard it is to get a truck to the pad did.
+
+
+![Coastal vs inland ADU cost — $380,000 vs $300,000](/images/pinterest/coastal-vs-inland-adu-cost.svg)
+
+*Pin this breakdown: right-click / long-press the image, or use the Pinterest share button.*
 
 ## Same six phases, three geographies
 
