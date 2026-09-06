@@ -2,7 +2,7 @@
 title: "ADU Soft Costs in California: Permits, Design, and Plan Check Line Items (2026)"
 description: "Soft costs on California ADUs typically land around $28,000–$40,000 before construction starts. Here is every design, engineering, plan check, and fee line — with ranges by jurisdiction type."
 pubDatetime: 2026-09-04T10:00:00Z
-modDatetime: 2026-09-05T00:00:00Z
+modDatetime: 2026-09-06T00:00:00Z
 tags: ["adu permits", "soft costs", "california", "2026"]
 draft: false
 featured: false
@@ -62,6 +62,11 @@ Jurisdictions disagree about labels. Some put sewer capacity charges with utilit
 
 For context on how large the regulatory layer can get on a finished home, NAHB's June 2026 study puts regulatory costs at **26.4% / $131,734** of the finished single-family price ([Eye on Housing](https://eyeonhousing.org/2026/06/home-building-regulatory-cost-burdens-increased-40-from-2021-to-2026/)). ADU soft costs are a related but narrower slice — permits, design, and plan check on the accessory unit itself — so treat that figure as industry context, not as this model's soft-cost total.
 
+
+![ADU soft costs in California — $28,000–$40,000](/images/pinterest/adu-soft-costs.svg)
+
+*Pin this breakdown: right-click / long-press the image, or use the Pinterest share button.*
+
 ## Soft cost line items with 2026 ranges
 
 Ranges below are modeled medians and common bands for **Los Angeles County and comparable Southern California jurisdictions**, mid-grade professional design, standard detached ADU. Coastal cities and complex hillside lots sit toward the top; simpler inland permits sit toward the bottom.
@@ -106,7 +111,7 @@ Application fees, capacity charges, and meter fees belong here. The trench, cond
 ## How soft costs compare across this series
 
 | Line (illustrative split) | 400 sq ft ($28k) | 800 sq ft ($32k) | Garage conv. ($24k) |
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | Design + engineering + energy + survey | ~$16,000 | ~$18,000 | ~$14,000 |
 | Plan check + building permits | ~$7,000 | ~$8,000 | ~$6,000 |
 | Impact / ADU / school fees | ~$2,000 | ~$3,000 | ~$1,500 |
