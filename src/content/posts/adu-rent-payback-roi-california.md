@@ -2,7 +2,7 @@
 title: "ADU Rent Payback in California: Line-Item ROI on an 800 sq ft Build (2026)"
 description: "Take the $320,000 construction model (and ~$381,000 all-in year-one) against realistic LA County ADU rents. Simple payback, cash-on-cash, and what breaks the model — with a hard not-financial-advice disclaimer."
 pubDatetime: 2026-09-04T08:45:00Z
-modDatetime: 2026-09-05T00:00:00Z
+modDatetime: 2026-09-06T00:00:00Z
 tags: ["adu roi", "rent payback", "california", "2026"]
 draft: false
 featured: false
@@ -69,6 +69,11 @@ Details of the all-in stack — 12% contingency, modeled loan interest, Prop 13 
 | High | $3,800 | $45,600 |
 
 These are **planning bands** for a legal, mid-grade detached ADU in Los Angeles County in 2026 — roughly a generous one-bed or compact two-bed depending on plan. Coastal ZIPs and new luxury finishes can clear the high end; weaker locations, awkward conversions, and oversupplied pockets sit at the low end. **Pull comps within a mile of your parcel** before you believe any row.
+
+
+![ADU rent payback ROI — about 8.3 years gross on $320k](/images/pinterest/adu-rent-payback-roi.svg)
+
+*Pin this breakdown: right-click / long-press the image, or use the Pinterest share button.*
 
 ## Simple payback (gross rent ÷ cost)
 
