@@ -2,7 +2,7 @@
 title: "ADU All-In Cost in California: Contingency, Loan Interest, Tax, and Vacancy (2026)"
 description: "The $320,000 and $215,000 construction models are not what you actually spend. Add 12% contingency, construction loan interest, Prop 13 ADU-only tax, vacancy, and optional management — here are clear year-one all-in tables."
 pubDatetime: 2026-09-04T08:15:00Z
-modDatetime: 2026-09-05T00:00:00Z
+modDatetime: 2026-09-06T00:00:00Z
 tags: ["adu all-in cost", "contingency", "california", "2026"]
 draft: false
 featured: false
@@ -124,6 +124,11 @@ Rent assumptions here are **planning medians** for mid-grade LA County ADUs in 2
 | Management @ 9% | **$3,460** | **$2,590** |
 
 Self-manage and this line is $0 plus your time. Use a property manager and you typically pay **8–10% of collected rent**, sometimes with leasing fees on top. We show 9% on a full year of modeled rent as a clean optional add — even though real year one may collect fewer than twelve months.
+
+
+![ADU all-in year-one cost — about $381,000](/images/pinterest/adu-all-in-year-one.svg)
+
+*Pin this breakdown: right-click / long-press the image, or use the Pinterest share button.*
 
 ## All-in year-one tables (print these)
 
