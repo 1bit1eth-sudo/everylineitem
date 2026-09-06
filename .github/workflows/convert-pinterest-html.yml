@@ -1,0 +1,50 @@
+name: One-shot convert remaining Pinterest embeds
+on:
+  push:
+    paths:
+      - '.github/trigger-html-embeds'
+permissions:
+  contents: write
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Convert remaining markdown pinterest embeds to HTML
+        run: |
+          python3 <<'PY'
+          from pathlib import Path
+          import re
+          posts = Path('src/content/posts')
+          files = [
+            'adu-all-in-cost-california.md',
+            'adu-rent-payback-roi-california.md',
+            'adu-soft-costs-permits-california.md',
+            'garage-conversion-adu-cost-california.md',
+            'modular-vs-site-built-adu-cost-california.md',
+          ]
+          pat = re.compile(r'!\[([^\]]*)\]\((/images/pinterest/[^)]+\.png)\)')
+          for name in files:
+            p = posts / name
+            text = p.read_text()
+            new, n = pat.subn(lambda m: f'<img src="{m.group(2)}" alt="{m.group(1)}" width="1000" height="1500" />', text)
+            if n:
+              p.write_text(new)
+              print(f'converted {n} in {name}')
+            elif '<img src="/images/pinterest/' in text:
+              print(f'already html: {name}')
+            else:
+              print(f'NO MATCH: {name}')
+          PY
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/content/posts
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "Convert remaining Pinterest markdown embeds to raw HTML"
+          git pull --rebase origin main || true
+          git push origin HEAD:main
