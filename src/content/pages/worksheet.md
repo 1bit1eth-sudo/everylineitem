@@ -32,6 +32,7 @@ You can then share the sheet with your contractor or keep it private. We don't h
 
 ## Related
 
+- [Compare ADU costs](/compare/) — pick two published scenarios on the same six-phase ledger
 - [Benchmarks waitlist](/benchmarks/) — quarterly regional ranges for each phase
 - [Methodology](/methodology/) — how the modeled medians are built
 - [About](/about/) — why the six-phase ledger exists
