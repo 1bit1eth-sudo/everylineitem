@@ -1,0 +1,43 @@
+name: Generate Pinterest pin PNGs
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "public/images/pinterest/*.svg"
+      - "scripts/decode-pinterest-pins.mjs"
+      - "scripts/generate-pinterest-pngs.mjs"
+      - ".github/workflows/generate-pinterest-pngs.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate-pinterest-pngs
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Install sharp
+        run: npm install --no-save sharp@0.35.2
+
+      - name: Rasterize SVGs to PNGs
+        run: node scripts/generate-pinterest-pngs.mjs
+
+      - name: Commit generated PNGs if changed
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Add generated Pinterest pin PNGs
+          file_pattern: public/images/pinterest/*.png
