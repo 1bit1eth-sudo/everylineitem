@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1500" viewBox="0 0 1000 1500">
+<rect width="1000" height="1500" fill="#212737"/>
+<rect width="1000" height="8" fill="#ff6b01"/>
+<text x="60" y="48" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="48" font-weight="700" fill="#ffffff">Coastal vs Inland ADU</text>
+<text x="60" y="114" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" fill="#afb9ca">Same 800 sq ft plan · Southern California</text>
+<line x1="60" y1="162" x2="940" y2="162" stroke="#343f60" stroke-width="2"/><rect x="60" y="190" width="282" height="150" rx="12" fill="#343f60"/>
+<text x="78" y="226" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="16" fill="#afb9ca">INLAND</text>
+<text x="78" y="274" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="#ff6b01">$300,000</text>
+<text x="78" y="310" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="16" fill="#eaedf3">$375 / sq ft</text>
+<rect x="358" y="190" width="282" height="150" rx="12" fill="#343f60"/>
+<text x="376" y="226" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="16" fill="#afb9ca">LA MEDIAN</text>
+<text x="376" y="274" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="#ff6b01">$320,000</text>
+<text x="376" y="310" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="16" fill="#eaedf3">$400 / sq ft</text>
+<rect x="656" y="190" width="282" height="150" rx="12" fill="#343f60"/>
+<text x="674" y="226" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="16" fill="#afb9ca">COASTAL</text>
+<text x="674" y="274" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="#ff6b01">$380,000</text>
+<text x="674" y="310" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="16" fill="#eaedf3">$475 / sq ft</text><text x="60" y="390" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#eaedf3">Inland Empire</text>
+<text x="60" y="416" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">$300,000</text>
+<rect x="340" y="374" width="600" height="40" rx="8" fill="#283046"/>
+<rect x="340" y="374" width="473" height="40" rx="8" fill="#48bb78"/>
+<text x="60" y="462" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#eaedf3">LA County median</text>
+<text x="60" y="488" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">$320,000</text>
+<rect x="340" y="446" width="600" height="40" rx="8" fill="#283046"/>
+<rect x="340" y="446" width="505" height="40" rx="8" fill="#64a0dc"/>
+<text x="60" y="534" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#eaedf3">LA coastal band</text>
+<text x="60" y="560" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">$380,000</text>
+<rect x="340" y="518" width="600" height="40" rx="8" fill="#283046"/>
+<rect x="340" y="518" width="600" height="40" rx="8" fill="#ff6b01"/><text x="60" y="608" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#ff6b01">$80,000 gap — same drawings.</text>
+<text x="60" y="644" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#afb9ca">Labor · fees · coastal review · site access</text>
+<rect x="0" y="1370" width="1000" height="130" fill="#1a1f2c"/>
+<line x1="60" y1="1370" x2="940" y2="1370" stroke="#ff6b01" stroke-width="4"/>
+<text x="60" y="1412" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#ff6b01">Every Line Item</text>
+<text x="60" y="1448" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="22" fill="#afb9ca">everylineitem.com</text>
+<text x="940" y="1448" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">California ADU Costs · 2026</text>
+</svg>

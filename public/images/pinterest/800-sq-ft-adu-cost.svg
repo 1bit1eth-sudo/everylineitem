@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1500" viewBox="0 0 1000 1500">
+<rect width="1000" height="1500" fill="#212737"/>
+<rect width="1000" height="8" fill="#ff6b01"/>
+<text x="60" y="48" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="48" font-weight="700" fill="#ffffff">800 sq ft ADU Cost</text>
+<text x="60" y="114" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" fill="#afb9ca">Los Angeles County · Detached · 2026</text>
+<line x1="60" y1="162" x2="940" y2="162" stroke="#343f60" stroke-width="2"/><rect x="60" y="190" width="282" height="150" rx="12" fill="#343f60"/>
+<text x="78" y="226" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="16" fill="#afb9ca">TOTAL</text>
+<text x="78" y="274" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="#ff6b01">$320,000</text>
+<text x="78" y="310" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="16" fill="#eaedf3">full build</text>
+<rect x="358" y="190" width="282" height="150" rx="12" fill="#343f60"/>
+<text x="376" y="226" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="16" fill="#afb9ca">PER SQ FT</text>
+<text x="376" y="274" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="#ff6b01">$400</text>
+<text x="376" y="310" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="16" fill="#eaedf3">mid-grade</text>
+<rect x="656" y="190" width="282" height="150" rx="12" fill="#343f60"/>
+<text x="674" y="226" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="16" fill="#afb9ca">BIGGEST LINE</text>
+<text x="674" y="274" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="#ff6b01">$147k</text>
+<text x="674" y="310" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="16" fill="#eaedf3">systems+interior</text><rect x="60" y="368" width="880" height="60" rx="8" fill="#ff6b01"/>
+<text x="76" y="406" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Phase</text>
+<text x="500" y="406" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Cost</text>
+<text x="720" y="406" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Share</text>
+<rect x="60" y="432" width="880" height="60" rx="6" fill="#283046"/>
+<text x="76" y="470" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#eaedf3">Soft costs</text>
+<text x="500" y="470" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#eaedf3">$32,000</text>
+<text x="720" y="470" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#eaedf3">10%</text>
+<rect x="60" y="496" width="880" height="60" rx="6" fill="#343f60"/>
+<text x="76" y="534" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#eaedf3">Site + foundation</text>
+<text x="500" y="534" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#eaedf3">$38,000</text>
+<text x="720" y="534" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#eaedf3">12%</text>
+<rect x="60" y="560" width="880" height="60" rx="6" fill="#283046"/>
+<text x="76" y="598" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#eaedf3">Framing + structure</text>
+<text x="500" y="598" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#eaedf3">$48,000</text>
+<text x="720" y="598" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#eaedf3">15%</text>
+<rect x="60" y="624" width="880" height="60" rx="6" fill="#343f60"/>
+<text x="76" y="662" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#eaedf3">Building envelope</text>
+<text x="500" y="662" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#eaedf3">$42,000</text>
+<text x="720" y="662" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#eaedf3">13%</text>
+<rect x="60" y="688" width="880" height="60" rx="6" fill="#283046"/>
+<text x="76" y="726" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#eaedf3">Systems + interior</text>
+<text x="500" y="726" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#eaedf3">$147,000</text>
+<text x="720" y="726" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#eaedf3">46%</text>
+<rect x="60" y="752" width="880" height="60" rx="6" fill="#343f60"/>
+<text x="76" y="790" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#eaedf3">Landscaping</text>
+<text x="500" y="790" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#eaedf3">$13,000</text>
+<text x="720" y="790" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#eaedf3">4%</text>
+<rect x="60" y="816" width="880" height="60" rx="6" fill="#3c2818"/>
+<text x="76" y="854" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#ff6b01">TOTAL</text>
+<text x="500" y="854" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#ff6b01">$320,000</text>
+<text x="720" y="854" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#ff6b01">$400/sf</text>
+<rect x="0" y="1370" width="1000" height="130" fill="#1a1f2c"/>
+<line x1="60" y1="1370" x2="940" y2="1370" stroke="#ff6b01" stroke-width="4"/>
+<text x="60" y="1412" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#ff6b01">Every Line Item</text>
+<text x="60" y="1448" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="22" fill="#afb9ca">everylineitem.com</text>
+<text x="940" y="1448" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">California ADU Costs · 2026</text>
+</svg>
