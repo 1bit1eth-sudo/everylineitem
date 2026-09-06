@@ -1,0 +1,133 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Footer from "@/components/Footer.astro";
+import {
+  ADU_SCENARIOS,
+  DEFAULT_COMPARE,
+  PHASES,
+} from "@/data/aduScenarios";
+
+const title = "Compare ADU costs | Every Line Item";
+const description =
+  "Pick two California ADU cost scenarios and compare them on the same six-phase ledger — totals, $/sq ft, and phase-by-phase diffs.";
+
+const comparePayload = {
+  scenarios: ADU_SCENARIOS,
+  phases: PHASES,
+  defaults: DEFAULT_COMPARE,
+};
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  <Breadcrumb />
+
+  <main id="main-content" class="app-layout pb-8" data-backUrl="/compare/">
+    <h1 class="text-2xl font-semibold sm:text-3xl">Compare ADU costs</h1>
+    <p class="mt-2 mb-6 italic">
+      Side-by-side on the same six-phase ledger. Figures match the published
+      posts — pick any two builds.
+    </p>
+
+    <div
+      id="adu-compare"
+      class="border-border bg-background space-y-6 rounded-lg border p-4 sm:p-6"
+      data-defaults-a={DEFAULT_COMPARE.a}
+      data-defaults-b={DEFAULT_COMPARE.b}
+    >
+      <div class="grid gap-4 sm:grid-cols-2">
+        <label class="flex flex-col gap-2 text-sm font-medium">
+          <span>Build A</span>
+          <select
+            id="compare-a"
+            class="border-border bg-background focus:border-accent focus:ring-accent w-full rounded-md border px-3 py-2 text-base font-normal focus:ring-1 focus:outline-none"
+          >
+            {
+              ADU_SCENARIOS.map(s => (
+                <option value={s.id} selected={s.id === DEFAULT_COMPARE.a}>
+                  {s.label} — ${s.total.toLocaleString("en-US")}
+                </option>
+              ))
+            }
+          </select>
+        </label>
+        <label class="flex flex-col gap-2 text-sm font-medium">
+          <span>Build B</span>
+          <select
+            id="compare-b"
+            class="border-border bg-background focus:border-accent focus:ring-accent w-full rounded-md border px-3 py-2 text-base font-normal focus:ring-1 focus:outline-none"
+          >
+            {
+              ADU_SCENARIOS.map(s => (
+                <option value={s.id} selected={s.id === DEFAULT_COMPARE.b}>
+                  {s.label} — ${s.total.toLocaleString("en-US")}
+                </option>
+              ))
+            }
+          </select>
+        </label>
+      </div>
+
+      <div
+        id="compare-summary"
+        class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3"
+      >
+      </div>
+
+      <div class="relative w-full overflow-x-auto">
+        <table
+          id="compare-table"
+          class="w-full min-w-[36rem] border-collapse text-sm sm:text-base"
+        >
+          <thead>
+            <tr class="border-border border-b text-left">
+              <th class="py-2 pe-3 font-semibold">Phase</th>
+              <th class="py-2 pe-3 font-semibold" id="col-a-label">Build A</th>
+              <th class="py-2 pe-3 font-semibold" id="col-b-label">Build B</th>
+              <th class="py-2 font-semibold">Diff (B−A)</th>
+            </tr>
+          </thead>
+          <tbody id="compare-tbody"></tbody>
+          <tfoot id="compare-tfoot"></tfoot>
+        </table>
+      </div>
+
+      <p id="compare-notes" class="text-foreground/80 text-sm"></p>
+
+      <div
+        id="compare-links"
+        class="border-border flex flex-col gap-2 border-t pt-4 text-sm sm:flex-row sm:gap-6"
+      >
+      </div>
+    </div>
+
+    <p class="text-foreground/80 mt-8 text-sm">
+      Soft-costs-only is not a full build, so it is not a compare column.
+      Download the blank ledger on the
+      <a
+        href="/worksheet/"
+        class="text-accent underline decoration-dashed underline-offset-4"
+        >worksheet</a
+      >
+      page, or read
+      <a
+        href="/about/"
+        class="text-accent underline decoration-dashed underline-offset-4"
+        >why the six phases exist</a
+      >.
+    </p>
+  </main>
+
+  <Footer />
+</Layout>
+
+<script
+  id="adu-compare-data"
+  type="application/json"
+  is:inline
+  set:html={JSON.stringify(comparePayload)}
+/>
+
+<script is:inline src="/scripts/adu-compare.js"></script>
