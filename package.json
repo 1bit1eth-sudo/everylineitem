@@ -6,14 +6,15 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro check && astro build && pagefind --site dist && cp -r dist/pagefind public/",
+    "dev": "node scripts/decode-pinterest-pins.mjs && astro dev",
+    "build": "node scripts/decode-pinterest-pins.mjs && astro check && astro build && pagefind --site dist && cp -r dist/pagefind public/",
     "preview": "astro preview",
     "sync": "astro sync",
     "astro": "astro",
     "format:check": "prettier --check .",
     "format": "prettier --write .",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "decode:pinterest": "node scripts/decode-pinterest-pins.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^7.0.0",
