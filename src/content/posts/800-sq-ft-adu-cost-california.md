@@ -6,7 +6,7 @@ modDatetime: 2026-09-06T00:00:00Z
 tags: ["adu cost", "800 sq ft adu", "los angeles", "california", "2026"]
 draft: false
 featured: true
-ogImage: "/images/pinterest/800-sq-ft-adu-cost.png"
+ogImage: "https://everylineitem.com/images/pinterest/800-sq-ft-adu-cost.png"
 faqs:
   - question: "How much does an 800 sq ft ADU cost in California?"
     answer: "Roughly $320,000 in Los Angeles County in 2026, or about $400 per square foot for a detached, single-story, new-construction unit with mid-grade finishes. Southern California site-built ADUs generally fall between $375 and $600 per square foot depending on region, site slope, and utility distance."
@@ -63,7 +63,7 @@ directly.
 That last row is the one worth sitting with. Nearly half of an ADU budget goes into two rooms, and that share does not shrink when the building does. We will come back to it.
 
 
-![800 sq ft ADU cost breakdown — $320,000](/images/pinterest/800-sq-ft-adu-cost.png)
+<img src="/images/pinterest/800-sq-ft-adu-cost.png" alt="800 sq ft ADU cost breakdown — $320,000" width="1000" height="1500" />
 
 *Pin this breakdown: right-click / long-press the image, or use the Pinterest share button.*
 
@@ -246,3 +246,4 @@ No. An unpermitted ADU cannot be legally rented, will not appear in your propert
 **Do ADUs increase property tax?**
 
 Yes, but only on the new construction. The assessed value of the ADU is added to your existing assessment. Building an ADU does not trigger a reassessment of your main house, and your original base year value on the existing home is preserved.
+
