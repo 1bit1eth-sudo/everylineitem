@@ -1,0 +1,8 @@
+Phase,Inland SoCal low,Inland median,Inland high,Coastal low,Coastal median,Coastal high,Notes
+Soft costs,22000,26000,34000,34000,42000,55000,"Medians from coastal-vs-inland post. Low/high modeled. Soft-costs post LA County mid-grade band ~$28–40k sits between inland high and coastal median; coastal high includes CDP / design-review pressure."
+Site work + foundation,28000,34000,50000,40000,48000,70000,"Medians published. Low/high modeled for flat access vs slope/soils/long utility runs (800 post: slope alone can add ~$20–50k)."
+Framing + structure,38000,44000,52000,48000,56000,68000,"Medians published. Low/high modeled regional labor band; not RSMeans line items."
+Building envelope,32000,38000,46000,42000,50000,62000,"Medians published. Low/high modeled for mid-grade roofing/siding/windows; luxury cladding outside this sheet."
+Systems + interior,128000,145000,168000,145000,162000,190000,"Medians published (largest phase). Low/high modeled mainly for finish grade (~$15–30k swing noted in 800 post) plus coastal labor."
+Landscaping + hardscape,10000,13000,18000,16000,22000,32000,"Medians published. Coastal median includes heavier hardscape/drainage/access restoration; high modeled for constrained lots."
+Total (800 sf mid-grade model),258000,300000,368000,325000,380000,477000,"Inland median $300k ($375/sf) and coastal median $380k ($475/sf) match published posts. Series LA County median remains $320k ($400/sf). Totals are sums of phase rows; low/high are modeled ranges around published medians — not fake precision."
