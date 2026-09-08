@@ -52,3 +52,7 @@ See [Corrections](/corrections/) for our correction policy and the full change l
 ## Methodology
 
 Every source, every assumption, and every known limitation is documented on the [Methodology](/methodology/) page.
+
+## Privacy
+
+How we handle email signups and related data is on the [Privacy Policy](/privacy/) page.
