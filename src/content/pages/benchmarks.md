@@ -23,8 +23,11 @@ For each of the six phases (soft costs, site work + foundation, framing + struct
 
 Enter your email in the form below and we'll send the current quarterly ranges (CSV). Unsubscribe anytime. The blank worksheet stays free without email; the regional benchmark sheet is the emailed deliverable.
 
+By subscribing you agree we may email you the sheet and related updates. We do not sell your information to contractors. See the [Privacy Policy](/privacy/).
+
 ## Related
 
 - [Six-phase cost worksheet](/worksheet/) — blank CSV, no email required
 - [Methodology](/methodology/)
 - [Corrections](/corrections/)
+- [Privacy Policy](/privacy/)
