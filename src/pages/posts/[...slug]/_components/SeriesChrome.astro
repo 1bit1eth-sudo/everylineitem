@@ -1,0 +1,50 @@
+---
+import SeriesNav from "@/components/SeriesNav.astro";
+import PostVerifiedBanner from "@/components/PostVerifiedBanner.astro";
+import WorksheetCta from "@/components/WorksheetCta.astro";
+import { CA_ADU_SERIES_ID } from "@/data/caAduSeries";
+
+type Props = {
+  series?: string;
+  seriesCurrent?: string;
+  lastVerified?: Date;
+  nextReview?: string;
+  pubDatetime: Date;
+  timezone?: string;
+  postId: string;
+};
+
+const {
+  series,
+  seriesCurrent,
+  lastVerified,
+  nextReview,
+  pubDatetime,
+  timezone,
+  postId,
+} = Astro.props;
+
+const isCaAduSeries = series === CA_ADU_SERIES_ID;
+const seriesSlug = seriesCurrent ?? postId.split("/").pop() ?? postId;
+---
+
+{
+  isCaAduSeries && lastVerified && nextReview && (
+    <PostVerifiedBanner
+      {pubDatetime}
+      lastVerified={lastVerified}
+      nextReview={nextReview}
+      {timezone}
+    />
+  )
+}
+{isCaAduSeries && <SeriesNav currentSlug={seriesSlug} />}
+<slot />
+{
+  isCaAduSeries && (
+    <>
+      <hr />
+      <WorksheetCta />
+    </>
+  )
+}
