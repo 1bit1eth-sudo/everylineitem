@@ -32,6 +32,16 @@ The most valuable messages we get are from contractors and estimators telling us
 
 ## Change log
 
+### 9 September 2026 — Soft costs & Methodology: 750 sq ft cliff and NAHB $/sf check
+
+**Changed:** Soft-costs post and Methodology now name the **750 sq ft** impact-fee threshold (Gov. Code §66311.5) instead of “certain sizes,” clarify connection fees vs impact fees and school-fee rules, and explain why series soft costs only move ~$4,000 from 400→800 sq ft. Methodology adds an explicit **small-unit premium** decomposition of ~$400/sq ft ADU models vs NAHB Pacific custom ~$167/sq ft.
+
+**Reason:** Readers could not verify the size rule or the NAHB sanity-check without those numbers. Phase totals were not restated.
+
+**Source:** [Gov. Code §66311.5](https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?chapter=13&division=1.&lawCode=GOV&part=&title=7.), [HCD ADU Handbook](https://www.hcd.ca.gov/building-standards/adu/handbook), [NAHB Survey of Construction / Eye on Housing](https://eyeonhousing.org/2025/10/square-foot-prices-moderate-in-2024/)
+
+---
+
 ### 5 September 2026 — Methodology sources revised, all posts
 
 **Changed:** Removed a reference to a proprietary subscription cost database from the sources table on every post.

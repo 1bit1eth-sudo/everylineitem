@@ -2,12 +2,12 @@
 title: "ADU Soft Costs in California: Permits, Design, and Plan Check Line Items (2026)"
 description: "Soft costs on California ADUs typically land around $28,000–$40,000 before construction starts. Here is every design, engineering, plan check, and fee line — with ranges by jurisdiction type."
 pubDatetime: 2026-09-04T10:00:00Z
-modDatetime: 2026-09-06T00:00:00Z
+modDatetime: 2026-09-09T00:00:00Z
 tags: ["adu permits", "soft costs", "california", "2026"]
 draft: false
 featured: false
 ---
-> **Published:** 4 Sep 2026 · **Last verified:** 5 Sep 2026 · **Next review:** Dec 2026
+> **Published:** 4 Sep 2026 · **Last verified:** 9 Sep 2026 · **Next review:** Dec 2026
 > Cost figures are re-checked against permit records quarterly. Changes are
 > logged in [Corrections](/corrections/).
 
@@ -23,6 +23,8 @@ Across the models in this series, soft costs land in a **$28,000–$40,000** ban
 | Common full range (LA County mid-grade) | **$28,000–$40,000** | — |
 
 Notice the pattern: doubling the floor area from 400 to 800 only adds about **$4,000** in soft costs. Design and permits are closer to fixed than homeowners expect.
+
+That small step also hides a **legal cliff at 750 sq ft** for many impact fees (state law). The 400 model sits below it; the 800 model sits just above it. In our Los Angeles County mid-grade medians the dollar gap stays modest because design dominates phase one and many local ADU fee schedules were already compressed — but in cities that still levy large proportional impact fees above 750 sq ft, soft costs can jump much harder than this table shows. See the impact-fee section below.
 
 ## In this series
 
@@ -102,7 +104,18 @@ This is the widest municipal swing. Some cities publish clear ADU fee schedules;
 
 ### Impact, ADU, and school fees — often $0–$8,000 combined
 
-California's ADU statutes and HCD guidance have narrowed when local agencies can pile on impact fees, especially for units under certain sizes. That does not mean every city charges zero. Treat "ADUs are fee-free" as a claim to verify on the local fee schedule and with the counter, not as a statewide fact for every parcel.
+**The number is 750 square feet — not “certain sizes.”**
+
+Under [California Government Code §66311.5](https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?chapter=13&division=1.&lawCode=GOV&part=&title=7.) (see also the [HCD ADU Handbook](https://www.hcd.ca.gov/building-standards/adu/handbook)):
+
+- An ADU with **750 sq ft of interior livable space or less** generally cannot be charged **impact fees** by a local agency, special district, or water corporation.
+- For an ADU **above 750 sq ft**, any such impact fees must be charged **proportionately** relative to the square footage of the primary dwelling — not as a full single-family fee.
+- **Impact fee ≠ connection fee or capacity charge.** Water/sewer connection and capacity charges are carved out of that definition and can still apply under 750 sq ft.
+- **School developer fees** sit under Education Code rules with a **separate** size threshold (commonly discussed around **500 sq ft** under current law). Confirm with the school district; do not assume the 750 sq ft city/county impact-fee rule covers schools.
+
+That is why sizing across the 750 line is a soft-cost decision, not only a floor-plan preference. Our [400 sq ft](/posts/400-sq-ft-adu-cost-california/) model is below the cliff; the [800 sq ft](/posts/800-sq-ft-adu-cost-california/) model is 50 sq ft above it. In the illustrative splits below, impact/ADU/school fees only move from about **$2,000 → $3,000** between those models — a small step — because LA County mid-grade medians are dominated by design and plan check, and many local ADU impact schedules were already reduced. Elsewhere, proportional fees on an 800–1,000 sq ft ADU can be several thousand dollars higher than a 749 sq ft unit on the same lot. Always read the current municipal fee schedule PDF.
+
+Treat “ADUs are fee-free” as a claim to verify on that schedule and at the counter, not as a statewide fact for every parcel and every fee type.
 
 ### Utility connection fees — $2,000–$8,000 soft portion
 
@@ -174,6 +187,7 @@ Every figure on this page is a **modeled median, not a quote.** Here is exactly 
 | Input | Source |
 | --- | --- |
 | Statewide ADU rules, size limits, and fee exemptions | [California HCD ADU Handbook](https://www.hcd.ca.gov/building-standards/adu/handbook) |
+| Impact-fee size limits (750 sq ft cliff) | [Gov. Code §66311.5](https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?chapter=13&division=1.&lawCode=GOV&part=&title=7.) |
 | 2026 changes to State ADU Law | [HCD Addendum, December 2025](https://www.hcd.ca.gov/building-standards/adu) |
 | Declared construction valuations, unincorporated LA County | [EPIC-LA permit portal](https://epicla.lacounty.gov/) |
 | Declared construction valuations, City of Los Angeles | [LADBS Permit & Inspection Report](https://www.ladbsservices2.lacity.org/onlineservices/?service=plr) |
@@ -214,7 +228,7 @@ Often only modestly more. Our 800 sq ft model is $4,000 higher in soft costs tha
 
 **Are ADU impact fees waived in California?**
 
-Sometimes, for some unit sizes and jurisdictions — not universally. Verify on your local fee schedule and against the HCD ADU Handbook rather than assuming a statewide waiver.
+For many **impact fees** (not connection/capacity charges): **yes at or under 750 sq ft** of interior livable space under Government Code §66311.5; **above 750**, fees must be **proportional** to the primary dwelling. School fees follow different Education Code rules. Verify on your local fee schedule and the HCD ADU Handbook — dollar amounts are local even when the size rule is statewide.
 
 **What is the single best way to estimate my soft costs?**
 
