@@ -6,33 +6,15 @@ modDatetime: 2026-09-06T00:00:00Z
 tags: ["coastal california", "inland empire", "adu cost", "2026"]
 draft: false
 featured: false
+series: "ca-adu"
+lastVerified: 2026-09-05T00:00:00Z
+nextReview: "Dec 2026"
 ---
-> **Published:** 4 Sep 2026 · **Last verified:** 5 Sep 2026 · **Next review:** Dec 2026
-> Cost figures are re-checked against permit records quarterly. Changes are
-> logged in [Corrections](/corrections/).
 
 Region is the variable you cannot redesign away. The same 800 sq ft detached plan that models at **$320,000 ($400 / sq ft)** as a Los Angeles County median in this series does not cost the same on a Westside coastal lot as it does on a flat Inland Empire parcel.
 
 We held the drawings constant and priced two Southern California bands: a **LA coastal** setting and an **Inland Empire** setting. Coastal landed near **$380,000 ($475 / sq ft)**. Inland landed near **$300,000 ($375 / sq ft)**. That is an **$80,000** gap — about **21%** — inside the broader **$375–$600 / sq ft** Southern California site-built band this series has used from the start.
 
-## In this series
-
-Every build below uses the same six-phase ledger, so you can compare any two
-directly.
-
-**New construction**
-- [800 sq ft detached](/posts/800-sq-ft-adu-cost-california/) — $320,000 · $400/sq ft
-- [400 sq ft detached](/posts/400-sq-ft-adu-cost-california/) — $215,000 · $537/sq ft
-- [Garage conversion, ~450 sq ft](/posts/garage-conversion-adu-cost-california/) — $190,000 · $422/sq ft
-
-**Cost drivers**
-- [Soft costs: permits, design, plan check](/posts/adu-soft-costs-permits-california/)
-- [Modular vs site-built](/posts/modular-vs-site-built-adu-cost-california/)
-- [Coastal vs inland](/posts/coastal-vs-inland-adu-cost-california/) **(this post)**
-
-**Ownership**
-- [All-in cost, year one](/posts/adu-all-in-cost-california/)
-- [Rent payback and ROI](/posts/adu-rent-payback-roi-california/)
 
 ## The short answer
 
@@ -142,20 +124,6 @@ The [400 sq ft post](/posts/400-sq-ft-adu-cost-california/) noted that coastal v
 
 Geography multiplies the same structure. It does not invent a new one.
 
----
-
-## Put your own quote in these six rows
-
-We made a blank version of the six-phase ledger. Drop your contractor's
-numbers into it and see which line doesn't match ours.
-
-**[Download the worksheet — CSV (import to Google Sheets), no email required](/worksheet/)**
-
-Want the regional benchmark ranges for each phase, updated quarterly?
-
-**[Get the benchmark sheet →](/benchmarks/)**
-
----
 
 ## Methodology and sources
 
