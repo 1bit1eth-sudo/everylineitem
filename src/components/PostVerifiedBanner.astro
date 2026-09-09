@@ -1,0 +1,40 @@
+---
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
+import config from "@/config";
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
+
+type Props = {
+  pubDatetime: Date | string;
+  lastVerified: Date | string;
+  nextReview: string;
+  timezone?: string;
+};
+
+const { pubDatetime, lastVerified, nextReview, timezone: postTimezone } =
+  Astro.props;
+
+const tz = postTimezone ?? config.site.timezone;
+const publishedLabel = dayjs(pubDatetime).tz(tz).format("D MMM YYYY");
+const verifiedLabel = dayjs(lastVerified).tz(tz).format("D MMM YYYY");
+---
+
+<blockquote class="post-verified-banner">
+  <p>
+    <strong>Published:</strong>
+    {publishedLabel}
+    {" · "}
+    <strong>Last verified:</strong>
+    {verifiedLabel}
+    {" · "}
+    <strong>Next review:</strong>
+    {nextReview}
+  </p>
+  <p>
+    Cost figures are re-checked against permit records quarterly. Changes are
+    logged in <a href="/corrections/">Corrections</a>.
+  </p>
+</blockquote>

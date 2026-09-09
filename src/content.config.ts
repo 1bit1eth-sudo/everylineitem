@@ -32,6 +32,11 @@ const posts = defineCollection({
           })
         )
         .optional(),
+      // Shared series chrome (layout injects SeriesNav / banner / WorksheetCta)
+      series: z.string().optional(),
+      seriesCurrent: z.string().optional(),
+      lastVerified: z.date().optional(),
+      nextReview: z.string().optional(),
     }),
 });
 

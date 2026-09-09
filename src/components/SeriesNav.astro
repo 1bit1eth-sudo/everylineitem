@@ -1,0 +1,39 @@
+---
+import {
+  CA_ADU_SERIES_GROUPS,
+  CA_ADU_SERIES_INTRO,
+} from "@/data/caAduSeries";
+
+type Props = {
+  /** Slug of the current post (content id). */
+  currentSlug: string;
+};
+
+const { currentSlug } = Astro.props;
+---
+
+<section class="series-nav" aria-labelledby="in-this-series">
+  <h2 id="in-this-series">In this series</h2>
+  <p>{CA_ADU_SERIES_INTRO}</p>
+  {
+    CA_ADU_SERIES_GROUPS.map(group => (
+      <>
+        <p>
+          <strong>{group.heading}</strong>
+        </p>
+        <ul>
+          {group.items.map(item => {
+            const isCurrent = item.slug === currentSlug;
+            return (
+              <li>
+                <a href={item.href}>{item.label}</a>
+                {item.meta ? ` — ${item.meta}` : ""}
+                {isCurrent && <strong> (this post)</strong>}
+              </li>
+            );
+          })}
+        </ul>
+      </>
+    ))
+  }
+</section>
