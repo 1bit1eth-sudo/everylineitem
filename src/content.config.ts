@@ -32,6 +32,12 @@ const posts = defineCollection({
           })
         )
         .optional(),
+      // Shared series chrome (SeriesNav / WorksheetCta when series === "ca-adu")
+      series: z.string().optional(),
+      seriesCurrent: z.string().optional(),
+      verifiedPublished: z.string().optional(),
+      lastVerified: z.string().optional(),
+      nextReview: z.string().optional(),
     }),
 });
 
