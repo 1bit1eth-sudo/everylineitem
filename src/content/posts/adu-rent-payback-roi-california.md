@@ -6,6 +6,11 @@ modDatetime: 2026-09-06T00:00:00Z
 tags: ["adu roi", "rent payback", "california", "2026"]
 draft: false
 featured: false
+series: ca-adu
+seriesCurrent: adu-rent-payback-roi-california
+verifiedPublished: "4 Sep 2026"
+lastVerified: "5 Sep 2026"
+nextReview: "Dec 2026"
 ---
 > **Published:** 4 Sep 2026 · **Last verified:** 5 Sep 2026 · **Next review:** Dec 2026
 > Cost figures are re-checked against permit records quarterly. Changes are
@@ -17,24 +22,6 @@ This post puts the series **[800 sq ft detached ADU at $320,000](/posts/800-sq-f
 
 **This is not financial, tax, or investment advice.** It is a line-item planning model so you can see which assumptions matter. Your rents, rates, taxes, and risk tolerance are yours. Talk to a licensed financial and tax professional before you borrow or build.
 
-## In this series
-
-Every build below uses the same six-phase ledger, so you can compare any two
-directly.
-
-**New construction**
-- [800 sq ft detached](/posts/800-sq-ft-adu-cost-california/) — $320,000 · $400/sq ft
-- [400 sq ft detached](/posts/400-sq-ft-adu-cost-california/) — $215,000 · $537/sq ft
-- [Garage conversion, ~450 sq ft](/posts/garage-conversion-adu-cost-california/) — $190,000 · $422/sq ft
-
-**Cost drivers**
-- [Soft costs: permits, design, plan check](/posts/adu-soft-costs-permits-california/)
-- [Modular vs site-built](/posts/modular-vs-site-built-adu-cost-california/)
-- [Coastal vs inland](/posts/coastal-vs-inland-adu-cost-california/)
-
-**Ownership**
-- [All-in cost, year one](/posts/adu-all-in-cost-california/)
-- [Rent payback and ROI](/posts/adu-rent-payback-roi-california/) **(this post)**
 
 ## The short answer
 
