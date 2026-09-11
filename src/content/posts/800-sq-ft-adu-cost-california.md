@@ -6,6 +6,11 @@ modDatetime: 2026-09-06T00:00:00Z
 tags: ["adu cost", "800 sq ft adu", "los angeles", "california", "2026"]
 draft: false
 featured: true
+series: ca-adu
+seriesCurrent: 800-sq-ft-adu-cost-california
+verifiedPublished: "26 Aug 2026"
+lastVerified: "5 Sep 2026"
+nextReview: "Dec 2026"
 ogImage: "https://everylineitem.com/images/pinterest/800-sq-ft-adu-cost.png"
 faqs:
   - question: "How much does an 800 sq ft ADU cost in California?"
@@ -32,24 +37,7 @@ So we did something different. We modeled one specific unit: **800 square feet, 
 The total came to **$320,000, or $400 per square foot.**
 
 
-## In this series
-
-Every build below uses the same six-phase ledger, so you can compare any two
-directly.
-
-**New construction**
-- [800 sq ft detached](/posts/800-sq-ft-adu-cost-california/) — $320,000 · $400/sq ft **(this post)**
-- [400 sq ft detached](/posts/400-sq-ft-adu-cost-california/) — $215,000 · $537/sq ft
-- [Garage conversion, ~450 sq ft](/posts/garage-conversion-adu-cost-california/) — $190,000 · $422/sq ft
-
-**Cost drivers**
-- [Soft costs: permits, design, plan check](/posts/adu-soft-costs-permits-california/)
-- [Modular vs site-built](/posts/modular-vs-site-built-adu-cost-california/)
-- [Coastal vs inland](/posts/coastal-vs-inland-adu-cost-california/)
-
-**Ownership**
-- [All-in cost, year one](/posts/adu-all-in-cost-california/)
-- [Rent payback and ROI](/posts/adu-rent-payback-roi-california/)
+Compare any two builds on the same six-phase ledger → [Compare](/compare/).
 
 ## The short answer
 
@@ -236,4 +224,3 @@ No. An unpermitted ADU cannot be legally rented, will not appear in your propert
 **Do ADUs increase property tax?**
 
 Yes, but only on the new construction. The assessed value of the ADU is added to your existing assessment. Building an ADU does not trigger a reassessment of your main house, and your original base year value on the existing home is preserved.
-
