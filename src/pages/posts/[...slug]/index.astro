@@ -1,5 +1,4 @@
 ---
-import fs from "node:fs";
 import { type CollectionEntry, getCollection, render } from "astro:content";
 import PostLayout from "@/layouts/PostLayout.astro";
 import Header from "@/components/Header.astro";
@@ -18,12 +17,6 @@ import AdjacentPostNav from "./_components/AdjacentPostNav.astro";
 import SeriesNav from "@/components/SeriesNav.astro";
 import WorksheetCta from "@/components/WorksheetCta.astro";
 import config from "@/config";
-
-// Read as text — do NOT import the .js module (it calls document at top level).
-const postPageScript = fs.readFileSync(
-  new URL("./postPageScript.js", import.meta.url),
-  "utf-8"
-);
 
 export async function getStaticPaths() {
   const posts = await getCollection("posts");
@@ -191,4 +184,7 @@ const ogImage = ogImageUrl
   <Footer />
 </PostLayout>
 
-<script is:inline data-astro-rerun set:html={postPageScript} />
+<!-- Processed as a client-only module; must not use ?raw / set:html of a file that touches document at import time. -->
+<script>
+  import "./postPageScript.js";
+</script>
