@@ -16,7 +16,6 @@ import BackToTopButton from "./_components/BackToTopButton.astro";
 import AdjacentPostNav from "./_components/AdjacentPostNav.astro";
 import SeriesNav from "@/components/SeriesNav.astro";
 import WorksheetCta from "@/components/WorksheetCta.astro";
-import postPageScript from "./postPageScript.js?raw";
 import config from "@/config";
 
 export async function getStaticPaths() {
@@ -185,4 +184,7 @@ const ogImage = ogImageUrl
   <Footer />
 </PostLayout>
 
-<script is:inline data-astro-rerun set:html={postPageScript} />
+<!-- Processed as a client-only module; must not use ?raw / set:html of a file that touches document at import time. -->
+<script>
+  import "./postPageScript.js";
+</script>

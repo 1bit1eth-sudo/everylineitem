@@ -7,9 +7,21 @@ type Props = {
   seriesCurrent?: string;
 };
 
+type SeriesItem = {
+  id: string;
+  href: string;
+  label: string;
+  meta?: string;
+};
+
+type SeriesGroup = {
+  heading: string;
+  items: SeriesItem[];
+};
+
 const { seriesCurrent } = Astro.props;
 
-const groups = [
+const groups: SeriesGroup[] = [
   {
     heading: "New construction",
     items: [
@@ -68,7 +80,7 @@ const groups = [
       },
     ],
   },
-] as const;
+];
 ---
 
 <section
