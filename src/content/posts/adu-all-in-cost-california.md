@@ -6,6 +6,11 @@ modDatetime: 2026-09-06T00:00:00Z
 tags: ["adu all-in cost", "contingency", "california", "2026"]
 draft: false
 featured: false
+series: ca-adu
+seriesCurrent: adu-all-in-cost-california
+verifiedPublished: "4 Sep 2026"
+lastVerified: "5 Sep 2026"
+nextReview: "Dec 2026"
 ---
 > **Published:** 4 Sep 2026 · **Last verified:** 5 Sep 2026 · **Next review:** Dec 2026
 > Cost figures are re-checked against permit records quarterly. Changes are
@@ -15,24 +20,6 @@ Construction cost is the number everyone quotes. It is not the number that empti
 
 Start from the series baselines — **[$320,000 for an 800 sq ft detached ADU](/posts/800-sq-ft-adu-cost-california/)** and **[$215,000 for 400 sq ft](/posts/400-sq-ft-adu-cost-california/)** — then add the lines most articles skip: contingency, construction-loan interest, Proposition 13 tax on the ADU only, vacancy before the first rent check, and optional management. What you get is an **all-in year-one** picture, not a hard-cost fantasy.
 
-## In this series
-
-Every build below uses the same six-phase ledger, so you can compare any two
-directly.
-
-**New construction**
-- [800 sq ft detached](/posts/800-sq-ft-adu-cost-california/) — $320,000 · $400/sq ft
-- [400 sq ft detached](/posts/400-sq-ft-adu-cost-california/) — $215,000 · $537/sq ft
-- [Garage conversion, ~450 sq ft](/posts/garage-conversion-adu-cost-california/) — $190,000 · $422/sq ft
-
-**Cost drivers**
-- [Soft costs: permits, design, plan check](/posts/adu-soft-costs-permits-california/)
-- [Modular vs site-built](/posts/modular-vs-site-built-adu-cost-california/)
-- [Coastal vs inland](/posts/coastal-vs-inland-adu-cost-california/)
-
-**Ownership**
-- [All-in cost, year one](/posts/adu-all-in-cost-california/) **(this post)**
-- [Rent payback and ROI](/posts/adu-rent-payback-roi-california/)
 
 ## The short answer
 
@@ -161,7 +148,7 @@ Self-manage and this line is $0 plus your time. Use a property manager and you t
 ### Side by side
 
 | | 800 sq ft | 400 sq ft | Delta |
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | Construction only | $320,000 | $215,000 | $105,000 |
 | All-in year-one (self-managed) | ~$381,000 | ~$256,000 | ~$125,000 |
 | All-in ÷ construction | **~1.19×** | **~1.19×** | Same multiplier |
