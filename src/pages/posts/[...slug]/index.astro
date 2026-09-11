@@ -27,8 +27,6 @@ export async function getStaticPaths() {
     params: { slug: getPostSlug(post.id, post.filePath) },
     props: {
       post,
-      // sortedPosts is newest-first, so "older" (prev) is a higher index
-      // and "newer" (next) is a lower index.
       prevPost:
         index < sortedPosts.length - 1
           ? {
@@ -61,6 +59,17 @@ type Props = {
   nextPost: AdjacentPost;
 };
 
+const CA_ADU_SLUGS = new Set([
+  "800-sq-ft-adu-cost-california",
+  "400-sq-ft-adu-cost-california",
+  "garage-conversion-adu-cost-california",
+  "adu-soft-costs-permits-california",
+  "modular-vs-site-built-adu-cost-california",
+  "coastal-vs-inland-adu-cost-california",
+  "adu-all-in-cost-california",
+  "adu-rent-payback-roi-california",
+]);
+
 const { post, prevPost, nextPost } = Astro.props;
 const locale = Astro.currentLocale ?? config.site.lang;
 
@@ -78,7 +87,9 @@ const {
   seriesCurrent,
 } = post.data;
 
-const showCaAduSeries = series === "ca-adu";
+const showCaAduSeries =
+  series === "ca-adu" || CA_ADU_SLUGS.has(post.id);
+const seriesCurrentId = seriesCurrent ?? post.id;
 
 const { Content } = await render(post);
 
@@ -141,7 +152,7 @@ const ogImage = ogImageUrl
       <EditPost {hideEditPost} {post} class="max-sm:hidden" />
     </div>
 
-    {showCaAduSeries && <SeriesNav seriesCurrent={seriesCurrent} />}
+    {showCaAduSeries && <SeriesNav seriesCurrent={seriesCurrentId} />}
 
     <article
       id="article"
