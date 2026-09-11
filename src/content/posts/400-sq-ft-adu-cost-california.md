@@ -6,6 +6,11 @@ modDatetime: 2026-09-06T00:00:00Z
 tags: ["adu cost", "400 sq ft adu", "california", "2026", "cost per square foot"]
 draft: false
 featured: false
+series: ca-adu
+seriesCurrent: 400-sq-ft-adu-cost-california
+verifiedPublished: "2 Sep 2026"
+lastVerified: "5 Sep 2026"
+nextReview: "Dec 2026"
 ---
 > **Published:** 2 Sep 2026 · **Last verified:** 5 Sep 2026 · **Next review:** Dec 2026
 > Cost figures are re-checked against permit records quarterly. Changes are
@@ -17,24 +22,6 @@ We modeled a **400 square foot detached ADU** — new construction, single story
 
 That is two-thirds the cost of the 800 sq ft unit ($320,000) for half the floor area. You save $105,000 in absolute dollars and pay **$137 more per square foot.**
 
-## In this series
-
-Every build below uses the same six-phase ledger, so you can compare any two
-directly.
-
-**New construction**
-- [800 sq ft detached](/posts/800-sq-ft-adu-cost-california/) — $320,000 · $400/sq ft
-- [400 sq ft detached](/posts/400-sq-ft-adu-cost-california/) — $215,000 · $537/sq ft **(this post)**
-- [Garage conversion, ~450 sq ft](/posts/garage-conversion-adu-cost-california/) — $190,000 · $422/sq ft
-
-**Cost drivers**
-- [Soft costs: permits, design, plan check](/posts/adu-soft-costs-permits-california/)
-- [Modular vs site-built](/posts/modular-vs-site-built-adu-cost-california/)
-- [Coastal vs inland](/posts/coastal-vs-inland-adu-cost-california/)
-
-**Ownership**
-- [All-in cost, year one](/posts/adu-all-in-cost-california/)
-- [Rent payback and ROI](/posts/adu-rent-payback-roi-california/)
 
 ## The short answer
 
@@ -233,4 +220,3 @@ Yes, if the plan is honest about storage, sleeping, and circulation. Studios and
 **How does this compare to a garage conversion?**
 
 A typical two-car garage conversion can come in lower absolute dollars because you reuse the shell — but envelope, fire, egress, and parking-replacement costs often grow, and local rules can kill the project. Compare phase-by-phase in the [garage conversion post](/posts/garage-conversion-adu-cost-california/).
-

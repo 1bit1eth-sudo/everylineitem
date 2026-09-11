@@ -6,6 +6,11 @@ modDatetime: 2026-09-06T00:00:00Z
 tags: ["modular adu", "site-built", "adu cost", "california", "2026"]
 draft: false
 featured: false
+series: ca-adu
+seriesCurrent: modular-vs-site-built-adu-cost-california
+verifiedPublished: "4 Sep 2026"
+lastVerified: "5 Sep 2026"
+nextReview: "Dec 2026"
 ---
 > **Published:** 4 Sep 2026 · **Last verified:** 5 Sep 2026 · **Next review:** Dec 2026
 > Cost figures are re-checked against permit records quarterly. Changes are
@@ -15,24 +20,6 @@ Factory-built ADUs are marketed as cheaper and faster. Sometimes they are. Somet
 
 We held the same program constant — **800 square feet, detached, single story, mid-grade finishes, Los Angeles County** — and priced it two ways: conventional **site-built** (the [series baseline at $320,000](/posts/800-sq-ft-adu-cost-california/)) and a typical **modular / panelized** path. The modular all-in came to **$288,000, or $360 per square foot** — about **10% lower**, inside the common 10–25% hard-cost savings band after you add what the brochure leaves out.
 
-## In this series
-
-Every build below uses the same six-phase ledger, so you can compare any two
-directly.
-
-**New construction**
-- [800 sq ft detached](/posts/800-sq-ft-adu-cost-california/) — $320,000 · $400/sq ft
-- [400 sq ft detached](/posts/400-sq-ft-adu-cost-california/) — $215,000 · $537/sq ft
-- [Garage conversion, ~450 sq ft](/posts/garage-conversion-adu-cost-california/) — $190,000 · $422/sq ft
-
-**Cost drivers**
-- [Soft costs: permits, design, plan check](/posts/adu-soft-costs-permits-california/)
-- [Modular vs site-built](/posts/modular-vs-site-built-adu-cost-california/) **(this post)**
-- [Coastal vs inland](/posts/coastal-vs-inland-adu-cost-california/)
-
-**Ownership**
-- [All-in cost, year one](/posts/adu-all-in-cost-california/)
-- [Rent payback and ROI](/posts/adu-rent-payback-roi-california/)
 
 ## The short answer
 
