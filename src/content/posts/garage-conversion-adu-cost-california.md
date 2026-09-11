@@ -6,6 +6,11 @@ modDatetime: 2026-09-06T00:00:00Z
 tags: ["garage conversion", "adu cost", "california", "2026"]
 draft: false
 featured: false
+series: ca-adu
+seriesCurrent: garage-conversion-adu-cost-california
+verifiedPublished: "4 Sep 2026"
+lastVerified: "5 Sep 2026"
+nextReview: "Dec 2026"
 ---
 > **Published:** 4 Sep 2026 · **Last verified:** 5 Sep 2026 · **Next review:** Dec 2026
 > Cost figures are re-checked against permit records quarterly. Changes are
@@ -17,24 +22,6 @@ We modeled a **typical two-car garage conversion** in Los Angeles County: roughl
 
 That is less cash than a new [400 sq ft detached ADU](/posts/400-sq-ft-adu-cost-california/) at $215,000, and far less than an [800 sq ft detached](/posts/800-sq-ft-adu-cost-california/) at $320,000. It is not automatically the better deal — parking replacement, HOA rules, and local ordinances can erase the advantage or stop the project entirely.
 
-## In this series
-
-Every build below uses the same six-phase ledger, so you can compare any two
-directly.
-
-**New construction**
-- [800 sq ft detached](/posts/800-sq-ft-adu-cost-california/) — $320,000 · $400/sq ft
-- [400 sq ft detached](/posts/400-sq-ft-adu-cost-california/) — $215,000 · $537/sq ft
-- [Garage conversion, ~450 sq ft](/posts/garage-conversion-adu-cost-california/) — $190,000 · $422/sq ft **(this post)**
-
-**Cost drivers**
-- [Soft costs: permits, design, plan check](/posts/adu-soft-costs-permits-california/)
-- [Modular vs site-built](/posts/modular-vs-site-built-adu-cost-california/)
-- [Coastal vs inland](/posts/coastal-vs-inland-adu-cost-california/)
-
-**Ownership**
-- [All-in cost, year one](/posts/adu-all-in-cost-california/)
-- [Rent payback and ROI](/posts/adu-rent-payback-roi-california/)
 
 ## The short answer
 
