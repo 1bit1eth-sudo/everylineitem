@@ -6,6 +6,11 @@ modDatetime: 2026-09-09T00:00:00Z
 tags: ["adu permits", "soft costs", "california", "2026"]
 draft: false
 featured: false
+series: ca-adu
+seriesCurrent: adu-soft-costs-permits-california
+verifiedPublished: "4 Sep 2026"
+lastVerified: "9 Sep 2026"
+nextReview: "Dec 2026"
 ---
 > **Published:** 4 Sep 2026 · **Last verified:** 9 Sep 2026 · **Next review:** Dec 2026
 > Cost figures are re-checked against permit records quarterly. Changes are
@@ -26,24 +31,7 @@ Notice the pattern: doubling the floor area from 400 to 800 only adds about **$4
 
 That small step also hides a **legal cliff at 750 sq ft** for many impact fees (state law). The 400 model sits below it; the 800 model sits just above it. In our Los Angeles County mid-grade medians the dollar gap stays modest because design dominates phase one and many local ADU fee schedules were already compressed — but in cities that still levy large proportional impact fees above 750 sq ft, soft costs can jump much harder than this table shows. See the impact-fee section below.
 
-## In this series
-
-Every build below uses the same six-phase ledger, so you can compare any two
-directly.
-
-**New construction**
-- [800 sq ft detached](/posts/800-sq-ft-adu-cost-california/) — $320,000 · $400/sq ft
-- [400 sq ft detached](/posts/400-sq-ft-adu-cost-california/) — $215,000 · $537/sq ft
-- [Garage conversion, ~450 sq ft](/posts/garage-conversion-adu-cost-california/) — $190,000 · $422/sq ft
-
-**Cost drivers**
-- [Soft costs: permits, design, plan check](/posts/adu-soft-costs-permits-california/) **(this post)**
-- [Modular vs site-built](/posts/modular-vs-site-built-adu-cost-california/)
-- [Coastal vs inland](/posts/coastal-vs-inland-adu-cost-california/)
-
-**Ownership**
-- [All-in cost, year one](/posts/adu-all-in-cost-california/)
-- [Rent payback and ROI](/posts/adu-rent-payback-roi-california/)
+Compare any two builds on the same six-phase ledger → [Compare](/compare/).
 
 ## What counts as soft cost
 
