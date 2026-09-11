@@ -1,0 +1,115 @@
+---
+/**
+ * Shared California ADU series nav. Links hardcoded to match live posts.
+ * Highlight current via seriesCurrent prop (content id / slug).
+ */
+type Props = {
+  seriesCurrent?: string;
+};
+
+const { seriesCurrent } = Astro.props;
+
+const groups = [
+  {
+    heading: "New construction",
+    items: [
+      {
+        id: "800-sq-ft-adu-cost-california",
+        href: "/posts/800-sq-ft-adu-cost-california/",
+        label: "800 sq ft detached",
+        meta: "$320,000 · $400/sq ft",
+      },
+      {
+        id: "400-sq-ft-adu-cost-california",
+        href: "/posts/400-sq-ft-adu-cost-california/",
+        label: "400 sq ft detached",
+        meta: "$215,000 · $537/sq ft",
+      },
+      {
+        id: "garage-conversion-adu-cost-california",
+        href: "/posts/garage-conversion-adu-cost-california/",
+        label: "Garage conversion, ~450 sq ft",
+        meta: "$190,000 · $422/sq ft",
+      },
+    ],
+  },
+  {
+    heading: "Cost drivers",
+    items: [
+      {
+        id: "adu-soft-costs-permits-california",
+        href: "/posts/adu-soft-costs-permits-california/",
+        label: "Soft costs: permits, design, plan check",
+      },
+      {
+        id: "modular-vs-site-built-adu-cost-california",
+        href: "/posts/modular-vs-site-built-adu-cost-california/",
+        label: "Modular vs site-built",
+      },
+      {
+        id: "coastal-vs-inland-adu-cost-california",
+        href: "/posts/coastal-vs-inland-adu-cost-california/",
+        label: "Coastal vs inland",
+      },
+    ],
+  },
+  {
+    heading: "Ownership",
+    items: [
+      {
+        id: "adu-all-in-cost-california",
+        href: "/posts/adu-all-in-cost-california/",
+        label: "All-in cost, year one",
+      },
+      {
+        id: "adu-rent-payback-roi-california",
+        href: "/posts/adu-rent-payback-roi-california/",
+        label: "Rent payback and ROI",
+      },
+    ],
+  },
+] as const;
+---
+
+<section
+  class="series-nav border-border my-6 rounded-lg border border-dashed p-4"
+  aria-labelledby="in-this-series"
+>
+  <h2 id="in-this-series" class="text-accent mt-0 text-xl font-semibold">
+    In this series
+  </h2>
+  <p class="mb-3">
+    Every build below uses the same six-phase ledger, so you can compare any two
+    directly.
+  </p>
+  {
+    groups.map(group => (
+      <div class="mb-3 last:mb-0">
+        <p class="mb-1">
+          <strong>{group.heading}</strong>
+        </p>
+        <ul class="my-0">
+          {group.items.map(item => {
+            const isCurrent = item.id === seriesCurrent;
+            return (
+              <li>
+                {isCurrent ? (
+                  <>
+                    <span>{item.label}</span>
+                    {item.meta ? ` — ${item.meta}` : ""}
+                    <strong> (this post)</strong>
+                  </>
+                ) : (
+                  <>
+                    <a href={item.href}>{item.label}</a>
+                    {item.meta ? ` — ${item.meta}` : ""}
+                  </>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    ))
+  }
+</section>
