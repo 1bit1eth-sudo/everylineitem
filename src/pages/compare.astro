@@ -12,6 +12,8 @@ import {
 const title = "Compare ADU costs | Every Line Item";
 const description =
   "Pick two California ADU cost scenarios and compare them on the same six-phase ledger — totals, $/sq ft, and phase-by-phase diffs.";
+const ogImage =
+  "https://everylineitem.com/images/pinterest/400-vs-800-adu-cost.png";
 
 const comparePayload = {
   scenarios: ADU_SCENARIOS,
@@ -20,7 +22,7 @@ const comparePayload = {
 };
 ---
 
-<Layout title={title} description={description}>
+<Layout title={title} description={description} ogImage={ogImage}>
   <Header />
   <Breadcrumb />
 
@@ -84,15 +86,70 @@ const comparePayload = {
           <thead>
             <tr class="border-border border-b text-left">
               <th class="py-2 pe-3 font-semibold">Phase</th>
-              <th class="py-2 pe-3 font-semibold" id="col-a-label">Build A</th>
-              <th class="py-2 pe-3 font-semibold" id="col-b-label">Build B</th>
-              <th class="py-2 font-semibold">Diff (B−A)</th>
+              <th class="py-2 pe-3 font-semibold" id="col-a-label">800</th>
+              <th class="py-2 pe-3 font-semibold" id="col-b-label">400</th>
+              <th class="py-2 font-semibold">Diff</th>
             </tr>
           </thead>
-          <tbody id="compare-tbody"></tbody>
-          <tfoot id="compare-tfoot"></tfoot>
+          <tbody id="compare-tbody">
+            <tr class="border-border border-b">
+              <td class="py-2 pe-3">Soft costs</td>
+              <td class="py-2 pe-3 tabular-nums">$32,000</td>
+              <td class="py-2 pe-3 tabular-nums">$28,000</td>
+              <td class="py-2 tabular-nums text-green-600 dark:text-green-400">−$4,000</td>
+            </tr>
+            <tr class="border-border border-b">
+              <td class="py-2 pe-3">Site work + foundation</td>
+              <td class="py-2 pe-3 tabular-nums">$38,000</td>
+              <td class="py-2 pe-3 tabular-nums">$26,000</td>
+              <td class="py-2 tabular-nums text-green-600 dark:text-green-400">−$12,000</td>
+            </tr>
+            <tr class="border-border border-b">
+              <td class="py-2 pe-3">Framing + structure</td>
+              <td class="py-2 pe-3 tabular-nums">$48,000</td>
+              <td class="py-2 pe-3 tabular-nums">$26,000</td>
+              <td class="py-2 tabular-nums text-green-600 dark:text-green-400">−$22,000</td>
+            </tr>
+            <tr class="border-border border-b">
+              <td class="py-2 pe-3">Building envelope</td>
+              <td class="py-2 pe-3 tabular-nums">$42,000</td>
+              <td class="py-2 pe-3 tabular-nums">$25,000</td>
+              <td class="py-2 tabular-nums text-green-600 dark:text-green-400">−$17,000</td>
+            </tr>
+            <tr class="border-border border-b">
+              <td class="py-2 pe-3">Systems + interior</td>
+              <td class="py-2 pe-3 tabular-nums">$147,000</td>
+              <td class="py-2 pe-3 tabular-nums">$102,000</td>
+              <td class="py-2 tabular-nums text-green-600 dark:text-green-400">−$45,000</td>
+            </tr>
+            <tr class="border-border border-b">
+              <td class="py-2 pe-3">Landscaping & hardscape</td>
+              <td class="py-2 pe-3 tabular-nums">$13,000</td>
+              <td class="py-2 pe-3 tabular-nums">$8,000</td>
+              <td class="py-2 tabular-nums text-green-600 dark:text-green-400">−$5,000</td>
+            </tr>
+          </tbody>
+          <tfoot id="compare-tfoot">
+            <tr class="border-border border-t-2 font-semibold">
+              <td class="py-3 pe-3">Total</td>
+              <td class="py-3 pe-3 tabular-nums">$320,000</td>
+              <td class="py-3 pe-3 tabular-nums">$215,000</td>
+              <td class="py-3 tabular-nums text-green-600 dark:text-green-400">−$105,000</td>
+            </tr>
+            <tr class="text-foreground/90">
+              <td class="py-2 pe-3">Per sq ft</td>
+              <td class="py-2 pe-3 tabular-nums">$400</td>
+              <td class="py-2 pe-3 tabular-nums">$537</td>
+              <td class="py-2 tabular-nums">+$137</td>
+            </tr>
+          </tfoot>
         </table>
       </div>
+
+      <p class="text-foreground/80 text-sm">
+        Half the size. Two-thirds the cost. Fixed costs — permits, the sewer
+        connection, the kitchen, the bathroom — do not scale with floor area.
+      </p>
 
       <p id="compare-notes" class="text-foreground/80 text-sm"></p>
 
