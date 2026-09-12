@@ -29,6 +29,12 @@ const currentYear = new Date().getFullYear();
         class="text-muted-foreground flex flex-wrap items-center justify-center gap-x-3 gap-y-1"
         aria-label="Footer"
       >
+        <a class="hover:text-accent" href={getRelativeLocaleUrl(locale, "about")}>
+          About
+        </a>
+        <a class="hover:text-accent" href={getRelativeLocaleUrl(locale, "methodology")}>
+          Methodology
+        </a>
         <a class="hover:text-accent" href={getRelativeLocaleUrl(locale, "corrections")}>
           Corrections
         </a>
