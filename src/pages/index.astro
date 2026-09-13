@@ -23,9 +23,15 @@ const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 const homePath = getRelativeLocaleUrl(locale, "");
+
+// Stronger share/preview image than generic default-og.jpg (post/compare OG unchanged)
+const homeOgImage = new URL(
+  "images/pinterest/800-sq-ft-adu-cost.png",
+  config.site.url
+).href;
 ---
 
-<Layout>
+<Layout ogImage={homeOgImage}>
   <Header />
   <main
     id="main-content"

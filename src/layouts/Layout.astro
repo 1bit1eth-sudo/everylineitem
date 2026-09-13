@@ -14,7 +14,7 @@ type Props = {
   canonicalURL?: string;
 };
 
-const { site } = config;
+const { site, socials, features } = config;
 
 const {
   title = site.title,
@@ -28,6 +28,44 @@ const rssHref = getRelativeLocaleUrl(
   Astro.currentLocale ?? config.site.lang,
   "rss.xml"
 );
+
+const siteUrl = site.url.endsWith("/") ? site.url : `${site.url}/`;
+const organizationId = `${siteUrl}#organization`;
+const websiteId = `${siteUrl}#website`;
+const sameAs = socials.map(s => s.url).filter(Boolean);
+
+const siteStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": organizationId,
+      name: site.title,
+      url: siteUrl,
+      description: site.description,
+      ...(sameAs.length > 0 && { sameAs }),
+    },
+    {
+      "@type": "WebSite",
+      "@id": websiteId,
+      name: site.title,
+      url: siteUrl,
+      description: site.description,
+      inLanguage: site.lang,
+      publisher: { "@id": organizationId },
+      ...(features.search === "pagefind" && {
+        potentialAction: {
+          "@type": "SearchAction",
+          target: {
+            "@type": "EntryPoint",
+            urlTemplate: `${siteUrl}search/?q={search_term_string}`,
+          },
+          "query-input": "required name=search_term_string",
+        },
+      }),
+    },
+  ],
+};
 ---
 
 <!doctype html>
@@ -71,6 +109,13 @@ const rssHref = getRelativeLocaleUrl(
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={socialImageURL} />
+
+    <!-- Sitewide Organization + WebSite structured data -->
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={JSON.stringify(siteStructuredData)}
+    />
 
     <!-- RSS autodiscovery -->
     <link
