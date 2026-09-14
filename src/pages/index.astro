@@ -24,14 +24,43 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 const homePath = getRelativeLocaleUrl(locale, "");
 
+const homeTitle = "California ADU Cost Breakdowns | Every Line Item";
+const homeDescription =
+  "Line-item California ADU costs by phase — 800 vs 400 sq ft, garage conversion, soft costs, modular, coastal, and ROI. Compare any two builds on the same ledger.";
+
 // Stronger share/preview image than generic default-og.jpg (post/compare OG unchanged)
 const homeOgImage = new URL(
   "images/pinterest/800-sq-ft-adu-cost.png",
   config.site.url
 ).href;
+
+const siteUrl = config.site.url.endsWith("/")
+  ? config.site.url
+  : `${config.site.url}/`;
+
+const seriesItemList = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "California ADU cost series",
+  description: homeDescription,
+  numberOfItems: sortedPosts.length,
+  itemListElement: sortedPosts.map((post, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    url: new URL(`posts/${post.id}/`, siteUrl).href,
+    name: post.data.title,
+  })),
+};
 ---
 
-<Layout ogImage={homeOgImage}>
+<Layout title={homeTitle} description={homeDescription} ogImage={homeOgImage}>
+  <Fragment slot="head">
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={JSON.stringify(seriesItemList)}
+    />
+  </Fragment>
   <Header />
   <main
     id="main-content"

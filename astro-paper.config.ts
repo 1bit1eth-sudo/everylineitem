@@ -5,7 +5,7 @@ export default defineAstroPaperConfig({
     url: "https://everylineitem.com/",
     title: "Every Line Item",
     description:
-      "Line-item cost breakdowns for real builds — starting with California ADU and residential construction.",
+      "California ADU line-item cost breakdowns — every phase priced so you can see where the money goes. Compare 400 vs 800 sq ft, garage conversion, soft costs, and ROI.",
     author: "Every Line Item",
     ogImage: "default-og.jpg",
     lang: "en",
