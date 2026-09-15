@@ -1,0 +1,32 @@
+# Every Line Item
+
+> Line-item cost breakdowns for California ADUs — every phase priced so you can see where the money goes.
+
+Site: https://everylineitem.com/
+
+## Primary pages
+
+- [Home](https://everylineitem.com/): Series overview and featured posts
+- [Compare builds](https://everylineitem.com/compare/): Side-by-side six-phase ADU cost comparison (default 800 vs 400 sq ft)
+- [Methodology](https://everylineitem.com/methodology/): How figures are built (public sources; no paywalled RSMeans)
+- [About](https://everylineitem.com/about/): Why six phases
+- [Worksheet](https://everylineitem.com/worksheet/): Blank six-phase CSV ledger
+- [Benchmarks](https://everylineitem.com/benchmarks/): Regional phase ranges
+- [Corrections](https://everylineitem.com/corrections/): Change log
+- [Privacy](https://everylineitem.com/privacy/)
+
+## California ADU cost series
+
+- [800 sq ft detached](https://everylineitem.com/posts/800-sq-ft-adu-cost-california/)
+- [400 sq ft detached](https://everylineitem.com/posts/400-sq-ft-adu-cost-california/)
+- [Garage conversion](https://everylineitem.com/posts/garage-conversion-adu-cost-california/)
+- [Soft costs / permits](https://everylineitem.com/posts/adu-soft-costs-permits-california/)
+- [Modular vs site-built](https://everylineitem.com/posts/modular-vs-site-built-adu-cost-california/)
+- [All-in cost](https://everylineitem.com/posts/adu-all-in-cost-california/)
+- [Coastal vs inland](https://everylineitem.com/posts/coastal-vs-inland-adu-cost-california/)
+- [Rent payback & ROI](https://everylineitem.com/posts/adu-rent-payback-roi-california/)
+
+## Optional
+
+- [Posts index](https://everylineitem.com/posts/)
+- [Sitemap](https://everylineitem.com/sitemap-index.xml)
