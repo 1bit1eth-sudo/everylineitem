@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1500" viewBox="0 0 1000 1500">
+  <rect width="1000" height="1500" fill="#faf8f3"/>
+  <rect width="1000" height="12" fill="#0f7d5b"/>
+  <text x="64" y="80" font-family="Georgia, serif" font-size="28" font-weight="700" fill="#0f7d5b">EVERY LINE ITEM</text>
+  <text x="64" y="150" font-family="Georgia, serif" font-size="54" font-weight="700" fill="#16181c">The 750 sq ft</text>
+  <text x="64" y="216" font-family="Georgia, serif" font-size="54" font-weight="700" fill="#16181c">California ADU</text>
+  <text x="64" y="282" font-family="Georgia, serif" font-size="54" font-weight="700" fill="#16181c">impact-fee cliff</text>
+  <text x="64" y="350" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#4a4f5a">State law caps/exempts many impact fees</text>
+  <text x="64" y="390" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#4a4f5a">for ADUs at or under 750 sq ft.</text>
+  <rect x="64" y="440" width="420" height="280" rx="20" fill="#fff" stroke="#e8e6df" stroke-width="2"/>
+  <rect x="84" y="460" width="200" height="40" rx="12" fill="#0f7d5b"/>
+  <text x="96" y="488" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#fff">BELOW CLIFF</text>
+  <text x="84" y="540" font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#16181c">Stay ≤750 sq ft</text>
+  <text x="84" y="590" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#4a4f5a">• Many impact fees limited</text>
+  <text x="84" y="626" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#4a4f5a">• Design/permits still apply</text>
+  <text x="84" y="662" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#4a4f5a">• Soft costs stay fixed-ish</text>
+  <rect x="516" y="440" width="420" height="280" rx="20" fill="#fff" stroke="#e8e6df" stroke-width="2"/>
+  <rect x="536" y="460" width="200" height="40" rx="12" fill="#b45a28"/>
+  <text x="548" y="488" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#fff">ABOVE CLIFF</text>
+  <text x="536" y="540" font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#16181c">Cross 750 sq ft</text>
+  <text x="536" y="590" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#4a4f5a">• Proportional fees can kick in</text>
+  <text x="536" y="626" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#4a4f5a">• Same kitchen/bath/sewer base</text>
+  <text x="536" y="662" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#4a4f5a">• $/sf can look cheaper</text>
+  <rect x="64" y="760" width="872" height="320" rx="20" fill="#fff" stroke="#e8e6df" stroke-width="2"/>
+  <text x="88" y="810" font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#16181c">Why this matters on a six-phase ledger</text>
+  <text x="88" y="870" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#4a4f5a">Soft costs (design + permits + fees) do not scale like framing.</text>
+  <text x="88" y="906" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#4a4f5a">Going 400→800 may add only a small soft-cost bump — until your</text>
+  <text x="88" y="942" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#4a4f5a">city still charges large proportional impact fees above 750 sq ft.</text>
+  <text x="88" y="978" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#4a4f5a">Then phase 1 jumps harder than a modest LA mid-grade case.</text>
+  <text x="88" y="1024" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#4a4f5a">Put two bids on the same ledger: everylineitem.com/compare</text>
+  <text x="64" y="1360" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#4a4f5a">Source frame: CA Gov. Code §66311.5</text>
+  <text x="64" y="1400" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#0f7d5b">everylineitem.com/methodology  ·  /compare</text>
+  <text x="64" y="1440" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#4a4f5a">Line-item ADU costs — not a contractor quote</text>
+</svg>
