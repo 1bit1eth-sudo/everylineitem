@@ -1,4 +1,3 @@
----
 import { getCollection } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import IconRss from "@/assets/icons/IconRss.svg";
@@ -100,6 +99,13 @@ const seriesItemList = {
         >
           800 sq ft ADU cost in California
         </LinkButton>
+        ;{" "}
+        <LinkButton
+          class="hover:text-accent underline decoration-dashed underline-offset-4"
+          href="/posts/los-angeles-county-adu-cost/"
+        >
+          LA County hub
+        </LinkButton>
         . Series continues:{" "}
         <LinkButton
           class="hover:text-accent underline decoration-dashed underline-offset-4"
@@ -152,14 +158,31 @@ const seriesItemList = {
         .
       </p>
       <p class="mt-2">
+        New:{" "}
         <LinkButton
           class="hover:text-accent underline decoration-dashed underline-offset-4"
-          href="/compare/"
+          href="/posts/los-angeles-county-adu-cost/"
         >
-          Compare any two builds
-        </LinkButton>{" "}
-        on the same six-phase ledger — totals, $/sq ft, and phase diffs.
+          Los Angeles County ADU cost hub
+        </LinkButton>
+        — City of LA vs unincorporated paths on the same six-phase ledger.
       </p>
+      <div class="border-border mt-4 rounded-lg border px-4 py-3">
+        <p class="font-semibold">
+          Got a contractor quote?
+        </p>
+        <p class="mt-1 text-sm opacity-90">
+          Drop it onto the same six-phase ledger as our published builds — totals, $/sq ft, and phase gaps.
+        </p>
+        <p class="mt-2">
+          <LinkButton
+            class="text-accent font-semibold underline decoration-dashed underline-offset-4"
+            href="/compare/"
+          >
+            Verify a quote on Compare →
+          </LinkButton>
+        </p>
+      </div>
       {
         socials.length > 0 && (
           <div class="mt-4 flex max-sm:flex-col sm:items-center">
