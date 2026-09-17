@@ -1,1 +1,254 @@
-PLACEHOLDER_WILL_REPLACE
+---
+import { getCollection } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import IconRss from "@/assets/icons/IconRss.svg";
+import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Socials from "@/components/Socials.astro";
+import Card from "@/components/Card.astro";
+import LinkButton from "@/components/LinkButton.astro";
+import { getSortedPosts } from "@/utils/getSortedPosts";
+import { useTranslations } from "@/i18n";
+import config from "@/config";
+
+const { socials, posts: postsConfig } = config;
+
+const locale = Astro.currentLocale ?? config.site.lang;
+const t = useTranslations(locale);
+
+const posts = await getCollection("posts");
+const sortedPosts = getSortedPosts(posts);
+const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
+const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
+const homePath = getRelativeLocaleUrl(locale, "");
+
+const homeTitle = "California ADU Cost Breakdowns | Every Line Item";
+const homeDescription =
+  "Line-item California ADU costs by phase — 800 vs 400 sq ft, garage conversion, soft costs, modular, coastal, and ROI. Compare any two builds on the same ledger.";
+
+// Stronger share/preview image than generic default-og.jpg (post/compare OG unchanged)
+const homeOgImage = new URL(
+  "images/pinterest/800-sq-ft-adu-cost.png",
+  config.site.url
+).href;
+
+const siteUrl = config.site.url.endsWith("/")
+  ? config.site.url
+  : `${config.site.url}/`;
+
+const seriesItemList = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "California ADU cost series",
+  description: homeDescription,
+  numberOfItems: sortedPosts.length,
+  itemListElement: sortedPosts.map((post, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    url: new URL(`posts/${post.id}/`, siteUrl).href,
+    name: post.data.title,
+  })),
+};
+---
+
+<Layout title={homeTitle} description={homeDescription} ogImage={homeOgImage}>
+  <Fragment slot="head">
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={JSON.stringify(seriesItemList)}
+    />
+  </Fragment>
+  <Header />
+  <main
+    id="main-content"
+    data-layout="index"
+    data-home-path={homePath}
+    class="app-layout my-1"
+  >
+    <section id="hero" class="border-border border-b pt-8 pb-6">
+      <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
+        Every Line Item
+      </h1>
+      <a
+        target="_blank"
+        href={`${import.meta.env.BASE_URL.replace(/\/?$/, "/")}rss.xml`}
+        class="inline-block"
+        aria-label="RSS Feed"
+        title="RSS Feed"
+      >
+        <IconRss
+          width={20}
+          height={20}
+          class="stroke-accent scale-125 stroke-3 rtl:-rotate-90"
+        />
+        <span class="sr-only">RSS Feed</span>
+      </a>
+
+      <p>
+        Line-item cost breakdowns for real builds — starting with California
+        ADU and residential construction. We price every phase so you can see
+        where the money actually goes.
+      </p>
+      <p class="mt-2">
+        Featured:{" "}
+        <LinkButton
+          class="hover:text-accent underline decoration-dashed underline-offset-4"
+          href="/posts/800-sq-ft-adu-cost-california/"
+        >
+          800 sq ft ADU cost in California
+        </LinkButton>
+        ;{" "}
+        <LinkButton
+          class="hover:text-accent underline decoration-dashed underline-offset-4"
+          href="/posts/los-angeles-county-adu-cost/"
+        >
+          LA County hub
+        </LinkButton>
+        . Series continues:{" "}
+        <LinkButton
+          class="hover:text-accent underline decoration-dashed underline-offset-4"
+          href="/posts/400-sq-ft-adu-cost-california/"
+        >
+          400 sq ft
+        </LinkButton>
+        ,{" "}
+        <LinkButton
+          class="hover:text-accent underline decoration-dashed underline-offset-4"
+          href="/posts/garage-conversion-adu-cost-california/"
+        >
+          garage conversion
+        </LinkButton>
+        ,{" "}
+        <LinkButton
+          class="hover:text-accent underline decoration-dashed underline-offset-4"
+          href="/posts/adu-soft-costs-permits-california/"
+        >
+          soft costs
+        </LinkButton>
+        ,{" "}
+        <LinkButton
+          class="hover:text-accent underline decoration-dashed underline-offset-4"
+          href="/posts/modular-vs-site-built-adu-cost-california/"
+        >
+          modular vs site-built
+        </LinkButton>
+        ,{" "}
+        <LinkButton
+          class="hover:text-accent underline decoration-dashed underline-offset-4"
+          href="/posts/adu-all-in-cost-california/"
+        >
+          all-in cost
+        </LinkButton>
+        ,{" "}
+        <LinkButton
+          class="hover:text-accent underline decoration-dashed underline-offset-4"
+          href="/posts/coastal-vs-inland-adu-cost-california/"
+        >
+          coastal vs inland
+        </LinkButton>
+        , and{" "}
+        <LinkButton
+          class="hover:text-accent underline decoration-dashed underline-offset-4"
+          href="/posts/adu-rent-payback-roi-california/"
+        >
+          rent payback &amp; ROI
+        </LinkButton>
+        .
+      </p>
+      <p class="mt-2">
+        New:{" "}
+        <LinkButton
+          class="hover:text-accent underline decoration-dashed underline-offset-4"
+          href="/posts/los-angeles-county-adu-cost/"
+        >
+          Los Angeles County ADU cost hub
+        </LinkButton>
+        — City of LA vs unincorporated paths on the same six-phase ledger.
+      </p>
+      <div class="border-border mt-4 rounded-lg border px-4 py-3">
+        <p class="font-semibold">
+          Got a contractor quote?
+        </p>
+        <p class="mt-1 text-sm opacity-90">
+          Drop it onto the same six-phase ledger as our published builds — totals, $/sq ft, and phase gaps.
+        </p>
+        <p class="mt-2">
+          <LinkButton
+            class="text-accent font-semibold underline decoration-dashed underline-offset-4"
+            href="/compare/"
+          >
+            Verify a quote on Compare →
+          </LinkButton>
+        </p>
+      </div>
+      {
+        socials.length > 0 && (
+          <div class="mt-4 flex max-sm:flex-col sm:items-center">
+            <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">
+              {t.home.socialLinks}:
+            </div>
+            <Socials />
+          </div>
+        )
+      }
+    </section>
+
+    {
+      featuredPosts.length > 0 && (
+        <section
+          id="featured"
+          class:list={[
+            "pt-12 pb-6",
+            { "border-border border-b": recentPosts.length > 0 },
+          ]}
+        >
+          <h2 class="text-2xl font-semibold tracking-wide">
+            {t.home.featured}
+          </h2>
+          <ul>
+            {featuredPosts.map(data => (
+              <Card variant="h3" {...data} />
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    {
+      recentPosts.length > 0 && (
+        <section id="recent-posts" class="pt-12 pb-6">
+          <h2 class="text-2xl font-semibold tracking-wide">
+            {t.home.recentPosts}
+          </h2>
+          <ul>
+            {recentPosts.slice(0, postsConfig.perIndex).map(data => (
+              <Card variant="h3" {...data} />
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    <div class="my-8 text-center">
+      <LinkButton href={getRelativeLocaleUrl(locale, "posts")}>
+        {t.home.allPosts}
+        <IconArrowRight class="inline-block rtl:-rotate-180" />
+      </LinkButton>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const indexLayout = (document.querySelector("#main-content") as HTMLElement)
+      ?.dataset;
+    const baseRoot = import.meta.env.BASE_URL.replace(/\/?$/, "/");
+    if (indexLayout?.layout) {
+      sessionStorage.setItem("backUrl", indexLayout.homePath ?? baseRoot);
+    }
+  });
+</script>
