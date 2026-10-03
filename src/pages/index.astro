@@ -26,7 +26,7 @@ const homePath = getRelativeLocaleUrl(locale, "");
 
 const homeTitle = "California ADU Cost Breakdowns | Every Line Item";
 const homeDescription =
-  "Line-item California ADU costs by phase: 800 vs 400 sq ft, garage conversion, soft costs, modular, coastal, and ROI. Compare any two builds side by side.";
+  "Line-item California ADU costs by phase: 800 vs 400 sq ft, garage conversion, soft costs, modular, coastal, San Diego, Bay Area, and ROI. Compare any two builds side by side.";
 
 // Stronger share/preview image than generic default-og.jpg (post/compare OG unchanged)
 const homeOgImage = new URL(
@@ -156,17 +156,31 @@ const seriesItemList = {
         >
           rent payback &amp; ROI
         </LinkButton>
+        ,{" "}
+        <LinkButton
+          class="hover:text-accent underline decoration-dashed underline-offset-4"
+          href="/posts/san-diego-adu-cost/"
+        >
+          San Diego
+        </LinkButton>
+        , and{" "}
+        <LinkButton
+          class="hover:text-accent underline decoration-dashed underline-offset-4"
+          href="/posts/san-jose-bay-area-adu-cost/"
+        >
+          San Jose Bay Area
+        </LinkButton>
         .
       </p>
       <p class="mt-2">
         New:{" "}
         <LinkButton
           class="hover:text-accent underline decoration-dashed underline-offset-4"
-          href="/posts/los-angeles-county-adu-cost/"
+          href="/posts/san-jose-bay-area-adu-cost/"
         >
-          Los Angeles County ADU cost hub
+          San Jose Bay Area ADU cost
         </LinkButton>
-        — City of LA vs unincorporated paths on the same six-phase ledger.
+        — five jurisdictions, one plan, and the $18,000 square foot.
       </p>
       <div class="border-border mt-4 rounded-lg border px-4 py-3">
         <p class="font-semibold">
