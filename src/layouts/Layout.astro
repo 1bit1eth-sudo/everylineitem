@@ -80,7 +80,6 @@ const siteStructuredData = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href={getAssetPath("favicon.svg")} />
-    <link rel="icon" href={getAssetPath("favicon.ico")} />
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
 
@@ -161,6 +160,11 @@ const siteStructuredData = {
         window.__theme = { value: theme };
       })();
     </script>
+
+    <!-- Cloudflare Web Analytics (cookieless) -->
+    <Fragment
+      set:html={`<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "6ed43d34957a49fcb90ec8e43f7db523"}'></script>`}
+    />
 
     <ClientRouter />
   </head>
