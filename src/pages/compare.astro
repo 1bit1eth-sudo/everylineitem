@@ -5,8 +5,10 @@ import Breadcrumb from "@/components/Breadcrumb.astro";
 import Footer from "@/components/Footer.astro";
 import {
   ADU_SCENARIOS,
+  BENCHMARK_SOURCES,
   DEFAULT_COMPARE,
   PHASES,
+  type AduScenario,
 } from "@/data/aduScenarios";
 
 const title = "Compare ADU costs | Every Line Item";
@@ -19,7 +21,67 @@ const comparePayload = {
   scenarios: ADU_SCENARIOS,
   phases: PHASES,
   defaults: DEFAULT_COMPARE,
+  sources: BENCHMARK_SOURCES,
 };
+
+// Server-rendered default view (same markup the client script produces), so
+// the summary, table, notes and links are not empty without JavaScript.
+const byId = new Map(ADU_SCENARIOS.map(s => [s.id, s]));
+const ssrA = byId.get(DEFAULT_COMPARE.a)!;
+const ssrB = byId.get(DEFAULT_COMPARE.b)!;
+
+const fmtUsd = (n: number) =>
+  Math.abs(n).toLocaleString("en-US", {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 0,
+  });
+const money = (n: number) => (n < 0 ? "−" : "") + fmtUsd(n);
+const moneyDiff = (n: number) =>
+  n === 0 ? "$0" : (n > 0 ? "+" : "−") + fmtUsd(n);
+const diffClass = (n: number) =>
+  n > 0 ? "text-accent" : n < 0 ? "text-green-600 dark:text-green-400" : "";
+
+const largestPhase = (sc: AduScenario) => {
+  let best = { label: PHASES[0]?.label ?? "—", amount: 0 };
+  for (const p of PHASES) {
+    const amount = sc.phases[p.id] || 0;
+    if (amount > best.amount) best = { label: p.label, amount };
+  }
+  for (const e of sc.extraPhases ?? []) {
+    if (e.amount > best.amount) best = { label: e.label, amount: e.amount };
+  }
+  return best;
+};
+
+const ssrRows = PHASES.map(p => {
+  const av = ssrA.phases[p.id] || 0;
+  const bv = ssrB.phases[p.id] || 0;
+  return { label: p.label, av, bv, diff: bv - av };
+});
+const ssrTotalDiff = ssrB.total - ssrA.total;
+const ssrPsfDiff = ssrB.costPerSqFt - ssrA.costPerSqFt;
+const ssrPsfText =
+  ssrPsfDiff === 0
+    ? "$0"
+    : (ssrPsfDiff > 0 ? "+" : "−") +
+      "$" +
+      Math.abs(ssrPsfDiff).toLocaleString("en-US");
+const ssrCards = [
+  { tag: "Build A", sc: ssrA, largest: largestPhase(ssrA) },
+  { tag: "Build B", sc: ssrB, largest: largestPhase(ssrB) },
+];
+const ssrNotes = [ssrA.note, ssrB.note].filter(Boolean).join(" ");
+const qcDefault = ssrA;
+const extraRows = [
+  ...new Map(
+    ADU_SCENARIOS.flatMap(sc => sc.extraPhases ?? []).map(e => [e.id, e])
+  ).values(),
+];
+const linkClass =
+  "text-accent underline decoration-dashed underline-offset-4";
+const inputClass =
+  "border-border bg-background focus:border-accent focus:ring-accent w-full rounded-md border px-2 py-1 text-sm font-normal tabular-nums focus:ring-1 focus:outline-none";
 ---
 
 <Layout title={title} description={description} ogImage={ogImage}>
@@ -76,6 +138,42 @@ const comparePayload = {
         id="compare-summary"
         class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3"
       >
+        {
+          ssrCards.map(({ tag, sc, largest }) => (
+            <div class="border-border rounded-md border p-4">
+              <div class="text-foreground/70 text-xs tracking-wide uppercase">
+                {tag} · {sc.shortLabel}
+              </div>
+              <div class="mt-1 text-2xl font-semibold tabular-nums">
+                {money(sc.total)}
+              </div>
+              <div class="mt-1 text-sm">
+                ${sc.costPerSqFt.toLocaleString("en-US")}/sq ft ·{" "}
+                {sc.sqFt.toLocaleString("en-US")} sq ft
+              </div>
+              <div class="text-foreground/80 mt-2 text-sm">
+                Largest phase: {largest.label} ({money(largest.amount)})
+              </div>
+              <div class="text-foreground/60 mt-2 text-xs">
+                Modeled median · checked {sc.lastVerified}
+              </div>
+            </div>
+          ))
+        }
+        <div class="border-border border-accent/40 rounded-md border p-4 sm:col-span-2 lg:col-span-1">
+          <div class="text-foreground/70 text-xs tracking-wide uppercase">
+            Difference (B − A)
+          </div>
+          <div
+            class:list={[
+              "mt-1 text-2xl font-semibold tabular-nums",
+              diffClass(ssrTotalDiff),
+            ]}
+          >
+            {moneyDiff(ssrTotalDiff)}
+          </div>
+          <div class="mt-1 text-sm">{ssrPsfText}/sq ft</div>
+        </div>
       </div>
 
       <div class="relative w-full overflow-x-auto">
@@ -86,61 +184,47 @@ const comparePayload = {
           <thead>
             <tr class="border-border border-b text-left">
               <th class="py-2 pe-3 font-semibold">Phase</th>
-              <th class="py-2 pe-3 font-semibold" id="col-a-label">800</th>
-              <th class="py-2 pe-3 font-semibold" id="col-b-label">400</th>
+              <th class="py-2 pe-3 font-semibold" id="col-a-label">
+                {ssrA.shortLabel}
+              </th>
+              <th class="py-2 pe-3 font-semibold" id="col-b-label">
+                {ssrB.shortLabel}
+              </th>
               <th class="py-2 font-semibold">Diff</th>
             </tr>
           </thead>
           <tbody id="compare-tbody">
-            <tr class="border-border border-b">
-              <td class="py-2 pe-3">Soft costs</td>
-              <td class="py-2 pe-3 tabular-nums">$32,000</td>
-              <td class="py-2 pe-3 tabular-nums">$28,000</td>
-              <td class="py-2 tabular-nums text-green-600 dark:text-green-400">−$4,000</td>
-            </tr>
-            <tr class="border-border border-b">
-              <td class="py-2 pe-3">Site work + foundation</td>
-              <td class="py-2 pe-3 tabular-nums">$38,000</td>
-              <td class="py-2 pe-3 tabular-nums">$26,000</td>
-              <td class="py-2 tabular-nums text-green-600 dark:text-green-400">−$12,000</td>
-            </tr>
-            <tr class="border-border border-b">
-              <td class="py-2 pe-3">Framing + structure</td>
-              <td class="py-2 pe-3 tabular-nums">$48,000</td>
-              <td class="py-2 pe-3 tabular-nums">$26,000</td>
-              <td class="py-2 tabular-nums text-green-600 dark:text-green-400">−$22,000</td>
-            </tr>
-            <tr class="border-border border-b">
-              <td class="py-2 pe-3">Building envelope</td>
-              <td class="py-2 pe-3 tabular-nums">$42,000</td>
-              <td class="py-2 pe-3 tabular-nums">$25,000</td>
-              <td class="py-2 tabular-nums text-green-600 dark:text-green-400">−$17,000</td>
-            </tr>
-            <tr class="border-border border-b">
-              <td class="py-2 pe-3">Systems + interior</td>
-              <td class="py-2 pe-3 tabular-nums">$147,000</td>
-              <td class="py-2 pe-3 tabular-nums">$102,000</td>
-              <td class="py-2 tabular-nums text-green-600 dark:text-green-400">−$45,000</td>
-            </tr>
-            <tr class="border-border border-b">
-              <td class="py-2 pe-3">Landscaping & hardscape</td>
-              <td class="py-2 pe-3 tabular-nums">$13,000</td>
-              <td class="py-2 pe-3 tabular-nums">$8,000</td>
-              <td class="py-2 tabular-nums text-green-600 dark:text-green-400">−$5,000</td>
-            </tr>
+            {
+              ssrRows.map(r => (
+                <tr class="border-border border-b">
+                  <td class="py-2 pe-3">{r.label}</td>
+                  <td class="py-2 pe-3 tabular-nums">{money(r.av)}</td>
+                  <td class="py-2 pe-3 tabular-nums">{money(r.bv)}</td>
+                  <td class:list={["py-2 tabular-nums", diffClass(r.diff)]}>
+                    {moneyDiff(r.diff)}
+                  </td>
+                </tr>
+              ))
+            }
           </tbody>
           <tfoot id="compare-tfoot">
             <tr class="border-border border-t-2 font-semibold">
               <td class="py-3 pe-3">Total</td>
-              <td class="py-3 pe-3 tabular-nums">$320,000</td>
-              <td class="py-3 pe-3 tabular-nums">$215,000</td>
-              <td class="py-3 tabular-nums text-green-600 dark:text-green-400">−$105,000</td>
+              <td class="py-3 pe-3 tabular-nums">{money(ssrA.total)}</td>
+              <td class="py-3 pe-3 tabular-nums">{money(ssrB.total)}</td>
+              <td class:list={["py-3 tabular-nums", diffClass(ssrTotalDiff)]}>
+                {moneyDiff(ssrTotalDiff)}
+              </td>
             </tr>
             <tr class="text-foreground/90">
-              <td class="py-2 pe-3">Per sq ft</td>
-              <td class="py-2 pe-3 tabular-nums">$400</td>
-              <td class="py-2 pe-3 tabular-nums">$537</td>
-              <td class="py-2 tabular-nums">+$137</td>
+              <td class="py-2 pe-3">$/sq ft</td>
+              <td class="py-2 pe-3 tabular-nums">
+                ${ssrA.costPerSqFt.toLocaleString("en-US")}
+              </td>
+              <td class="py-2 pe-3 tabular-nums">
+                ${ssrB.costPerSqFt.toLocaleString("en-US")}
+              </td>
+              <td class="py-2 tabular-nums">{ssrPsfText}</td>
             </tr>
           </tfoot>
         </table>
@@ -163,14 +247,175 @@ const comparePayload = {
         crosses that threshold.
       </p>
 
-      <p id="compare-notes" class="text-foreground/80 text-sm"></p>
+      <p id="compare-notes" class="text-foreground/80 text-sm">{ssrNotes}</p>
 
       <div
         id="compare-links"
         class="border-border flex flex-col gap-2 border-t pt-4 text-sm sm:flex-row sm:gap-6"
       >
+        <a class={linkClass} href={ssrA.href}>
+          Full post: {ssrA.shortLabel} →
+        </a>
+        <a class={linkClass} href={ssrB.href}>
+          Full post: {ssrB.shortLabel} →
+        </a>
       </div>
     </div>
+
+    <section
+      id="quote-check"
+      class="border-border bg-background mt-8 space-y-5 rounded-lg border p-4 sm:p-6"
+      aria-labelledby="quote-check-title"
+    >
+      <div>
+        <h2 id="quote-check-title" class="text-xl font-semibold">
+          Check my quotes
+        </h2>
+        <p class="text-foreground/80 mt-2 text-sm">
+          Type what each contractor quoted for each stage and how it is listed.
+          You get the gap against a published benchmark, the stages that are
+          missing, and questions to ask before you sign.
+        </p>
+        <p class="mt-2 text-sm font-medium">
+          Runs only in your browser. Nothing you type is saved or sent anywhere.
+        </p>
+      </div>
+
+      <label class="flex max-w-xl flex-col gap-2 text-sm font-medium">
+        <span>Compare against this benchmark</span>
+        <select
+          id="qc-benchmark"
+          class="border-border bg-background focus:border-accent focus:ring-accent w-full rounded-md border px-3 py-2 text-base font-normal focus:ring-1 focus:outline-none"
+        >
+          {
+            ADU_SCENARIOS.map(sc => (
+              <option value={sc.id} selected={sc.id === qcDefault.id}>
+                {sc.label} — {money(sc.total)}
+              </option>
+            ))
+          }
+        </select>
+      </label>
+
+      <p id="qc-source" class="text-foreground/70 text-xs">
+        Benchmark: <a class={linkClass} href={qcDefault.href}
+          >{qcDefault.shortLabel}</a
+        >, modeled median, checked {qcDefault.lastVerified}. Built from{" "}
+        {
+          BENCHMARK_SOURCES.map((src, i) => (
+            <>
+              <a class={linkClass} href={src.href} rel="noopener">
+                {src.label}
+              </a>
+              {i < BENCHMARK_SOURCES.length - 1 ? ", " : ""}
+            </>
+          ))
+        }
+        . Not a quote. See <a class={linkClass} href="/methodology/"
+          >Methodology</a
+        >.
+      </p>
+
+      <div class="relative w-full overflow-x-auto">
+        <table class="w-full min-w-[44rem] border-collapse text-sm">
+          <thead>
+            <tr class="border-border border-b text-left">
+              <th class="py-2 pe-3 font-semibold">Stage</th>
+              <th class="py-2 pe-3 font-semibold">Benchmark</th>
+              <th class="py-2 pe-3 font-semibold">Quote A</th>
+              <th class="py-2 pe-3 font-semibold">Quote B</th>
+            </tr>
+          </thead>
+          <tbody id="qc-tbody">
+            {
+              [
+                ...PHASES.map(p => ({
+                  id: p.id,
+                  label: p.label,
+                  extra: false,
+                  amount: qcDefault.phases[p.id] || 0,
+                })),
+                ...extraRows.map(e => ({
+                  id: e.id,
+                  label: e.label,
+                  extra: true,
+                  amount:
+                    qcDefault.extraPhases?.find(x => x.id === e.id)?.amount ??
+                    0,
+                })),
+              ].map(row => (
+                <tr
+                  class:list={[
+                    "border-border border-b align-top",
+                    {
+                      hidden:
+                        row.extra &&
+                        !qcDefault.extraPhases?.some(x => x.id === row.id),
+                    },
+                  ]}
+                  data-stage={row.id}
+                  data-extra={row.extra ? "1" : undefined}
+                >
+                  <td class="py-2 pe-3">{row.label}</td>
+                  <td class="py-2 pe-3 tabular-nums" data-bench>
+                    {money(row.amount)}
+                  </td>
+                  {["a", "b"].map(q => (
+                    <td class="py-2 pe-3">
+                      <div class="flex flex-col gap-1">
+                        <input
+                          type="text"
+                          inputmode="numeric"
+                          autocomplete="off"
+                          placeholder="$"
+                          aria-label={`Quote ${q.toUpperCase()}: ${row.label} amount`}
+                          class={inputClass}
+                          data-q={q}
+                          data-field="amount"
+                        />
+                        <select
+                          aria-label={`Quote ${q.toUpperCase()}: ${row.label} status`}
+                          class={inputClass}
+                          data-q={q}
+                          data-field="status"
+                        >
+                          <option value="notlisted" selected>Not listed</option>
+                          <option value="included">Included</option>
+                          <option value="allowance">Allowance</option>
+                          <option value="excluded">Excluded</option>
+                        </select>
+                        <span
+                          class="text-xs tabular-nums"
+                          data-q={q}
+                          data-field="diff"
+                        ></span>
+                      </div>
+                    </td>
+                  ))}
+                </tr>
+              ))
+            }
+          </tbody>
+          <tfoot>
+            <tr class="border-border border-t-2 font-semibold">
+              <td class="py-3 pe-3">Total</td>
+              <td class="py-3 pe-3 tabular-nums" id="qc-bench-total">
+                {money(qcDefault.total)}
+              </td>
+              <td class="py-3 pe-3 tabular-nums" id="qc-total-a">—</td>
+              <td class="py-3 pe-3 tabular-nums" id="qc-total-b">—</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <div id="qc-results" class="space-y-4" aria-live="polite">
+        <p class="text-foreground/70 text-sm">
+          Enter at least one amount to see flags and questions.
+          <noscript>This checker needs JavaScript; the benchmark table above works without it.</noscript>
+        </p>
+      </div>
+    </section>
 
     <aside class="border-border bg-background mt-8 rounded-lg border p-4 sm:p-6">
       <h2 class="text-lg font-semibold">Verify two contractor quotes</h2>
@@ -228,3 +473,4 @@ const comparePayload = {
 />
 
 <script is:inline src="/scripts/adu-compare.js"></script>
+<script is:inline src="/scripts/quote-check.js"></script>

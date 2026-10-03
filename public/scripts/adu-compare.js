@@ -206,6 +206,9 @@ function initCompare() {
         " (" +
         money(la.amount) +
         ")</div>" +
+        '<div class="text-foreground/60 mt-2 text-xs">Modeled median · checked ' +
+        (a.lastVerified || "") +
+        "</div>" +
         "</div>" +
         '<div class="border-border rounded-md border p-4">' +
         '<div class="text-foreground/70 text-xs tracking-wide uppercase">Build B · ' +
@@ -224,6 +227,9 @@ function initCompare() {
         " (" +
         money(lb.amount) +
         ")</div>" +
+        '<div class="text-foreground/60 mt-2 text-xs">Modeled median · checked ' +
+        (b.lastVerified || "") +
+        "</div>" +
         "</div>" +
         '<div class="border-border border-accent/40 rounded-md border p-4 sm:col-span-2 lg:col-span-1">' +
         '<div class="text-foreground/70 text-xs tracking-wide uppercase">Difference (B − A)</div>' +

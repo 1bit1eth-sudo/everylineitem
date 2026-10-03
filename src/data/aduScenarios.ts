@@ -46,7 +46,22 @@ export type AduScenario = {
   /** Rows outside the six-phase ledger (e.g. modular crane). */
   extraPhases?: ExtraPhase[];
   note?: string;
+  /** "Last verified" date printed on the linked post. */
+  lastVerified: string;
 };
+
+/** Sources cited in every series post's "Methodology and sources" table. */
+export const BENCHMARK_SOURCES = [
+  { label: "EPIC-LA permit valuations", href: "https://epicla.lacounty.gov/" },
+  {
+    label: "LADBS permit records",
+    href: "https://www.ladbsservices2.lacity.org/onlineservices/?service=plr",
+  },
+  {
+    label: "NAHB phase cost shares",
+    href: "https://eyeonhousing.org/2025/01/cost-of-constructing-a-home-in-2024/",
+  },
+];
 
 export const ADU_SCENARIOS: AduScenario[] = [
   {
@@ -57,6 +72,7 @@ export const ADU_SCENARIOS: AduScenario[] = [
     total: 320_000,
     costPerSqFt: 400,
     href: "/posts/800-sq-ft-adu-cost-california/",
+    lastVerified: "5 Sep 2026",
     phases: {
       soft: 32_000,
       site: 38_000,
@@ -74,6 +90,7 @@ export const ADU_SCENARIOS: AduScenario[] = [
     total: 215_000,
     costPerSqFt: 537,
     href: "/posts/400-sq-ft-adu-cost-california/",
+    lastVerified: "5 Sep 2026",
     phases: {
       soft: 28_000,
       site: 26_000,
@@ -91,6 +108,7 @@ export const ADU_SCENARIOS: AduScenario[] = [
     total: 190_000,
     costPerSqFt: 422,
     href: "/posts/garage-conversion-adu-cost-california/",
+    lastVerified: "5 Sep 2026",
     phases: {
       soft: 24_000,
       site: 14_000,
@@ -109,6 +127,7 @@ export const ADU_SCENARIOS: AduScenario[] = [
     total: 288_000,
     costPerSqFt: 360,
     href: "/posts/modular-vs-site-built-adu-cost-california/",
+    lastVerified: "5 Sep 2026",
     phases: {
       soft: 29_000,
       site: 36_000,
@@ -134,6 +153,7 @@ export const ADU_SCENARIOS: AduScenario[] = [
     total: 380_000,
     costPerSqFt: 475,
     href: "/posts/coastal-vs-inland-adu-cost-california/",
+    lastVerified: "5 Sep 2026",
     phases: {
       soft: 42_000,
       site: 48_000,
@@ -151,6 +171,7 @@ export const ADU_SCENARIOS: AduScenario[] = [
     total: 300_000,
     costPerSqFt: 375,
     href: "/posts/coastal-vs-inland-adu-cost-california/",
+    lastVerified: "5 Sep 2026",
     phases: {
       soft: 26_000,
       site: 34_000,
