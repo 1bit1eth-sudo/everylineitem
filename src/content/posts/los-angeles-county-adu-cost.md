@@ -2,6 +2,7 @@
 title: "Los Angeles County ADU Cost (2026 Line-Item Hub)"
 description: "LA County ADU cost medians for 800 / 400 / garage builds on one six-phase ledger — City of LA vs unincorporated paths, soft costs, and the 750 sq ft impact-fee cliff."
 pubDatetime: 2026-09-17T15:30:00Z
+modDatetime: 2026-09-18T00:00:00Z
 tags: ["los angeles county", "adu cost", "california", "2026", "line item"]
 draft: false
 featured: true

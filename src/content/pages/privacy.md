@@ -3,7 +3,7 @@ title: Privacy Policy
 description: How Every Line Item collects, uses, and does not sell personal information.
 ---
 
-**Last updated:** 8 September 2026
+**Last updated:** 3 October 2026
 
 This page explains what Every Line Item (`everylineitem.com`) collects and what we do with it. Short version: we collect as little as we can, we do not sell your information to contractors, and you can unsubscribe or ask us to delete what we hold.
 
@@ -25,7 +25,7 @@ The site is hosted on **Cloudflare**. Like most sites, request logs (IP address,
 
 ### Analytics and cookies
 
-We do not currently run a third-party analytics suite that tracks you across the web for advertising. If we add analytics or display advertising later, this page will be updated before (or when) that happens, and ad/analytics vendors may set cookies as described below.
+We use **Cloudflare Web Analytics**, a cookieless, privacy-first analytics service that collects aggregate page-view data without cookies or personal identifiers. We do not run any analytics that tracks you across the web for advertising. If we add other analytics or display advertising later, this page will be updated before (or when) that happens, and ad/analytics vendors may set cookies as described below.
 
 ### Forms and email
 
@@ -47,7 +47,7 @@ See also [About](/about/) for how the site intends to make money (display ads, s
 
 ## Sharing
 
-We share data only with processors that help us run the site (for example Cloudflare for hosting/CDN, Buttondown for email). They are not permitted to sell your email as contractor leads.
+We share data only with processors that help us run the site (for example Cloudflare for hosting, CDN, and aggregate web analytics; Buttondown for email). They are not permitted to sell your email as contractor leads.
 
 We may disclose information if required by law or to protect the site against abuse.
 
