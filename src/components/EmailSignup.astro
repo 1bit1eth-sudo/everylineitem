@@ -1,0 +1,64 @@
+---
+/**
+ * Compact Buttondown signup (same endpoint/username as the /benchmarks/ form).
+ * Plain HTML POST, no scripts, no tracking.
+ */
+interface Props {
+  username?: string;
+  tag?: string;
+  idPrefix?: string;
+  class?: string;
+}
+
+const {
+  username = "everylineitem",
+  tag,
+  idPrefix = "signup",
+  class: className,
+} = Astro.props;
+
+const emailId = `${idPrefix}-email`;
+const headingId = `${idPrefix}-heading`;
+const action = `https://buttondown.com/api/emails/embed-subscribe/${username}`;
+---
+
+<section
+  class:list={[
+    "border-border bg-background rounded-lg border p-4 sm:p-5",
+    className,
+  ]}
+  aria-labelledby={headingId}
+  data-pagefind-ignore
+>
+  <h2 id={headingId} class="mt-0 text-lg font-semibold">
+    New line-item breakdowns and quote-check tips by email
+  </h2>
+  <p class="text-foreground/80 mt-1 mb-3 text-sm">
+    Occasional emails when a new cost breakdown goes up. No contractor leads.
+    Unsubscribe anytime.
+  </p>
+  <form
+    action={action}
+    method="post"
+    class="embeddable-buttondown-form flex flex-col gap-2 sm:flex-row"
+  >
+    <label for={emailId} class="sr-only">Email address</label>
+    <input
+      id={emailId}
+      type="email"
+      name="email"
+      placeholder="you@example.com"
+      required
+      autocomplete="email"
+      class="border-border bg-background focus:border-accent focus:ring-accent w-full rounded-md border px-3 py-2 text-base font-normal focus:ring-1 focus:outline-none sm:flex-1"
+    />
+    <input type="hidden" name="embed" value="1" />
+    {tag && <input type="hidden" name="tag" value={tag} />}
+    <button
+      type="submit"
+      class="bg-accent text-accent-foreground focus-outline inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-opacity hover:opacity-90"
+    >
+      Subscribe
+    </button>
+  </form>
+</section>

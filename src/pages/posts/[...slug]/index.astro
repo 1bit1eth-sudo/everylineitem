@@ -16,6 +16,7 @@ import BackToTopButton from "./_components/BackToTopButton.astro";
 import AdjacentPostNav from "./_components/AdjacentPostNav.astro";
 import SeriesNav from "@/components/SeriesNav.astro";
 import { POST_SEO } from "@/data/postSeo";
+import EmailSignup from "@/components/EmailSignup.astro";
 import config from "@/config";
 
 export async function getStaticPaths() {
@@ -170,6 +171,8 @@ const headDescription = seo?.description ?? description;
     >
       <Content />
     </article>
+
+    <EmailSignup idPrefix="post-signup" class="mt-10" />
 
     <hr class="my-8 border-dashed" />
 
