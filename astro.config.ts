@@ -18,6 +18,34 @@ import {
 } from "@shikijs/transformers";
 import { transformerFileName } from "./src/utils/transformers/fileName";
 import config from "./astro-paper.config";
+import { readdirSync, readFileSync } from "node:fs";
+
+// Post URL -> last modified date (modDatetime, else pubDatetime), read from
+// frontmatter so sitemap entries carry an accurate <lastmod>.
+const postLastmod = new Map<string, string>();
+for (const file of readdirSync("./src/content/posts")) {
+  if (!/^[^_].*\.mdx?$/.test(file)) continue;
+  const fm =
+    readFileSync(`./src/content/posts/${file}`, "utf8").match(
+      /^---\r?\n([\s\S]*?)\r?\n---/
+    )?.[1] ?? "";
+  if (/^draft:\s*true/m.test(fm)) continue;
+  const pick = (key: string) =>
+    fm.match(new RegExp(`^${key}:\\s*["']?([0-9][^"'\\s]*)`, "m"))?.[1];
+  const date = pick("modDatetime") ?? pick("pubDatetime");
+  if (date && !Number.isNaN(Date.parse(date))) {
+    postLastmod.set(
+      `/posts/${file.replace(/\.mdx?$/, "")}/`,
+      new Date(date).toISOString()
+    );
+  }
+}
+
+// Thin listing pages (noindex) are kept out of the sitemap.
+const isThinPage = (pathname: string) =>
+  /^\/tags\//.test(pathname) ||
+  /^\/posts\/\d+\/$/.test(pathname) ||
+  /^\/search\/?$/.test(pathname);
 
 export default defineConfig({
   site: config.site.url,
@@ -25,7 +53,13 @@ export default defineConfig({
     mdx(),
     sitemap({
       filter: page =>
-        config.features?.showArchives !== false || !page.endsWith("/archives/"),
+        (config.features?.showArchives !== false ||
+          !page.endsWith("/archives/")) &&
+        !isThinPage(new URL(page).pathname),
+      serialize: item => {
+        const lastmod = postLastmod.get(new URL(item.url).pathname);
+        return lastmod ? { ...item, lastmod } : item;
+      },
     }),
   ],
   i18n: {
