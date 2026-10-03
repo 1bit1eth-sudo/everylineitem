@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1500" viewBox="0 0 1000 1500">
+<rect width="1000" height="1500" fill="#212737"/>
+<rect width="1000" height="8" fill="#ff6b01"/>
+<text x="60" y="96" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="56" font-weight="700" fill="#ffffff">San Diego ADU Cost</text>
+<text x="60" y="146" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="26" fill="#afb9ca">Same 800 sq ft plan · four jurisdictions</text>
+<line x1="60" y1="186" x2="940" y2="186" stroke="#343f60" stroke-width="2"/>
+<rect x="60" y="216" width="430" height="170" rx="12" fill="#343f60"/>
+<text x="84" y="258" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">CITY OF SAN DIEGO</text>
+<text x="84" y="318" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="48" font-weight="700" fill="#ff6b01">$344,000</text>
+<text x="84" y="358" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#eaedf3">$430 / sq ft</text>
+<rect x="510" y="216" width="430" height="170" rx="12" fill="#343f60"/>
+<text x="534" y="258" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">SWING ON SAME PLANS</text>
+<text x="534" y="318" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="48" font-weight="700" fill="#ff6b01">$17,400</text>
+<text x="534" y="358" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#eaedf3">City vs Encinitas</text>
+<text x="60" y="456" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Build total by jurisdiction</text>
+<text x="60" y="490" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#afb9ca">Only soft costs move. Drawings, finishes, and hard costs stay the same.</text>
+<text x="60" y="540" text-anchor="start" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#afb9ca">JURISDICTION</text>
+<text x="575" y="540" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#afb9ca">PERMIT FEES</text>
+<text x="740" y="540" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#afb9ca">SOFT COSTS</text>
+<text x="940" y="540" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#afb9ca">BUILD TOTAL</text>
+<line x1="60" y1="556" x2="940" y2="556" stroke="#343f60" stroke-width="2"/>
+<rect x="60" y="570" width="880" height="104" rx="10" fill="#2d3550"/>
+<text x="84" y="618" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#eaedf3">City of San Diego</text>
+<text x="84" y="652" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">Baseline</text>
+<text x="575" y="632" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" fill="#eaedf3">$16,500</text>
+<text x="740" y="632" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" fill="#eaedf3">$36,000</text>
+<text x="916" y="632" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#ff6b01">$344,000</text>
+<rect x="60" y="690" width="880" height="104" rx="10" fill="#283046"/>
+<text x="84" y="738" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#eaedf3">County (unincorporated)</text>
+<text x="84" y="772" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">−$12,400 vs City</text>
+<text x="575" y="752" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" fill="#eaedf3">$4,400</text>
+<text x="740" y="752" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" fill="#eaedf3">$23,600</text>
+<text x="916" y="752" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#ff6b01">$331,600</text>
+<rect x="60" y="810" width="880" height="104" rx="10" fill="#283046"/>
+<text x="84" y="858" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#eaedf3">Carlsbad</text>
+<text x="84" y="892" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">−$13,000 vs City</text>
+<text x="575" y="872" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" fill="#eaedf3">$3,000</text>
+<text x="740" y="872" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" fill="#eaedf3">$23,000</text>
+<text x="916" y="872" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#ff6b01">$331,000</text>
+<rect x="60" y="930" width="880" height="104" rx="10" fill="#283046"/>
+<text x="84" y="978" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#eaedf3">Encinitas</text>
+<text x="84" y="1012" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">−$17,400 vs City</text>
+<text x="575" y="992" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" fill="#eaedf3">$0</text>
+<text x="740" y="992" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" fill="#eaedf3">$18,600</text>
+<text x="916" y="992" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#ff6b01">$326,600</text>
+<text x="60" y="1106" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#ff6b01">$17,400 swing — same drawings.</text>
+<text x="60" y="1146" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="22" fill="#eaedf3">Decided by which side of the city line your lot sits on.</text>
+<text x="60" y="1226" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">800 sq ft detached ADU · model estimate, not a quote</text>
+<text x="60" y="1256" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">Permit fees from each jurisdiction's posted schedule · checked Oct 2026</text>
+<rect x="0" y="1370" width="1000" height="130" fill="#1a1f2c"/>
+<line x1="60" y1="1370" x2="940" y2="1370" stroke="#ff6b01" stroke-width="4"/>
+<text x="60" y="1412" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#ff6b01">Every Line Item</text>
+<text x="60" y="1448" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="22" fill="#afb9ca">everylineitem.com</text>
+<text x="940" y="1448" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">California ADU Costs · 2026</text>
+</svg>

@@ -10,6 +10,7 @@ seriesCurrent: san-diego-adu-cost
 verifiedPublished: "3 Oct 2026"
 lastVerified: "3 Oct 2026"
 nextReview: "Jan 2027"
+ogImage: "https://everylineitem.com/images/pinterest/san-diego-adu-cost.png"
 faqs:
   - question: "How much does an ADU cost in San Diego in 2026?"
     answer: "About $344,000 for an 800 sq ft detached, single-story, new-construction unit with mid-grade finishes in the City of San Diego — roughly $430 per square foot. Our estimate for turnkey detached construction across San Diego County is roughly $375 to $600 per square foot, with the spread driven mostly by unit size, site conditions, and which jurisdiction issues the permit."
@@ -46,11 +47,9 @@ So this post does two things. First, the standard six-phase breakdown for an 800
 | Soft costs vs Los Angeles County | **+$4,000**, almost entirely permit fees |
 | Same build in Encinitas | **≈ $326,600** |
 
-<!-- Pin image not yet in public/images/pinterest/ — restore when san-diego-adu-cost.png exists:
-![San Diego ADU cost breakdown — $344,000](/images/pinterest/san-diego-adu-cost.png)
+![San Diego ADU cost: same 800 sq ft plan in four jurisdictions, $344,000 to $326,600](/images/pinterest/san-diego-adu-cost.png)
 
 *Pin this breakdown: right-click / long-press the image, or use the Pinterest share button.*
--->
 
 ## The full line-item breakdown
 
