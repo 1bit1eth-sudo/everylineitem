@@ -49,7 +49,7 @@ export const POST_SEO: Record<string, PostSeo> = {
   "san-diego-adu-cost": {
     title: "San Diego ADU Cost: 4 Cities Compared | Every Line Item",
     description:
-      "An 800 sq ft detached ADU in San Diego priced phase by phase — $344,000. Plus why the same build costs $27,000 more inside the city line than outside it.",
+      "An 800 sq ft detached ADU in San Diego priced phase by phase — $344,000. Plus why the same build costs $17,400 more in the city than in Encinitas.",
   },
   "modular-vs-site-built-adu-cost-california": {
     title: "Modular vs Site-Built ADU Cost in CA | Every Line Item",
