@@ -140,6 +140,8 @@ Two parcels ten miles apart can differ by five figures on fees alone. Drivers:
 
 Do not use this article's ranges as your city's fee quote. Use them as a checklist so you know which PDFs and counters to interrogate.
 
+For a worked example of the jurisdiction swing, see [San Diego ADU cost](/posts/san-diego-adu-cost/): the same 800 sq ft build priced in four San Diego County jurisdictions.
+
 ## What soft costs do not include
 
 | Not in the $28k–$40k soft band | Where it shows up |

@@ -46,6 +46,11 @@ export const POST_SEO: Record<string, PostSeo> = {
     description:
       "LA County ADU cost medians for 800, 400, and garage builds on one six-phase ledger: City of LA vs unincorporated, soft costs, and the 750 sq ft fee cliff.",
   },
+  "san-diego-adu-cost": {
+    title: "San Diego ADU Cost: 4 Cities Compared | Every Line Item",
+    description:
+      "An 800 sq ft detached ADU in San Diego priced phase by phase — $344,000. Plus why the same build costs $27,000 more inside the city line than outside it.",
+  },
   "modular-vs-site-built-adu-cost-california": {
     title: "Modular vs Site-Built ADU Cost in CA | Every Line Item",
     description:
