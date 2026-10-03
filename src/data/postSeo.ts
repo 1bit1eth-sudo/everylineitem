@@ -51,6 +51,11 @@ export const POST_SEO: Record<string, PostSeo> = {
     description:
       "An 800 sq ft detached ADU in San Diego priced phase by phase — $344,000. Plus why the same build costs $17,400 more in the city than in Encinitas.",
   },
+  "san-jose-bay-area-adu-cost": {
+    title: "San Jose ADU Cost 2026: Bay Area Fees | Every Line Item",
+    description:
+      "An 800 sq ft San Jose ADU priced phase by phase (about $400,000, our estimate), plus the fees the same plan owes in Palo Alto, Oakland, SF and the county.",
+  },
   "modular-vs-site-built-adu-cost-california": {
     title: "Modular vs Site-Built ADU Cost in CA | Every Line Item",
     description:

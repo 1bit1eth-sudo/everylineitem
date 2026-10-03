@@ -142,6 +142,8 @@ Do not use this article's ranges as your city's fee quote. Use them as a checkli
 
 For a worked example of the jurisdiction swing, see [San Diego ADU cost](/posts/san-diego-adu-cost/): the same 800 sq ft build priced in four San Diego County jurisdictions.
 
+In the Bay Area the swing moves from permits to impact, school, and park fees above 750 sq ft: see [San Jose ADU cost](/posts/san-jose-bay-area-adu-cost/).
+
 ## What soft costs do not include
 
 | Not in the $28k–$40k soft band | Where it shows up |

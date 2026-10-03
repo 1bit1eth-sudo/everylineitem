@@ -162,6 +162,8 @@ If your lot is in the City of San Diego's **Bonus ADU Program**, add one more re
 
 **→ Full year-one ownership cost: [ADU all-in cost in California](/posts/adu-all-in-cost-california/)**
 
+**→ Same 800 sq ft plan in the Bay Area, where the swing is impact fees rather than permits: [San Jose ADU cost](/posts/san-jose-bay-area-adu-cost/)**
+
 ---
 
 ## Put your own quote in these six rows

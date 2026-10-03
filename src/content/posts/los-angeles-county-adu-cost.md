@@ -158,6 +158,7 @@ Declared valuations understate contract price. Use them as a floor and a relativ
 | Soft costs + 750 cliff detail | [Soft costs](/posts/adu-soft-costs-permits-california/) |
 | Coastal vs inland swing | [Coastal vs inland](/posts/coastal-vs-inland-adu-cost-california/) |
 | Same 800 sq ft build in San Diego County | [San Diego ADU cost](/posts/san-diego-adu-cost/) |
+| Same 800 sq ft build in San Jose / Bay Area | [San Jose ADU cost](/posts/san-jose-bay-area-adu-cost/) |
 | Hold two builds side by side | **[Compare](/compare/)** |
 | How figures are built | **[Methodology](/methodology/)** |
 | Contingency, carrying, year-one stack | [All-in cost](/posts/adu-all-in-cost-california/) |

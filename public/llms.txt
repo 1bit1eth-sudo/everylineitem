@@ -19,6 +19,7 @@ Site: https://everylineitem.com/
 
 - [Los Angeles County hub](https://everylineitem.com/posts/los-angeles-county-adu-cost/): Regional line-item hub (City of LA vs unincorporated paths)
 - [San Diego County](https://everylineitem.com/posts/san-diego-adu-cost/): 800 sq ft detached, City of San Diego, plus four-jurisdiction permit-fee comparison
+- [San Jose / Bay Area](https://everylineitem.com/posts/san-jose-bay-area-adu-cost/): 800 sq ft detached in San José (estimate) plus fee comparison with Santa Clara County, Palo Alto, Oakland, San Francisco and the 750 sq ft cliff
 - [800 sq ft detached](https://everylineitem.com/posts/800-sq-ft-adu-cost-california/)
 - [400 sq ft detached](https://everylineitem.com/posts/400-sq-ft-adu-cost-california/)
 - [Garage conversion](https://everylineitem.com/posts/garage-conversion-adu-cost-california/)
