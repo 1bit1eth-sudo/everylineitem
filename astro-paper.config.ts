@@ -30,6 +30,7 @@ export default defineAstroPaperConfig({
   },
   socials: [
     { name: "github", url: "https://github.com/1bit1eth-sudo/everylineitem" },
+    { name: "youtube", url: "https://www.youtube.com/@everylineitem-e5l" },
   ],
   shareLinks: [
     { name: "whatsapp", url: "https://wa.me/?text=" },
