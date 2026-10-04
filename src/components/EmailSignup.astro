@@ -8,6 +8,12 @@ interface Props {
   tag?: string;
   idPrefix?: string;
   class?: string;
+  /** Heading text (defaults to the newsletter pitch). */
+  heading?: string;
+  /** Subtext under the heading. */
+  subtext?: string;
+  /** Submit button label. */
+  buttonLabel?: string;
 }
 
 const {
@@ -15,6 +21,9 @@ const {
   tag,
   idPrefix = "signup",
   class: className,
+  heading = "New line-item breakdowns and quote-check tips by email",
+  subtext = "Occasional emails when a new cost breakdown goes up. No contractor leads. Unsubscribe anytime.",
+  buttonLabel = "Subscribe",
 } = Astro.props;
 
 const emailId = `${idPrefix}-email`;
@@ -31,11 +40,10 @@ const action = `https://buttondown.com/api/emails/embed-subscribe/${username}`;
   data-pagefind-ignore
 >
   <h2 id={headingId} class="mt-0 text-lg font-semibold">
-    New line-item breakdowns and quote-check tips by email
+    {heading}
   </h2>
   <p class="text-foreground/80 mt-1 mb-3 text-sm">
-    Occasional emails when a new cost breakdown goes up. No contractor leads.
-    Unsubscribe anytime.
+    {subtext}
   </p>
   <form
     action={action}
@@ -58,7 +66,7 @@ const action = `https://buttondown.com/api/emails/embed-subscribe/${username}`;
       type="submit"
       class="bg-accent text-accent-foreground focus-outline inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-opacity hover:opacity-90"
     >
-      Subscribe
+      {buttonLabel}
     </button>
   </form>
 </section>
