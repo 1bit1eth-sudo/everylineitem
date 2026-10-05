@@ -88,7 +88,7 @@ export const ADU_SCENARIOS: AduScenario[] = [
     shortLabel: "400 sq ft detached",
     sqFt: 400,
     total: 215_000,
-    costPerSqFt: 537,
+    costPerSqFt: 538,
     href: "/posts/400-sq-ft-adu-cost-california/",
     lastVerified: "5 Sep 2026",
     phases: {
