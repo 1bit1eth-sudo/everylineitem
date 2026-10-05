@@ -1,7 +1,7 @@
 ---
 title: "Oakland ADU Cost 2026: $322,000 With Zero Impact Fees"
 description: "An 800 sq ft detached ADU in Oakland priced phase by phase — $322,000. The city says it outright: ADUs are exempt from all other development impact fees. Plus the $4,136 school fee and the 4–6% permit rule."
-pubDatetime: 2026-10-06T09:00:00Z
+pubDatetime: 2026-10-05T17:00:00Z
 author: "Every Line Item"
 tags: ["adu cost", "oakland", "california", "permit fees", "2026"]
 draft: false
