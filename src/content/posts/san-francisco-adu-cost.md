@@ -105,7 +105,7 @@ In the [San Diego post](/posts/san-diego-adu-cost/), crossing from 750 to 800 sq
 | ADU-specific surcharges | None — "no additional fees for ADUs" |
 | **School district developer fees** | **Verifying with SFUSD** |
 
-School fees are the one line that may still step at a size threshold — they sit under a separate Education Code framework, and junior ADUs (500 sq ft and under) are now exempt statewide ([Gov. Code § 66311.5](https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?chapter=13&division=1.&lawCode=GOV&part=&title=7.)). We could not locate SFUSD's current developer-fee schedule, so that line is marked **verifying** rather than guessed. Until it is confirmed, treat the 750 sq ft decision in San Francisco as a *design* decision, not a fee decision — the opposite of San Diego, where it is the most expensive checkbox on the drawings.
+School fees are the one line that may still step at a size threshold — they sit under a separate Education Code framework, and junior ADUs (under 500 sq ft) are now exempt statewide ([Gov. Code § 66311.5](https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?chapter=13&division=1.&lawCode=GOV&part=&title=7.)). We could not locate SFUSD's current developer-fee schedule, so that line is marked **verifying** rather than guessed. Until it is confirmed, treat the 750 sq ft decision in San Francisco as a *design* decision, not a fee decision — the opposite of San Diego, where it is the most expensive checkbox on the drawings.
 
 ## The empty shelf: pre-approved plans
 
