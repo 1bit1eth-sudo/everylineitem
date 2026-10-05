@@ -3,7 +3,7 @@ title: Privacy Policy
 description: How Every Line Item collects, uses, and does not sell personal information.
 ---
 
-**Last updated:** 3 October 2026
+**Last updated:** 5 October 2026
 
 This page explains what Every Line Item (`everylineitem.com`) collects and what we do with it. Short version: we collect as little as we can, we do not sell your information to contractors, and you can unsubscribe or ask us to delete what we hold.
 
@@ -25,7 +25,7 @@ The site is hosted on **Cloudflare**. Like most sites, request logs (IP address,
 
 ### Analytics and cookies
 
-We use **Cloudflare Web Analytics**, a cookieless, privacy-first analytics service that collects aggregate page-view data without cookies or personal identifiers. We do not run any analytics that tracks you across the web for advertising. If we add other analytics or display advertising later, this page will be updated before (or when) that happens, and ad/analytics vendors may set cookies as described below.
+We use two privacy-friendly analytics services that do not use cookies or personal identifiers: **Cloudflare Web Analytics** (aggregate page-view data, no cookies) and **Plausible Analytics** (page-view measurement for `everylineitem.com`, cookieless and without cross-site tracking). We do not run analytics that tracks you across the web for advertising. If that changes, this page will be updated.
 
 ### Forms and email
 
@@ -51,11 +51,11 @@ We share data only with processors that help us run the site (for example Cloudf
 
 We may disclose information if required by law or to protect the site against abuse.
 
-## Cookies and future advertising
+## Display advertising
 
-Essential cookies or local storage may be used for basic site functions (for example remembering light/dark theme).
+This site shows ads through **Google AdSense** (publisher ID `pub-2712766436270135`). Google's use of advertising cookies enables it and its partners to serve ads to you based on your visit to this site and/or other sites on the Internet. Google may use cookies or similar technologies to serve, personalize, and measure these ads. You can opt out of personalized advertising in [Google Ads Settings](https://www.google.com/settings/ads) and read how Google uses data from partner sites at [policies.google.com/technologies/partner-sites](https://policies.google.com/technologies/partner-sites). You can also limit many ad cookies through your browser settings and industry opt-out tools such as [optout.aboutads.info](https://optout.aboutads.info/).
 
-If we enable **display advertising** (as noted on About), ad partners may use cookies or similar technologies to serve and measure ads. You can limit many ad cookies through your browser settings and industry opt-out tools. We will update this policy when ads go live.
+Essential cookies or local storage may still be used for basic site functions (for example remembering light/dark theme).
 
 ## Your choices
 
