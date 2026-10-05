@@ -1,6 +1,6 @@
 ---
 title: "400 sq ft ADU Cost in California: Why Smaller Is Not Cheaper (2026)"
-description: "We modeled a 400 sq ft detached ADU in Los Angeles County. Total: $215,000 — or $537 per square foot. Here is every phase, why fixed costs dominate, and when 400 still makes sense."
+description: "We modeled a 400 sq ft detached ADU in Los Angeles County. Total: $215,000 — or $538 per square foot. Here is every phase, why fixed costs dominate, and when 400 still makes sense."
 pubDatetime: 2026-09-02T00:00:00Z
 modDatetime: 2026-09-06T00:00:00Z
 tags: ["adu cost", "400 sq ft adu", "california", "2026", "cost per square foot"]
@@ -18,7 +18,7 @@ nextReview: "Dec 2026"
 
 Most homeowners hear "build smaller" and hear "spend less." On a California ADU, those are not the same sentence.
 
-We modeled a **400 square foot detached ADU** — new construction, single story, Los Angeles County, mid-grade finishes — using the same six phases as our [800 sq ft ADU cost breakdown](/posts/800-sq-ft-adu-cost-california/). The total came to **$215,000, or $537 per square foot.**
+We modeled a **400 square foot detached ADU** — new construction, single story, Los Angeles County, mid-grade finishes — using the same six phases as our [800 sq ft ADU cost breakdown](/posts/800-sq-ft-adu-cost-california/). The total came to **$215,000, or $538 per square foot.**
 
 That is two-thirds the cost of the 800 sq ft unit ($320,000) for half the floor area. You save $105,000 in absolute dollars and pay **$137 more per square foot.**
 
@@ -28,7 +28,7 @@ That is two-thirds the cost of the 800 sq ft unit ($320,000) for half the floor 
 | 400 sq ft detached ADU · Los Angeles County · 2026 | Amount |
 | --- | --- |
 | Total build cost | **$215,000** |
-| Cost per square foot | **$537** |
+| Cost per square foot | **$538** |
 | Same unit at 800 sq ft | $320,000 / $400 per sq ft |
 | Absolute savings vs 800 | $105,000 |
 | Per-sq-ft premium vs 800 | **+$137 (34% higher)** |
@@ -47,7 +47,7 @@ Same six phases as every post in this series. Hold this table next to the 800 sq
 | Building envelope | $25,000 | 12% |
 | Systems + interior | **$102,000** | **47%** |
 | Landscaping & hardscape | $8,000 | 4% |
-| **Total** | **$215,000** | **$537 / sq ft** |
+| **Total** | **$215,000** | **$538 / sq ft** |
 
 Compare that to the 800 sq ft model: soft costs only drop $4,000. Foundation drops $12,000. Framing drops $22,000. Envelope drops $17,000. Systems drop $45,000 — still leaving a six-figure interior. Landscaping drops $5,000.
 
@@ -93,7 +93,7 @@ These numbers match the comparison table in the [800 sq ft post](/posts/800-sq-f
 | Systems + interior | $102,000 | $147,000 |
 | Landscaping & hardscape | $8,000 | $13,000 |
 | **Total** | **$215,000** | **$320,000** |
-| **Per sq ft** | **$537** | **$400** |
+| **Per sq ft** | **$538** | **$400** |
 
 **Half the size. Two-thirds the cost.**
 
@@ -196,7 +196,7 @@ We don't build ADUs. We don't sell plans. We don't sell your information to cont
 
 **How much does a 400 sq ft ADU cost in California?**
 
-About **$215,000** in Los Angeles County in 2026 for a detached, single-story, new-construction unit with mid-grade finishes — roughly **$537 per square foot**. That is the modeled median in this series; coastal sites and sloped lots run higher.
+About **$215,000** in Los Angeles County in 2026 for a detached, single-story, new-construction unit with mid-grade finishes — roughly **$538 per square foot**. That is the modeled median in this series; coastal sites and sloped lots run higher.
 
 **Why is a 400 sq ft ADU more expensive per square foot than an 800?**
 
@@ -204,7 +204,7 @@ Because permits, utility connections, the kitchen, the bathroom, and much of the
 
 **Is it better to build 400 or 800 square feet?**
 
-If your lot and local rules allow 800, the larger unit usually delivers more space per dollar ($400 vs $537 per sq ft in these models). Choose 400 when setbacks, coverage limits, budget ceiling, or the intended use make the larger footprint unrealistic.
+If your lot and local rules allow 800, the larger unit usually delivers more space per dollar ($400 vs $538 per sq ft in these models). Choose 400 when setbacks, coverage limits, budget ceiling, or the intended use make the larger footprint unrealistic.
 
 **Does a smaller ADU mean cheaper permits?**
 
