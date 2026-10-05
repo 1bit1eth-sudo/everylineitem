@@ -59,7 +59,7 @@ Holding this schema fixed is the single most important methodological decision o
 
 Step 4 compares our models to NAHB's Survey of Construction square-foot prices. For contractor-built (custom) single-family detached homes started in 2024, NAHB's national median was **$166 per square foot**; the **Pacific** division median was **$167 per square foot** ([Eye on Housing, Oct 2025](https://eyeonhousing.org/2025/10/square-foot-prices-moderate-in-2024/)). Those figures exclude improved lot value.
 
-Our Los Angeles County mid-grade detached ADU models land near **$400/sq ft** (800 sq ft) and **$537/sq ft** (400 sq ft). That is roughly **2.4×** the Pacific custom-home median on the 800 model — and it is intentional, not a failed check.
+Our Los Angeles County mid-grade detached ADU models land near **$400/sq ft** (800 sq ft) and **$538/sq ft** (400 sq ft). That is roughly **2.4×** the Pacific custom-home median on the 800 model — and it is intentional, not a failed check.
 
 | What NAHB SOC measures | What our ADU models measure |
 | --- | --- |

@@ -29,7 +29,7 @@ That is less cash than a new [400 sq ft detached ADU](/posts/400-sq-ft-adu-cost-
 | --- | --- |
 | Total conversion cost | **$190,000** |
 | Cost per sq ft of living area | **~$422** |
-| Compared to 400 sq ft new detached | $215,000 / $537 per sq ft |
+| Compared to 400 sq ft new detached | $215,000 / $538 per sq ft |
 | Compared to 800 sq ft new detached | $320,000 / $400 per sq ft |
 | Phases that usually shrink | Site + foundation, framing |
 | Phases that often grow | Envelope, landscaping / parking replacement |
@@ -94,7 +94,7 @@ On many lots this is where conversions hurt. California ADU rules generally prot
 | Systems + interior | $85,000 | $147,000 |
 | Landscaping / parking | $17,000 | $13,000 |
 
-You spend **$130,000 less** than the 800 detached model and get roughly half the living area. Per-foot efficiency is similar to the large detached unit and better than the [400 detached](/posts/400-sq-ft-adu-cost-california/) at $537 — **if** the existing garage is structurally sound and parking can be replaced without heroics.
+You spend **$130,000 less** than the 800 detached model and get roughly half the living area. Per-foot efficiency is similar to the large detached unit and better than the [400 detached](/posts/400-sq-ft-adu-cost-california/) at $538 — **if** the existing garage is structurally sound and parking can be replaced without heroics.
 
 ## When the conversion wins
 

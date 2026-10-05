@@ -1,0 +1,145 @@
+---
+import feesJson from "../data/fees.json";
+import {
+  resultsHTML,
+  type FeeData,
+} from "../lib/feeCalc";
+
+const data = feesJson as unknown as FeeData;
+
+const DEFAULT_JURIS = "SAN-JOSE";
+const DEFAULT_SQFT = 800;
+const MIN_SQFT = 200;
+const MAX_SQFT = 1200;
+const CLIFF_SQFT = data.rules.impact_exempt_max_sqft; // 750
+
+// Tick position for the 750 sq ft cliff mark on the slider (percent).
+const cliffPct = ((CLIFF_SQFT - MIN_SQFT) / (MAX_SQFT - MIN_SQFT)) * 100;
+
+const regionLabel = (r: string) =>
+  r === "SoCal" ? "Southern California" : r;
+
+const regions = [...new Set(data.jurisdictions.map(j => j.region))];
+
+const selectClass =
+  "border-border bg-background focus:border-accent focus:ring-accent w-full rounded-md border px-3 py-2 text-base font-normal focus:ring-1 focus:outline-none";
+---
+
+<section
+  id="fee-calculator"
+  class="border-border bg-background mb-8 rounded-lg border p-4 sm:p-6"
+  aria-labelledby="fee-calculator-title"
+>
+  <div>
+    <h2 id="fee-calculator-title" class="text-xl font-semibold">
+      ADU fee calculator
+    </h2>
+    <p class="text-foreground/80 mt-2 text-sm">
+      Pick a jurisdiction and a size. Every line below comes from that city's
+      published fee schedule — with the source linked, and the 750&nbsp;sq&nbsp;ft
+      cliff drawn where state law draws it.
+    </p>
+  </div>
+
+  <div class="mt-5 grid gap-5 sm:grid-cols-2">
+    <label class="flex flex-col gap-2 text-sm font-medium">
+      <span>Jurisdiction</span>
+      <select id="fee-juris" class={selectClass}>
+        {
+          regions.map(region => (
+            <optgroup label={regionLabel(region)}>
+              {data.jurisdictions
+                .filter(j => j.region === region)
+                .map(j => (
+                  <option
+                    value={j.juris_id}
+                    selected={j.juris_id === DEFAULT_JURIS}
+                  >
+                    {j.name}
+                  </option>
+                ))}
+            </optgroup>
+          ))
+        }
+      </select>
+    </label>
+
+    <div class="flex flex-col gap-2 text-sm font-medium">
+      <span>
+        ADU size ·{" "}
+        <span id="fee-sqft-val" class="tabular-nums"
+          >{DEFAULT_SQFT.toLocaleString("en-US")} sq ft</span
+        >
+      </span>
+      <div class="relative pt-1 pb-5">
+        <input
+          id="fee-sqft"
+          type="range"
+          min={MIN_SQFT}
+          max={MAX_SQFT}
+          step="1"
+          value={DEFAULT_SQFT}
+          aria-label="ADU size in square feet"
+          class="accent-accent w-full"
+        />
+        <div
+          class="pointer-events-none absolute top-1 bottom-0"
+          style={`left: ${cliffPct}%`}
+          aria-hidden="true"
+        >
+          <div
+            class="bg-amber-500/70 mx-auto h-full w-px"
+          ></div>
+          <div
+            class="text-amber-700 dark:text-amber-400 absolute top-full -translate-x-1/2 text-[0.65rem] font-semibold whitespace-nowrap"
+          >
+            750 cliff
+          </div>
+        </div>
+        <div
+          class="text-foreground/60 flex justify-between text-xs tabular-nums"
+          aria-hidden="true"
+        >
+          <span>{MIN_SQFT}</span>
+          <span>{MAX_SQFT}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="fee-results" class="mt-4" aria-live="polite">
+    <Fragment set:html={resultsHTML(data, DEFAULT_JURIS, DEFAULT_SQFT)} />
+  </div>
+</section>
+
+<script
+  id="fee-data"
+  type="application/json"
+  is:inline
+  set:html={JSON.stringify(data)}
+/>
+
+<script>
+  import { resultsHTML } from "../lib/feeCalc";
+
+  const dataEl = document.getElementById("fee-data");
+  const data = JSON.parse(dataEl ? dataEl.textContent || "{}" : "{}");
+  const jurisSel = document.getElementById("fee-juris") as HTMLSelectElement | null;
+  const sqftInput = document.getElementById("fee-sqft") as HTMLInputElement | null;
+  const sqftVal = document.getElementById("fee-sqft-val");
+  const results = document.getElementById("fee-results");
+
+  function update() {
+    if (!jurisSel || !sqftInput || !results) return;
+    const sqft = Number(sqftInput.value);
+    if (sqftVal) {
+      sqftVal.textContent = `${sqft.toLocaleString("en-US")} sq ft`;
+    }
+    results.innerHTML = resultsHTML(data, jurisSel.value, sqft);
+  }
+
+  if (jurisSel && sqftInput && results) {
+    jurisSel.addEventListener("change", update);
+    sqftInput.addEventListener("input", update);
+  }
+</script>

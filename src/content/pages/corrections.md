@@ -32,6 +32,30 @@ The most valuable messages we get are from contractors and estimators telling us
 
 ## Change log
 
+### 6 October 2026 — San Francisco: school district fee verified and added
+
+**Changed:** San Francisco post total **$322,000 → $325,000** ($403 → $406/sq ft). The school district developer fee — previously marked "verifying with SFUSD" and excluded from the total — is now confirmed at **$3.79/sq ft** ([San Francisco development impact fee register](https://sfplanning.org/sites/default/files/forms/Impact_Fee_Schedule.pdf)), adding **$3,032** on an 800 sq ft unit. Soft costs move $34,000 → $37,000; the LA comparison gap moves +$2,000 → +$5,000.
+
+**Reason:** Cross-post audit found the rate already cited in our San José post. Verified against the city's official register before applying.
+
+### 6 October 2026 — Statute renumbering: Gov. Code §66324 → §66311.5
+
+**Changed:** San Francisco and Oakland posts now cite **Gov. Code §66311.5** (SB 543, effective 1 Jan 2026) for the 750 sq ft impact-fee exemption, replacing the repealed §66324. Also fixed a mislinked citation in the San Francisco post that pointed to Ed. Code §17620.
+
+**Reason:** Integrity audit. No figures changed.
+
+### 6 October 2026 — Oakland: pre-approved ADU plans program documented
+
+**Changed:** Oakland post no longer states that no pre-approved ADU plan program exists. The city publishes [off-the-shelf pre-approved studio, 1-BR, and 2-BR ADU plans](https://www.oaklandca.gov/My-Household/Building-and-Remodeling/Homeowner-Projects-Permits/Accessory-Dwelling-Units-ADUs/Apply-for-ADUs-with-Pre-Approved-Plans); the $14,000 design line is now described as the full-freight custom-design baseline.
+
+**Reason:** Integrity audit; link verified live.
+
+### 6 October 2026 — Rounding rule unified to $538
+
+**Changed:** The 400 sq ft post's $/sq ft figure **$537 → $538** ($215,000 ÷ 400 = $537.50), matching the round-half-up rule used in the San Francisco and Oakland posts. Same correction applied wherever the figure is referenced (series nav, methodology, SEO data).
+
+**Reason:** Integrity audit. One-dollar rounding consistency; no cost model change.
+
 ### 9 September 2026 — Soft costs & Methodology: 750 sq ft cliff and NAHB $/sf check
 
 **Changed:** Soft-costs post and Methodology now name the **750 sq ft** impact-fee threshold (Gov. Code §66311.5) instead of “certain sizes,” clarify connection fees vs impact fees and school-fee rules, and explain why series soft costs only move ~$4,000 from 400→800 sq ft. Methodology adds an explicit **small-unit premium** decomposition of ~$400/sq ft ADU models vs NAHB Pacific custom ~$167/sq ft.

@@ -120,6 +120,8 @@ Application fees, capacity charges, and meter fees belong here. The trench, cond
 
 These splits are consistent with the phase totals published in the [400](/posts/400-sq-ft-adu-cost-california/), [800](/posts/800-sq-ft-adu-cost-california/), and [garage conversion](/posts/garage-conversion-adu-cost-california/) posts. They are modeled medians for comparison, not invoices.
 
+On the 800 sq ft model, the ~$18,000 design line is the series-standard **$14,000 design + engineering** plus roughly $4,000 for Title 24 energy calculations, survey, and miscellaneous. The city posts in this series carry the $14,000 design component and account for the remainder in their other soft-cost lines.
+
 ## Jurisdiction matters more than square footage
 
 Two parcels ten miles apart can differ by five figures on fees alone. Drivers:

@@ -4,6 +4,7 @@ import Header from "@/components/Header.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
 import Footer from "@/components/Footer.astro";
 import EmailSignup from "@/components/EmailSignup.astro";
+import FeeCalculator from "@/components/FeeCalculator.astro";
 import {
   ADU_SCENARIOS,
   BENCHMARK_SOURCES,
@@ -95,6 +96,8 @@ const inputClass =
       Side-by-side on the same six-phase ledger. Figures match the published
       posts — pick any two builds.
     </p>
+
+    <FeeCalculator />
 
     <div
       id="adu-compare"
