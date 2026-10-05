@@ -13,7 +13,7 @@ lastVerified: "18 Sep 2026"
 nextReview: "Dec 2026"
 faqs:
   - question: "How much does an ADU cost in Los Angeles County in 2026?"
-    answer: "This series models three Los Angeles County mid-grade medians on the same six-phase ledger: $320,000 ($400/sq ft) for an 800 sq ft detached ADU, $215,000 ($537/sq ft) for a 400 sq ft detached ADU, and $190,000 (~$422/sq ft living) for a typical two-car garage conversion (~450 sq ft). Soft costs alone typically land in a $28,000–$40,000 band."
+    answer: "This series models three Los Angeles County mid-grade medians on the same six-phase ledger: $320,000 ($400/sq ft) for an 800 sq ft detached ADU, $215,000 ($538/sq ft) for a 400 sq ft detached ADU, and $190,000 (~$422/sq ft living) for a typical two-car garage conversion (~450 sq ft). Soft costs alone typically land in a $28,000–$40,000 band."
   - question: "Is City of LA different from unincorporated LA County for ADU permits?"
     answer: "Yes on the agency path: City of Los Angeles runs through LADBS; unincorporated county (and many contract cities) use EPIC-LA. The series medians are Los Angeles County mid-grade scenarios — not separate City vs County price books. Verify fees and valuations on the portal that covers your parcel."
   - question: "What is the 750 sq ft ADU impact-fee cliff?"
@@ -34,7 +34,7 @@ All three medians below are **Los Angeles County, 2026, mid-grade finishes**, mo
 | Build (series model) | Total | Per sq ft | Soft costs | Full post |
 | --- | --- | --- | --- | --- |
 | 800 sq ft detached, new | **$320,000** | **$400** | $32,000 | [800 sq ft ADU cost](/posts/800-sq-ft-adu-cost-california/) |
-| 400 sq ft detached, new | **$215,000** | **$537** | $28,000 | [400 sq ft ADU cost](/posts/400-sq-ft-adu-cost-california/) |
+| 400 sq ft detached, new | **$215,000** | **$538** | $28,000 | [400 sq ft ADU cost](/posts/400-sq-ft-adu-cost-california/) |
 | Garage conversion (~450 sq ft living) | **$190,000** | **~$422** | $24,000 | [Garage conversion](/posts/garage-conversion-adu-cost-california/) |
 | Soft-cost band (LA County mid-grade) | — | — | **$28,000–$40,000** | [Soft costs](/posts/adu-soft-costs-permits-california/) |
 
@@ -96,7 +96,7 @@ Every build in this series uses the same six rows, in the same order:
 | Systems + interior | $102,000 | $147,000 |
 | Landscaping & hardscape | $8,000 | $13,000 |
 | **Total** | **$215,000** | **$320,000** |
-| **Per sq ft** | **$537** | **$400** |
+| **Per sq ft** | **$538** | **$400** |
 
 **Garage conversion (~450 sq ft living)** — from the [garage post](/posts/garage-conversion-adu-cost-california/): soft costs **$24,000**; site + foundation **$14,000**; framing **$22,000**; envelope **$28,000**; systems + interior **$85,000**; landscaping / parking replacement **$17,000**; total **$190,000**.
 
