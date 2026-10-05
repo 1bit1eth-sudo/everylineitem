@@ -9,7 +9,7 @@ export const POST_SEO: Record<string, PostSeo> = {
   "400-sq-ft-adu-cost-california": {
     title: "400 sq ft ADU Cost in California (2026) | Every Line Item",
     description:
-      "A 400 sq ft detached ADU in LA County, modeled at $215,000 ($537/sq ft). Every phase, why fixed costs dominate, and when 400 still makes sense.",
+      "A 400 sq ft detached ADU in LA County, modeled at $215,000 ($538/sq ft). Every phase, why fixed costs dominate, and when 400 still makes sense.",
   },
   "800-sq-ft-adu-cost-california": {
     title: "800 sq ft ADU Cost in California (2026) | Every Line Item",
