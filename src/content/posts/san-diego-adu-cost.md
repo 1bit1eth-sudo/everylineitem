@@ -90,12 +90,14 @@ The regulation difference shows up somewhere else entirely.
 
 Here is the same 800 sq ft detached ADU, same drawings, same finishes, priced in four San Diego County jurisdictions. Only the soft costs move.
 
-| Jurisdiction | Permit fees ≈ | Design & engineering | Soft costs total | Build total |
-| --- | --- | --- | --- | --- |
-| **City of San Diego** | [$16,500](https://www.sandiego.gov/development-services/forms-publications/information-bulletins/501) | $14,000 | $36,000 | $344,000 |
-| **County (unincorporated)** | [$4,400](https://www.sandiegocounty.gov/content/dam/sdc/pds/docs/pds613.pdf) | $14,000 | $23,600 | $331,600 |
-| **Carlsbad** | [$3,000](https://www.carlsbadca.gov/departments/community-development/building/accessory-dwelling-units) | $14,000 | $23,000 | $331,000 |
-| **Encinitas** | [$0](https://www.encinitasca.gov/home/showpublisheddocument/12302/639033842795500000) | $14,000 | $18,600 | $326,600 |
+| Jurisdiction | Permit fees ≈ | Design & engineering | Other soft (our model, unitemized) | Soft costs total | Build total |
+| --- | --- | --- | --- | --- | --- |
+| **City of San Diego** | [$16,500](https://www.sandiego.gov/development-services/forms-publications/information-bulletins/501) | $14,000 | $5,500 | $36,000 | $344,000 |
+| **County (unincorporated)** | [$4,400](https://www.sandiegocounty.gov/content/dam/sdc/pds/docs/pds613.pdf) | $14,000 | $5,200 | $23,600 | $331,600 |
+| **Carlsbad** | [$3,000](https://www.carlsbadca.gov/departments/community-development/building/accessory-dwelling-units) | $14,000 | $6,000 | $23,000 | $331,000 |
+| **Encinitas** | [$0](https://www.encinitasca.gov/home/showpublisheddocument/12302/639033842795500000) | $14,000 | $4,600 | $18,600 | $326,600 |
+
+The "Other soft" column is the remainder of our modeled soft-cost total after permit fees and the $14,000 design line — impact, school, utility, and miscellaneous fees from our model. It is not itemized per jurisdiction because those fees are modeled, not taken from a published per-jurisdiction schedule.
 
 **A $17,400 swing on identical plans, decided entirely by which side of a street your lot sits on.**
 
@@ -129,6 +131,8 @@ So the marginal cost of growing from 750 to 800 square feet is not 50 square fee
 | **Effective rate on that space** | **$530 – $590 / sq ft** |
 
 Those 50 square feet cost about 25% to 35% more per foot than every square foot before them.
+
+To be explicit: the $5,000–$8,000 impact-fee figure is our estimate, not a number taken from a published rate table — treat the marginal-cost range above as modeled, not quoted.
 
 School fees are not on this list. They follow a separate rule: ADUs under 500 sq ft are exempt, and above that school districts may charge them ([Ed. Code §17620](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=EDC&sectionNum=17620); [Gov. Code §66311.5(c)(3)](https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?chapter=13&division=1.&lawCode=GOV&part=&title=7.)). An 800 sq ft unit and a 750 sq ft unit both pay them, so crossing 750 only adds the district's per-square-foot rate on the extra 50 sq ft.
 
@@ -201,7 +205,7 @@ Every figure on this page is a **modeled median, not a quote.** Here is exactly 
 | Per-square-foot construction price benchmarks | [NAHB Survey of Construction](https://eyeonhousing.org/2025/10/square-foot-prices-moderate-in-2024/) |
 | Regulatory share of finished build cost | [NAHB regulatory cost study, June 2026](https://eyeonhousing.org/2026/06/home-building-regulatory-cost-burdens-increased-40-from-2021-to-2026/) |
 
-**On the four-city fee comparison.** Permit fees are each jurisdiction's posted building plan-check and inspection fees for an 800 sq ft detached ADU, checked 3 Oct 2026 and linked in the table. Soft-cost totals add the same $14,000 design and engineering line plus the impact, school, utility, and other fees from our model, which is why they are more than the two columns combined. Fee schedules change annually and several cities revise mid-year. **Pull the current schedule for your own jurisdiction before you budget** — the comparison above is a shape, not a quote.
+**On the four-city fee comparison.** Permit fees are each jurisdiction's posted building plan-check and inspection fees for an 800 sq ft detached ADU, checked 3 Oct 2026 and linked in the table. Soft-cost totals add the same $14,000 design and engineering line plus the impact, school, utility, and other fees from our model — shown in the "Other soft" column — which is why they are more than the permit and design columns combined. Fee schedules change annually and several cities revise mid-year. **Pull the current schedule for your own jurisdiction before you budget** — the comparison above is a shape, not a quote.
 
 ### Check this number against your own address
 
