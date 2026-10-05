@@ -16,7 +16,7 @@ faqs:
   - question: "How much does an 800 sq ft ADU cost in California?"
     answer: "Roughly $320,000 in Los Angeles County in 2026, or about $400 per square foot for a detached, single-story, new-construction unit with mid-grade finishes. Southern California site-built ADUs generally fall between $375 and $600 per square foot depending on region, site slope, and utility distance."
   - question: "Is an 800 sq ft ADU worth it?"
-    answer: "On a cost-per-square-foot basis, an 800 sq ft unit is meaningfully more efficient than a 400 sq ft one — $400 versus $537 per square foot — because permits, foundation, utility connections, the kitchen, and the bathroom are close to fixed regardless of size. If your lot and local rules allow 800 square feet, the larger unit usually delivers more space per dollar."
+    answer: "On a cost-per-square-foot basis, an 800 sq ft unit is meaningfully more efficient than a 400 sq ft one — $400 versus $538 per square foot — because permits, foundation, utility connections, the kitchen, and the bathroom are close to fixed regardless of size. If your lot and local rules allow 800 square feet, the larger unit usually delivers more space per dollar."
   - question: "Why is a smaller ADU more expensive per square foot?"
     answer: "Because the expensive parts do not shrink. One kitchen, one bathroom, one heat pump, one sewer connection, and one set of permits cost nearly the same at any size. Only framing, drywall, flooring, and roofing scale down with area, and those are the least expensive phases of the build."
   - question: "How long does an ADU take to build?"
@@ -89,7 +89,7 @@ This is the whole reason the next table exists.
 
 Cutting the plan in half does not cut the cost in half. The same unit at
 400 sq ft prices out at **$215,000 — two-thirds the cost for half the
-space, and $537 per square foot instead of $400.**
+space, and $538 per square foot instead of $400.**
 
 Permits, foundation, the sewer connection, the electrical service run, the
 kitchen and the bathroom are close to fixed. Only lumber, drywall, flooring
@@ -204,7 +204,7 @@ Roughly $320,000 in Los Angeles County in 2026, or about $400 per square foot fo
 
 **Is an 800 sq ft ADU worth it?**
 
-On a cost-per-square-foot basis, an 800 sq ft unit is meaningfully more efficient than a 400 sq ft one — $400 versus $537 per square foot — because permits, foundation, utility connections, the kitchen, and the bathroom are close to fixed regardless of size. If your lot and local rules allow 800 square feet, the larger unit usually delivers more space per dollar.
+On a cost-per-square-foot basis, an 800 sq ft unit is meaningfully more efficient than a 400 sq ft one — $400 versus $538 per square foot — because permits, foundation, utility connections, the kitchen, and the bathroom are close to fixed regardless of size. If your lot and local rules allow 800 square feet, the larger unit usually delivers more space per dollar.
 
 **Why is a smaller ADU more expensive per square foot?**
 
