@@ -1,9 +1,17 @@
 ---
-import feesJson from "../data/fees.json";
+import rawFeesJson from "../data/fees.json";
 import {
   resultsHTML,
   type FeeData,
 } from "../lib/feeCalc";
+
+// Strip internal memos from the client bundle — internal_notes never ships.
+type RawFeeItem = Record<string, unknown>;
+const rawData = rawFeesJson as unknown as { fee_items: RawFeeItem[] } & Record<string, unknown>;
+const feesJson = {
+  ...rawData,
+  fee_items: rawData.fee_items.map(({ internal_notes: _internal, ...publicItem }) => publicItem),
+} as unknown as FeeData;
 
 const data = feesJson as unknown as FeeData;
 
