@@ -7,7 +7,6 @@ import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Socials from "@/components/Socials.astro";
-import EmailSignup from "@/components/EmailSignup.astro";
 import Card from "@/components/Card.astro";
 import LinkButton from "@/components/LinkButton.astro";
 import { getSortedPosts } from "@/utils/getSortedPosts";
@@ -23,6 +22,10 @@ const posts = await getCollection("posts");
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
+// Auto-generated city series list — no manual maintenance.
+const cityPosts = sortedPosts.filter(
+  ({ data }) => data.series === "ca-adu" && !data.draft
+);
 const homePath = getRelativeLocaleUrl(locale, "");
 
 const homeTitle = "California ADU Cost Breakdowns | Every Line Item";
@@ -109,68 +112,22 @@ const seriesItemList = {
           LA County hub
         </LinkButton>
         . Series continues:{" "}
-        <LinkButton
-          class="hover:text-accent underline decoration-dashed underline-offset-4"
-          href="/posts/400-sq-ft-adu-cost-california/"
-        >
-          400 sq ft
-        </LinkButton>
-        ,{" "}
-        <LinkButton
-          class="hover:text-accent underline decoration-dashed underline-offset-4"
-          href="/posts/garage-conversion-adu-cost-california/"
-        >
-          garage conversion
-        </LinkButton>
-        ,{" "}
-        <LinkButton
-          class="hover:text-accent underline decoration-dashed underline-offset-4"
-          href="/posts/adu-soft-costs-permits-california/"
-        >
-          soft costs
-        </LinkButton>
-        ,{" "}
-        <LinkButton
-          class="hover:text-accent underline decoration-dashed underline-offset-4"
-          href="/posts/modular-vs-site-built-adu-cost-california/"
-        >
-          modular vs site-built
-        </LinkButton>
-        ,{" "}
-        <LinkButton
-          class="hover:text-accent underline decoration-dashed underline-offset-4"
-          href="/posts/adu-all-in-cost-california/"
-        >
-          all-in cost
-        </LinkButton>
-        ,{" "}
-        <LinkButton
-          class="hover:text-accent underline decoration-dashed underline-offset-4"
-          href="/posts/coastal-vs-inland-adu-cost-california/"
-        >
-          coastal vs inland
-        </LinkButton>
-        , and{" "}
-        <LinkButton
-          class="hover:text-accent underline decoration-dashed underline-offset-4"
-          href="/posts/adu-rent-payback-roi-california/"
-        >
-          rent payback &amp; ROI
-        </LinkButton>
-        ,{" "}
-        <LinkButton
-          class="hover:text-accent underline decoration-dashed underline-offset-4"
-          href="/posts/san-diego-adu-cost/"
-        >
-          San Diego
-        </LinkButton>
-        , and{" "}
-        <LinkButton
-          class="hover:text-accent underline decoration-dashed underline-offset-4"
-          href="/posts/san-jose-bay-area-adu-cost/"
-        >
-          San Jose Bay Area
-        </LinkButton>
+        {
+          cityPosts.map(({ data, id }, i) => {
+            const label = data.title.split(" ADU Cost")[0];
+            return (
+              <>
+                {i > 0 && (i === cityPosts.length - 1 ? ", and " : ", ")}
+                <LinkButton
+                  class="hover:text-accent underline decoration-dashed underline-offset-4"
+                  href={`/posts/${id}/`}
+                >
+                  {label}
+                </LinkButton>
+              </>
+            );
+          })
+        }
         .
       </p>
       <p class="mt-2">
@@ -199,14 +156,22 @@ const seriesItemList = {
           </LinkButton>
         </p>
       </div>
-      <EmailSignup
-        idPrefix="hero-signup"
-        tag="benchmarks"
-        class="mt-4"
-        heading="Get the 2026 ADU benchmark sheet"
-        subtext="Quarterly cost ranges for every build on this site, in one CSV. Free — we email it to you. Unsubscribe anytime."
-        buttonLabel="Send me the sheet"
-      />
+      <div class="border-border mt-4 rounded-lg border px-4 py-3">
+        <p class="font-semibold">
+          2026 ADU benchmark sheet
+        </p>
+        <p class="mt-1 text-sm opacity-90">
+          Quarterly cost ranges for every build on this site, in one CSV. Free download, no email needed.
+        </p>
+        <p class="mt-2">
+          <LinkButton
+            class="text-accent font-semibold underline decoration-dashed underline-offset-4"
+            href="/downloads/adu-benchmark-ranges-2026-q3.csv"
+          >
+            Download the benchmark CSV →
+          </LinkButton>
+        </p>
+      </div>
       {
         socials.length > 0 && (
           <div class="mt-4 flex max-sm:flex-col sm:items-center">
