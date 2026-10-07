@@ -32,14 +32,6 @@ The most valuable messages we get are from contractors and estimators telling us
 
 ## Change log
 
-### 7 October 2026 — Anaheim: city reply received after publication
-
-**Changed:** Anaheim post no longer states "no reply by publication." The city's Building Division replied on Oct 7, 2026, after publication: sanitation fees average **$1.71/sq ft** (the city's own figure, matching OC San's average-demand rate) and park fees apply to construction of **750 sq ft and above**. School-fee questions were treated as address-specific; water connection charges were referred to Water Engineering.
-
-**Reason:** Published commitment ("updated when the city responds"). The OC San line now reads **$1,368–$1,710**: the city's $1.71/sq ft average prices 800 sq ft at $1,368, while OC San's Table A "per 1,000 sq ft or portion thereof" would round to $1,710 — the rounding basis and the applicability to a detached ADU are still unconfirmed. No change to the $320,000 total. The 2026 impact-fee resolutions' adoption and ADU calculation basis remain unconfirmed.
-
-**Source:** City of Anaheim Building Division reply email (Oct 7, 2026), [OC San CFCC Table A](https://ocsan.gov/wp-content/uploads/2024/06/Facts-and-Key-Statistics.pdf)
-
 ### 6 October 2026 — San Francisco: school district fee verified and added
 
 **Changed:** San Francisco post total **$322,000 → $325,000** ($403 → $406/sq ft). The school district developer fee — previously marked "verifying with SFUSD" and excluded from the total — is now confirmed at **$3.79/sq ft** ([San Francisco development impact fee register](https://sfplanning.org/sites/default/files/forms/Impact_Fee_Schedule.pdf)), adding **$3,032** on an 800 sq ft unit. Soft costs move $34,000 → $37,000; the LA comparison gap moves +$2,000 → +$5,000.
