@@ -158,7 +158,8 @@
       "last_verified": "5 Sep 2026",
       "confidence": "C",
       "status": "illustrative",
-      "notes": "800 sq ft 설명용 분할값. 공식 요율표 아님 — LADBS/EPIC-LA 요율로 교체 필요"
+      "internal_notes": "800 sq ft 설명용 분할값. 공식 요율표 아님 — LADBS/EPIC-LA 요율로 교체 필요",
+      "notes": null
     },
     {
       "item_id": "FI-002",
@@ -180,7 +181,8 @@
       "last_verified": "5 Sep 2026",
       "confidence": "C",
       "status": "illustrative",
-      "notes": "학교수수료가 impact에 섞여 있음 — 분리 필요"
+      "internal_notes": "학교수수료가 impact에 섞여 있음 — 분리 필요",
+      "notes": null
     },
     {
       "item_id": "FI-003",
@@ -202,7 +204,8 @@
       "last_verified": "3 Oct 2026",
       "confidence": "B",
       "status": "to_verify",
-      "notes": "게시물은 총액만 제시. 요율 단위로 분해해야 750에서의 값을 정확히 계산 가능"
+      "internal_notes": "게시물은 총액만 제시. 요율 단위로 분해해야 750에서의 값을 정확히 계산 가능",
+      "notes": null
     },
     {
       "item_id": "FI-004",
@@ -224,7 +227,8 @@
       "last_verified": "3 Oct 2026",
       "confidence": "C",
       "status": "to_verify",
-      "notes": "출처 없는 자체 추정. cliff 주장의 핵심 수치이므로 시 impact fee 요율표로 교체 필요"
+      "internal_notes": "출처 없는 자체 추정. cliff 주장의 핵심 수치이므로 시 impact fee 요율표로 교체 필요",
+      "notes": null
     },
     {
       "item_id": "FI-005",
@@ -246,7 +250,8 @@
       "last_verified": "3 Oct 2026",
       "confidence": "B",
       "status": "to_verify",
-      "notes": "총액만 제시 — 요율 분해 필요"
+      "internal_notes": "총액만 제시 — 요율 분해 필요",
+      "notes": null
     },
     {
       "item_id": "FI-006",
@@ -268,6 +273,7 @@
       "last_verified": "3 Oct 2026",
       "confidence": "B",
       "status": "to_verify",
+      "internal_notes": null,
       "notes": null
     },
     {
@@ -290,6 +296,7 @@
       "last_verified": "3 Oct 2026",
       "confidence": "A",
       "status": "verified",
+      "internal_notes": null,
       "notes": null
     },
     {
@@ -312,7 +319,8 @@
       "last_verified": "3 Oct 2026",
       "confidence": "A",
       "status": "to_verify",
-      "notes": "이 티어의 하한 면적 확인 필요"
+      "internal_notes": "이 티어의 하한 면적 확인 필요",
+      "notes": null
     },
     {
       "item_id": "FI-009",
@@ -334,6 +342,7 @@
       "last_verified": "3 Oct 2026",
       "confidence": "A",
       "status": "verified",
+      "internal_notes": null,
       "notes": null
     },
     {
@@ -356,7 +365,8 @@
       "last_verified": "3 Oct 2026",
       "confidence": "B",
       "status": "to_verify",
-      "notes": "13%를 어느 수수료에 적용하는지 시에 확인"
+      "internal_notes": "13%를 어느 수수료에 적용하는지 시에 확인",
+      "notes": null
     },
     {
       "item_id": "FI-011",
@@ -378,7 +388,8 @@
       "last_verified": null,
       "confidence": "B",
       "status": "to_verify",
-      "notes": "게시물에 750 구간 값 없음 → 현재 0으로 계산됨 (test T02 차이의 원인)"
+      "internal_notes": "게시물에 750 구간 값 없음 → 현재 0으로 계산됨 (test T02 차이의 원인)",
+      "notes": null
     },
     {
       "item_id": "FI-012",
@@ -400,7 +411,8 @@
       "last_verified": "3 Oct 2026",
       "confidence": "A",
       "status": "verified",
-      "notes": "평가단가 $175.92/sq ft (jurisdictions!G)"
+      "internal_notes": "평가단가 $175.92/sq ft (jurisdictions!G)",
+      "notes": null
     },
     {
       "item_id": "FI-013",
@@ -422,7 +434,8 @@
       "last_verified": "3 Oct 2026",
       "confidence": "A",
       "status": "to_verify",
-      "notes": "시 체크리스트상 750 초과만 부과. 주법은 500 이상 부과 허용 — 기준 확인"
+      "internal_notes": "시 체크리스트상 750 초과만 부과. 주법은 500 이상 부과 허용 — 기준 확인",
+      "notes": null
     },
     {
       "item_id": "FI-014",
@@ -444,7 +457,8 @@
       "last_verified": "3 Oct 2026",
       "confidence": "A",
       "status": "to_verify",
-      "notes": "시 지도 '750 이상' vs 주법 '750 이하 금지' — 정확히 750에서 충돌. 주택 면적 비례 규칙 적용 여부도 확인"
+      "internal_notes": "시 지도 '750 이상' vs 주법 '750 이하 금지' — 정확히 750에서 충돌. 주택 면적 비례 규칙 적용 여부도 확인",
+      "notes": null
     },
     {
       "item_id": "FI-015",
@@ -466,7 +480,8 @@
       "last_verified": "3 Oct 2026",
       "confidence": "B",
       "status": "to_verify",
-      "notes": "무료 County 플랜 사용 시 ≈$11,270. valuation_step으로 분해 필요"
+      "internal_notes": "무료 County 플랜 사용 시 ≈$11,270. valuation_step으로 분해 필요",
+      "notes": null
     },
     {
       "item_id": "FI-016",
@@ -488,6 +503,7 @@
       "last_verified": "3 Oct 2026",
       "confidence": "B",
       "status": "to_verify",
+      "internal_notes": null,
       "notes": null
     },
     {
@@ -510,7 +526,8 @@
       "last_verified": "3 Oct 2026",
       "confidence": "B",
       "status": "to_verify",
-      "notes": "proportional_primary로 분해하면 본채 면적별 계산 가능"
+      "internal_notes": "proportional_primary로 분해하면 본채 면적별 계산 가능",
+      "notes": null
     },
     {
       "item_id": "FI-018",
@@ -532,6 +549,7 @@
       "last_verified": "3 Oct 2026",
       "confidence": "A",
       "status": "verified",
+      "internal_notes": null,
       "notes": null
     },
     {
@@ -554,7 +572,8 @@
       "last_verified": "6 Oct 2026",
       "confidence": "B",
       "status": "conflict",
-      "notes": "Oakland 글은 $320k 기준, SJ 글은 $360k 기준 — 평가액 통일 필요"
+      "internal_notes": "Oakland 글은 $320k 기준, SJ 글은 $360k 기준 — 평가액 통일 필요",
+      "notes": null
     },
     {
       "item_id": "FI-020",
@@ -576,6 +595,7 @@
       "last_verified": "6 Oct 2026",
       "confidence": "A",
       "status": "verified",
+      "internal_notes": null,
       "notes": null
     },
     {
@@ -598,6 +618,7 @@
       "last_verified": "6 Oct 2026",
       "confidence": "A",
       "status": "verified",
+      "internal_notes": null,
       "notes": null
     },
     {
@@ -620,7 +641,8 @@
       "last_verified": "6 Oct 2026",
       "confidence": "A",
       "status": "verified",
-      "notes": "계량기 증설이 필요하면 별도(5자리 금액)"
+      "internal_notes": "계량기 증설이 필요하면 별도(5자리 금액)",
+      "notes": null
     },
     {
       "item_id": "FI-023",
@@ -642,7 +664,8 @@
       "last_verified": "5 Oct 2026",
       "confidence": "A",
       "status": "verified",
-      "notes": "$200k 이상 구간 식. 구간 상한 확인"
+      "internal_notes": "$200k 이상 구간 식. 구간 상한 확인",
+      "notes": null
     },
     {
       "item_id": "FI-024",
@@ -664,6 +687,7 @@
       "last_verified": "5 Oct 2026",
       "confidence": "A",
       "status": "verified",
+      "internal_notes": null,
       "notes": null
     },
     {
@@ -686,7 +710,8 @@
       "last_verified": "5 Oct 2026",
       "confidence": "A",
       "status": "verified",
-      "notes": "$100,000–$499,999 구간 식만 입력 → $400/sq ft 기준 250–1,249 sq ft에서만 유효"
+      "internal_notes": "$100,000–$499,999 구간 식만 입력 → $400/sq ft 기준 250–1,249 sq ft에서만 유효",
+      "notes": null
     },
     {
       "item_id": "FI-026",
@@ -708,7 +733,8 @@
       "last_verified": "2026-10-06",
       "confidence": "A",
       "status": "verified",
-      "notes": "SJ 글은 $3,032로 출처 제시, SF 글은 '확인 중·총액 미포함' → test T04 차이"
+      "internal_notes": "SJ 글은 $3,032로 출처 제시, SF 글은 '확인 중·총액 미포함' → test T04 차이",
+      "notes": null
     },
     {
       "item_id": "FI-027",
@@ -730,6 +756,7 @@
       "last_verified": "5 Oct 2026",
       "confidence": "A",
       "status": "verified",
+      "internal_notes": null,
       "notes": null
     },
     {
@@ -752,6 +779,7 @@
       "last_verified": "5 Oct 2026",
       "confidence": "A",
       "status": "verified",
+      "internal_notes": null,
       "notes": null
     }
   ]
