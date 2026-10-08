@@ -1,7 +1,7 @@
 ---
 title: "Prefab ADU Brands Compared 2026: Two Publish Prices, Three Don't"
 description: "Five prefab ADU brands, one 800 sq ft question. Abodu and Villa Homes publish real numbers ($424,800 and from $261,000–$282,000 all-in); Boxabl, Dvele, and Mighty Buildings don't. What the price you can see actually covers — and what it doesn't."
-pubDatetime: 2026-10-09T09:00:00Z
+pubDatetime: 2026-10-08T23:50:00Z
 author: "Every Line Item"
 tags: ["prefab", "comparison", "adu-cost"]
 draft: false
