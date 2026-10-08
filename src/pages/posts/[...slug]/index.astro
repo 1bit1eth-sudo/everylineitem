@@ -17,6 +17,7 @@ import AdjacentPostNav from "./_components/AdjacentPostNav.astro";
 import SeriesNav from "@/components/SeriesNav.astro";
 import { POST_SEO } from "@/data/postSeo";
 import EmailSignup from "@/components/EmailSignup.astro";
+import KeyFacts from "@/components/KeyFacts.astro";
 import config from "@/config";
 
 export async function getStaticPaths() {
@@ -161,6 +162,8 @@ const headDescription = seo?.description ?? description;
     </div>
 
     {showCaAduSeries && <SeriesNav seriesCurrent={seriesCurrentId} />}
+
+    {post.data.keyFacts && <KeyFacts {...post.data.keyFacts} />}
 
     <article
       id="article"
