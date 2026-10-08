@@ -38,6 +38,20 @@ const posts = defineCollection({
       verifiedPublished: z.string().optional(),
       lastVerified: z.string().optional(),
       nextReview: z.string().optional(),
+      // Key Facts snapshot box (city ADU posts)
+      keyFacts: z
+        .object({
+          city: z.string(),
+          totalCost: z.string(),
+          costPerSqFt: z.string(),
+          permitFee: z.string(),
+          schoolFee: z.string(),
+          impactFee: z.string(),
+          sewerWater: z.string(),
+          freePlans: z.string(),
+          cliff750: z.string(),
+        })
+        .optional(),
     }),
 });
 
