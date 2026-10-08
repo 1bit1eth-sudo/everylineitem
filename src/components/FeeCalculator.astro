@@ -127,6 +127,57 @@ const selectClass =
   <div id="fee-results" class="mt-4" aria-live="polite">
     <Fragment set:html={resultsHTML(data, DEFAULT_JURIS, DEFAULT_SQFT)} />
   </div>
+
+  <div
+    id="fee-report-box"
+    class="border-border mt-6 rounded-lg border p-4 sm:p-5"
+  >
+    <h3 class="text-base font-semibold">Email me this report (PDF)</h3>
+    <p class="text-foreground/80 mt-1 text-sm">
+      Get this exact fee breakdown — your chosen jurisdiction and size — as
+      a one-page PDF. No spam. No phone call. Unsubscribe anytime.
+    </p>
+    <form
+      id="fee-report-form"
+      action="https://buttondown.com/api/emails/embed-subscribe/everylineitem"
+      method="post"
+      target="fee-report-iframe"
+      class="mt-3 flex flex-col gap-2 sm:flex-row"
+    >
+      <label for="fee-report-email" class="sr-only">Email address</label>
+      <input
+        id="fee-report-email"
+        type="email"
+        name="email"
+        placeholder="you@example.com"
+        required
+        autocomplete="email"
+        class="border-border bg-background focus:border-accent focus:ring-accent w-full rounded-md border px-3 py-2 text-base font-normal focus:ring-1 focus:outline-none sm:flex-1"
+      />
+      <input type="hidden" name="embed" value="1" />
+      <input type="hidden" name="tag" value="compare-pdf-report" />
+      <button
+        type="submit"
+        id="fee-report-submit"
+        class="bg-accent text-accent-foreground focus-outline inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-opacity hover:opacity-90"
+      >
+        Send PDF
+      </button>
+    </form>
+    <p
+      id="fee-report-status"
+      class="mt-2 text-sm"
+      aria-live="polite"
+      hidden
+    ></p>
+    <iframe
+      name="fee-report-iframe"
+      title="Email signup"
+      class="hidden"
+      aria-hidden="true"
+      tabindex="-1"
+    ></iframe>
+  </div>
 </section>
 
 <script
@@ -138,6 +189,7 @@ const selectClass =
 
 <script>
   import { resultsHTML } from "../lib/feeCalc";
+  import { buildFeeReport, downloadFeeReportPDF } from "../lib/feeReport";
 
   const dataEl = document.getElementById("fee-data");
   const data = JSON.parse(dataEl ? dataEl.textContent || "{}" : "{}");
@@ -158,5 +210,66 @@ const selectClass =
   if (jurisSel && sqftInput && results) {
     jurisSel.addEventListener("change", update);
     sqftInput.addEventListener("input", update);
+  }
+
+  // "Email me this report (PDF)" — generate the PDF client-side and download
+  // it immediately, while the form POSTs the email to Buttondown in a hidden
+  // iframe (same endpoint as EmailSignup.astro). jsPDF is dynamically
+  // imported so it only loads when the user actually requests the report.
+  const reportForm = document.getElementById(
+    "fee-report-form"
+  ) as HTMLFormElement | null;
+  const reportEmail = document.getElementById(
+    "fee-report-email"
+  ) as HTMLInputElement | null;
+  const reportStatus = document.getElementById("fee-report-status");
+  const reportSubmit = document.getElementById(
+    "fee-report-submit"
+  ) as HTMLButtonElement | null;
+
+  function setStatus(msg: string, ok: boolean) {
+    if (!reportStatus) return;
+    reportStatus.hidden = false;
+    reportStatus.textContent = msg;
+    reportStatus.className = ok
+      ? "mt-2 text-sm text-green-700 dark:text-green-400"
+      : "mt-2 text-sm text-red-700 dark:text-red-400";
+  }
+
+  if (reportForm && jurisSel && sqftInput) {
+    reportForm.addEventListener("submit", async () => {
+      // Native email validation runs before this handler; if we are here
+      // the address is syntactically valid. Do NOT preventDefault — the
+      // form must still POST to Buttondown via the hidden iframe target.
+      if (reportSubmit) {
+        reportSubmit.disabled = true;
+        reportSubmit.textContent = "Preparing PDF…";
+      }
+      try {
+        const { jsPDF } = await import("jspdf");
+        const report = buildFeeReport(
+          data,
+          jurisSel.value,
+          Number(sqftInput.value)
+        );
+        downloadFeeReportPDF(jsPDF, report);
+        setStatus(
+          "Your PDF is downloading — and you're on the list. Occasional fee-schedule updates only.",
+          true
+        );
+      } catch (err) {
+        console.error("[fee-report]", err);
+        setStatus(
+          "Couldn't generate the PDF in this browser — but your email was still sent. Sorry about that.",
+          false
+        );
+      } finally {
+        if (reportSubmit) {
+          reportSubmit.disabled = false;
+          reportSubmit.textContent = "Send PDF";
+        }
+        if (reportEmail) reportEmail.value = "";
+      }
+    });
   }
 </script>
