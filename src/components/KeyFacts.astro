@@ -1,0 +1,66 @@
+---
+/**
+ * Key Facts snapshot box for city ADU cost posts.
+ * Rendered from post frontmatter `keyFacts` (see content.config.ts schema).
+ * SnapADU-style summary for SEO snippets and quick scanning.
+ */
+type Props = {
+  city: string;
+  totalCost: string;
+  costPerSqFt: string;
+  permitFee: string;
+  schoolFee: string;
+  impactFee: string;
+  sewerWater: string;
+  freePlans: string;
+  cliff750: string;
+};
+
+const {
+  city,
+  totalCost,
+  costPerSqFt,
+  permitFee,
+  schoolFee,
+  impactFee,
+  sewerWater,
+  freePlans,
+  cliff750,
+} = Astro.props;
+
+const rows: Array<[string, string]> = [
+  ["Total (800 sq ft)", totalCost],
+  ["Cost per sq ft", costPerSqFt],
+  ["Permit + plan check", permitFee],
+  ["School district fee", schoolFee],
+  ["Impact / DIF fee", impactFee],
+  ["Sewer & water", sewerWater],
+  ["Free pre-approved plans", freePlans],
+  ["750 sq ft fee cliff", cliff750],
+];
+---
+
+<aside
+  class="key-facts border-border my-6 overflow-hidden rounded-lg border"
+  aria-label={`Key facts: ADU costs in ${city}`}
+>
+  <div class="bg-muted px-4 py-2.5">
+    <p class="text-sm font-bold tracking-wide uppercase">
+      {city} ADU — Key Facts (2026)
+    </p>
+  </div>
+  <dl class="divide-border divide-y">
+    {
+      rows.map(([label, value]) => (
+        <div class="flex items-baseline justify-between gap-4 px-4 py-2">
+          <dt class="text-muted-foreground text-sm">{label}</dt>
+          <dd class="text-right text-sm font-semibold">{value}</dd>
+        </div>
+      ))
+    }
+  </dl>
+  <p class="text-muted-foreground border-border border-t px-4 py-2 text-xs">
+    800 sq ft detached ADU, 2026. Figures from official city/county sources;
+    see post for methodology and verification notes.
+  </p>
+</aside>
