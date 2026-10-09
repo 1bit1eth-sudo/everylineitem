@@ -42,6 +42,15 @@ const siteUrl = config.site.url.endsWith("/")
   ? config.site.url
   : `${config.site.url}/`;
 
+// City comparison teaser — 800 sq ft detached ADU totals (from city posts)
+const compareTeaserCities = [
+  { city: "Long Beach", total: "$313,000", perSqFt: "$391" },
+  { city: "Torrance", total: "$317,000", perSqFt: "$396" },
+  { city: "Anaheim", total: "$320,000", perSqFt: "$400" },
+  { city: "Oakland", total: "$322,000", perSqFt: "$403" },
+  { city: "San Francisco", total: "$325,000", perSqFt: "$406" },
+];
+
 const seriesItemList = {
   "@context": "https://schema.org",
   "@type": "ItemList",
@@ -231,6 +240,41 @@ const seriesItemList = {
           class="text-accent font-semibold"
         >
           All videos on YouTube &rarr;
+        </a>
+      </div>
+    </section>
+
+    <section id="compare-teaser" class="pt-12 pb-6 border-border border-b">
+      <h2 class="text-2xl font-semibold mb-2">
+        Same ADU, Different City, Different Bill
+      </h2>
+      <p class="text-sm opacity-70 mb-4">
+        One 800 sq ft detached ADU, priced line by line. Fees alone swing the
+        total by $12,000 between cities.
+      </p>
+      <div class="border border-border rounded-lg overflow-hidden">
+        <div
+          class="hidden sm:grid sm:grid-cols-[1fr_9rem_8rem] gap-4 px-4 py-2 border-b border-border text-sm font-semibold opacity-60"
+        >
+          <span>City</span>
+          <span class="text-right">Total (800 sq ft)</span>
+          <span class="text-right">Per sq ft</span>
+        </div>
+        <div class="divide-y divide-border">
+          {compareTeaserCities.map(({ city, total, perSqFt }) => (
+            <div class="grid grid-cols-2 sm:grid-cols-[1fr_9rem_8rem] gap-x-4 gap-y-1 px-4 py-3">
+              <span class="font-semibold">{city}</span>
+              <span class="text-right tabular-nums font-bold">{total}</span>
+              <span class="col-span-2 sm:col-span-1 text-right text-sm sm:text-base tabular-nums opacity-70">
+                {perSqFt}/sq ft
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="mt-4">
+        <a href="/compare/" class="text-accent font-semibold">
+          Compare your city &rarr;
         </a>
       </div>
     </section>
