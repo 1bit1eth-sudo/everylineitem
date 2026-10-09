@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1500" viewBox="0 0 1000 1500">
+<rect width="1000" height="1500" fill="#212737"/>
+<rect width="1000" height="8" fill="#ff6b01"/>
+<text x="60" y="96" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="52" font-weight="700" fill="#ffffff">Orange County ADU Cost</text>
+<text x="60" y="146" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="26" fill="#afb9ca">Same 800 sq ft plan · three cities</text>
+<line x1="60" y1="186" x2="940" y2="186" stroke="#343f60" stroke-width="2"/>
+<rect x="60" y="216" width="430" height="170" rx="12" fill="#343f60"/>
+<text x="84" y="258" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">HIGHEST IMPACT FEE: ANAHEIM</text>
+<text x="84" y="318" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="48" font-weight="700" fill="#ff6b01">~$10,411</text>
+<text x="84" y="358" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#eaedf3">1.6× Fullerton’s · series highest</text>
+<rect x="510" y="216" width="430" height="170" rx="12" fill="#343f60"/>
+<text x="534" y="258" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">CHEAPEST PERMIT: FULLERTON</text>
+<text x="534" y="318" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="48" font-weight="700" fill="#ff6b01">$1,223</text>
+<text x="534" y="358" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#eaedf3">incl. plan check · series lowest</text>
+<text x="60" y="456" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Build total by city</text>
+<text x="60" y="490" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#afb9ca">Same ledger, same construction baseline. Only fees move.</text>
+<text x="60" y="540" text-anchor="start" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#afb9ca">CITY</text>
+<text x="540" y="540" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#afb9ca">$/SQ FT</text>
+<text x="755" y="540" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#afb9ca">VS. LA BASELINE</text>
+<text x="940" y="540" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#afb9ca">TOTAL</text>
+<line x1="60" y1="556" x2="940" y2="556" stroke="#343f60" stroke-width="2"/>
+<rect x="60" y="570" width="880" height="104" rx="10" fill="#2d3550"/>
+<text x="84" y="618.0" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#eaedf3">Fullerton</text>
+<text x="84" y="652.0" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">Series-lowest permit, $1,223</text>
+<text x="540" y="630.0" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" fill="#eaedf3">$398</text>
+<text x="755" y="630.0" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" fill="#eaedf3">−$2,000</text>
+<text x="916" y="632.0" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#ff6b01">$318,000</text>
+<rect x="60" y="690" width="880" height="104" rx="10" fill="#283046"/>
+<text x="84" y="738.0" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#eaedf3">Garden Grove</text>
+<text x="84" y="772.0" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">ADU Go · 4 free city designs</text>
+<text x="540" y="750.0" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" fill="#eaedf3">$398</text>
+<text x="755" y="750.0" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" fill="#eaedf3">−$2,000</text>
+<text x="916" y="752.0" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#ff6b01">$318,000</text>
+<rect x="60" y="810" width="880" height="104" rx="10" fill="#283046"/>
+<text x="84" y="858.0" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#eaedf3">Anaheim</text>
+<text x="84" y="892.0" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">Series-highest impact fee, ~$10,411</text>
+<text x="540" y="870.0" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" fill="#eaedf3">$400</text>
+<text x="755" y="870.0" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" fill="#eaedf3">at parity</text>
+<text x="916" y="872.0" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#ff6b01">$320,000</text>
+<text x="60" y="986" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#ff6b01">$2,000 spread — three fee philosophies.</text>
+<text x="60" y="1026" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="22" fill="#eaedf3">Anaheim’s impact fees alone exceed Fullerton’s by ~$4,000.</text>
+<text x="60" y="1106" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">800 sq ft detached ADU · model estimate, not a quote</text>
+<text x="60" y="1136" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">Fees from official schedules and resolutions · checked Oct 2026</text>
+<rect x="0" y="1370" width="1000" height="130" fill="#1a1f2c"/>
+<line x1="60" y1="1370" x2="940" y2="1370" stroke="#ff6b01" stroke-width="4"/>
+<text x="60" y="1412" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#ff6b01">Every Line Item</text>
+<text x="60" y="1448" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="22" fill="#afb9ca">everylineitem.com</text>
+<text x="940" y="1448" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">California ADU Costs · 2026</text>
+</svg>
