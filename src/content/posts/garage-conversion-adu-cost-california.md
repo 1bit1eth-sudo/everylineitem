@@ -11,6 +11,15 @@ seriesCurrent: garage-conversion-adu-cost-california
 verifiedPublished: "4 Sep 2026"
 lastVerified: "5 Sep 2026"
 nextReview: "Dec 2026"
+faqs:
+  - question: "How much does a garage conversion ADU cost in California?"
+    answer: "About $190,000 for a typical two-car garage conversion in Los Angeles County — roughly 450 sq ft of living area at $422 per square foot, mid-grade finishes, existing slab retained where sound."
+  - question: "Is a garage conversion cheaper than building a new detached ADU?"
+    answer: "In total cash, yes: $190,000 versus $215,000 for a 400 sq ft detached unit and $320,000 for 800 sq ft. But it is not automatically the better deal. Parking replacement, HOA rules, insulation and egress upgrades, and local ordinances can erase the advantage or stop the project."
+  - question: "Do I have to replace the parking I convert?"
+    answer: "It depends on your jurisdiction. Many California cities no longer require replacement parking for garage conversions near transit, but the rules vary by city and lot. Confirm with your local planning department before budgeting."
+  - question: "Is a garage conversion ADU worth it?"
+    answer: "It is the lowest-cash path to a legal rental unit in this series, but the $422 per square foot is higher than the $400 of a new 800 sq ft build — the expensive parts (kitchen, bathroom, electrical panel, egress) do not shrink. Compare total outlay, not just sticker price."
 ---
 > **Published:** 4 Sep 2026 · **Last verified:** 5 Sep 2026 · **Next review:** Dec 2026
 > Cost figures are re-checked against permit records quarterly. Changes are

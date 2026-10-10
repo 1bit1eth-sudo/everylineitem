@@ -11,6 +11,15 @@ seriesCurrent: coastal-vs-inland-adu-cost-california
 verifiedPublished: "4 Sep 2026"
 lastVerified: "5 Sep 2026"
 nextReview: "Dec 2026"
+faqs:
+  - question: "Why does the same ADU cost more on the California coast?"
+    answer: "Labor, fees, coastal review, and access. The same 800 sq ft plan priced at $380,000 ($475/sq ft) in the LA coastal band versus $300,000 ($375/sq ft) in the Inland Empire — an $80,000 gap, about 21%. Region is the variable you cannot redesign away."
+  - question: "How much does an 800 sq ft ADU cost in the Inland Empire?"
+    answer: "Near $300,000, or about $375 per square foot, for a mid-grade detached 800 sq ft unit — the low end of the $375–$600 per square foot Southern California site-built band used across this series."
+  - question: "What drives the $80,000 gap between coastal and inland ADU builds?"
+    answer: "Four things: higher coastal labor rates, steeper city fees, coastal commission or design review requirements, and harder site access (cranes, staging, deliveries). The drawings are identical; everything around them costs more."
+  - question: "Is it cheaper to build an ADU inland in California?"
+    answer: "On construction cost, yes — roughly $80,000 cheaper on an 800 sq ft build. But the decision is not only construction: rents, land values, and permitting timelines differ by region too. This post isolates the build cost; total economics need local rents."
 ---
 > **Published:** 4 Sep 2026 · **Last verified:** 5 Sep 2026 · **Next review:** Dec 2026
 > Cost figures are re-checked against permit records quarterly. Changes are
