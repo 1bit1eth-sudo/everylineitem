@@ -11,6 +11,15 @@ seriesCurrent: adu-soft-costs-permits-california
 verifiedPublished: "4 Sep 2026"
 lastVerified: "9 Sep 2026"
 nextReview: "Dec 2026"
+faqs:
+  - question: "What are soft costs on a California ADU?"
+    answer: "Everything you pay before construction starts: architecture, structural engineering, Title 24 energy calculations, plan check, building permit fees, school district fees, and utility/impact charges. They are easy to underestimate because they arrive as a dozen separate invoices instead of one line."
+  - question: "How much are ADU soft costs in California?"
+    answer: "Around $28,000–$40,000 for a typical Los Angeles County detached ADU with mid-grade professional design. In this series: $28,000 on the 400 sq ft detached model, $32,000 on the 800 sq ft model, and $24,000 on the garage conversion."
+  - question: "Do soft costs double if I double the ADU size?"
+    answer: "No. Doubling from 400 to 800 sq ft added only about $4,000 in soft costs. Design, engineering, and permits are closer to fixed than homeowners expect — one reason smaller ADUs cost more per square foot."
+  - question: "Which soft cost varies the most by city?"
+    answer: "Utility and impact charges. Design and plan check are relatively stable; water, sewer, and development impact fees swing by thousands of dollars between jurisdictions — sometimes more than the entire architecture fee."
 ---
 > **Published:** 4 Sep 2026 · **Last verified:** 9 Sep 2026 · **Next review:** Dec 2026
 > Cost figures are re-checked against permit records quarterly. Changes are
