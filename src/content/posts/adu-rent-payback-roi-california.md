@@ -11,6 +11,13 @@ seriesCurrent: adu-rent-payback-roi-california
 verifiedPublished: "4 Sep 2026"
 lastVerified: "5 Sep 2026"
 nextReview: "Dec 2026"
+faqs:
+  - question: "How long does it take for an ADU to pay for itself?"
+    answer: "It depends on rent, financing, and what you count as cost. This post models the $320,000 construction baseline and the ~$381,000 all-in year-one stack against realistic LA County ADU rents to show simple payback years and cash-on-cash — the inputs matter more than any single number. This is a planning model, not financial advice."
+  - question: "Is building an ADU a good investment in California?"
+    answer: "The math can work, but it is sensitive to rent levels, interest rates, vacancy, and construction overruns — the variables that quietly wreck spreadsheets. Run your own numbers with local rents and talk to a licensed financial and tax professional before borrowing or building. This post is not financial, tax, or investment advice."
+  - question: "Should I count the full $320,000 or the $381,000 all-in figure?"
+    answer: "Use the all-in figure. The $320,000 covers construction; financing costs, carrying costs, and first-year ownership expenses push the real year-one outlay toward $381,000. Payback math on construction cost alone flatters the result."
 ---
 > **Published:** 4 Sep 2026 · **Last verified:** 5 Sep 2026 · **Next review:** Dec 2026
 > Cost figures are re-checked against permit records quarterly. Changes are
