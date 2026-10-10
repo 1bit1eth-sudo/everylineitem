@@ -1,6 +1,6 @@
 ---
-title: "Riverside ADU Cost 2026: $309,000 and the Cheapest Permit in the Series"
-description: "An 800 sq ft detached ADU in Riverside priced phase by phase — about $309,000, the lowest total in the series so far. The building permit costs $1,006 (the series low), and the city's free Dwell Riverside plan set includes an 800 sq ft design that matches this post's benchmark size exactly. Seven items are awaiting confirmation from the city."
+title: "Riverside ADU Cost 2026: $309,000, Cheapest Permit"
+description: "800 sq ft detached ADU in Riverside: $309,000 total, $1,006 permit (series low). Phase-by-phase breakdown."
 pubDatetime: 2026-10-10T01:00:00Z
 author: "Every Line Item"
 tags: ["adu cost", "riverside", "california", "permit fees", "2026"]
@@ -8,7 +8,7 @@ draft: false
 series: ca-adu
 seriesCurrent: riverside-adu-cost
 verifiedPublished: "10 Oct 2026"
-lastVerified: "9 Oct 2026"
+lastVerified: "10 Oct 2026"
 nextReview: "Jan 2027"
 keyFacts:
   city: "Riverside"
