@@ -11,6 +11,15 @@ seriesCurrent: modular-vs-site-built-adu-cost-california
 verifiedPublished: "4 Sep 2026"
 lastVerified: "5 Sep 2026"
 nextReview: "Dec 2026"
+faqs:
+  - question: "Is a modular ADU cheaper than a site-built one?"
+    answer: "Modestly. On the same 800 sq ft detached program in Los Angeles County, modular came to $288,000 versus $320,000 site-built — about 10% lower, inside the common 10–25% hard-cost savings band. The savings shrink once you add what the brochure leaves out: trucking, crane, and site constraints."
+  - question: "What costs are missing from prefab ADU price lists?"
+    answer: "Typically transport, crane day, foundation, utility hookups, permits, and site work. Factory quotes often cover the box only. Our modular model adds those lines back so it compares apples to apples with the $320,000 site-built baseline."
+  - question: "How much does an 800 sq ft modular ADU cost in California?"
+    answer: "About $288,000 all-in for a mid-grade 800 sq ft detached-equivalent in Los Angeles County — $360 per square foot — after crane, transport, and site work are included."
+  - question: "Is a prefab ADU worth it?"
+    answer: "If your site has easy truck access and you value a shorter schedule, the ~10% savings and factory timeline are real advantages. On tight, sloped, or crane-hostile lots, delivery costs can erase them. Price the full project, not the brochure."
 ---
 > **Published:** 4 Sep 2026 · **Last verified:** 5 Sep 2026 · **Next review:** Dec 2026
 > Cost figures are re-checked against permit records quarterly. Changes are
