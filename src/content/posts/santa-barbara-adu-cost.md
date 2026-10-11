@@ -104,6 +104,14 @@ The $7,000 premium over the baseline is the permit bill minus the missing DIF: $
 
 Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. Santa Barbara has no impact fees, so SB 1117 changes nothing on the DIF line — there is nothing to prorate. The permit fee, which is the actual story here, is outside SB 1117's scope entirely. School fees are outside SB 1117's impact-fee definition and stay at $4,136.
 
+## Sources
+
+- City of Santa Barbara Fee Schedule FY 2027 (Res. 2026-059): https://santabarbaraca.gov/sites/default/files/2026-07/Resolution%202026-059.pdf
+- SBUSD Developer Fees: http://sbunified.community.diligentoneplatform.com/document/49b43ad4-2259-4ca8-a552-f7e961aa109f
+- Preapproved ADU Program: https://santabarbaraca.gov/news/new-preapproved-adu-program
+
+See also: [Compare ADU costs across cities](/compare/) · [How to read an ADU bid](/posts/how-to-read-adu-bid/) · [ADU soft costs](/posts/adu-soft-costs-permits-california/)
+
 ## Disclaimer
 
 Model estimate, not a quote. Fees change; the preapproved plan-check discount assumes program eligibility, and separately metered ADUs face fixture-unit capacity charges ($376.97/water FU, $137.77/sewer FU). Always verify current fees with the City of Santa Barbara Community Development Department before budgeting.
