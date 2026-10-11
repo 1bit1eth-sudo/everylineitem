@@ -1,6 +1,6 @@
 ---
 title: "Laguna Beach ADU Cost 2026: $314,000, No Coastal Premium"
-description: "800 sq ft detached ADU in Laguna Beach: ~$314,000 total. No city impact fees, ADU-specific sewer at $215/100 sq ft, $2.05 school fee. Phase-by-phase breakdown."
+description: "800 sq ft ADU in Laguna Beach: ~$314,000. No impact fees, $215/100 sq ft sewer, $2.05 school fee."
 pubDatetime: 2026-10-13T01:00:00Z
 author: "Every Line Item"
 tags: ["adu cost", "laguna beach", "california", "permit fees", "2026"]
@@ -106,6 +106,14 @@ The $6,000 discount to the baseline is the school fee doing quiet work: $1,640 h
 ## A note on SB 1117
 
 Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. Laguna Beach has no impact fees, so SB 1117 changes nothing locally — the codified cliff stays moot. Note that SB 1117's impact-fee definition explicitly excludes water and sewer connection/capacity charges, so the $1,720 sewer line and the LBCWD water formula are unaffected. School fees are outside SB 1117's definition and stay at $1,640.
+
+## Sources
+
+- City of Laguna Beach Master Fee Schedule FY 2026/27 (Res. 26.037): https://lagunabeachcity.primegov.com/api/compilemeetingattachmenthistory/historyattachment/?historyId=2c470515-3968-48fa-8864-65b84f79703a
+- LBUSD Developer Fees: http://lbusd.community.diligentoneplatform.com/document/49c2ae9b-3a21-4c5c-9eb7-a66978684fa3/
+- ADU Ordinance (Ch. 25.17): https://ecode360.com/42899768
+
+See also: [Compare ADU costs across cities](/compare/) · [How to read an ADU bid](/posts/how-to-read-adu-bid/) · [Orange County ADU costs compared](/posts/orange-county-adu-cost-compared/)
 
 ## Disclaimer
 
