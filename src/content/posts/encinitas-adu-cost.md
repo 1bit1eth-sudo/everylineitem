@@ -104,6 +104,14 @@ The $2,000 premium over the baseline is the DIF line doing all the work: $22,040
 
 Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. Encinitas's current structure — full $27.55 rate on the entire unit once it hits 750 — is the state-law baseline that SB 1117 replaces. Under SB 1117, an 800 sq ft ADU would owe DIF on 50 sq ft, not 800: roughly $1,378 instead of $22,040. That is a ~$20,600 swing hanging on a January 1 effective date. We found no mention of SB 1117 in city materials; the January 2027 quarterly review will check for a revised fee schedule. School fees are outside SB 1117's impact-fee definition and stay at $3,832.
 
+## Sources
+
+- City of Encinitas ADU/JADU Guide (Jan 2026, PLN-118): https://www.encinitasca.gov/home/showpublisheddocument/12302/639033842795500000
+- Citywide Development Impact Fee Nexus Study (Final, May 2026): https://www.encinitasca.gov/home/showpublisheddocument/14188
+- SDUHSD Developer Fees: https://www.sduhsd.net/Our-District/Facilities/Facilities-Planning/index.html
+
+See also: [Compare ADU costs across cities](/compare/) · [How to read an ADU bid](/posts/how-to-read-adu-bid/) · [ADU soft costs](/posts/adu-soft-costs-permits-california/)
+
 ## Disclaimer
 
 Model estimate, not a quote. Fees change; the sewer proportional share, water connection fee, RTCIP amount, and the EUSD fee increase are the city's and districts' to confirm. Always verify current fees with the City of Encinitas Development Services Department before budgeting.
