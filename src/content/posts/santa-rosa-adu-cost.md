@@ -1,6 +1,6 @@
 ---
 title: "Santa Rosa ADU Cost 2026: $320,000, Fire-Era Discount"
-description: "800 sq ft detached ADU in Santa Rosa: ~$320,000 total. 2017 fire-era 25% impact-fee cut still on the books; water/sewer $8,230 exceeds DIF. Phase-by-phase breakdown."
+description: "800 sq ft ADU in Santa Rosa: ~$320,000. 25% impact-fee cut; water/sewer $8,230 exceeds DIF."
 pubDatetime: 2026-10-14T01:00:00Z
 author: "Every Line Item"
 tags: ["adu cost", "santa rosa", "california", "permit fees", "2026"]
@@ -103,6 +103,14 @@ Dead even with the baseline on the headline — but the composition is inverted 
 ## A note on SB 1117
 
 Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. Santa Rosa's 25% tier for 751–950 sq ft is already gentler than the baseline cliff SB 1117 replaces — the city's 800 sq ft fee under the new marginal formula will depend on how Santa Rosa recalibrates its tier against the state mandate, and could move in either direction. Water and sewer demand/offset fees are connection/capacity charges, explicitly excluded from SB 1117's impact-fee definition — the $8,230 utility stack is unaffected. School fees stay at $4,136.
+
+## Sources
+
+- City of Santa Rosa ADU Costs and Fees: https://www.srcity.org/2280/Accessory-Dwelling-Units
+- Santa Rosa Water Fee Schedule: https://www.SRCity.org/DocumentCenter/View/8915/Fee-Schedule---Demand-Fees-PDF
+- SRCS Developer Fees: https://www.srcschools.org/departments/business-services/fiscal-services/developer-fees
+
+See also: [Compare ADU costs across cities](/compare/) · [How to read an ADU bid](/posts/how-to-read-adu-bid/) · [ADU soft costs](/posts/adu-soft-costs-permits-california/)
 
 ## Disclaimer
 
