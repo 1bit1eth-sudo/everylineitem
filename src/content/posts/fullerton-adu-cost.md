@@ -1,6 +1,6 @@
 ---
-title: "Fullerton ADU Cost 2026: $318,000 With the Series' Cheapest Permit Fee"
-description: "An 800 sq ft detached ADU in Fullerton priced phase by phase — $318,000. The cheapest building-permit tier in the series ($1,223), a two-district school fee that twins Santa Maria, and a pre-approved 842 sq ft plan that trips the 750 sq ft impact-fee cliff. Five items are still unconfirmed with the city."
+title: "Fullerton ADU Fees 2026: The $1,223 Permit and a Two-District School Fee"
+description: "Fullerton ADU fees: the cheapest permit in the series ($1,223) and a two-district school fee."
 pubDatetime: 2026-10-06T17:05:00Z
 author: "Every Line Item"
 tags: ["adu cost", "fullerton", "california", "permit fees", "2026"]
