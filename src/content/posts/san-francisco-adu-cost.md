@@ -1,6 +1,6 @@
 ---
-title: "San Francisco ADU Cost 2026: $325,000 With No 750 Sq Ft Cliff"
-description: "An 800 sq ft detached ADU in San Francisco priced phase by phase — $325,000. Why the 750 sq ft impact-fee cliff that shapes every other California build barely exists here."
+title: "San Francisco ADU Fees 2026: No 750 Sq Ft Cliff"
+description: "San Francisco ADU fees: why the 750 sq ft impact-fee cliff barely exists here."
 pubDatetime: 2026-10-05T10:30:00Z
 author: "Every Line Item"
 tags: ["adu cost", "san francisco", "california", "permit fees", "2026"]
