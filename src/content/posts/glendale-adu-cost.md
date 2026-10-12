@@ -1,6 +1,6 @@
 ---
-title: "Glendale ADU Cost 2026: $318,000 and the 50 Sq Ft Cliff"
-description: "An 800 sq ft detached ADU in Glendale priced phase by phase — $318,000. The city's ordinance caps detached ADUs at 800 sq ft and exempts ADUs under 750 sq ft from impact fees — so the largest legal ADU always pays. Plus the series-high $5.38/sq ft school fee."
+title: "Glendale ADU Fees 2026: The 50 Sq Ft Cliff"
+description: "Glendale ADU fees: the 50 sq ft cliff — the largest legal ADU always pays impact fees."
 pubDatetime: 2026-10-06T03:03:04Z
 author: "Every Line Item"
 tags: ["adu cost", "glendale", "california", "permit fees", "2026"]

@@ -1,6 +1,6 @@
 ---
-title: "Sacramento ADU Cost 2026: $316,000 With a Real 750 Sq Ft Cliff"
-description: "An 800 sq ft detached ADU in Sacramento priced phase by phase — $316,000. Why crossing 750 sq ft adds $5,728 in city impact fees, and how the city's own free ADU plans are drawn at 747 sq ft to dodge it."
+title: "Sacramento ADU Fees 2026: Crossing 750 Costs $5,728"
+description: "Sacramento ADU fees: crossing 750 sq ft costs $5,728 in impact fees."
 pubDatetime: 2026-10-06T01:00:00Z
 author: "Every Line Item"
 tags: ["adu cost", "sacramento", "california", "permit fees", "2026"]

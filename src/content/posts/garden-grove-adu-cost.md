@@ -1,6 +1,6 @@
 ---
-title: "Garden Grove ADU Cost 2026: $318,000 in the City of Free Plans"
-description: "An 800 sq ft detached ADU in Garden Grove priced phase by phase — $318,000. ADU Go's four free pre-approved plans, a two-cliff fee system (500 for schools, 750 for impact fees), and the first regional sewer charge in the series. Three questions are still with the city."
+title: "Garden Grove ADU Fees 2026: Two Cliffs (500 & 750) and Free Plans"
+description: "Garden Grove ADU fees: two cliffs (500 sq ft schools, 750 sq ft impact fees) and four free plans."
 pubDatetime: 2026-10-06T16:58:00Z
 author: "Every Line Item"
 tags: ["adu cost", "garden grove", "california", "permit fees", "2026"]

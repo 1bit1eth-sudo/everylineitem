@@ -1,6 +1,6 @@
 ---
-title: "Santa Maria ADU Cost 2026: $306,000 in the ADU Boom Town"
-description: "An 800 sq ft detached ADU in Santa Maria priced phase by phase — $306,000, with a caveat. The city issued 1,318 ADU permits in three years (#7 statewide) but publishes the least transparent fee schedule in this series. Plus the two-district school fee and proportional water/sewer charges."
+title: "Santa Maria ADU Fees 2026: The Least Transparent Schedule"
+description: "Santa Maria ADU fees: the boom town with the least transparent fee schedule in the series."
 pubDatetime: 2026-10-06T04:38:00Z
 author: "Every Line Item"
 tags: ["adu cost", "santa maria", "california", "permit fees", "2026"]

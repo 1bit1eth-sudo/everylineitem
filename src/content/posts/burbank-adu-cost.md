@@ -1,6 +1,6 @@
 ---
-title: "Burbank ADU Cost 2026: $320,000 With a 750 Sq Ft Cliff on the Sewer Bill"
-description: "An 800 sq ft detached ADU in Burbank priced phase by phase — $320,000. The only city in the series with a 750 sq ft cliff on the sewer facilities charge, ADU-specific fees written into the official fee schedule, and the series' most expensive building permit. Five items are still unconfirmed with the city."
+title: "Burbank ADU Fees 2026: The $3,692 Permit and a Sewer Cliff"
+description: "Burbank ADU fees: a $3,692 permit (series high) and a 750 sq ft cliff on the sewer bill."
 pubDatetime: 2026-10-07T00:20:00Z
 author: "Every Line Item"
 tags: ["adu cost", "burbank", "california", "permit fees", "2026"]

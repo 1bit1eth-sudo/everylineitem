@@ -1,6 +1,6 @@
 ---
-title: "San Jose ADU Cost 2026: Bay Area Fees, Line by Line"
-description: "An 800 sq ft San Jose ADU priced phase by phase — about $400,000 (our estimate). Plus what the same plan owes in fees in four other Bay Area jurisdictions."
+title: "San Jose ADU Fees 2026: Bay Area Fees, Line by Line"
+description: "San Jose ADU fees line by line, plus four other Bay Area jurisdictions."
 pubDatetime: 2026-10-03T14:45:00Z
 author: "Every Line Item"
 tags: ["adu cost", "san jose", "bay area", "california", "permit fees", "2026"]

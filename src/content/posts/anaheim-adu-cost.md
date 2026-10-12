@@ -1,6 +1,6 @@
 ---
-title: "Anaheim ADU Cost 2026: $320,000 With the Series' Highest Impact Fees"
-description: "An 800 sq ft detached ADU in Anaheim priced phase by phase — $320,000. The steepest development impact fees in the series, the only combined permit-plus-plan-check fee, and an ADU Express program with four free pre-approved plans. The city replied to our inquiry after publication; the 2026 impact-fee adoption and calculation basis, the permit category, and water connection charges remain unconfirmed."
+title: "Anaheim ADU Fees 2026: The Series' Highest Impact Fees"
+description: "Anaheim ADU fees: the steepest impact fees in the series, plus the only combined permit-plus-plan-check fee."
 pubDatetime: 2026-10-06T18:36:00Z
 author: "Every Line Item"
 tags: ["adu cost", "anaheim", "california", "permit fees", "2026"]
