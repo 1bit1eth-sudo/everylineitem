@@ -1,6 +1,6 @@
 ---
-title: "San Diego ADU Cost 2026: Four Cities, Four Different Prices"
-description: "An 800 sq ft detached ADU in San Diego priced phase by phase — $344,000. Plus why the same build costs $17,400 more in the city than in Encinitas."
+title: "San Diego ADU Fees 2026: Four Cities, Four Prices"
+description: "San Diego ADU fees across four cities — the same build costs $17,400 more by street."
 pubDatetime: 2026-10-03T04:15:00Z
 author: "Every Line Item"
 tags: ["adu cost", "san diego", "california", "permit fees", "2026"]
