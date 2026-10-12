@@ -1,6 +1,6 @@
 ---
-title: "Long Beach ADU Cost 2026: $313,000 and the Third Way on Impact Fees"
-description: "An 800 sq ft detached ADU in Long Beach priced phase by phase — $313,000. The city charges ADUs their own reduced impact-fee rates: neither San Diego's cliff nor Oakland's exemption. Plus the series-high $5.38/sq ft school fee."
+title: "Long Beach ADU Fees 2026: The Third Way on Impact Fees"
+description: "Long Beach ADU fees: ADU-specific reduced rates — neither a cliff nor an exemption."
 pubDatetime: 2026-10-06T02:12:00Z
 author: "Every Line Item"
 tags: ["adu cost", "long beach", "california", "permit fees", "2026"]
