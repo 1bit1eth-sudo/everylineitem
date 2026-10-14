@@ -12,17 +12,6 @@
   };
   var FAR_PCT = 30; // flag a stage more than this % above/below the benchmark
 
-  /* Soft-cost items quotes most often go quiet on. Each maps to a ledger
-     stage; the panel auto-flags them from the stage status dropdowns. */
-  var MISSING_CHECKLIST = [
-    { id: "design", label: "Design & engineering", stage: "soft", note: "Plans, structural engineering, Title 24 calcs." },
-    { id: "permits", label: "Permits & plan check", stage: "soft", note: "City permit and plan-check fees." },
-    { id: "utilities", label: "Utility connections & trenching", stage: "site", note: "Sewer lateral, water, electrical service, trenching." },
-    { id: "foundation", label: "Foundation", stage: "site", note: "Confirm soil conditions are covered." },
-    { id: "transport", label: "Transport", stage: "crane", note: "Delivery of modules or materials to the site." },
-    { id: "crane", label: "Crane & staging", stage: "crane", note: "Crane rental, street permits, staging area." },
-  ];
-
   function usd(n) {
     var s = Math.abs(n).toLocaleString("en-US", {
       style: "currency",
@@ -223,53 +212,6 @@
           diffText(totals[q] - sc.total) + " vs benchmark. Excluded and not-listed stages are not counted."));
       });
       results.append(summary);
-
-      // "Commonly missing from quotes" auto-checklist: derive each soft-cost
-      // item's status from the mapped ledger stage's status dropdown.
-      var rowByStage = {};
-      rows.forEach(function (r) { rowByStage[r.dataset.stage] = r; });
-      function stageStatus(q, stageId) {
-        var row = rowByStage[stageId];
-        if (!row || row.classList.contains("hidden")) return "na";
-        var st = field(row, q, "status").value;
-        var amt = parseAmount(field(row, q, "amount").value);
-        if ((st === "included" || st === "allowance") && amt != null) return st === "allowance" ? "allowance" : "listed";
-        return st; // "excluded" or "notlisted"
-      }
-      var STATUS_LABEL = {
-        listed: "Listed",
-        allowance: "Allowance",
-        excluded: "Excluded",
-        notlisted: "Not listed",
-        na: "—",
-      };
-      var STATUS_CLASS = {
-        listed: "text-green-600 dark:text-green-400",
-        allowance: "text-accent",
-        excluded: "text-accent",
-        notlisted: "text-accent",
-        na: "text-foreground/60",
-      };
-      var mh = el("h3", "font-semibold", "Commonly missing from quotes");
-      var mp = el("p", "text-foreground/70 text-sm",
-        "These six items are where bids most often go quiet. Auto-flagged from the stages you marked above.");
-      var ml = el("ul", "space-y-2 text-sm");
-      MISSING_CHECKLIST.forEach(function (item) {
-        var li = el("li", "border-border rounded-md border p-3");
-        var head = el("div", "font-medium", item.label);
-        head.append(el("span", "text-foreground/70 font-normal", " — " + item.note));
-        li.append(head);
-        var badges = el("div", "mt-1 flex flex-wrap gap-x-4 gap-y-1 text-xs tabular-nums");
-        ["a", "b"].forEach(function (q) {
-          var s = stageStatus(q, item.stage);
-          var b = el("span", STATUS_CLASS[s],
-            "Quote " + q.toUpperCase() + ": " + STATUS_LABEL[s]);
-          badges.append(b);
-        });
-        li.append(badges);
-        ml.append(li);
-      });
-      results.append(mh, mp, ml);
 
       if (flags.length) {
         var fh = el("h3", "font-semibold", "Flags");
