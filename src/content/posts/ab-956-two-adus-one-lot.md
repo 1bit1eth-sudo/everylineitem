@@ -1,11 +1,11 @@
 ---
 title: "AB 956 Is Signed: Two Detached ADUs Per Single-Family Lot From Jan 1, 2027"
 description: "Governor Newsom signed AB 956 (Chapter 791) on Sep 29, 2026 — effective Jan 1, 2027, cities must ministerially approve up to two detached new-construction ADUs on a single-family lot, up from one. Each unit: up to 800 sq ft, 4-ft side and rear setbacks, 16-ft height (18 ft near major transit). The JADU tradeoff, the HOA rule change, and the fee math with SB 1117. Verified against the official leginfo chaptered text."
-pubDatetime: 2026-10-17T01:00:00Z
+pubDatetime: 2026-10-15T22:34:25Z
 author: "Every Line Item"
 tags: ["ab 956", "adu law", "detached adu", "single-family", "ministerial approval", "california", "2026"]
 draft: false
-verifiedPublished: "17 Oct 2026"
+verifiedPublished: "16 Oct 2026"
 lastVerified: "14 Oct 2026"
 nextReview: "Jan 2027"
 faqs:
