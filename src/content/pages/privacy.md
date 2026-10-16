@@ -3,7 +3,7 @@ title: Privacy Policy
 description: How Every Line Item collects, uses, and does not sell personal information.
 ---
 
-**Last updated:** 5 October 2026
+**Last updated:** 16 October 2026
 
 This page explains what Every Line Item (`everylineitem.com`) collects and what we do with it. Short version: we collect as little as we can, we do not sell your information to contractors, and you can unsubscribe or ask us to delete what we hold.
 
@@ -53,7 +53,7 @@ We may disclose information if required by law or to protect the site against ab
 
 ## Display advertising
 
-This site shows ads through **Google AdSense** (publisher ID `pub-2712766436270135`). Google's use of advertising cookies enables it and its partners to serve ads to you based on your visit to this site and/or other sites on the Internet. Google may use cookies or similar technologies to serve, personalize, and measure these ads. You can opt out of personalized advertising in [Google Ads Settings](https://www.google.com/settings/ads) and read how Google uses data from partner sites at [policies.google.com/technologies/partner-sites](https://policies.google.com/technologies/partner-sites). You can also limit many ad cookies through your browser settings and industry opt-out tools such as [optout.aboutads.info](https://optout.aboutads.info/).
+This site shows ads through **Google AdSense** (publisher ID `pub-9855716660139171`). Google's use of advertising cookies enables it and its partners to serve ads to you based on your visit to this site and/or other sites on the Internet. Google may use cookies or similar technologies to serve, personalize, and measure these ads. You can opt out of personalized advertising in [Google Ads Settings](https://www.google.com/settings/ads) and read how Google uses data from partner sites at [policies.google.com/technologies/partner-sites](https://policies.google.com/technologies/partner-sites). You can also limit many ad cookies through your browser settings and industry opt-out tools such as [optout.aboutads.info](https://optout.aboutads.info/).
 
 Essential cookies or local storage may still be used for basic site functions (for example remembering light/dark theme).
 
