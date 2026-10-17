@@ -1,0 +1,72 @@
+---
+import feesData from "@/data/fees.json";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import LinkButton from "@/components/LinkButton.astro";
+
+const jurisdictions = feesData.jurisdictions
+  .filter(j => j.juris_id !== "LA-BASE")
+  .sort((a, b) => a.name.localeCompare(b.name, "en-US"));
+
+const byRegion = new Map<string, typeof jurisdictions>();
+for (const j of jurisdictions) {
+  const r = j.region || "California";
+  if (!byRegion.has(r)) byRegion.set(r, []);
+  byRegion.get(r)!.push(j);
+}
+
+const title = "ADU Fees by City & County (2026) | Every Line Item";
+const description = `Government ADU fees for ${jurisdictions.length} California jurisdictions — every line item verified against official sources. Find your city's impact fees, school fees, and permit costs.`;
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  <Breadcrumb />
+  <main id="main-content" class="app-layout pb-8">
+    <h1 class="text-3xl font-bold sm:text-4xl">ADU Fees by City &amp; County</h1>
+    <p class="mt-4 text-lg opacity-80">
+      {jurisdictions.length} California jurisdictions. Every fee below was
+      read in the official source document — fee schedule, school district
+      resolution, or utility charges — and links straight to it. No estimates,
+      ever.
+    </p>
+    <p class="mt-2 text-sm opacity-70">
+      State law bars impact fees on ADUs of 750 sq ft or less (Gov. Code
+      &sect;66311.5) — that cliff is drawn on every page.
+    </p>
+
+    {[...byRegion.entries()].map(([region, list]) => (
+      <section class="mt-10">
+        <h2 class="text-xl font-semibold border-b border-border pb-2">
+          {region}
+          <span class="ml-2 text-sm font-normal opacity-60">{list.length}</span>
+        </h2>
+        <ul class="mt-4 grid gap-x-8 gap-y-2 sm:grid-cols-2 lg:grid-cols-3">
+          {list.map(j => (
+            <li>
+              <LinkButton
+                class="hover:text-accent underline decoration-dashed underline-offset-4"
+                href={`/fees/${j.juris_id.toLowerCase()}/`}
+              >
+                {j.name}
+              </LinkButton>
+              <span class="ml-2 text-sm opacity-50">{j.county} County</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+
+    <div class="mt-12">
+      <LinkButton
+        href="/compare/"
+        class="bg-accent text-white font-semibold px-5 py-3 rounded"
+      >
+        Compare fees side by side &rarr;
+      </LinkButton>
+    </div>
+  </main>
+  <Footer />
+</Layout>
