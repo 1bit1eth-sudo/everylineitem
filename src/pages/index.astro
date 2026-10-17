@@ -398,6 +398,58 @@ const formatShortDate = (d: string | Date) =>
       </div>
     </section>
 
+    {/* THE 750 SQ FT LINE — the most shareable single fact */}
+    <section aria-labelledby="cliff-heading" class="border-border border-b pt-12 pb-6">
+      <div class="max-w-3xl">
+        <h2 id="cliff-heading" class="text-2xl font-semibold">
+          One square foot can cost you $3,823.
+        </h2>
+        <p class="mt-3 text-lg opacity-80">
+          In Hayward, a 749 sq ft ADU pays $0 in park impact fees. At 750 sq
+          ft, the city's own worksheet charges $3,823 — for one square foot.
+          State law draws the line at 750; every city decides what sits on
+          either side of it.
+        </p>
+        <p class="mt-4">
+          <a href="/compare/" class="text-accent font-semibold">
+            Find your city's cliff &rarr;
+          </a>
+        </p>
+      </div>
+    </section>
+
+    {/* ANATOMY OF A BID — what "verify a quote" actually means */}
+    <section aria-labelledby="anatomy-heading" class="border-border border-b pt-12 pb-6">
+      <h2 id="anatomy-heading" class="text-2xl font-semibold">
+        Contractors quote in lumps. We break it into six.
+      </h2>
+      <div class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {[
+          { n: "1", label: "Soft costs", desc: "Design, permits, plan check — the only phase with a public, checkable answer." },
+          { n: "2", label: "Site work + foundation", desc: "Grading, trenching, the slab everything sits on." },
+          { n: "3", label: "Framing + structure", desc: "Walls, roof, the skeleton." },
+          { n: "4", label: "Building envelope", desc: "Windows, doors, roofing, waterproofing." },
+          { n: "5", label: "Systems + interior", desc: "Electrical, plumbing, HVAC, drywall, finishes." },
+          { n: "6", label: "Landscaping & hardscape", desc: "What the site looks like when the crew leaves." },
+        ].map(p => (
+          <div class="border border-border rounded-lg p-4">
+            <p class="font-mono text-sm opacity-60">{p.n}</p>
+            <p class="mt-1 font-semibold">{p.label}</p>
+            <p class="mt-1 text-sm opacity-70">{p.desc}</p>
+          </div>
+        ))}
+      </div>
+      <p class="mt-4 text-sm opacity-70">
+        Bids hide the most in phase 1.{" "}
+        <a href="/posts/how-to-read-adu-bid/" class="text-accent font-semibold">
+          Learn to read a bid &rarr;
+        </a>{" "}
+        <a href="/compare/" class="text-accent font-semibold">
+          Map yours &rarr;
+        </a>
+      </p>
+    </section>
+
     {/* BROWSE INDEX — by city / by build type / money questions */}
     <section id="browse" aria-labelledby="browse-heading" class="border-border border-b pt-12 pb-6">
       <div class="flex items-baseline justify-between">
