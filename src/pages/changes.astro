@@ -1,0 +1,66 @@
+---
+import changelog from "@/data/fee-changelog.json";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import FeeAlertSignup from "@/components/FeeAlertSignup.astro";
+import LinkButton from "@/components/LinkButton.astro";
+
+const title = "Fee Change Log | Every Line Item";
+const description =
+  "Every fee-schedule change we've verified across 70 California jurisdictions — what moved, when, and the source document. Get an email only when your city's fees change.";
+
+const formatDate = (iso: string) => {
+  const [y, m, d] = iso.split("-").map(Number);
+  const names = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  return `${d} ${names[m - 1]} ${y}`;
+};
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  <Breadcrumb />
+  <main id="main-content" class="app-layout pb-8">
+    <h1 class="text-3xl font-bold sm:text-4xl">Fee Change Log</h1>
+    <p class="mt-4 text-lg opacity-80">
+      The only public record of when California ADU fees actually move. Every
+      entry below is a verification event — new line items read in the source
+      document, or a rate our researchers re-confirmed. "Re-verified,
+      unchanged" counts too: silence from other sites isn't evidence.
+    </p>
+
+    <div class="mt-6 max-w-xl">
+      <FeeAlertSignup idPrefix="changes-alert" />
+    </div>
+
+    <div class="mt-10 space-y-6">
+      {changelog.entries.map(e => (
+        <article class="border-b border-border pb-6">
+          <p class="text-sm font-mono tabular-nums opacity-60">{formatDate(e.date)}</p>
+          <h2 class="mt-1 text-xl font-semibold">{e.headline}</h2>
+          <p class="mt-2 opacity-80">{e.detail}</p>
+          <p class="mt-2 text-sm opacity-60">
+            {e.jurisdictions.join(" · ")}
+          </p>
+        </article>
+      ))}
+    </div>
+
+    <div class="mt-10 flex flex-wrap gap-3">
+      <LinkButton
+        href="/fees/"
+        class="border border-border px-5 py-3 rounded font-medium"
+      >
+        Browse all jurisdictions &rarr;
+      </LinkButton>
+      <LinkButton
+        href="/methodology/"
+        class="underline decoration-dashed underline-offset-4"
+      >
+        How we verify &rarr;
+      </LinkButton>
+    </div>
+  </main>
+  <Footer />
+</Layout>

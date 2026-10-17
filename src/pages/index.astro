@@ -11,6 +11,8 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Socials from "@/components/Socials.astro";
 import LinkButton from "@/components/LinkButton.astro";
+import FeeAlertSignup from "@/components/FeeAlertSignup.astro";
+import changelog from "@/data/fee-changelog.json";
 import { getSortedPosts } from "@/utils/getSortedPosts";
 import { useTranslations } from "@/i18n";
 import config from "@/config";
@@ -364,6 +366,35 @@ const formatShortDate = (d: string | Date) =>
             </a>
           </div>
         </aside>
+      </div>
+    </section>
+
+    {/* WHAT CHANGED — the fee change log, newest first */}
+    <section aria-labelledby="changes-heading" class="border-border border-b pt-12 pb-6">
+      <div class="grid gap-8 lg:grid-cols-2">
+        <div>
+          <h2 id="changes-heading" class="text-2xl font-semibold">
+            What changed
+          </h2>
+          <p class="mt-2 text-sm opacity-70">
+            The fee change log — every verification event, newest first.{" "}
+            <a href="/changes/" class="text-accent font-semibold">
+              Full log &rarr;
+            </a>
+          </p>
+          <ul class="mt-4 space-y-4">
+            {changelog.entries.slice(0, 3).map(e => (
+              <li class="border-b border-border pb-4">
+                <p class="text-sm font-mono tabular-nums opacity-60">{e.date}</p>
+                <p class="font-semibold">{e.headline}</p>
+                <p class="mt-1 text-sm opacity-70">{e.detail}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="self-start">
+          <FeeAlertSignup idPrefix="home-alert" />
+        </div>
       </div>
     </section>
 
