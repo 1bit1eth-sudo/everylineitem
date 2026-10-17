@@ -212,6 +212,24 @@ const selectClass =
     sqftInput.addEventListener("input", update);
   }
 
+  // Deep-link support: /compare/?j=JURIS-ID&sqft=800 (from the homepage
+  // hero fee lookup). Prefill the controls before the first render.
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const pj = params.get("j");
+    const psqft = params.get("sqft");
+    if (pj && jurisSel && [...jurisSel.options].some(o => o.value === pj)) {
+      jurisSel.value = pj;
+    }
+    if (psqft && sqftInput) {
+      const n = Number(psqft);
+      if (Number.isFinite(n) && n >= 100 && n <= 2000) sqftInput.value = String(Math.round(n));
+    }
+  } catch {
+    /* ignore malformed query strings */
+  }
+  update();
+
   // "Email me this report (PDF)" — generate the PDF client-side and download
   // it immediately, while the form POSTs the email to Buttondown in a hidden
   // iframe (same endpoint as EmailSignup.astro). jsPDF is dynamically
