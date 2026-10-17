@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "date": "2026-10-18",
+      "headline": "Batch 17: 5 new jurisdictions, 9 verified fee items",
+      "detail": "Pico Rivera, Saratoga, Mountain View, El Cajon, El Dorado County (HCD ADU-permit ranks #99–104). First East County San Diego and El Dorado County coverage; Mountain View's two-district school split ($5.24/sq ft) is the matrix's first; El Dorado County's $1,320 fire fee drops ~94% under SB 1117. Derived/proportional figures (Saratoga elementary $3.72, per-DFU sewer) held back as PARTIAL.",
+      "jurisdictions": [
+        "Pico Rivera",
+        "Saratoga",
+        "Mountain View",
+        "El Cajon",
+        "El Dorado County"
+      ],
+      "items_added": 9
+    },
+    {
       "date": "2026-10-17",
       "headline": "Batch 16: 5 new jurisdictions, 5 verified fee items",
       "detail": "Davis, Temple City, Palmdale, Redwood City, Bakersfield (HCD ADU-permit ranks #95–99). First Yolo County coverage; Redwood City's $1.78/sq ft ADU sewer line is explicit in ordinance; Bakersfield's stacked 2016-dated DIFs held back as PARTIAL. Also merged the duplicate Santa Clara County entry.",
