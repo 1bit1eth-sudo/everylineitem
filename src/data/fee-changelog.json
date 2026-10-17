@@ -2,6 +2,19 @@
   "entries": [
     {
       "date": "2026-10-18",
+      "headline": "Batch 18: 5 new jurisdictions, 12 verified fee items",
+      "detail": "Hemet, Sunnyvale, Marin County, Jurupa Valley, San Fernando (HCD ADU-permit ranks #105–109). Hemet's $8.647/SF DIF ($6,918 on 800 sq ft) is the matrix's steepest 750-sq-ft cliff; Jurupa Valley runs its own DIF program (Ch. 3.75); Marin County shows special-district fragmentation. Proportional-to-primary fees (Jurupa DIF/MSHCP) and track-ambiguous permit tiers held back as PARTIAL.",
+      "jurisdictions": [
+        "Hemet",
+        "Sunnyvale",
+        "Marin County",
+        "Jurupa Valley",
+        "San Fernando"
+      ],
+      "items_added": 12
+    },
+    {
+      "date": "2026-10-18",
       "headline": "Batch 17: 5 new jurisdictions, 9 verified fee items",
       "detail": "Pico Rivera, Saratoga, Mountain View, El Cajon, El Dorado County (HCD ADU-permit ranks #99–104). First East County San Diego and El Dorado County coverage; Mountain View's two-district school split ($5.24/sq ft) is the matrix's first; El Dorado County's $1,320 fire fee drops ~94% under SB 1117. Derived/proportional figures (Saratoga elementary $3.72, per-DFU sewer) held back as PARTIAL.",
       "jurisdictions": [
