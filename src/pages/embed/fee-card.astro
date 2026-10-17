@@ -1,0 +1,103 @@
+---
+/**
+ * Embeddable ADU fee card — designed to be iframed by third-party sites:
+ *   <iframe src="https://everylineitem.com/embed/fee-card/?j=HAYWARD"
+ *           width="100%" height="240" style="border:0" loading="lazy"></iframe>
+ * Standalone page (no site chrome), data embedded, renders client-side from ?j=.
+ */
+import feesData from "@/data/fees.json";
+
+const cards = (feesData.jurisdictions as any[])
+  .filter(j => j.juris_id !== "LA-BASE")
+  .map(j => {
+    const items = (feesData.fee_items as any[]).filter(
+      i => i.juris_id === j.juris_id && i.status === "verified"
+    );
+    let total = 0;
+    let school: number | null = null;
+    let cliff = 0;
+    for (const i of items) {
+      const v = i.method === "per_sqft" ? i.rate_low * 800 : i.method === "flat" ? i.rate_low : 0;
+      total += v;
+      if (i.category === "school" && i.method === "per_sqft") school = i.rate_low * 800;
+      if (i.category === "impact") {
+        cliff += i.method === "per_sqft" ? i.rate_low * 751 : i.method === "flat" ? i.rate_low : 0;
+      }
+    }
+    return {
+      id: j.juris_id,
+      name: j.name,
+      total: Math.round(total),
+      school: school != null ? Math.round(school) : null,
+      cliff: Math.round(cliff),
+      count: items.length,
+    };
+  });
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ADU fee card — Every Line Item</title>
+    <style>
+      * { box-sizing: border-box; margin: 0; }
+      body {
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+        background: #fff; color: #1a1a1a; padding: 16px;
+      }
+      .card { border: 1px solid #e2e2e2; border-radius: 12px; padding: 16px 18px; max-width: 420px; }
+      .kicker { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; opacity: .55; }
+      .name { font-size: 20px; font-weight: 700; margin-top: 4px; }
+      .total { font-size: 34px; font-weight: 800; margin-top: 8px; font-variant-numeric: tabular-nums; }
+      .sub { font-size: 13px; opacity: .65; margin-top: 2px; }
+      .rows { margin-top: 10px; font-size: 13px; display: grid; gap: 4px; }
+      .rows b { font-variant-numeric: tabular-nums; }
+      .foot { margin-top: 12px; font-size: 12px; opacity: .6; }
+      .foot a { color: #0b5fff; }
+    </style>
+  </head>
+  <body>
+    <div class="card" id="card" hidden>
+      <p class="kicker">ADU fees · 800 sq ft</p>
+      <p class="name" id="c-name"></p>
+      <p class="total" id="c-total"></p>
+      <p class="sub" id="c-sub"></p>
+      <div class="rows" id="c-rows"></div>
+      <p class="foot">
+        Verified against official sources ·
+        <a id="c-link" href="https://everylineitem.com" target="_blank" rel="noopener">everylineitem.com</a>
+      </p>
+    </div>
+    <script define:vars={{ cards }}>
+      const data = new Map(cards.map(c => [c.id, c]));
+      const j = new URLSearchParams(location.search).get("j");
+      const c = data.get(j) || null;
+      const card = document.getElementById("card");
+      if (c && card) {
+        card.hidden = false;
+        document.getElementById("c-name").textContent = c.name;
+        document.getElementById("c-total").textContent =
+          "$" + c.total.toLocaleString("en-US");
+        document.getElementById("c-sub").textContent =
+          `verified government fees · ${c.count} line item${c.count === 1 ? "" : "s"}`;
+        const rows = [];
+        if (c.school != null)
+          rows.push(`School district fee <b>$${c.school.toLocaleString("en-US")}</b>`);
+        if (c.cliff > 0)
+          rows.push(`750 sq ft cliff <b>$${c.cliff.toLocaleString("en-US")}</b>`);
+        document.getElementById("c-rows").innerHTML = rows
+          .map(r => `<p>${r}</p>`).join("");
+        document.getElementById("c-link").href =
+          `https://everylineitem.com/fees/${c.id.toLowerCase()}/`;
+      } else if (card) {
+        card.hidden = false;
+        document.getElementById("c-name").textContent = "Pick a jurisdiction";
+        document.getElementById("c-total").textContent = "—";
+        document.getElementById("c-sub").textContent =
+          "Add ?j=JURIS-ID to the embed URL, e.g. ?j=HAYWARD.";
+      }
+    </script>
+  </body>
+</html>
