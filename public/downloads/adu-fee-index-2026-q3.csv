@@ -1,0 +1,70 @@
+jurisdiction,county,school_fee_per_sqft,school_fee_800sqft,verified_fees_800sqft,impact_fees_at_751sqft,verified_line_items
+Alameda (city),Alameda,5.38,4304,4304,0,2
+Alameda County (unincorporated),Alameda,5.38,4304,19271,5775,3
+Anaheim,Orange,5.38,4304,26865,19521,4
+Arcadia,Los Angeles,5.38,4304,4304,0,1
+Bakersfield,Kern,3.5,2800,2800,0,1
+Baldwin Park,Los Angeles,3.48,2784,6416,0,4
+Berkeley,Alameda,,,1000,0,4
+Burbank,Los Angeles,,,11951,7078,4
+Coachella,Riverside,4.79,3832,3832,0,1
+Contra Costa County (unincorporated),Contra Costa,,,5114,0,2
+Costa Mesa,Orange,5.17,4136,5504,0,2
+Culver City,Los Angeles,5.17,4136,7954,3818,2
+Davis,Yolo,5.38,4304,4304,0,1
+El Monte,Los Angeles,,,4087,4087,1
+Encinitas,San Diego,,,0,0,1
+Escondido,San Diego,5.38,4304,12866,0,4
+Fountain Valley,Orange,,,3143,0,2
+Fullerton,Orange,5.38,4304,6836,0,4
+Garden Grove,Orange,5.17,4136,4136,0,1
+Glendale,Los Angeles,5.38,4304,5309,0,3
+Hayward,Alameda,5.38,4304,13422,3823,3
+Huntington Beach,Orange,,,5431,3721,2
+La Habra,Orange,,,15493,0,3
+La Mesa,San Diego,,,0,0,1
+Livermore,Alameda,5.17,4136,8489,0,3
+Long Beach,Los Angeles,5.38,4304,9765,2366,4
+Los Altos,Santa Clara,1.72,1376,1376,0,1
+Los Gatos,Santa Clara,1.66,1328,1328,0,1
+Lynwood,Los Angeles,,,2756,2756,1
+Menlo Park,San Mateo,5.38,4304,4304,0,2
+Modesto,Stanislaus,,,10494,8065,2
+Monterey,Monterey,5.17,4136,4136,0,2
+Monterey Park,Los Angeles,,,5162,0,1
+Oakland,Alameda,5.17,4136,4136,0,3
+Orange (city),Orange,,,548,548,3
+Pacifica,San Mateo,,,3410,3351,2
+Palm Springs,Riverside,5.38,4304,6178,1874,3
+Palmdale,Los Angeles,3.83,3064,3064,0,1
+Palo Alto,Santa Clara,4.79,3832,3832,0,1
+Piedmont,Alameda,,,8293,0,2
+Placer County (unincorporated),Placer,,,4278,2733,3
+Rancho Cucamonga,San Bernardino,5.38,4304,6258,0,2
+Redwood City,San Mateo,,,1424,0,1
+Richmond,Contra Costa,5.17,4136,5602,0,2
+Riverside,Riverside,5.17,4136,5356,214,3
+Riverside County (unincorporated),Riverside,5.38,4304,4304,0,3
+Sacramento,Sacramento,5.13,4104,4104,0,1
+Sacramento County (unincorporated),Sacramento,,,0,0,1
+San Bernardino County (unincorporated),San Bernardino,,,2428,0,2
+San Diego County (unincorporated),San Diego,,,4396,0,1
+San Francisco,San Francisco,3.79,3032,3032,0,6
+San José,Santa Clara,,,5103,0,2
+San Luis Obispo,San Luis Obispo,5.17,4136,11104,0,2
+San Luis Obispo County,San Luis Obispo,5.17,4136,4136,0,1
+San Mateo,San Mateo,5.02,4016,16304,0,4
+Santa Barbara County (unincorporated),Santa Barbara,,,2499,640,2
+Santa Clara County (unincorporated),Santa Clara,5.38,4304,4304,0,1
+Santa Cruz,Santa Cruz,,,4153,1793,3
+Santa Cruz County (unincorporated),Santa Cruz,,,2477,2477,1
+Santa Maria,Santa Barbara,5.38,4304,4304,0,1
+Simi Valley,Ventura,3.2,2560,8236,0,3
+Sonoma County (unincorporated),Sonoma,,,8118,3657,4
+Temple City,Los Angeles,5.17,4136,4136,0,1
+Thousand Oaks,Ventura,3.36,2688,2688,0,1
+Torrance,Los Angeles,5.38,4304,6621,2243,3
+Tracy,San Joaquin,5.17,4136,4136,0,1
+Ventura County (unincorporated),Ventura,,,5577,0,3
+Vista,San Diego,,,12294,7564,2
+Whittier,Los Angeles,3.59,2872,2872,0,1
