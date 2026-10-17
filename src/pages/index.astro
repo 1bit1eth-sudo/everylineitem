@@ -42,23 +42,41 @@ const siteUrl = config.site.url.endsWith("/")
   ? config.site.url
   : `${config.site.url}/`;
 
-// City comparison — 800 sq ft detached ADU totals (from city posts)
-// Bars start at $300,000 to show the gap between cities.
-const compareCities = [
-  { city: "Riverside", slug: "riverside-adu-cost", total: 309000 },
-  { city: "Long Beach", slug: "long-beach-adu-cost", total: 313000 },
-  { city: "Torrance", slug: "torrance-adu-cost", total: 317000 },
-  { city: "Anaheim", slug: "anaheim-adu-cost", total: 320000 },
-  { city: "Oakland", slug: "oakland-adu-cost", total: 322000 },
-  { city: "San Francisco", slug: "san-francisco-adu-cost", total: 325000 },
-].map((c, i, arr) => ({
+// School-fee spread — one fee line, set by the school district, identical
+// math for every jurisdiction (rate × 800 sq ft). Honest 0-based axis:
+// the story is fee variance, not total-cost variance. Cheapest 5 + priciest 5
+// of 38 jurisdictions with verified school-fee line items.
+const feeSpread = [
+  { juris: "Los Gatos", rate: 1.66, total: 1328, source: "http://www.lgsuhsd.org/departments/business-services/developer-fees" },
+  { juris: "Los Altos", rate: 1.72, total: 1376, source: "https://www.mvla.net/business-services-home" },
+  { juris: "Simi Valley", rate: 3.2, total: 2560, source: "https://simivalley.granicus.com/MetaViewer.php?view_id=7&clip_id=2887&meta_id=221310" },
+  { juris: "Thousand Oaks", rate: 3.36, total: 2688, source: "https://www.conejousd.org/Page/1583" },
+  { juris: "Baldwin Park", rate: 3.48, total: 2784, source: "http://bp-usd.community.diligentoneplatform.com/document/1ecc2c0f-d366-45d1-a5f5-45d988ab3c5d/" },
+  { juris: "Menlo Park", rate: 5.38, total: 4304, source: "https://district.mpcsd.org/departments/business-officefinance/developer-fees" },
+  { juris: "Santa Clara County", rate: 5.38, total: 4304, source: "https://www.sjusd.org/about/fiscal/developer-fee" },
+  { juris: "Arcadia", rate: 5.38, total: 4304, source: "https://4.files.edl.io/d8cc/02/09/26/170028-6eb5da3d-ea3a-4957-84cd-56ad194a5d25.pdf" },
+  { juris: "Hayward", rate: 5.38, total: 4304, source: "https://www.husd.us/community/developer-fees" },
+  { juris: "Rancho Cucamonga", rate: 5.38, total: 4304, source: "https://files.smartsites.parentsquare.com/3407/fjs_cucamonga_sd_2026.pdf" },
+].map(c => ({
   ...c,
   totalLabel: "$" + c.total.toLocaleString("en-US"),
-  perSqFt: "$" + Math.round(c.total / 800).toLocaleString("en-US"),
-  barWidth: Math.round(((c.total - 300000) / 30000) * 100) + "%",
-  barFirst: i === 0,
-  barLast: i === arr.length - 1,
+  rateLabel: "$" + c.rate.toFixed(2) + "/sq ft",
+  barWidth: Math.round((c.total / 4304) * 100) + "%",
 }));
+
+// Jurisdiction picker for the hero — every jurisdiction in the fee matrix,
+// deep-linking into /compare/ with prefilled params.
+import feesData from "@/data/fees.json";
+const heroJurisdictions = [...feesData.jurisdictions]
+  .sort((a, b) => a.name.localeCompare(b.name, "en-US"))
+  .map(j => ({ id: j.juris_id, name: j.name }));
+
+// Trust line — newest verification date across all fee items.
+const latestVerified = feesData.fee_items
+  .map(i => i.last_verified)
+  .filter(Boolean)
+  .sort()
+  .pop();
 
 // Browse index — replaces the old link-dump paragraph
 const regions = [
@@ -202,8 +220,48 @@ const formatShortDate = (d: string | Date) =>
               Free 2026 Q3 benchmark CSV
             </LinkButton>
           </div>
+          {/* Fee lookup — jurisdiction + size, deep-linked into /compare/ */}
+          <form
+            id="hero-fee-lookup"
+            class="mt-4 flex flex-wrap items-end gap-2"
+            aria-label="Look up fees for your jurisdiction"
+          >
+            <label class="block">
+              <span class="text-sm font-medium opacity-70">Your jurisdiction</span>
+              <select
+                id="hero-juris"
+                class="border-border bg-background focus:border-accent mt-1 block w-56 rounded border px-2 py-2 text-sm"
+              >
+                {heroJurisdictions.map(j => (
+                  <option value={j.id}>{j.name}</option>
+                ))}
+              </select>
+            </label>
+            <label class="block">
+              <span class="text-sm font-medium opacity-70">Size</span>
+              <span class="mt-1 flex items-center gap-1">
+                <input
+                  id="hero-sqft"
+                  type="number"
+                  value="800"
+                  min="100"
+                  max="2000"
+                  step="1"
+                  class="border-border bg-background focus:border-accent w-24 rounded border px-2 py-2 text-sm tabular-nums"
+                />
+                <span class="text-sm opacity-70">sq ft</span>
+              </span>
+            </label>
+            <button
+              type="submit"
+              class="bg-accent rounded px-4 py-2 font-semibold text-white"
+            >
+              See my fees &rarr;
+            </button>
+          </form>
           <p class="mt-3 text-sm opacity-70">
-            No email needed.{" "}
+            {feesData.jurisdictions.length} jurisdictions · every figure links to
+            its .gov source · last verified {latestVerified} · no email needed.{" "}
             <LinkButton
               class="underline decoration-dashed underline-offset-4"
               href="/methodology/"
@@ -237,49 +295,51 @@ const formatShortDate = (d: string | Date) =>
           </a>
         </div>
 
-        <aside aria-labelledby="compare-heading" class="border border-border rounded-lg overflow-hidden self-start">
+        <aside aria-labelledby="spread-heading" class="border border-border rounded-lg overflow-hidden self-start">
           <div class="px-4 py-3 border-b border-border">
-            <h2 id="compare-heading" class="text-lg font-semibold">
-              Same ADU, different city
+            <h2 id="spread-heading" class="text-lg font-semibold">
+              Same 800 sq ft ADU. School fees from $1,328 to $4,304.
             </h2>
             <p class="text-sm opacity-70">
-              800 sq ft detached &middot; all-in total &middot; spread $16,000
+              One fee line, set by your school district — not your contractor.
+              A 3.2&times; spread before construction even starts. Bars start at
+              $0; every figure links to the district's official document.
             </p>
           </div>
-          <div class="hidden sm:grid sm:grid-cols-[1fr_9rem_7rem] gap-4 px-4 py-2 border-b border-border text-sm font-semibold opacity-60">
-            <span>City</span>
-            <span class="text-right">Total</span>
-            <span class="text-right">Per sq ft</span>
+          <div class="hidden sm:grid sm:grid-cols-[1fr_7rem_6rem] gap-4 px-4 py-2 border-b border-border text-sm font-semibold opacity-60">
+            <span>Jurisdiction</span>
+            <span class="text-right">Rate</span>
+            <span class="text-right">800 sq ft</span>
           </div>
           <div class="divide-y divide-border">
-            {compareCities.map(({ city, slug, totalLabel, perSqFt, barWidth, barFirst, barLast }) => (
+            {feeSpread.map(({ juris, rateLabel, totalLabel, barWidth, source }) => (
               <a
-                href={`/posts/${slug}/`}
-                class="grid grid-cols-[1fr_auto] sm:grid-cols-[1fr_9rem_7rem] gap-x-4 gap-y-1 px-4 py-3 hover:bg-black/5 transition-colors"
+                href={source}
+                target="_blank"
+                rel="noopener"
+                class="grid grid-cols-[1fr_auto] sm:grid-cols-[1fr_7rem_6rem] gap-x-4 gap-y-1 px-4 py-3 hover:bg-black/5 transition-colors"
+                title="Open the official source document"
               >
-                <span class="font-semibold">{city}</span>
-                <span class="text-right tabular-nums font-bold">{totalLabel}</span>
+                <span class="font-semibold">{juris}</span>
+                <span class="text-right text-sm tabular-nums opacity-70">{rateLabel}</span>
                 <span class="col-span-2 sm:col-span-1">
                   <span
-                    class:list={[
-                      "block h-2.5 rounded-sm",
-                      { "bg-accent": barFirst, "bg-red-800": barLast, "bg-black/20": !barFirst && !barLast },
-                    ]}
+                    class="block h-2.5 rounded-sm bg-accent"
                     style={`width: ${barWidth}`}
                     role="img"
-                    aria-label={`${city} total ${totalLabel}, bar relative to $300,000 base`}
+                    aria-label={`${juris} school fee ${totalLabel} for 800 sq ft, bar from $0`}
                   />
                 </span>
-                <span class="text-right text-sm tabular-nums opacity-70">
-                  {perSqFt}/sq ft
+                <span class="text-right tabular-nums font-bold">
+                  {totalLabel}
                 </span>
               </a>
             ))}
           </div>
           <div class="px-4 py-3 text-sm">
-            <span class="opacity-60">Bars start at $300,000 to show the gap.</span>{" "}
+            <span class="opacity-60">Cheapest 5 and priciest 5 of 38 jurisdictions with verified school-fee line items.</span>{" "}
             <a href="/compare/" class="text-accent font-semibold">
-              Compare your city &rarr;
+              Look up your jurisdiction &rarr;
             </a>
           </div>
         </aside>
@@ -465,5 +525,15 @@ const formatShortDate = (d: string | Date) =>
     if (indexLayout?.layout) {
       sessionStorage.setItem("backUrl", indexLayout.homePath ?? baseRoot);
     }
+
+    // Hero fee lookup — deep-link into /compare/ with prefilled params.
+    const form = document.getElementById("hero-fee-lookup") as HTMLFormElement | null;
+    form?.addEventListener("submit", ev => {
+      ev.preventDefault();
+      const juris = (document.getElementById("hero-juris") as HTMLSelectElement | null)?.value ?? "";
+      const sqft = (document.getElementById("hero-sqft") as HTMLInputElement | null)?.value ?? "800";
+      const params = new URLSearchParams({ j: juris, sqft });
+      window.location.href = `/compare/?${params.toString()}#fee-calculator`;
+    });
   });
 </script>
