@@ -1,5 +1,6 @@
 ---
 import changelog from "@/data/fee-changelog.json";
+import feesData from "@/data/fees.json";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
@@ -8,8 +9,11 @@ import FeeAlertSignup from "@/components/FeeAlertSignup.astro";
 import LinkButton from "@/components/LinkButton.astro";
 
 const title = "Fee Change Log | Every Line Item";
+const jurisCount = (feesData.jurisdictions as any[]).filter(
+  j => j.juris_id !== "LA-BASE"
+).length;
 const description =
-  "Every fee-schedule change we've verified across 70 California jurisdictions — what moved, when, and the source document. Get an email only when your city's fees change.";
+  `Every fee-schedule change we've verified across ${jurisCount} California jurisdictions — what moved, when, and the source document. Get an email only when your city's fees change.`;
 
 const formatDate = (iso: string) => {
   const [y, m, d] = iso.split("-").map(Number);
