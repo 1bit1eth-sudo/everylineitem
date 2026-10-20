@@ -1,6 +1,35 @@
 {
   "entries": [
     {
+      "date": "2026-10-19",
+      "headline": "Deep-dive backfill: 21 jurisdictions, 75 verified fee items",
+      "detail": "Backfilled the 21 deep-dive cities whose posts were published but missing from the /compare/ calculator: Alhambra, Campbell, Chula Vista, Downey, Fontana, Fremont, Laguna Beach, Lakewood, Lancaster, Oceanside, Ontario, Oxnard, Pasadena, Salinas, San Bernardino, Santa Ana, Santa Barbara, Santa Monica, Santa Rosa, West Covina, Westminster. CONFIRMED-only: computed examples, ranges, proportional-to-primary figures, and unverifiable items excluded (notably the Oceanside blanket ADU impact exemption, which conflicts with the city's Aug 2025 park DIF nexus draft and needs post-level review). Every item carries a verified official source URL.",
+      "jurisdictions": [
+        "Alhambra",
+        "Campbell",
+        "Chula Vista",
+        "Downey",
+        "Fontana",
+        "Fremont",
+        "Laguna Beach",
+        "Lakewood",
+        "Lancaster",
+        "Oceanside",
+        "Ontario",
+        "Oxnard",
+        "Pasadena",
+        "Salinas",
+        "San Bernardino",
+        "Santa Ana",
+        "Santa Barbara",
+        "Santa Monica",
+        "Santa Rosa",
+        "West Covina",
+        "Westminster"
+      ],
+      "items_added": 75
+    },
+    {
       "date": "2026-10-18",
       "headline": "Batch 18: 5 new jurisdictions, 12 verified fee items",
       "detail": "Hemet, Sunnyvale, Marin County, Jurupa Valley, San Fernando (HCD ADU-permit ranks #105–109). Hemet's $8.647/SF DIF ($6,918 on 800 sq ft) is the matrix's steepest 750-sq-ft cliff; Jurupa Valley runs its own DIF program (Ch. 3.75); Marin County shows special-district fragmentation. Proportional-to-primary fees (Jurupa DIF/MSHCP) and track-ambiguous permit tiers held back as PARTIAL.",
