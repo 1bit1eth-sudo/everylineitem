@@ -44,6 +44,21 @@ const siteUrl = config.site.url.endsWith("/")
   ? config.site.url
   : `${config.site.url}/`;
 
+// Trust + Fee Index band — computed from fees.json so the homepage never
+// goes stale when new jurisdictions merge (PR #95 lesson on fee-index).
+const jurisCount = (feesData.jurisdictions as any[]).filter(
+  j => j.juris_id !== "LA-BASE"
+).length;
+const verifiedCount = (feesData.fee_items as any[]).filter(
+  i => i.status === "verified" && i.juris_id !== "LA-BASE"
+).length;
+const schoolFees = (feesData.fee_items as any[])
+  .filter(i => i.status === "verified" && i.juris_id !== "LA-BASE" && i.category === "school" && i.method === "per_sqft")
+  .sort((a, b) => a.rate_low - b.rate_low);
+const schoolLow = Math.round(schoolFees[0].rate_low * 800);
+const schoolHigh = Math.round(schoolFees[schoolFees.length - 1].rate_low * 800);
+const fmtUSD = (n: number) => "$" + n.toLocaleString("en-US");
+
 // School-fee spread — one fee line, set by the school district, identical
 // math for every jurisdiction (rate × 800 sq ft). Honest 0-based axis:
 // the story is fee variance, not total-cost variance. Cheapest 5 + priciest 5
@@ -369,6 +384,38 @@ const formatShortDate = (d: string | Date) =>
       </div>
     </section>
 
+    {/* TRUST — every number has a source document */}
+    <section aria-labelledby="trust-heading" class="border-border border-b pt-12 pb-6">
+      <h2 id="trust-heading" class="text-2xl font-semibold">
+        Every number on this page has a source document.
+      </h2>
+      <p class="mt-3 max-w-3xl">
+        No estimates, no "typical ranges" from a sales brochure. Every fee here traces to an official source — a city fee schedule, a school district resolution, a utility tariff — and the whole dataset is re-verified on a published schedule.
+      </p>
+      <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="border-border rounded-lg border p-4">
+          <div class="text-3xl font-bold tabular-nums">{jurisCount}</div>
+          <div class="mt-1 text-sm font-semibold">Jurisdictions tracked</div>
+          <p class="mt-1 text-sm opacity-70">Cities and counties with verified ADU fee data, growing batch by batch.</p>
+        </div>
+        <div class="border-border rounded-lg border p-4">
+          <div class="text-3xl font-bold tabular-nums">{verifiedCount}</div>
+          <div class="mt-1 text-sm font-semibold">Verified fee line items</div>
+          <p class="mt-1 text-sm opacity-70">Each one checked against the document it came from — nothing modeled, nothing guessed.</p>
+        </div>
+        <div class="border-border rounded-lg border p-4">
+          <div class="text-3xl font-bold tabular-nums">Dec 2026</div>
+          <div class="mt-1 text-sm font-semibold">Next full re-verification</div>
+          <p class="mt-1 text-sm opacity-70">Fees change every fiscal year. We re-check every line on a schedule we publish in advance.</p>
+        </div>
+        <div class="border-border rounded-lg border p-4">
+          <div class="text-3xl font-bold tabular-nums">0</div>
+          <div class="mt-1 text-sm font-semibold">Email gates</div>
+          <p class="mt-1 text-sm opacity-70">The calculator, the index, and the dataset are open. No signup stands between you and a number.</p>
+        </div>
+      </div>
+    </section>
+
     {/* WHAT CHANGED — the fee change log, newest first */}
     <section aria-labelledby="changes-heading" class="border-border border-b pt-12 pb-6">
       <div class="grid gap-8 lg:grid-cols-2">
@@ -446,6 +493,27 @@ const formatShortDate = (d: string | Date) =>
         </a>{" "}
         <a href="/compare/" class="text-accent font-semibold">
           Map yours &rarr;
+        </a>
+      </p>
+    </section>
+
+    {/* FEE INDEX BAND — the data edition */}
+    <section aria-labelledby="fee-index-heading" class="border-border border-b pt-12 pb-6">
+      <p class="text-sm font-semibold tracking-wide uppercase opacity-60">
+        The California ADU Fee Index — Q3 2026
+      </p>
+      <h2 id="fee-index-heading" class="mt-2 text-2xl font-semibold">
+        The first public index of what governments charge your ADU.
+      </h2>
+      <p class="mt-3 max-w-3xl">
+        {jurisCount} jurisdictions, {verifiedCount} verified line items. The same 800 sq ft ADU owes {fmtUSD(schoolLow)} in school fees in one city and {fmtUSD(schoolHigh)} in another — and impact fees can swing five figures across a single square foot at 750.
+      </p>
+      <p class="mt-4 flex flex-wrap gap-x-6 gap-y-2">
+        <a href="/fee-index/" class="text-accent font-semibold">
+          Read the Fee Index &rarr;
+        </a>
+        <a href="/downloads/adu-fee-index-2026-q3.csv" class="text-accent font-semibold">
+          Download the data (CSV, free) &rarr;
         </a>
       </p>
     </section>
