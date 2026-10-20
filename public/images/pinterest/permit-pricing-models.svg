@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1500" viewBox="0 0 1000 1500">
+<rect width="1000" height="1500" fill="#212737"/>
+<rect width="1000" height="8" fill="#ff6b01"/>
+<text x="60" y="96" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="40" font-weight="700" fill="#ffffff">How Cities Price Your ADU Permit</text>
+<text x="60" y="146" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="26" fill="#afb9ca">Valuation vs flat vs per-sq-ft &#8212; real city numbers</text>
+<line x1="60" y1="186" x2="940" y2="186" stroke="#343f60" stroke-width="2"/>
+<rect x="60" y="216" width="880" height="170" rx="12" fill="#343f60"/>
+<text x="84" y="258" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">PERMIT SPREAD, SAME 800 SQ FT ADU</text>
+<text x="84" y="328" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="58" font-weight="700" fill="#ff6b01">$3,195 &#8594; ~$7,541</text>
+<text x="84" y="362" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#eaedf3">a $4,346 gap from the pricing model alone</text>
+<text x="60" y="456" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Three pricing models</text>
+<text x="60" y="490" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#afb9ca">The model matters more than the rate.</text>
+<text x="60" y="540" text-anchor="start" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#afb9ca">MODEL</text>
+<text x="940" y="540" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#afb9ca">WHAT YOU PAY</text>
+<line x1="60" y1="556" x2="940" y2="556" stroke="#343f60" stroke-width="2"/>
+<rect x="60" y="570" width="880" height="150" rx="10" fill="#2d3550"/>
+<text x="84" y="612" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#afb9ca">VALUATION-BASED &#183; Pasadena, Campbell</text>
+<text x="84" y="668" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" fill="#eaedf3">2.00% of valuation + 33% plan check</text>
+<text x="84" y="700" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">Taxes expensive finishes</text>
+<text x="916" y="680" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#ff6b01">%</text>
+<rect x="60" y="740" width="880" height="150" rx="10" fill="#283046"/>
+<text x="84" y="782" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#afb9ca">FLAT FEE &#183; Fontana, Chula Vista</text>
+<text x="84" y="838" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" fill="#eaedf3">$3,195 &#8211; $4,963, fixed</text>
+<text x="84" y="870" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">One number &#8212; know it before you design</text>
+<text x="916" y="850" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#ff6b01">$</text>
+<rect x="60" y="910" width="880" height="150" rx="10" fill="#283046"/>
+<text x="84" y="952" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#afb9ca">PER-SQ-FT &#183; Oceanside</text>
+<text x="84" y="1008" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" fill="#eaedf3">~$7,541 on 800 sq ft</text>
+<text x="84" y="1040" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">Punishes size, ignores cost</text>
+<text x="916" y="1020" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#ff6b01">&#9635;</text>
+<text x="60" y="1134" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#ff6b01">Read the fee schedule before you apply.</text>
+<text x="60" y="1174" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="22" fill="#eaedf3">Plan check is usually a separate line item (33&#8211;65%).</text>
+<text x="60" y="1254" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">Series low: Riverside $1,006, verified from the fee schedule</text>
+<text x="60" y="1284" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">Model estimate, not a quote &#183; checked Oct 2026</text>
+<rect x="0" y="1370" width="1000" height="130" fill="#1a1f2c"/>
+<line x1="60" y1="1370" x2="940" y2="1370" stroke="#ff6b01" stroke-width="4"/>
+<text x="60" y="1412" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#ff6b01">Every Line Item</text>
+<text x="60" y="1448" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="22" fill="#afb9ca">everylineitem.com</text>
+<text x="940" y="1448" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">California ADU Costs &#183; 2026</text>
+</svg>
