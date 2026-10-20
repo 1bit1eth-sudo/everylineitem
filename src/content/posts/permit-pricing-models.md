@@ -65,6 +65,8 @@ An 800 sq ft detached ADU on Chula Vista's standard plans costs **$3,951** all-i
 
 **Cities:** Oceanside (~$7,541 on 800 sq ft)
 
+> **Editor's note (21 Oct 2026):** The Oceanside figures in this section are **under review**. They rest on 2018/2021-vintage rate tables — the city publishes no current FY rate table — and our [Oceanside breakdown](/posts/oceanside-adu-cost/) documents a separate open conflict between the city's ADU impact-fee exemption ordinance and an August 2025 draft fee study. Treat the ~$7,541 as a partial, dated figure until the review completes.
+
 **Oceanside** uses area-based plan check and inspection tables for new residential construction. On the "Custom or Model Homes" row at 1,000 sq ft (the bracket covering 800 sq ft):
 - Plan check base: $1,862.70
 - Inspection base: $3,515.40
