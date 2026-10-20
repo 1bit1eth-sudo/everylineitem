@@ -1,6 +1,6 @@
 ---
 title: "Lakewood ADU Fees 2026: Your School Fee Depends on Your Street"
-description: "Lakewood sits in four school districts — so the same 800 sq ft ADU owes $2,376, $3,832, or $4,304 in school fees depending on the parcel. A contract city with no city DIF on the books, county-run permits, and pre-approved plans in the pipeline. Priced phase by phase with every uncertainty labeled."
+description: "Lakewood spans four school districts: the same 800 sq ft ADU owes $2,376, $3,832, or $4,304 in school fees by parcel. Full phase-by-phase cost breakdown."
 pubDatetime: 2026-10-19T01:00:00Z
 author: "Every Line Item"
 tags: ["adu cost", "lakewood", "california", "permit fees", "2026"]
