@@ -124,6 +124,16 @@ const selectClass =
     </div>
   </div>
 
+  <div class="mt-4 flex justify-end">
+    <button
+      id="fee-copy-link"
+      type="button"
+      class="border-border hover:border-accent focus-outline inline-flex items-center gap-1.5 rounded-md border px-3 py-1.5 text-sm font-medium"
+    >
+      Copy link
+    </button>
+  </div>
+
   <div id="fee-results" class="mt-4" aria-live="polite">
     <Fragment set:html={resultsHTML(data, DEFAULT_JURIS, DEFAULT_SQFT)} />
   </div>
@@ -205,6 +215,7 @@ const selectClass =
       sqftVal.textContent = `${sqft.toLocaleString("en-US")} sq ft`;
     }
     results.innerHTML = resultsHTML(data, jurisSel.value, sqft);
+    syncShareUrl(); // [share-url] keep the URL copy-paste shareable
   }
 
   if (jurisSel && sqftInput && results) {
@@ -212,22 +223,102 @@ const selectClass =
     sqftInput.addEventListener("input", update);
   }
 
-  // Deep-link support: /compare/?j=JURIS-ID&sqft=800 (from the homepage
-  // hero fee lookup). Prefill the controls before the first render.
-  try {
-    const params = new URLSearchParams(window.location.search);
-    const pj = params.get("j");
-    const psqft = params.get("sqft");
-    if (pj && jurisSel && [...jurisSel.options].some(o => o.value === pj)) {
-      jurisSel.value = pj;
+  /* ============================================================
+   * [share-url] Shareable calculator URLs — isolated block.
+   * Reads ?jurisdiction= (alias: ?j=, kept for the homepage hero fee
+   * lookup) and ?sqft= on load, then keeps the URL in sync via
+   * history.replaceState as the user changes the controls, so the
+   * current view is always copy-paste shareable. Client-side only;
+   * no SSR changes needed. Kept in one place so the upcoming
+   * quote-check v2 change to /compare/ can build on it cleanly.
+   * ============================================================ */
+  const SHARE_JURIS_KEYS = ["jurisdiction", "j"];
+
+  function readShareParams() {
+    // Prefill the controls from the URL before the first render.
+    // Unknown jurisdiction -> ignore (default state). Non-numeric sqft
+    // -> ignore. Numeric sqft is clamped to the slider's own min/max.
+    try {
+      const params = new URLSearchParams(window.location.search);
+      let pj = null;
+      for (const key of SHARE_JURIS_KEYS) {
+        const v = params.get(key);
+        if (v) {
+          pj = v;
+          break;
+        }
+      }
+      if (pj && jurisSel) {
+        const needle = pj.trim().toUpperCase();
+        const match = [...jurisSel.options].find(
+          o => o.value.toUpperCase() === needle
+        );
+        if (match) jurisSel.value = match.value;
+      }
+      const psqft = params.get("sqft");
+      if (psqft !== null && psqft !== "" && sqftInput) {
+        const n = Math.round(Number(psqft));
+        if (Number.isFinite(n)) {
+          const min = Number(sqftInput.min);
+          const max = Number(sqftInput.max);
+          const lo = Number.isFinite(min) ? min : 0;
+          const hi = Number.isFinite(max) ? max : Infinity;
+          sqftInput.value = String(Math.min(hi, Math.max(lo, n)));
+        }
+      }
+    } catch {
+      /* ignore malformed query strings */
     }
-    if (psqft && sqftInput) {
-      const n = Number(psqft);
-      if (Number.isFinite(n) && n >= 100 && n <= 2000) sqftInput.value = String(Math.round(n));
-    }
-  } catch {
-    /* ignore malformed query strings */
   }
+
+  function syncShareUrl() {
+    // Reflect the current calculator state in the URL without reloading.
+    // replaceState never fires events, so this cannot loop with update().
+    if (!jurisSel || !sqftInput) return;
+    try {
+      const url = new URL(window.location.href);
+      url.searchParams.set("jurisdiction", jurisSel.value);
+      url.searchParams.set("sqft", sqftInput.value);
+      window.history.replaceState(null, "", url);
+    } catch {
+      /* non-fatal: the visible controls still work without URL sync */
+    }
+  }
+
+  // "Copy link" button — copies the current (always in-sync) URL and
+  // shows a brief confirmation. Falls back for browsers without the
+  // async clipboard API.
+  const copyBtn = document.getElementById("fee-copy-link");
+  if (copyBtn) {
+    const copyLabel = copyBtn.textContent;
+    copyBtn.addEventListener("click", async () => {
+      let ok = true;
+      try {
+        const href = window.location.href;
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(href);
+        } else {
+          const ta = document.createElement("textarea");
+          ta.value = href;
+          ta.setAttribute("readonly", "");
+          ta.style.position = "absolute";
+          ta.style.left = "-9999px";
+          document.body.appendChild(ta);
+          ta.select();
+          ok = document.execCommand("copy");
+          ta.remove();
+        }
+      } catch {
+        ok = false;
+      }
+      copyBtn.textContent = ok ? "Copied" : "Copy failed";
+      window.setTimeout(() => {
+        copyBtn.textContent = copyLabel;
+      }, 2000);
+    });
+  }
+
+  readShareParams();
   update();
 
   // "Email me this report (PDF)" — generate the PDF client-side and download
