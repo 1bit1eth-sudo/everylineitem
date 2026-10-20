@@ -34,6 +34,13 @@ faqs:
 > **Published:** 22 Oct 2026 · **Last verified:** 22 Oct 2026 · **Next review:** Jan 2027
 > Cost figures are re-checked against permit records quarterly. Changes are
 > logged in [Corrections](/corrections/).
+>
+> **Editor's note (21 Oct 2026):** This post is **under post-level review**. The
+> impact-fee exemption quoted below comes from the city's zoning ordinance; an
+> August 2025 city-commissioned draft study points the other way, and we have
+> not been able to confirm from a current adopted document which governs an
+> 800 sq ft ADU today. The conflict is presented in full in the post — read the
+> exemption as the ordinance's text, not as a settled bill.
 
 Oceanside's zoning ordinance contains the clearest ADU impact-fee sentence in this series: "The City shall not impose any impact fees upon the development of an ADU or JADU." No qualifier, no square-foot threshold, no sunset clause. Read alone, that sentence makes the 750 sq ft cliff irrelevant in Oceanside — an 800 sq ft ADU pays exactly what a 749 sq ft one does: **$0**.
 
