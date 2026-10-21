@@ -1,6 +1,145 @@
 {
   "entries": [
     {
+      "date": "2026-10-21",
+      "headline": "Batch 28: 5 new jurisdictions, 11 verified fee items",
+      "detail": "Claremont, Glendora, Moorpark, San Rafael, Vallejo. Vallejo contributes 5 items; Claremont, Glendora and Moorpark enter with a single planning-side line each (zoning clearance / no-ADU-planning-fee confirmations); San Rafael adds 3.",
+      "jurisdictions": [
+        "Claremont",
+        "Glendora",
+        "Moorpark",
+        "San Rafael",
+        "Vallejo"
+      ],
+      "items_added": 11
+    },
+    {
+      "date": "2026-10-21",
+      "headline": "Batch 27: 5 new jurisdictions, 10 verified fee items",
+      "detail": "Clovis, Covina, Diamond Bar, Folsom, Redondo Beach (HCD ADU-permit ranks #150-154). Folsom's FCUSD Level II school fee, $10.26/sq ft ($8,208 on 800 sq ft), is the matrix's second-highest school rate; Redondo Beach's named ADR-Minor ADU/JADU planning line is $1,970. Clovis (Level II inference) and Diamond Bar (vintage/partial lines) enter with no verified items yet - 12/1 re-verification.",
+      "jurisdictions": [
+        "Clovis",
+        "Covina",
+        "Diamond Bar",
+        "Folsom",
+        "Redondo Beach"
+      ],
+      "items_added": 10
+    },
+    {
+      "date": "2026-10-21",
+      "headline": "Batch 26: 5 new jurisdictions, 29 verified fee items",
+      "detail": "Beverly Hills, Burlingame, Chico, Pacific Grove, Watsonville. Beverly Hills enters with 11 items: valuation-based surcharges only (General Plan maintenance, CBSC, contractor business tax) - its permit-fee-percentage surcharges (plan check 80% of permit fee, etc.) are verified in the research file but held back because the calculator has no percent-of-permit-fee method. Burlingame 6, Chico 5, Watsonville 5, Pacific Grove 2.",
+      "jurisdictions": [
+        "Beverly Hills",
+        "Burlingame",
+        "Chico",
+        "Pacific Grove",
+        "Watsonville"
+      ],
+      "items_added": 29
+    },
+    {
+      "date": "2026-10-21",
+      "headline": "Batch 25: 5 new jurisdictions, 17 verified fee items",
+      "detail": "Bellflower, Newport Beach, Redlands, San Leandro, Walnut. Redlands is the batch's deepest row with 11 items; Bellflower's permit-fee-percentage surcharges (12% + 4% of permit fee) are verified but held back as unrepresentable in the calculator.",
+      "jurisdictions": [
+        "Bellflower",
+        "Newport Beach",
+        "Redlands",
+        "San Leandro",
+        "Walnut"
+      ],
+      "items_added": 17
+    },
+    {
+      "date": "2026-10-21",
+      "headline": "Batch 24: 5 new jurisdictions, 6 verified fee items",
+      "detail": "Buena Park, Paramount, South Pasadena, Vacaville, Yucaipa. The thinnest batch so far: South Pasadena and Vacaville enter with no verified items yet (all lines PARTIAL or vintage - 12/1 re-verification); Buena Park's single item is the OC San ADU capacity charge.",
+      "jurisdictions": [
+        "Buena Park",
+        "Paramount",
+        "South Pasadena",
+        "Vacaville",
+        "Yucaipa"
+      ],
+      "items_added": 6
+    },
+    {
+      "date": "2026-10-21",
+      "headline": "Batch 23: 5 new jurisdictions, 13 verified fee items",
+      "detail": "Fresno, Grover Beach, Inglewood, Milpitas, Monterey County (unincorporated). Monterey County's school line is the Salinas-area SUHSD Level II shared rate, $4.82/sq ft - Salinas pockets only, not countywide; North County differs.",
+      "jurisdictions": [
+        "Fresno",
+        "Grover Beach",
+        "Inglewood",
+        "Milpitas",
+        "Monterey County (unincorporated)"
+      ],
+      "items_added": 13
+    },
+    {
+      "date": "2026-10-21",
+      "headline": "Batch 22: 5 new jurisdictions, 19 verified fee items",
+      "detail": "Chino, Corona, Monrovia, Sierra Madre, Upland. Upland contributes 7 items, the batch's deepest row; Chino and Corona school fees at the $5.38 SAB maximum.",
+      "jurisdictions": [
+        "Chino",
+        "Corona",
+        "Monrovia",
+        "Sierra Madre",
+        "Upland"
+      ],
+      "items_added": 19
+    },
+    {
+      "date": "2026-10-21",
+      "headline": "Batch 21: 5 new jurisdictions, 16 verified fee items",
+      "detail": "Calexico, Los Altos Hills, Montebello, South San Francisco, Stockton. Calexico's Level II school fee, $12.46/sq ft ($9,968 on 800 sq ft), is the matrix's highest school rate; Montebello enters with its single confirmed line, the $330 ADU Review fee.",
+      "jurisdictions": [
+        "Calexico",
+        "Los Altos Hills",
+        "Montebello",
+        "South San Francisco",
+        "Stockton"
+      ],
+      "items_added": 16
+    },
+    {
+      "date": "2026-10-21",
+      "headline": "Batch 20: 5 new jurisdictions, 17 verified fee items",
+      "detail": "Concord, Hillsborough, Napa, South Gate, Stanislaus County (unincorporated) (HCD ADU-permit ranks #115-119). Stanislaus County's $3,061 flat PFF cap for ADUs and $2,625 flat ADU permit are the batch's headline figures; South Gate's $0 ADU connection exemption is codified.",
+      "jurisdictions": [
+        "Concord",
+        "Hillsborough",
+        "Napa",
+        "South Gate",
+        "Stanislaus County (unincorporated)"
+      ],
+      "items_added": 17
+    },
+    {
+      "date": "2026-10-21",
+      "headline": "Batch 19: 5 new jurisdictions, 26 verified fee items",
+      "detail": "Gardena, Moreno Valley, Orange County (unincorporated), San Mateo County (unincorporated), Santa Clara (city) (HCD ADU-permit ranks #110-114). Santa Clara contributes 9 items; unincorporated Orange County pairs a confirmed $0 county DIF with the $1,695 OC San detached-ADU capacity charge.",
+      "jurisdictions": [
+        "Gardena",
+        "Moreno Valley",
+        "Orange County (unincorporated)",
+        "San Mateo County (unincorporated)",
+        "Santa Clara"
+      ],
+      "items_added": 26
+    },
+    {
+      "date": "2026-10-21",
+      "headline": "Batch 5 late addition: Rosemead, 1 verified fee item",
+      "detail": "Rosemead's Batch 5 research was not in the 2026-10-19 deep-dive backfill, so its single confirmed dollar item - the $111 ADU covenant fee (FY 2025-26 fee schedule) - lands now. School, DIF, permit and connection lines remain PARTIAL or not found - 12/1 re-verification.",
+      "jurisdictions": [
+        "Rosemead"
+      ],
+      "items_added": 1
+    },
+    {
       "date": "2026-10-19",
       "headline": "Deep-dive backfill: 21 jurisdictions, 75 verified fee items",
       "detail": "Backfilled the 21 deep-dive cities whose posts were published but missing from the /compare/ calculator: Alhambra, Campbell, Chula Vista, Downey, Fontana, Fremont, Laguna Beach, Lakewood, Lancaster, Oceanside, Ontario, Oxnard, Pasadena, Salinas, San Bernardino, Santa Ana, Santa Barbara, Santa Monica, Santa Rosa, West Covina, Westminster. CONFIRMED-only: computed examples, ranges, proportional-to-primary figures, and unverifiable items excluded (notably the Oceanside blanket ADU impact exemption, which conflicts with the city's Aug 2025 park DIF nexus draft and needs post-level review). Every item carries a verified official source URL.",
