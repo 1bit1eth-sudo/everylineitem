@@ -12,7 +12,7 @@ faqs:
   - question: "How much are school fees for an ADU in Folsom?"
     answer: "$8,208 on an 800 sq ft ADU. Folsom Cordova USD charges Level II developer fees, not the Level I rate most districts use: $10.26 per sq ft in SFID 2 (the Folsom improvement district), effective April 16, 2026 — about 1.9 times the $5.38/sq ft Level I state maximum. ADUs of 500 sq ft or less of assessable space are excluded; an 800 sq ft ADU pays on the full 800."
   - question: "Why is Folsom's school fee so much higher than other cities?"
-    answer: "Most districts in our index charge the Level I statutory rate (capped at $5.38/sq ft in 2026). Folsom Cordova USD qualifies for and collects Level II fees, which are calculated from its own School Facilities Needs Analysis rather than the state cap — $10.26/sq ft in Folsom's SFID 2 and $9.01 in SFID 1 (Rancho Cordova). It is the highest school fee we have verified in 134 jurisdictions."
+    answer: "Most districts in our index charge the Level I statutory rate (capped at $5.38/sq ft in 2026). Folsom Cordova USD qualifies for and collects Level II fees, which are calculated from its own School Facilities Needs Analysis rather than the state cap — $10.26/sq ft in Folsom's SFID 2 and $9.01 in SFID 1 (Rancho Cordova). It is the second-highest school fee we have verified in our matrix — only Calexico Unified's Level II fee ($12.46/sq ft, $9,968 on 800 sq ft) runs higher."
   - question: "What does the City of Folsom itself charge an 800 sq ft ADU?"
     answer: "The building permit is a confirmed flat $4,709 per ADU, plan review and inspection included (Resolution No. 11481). City impact fees are different: ADUs under 750 sq ft pay $0, and at 750 sq ft or more the city's $26,193 per-unit stack (July 1, 2026) is charged in proportion to the main house — on a 2,000 sq ft primary home, an 800 sq ft ADU's share works out to about $10,477. Water and sewer connection charges sit outside that rule; the city publishes per-unit rates ($4,075 water, $1,301 sewer) but no ADU-specific total."
   - question: "What changes for Folsom ADUs on January 1, 2027?"
@@ -24,7 +24,7 @@ faqs:
 
 In most California cities, the school fee is the boring line: $5.38 a square foot, the state maximum, take it or leave it. Folsom is where that line eats the budget.
 
-Folsom Cordova Unified doesn't charge the Level I rate at all. It charges **Level II** — a rate built from its own facilities needs analysis, split by improvement district. In SFID 2, which the district defines as the City of Folsom, the residential rate is **$10.26 per square foot**, effective April 16, 2026. On an 800 sq ft ADU that is **$8,208** — the highest school fee we have verified in our 134-jurisdiction research matrix, roughly double what the same unit pays in a $5.38-max district ($4,304), and more than many cities' *entire* government fee stack.
+Folsom Cordova Unified doesn't charge the Level I rate at all. It charges **Level II** — a rate built from its own facilities needs analysis, split by improvement district. In SFID 2, which the district defines as the City of Folsom, the residential rate is **$10.26 per square foot**, effective April 16, 2026. On an 800 sq ft ADU that is **$8,208** — the second-highest school fee we have verified in our research matrix (only Calexico Unified's Level II fee, $12.46/sq ft, runs higher at $9,968), roughly double what the same unit pays in a $5.38-max district ($4,304), and more than many cities' *entire* government fee stack.
 
 ## The short answer
 
