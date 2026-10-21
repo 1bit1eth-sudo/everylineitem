@@ -8272,7 +8272,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://4.files.edl.io/deb4/08/11/26/142108-859af6d2-ea3c-4e49-86e8-99ee43fe2647.pdf",
       "source_note": "LAUSD June 2026 Impact Fee Payment Information adopts the 2026 SAB maximum; 800 sq ft ADU = $4,304.",
       "effective_date": "2026-06-01",
@@ -8295,7 +8295,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://cityofgardena.org/wp-content/uploads/2026/07/City-Fee-Schedule-Effective-July-1-2026.pdf",
       "source_note": "No ADU-specific planning fee in the adopted July 1, 2026 schedule; ADUs processed ministerially per GMC 18.13.",
       "effective_date": "2026-07-01",
@@ -8318,7 +8318,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.mvusd.net/departments/business-services/facilities-planning-and-development/developer-impact-school-fees",
       "source_note": "MVUSD official page: $5.38/sq ft effective 6/29/2026, ADUs 500+ sq ft charged; 800 sq ft ADU = $4,304.",
       "effective_date": "2026-06-29",
@@ -8341,7 +8341,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "http://ci.moreno-valley.ca.us/departments/financial-mgmt-svcs/fin-pdf/ImpactFees.pdf",
       "source_note": "Adopted DIF schedule (effective 7/1/2023) ADU row lists City DIF as Exempt; SFR pays $10,104.",
       "effective_date": "2023-07-01",
@@ -8364,7 +8364,7 @@
       "step": null,
       "min_sqft": 0,
       "max_sqft": 999,
-      "applies_to": "detached ADU",
+      "applies_to": "all",
       "source_url": "http://ci.moreno-valley.ca.us/departments/financial-mgmt-svcs/fin-pdf/FeeSchedule.pdf",
       "source_note": "FY 2026-27 fee schedule dedicated ADU category, Type VB wood frame, 0-999 sq ft bracket.",
       "effective_date": "2026-07-01",
@@ -8372,7 +8372,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": null
+      "notes": "Scope in source: detached ADU."
     },
     {
       "item_id": "FI-347",
@@ -8387,7 +8387,7 @@
       "step": null,
       "min_sqft": 0,
       "max_sqft": 999,
-      "applies_to": "detached ADU",
+      "applies_to": "all",
       "source_url": "http://ci.moreno-valley.ca.us/departments/financial-mgmt-svcs/fin-pdf/FeeSchedule.pdf",
       "source_note": "FY 2026-27 fee schedule dedicated ADU category; plan check $1,385 + inspection $2,310 + $51 filing = $3,746 all-in.",
       "effective_date": "2026-07-01",
@@ -8395,7 +8395,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": null
+      "notes": "Scope in source: detached ADU."
     },
     {
       "item_id": "FI-348",
@@ -8410,7 +8410,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "http://ci.moreno-valley.ca.us/departments/financial-mgmt-svcs/fin-pdf/FeeSchedule.pdf",
       "source_note": "FY 2026-27 fee schedule miscellaneous permit fees; part of the $3,746 confirmed permit package.",
       "effective_date": "2026-07-01",
@@ -8418,7 +8418,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": null
+      "notes": "Scope in source: ADU."
     },
     {
       "item_id": "FI-349",
@@ -8433,7 +8433,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "http://ci.moreno-valley.ca.us/departments/financial-mgmt-svcs/fin-pdf/FeeSchedule.pdf",
       "source_note": "No ADU planning fee in schedule; ADUs processed ministerially (submittal direct to Building).",
       "effective_date": "2026-07-01",
@@ -8456,7 +8456,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "http://sanjuancapistrano.gov/DocumentCenter/View/167",
       "source_note": "CUSD developer fee flyer: $5.38/sq ft new residential effective May 17, 2026 (SAB 2026 maximum); 800 sq ft ADU = $4,304.",
       "effective_date": "2026-05-17",
@@ -8479,7 +8479,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "detached ADU",
+      "applies_to": "all",
       "source_url": "https://cms9files.revize.com/cmsd/Document_Center/Sewer/Permits/Sewer%20Fees/2025_07_01_ocsan_capacity_charges.pdf?t=202506261712500",
       "source_note": "OC San TABLE A average-demand rate $1,695 per 1,000 sq ft (FY2025-26); an 800 sq ft detached ADU is one billing portion = $1,695.",
       "effective_date": "2025-07-01",
@@ -8502,7 +8502,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "http://district-mpcsd.community.highbond.com/document/448cebae-1078-4430-8fcc-70b7688016ce/",
       "source_note": "MPCSD Resolution No. 25.26.15 (adopted 4/16/2026) raises fees to the $5.38 statutory limit, shared with Sequoia Union HSD; 800 sq ft ADU = $4,304.",
       "effective_date": "2026-04-16",
@@ -8525,7 +8525,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.smcgov.org/planning/affordable-housing-impact-fee-0",
       "source_note": "County fees page explicitly exempts second units from the Affordable Housing Impact Fee.",
       "effective_date": null,
@@ -8533,7 +8533,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": null
+      "notes": "Scope in source: ADU."
     },
     {
       "item_id": "FI-354",
@@ -8548,7 +8548,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "new residential construction (ADU)",
+      "applies_to": "all",
       "source_url": "https://www.smcgov.org/media/157829/download?inline=",
       "source_note": "Building Service Fee Schedule eff. 4/1/2026: $8.33/sq ft covers permit processing, plan review, and inspection; 800 sq ft = $6,664.",
       "effective_date": "2026-04-01",
@@ -8556,7 +8556,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Surcharges stack on top (10% planning admin, 4% tech, 2% doc storage, 5% legal counsel) — excluded here as fee-base percentages, not standalone valuation rates."
+      "notes": "Surcharges stack on top (10% planning admin, 4% tech, 2% doc storage, 5% legal counsel) — excluded here as fee-base percentages, not standalone valuation rates. Scope in source: new residential construction (ADU)."
     },
     {
       "item_id": "FI-355",
@@ -8571,7 +8571,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.smcgov.org/media/157829/download?inline=",
       "source_note": "Building Service Fee Schedule eff. 4/1/2026; base $6,664 + $595 = $7,259 before surcharges.",
       "effective_date": "2026-04-01",
@@ -8579,7 +8579,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": null
+      "notes": "Scope in source: ADU."
     },
     {
       "item_id": "FI-356",
@@ -8594,7 +8594,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.smcgov.org/media/160187/download?inline=",
       "source_note": "Planning Service Fee Schedule eff. 7/23/2026: plan review + 1 resubmittal $887 ($444 each additional).",
       "effective_date": "2026-07-23",
@@ -8602,7 +8602,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Total planning fees for a second dwelling unit capped at $7,500 when permits are processed concurrently (schedule Note 10)."
+      "notes": "Total planning fees for a second dwelling unit capped at $7,500 when permits are processed concurrently (schedule Note 10). Scope in source: ADU."
     },
     {
       "item_id": "FI-357",
@@ -8617,7 +8617,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.smcgov.org/media/137136/download?inline=",
       "source_note": "County Zoning Ordinance Ch. 8.392 §8.392.050(16): ADUs shall not be subject to design review; state-exempt 800 sq ft ADU = $0.",
       "effective_date": null,
@@ -8640,7 +8640,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.santaclarausd.org/about-us/departments/facility-development-and-planning/developer-fees",
       "source_note": "SCUSD board adopted $5.38/sq ft on 6/25/2026, effective 8/24/2026; ADUs under 500 sq ft exempt; 800 sq ft ADU = $4,304.",
       "effective_date": "2026-08-24",
@@ -8663,7 +8663,7 @@
       "step": null,
       "min_sqft": 251,
       "max_sqft": 1000,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://santaclara.legistar1.com/santaclara/attachments/a0daa058-7f51-457a-8ae3-7b923265f960.pdf",
       "source_note": "FY2026/27 fee study line 74: $732 first 250 sq ft + $292.80 per additional 100 sq ft; 800 sq ft = $2,488.80.",
       "effective_date": "2026-07-01",
@@ -8671,7 +8671,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": null
+      "notes": "Scope in source: ADU."
     },
     {
       "item_id": "FI-360",
@@ -8686,7 +8686,7 @@
       "step": null,
       "min_sqft": 251,
       "max_sqft": 1000,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://santaclara.legistar1.com/santaclara/attachments/a0daa058-7f51-457a-8ae3-7b923265f960.pdf",
       "source_note": "FY2026/27 fee study line 75: $812.52 first 250 sq ft + $249.53 per additional 100 sq ft; 800 sq ft = $2,309.70.",
       "effective_date": "2026-07-01",
@@ -8694,7 +8694,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": null
+      "notes": "Scope in source: ADU."
     },
     {
       "item_id": "FI-361",
@@ -8709,7 +8709,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://santaclara.legistar1.com/santaclara/attachments/a0daa058-7f51-457a-8ae3-7b923265f960.pdf",
       "source_note": "FY2026/27 fee study line 10.",
       "effective_date": "2026-07-01",
@@ -8717,7 +8717,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": null
+      "notes": "Scope in source: ADU."
     },
     {
       "item_id": "FI-362",
@@ -8732,7 +8732,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://santaclara.legistar1.com/santaclara/attachments/a0daa058-7f51-457a-8ae3-7b923265f960.pdf",
       "source_note": "FY2026/27 fee study line 12: 12.39% of building permit + plan check ($4,798.50) = $594.53.",
       "effective_date": "2026-07-01",
@@ -8740,7 +8740,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": null
+      "notes": "Scope in source: ADU."
     },
     {
       "item_id": "FI-363",
@@ -8755,7 +8755,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://santaclara.legistar1.com/santaclara/attachments/a0daa058-7f51-457a-8ae3-7b923265f960.pdf",
       "source_note": "FY2026/27 fee study lines 14b/27/38: electrical $0.24 + mechanical $0.10 + plumbing $0.10 per sq ft; 800 sq ft = $192 + $80 + $80 = $352.",
       "effective_date": "2026-07-01",
@@ -8763,7 +8763,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Confirmed-line subtotal for permit package: $2,488.80 + $2,309.70 + $101 + $594.53 + $352 = $5,846.03 (technology fee 3.37% and conformance fee excluded as partial)."
+      "notes": "Confirmed-line subtotal for permit package: $2,488.80 + $2,309.70 + $101 + $594.53 + $352 = $5,846.03 (technology fee 3.37% and conformance fee excluded as partial). Scope in source: ADU."
     },
     {
       "item_id": "FI-364",
@@ -8778,7 +8778,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://santaclara.legistar1.com/daystar.legistar6.sdk.ws/ViewReport.ashx?M=R&From=Granicus&GovernmentGUID=SACL&N=TextL5&ID=25630&GUID=LATEST&Extra=L5&Title=Legislation+Text&Format=pdf&ver=1764984218",
       "source_note": "Council resolution adopted 12/9/2025: ADUs 750+ sq ft assessed the residential $1.14/sq ft rate, ADUs under 750 pay $0; 800 sq ft = $912.",
       "effective_date": "2025-12-09",
@@ -8801,7 +8801,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://santaclara.legistar1.com/santaclara/attachments/a0daa058-7f51-457a-8ae3-7b923265f960.pdf",
       "source_note": "No ADU water/electric connection or capacity charge in the adopted FY2026/27 schedule; Gov. Code §66324(d) bars a separate connection for this ADU category; city submittal docs show sub-panel approach.",
       "effective_date": "2026-07-01",
@@ -8824,7 +8824,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://santaclara.legistar1.com/santaclara/attachments/a0daa058-7f51-457a-8ae3-7b923265f960.pdf",
       "source_note": "FY2026/27 fee study line 35: $306 flat (100% cost recovery).",
       "effective_date": "2026-07-01",
@@ -8832,7 +8832,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": null
+      "notes": "Scope in source: ADU."
     },
     {
       "item_id": "FI-367",
@@ -8847,7 +8847,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.mdusd.org/fs/resource-manager/view/d2b00879-c5b7-47c7-b63d-5577c9348269",
       "source_note": "MDUSD 2024-25 Developer Fee Justification Study (board hearing 8/28/2024, 60-day wait): $5.17/sq ft residential; no 2026 increase published; 800 sq ft = $4,136.",
       "effective_date": "2024-10-27",
@@ -8855,7 +8855,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Unified district, full Level I rate; district-boundary-vs-city-boundary confirmation pending."
+      "notes": "Unified district, full Level I rate; district-boundary-vs-city-boundary confirmation pending. Scope in source: ADU."
     },
     {
       "item_id": "FI-368",
@@ -8870,7 +8870,7 @@
       "step": null,
       "min_sqft": 750,
       "max_sqft": 1200,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://cityofconcord.org/DocumentCenter/View/85/Cityof-Concord-Feesand-Charges-Schedule-PDF?bidId=",
       "source_note": "FY2025-26 master fee schedule Res. 25-6042.3 items 28.1.1-28.1.2: $1,626 if ADU exceeds 40% of primary dwelling, $1,073 if 40% or smaller (tier boundary = 2,000 sq ft primary for an 800 sq ft ADU).",
       "effective_date": "2025-06-10",
@@ -8893,7 +8893,7 @@
       "step": null,
       "min_sqft": 750,
       "max_sqft": 1200,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://cityofconcord.org/DocumentCenter/View/85/Cityof-Concord-Feesand-Charges-Schedule-PDF?bidId=",
       "source_note": "FY2025-26 master fee schedule items 31.5-31.6: $8,345 (50% of $16,691 low-density designation) if ADU exceeds 40% of primary, $5,508 if 40% or smaller.",
       "effective_date": "2025-06-10",
@@ -8916,7 +8916,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://cityofconcord.org/DocumentCenter/View/85/Cityof-Concord-Feesand-Charges-Schedule-PDF?bidId=",
       "source_note": "No ADU planning fee anywhere in the 5,777-line FY2025-26 adopted schedule; ADUs reviewed ministerially within 60 days per Housing Element.",
       "effective_date": "2025-06-10",
@@ -8939,7 +8939,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://cityofconcord.org/DocumentCenter/View/85/Cityof-Concord-Feesand-Charges-Schedule-PDF?bidId=",
       "source_note": "FY2025-26 master fee schedule item 37.1: $157.",
       "effective_date": "2025-06-10",
@@ -8962,7 +8962,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "new-construction ADU",
+      "applies_to": "all",
       "source_url": "https://www.hillsborough.net/AgendaCenter/ViewFile/Agenda/_05112026-1432",
       "source_note": "FY 2026-27 Schedule of Fees and Charges (adopted by council resolution 5/11/2026, effective 7/1/2026): flat $5,352 per permit regardless of ADU size.",
       "effective_date": "2026-07-01",
@@ -8970,7 +8970,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Whether plan check (25% of permit fee for valuation-based permits) is included in the flat fee is unverified."
+      "notes": "Whether plan check (25% of permit fee for valuation-based permits) is included in the flat fee is unverified. Scope in source: new-construction ADU."
     },
     {
       "item_id": "FI-373",
@@ -8985,7 +8985,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": 800,
-      "applies_to": "detached ADU",
+      "applies_to": "all",
       "source_url": "https://www.hillsborough.net/532/Accessory-Dwelling-Units-ADUs",
       "source_note": "Town ADU page: new detached ADU ≤800 sq ft with ≥4 ft setbacks and ≤16 ft height qualifies for State Exempt building-permit-only pathway, no planning review fee.",
       "effective_date": null,
@@ -9008,7 +9008,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.hillsborough.net/AgendaCenter/ViewFile/Agenda/_05112026-1432",
       "source_note": "FY 2026-27 schedule: 1% of the permit fee; 1% x $5,352 = $53.52.",
       "effective_date": "2026-07-01",
@@ -9016,7 +9016,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": null
+      "notes": "Scope in source: ADU."
     },
     {
       "item_id": "FI-375",
@@ -9031,7 +9031,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://resources.finalsite.net/images/v1778880206/nvusdk12caus/sxyt783jfshpwbu8okxa/-CertificateofComplianceNVUSDDevFees.pdf",
       "source_note": "NVUSD Certificate of Compliance (REV 5/11/2026) names ADU at $5.38/sq ft and names the City of Napa as a permit issuer; 800 sq ft = $4,304.",
       "effective_date": "2026-05-11",
@@ -9054,7 +9054,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.cityofnapa.org/DocumentCenter/View/13772/FY25-Master-Fee-Schedule",
       "source_note": "Master Fee Schedule eff. 2/3/2025 item 12.14.6: ADU park dedication $2,293; corroborated by the 2019 official ADU Guide.",
       "effective_date": "2025-02-03",
@@ -9077,7 +9077,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.cityofnapa.org/DocumentCenter/View/13772/FY25-Master-Fee-Schedule",
       "source_note": "Master Fee Schedule item 12.25.1: $4.75/sq ft; Ordinance O2018-011 exempts units 500 sq ft or less, so an 800 sq ft ADU pays; 800 sq ft = $3,800.",
       "effective_date": "2017-01-01",
@@ -9100,7 +9100,7 @@
       "step": null,
       "min_sqft": 1,
       "max_sqft": 1200,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.cityofnapa.org/DocumentCenter/View/13772/FY25-Master-Fee-Schedule",
       "source_note": "Master Fee Schedule item 2.1.36: flat $2,125 including building plan review, inspection, and fire + planning plan check.",
       "effective_date": "2025-02-03",
@@ -9123,7 +9123,7 @@
       "step": null,
       "min_sqft": 800,
       "max_sqft": 899,
-      "applies_to": "detached ADU",
+      "applies_to": "all",
       "source_url": "https://www.napasan.com/DocumentCenter/View/1604/FY-26_27-Fee-Table?bidId=",
       "source_note": "NapaSan Code §5.02.030.A.2: detached ADU 800-899 sq ft = 0.8 EDU; FY26/27 capacity charge $12,541/EDU eff. 7/1/2026; 0.8 x $12,541 = $10,032.80.",
       "effective_date": "2026-07-01",
@@ -9146,7 +9146,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://4.files.edl.io/deb4/08/11/26/142108-859af6d2-ea3c-4e49-86e8-99ee43fe2647.pdf",
       "source_note": "LAUSD June 2026 Impact Fee Payment Information: residential $5.38/sq ft (2026 SAB maximum); 800 sq ft ADU = $4,304.",
       "effective_date": "2026-06-01",
@@ -9169,7 +9169,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.cityofsouthgate.org/files/sharedassets/public/v/1/business-amp-development/documents/ordinance-2020-01-cc_executed.pdf",
       "source_note": "Ordinance No. 2021-01-CC §11.43.050(M)(1): ADUs shall not be considered new residential uses for city and county connection fees or capacity charges, including water and sewer; no separate meter required.",
       "effective_date": null,
@@ -9192,7 +9192,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": 1000,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.stancounty.com/planning/documents/AccessoryDwellingUnit%28ADU%29.pdf",
       "source_note": "County ADU handout: $2,625 flat for ADU ≤1,000 sq ft, including up to $300 in plumbing/mechanical/electrical plus GIS, Building Standards Fund, General Plan Update, One Stop Shop, and Strong Motion Tax.",
       "effective_date": null,
@@ -9215,7 +9215,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.stancounty.com/planning/documents/AccessoryDwellingUnit%28ADU%29.pdf",
       "source_note": "County ADU handout: new septic system $900 (upgrade $600, demolition $450).",
       "effective_date": null,
@@ -9238,7 +9238,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://rosemeadca.gov/Documents/Departments/Finance/2025-26%20Fee%20Schedule%20-%20Final.pdf",
       "source_note": "FY 2025-26 Comprehensive Fee Schedule: ADU covenant fee $111 (confirmed).",
       "effective_date": null,
@@ -9261,7 +9261,7 @@
       "step": null,
       "min_sqft": 500,
       "max_sqft": null,
-      "applies_to": "ADU 500 sq ft or larger",
+      "applies_to": "all",
       "source_url": "https://fmsbonds-wpoffload.s3.amazonaws.com/PROD/wp-content/uploads/2026/07/06133447/CALEXICO-USD-COPS-POS.pdf",
       "source_note": "FY2025-26 official district bond disclosure rate; 800 sq ft ADU = $9,968.",
       "effective_date": null,
@@ -9269,7 +9269,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Calexico USD is the sole district in the city (FCMAT); district policy charges ADUs the applicable rate. New $11.40 SFNA rate excluded (effective date unverified)."
+      "notes": "Calexico USD is the sole district in the city (FCMAT); district policy charges ADUs the applicable rate. New $11.40 SFNA rate excluded (effective date unverified). Scope in source: ADU 500 sq ft or larger."
     },
     {
       "item_id": "FI-386",
@@ -9284,7 +9284,7 @@
       "step": null,
       "min_sqft": 500,
       "max_sqft": null,
-      "applies_to": "ADU 500 sq ft or larger",
+      "applies_to": "all",
       "source_url": "https://files.smartsites.parentsquare.com/10942/2026_df_final_-_mvla_1_1.pdf",
       "source_note": "2026 SAB Level I maximum; 800 sq ft ADU = $4,304 (LASD 66.67% $2,869.33 + MVLA 33.33% $1,434.67).",
       "effective_date": null,
@@ -9292,7 +9292,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Fee-sharing split confirmed in MVLA July 2026 Level I study and Sept 2026 board certification; LASD annual report confirms ADUs are levied. Northern town parcels in Palo Alto USD (same $5.38 total, PAUSD adoption unverified) are a boundary caveat."
+      "notes": "Fee-sharing split confirmed in MVLA July 2026 Level I study and Sept 2026 board certification; LASD annual report confirms ADUs are levied. Northern town parcels in Palo Alto USD (same $5.38 total, PAUSD adoption unverified) are a boundary caveat. Scope in source: ADU 500 sq ft or larger."
     },
     {
       "item_id": "FI-387",
@@ -9307,7 +9307,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.losaltoshills.ca.gov/DocumentCenter/View/6151/LAH-HEU-5-12-2023-Redline",
       "source_note": "Waived for ADUs through the 2023-2031 planning period; 800 sq ft ADU is also below the town's 900 sq ft trigger.",
       "effective_date": null,
@@ -9330,7 +9330,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU on existing lot",
+      "applies_to": "all",
       "source_url": "https://www.losaltoshills.ca.gov/DocumentCenter/View/6151/LAH-HEU-5-12-2023-Redline",
       "source_note": "Subdivision-only per Municipal Code 9-1.1403; $0 for an ADU on an existing lot.",
       "effective_date": null,
@@ -9338,7 +9338,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": null
+      "notes": "Scope in source: ADU on existing lot."
     },
     {
       "item_id": "FI-389",
@@ -9353,7 +9353,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU on existing lot",
+      "applies_to": "all",
       "source_url": "https://www.losaltoshills.ca.gov/DocumentCenter/View/6151/LAH-HEU-5-12-2023-Redline",
       "source_note": "Subdivision public-right-of-way hardscape only ($0.69/sq ft schedule rate); $0 for an ADU on an existing lot.",
       "effective_date": null,
@@ -9361,7 +9361,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": null
+      "notes": "Scope in source: ADU on existing lot."
     },
     {
       "item_id": "FI-390",
@@ -9376,7 +9376,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.losaltoshills.ca.gov/DocumentCenter/View/174/23-24-Fee-Schedule---Planning-PDF?bidId=",
       "source_note": "FY2023/24 Planning Fee Schedule (Resolution 77-23); ADU approval is ministerial, no further ADU planning entitlement fee found.",
       "effective_date": null,
@@ -9399,7 +9399,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.losaltoshills.ca.gov/DocumentCenter/View/1745/Building-Fee-Schedule-FY202324?bidId=",
       "source_note": "FY2023/24 Building Fee Schedule (Resolution 77-23) schedule line.",
       "effective_date": null,
@@ -9407,7 +9407,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Vintage caveat: a newer building fee schedule may supersede FY2023/24."
+      "notes": "Vintage caveat: a newer building fee schedule may supersede FY2023/24. Scope in source: ADU."
     },
     {
       "item_id": "FI-392",
@@ -9422,7 +9422,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.losaltoshills.ca.gov/DocumentCenter/View/1745/Building-Fee-Schedule-FY202324?bidId=",
       "source_note": "FY2023/24 Building Fee Schedule (Resolution 77-23) schedule line.",
       "effective_date": null,
@@ -9430,7 +9430,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Vintage caveat: a newer building fee schedule may supersede FY2023/24."
+      "notes": "Vintage caveat: a newer building fee schedule may supersede FY2023/24. Scope in source: ADU."
     },
     {
       "item_id": "FI-393",
@@ -9445,7 +9445,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://cityofmontebello.hosted2.civiclive.com/common/pages/GetFile.ashx?key=NhMFAMzs",
       "source_note": "Master Fee Schedule Resolution 25-76, adopted 8/27/2025, effective 11/1/2025, flat through FY27-28.",
       "effective_date": "2025-11-01",
@@ -9453,7 +9453,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Flat processing fee, not an impact fee; not subject to the 750 sq ft cliff."
+      "notes": "Flat processing fee, not an impact fee; not subject to the 750 sq ft cliff. Scope in source: ADU."
     },
     {
       "item_id": "FI-394",
@@ -9468,7 +9468,7 @@
       "step": null,
       "min_sqft": 500,
       "max_sqft": null,
-      "applies_to": "ADU above 500 sq ft",
+      "applies_to": "all",
       "source_url": "https://www.ssfca.gov/files/assets/public/v/1/economic-amp-community-development/documents/planning/adu-handout-final-april-2026-update.pdf",
       "source_note": "City April 2026 ADU FAQ restates the district rate; 800 sq ft ADU = $3,032.",
       "effective_date": null,
@@ -9476,7 +9476,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "District's own 2018 adoption (Resolution 18-55); no later increase adopted, confirmed current by the April 2026 city FAQ. Lowest confirmed school fee in the matrix batches."
+      "notes": "District's own 2018 adoption (Resolution 18-55); no later increase adopted, confirmed current by the April 2026 city FAQ. Lowest confirmed school fee in the matrix batches. Scope in source: ADU above 500 sq ft."
     },
     {
       "item_id": "FI-395",
@@ -9491,7 +9491,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://ci-ssf-ca.legistar1.com/daystar.legistar6.sdk.ws/View.ashx?M=F&GovernmentGUID=STSF&LogicalFileName=9376da49-5bd3-4388-a6ce-041352ced43b.pdf&From=Granicus&Format=pdf",
       "source_note": "No ADU planning fee in the adopted FY2026-27 Master Fee Schedule; ADUs reviewed ministerially within 60 days.",
       "effective_date": null,
@@ -9514,7 +9514,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU on existing serviced lot (not built with a new dwelling)",
+      "applies_to": "all",
       "source_url": "https://www.ssfca.gov/files/assets/public/v/1/economic-amp-community-development/documents/planning/adu-handout-final-april-2026-update.pdf",
       "source_note": "No new water connection required per SSFMC 20.350.003(M)(2) for an ADU on an existing serviced lot.",
       "effective_date": null,
@@ -9522,7 +9522,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Water service via special districts (Westborough WD / Cal Water), not the city."
+      "notes": "Water service via special districts (Westborough WD / Cal Water), not the city. Scope in source: ADU on existing serviced lot (not built with a new dwelling)."
     },
     {
       "item_id": "FI-397",
@@ -9537,7 +9537,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU on existing serviced lot (not built with a new dwelling)",
+      "applies_to": "all",
       "source_url": "https://www.ssfca.gov/files/assets/public/v/1/economic-amp-community-development/documents/planning/adu-handout-final-april-2026-update.pdf",
       "source_note": "Sewer capacity charge applies only to an ADU built with a new dwelling; $0 for the spec scenario.",
       "effective_date": null,
@@ -9545,7 +9545,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Resolution 56-2017 rate itself not located (re-verify target), but the $0 spec-scenario treatment is confirmed policy."
+      "notes": "Resolution 56-2017 rate itself not located (re-verify target), but the $0 spec-scenario treatment is confirmed policy. Scope in source: ADU on existing serviced lot (not built with a new dwelling)."
     },
     {
       "item_id": "FI-398",
@@ -9560,7 +9560,7 @@
       "step": null,
       "min_sqft": 500,
       "max_sqft": null,
-      "applies_to": "ADU 500 sq ft or larger",
+      "applies_to": "all",
       "source_url": "https://files.smartsites.parentsquare.com/8508/final_stockton_usd_annual_and_5_year_developer_fee_report_fy_24-2545022304.pdf",
       "source_note": "SUSD FY24-25 Annual Developer Fee Report; 800 sq ft ADU = $3,264.",
       "effective_date": "2024-06-06",
@@ -9568,7 +9568,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Level 2 rate ($5.04) expired 6/5/2024; district reverted to 2020-adopted Level 1 rate and has not adopted the 2026 SAB maximum ($5.38). SUSD serves most of the city; Lincoln, Lodi and Manteca USD cover the remainder (rates unverified)."
+      "notes": "Level 2 rate ($5.04) expired 6/5/2024; district reverted to 2020-adopted Level 1 rate and has not adopted the 2026 SAB maximum ($5.38). SUSD serves most of the city; Lincoln, Lodi and Manteca USD cover the remainder (rates unverified). Scope in source: ADU 500 sq ft or larger."
     },
     {
       "item_id": "FI-399",
@@ -9583,7 +9583,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU not built with a new single-unit dwelling",
+      "applies_to": "all",
       "source_url": "https://legistar1.granicus.com/stockton/attachments/ab7be51a-114d-499c-9e6c-4e6745cacf55.pdf",
       "source_note": "Stockton Municipal Code 16.80.310 bars connection/capacity charges on an ADU not built with a new dwelling.",
       "effective_date": null,
@@ -9591,7 +9591,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Published new-service water connection rate ($2,264.41 + 3.5% admin) is context only and not charged in the spec scenario."
+      "notes": "Published new-service water connection rate ($2,264.41 + 3.5% admin) is context only and not charged in the spec scenario. Scope in source: ADU not built with a new single-unit dwelling."
     },
     {
       "item_id": "FI-400",
@@ -9606,7 +9606,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://legistar1.granicus.com/stockton/attachments/ab7be51a-114d-499c-9e6c-4e6745cacf55.pdf",
       "source_note": "Ministerial review per SMC 16.80.310(A); no ADU planning fee in the FY2026-27 adopted schedule.",
       "effective_date": null,
@@ -9629,7 +9629,7 @@
       "step": null,
       "min_sqft": 500,
       "max_sqft": null,
-      "applies_to": "Residential additions and ADUs over 500 sq ft",
+      "applies_to": "all",
       "source_url": "https://www.chino.k12.ca.us/developer-fees",
       "source_note": "Board-approved 3/19/2026, effective 5/18/2026; 800 sq ft ADU = $4,304.",
       "effective_date": "2026-05-18",
@@ -9637,7 +9637,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Unified TK-12 district; serves the Cities of Chino Hills, Chino and Ontario per the March 2026 fee justification study."
+      "notes": "Unified TK-12 district; serves the Cities of Chino Hills, Chino and Ontario per the March 2026 fee justification study. Scope in source: Residential additions and ADUs over 500 sq ft."
     },
     {
       "item_id": "FI-402",
@@ -9652,7 +9652,7 @@
       "step": null,
       "min_sqft": 750,
       "max_sqft": null,
-      "applies_to": "ADU 750 sq ft or larger",
+      "applies_to": "all",
       "source_url": "https://www.coronaca.gov/departments/planning-and-development/development-services/development-impact-and-service-fees",
       "source_note": "DIF Update 2026 (effective 7/1/2026) ADU column leaves every city category blank; only the MSHCP proportional fee applies.",
       "effective_date": "2026-07-01",
@@ -9660,7 +9660,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "MSHCP proportional fee itself is excluded (needs primary-dwelling size); see excluded list."
+      "notes": "MSHCP proportional fee itself is excluded (needs primary-dwelling size); see excluded list. Scope in source: ADU 750 sq ft or larger."
     },
     {
       "item_id": "FI-403",
@@ -9675,7 +9675,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU and JADU",
+      "applies_to": "all",
       "source_url": "https://rivcocob.org/sites/g/files/aldnop311/files/2026-04/824.20.pdf",
       "source_note": "Riverside County Ordinance 824.20 exempts ADUs/JADUs from TUMF program-wide.",
       "effective_date": null,
@@ -9683,7 +9683,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": null
+      "notes": "Scope in source: ADU and JADU."
     },
     {
       "item_id": "FI-404",
@@ -9698,7 +9698,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.coronaca.gov/departments/planning-and-development/development-services/development-impact-and-service-fees",
       "source_note": "Quimby is collected at subdivision map ($12,708 per single-family unit) and is blank in the DIF ADU column; $0 for an ADU.",
       "effective_date": null,
@@ -9721,7 +9721,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU (detached)",
+      "applies_to": "all",
       "source_url": "https://www.coronaca.gov/departments/planning-and-development/development-services/development-impact-and-service-fees",
       "source_note": "Secondary Unit 200 gpd x $15.48/GPD = $3,096 per the city Sewer Application Fees handout.",
       "effective_date": null,
@@ -9729,7 +9729,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Handout carries a 2024 seal; confirm the Secondary Unit category is the currently applied ADU computation on 12/1."
+      "notes": "Handout carries a 2024 seal; confirm the Secondary Unit category is the currently applied ADU computation on 12/1. Scope in source: ADU (detached)."
     },
     {
       "item_id": "FI-406",
@@ -9744,7 +9744,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://cdn.prod.website-files.com/65799af8ef225180fdf1ba2e/6a8de0c6150a9b0342a25c24_Master%20Fee%20Recovery%20Schedule.pdf",
       "source_note": "No ADU planning fee in the 102-page FY2026 Master Fee Recovery Schedule; ADUs processed ministerially via building plan check.",
       "effective_date": null,
@@ -9767,7 +9767,7 @@
       "step": null,
       "min_sqft": 500,
       "max_sqft": null,
-      "applies_to": "New residential construction over 500 sq ft",
+      "applies_to": "all",
       "source_url": "https://legistarweb-production.s3.amazonaws.com/uploads/attachment/pdf/1633550/2021-22_Developer_Fee_Report.pdf",
       "source_note": "Board-adopted 10/12/2022, effective 12/12/2022; 800 sq ft ADU = $3,832.",
       "effective_date": "2022-12-12",
@@ -9775,7 +9775,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Reaffirmed as 'currently assesses' in the 12/13/2023 board agenda; 2024 ($5.17) and 2026 ($5.38) SAB-maximum adoptions unverified."
+      "notes": "Reaffirmed as 'currently assesses' in the 12/13/2023 board agenda; 2024 ($5.17) and 2026 ($5.38) SAB-maximum adoptions unverified. Scope in source: New residential construction over 500 sq ft."
     },
     {
       "item_id": "FI-408",
@@ -9790,7 +9790,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU and JADU",
+      "applies_to": "all",
       "source_url": "https://codelibrary.amlegal.com/codes/monrovia/latest/monrovia_ca/0-0-0-74818",
       "source_note": "Monrovia Municipal Code 17.44.005(H)(2) expressly exempts ADUs/JADUs from the Chapter 3.22 TIF.",
       "effective_date": null,
@@ -9798,7 +9798,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Program rate $2,634 per new PM peak-hour trip (Resolution 2025-01) is context only."
+      "notes": "Program rate $2,634 per new PM peak-hour trip (Resolution 2025-01) is context only. Scope in source: ADU and JADU."
     },
     {
       "item_id": "FI-409",
@@ -9813,7 +9813,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.monroviaca.gov/home/showpublisheddocument/40715/639173087393330000",
       "source_note": "ADUs permitted ministerially by building permit per 17.44.005(D); no ADU planning fee in the adopted FY2026-27 schedule.",
       "effective_date": null,
@@ -9836,7 +9836,7 @@
       "step": null,
       "min_sqft": 500,
       "max_sqft": null,
-      "applies_to": "New residential construction and additions (ADUs 500 sq ft or larger)",
+      "applies_to": "all",
       "source_url": "https://www.pusd.us/fs/resource-manager/view/9acbb07a-a8f0-4b21-8e32-b1b39090df13",
       "source_note": "PUSD FY2024-25 Annual Developer Fee Report, board presentation 1/22/2026; 800 sq ft ADU = $1,792.",
       "effective_date": null,
@@ -9844,7 +9844,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Unified K-12 district, full rate; well below the 2026 SAB maximum ($5.38); PUSD 2026 increase adoption unverified."
+      "notes": "Unified K-12 district, full rate; well below the 2026 SAB maximum ($5.38); PUSD 2026 increase adoption unverified. Scope in source: New residential construction and additions (ADUs 500 sq ft or larger)."
     },
     {
       "item_id": "FI-411",
@@ -9859,7 +9859,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU on existing serviced lot (not built with a new single-family dwelling)",
+      "applies_to": "all",
       "source_url": "https://www.sierramadreca.gov/media/5n4fhqsk/exhibit-1-ord-1494.pdf",
       "source_note": "SMMC 17.22.120(B) bars treating an ADU as a new residential use for connection/capacity charges.",
       "effective_date": null,
@@ -9867,7 +9867,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "LACSD District No. 15 treatment is PARTIAL (district membership confirmed; District 15 ordinance text/rate unverified) and is excluded separately."
+      "notes": "LACSD District No. 15 treatment is PARTIAL (district membership confirmed; District 15 ordinance text/rate unverified) and is excluded separately. Scope in source: ADU on existing serviced lot (not built with a new single-family dwelling)."
     },
     {
       "item_id": "FI-412",
@@ -9882,7 +9882,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.sierramadreca.gov/media/acqlv4ek/fy26-27-adopted-fee-schedule-after-july-14-council-meeting.pdf",
       "source_note": "FY2026-27 adopted fee schedule, Planning and Zoning Fees; down from $2,320 in FY2025-26.",
       "effective_date": null,
@@ -9905,7 +9905,7 @@
       "step": null,
       "min_sqft": 750,
       "max_sqft": null,
-      "applies_to": "ADU 750 sq ft or larger",
+      "applies_to": "all",
       "source_url": "https://uplandadu.org/permit",
       "source_note": "Resolution 6808 (10/28/2024) DIF schedule, confirmed current in FY2024-25 AB 1600 report; 800 sq ft ADU = $624.",
       "effective_date": null,
@@ -9913,7 +9913,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "City ADU program: impact fees collected for ADUs 750 sq ft and above; $0 below 750 sq ft."
+      "notes": "City ADU program: impact fees collected for ADUs 750 sq ft and above; $0 below 750 sq ft. Scope in source: ADU 750 sq ft or larger."
     },
     {
       "item_id": "FI-414",
@@ -9928,7 +9928,7 @@
       "step": null,
       "min_sqft": 750,
       "max_sqft": null,
-      "applies_to": "ADU 750 sq ft or larger",
+      "applies_to": "all",
       "source_url": "https://uplandadu.org/permit",
       "source_note": "Resolution 6808 DIF schedule; 800 sq ft ADU = $344.",
       "effective_date": null,
@@ -9936,7 +9936,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": null
+      "notes": "Scope in source: ADU 750 sq ft or larger."
     },
     {
       "item_id": "FI-415",
@@ -9951,7 +9951,7 @@
       "step": null,
       "min_sqft": 750,
       "max_sqft": null,
-      "applies_to": "ADU 750 sq ft or larger",
+      "applies_to": "all",
       "source_url": "https://uplandadu.org/permit",
       "source_note": "Resolution 6808 DIF schedule; largest DIF element, 800 sq ft ADU = $3,840.",
       "effective_date": null,
@@ -9959,7 +9959,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": null
+      "notes": "Scope in source: ADU 750 sq ft or larger."
     },
     {
       "item_id": "FI-416",
@@ -9974,7 +9974,7 @@
       "step": null,
       "min_sqft": 750,
       "max_sqft": null,
-      "applies_to": "ADU 750 sq ft or larger",
+      "applies_to": "all",
       "source_url": "https://uplandadu.org/permit",
       "source_note": "Resolution 6808 DIF schedule; 800 sq ft ADU = $56.",
       "effective_date": null,
@@ -9982,7 +9982,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": null
+      "notes": "Scope in source: ADU 750 sq ft or larger."
     },
     {
       "item_id": "FI-417",
@@ -9997,7 +9997,7 @@
       "step": null,
       "min_sqft": 750,
       "max_sqft": null,
-      "applies_to": "ADU 750 sq ft or larger",
+      "applies_to": "all",
       "source_url": "https://uplandadu.org/permit",
       "source_note": "Resolution 6808 DIF schedule; 800 sq ft ADU = $696.",
       "effective_date": null,
@@ -10005,7 +10005,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "DIF element, not a separate connection charge; SB 1117 treatment of water/sewer DIF elements is ambiguous."
+      "notes": "DIF element, not a separate connection charge; SB 1117 treatment of water/sewer DIF elements is ambiguous. Scope in source: ADU 750 sq ft or larger."
     },
     {
       "item_id": "FI-418",
@@ -10020,7 +10020,7 @@
       "step": null,
       "min_sqft": 750,
       "max_sqft": null,
-      "applies_to": "ADU 750 sq ft or larger",
+      "applies_to": "all",
       "source_url": "https://uplandadu.org/permit",
       "source_note": "Resolution 6808 DIF schedule; 800 sq ft ADU = $40.",
       "effective_date": null,
@@ -10028,7 +10028,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "DIF element, not a separate connection charge; SB 1117 treatment ambiguous."
+      "notes": "DIF element, not a separate connection charge; SB 1117 treatment ambiguous. Scope in source: ADU 750 sq ft or larger."
     },
     {
       "item_id": "FI-419",
@@ -10043,7 +10043,7 @@
       "step": null,
       "min_sqft": 750,
       "max_sqft": null,
-      "applies_to": "ADU 750 sq ft or larger",
+      "applies_to": "all",
       "source_url": "https://uplandadu.org/permit",
       "source_note": "Resolution 6808 DIF schedule; 800 sq ft ADU = $720. Total DIF $7.90/sq ft = $6,320 on 800 sq ft.",
       "effective_date": null,
@@ -10051,7 +10051,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Fire DIF no longer collected (SB County Fire contract)."
+      "notes": "Fire DIF no longer collected (SB County Fire contract). Scope in source: ADU 750 sq ft or larger."
     },
     {
       "item_id": "FI-420",
@@ -10066,7 +10066,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU over 500 sq ft",
+      "applies_to": "all",
       "source_url": "https://fresnounified.community.diligentoneplatform.com/document/0233c08d-1f56-4caa-8736-e7607e31b70c/",
       "source_note": "FUSD retained its 2022-approved rate and did not adopt the SAB $5.17/$5.38 increases, dual-confirmed by the district 2024/25 report and the city ADU estimator; 800 sq ft = $3,832.",
       "effective_date": "2022-08-15",
@@ -10074,7 +10074,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Boundary caveat: Fresno also contains Clovis USD ($5.86), Fowler USD ($5.17) and Central/Washington Union/Sanger USD ($4.79) territory; FUSD serves the great majority of the city."
+      "notes": "Boundary caveat: Fresno also contains Clovis USD ($5.86), Fowler USD ($5.17) and Central/Washington Union/Sanger USD ($4.79) territory; FUSD serves the great majority of the city. Scope in source: ADU over 500 sq ft."
     },
     {
       "item_id": "FI-421",
@@ -10089,7 +10089,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU on existing single-family lot",
+      "applies_to": "all",
       "source_url": "https://www.fresno.gov/wp-content/uploads/2026/07/MFS-Planning_593_CPI_CPI-UGM_CPI-Parking-ED-2026.07.01-10w1657.pdf",
       "source_note": "Official council exhibits list the Quimby fee as due at Final Map, so an ADU with no final map pays $0 in the spec scenario.",
       "effective_date": null,
@@ -10097,7 +10097,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Due at Final Map only, so $0 for an ADU on a typical existing lot; distinct from the proportional Park Facility Impact Fee, which is excluded above."
+      "notes": "Due at Final Map only, so $0 for an ADU on a typical existing lot; distinct from the proportional Park Facility Impact Fee, which is excluded above. Scope in source: ADU on existing single-family lot."
     },
     {
       "item_id": "FI-422",
@@ -10112,7 +10112,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.fresno.gov/planning/adu-program/",
       "source_note": "City ADU Program states pre-approved and custom ADU plans no longer require a Zone Clearance; $0 planning fee.",
       "effective_date": null,
@@ -10135,7 +10135,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU (800 sq ft)",
+      "applies_to": "all",
       "source_url": "https://grover.org/DocumentCenter/View/12768/MasterFeeScheduleEffective_07-1-2025?bidId=",
       "source_note": "Master Fee Schedule FY2026-27 R3/ADU row gives $2,984 for an 800-sq-ft ADU by schedule arithmetic.",
       "effective_date": "2026-07-01",
@@ -10143,7 +10143,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Schedule arithmetic: plan review $908 + 3 x $38 = $1,022 plus permit inspection $1,731 + 3 x $77 = $1,962; 800 sq ft falls in the 500 sq ft bracket with 3 additional 100-sq-ft units."
+      "notes": "Schedule arithmetic: plan review $908 + 3 x $38 = $1,022 plus permit inspection $1,731 + 3 x $77 = $1,962; 800 sq ft falls in the 500 sq ft bracket with 3 additional 100-sq-ft units. Scope in source: ADU (800 sq ft)."
     },
     {
       "item_id": "FI-424",
@@ -10158,7 +10158,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "Detached ADU",
+      "applies_to": "all",
       "source_url": "https://grover.org/DocumentCenter/View/12768/MasterFeeScheduleEffective_07-1-2025?bidId=",
       "source_note": "Master Fee Schedule Section G lists $340 for a detached ADU planning building plan review, in addition to the building permit fee.",
       "effective_date": "2026-07-01",
@@ -10166,7 +10166,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "With a city stock plan the review fee is $58 instead of $340."
+      "notes": "With a city stock plan the review fee is $58 instead of $340. Scope in source: Detached ADU."
     },
     {
       "item_id": "FI-425",
@@ -10181,7 +10181,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU permit",
+      "applies_to": "all",
       "source_url": "https://grover.org/DocumentCenter/View/12768/MasterFeeScheduleEffective_07-1-2025?bidId=",
       "source_note": "Master Fee Schedule confirms a $92 permit processing fee.",
       "effective_date": "2026-07-01",
@@ -10189,7 +10189,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Excludes percentage add-ons whose base definition is ambiguous (5% General Plan Maintenance, 5% Technology/Records, 11% electrical/mechanical/plumbing each)."
+      "notes": "Excludes percentage add-ons whose base definition is ambiguous (5% General Plan Maintenance, 5% Technology/Records, 11% electrical/mechanical/plumbing each). Scope in source: ADU permit."
     },
     {
       "item_id": "FI-426",
@@ -10204,7 +10204,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU on existing serviced lot",
+      "applies_to": "all",
       "source_url": "https://groverbeach.org/DocumentCenter/View/16411/Attachment-1---ADU-Legislative-Draft-Development-Code?bidId=",
       "source_note": "ADU ordinance states separate utility connections and meters are not required under Gov. Code Section 66324(d)(e), so the typical-case connection cost is $0.",
       "effective_date": null,
@@ -10212,7 +10212,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Separate utility connections and meters are not required for a compliant ADU; a new meter, if installed, is actual cost with a $750 minimum deposit."
+      "notes": "Separate utility connections and meters are not required for a compliant ADU; a new meter, if installed, is actual cost with a $750 minimum deposit. Scope in source: ADU on existing serviced lot."
     },
     {
       "item_id": "FI-427",
@@ -10227,7 +10227,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU on existing lot (not a subdivision)",
+      "applies_to": "all",
       "source_url": "https://grover.org/DocumentCenter/View/12768/MasterFeeScheduleEffective_07-1-2025?bidId=",
       "source_note": "Master Fee Schedule lists the Quimby fee as subdivisions-only, so an infill ADU pays $0.",
       "effective_date": "2026-07-01",
@@ -10235,7 +10235,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "The $3.77/sq ft Quimby rate applies to subdivisions only and is not applicable to an infill ADU on an existing lot."
+      "notes": "The $3.77/sq ft Quimby rate applies to subdivisions only and is not applicable to an infill ADU on an existing lot. Scope in source: ADU on existing lot (not a subdivision)."
     },
     {
       "item_id": "FI-428",
@@ -10250,7 +10250,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "Residential ADU",
+      "applies_to": "all",
       "source_url": "https://ecode360.com/IN4942",
       "source_note": "The public art fee is confirmed not applicable to a residential ADU, so the ADU pays $0.",
       "effective_date": null,
@@ -10258,7 +10258,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "IMC Section 11-140 applies only to new nonresidential private structures (or public buildings) with valuation of $250,000 or more."
+      "notes": "IMC Section 11-140 applies only to new nonresidential private structures (or public buildings) with valuation of $250,000 or more. Scope in source: Residential ADU."
     },
     {
       "item_id": "FI-429",
@@ -10273,7 +10273,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "New ADU",
+      "applies_to": "all",
       "source_url": "https://www.milpitas.gov/DocumentCenter/View/139/Accessory-Dwelling-Unit-ADU-Incentive-Program-PDF?ref=ghost-production-72b6.up.railway.app",
       "source_note": "The official ADU handout states verbatim that the City of Milpitas does not charge a park-in-lieu fee for new ADUs; $0.",
       "effective_date": "2026-06-11",
@@ -10281,7 +10281,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "The citywide park in-lieu rates ($53-$64/sq ft) apply to subdivisions and multi-family projects, but the ADU handout explicitly exempts ADUs."
+      "notes": "The citywide park in-lieu rates ($53-$64/sq ft) apply to subdivisions and multi-family projects, but the ADU handout explicitly exempts ADUs. Scope in source: New ADU."
     },
     {
       "item_id": "FI-430",
@@ -10296,7 +10296,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "New ADU/JADU",
+      "applies_to": "all",
       "source_url": "https://www.milpitas.gov/DocumentCenter/View/139/Accessory-Dwelling-Unit-ADU-Incentive-Program-PDF?ref=ghost-production-72b6.up.railway.app",
       "source_note": "The official ADU handout confirms a $709 new address request permit fee for a new ADU or JADU.",
       "effective_date": "2026-06-11",
@@ -10304,30 +10304,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "A separate address is required for a new ADU or JADU."
-    },
-    {
-      "item_id": "FI-431",
-      "juris_id": "MILPITAS",
-      "category": "permit",
-      "fee_name": "Fire Department review fee for ADU fire sprinkler system",
-      "method": "flat",
-      "rate_low": 703,
-      "rate_high": null,
-      "base": null,
-      "threshold": null,
-      "step": null,
-      "min_sqft": null,
-      "max_sqft": null,
-      "applies_to": "ADU requiring a fire sprinkler system",
-      "source_url": "https://www.milpitas.gov/DocumentCenter/View/139/Accessory-Dwelling-Unit-ADU-Incentive-Program-PDF?ref=ghost-production-72b6.up.railway.app",
-      "source_note": "The official ADU handout confirms an additional $703 Fire Department review fee may apply where sprinklers are required.",
-      "effective_date": "2026-06-11",
-      "last_verified": "2026-10-19",
-      "confidence": "A",
-      "status": "verified",
-      "internal_notes": null,
-      "notes": "Conditional: applies only if the ADU requires a fire sprinkler system."
+      "notes": "A separate address is required for a new ADU or JADU. Scope in source: New ADU/JADU."
     },
     {
       "item_id": "FI-432",
@@ -10342,7 +10319,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://eocwd.com/wp-content/uploads/2026/07/OC-SAN-TABLE-A-B-2026-27.pdf",
       "source_note": "OC San Table A (effective July 1, 2026) charges ADUs $1,710 per 1,000 sq ft at average demand with no minimum; 800 sq ft = $1,368.",
       "effective_date": "2026-07-01",
@@ -10365,7 +10342,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU over 500 sq ft",
+      "applies_to": "all",
       "source_url": "http://paramount-k12.community.diligentoneplatform.com/document/8d8e59fe-6cda-484d-b566-d6ecb35905ee",
       "source_note": "PUSD December 10, 2025 Fund 25 disclosure confirms $2.97/sq ft residential; 800 sq ft = $2,376.",
       "effective_date": null,
@@ -10373,7 +10350,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "PUSD is a unified K-12 district collecting 100% of the Level I rate; rate unchanged since Resolution 08-09 (09/09/2008). A possible 2026 increase is in progress (December 2025 justification-report proposal) and is a 12/1 re-verification target."
+      "notes": "PUSD is a unified K-12 district collecting 100% of the Level I rate; rate unchanged since Resolution 08-09 (09/09/2008). A possible 2026 increase is in progress (December 2025 justification-report proposal) and is a 12/1 re-verification target. Scope in source: ADU over 500 sq ft."
     },
     {
       "item_id": "FI-434",
@@ -10388,7 +10365,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU 750 sq ft or larger",
+      "applies_to": "all",
       "source_url": "https://paramountcity.primegov.com/api/compilemeetingattachmenthistory/historyattachment/?historyId=54758655-1bdc-4e32-8729-0d4e2c75acab",
       "source_note": "Ordinance No. 1212 (adopted 02/24/2026, effective 04/25/2026) sets residential DIF at $2.30/sq ft; 800 sq ft = $1,840.",
       "effective_date": "2026-04-25",
@@ -10396,7 +10373,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Breakdown: public safety $0.11 + parks $1.10 + general facilities $0.07 + transportation $0.54 + stormwater $0.48 = $2.30/sq ft; ADUs under 750 sq ft are exempt and the per-sq-ft structure means the proportional formula collapses to rate x ADU sq ft. The 2% program administration fee from the nexus study is unverified against the adopted schedule and is not included."
+      "notes": "Breakdown: public safety $0.11 + parks $1.10 + general facilities $0.07 + transportation $0.54 + stormwater $0.48 = $2.30/sq ft; ADUs under 750 sq ft are exempt and the per-sq-ft structure means the proportional formula collapses to rate x ADU sq ft. The 2% program administration fee from the nexus study is unverified against the adopted schedule and is not included. Scope in source: ADU 750 sq ft or larger."
     },
     {
       "item_id": "FI-435",
@@ -10411,7 +10388,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "Residential ADU (single unit)",
+      "applies_to": "all",
       "source_url": "https://paramountcity.primegov.com/api/compilemeetingattachmenthistory/historyattachment/?historyId=54758655-1bdc-4e32-8729-0d4e2c75acab",
       "source_note": "Public art requirement confirmed not applicable to a single-unit ADU, so the ADU pays $0.",
       "effective_date": null,
@@ -10419,7 +10396,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Chapter 17.112 requires the 1% public art devotion only for private residential developments of five or more new dwelling units; a single ADU is below the threshold. The legacy park fee (Section 16.24.060) was repealed by Ordinance No. 1212 and parks are now inside the DIF item above, so no separate park $0 item is counted."
+      "notes": "Chapter 17.112 requires the 1% public art devotion only for private residential developments of five or more new dwelling units; a single ADU is below the threshold. The legacy park fee (Section 16.24.060) was repealed by Ordinance No. 1212 and parks are now inside the DIF item above, so no separate park $0 item is counted. Scope in source: Residential ADU (single unit)."
     },
     {
       "item_id": "FI-436",
@@ -10434,7 +10411,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.yvwd.us/Services/Engineering/Resolution%20No.%202026-32%20Revising%20and%20Updating%20the%20Policies%20and%20Practices%20Asocated%20with%20Accessory%20Dwelling%20Units%20and%20Multiple%20Residential%20Developments%204925-0897-8596%20v.1.pdf?t=202604291425280",
       "source_note": "YVWD Resolution No. 2026-32 (adopted 04/21/2026) confirms a $200 per-ADU administrative processing fee.",
       "effective_date": "2026-04-21",
@@ -10457,7 +10434,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://yucaipa.org/wp-content/uploads/dev_svcs/forms/2023-Applications-NoFeeonApps/UserFeesFY2324vFINAL.pdf",
       "source_note": "A full-text search of the adopted FY2023/24 Comprehensive User Fee Schedule returned zero ADU entries, confirming a $0 ADU planning fee.",
       "effective_date": null,
@@ -10480,7 +10457,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://bellflower.ca.gov/Document%20Center/Department/Planning/Planning%20Division/Planning%20HandoutsApplications/Planning%20Handouts/A%20Citizen%27s%20Guide%20to%20Planning%20Fees%202026.pdf?t=202607061551570",
       "source_note": "No ADU application or review fee appears on the city's 2026 planning fees guide; ADUs are processed ministerially, so $0 for an 800 sq ft ADU.",
       "effective_date": "2026-07-01",
@@ -10503,7 +10480,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU/JADU",
+      "applies_to": "all",
       "source_url": "https://ecms.newportbeachca.gov/WEB/DocView.aspx?id=3075231&dbid=0&repo=CNB",
       "source_note": "Resolution 2024-83 Exhibit B footnote 7(a) expressly exempts ADUs and JADUs, so $0 for an 800 sq ft ADU.",
       "effective_date": "2025-01-12",
@@ -10511,7 +10488,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Non-exempt residential DIF total is $8.90/sq ft, but it does not apply to ADUs."
+      "notes": "Non-exempt residential DIF total is $8.90/sq ft, but it does not apply to ADUs. Scope in source: ADU/JADU."
     },
     {
       "item_id": "FI-440",
@@ -10526,7 +10503,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://eocwd.com/wp-content/uploads/2026/07/OC-SAN-TABLE-A-B-2026-27.pdf",
       "source_note": "OC San Table A average-demand rate $1,710 per 1,000 sq ft with the ADU minimum-charge exemption explicit, giving $1,368 on an 800 sq ft ADU.",
       "effective_date": "2026-07-01",
@@ -10549,7 +10526,7 @@
       "step": null,
       "min_sqft": 751,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.redlands.gov/wp-content/uploads/2024/10/ord_2968_0.pdf",
       "source_note": "Ordinance No. 2968 per-building-sq-ft rate; $943.52 on an 800 sq ft ADU, and $0 at or below 750 sq ft.",
       "effective_date": "2025-01-01",
@@ -10572,7 +10549,7 @@
       "step": null,
       "min_sqft": 751,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.redlands.gov/wp-content/uploads/2024/10/ord_2968_0.pdf",
       "source_note": "Ordinance No. 2968 rate; $479.76 on an 800 sq ft ADU.",
       "effective_date": "2025-01-01",
@@ -10595,7 +10572,7 @@
       "step": null,
       "min_sqft": 751,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.redlands.gov/wp-content/uploads/2024/10/ord_2968_0.pdf",
       "source_note": "Ordinance No. 2968 rate; $409.04 on an 800 sq ft ADU.",
       "effective_date": "2025-01-01",
@@ -10618,7 +10595,7 @@
       "step": null,
       "min_sqft": 751,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.redlands.gov/wp-content/uploads/2024/10/ord_2968_0.pdf",
       "source_note": "Ordinance No. 2968 rate; $571.60 on an 800 sq ft ADU.",
       "effective_date": "2025-01-01",
@@ -10641,7 +10618,7 @@
       "step": null,
       "min_sqft": 751,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.redlands.gov/wp-content/uploads/2024/10/ord_2968_0.pdf",
       "source_note": "Ordinance No. 2968 rate; $360.24 on an 800 sq ft ADU.",
       "effective_date": "2025-01-01",
@@ -10664,7 +10641,7 @@
       "step": null,
       "min_sqft": 751,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.redlands.gov/wp-content/uploads/2024/10/ord_2968_0.pdf",
       "source_note": "Ordinance No. 2968 rate; $415.76 on an 800 sq ft ADU.",
       "effective_date": "2025-01-01",
@@ -10687,7 +10664,7 @@
       "step": null,
       "min_sqft": 751,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.redlands.gov/wp-content/uploads/2024/10/ord_2968_0.pdf",
       "source_note": "Ordinance No. 2968 rate; $1,116.32 on an 800 sq ft ADU.",
       "effective_date": "2025-01-01",
@@ -10710,7 +10687,7 @@
       "step": null,
       "min_sqft": 751,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.redlands.gov/wp-content/uploads/2024/10/ord_2968_0.pdf",
       "source_note": "Ordinance No. 2968 rate; $215.68 on an 800 sq ft ADU.",
       "effective_date": "2025-01-01",
@@ -10733,7 +10710,7 @@
       "step": null,
       "min_sqft": 751,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.redlands.gov/wp-content/uploads/2024/10/ord_2968_0.pdf",
       "source_note": "Ordinance No. 2968 rate; $1,892.56 on an 800 sq ft ADU.",
       "effective_date": "2025-01-01",
@@ -10756,7 +10733,7 @@
       "step": null,
       "min_sqft": 751,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.redlands.gov/wp-content/uploads/2024/10/ord_2968_0.pdf",
       "source_note": "Ordinance No. 2968 rate; $56.16 on an 800 sq ft ADU.",
       "effective_date": "2025-01-01",
@@ -10779,7 +10756,7 @@
       "step": null,
       "min_sqft": 751,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.redlands.gov/wp-content/uploads/2024/10/ord_2968_0.pdf",
       "source_note": "Ordinance No. 2968 rate; $530.64 on an 800 sq ft ADU.",
       "effective_date": "2025-01-01",
@@ -10802,7 +10779,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.sanleandro.org/1360/Accessory-Dwelling-Units",
       "source_note": "City Council Resolutions 2025-106 and 2025-107 (July 21, 2025) waived Park and street-improvement fees for all ADUs, and the FY2026-27 handout lists $0 ADU lines for the traffic fees, so $0 for an 800 sq ft ADU.",
       "effective_date": "2025-07-21",
@@ -10825,7 +10802,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.sanleandro.org/DocumentCenter/View/13960/Building-Fee-Schedule-Adopted-2025-26-PDF",
       "source_note": "Building fee schedule note [10] states the Community Planning Fee will not be charged for accessory dwelling unit permits, so $0 for an 800 sq ft ADU.",
       "effective_date": null,
@@ -10848,7 +10825,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "dwelling unit",
+      "applies_to": "all",
       "source_url": "https://ecode360.com/44255091",
       "source_note": "Walnut Municipal Code Chapter 7.16 charges $300 per dwelling unit at building permit application, so $300 for one 800 sq ft ADU unit.",
       "effective_date": null,
@@ -10871,7 +10848,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": 1000,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.beverlyhills.org/DocumentCenter/View/12862/FY-2025-2026-Taxes-Fees-and-Charges-PDF?bidId=",
       "source_note": "Water capacity ($1.88/sq ft) and supply ($1.74/sq ft) apply only to net new floor area over 1,000 sq ft, so $0 for an 800 sq ft ADU on an existing meter.",
       "effective_date": "2025-07-01",
@@ -10894,7 +10871,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": 1000,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.beverlyhills.org/DocumentCenter/View/12862/FY-2025-2026-Taxes-Fees-and-Charges-PDF?bidId=",
       "source_note": "Wastewater capacity ($0.53/sq ft) applies only to residential additions over 1,000 sq ft, so $0 for an 800 sq ft ADU.",
       "effective_date": "2025-07-01",
@@ -10917,7 +10894,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.beverlyhills.org/DocumentCenter/View/12862/FY-2025-2026-Taxes-Fees-and-Charges-PDF?bidId=",
       "source_note": "A compliant ADU is approved with a building permit only and no planning application fee applies, so $0 for an 800 sq ft ADU.",
       "effective_date": "2025-07-01",
@@ -10940,7 +10917,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "project valuation",
+      "applies_to": "all",
       "source_url": "https://www.beverlyhills.org/DocumentCenter/View/12862/FY-2025-2026-Taxes-Fees-and-Charges-PDF?bidId=",
       "source_note": "0.00187 per dollar of project valuation ($1.87 per $1,000) on all development in the FY2025-26 fee book.",
       "effective_date": "2025-07-01",
@@ -10963,7 +10940,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "development permit",
+      "applies_to": "all",
       "source_url": "https://www.beverlyhills.org/DocumentCenter/View/12862/FY-2025-2026-Taxes-Fees-and-Charges-PDF?bidId=",
       "source_note": "$92 on all development permits and plan review in the FY2025-26 fee book.",
       "effective_date": "2025-07-01",
@@ -10986,7 +10963,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "project valuation",
+      "applies_to": "all",
       "source_url": "https://www.beverlyhills.org/DocumentCenter/View/12862/FY-2025-2026-Taxes-Fees-and-Charges-PDF?bidId=",
       "source_note": "$4 per $100,000 of valuation ($1 per $25,000), minimum $1, in the FY2025-26 fee book.",
       "effective_date": "2025-07-01",
@@ -10994,7 +10971,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Rate shown as a percent of valuation (0.004%)."
+      "notes": "Rate shown as a percent of valuation (0.004%). Scope in source: project valuation."
     },
     {
       "item_id": "FI-461",
@@ -11009,7 +10986,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "application",
+      "applies_to": "all",
       "source_url": "https://www.beverlyhills.org/DocumentCenter/View/12862/FY-2025-2026-Taxes-Fees-and-Charges-PDF?bidId=",
       "source_note": "$4 per application in the FY2025-26 fee book.",
       "effective_date": "2025-07-01",
@@ -11032,7 +11009,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "permit",
+      "applies_to": "all",
       "source_url": "https://www.beverlyhills.org/DocumentCenter/View/12862/FY-2025-2026-Taxes-Fees-and-Charges-PDF?bidId=",
       "source_note": "$35 per permit in the FY2025-26 fee book.",
       "effective_date": "2025-07-01",
@@ -11055,7 +11032,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.beverlyhills.org/DocumentCenter/View/12862/FY-2025-2026-Taxes-Fees-and-Charges-PDF?bidId=",
       "source_note": "ADU-specific Certificate of Occupancy is $447 per application in the FY2025-26 fee book (general C of O is $1,214).",
       "effective_date": "2025-07-01",
@@ -11078,7 +11055,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.beverlyhills.org/DocumentCenter/View/12862/FY-2025-2026-Taxes-Fees-and-Charges-PDF?bidId=",
       "source_note": "Covenant processing is $1,416 for the 4-hour minimum in the FY2025-26 fee book, so $1,416 is the minimum for an 800 sq ft ADU.",
       "effective_date": "2025-07-01",
@@ -11101,7 +11078,7 @@
       "step": null,
       "min_sqft": 151,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://Burlingame.org/DocumentCenter/View/4777/Burlingame-Master-Fee-Schedule-FY2024-25?bidId=",
       "source_note": "Confirmed ADU rate $3.04/sq ft over 150 sq ft; the assessable basis is ambiguous, giving $1,976 on the excess-over-150 reading (650 sq ft) and $2,432 on the full-area reading (800 sq ft).",
       "effective_date": null,
@@ -11124,7 +11101,7 @@
       "step": null,
       "min_sqft": 151,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://Burlingame.org/DocumentCenter/View/4777/Burlingame-Master-Fee-Schedule-FY2024-25?bidId=",
       "source_note": "Confirmed ADU rate $4.63/sq ft over 150 sq ft; the assessable basis is ambiguous, giving $3,009.50 on the excess-over-150 reading and $3,704 on the full-area reading for an 800 sq ft ADU.",
       "effective_date": null,
@@ -11147,7 +11124,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://Burlingame.org/DocumentCenter/View/4777/Burlingame-Master-Fee-Schedule-FY2024-25?bidId=",
       "source_note": "ADU application fee $950 in the FY2024-25 Master Fee Schedule and the ADU submittal packet, which shows a $1,091 example total including the $141 Categorical Exemption.",
       "effective_date": null,
@@ -11170,7 +11147,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "project valuation",
+      "applies_to": "all",
       "source_url": "https://Burlingame.org/DocumentCenter/View/4777/Burlingame-Master-Fee-Schedule-FY2024-25?bidId=",
       "source_note": "0.2% of building valuation in the Master Fee Schedules.",
       "effective_date": null,
@@ -11178,7 +11155,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": null
+      "notes": "Scope in source: project valuation."
     },
     {
       "item_id": "FI-469",
@@ -11193,7 +11170,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://Burlingame.org/DocumentCenter/View/4777/Burlingame-Master-Fee-Schedule-FY2024-25?bidId=",
       "source_note": "Each MEP permit is $0.18/sq ft plus a $102 issuance fee, so 3 x ($144 + $102) = $738 on an 800 sq ft ADU, before any 25% plan-review add-ons.",
       "effective_date": null,
@@ -11216,7 +11193,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://Burlingame.org/DocumentCenter/View/4777/Burlingame-Master-Fee-Schedule-FY2024-25?bidId=",
       "source_note": "Affordable housing impact fees apply only to commercial linkage and multifamily at scale (11+ rental / 7+ for-sale units), so $0 for a single detached ADU.",
       "effective_date": null,
@@ -11239,7 +11216,7 @@
       "step": null,
       "min_sqft": 501,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.chicousd.org/Departments/Business-Services/Quick-Reference/School-Impact-Fees/index.html",
       "source_note": "Chico Unified posts $5.38/sq ft residential effective 7/19/2026 on its official School Impact Fees page, giving $4,304 on an 800 sq ft ADU.",
       "effective_date": "2026-07-19",
@@ -11262,7 +11239,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://catapultfilemanager-prod.s3.us-west-2.amazonaws.com/e12a7475-6d0d-4986-a8bb-538a9e5496e0/FY%202026-2027%20MASTER%20FEE%20SCHEDULE%20-%20Updated%2007-06-2026.pdf",
       "source_note": "FY2026/2027 Master Fee Schedule planning fee for a new detached ADU is $1,460 (up from $1,207 in FY2025/2026).",
       "effective_date": "2026-07-06",
@@ -11285,7 +11262,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://catapultfilemanager-prod.s3.us-west-2.amazonaws.com/e12a7475-6d0d-4986-a8bb-538a9e5496e0/FY%202026-2027%20MASTER%20FEE%20SCHEDULE%20-%20Updated%2007-06-2026.pdf",
       "source_note": "Energy Plan Check minimum fee is $282 for up to 2 residential units in the FY2026/2027 schedule.",
       "effective_date": "2026-07-06",
@@ -11293,7 +11270,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": null
+      "notes": "Scope in source: ADU."
     },
     {
       "item_id": "FI-474",
@@ -11308,7 +11285,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "project valuation",
+      "applies_to": "all",
       "source_url": "https://catapultfilemanager-prod.s3.us-west-2.amazonaws.com/e12a7475-6d0d-4986-a8bb-538a9e5496e0/FY%202026-2027%20MASTER%20FEE%20SCHEDULE%20-%20Updated%2007-06-2026.pdf",
       "source_note": "Seismic surcharge is 0.013% of established construction valuation for residential occupancies up to 3 stories, minimum $0.50, in the FY2026/2027 schedule.",
       "effective_date": "2026-07-06",
@@ -11316,7 +11293,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": null
+      "notes": "Scope in source: project valuation."
     },
     {
       "item_id": "FI-475",
@@ -11331,7 +11308,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.calwater.com/district/chico/",
       "source_note": "Chico has no city water utility (Cal Water Chico District serves the city) and city ADU standards state no additional water meter is required unless the applicant requests one, so $0 city water connection fee for the spec ADU.",
       "effective_date": null,
@@ -11354,7 +11331,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://files.cityofpacificgrove.org/Document_Center/Resolutions%20&%20Ordinances/Ordinances/2023/23-011_ADU_Amendments_Ord.pdf",
       "source_note": "PGMC 23.80.040(a) allows a compliant ADU with a building permit and no discretionary planning approval, and no ADU fee line appears in the Master Fee Schedule, so $0 for an 800 sq ft ADU.",
       "effective_date": null,
@@ -11377,7 +11354,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://public.destinyhosted.com/pacifdocs/2026/CC/20260520_2325/6309_Master_Fee_Schedule_FY2026-27.pdf",
       "source_note": "Sewer Lateral Report Review is $351 in the FY2026-27 Master Fee Schedule (FY2025-26: $334).",
       "effective_date": null,
@@ -11400,7 +11377,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": 1000,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.watsonville.gov/DocumentCenter/View/26927/Impact-Fees-2025-2026",
       "source_note": "Public Facilities Impact Fee is $0.40/sq ft only on new detached structures or additions over 1,000 sq ft, so $0 for an 800 sq ft ADU.",
       "effective_date": null,
@@ -11423,7 +11400,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.watsonville.gov/DocumentCenter/View/26927/Impact-Fees-2025-2026",
       "source_note": "Development Fee Summary Section I lists an accessory dwelling unit at $0.00 (vs $21,885 for a single-family detached home), so $0 for an 800 sq ft ADU.",
       "effective_date": null,
@@ -11446,7 +11423,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "https://www.watsonville.gov/DocumentCenter/View/26927/Impact-Fees-2025-2026",
       "source_note": "The 0.75%-of-valuation allocation applies only to projects with 2,000 sq ft or more of new floor area and $500,000 or more valuation, so $0 for an 800 sq ft ADU.",
       "effective_date": null,
@@ -11469,7 +11446,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "http://ca-watsonville.civicplus.com/DocumentCenter/View/28679/2026-27-Fee-Schedule",
       "source_note": "FY2026-27 new ADU schedule: $2,455 base plus $4.00 per sq ft over 500 sq ft, giving $3,655 for an 800 sq ft ADU.",
       "effective_date": "2026-07-01",
@@ -11492,7 +11469,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "ADU",
+      "applies_to": "all",
       "source_url": "http://ca-watsonville.civicplus.com/DocumentCenter/View/28679/2026-27-Fee-Schedule",
       "source_note": "Plan check is 67% of the building payment in the FY2026-27 schedule, giving $2,448.85 on the $3,655 ADU building fee.",
       "effective_date": "2026-07-01",
@@ -11515,7 +11492,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "detached ADU",
+      "applies_to": "all",
       "source_url": "https://www.fcusd.org/departments/facilities-planning/development-impact-fees",
       "source_note": "FCUSD official fee page: SFID 2 (representing the City of Folsom) $10.26/sq ft residential, eff. 4/16/2026; 800 sq ft = $8,208. ADUs of 500 sq ft or less of assessable space are excluded.",
       "effective_date": "2026-04-16",
@@ -11523,7 +11500,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Unified TK-12 district; Level I $5.38 justified in parallel only. Board resolution number not retrieved (12/1 target), but rate and effective date are on the district's official page."
+      "notes": "Unified TK-12 district; Level I $5.38 justified in parallel only. Board resolution number not retrieved (12/1 target), but rate and effective date are on the district's official page. Scope in source: detached ADU."
     },
     {
       "item_id": "FI-484",
@@ -11538,7 +11515,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "detached ADU",
+      "applies_to": "all",
       "source_url": "https://mccmeetingspublic.blob.core.usgovcloudapi.net/folsomca-meet-3a4a6348fb6e406bbb4479b092aba62f/ITEM-Attachment-001-31b238f23863471a8f8f3fdad7c7799a.pdf",
       "source_note": "Resolution No. 11481, Exhibit A, Section A Item 18: Detached and Attached ADUs $4,709 per permit, including plan review and inspection.",
       "effective_date": "2026-01-01",
@@ -11546,7 +11523,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Flat fee does not vary with ADU size or valuation. Subject to annual CPI adjustment; CPI-adjusted late-2026 figure not retrieved (12/1 target)."
+      "notes": "Flat fee does not vary with ADU size or valuation. Subject to annual CPI adjustment; CPI-adjusted late-2026 figure not retrieved (12/1 target). Scope in source: detached ADU."
     },
     {
       "item_id": "FI-485",
@@ -11561,7 +11538,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "detached ADU",
+      "applies_to": "all",
       "source_url": "https://mccmeetingspublic.blob.core.usgovcloudapi.net/folsomca-meet-3a4a6348fb6e406bbb4479b092aba62f/ITEM-Attachment-001-31b238f23863471a8f8f3fdad7c7799a.pdf",
       "source_note": "No standalone ADU planning fee in Resolution No. 11481; an 800 sq ft ADU at or under 16 ft on a non-Historic District lot is an exempted ADU, so design-review fee is $0.",
       "effective_date": "2026-01-01",
@@ -11569,7 +11546,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Non-exempt ADU lines ($400 Director-level Item 6(d); $864 Ministerial Item 6(k)) do not apply to the spec ADU."
+      "notes": "Non-exempt ADU lines ($400 Director-level Item 6(d); $864 Ministerial Item 6(k)) do not apply to the spec ADU. Scope in source: detached ADU."
     },
     {
       "item_id": "FI-486",
@@ -11584,7 +11561,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "detached ADU",
+      "applies_to": "all",
       "source_url": "https://mccmeetingspublic.blob.core.usgovcloudapi.net/folsomca-meet-3a4a6348fb6e406bbb4479b092aba62f/ITEM-Attachment-001-31b238f23863471a8f8f3fdad7c7799a.pdf",
       "source_note": "Resolution No. 11481, Building Fees Section E: Permit Processing Fee $79; the Section A header confirms additional permit processing fees apply to the flat-fee permit types.",
       "effective_date": "2026-01-01",
@@ -11592,7 +11569,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": null
+      "notes": "Scope in source: detached ADU."
     },
     {
       "item_id": "FI-487",
@@ -11607,7 +11584,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "detached ADU",
+      "applies_to": "all",
       "source_url": "https://www.gswater.com/sites/main/files/file-attachments/1946-w_approval__rule_16_language__sample_forms_update.pdf?1725490157",
       "source_note": "GSWC Rule No. 16 (Advice Letter 1946-W, eff. 8/31/2024): no charge for a service connection except enumerated cases, and no capital-facilities schedule applies to Claremont (about 11,000 connections, above the 2,000-connection threshold); an ADU sharing the existing service therefore pays $0 in connection charges.",
       "effective_date": "2024-08-31",
@@ -11615,7 +11592,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "A separately requested second ADU service is billed at actual cost (estimate-based, no fixed tariff amount), not $0. Sharing the service may reclassify the account to multi-family rates or require a larger meter (monthly service-rate consequences, not a connection fee)."
+      "notes": "A separately requested second ADU service is billed at actual cost (estimate-based, no fixed tariff amount), not $0. Sharing the service may reclassify the account to multi-family rates or require a larger meter (monthly service-rate consequences, not a connection fee). Scope in source: detached ADU."
     },
     {
       "item_id": "FI-488",
@@ -11630,7 +11607,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "detached ADU",
+      "applies_to": "all",
       "source_url": "https://www.cityofglendora.gov/files/assets/city/v/1/finance/documents/budgets-amp-reports/master-schedule-of-fees/adopted-master-fee-schedule-fy27-adopted-08.25.2026.pdf",
       "source_note": "No ADU, JADU, or SB 9 application line exists in the FY27 Master Schedule (Reso CC 2026-41) or the Planning Division fee sheet (Rev. Jul 2026); ADUs are ministerial, so the ADU planning application fee is $0.",
       "effective_date": null,
@@ -11638,7 +11615,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Technology User Fee 19% applies to planning applications generally, but with no ADU application fee there is no base to apply it to for the spec ADU."
+      "notes": "Technology User Fee 19% applies to planning applications generally, but with no ADU application fee there is no base to apply it to for the spec ADU. Scope in source: detached ADU."
     },
     {
       "item_id": "FI-489",
@@ -11653,7 +11630,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "detached ADU",
+      "applies_to": "all",
       "source_url": "https://moorparkca.gov/1012",
       "source_note": "Resolution No. 2026-4387, Planning Item 23: Zoning Clearance $210 fixed; an ADU requires approval of a zoning clearance (Moorpark Zoning Code 17.28.020(G)) and there is no standalone ADU planning fee.",
       "effective_date": "2026-07-01",
@@ -11661,7 +11638,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Subject to the 6% Technology Enhancement Fee (Planning Item 52), a percentage add-on not included here because the schema's percentage method is valuation-based."
+      "notes": "Subject to the 6% Technology Enhancement Fee (Planning Item 52), a percentage add-on not included here because the schema's percentage method is valuation-based. Scope in source: detached ADU."
     },
     {
       "item_id": "FI-490",
@@ -11676,7 +11653,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "detached ADU",
+      "applies_to": "all",
       "source_url": "https://storage.googleapis.com/proudcity/sanrafaelca/2026/06/5fb47a0d-1.a-update-to-park-impact-fee-programs-and-nexus-study.pdf",
       "source_note": "Ordinance No. 2065 / Resolution No. 15578 (June 15, 2026), Exhibit B2: ADU park DIF $1.25/sq ft at the current 50% phase; 800 sq ft = $1,000. ADUs under 750 sq ft are exempt per Gov. Code 66324(c)(1).",
       "effective_date": null,
@@ -11684,7 +11661,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Phased schedule: $1.88/sq ft on 7/1/2027, $2.50/sq ft on 7/1/2028, plus ENR CCI adjustments from 7/1/2027. First phase effective 60 days after adoption (mid-August 2026, exact date not pinned). Whether the counter adds a 66324 proportionality-to-primary overlay to this standalone per-sq-ft ADU rate is not stated (12/1 target)."
+      "notes": "Phased schedule: $1.88/sq ft on 7/1/2027, $2.50/sq ft on 7/1/2028, plus ENR CCI adjustments from 7/1/2027. First phase effective 60 days after adoption (mid-August 2026, exact date not pinned). Whether the counter adds a 66324 proportionality-to-primary overlay to this standalone per-sq-ft ADU rate is not stated (12/1 target). Scope in source: detached ADU."
     },
     {
       "item_id": "FI-491",
@@ -11699,7 +11676,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "detached ADU",
+      "applies_to": "all",
       "source_url": "https://marinwater.org/wp-content/uploads/2025/03/Ordinance-No.-469-Capacity-Charges-formerly-Connection-Fees.pdf",
       "source_note": "Marin Water Ordinance No. 469, section 11.56.040(h)(3): no new or separate water service and no capacity charge for one qualifying detached ADU per lot, so the capacity charge is $0 when the conditions are met.",
       "effective_date": "2025-07-01",
@@ -11722,7 +11699,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "detached ADU",
+      "applies_to": "all",
       "source_url": "https://storage.googleapis.com/proudcity/sanrafaelca/2026/07/agenda-packet-2026-07-20-3ed5d2c2.pdf",
       "source_note": "Formerly 1% of assessed valuation on all building permits (Reso 11473, 2004); repealed by Resolution No. 15568, adopted June 15, 2026, so the line is $0.",
       "effective_date": "2026-06-15",
@@ -11730,7 +11707,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Repeal's precise effective date and application to permits already in process were not pinned down (12/1 target)."
+      "notes": "Repeal's precise effective date and application to permits already in process were not pinned down (12/1 target). Scope in source: detached ADU."
     },
     {
       "item_id": "FI-493",
@@ -11745,7 +11722,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "detached ADU",
+      "applies_to": "all",
       "source_url": "https://www.vallejo.gov/common/pages/GetFile.ashx?key=5o1FAVxz",
       "source_note": "FY 2026-27 Master Fee Schedule, Planning Division Line 18: Accessory Dwelling Unit $866 base + 5% General Plan Update ($43) + 4% Technology ($34) + 3% Permit Streamlining ($25) = $968 total.",
       "effective_date": null,
@@ -11753,7 +11730,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Standalone ADU planning fee; Ordinance No. 1890 section 16.303.05(A) ties ADU applications to the Master Fee Schedule review fees."
+      "notes": "Standalone ADU planning fee; Ordinance No. 1890 section 16.303.05(A) ties ADU applications to the Master Fee Schedule review fees. Scope in source: detached ADU."
     },
     {
       "item_id": "FI-494",
@@ -11768,7 +11745,7 @@
       "step": null,
       "min_sqft": 800,
       "max_sqft": 899,
-      "applies_to": "detached ADU",
+      "applies_to": "all",
       "source_url": "https://www.vallejowastewater.org/DocumentCenter/View/1986/FY-2026-27-Schedule-of-Fees-and-Charges_Master",
       "source_note": "VFWD Schedule of Rates eff. 7/1/2026, District Code 4.04.070: ADU capacity bands; 800-899 sq ft Mainland = $2,865. Bands start at 501 sq ft; contained ADUs are never charged.",
       "effective_date": "2026-07-01",
@@ -11776,7 +11753,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Mare Island schedule differs (800-899 sq ft $3,325); Sears Point supplemental $615/EDU is parcel-specific and not included. The district Developers page wording (post-hoc ADUs pay admin fees only vs. concurrent ADUs pay admin + capacity) sits in tension with the codified band — flagged for 12/1."
+      "notes": "Mare Island schedule differs (800-899 sq ft $3,325); Sears Point supplemental $615/EDU is parcel-specific and not included. The district Developers page wording (post-hoc ADUs pay admin fees only vs. concurrent ADUs pay admin + capacity) sits in tension with the codified band — flagged for 12/1. Scope in source: detached ADU."
     },
     {
       "item_id": "FI-495",
@@ -11791,7 +11768,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "detached ADU",
+      "applies_to": "all",
       "source_url": "https://www.vallejowastewater.org/DocumentCenter/View/1986/FY-2026-27-Schedule-of-Fees-and-Charges_Master",
       "source_note": "VFWD Schedule of Rates eff. 7/1/2026, Development Services Administrative Fees: Plan Review, Minor Residential 1-2 Units (expressly includes ADU new construction; up to 3 submittals) $580 per permit.",
       "effective_date": "2026-07-01",
@@ -11799,7 +11776,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": null
+      "notes": "Scope in source: detached ADU."
     },
     {
       "item_id": "FI-496",
@@ -11814,7 +11791,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "detached ADU",
+      "applies_to": "all",
       "source_url": "https://www.vallejowastewater.org/DocumentCenter/View/1986/FY-2026-27-Schedule-of-Fees-and-Charges_Master",
       "source_note": "VFWD Schedule of Rates eff. 7/1/2026, Development Services Administrative Fees: Inspection $400 per permit.",
       "effective_date": "2026-07-01",
@@ -11822,7 +11799,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": null
+      "notes": "Scope in source: detached ADU."
     },
     {
       "item_id": "FI-497",
@@ -11837,7 +11814,7 @@
       "step": null,
       "min_sqft": null,
       "max_sqft": null,
-      "applies_to": "detached ADU",
+      "applies_to": "all",
       "source_url": "https://www.vallejowastewater.org/DocumentCenter/View/1986/FY-2026-27-Schedule-of-Fees-and-Charges_Master",
       "source_note": "VFWD Schedule of Rates eff. 7/1/2026, Development Services Administrative Fees: Permit Processing $61.94 per permit/per unit.",
       "effective_date": "2026-07-01",
@@ -11845,7 +11822,7 @@
       "confidence": "A",
       "status": "verified",
       "internal_notes": null,
-      "notes": "Admin subtotal with plan review and inspection: $1,041.94."
+      "notes": "Admin subtotal with plan review and inspection: $1,041.94. Scope in source: detached ADU."
     },
     {
       "item_id": "FI-498",

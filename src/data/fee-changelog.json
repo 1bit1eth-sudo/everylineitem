@@ -2,6 +2,13 @@
   "entries": [
     {
       "date": "2026-10-21",
+      "headline": "Fix: calculator scope flags + Milpitas conditional removal + homepage school-count caption",
+      "detail": "All Batch 19-28 items had descriptive applies_to values (e.g. 'detached ADU') that the fee calculator treats as unsupported, so every new fee page rendered 'Verification in progress' despite verified items on file. All 164 items now carry applies_to 'all' (the calculator's ADU scenario), with the original scope text preserved in notes where it added information. Milpitas's conditional $703 sprinkler review removed (total 165 -> 164 items). Homepage caption 'of 38 jurisdictions' replaced with the computed school-fee jurisdiction count (84).",
+      "jurisdictions": [],
+      "items_added": -1
+    },
+    {
+      "date": "2026-10-21",
       "headline": "Batch 28: 5 new jurisdictions, 11 verified fee items",
       "detail": "Claremont, Glendora, Moorpark, San Rafael, Vallejo. Vallejo contributes 5 items; Claremont, Glendora and Moorpark enter with a single planning-side line each (zoning clearance / no-ADU-planning-fee confirmations); San Rafael adds 3.",
       "jurisdictions": [
@@ -67,8 +74,8 @@
     },
     {
       "date": "2026-10-21",
-      "headline": "Batch 23: 5 new jurisdictions, 13 verified fee items",
-      "detail": "Fresno, Grover Beach, Inglewood, Milpitas, Monterey County (unincorporated). Monterey County's school line is the Salinas-area SUHSD Level II shared rate, $4.82/sq ft - Salinas pockets only, not countywide; North County differs.",
+      "headline": "Batch 23: 5 new jurisdictions, 12 verified fee items",
+      "detail": "Fresno, Grover Beach, Inglewood, Milpitas, Monterey County (unincorporated). Monterey County's school line is the Salinas-area SUHSD Level II shared rate, $4.82/sq ft - Salinas pockets only, not countywide; North County differs. Correction (2026-10-21): Milpitas's $703 fire-sprinkler review fee was removed from the count - it is conditional on sprinklers being required, not part of the standard spec.",
       "jurisdictions": [
         "Fresno",
         "Grover Beach",
@@ -76,7 +83,7 @@
         "Milpitas",
         "Monterey County (unincorporated)"
       ],
-      "items_added": 13
+      "items_added": 12
     },
     {
       "date": "2026-10-21",
