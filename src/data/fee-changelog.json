@@ -2,6 +2,13 @@
   "entries": [
     {
       "date": "2026-10-21",
+      "headline": "Correction: Batch 20/22 changelog wording",
+      "detail": "Two changelog entries overstated what is in the calculator: Batch 20 named Stanislaus County's $3,061 PFF figure as a headline figure, but $3,061 is the published cap only - the 800 sq ft amount is proportional to the primary dwelling and stays in the research file (the calculator carries the $2,625 permit and the $900 septic fee). Batch 22 credited Corona with a $5.38 school fee; Corona has no verified school item on file. No fee data changed in this correction.",
+      "jurisdictions": [],
+      "items_added": 0
+    },
+    {
+      "date": "2026-10-21",
       "headline": "Fix: calculator scope flags + Milpitas conditional removal + homepage school-count caption",
       "detail": "All Batch 19-28 items had descriptive applies_to values (e.g. 'detached ADU') that the fee calculator treats as unsupported, so every new fee page rendered 'Verification in progress' despite verified items on file. All 164 items now carry applies_to 'all' (the calculator's ADU scenario), with the original scope text preserved in notes where it added information. Milpitas's conditional $703 sprinkler review removed (total 165 -> 164 items). Homepage caption 'of 38 jurisdictions' replaced with the computed school-fee jurisdiction count (84).",
       "jurisdictions": [],
@@ -88,7 +95,7 @@
     {
       "date": "2026-10-21",
       "headline": "Batch 22: 5 new jurisdictions, 19 verified fee items",
-      "detail": "Chino, Corona, Monrovia, Sierra Madre, Upland. Upland contributes 7 items, the batch's deepest row; Chino and Corona school fees at the $5.38 SAB maximum.",
+      "detail": "Chino, Corona, Monrovia, Sierra Madre, Upland. Upland contributes 7 items, the batch's deepest row; Chino's school fee is at the $5.38 SAB maximum, and Corona's $3,096 sewer capacity fee is its only nonzero line (its school fee remains unverified).",
       "jurisdictions": [
         "Chino",
         "Corona",
@@ -114,7 +121,7 @@
     {
       "date": "2026-10-21",
       "headline": "Batch 20: 5 new jurisdictions, 17 verified fee items",
-      "detail": "Concord, Hillsborough, Napa, South Gate, Stanislaus County (unincorporated) (HCD ADU-permit ranks #115-119). Stanislaus County's $3,061 flat PFF cap for ADUs and $2,625 flat ADU permit are the batch's headline figures; South Gate's $0 ADU connection exemption is codified.",
+      "detail": "Concord, Hillsborough, Napa, South Gate, Stanislaus County (unincorporated) (HCD ADU-permit ranks #115-119). Stanislaus County's $2,625 flat ADU permit is the batch's headline figure; its $3,061 PFF figure is the published cap only - the actual 800 sq ft amount is proportional to the primary dwelling, so it stays in the research file for 12/1 and is not in the calculator. South Gate's $0 ADU connection exemption is codified.",
       "jurisdictions": [
         "Concord",
         "Hillsborough",
