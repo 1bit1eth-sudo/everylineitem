@@ -372,6 +372,217 @@ export function calcJurisdiction(
 }
 
 // ---------------------------------------------------------------------------
+// SB 1117 comparison (effective Jan 1, 2027): for a homeowner's first two
+// ADUs, impact fees apply only to the square footage above 750. Per-sq-ft
+// lines scale to (sqft - 750); flat lines cannot be converted until cities
+// publish how flat fees map to the excess-area rule, so they are reported
+// as uncertain and never guessed.
+// ---------------------------------------------------------------------------
+
+export interface SB1117Line {
+  item: FeeItem;
+  currentLow: number;
+  currentHigh: number | null;
+  /** null => conversion not published for this line. */
+  futureLow: number | null;
+  futureHigh: number | null;
+  uncertain: boolean;
+}
+
+export interface SB1117Result {
+  sqft: number;
+  excess: number;
+  lines: SB1117Line[];
+  /** Current-law impact total (ok lines only). */
+  currentLow: number;
+  currentHigh: number | null;
+  /** 2027 impact total over convertible lines only. */
+  futureLow: number;
+  futureHigh: number | null;
+  /** Savings over convertible lines only. */
+  savingsLow: number;
+  savingsHigh: number | null;
+  /** Current-law total of lines that cannot be converted yet. */
+  uncertainLow: number;
+  uncertainHigh: number | null;
+  hasImpactLines: boolean;
+}
+
+export function calcSB1117(
+  data: FeeData,
+  jurisId: string,
+  sqft: number
+): SB1117Result {
+  const juris = data.jurisdictions.find(j => j.juris_id === jurisId);
+  if (!juris) {
+    throw new Error(`[fee-calculator] unknown jurisdiction "${jurisId}"`);
+  }
+  const excess = Math.max(0, sqft - data.rules.impact_exempt_max_sqft);
+  const lines: SB1117Line[] = [];
+  for (const item of data.fee_items.filter(
+    i => i.juris_id === jurisId && i.category === "impact"
+  )) {
+    const line = calcLine(item, juris, sqft, data.rules);
+    if (line.kind === "out_of_scope" || line.kind === "skipped") continue;
+    if (line.kind === "exempt") {
+      lines.push({
+        item,
+        currentLow: 0,
+        currentHigh: null,
+        futureLow: 0,
+        futureHigh: null,
+        uncertain: false,
+      });
+      continue;
+    }
+    if (item.method === "per_sqft" && item.rate_low != null) {
+      lines.push({
+        item,
+        currentLow: line.low,
+        currentHigh: line.high,
+        futureLow: Math.round(item.rate_low * excess),
+        futureHigh:
+          item.rate_high != null
+            ? Math.round(item.rate_high * excess)
+            : null,
+        uncertain: false,
+      });
+    } else {
+      lines.push({
+        item,
+        currentLow: line.low,
+        currentHigh: line.high,
+        futureLow: null,
+        futureHigh: null,
+        uncertain: true,
+      });
+    }
+  }
+
+  let currentLow = 0;
+  let currentHigh = 0;
+  let currentHasRange = false;
+  let futureLow = 0;
+  let futureHigh = 0;
+  let futureHasRange = false;
+  let savingsLow = 0;
+  let savingsHigh = 0;
+  let savingsHasRange = false;
+  let uncertainLow = 0;
+  let uncertainHigh = 0;
+  let uncertainHasRange = false;
+  for (const l of lines) {
+    currentLow += l.currentLow;
+    if (l.currentHigh != null) {
+      currentHigh += l.currentHigh;
+      currentHasRange = true;
+    } else {
+      currentHigh += l.currentLow;
+    }
+    if (l.uncertain) {
+      uncertainLow += l.currentLow;
+      if (l.currentHigh != null) {
+        uncertainHigh += l.currentHigh;
+        uncertainHasRange = true;
+      } else {
+        uncertainHigh += l.currentLow;
+      }
+    } else {
+      const fl = l.futureLow ?? 0;
+      futureLow += fl;
+      if (l.futureHigh != null) {
+        futureHigh += l.futureHigh;
+        futureHasRange = true;
+      } else {
+        futureHigh += fl;
+      }
+      savingsLow += l.currentLow - fl;
+      const ch = l.currentHigh ?? l.currentLow;
+      const fh = l.futureHigh ?? fl;
+      savingsHigh += ch - fh;
+      if (l.currentHigh != null || l.futureHigh != null) {
+        savingsHasRange = true;
+      }
+    }
+  }
+
+  return {
+    sqft,
+    excess,
+    lines,
+    currentLow,
+    currentHigh: currentHasRange ? currentHigh : null,
+    futureLow,
+    futureHigh: futureHasRange ? futureHigh : null,
+    savingsLow,
+    savingsHigh: savingsHasRange ? savingsHigh : null,
+    uncertainLow,
+    uncertainHigh: uncertainHasRange ? uncertainHigh : null,
+    hasImpactLines: lines.length > 0,
+  };
+}
+
+function sb1117BlockHTML(data: FeeData, jurisId: string, sqft: number): string {
+  const sb = calcSB1117(data, jurisId, sqft);
+  const wrap = (inner: string) =>
+    `<div class="mt-3 rounded-md border border-teal-600/40 bg-teal-50 p-4 dark:bg-teal-950/30">
+      <div class="text-foreground/70 text-xs tracking-wide uppercase">Coming Jan 1, 2027 · SB 1117 — permit now vs permit after Jan 1</div>
+      ${inner}
+    </div>`;
+  if (!sb.hasImpactLines) {
+    return wrap(
+      `<p class="mt-1 text-sm">No impact-fee line items are on file for this jurisdiction yet, so SB 1117 changes nothing here.</p>`
+    );
+  }
+  if (sqft <= data.rules.impact_exempt_max_sqft) {
+    return wrap(
+      `<p class="mt-1 text-sm">At ${sqft.toLocaleString("en-US")} sq ft, impact fees are $0 under both rules — SB 1117 changes nothing at this size. The change only matters above 750 sq ft.</p>`
+    );
+  }
+  const headline =
+    sb.savingsLow > 0
+      ? `Waiting until January could save about <strong>${fmtRange(sb.savingsLow, sb.savingsHigh)}</strong> on impact fees.`
+      : sb.uncertainLow > 0
+        ? `Computed savings are $0 — but <strong>${fmtRange(sb.uncertainLow, sb.uncertainHigh)}</strong> in flat impact fees cannot be converted yet, so the real savings could be higher.`
+        : `No change — this jurisdiction's impact fees do not move under SB 1117 at this size.`;
+  const rows = sb.lines
+    .map(l => {
+      const futureCell = l.uncertain
+        ? `<span class="text-foreground/60">Conversion not published yet</span>`
+        : `<span class="font-medium">${fmtRange(l.futureLow ?? 0, l.futureHigh)}</span>`;
+      return `<tr class="border-border border-b align-top">
+        <td class="py-2 pe-3"><div class="font-medium">${esc(l.item.fee_name)}${itemBadgeHTML(l.item.status)}</div></td>
+        <td class="py-2 pe-3 text-right tabular-nums whitespace-nowrap">${fmtRange(l.currentLow, l.currentHigh)}</td>
+        <td class="py-2 text-right tabular-nums whitespace-nowrap">${futureCell}</td>
+      </tr>`;
+    })
+    .join("");
+  const uncertainNote =
+    sb.uncertainLow > 0
+      ? `<p class="text-foreground/70 mt-2 text-xs">Flat impact fees of ${fmtRange(sb.uncertainLow, sb.uncertainHigh)} are not converted above: cities have not published how flat fees map to the excess-area rule, so we do not guess them.</p>`
+      : "";
+  return wrap(`
+    <div class="mt-2 grid gap-3 sm:grid-cols-3">
+      <div><div class="text-foreground/70 text-xs uppercase">2026 impact fees</div><div class="text-xl font-semibold tabular-nums">${fmtRange(sb.currentLow, sb.currentHigh)}</div></div>
+      <div><div class="text-foreground/70 text-xs uppercase">2027 impact fees (per-sq-ft lines)</div><div class="text-xl font-semibold tabular-nums">${fmtRange(sb.futureLow, sb.futureHigh)}</div></div>
+      <div><div class="text-foreground/70 text-xs uppercase">You could save</div><div class="text-xl font-semibold tabular-nums">${fmtRange(sb.savingsLow, sb.savingsHigh)}</div></div>
+    </div>
+    <p class="mt-2 text-sm font-medium">${headline}</p>
+    <div class="relative mt-3 w-full overflow-x-auto">
+      <table class="w-full min-w-[28rem] border-collapse text-sm">
+        <thead><tr class="border-border border-b text-left">
+          <th class="py-2 pe-3 font-semibold">Impact fee</th>
+          <th class="py-2 pe-3 text-right font-semibold">2026</th>
+          <th class="py-2 text-right font-semibold">2027</th>
+        </tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>
+    ${uncertainNote}
+    <p class="text-foreground/70 mt-2 text-xs">Only impact fees change. School fees, permit fees, and utility/capacity charges are unchanged, and SB 1117 covers a homeowner's first two ADUs. Waiting has its own costs — schedule changes, delay, financing — so this is a fee comparison, not advice to wait.</p>`);
+}
+
+// ---------------------------------------------------------------------------
 // Formatting + HTML rendering (shared by SSR and client)
 // ---------------------------------------------------------------------------
 
@@ -510,6 +721,7 @@ export function resultsHTML(
       <p class="mt-1 text-sm">${cliffText}</p>
     </div>
   </div>
+  ${sb1117BlockHTML(data, jurisId, sqft)}
   <div class="relative mt-6 w-full overflow-x-auto">
     <table class="w-full min-w-[40rem] border-collapse text-sm">
       <thead>
