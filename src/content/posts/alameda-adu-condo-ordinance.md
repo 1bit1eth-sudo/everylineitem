@@ -4,7 +4,7 @@ description: "Alameda is moving to implement AB 1033 — letting homeowners sell
 pubDatetime: 2026-10-23T01:00:00Z
 author: "Every Line Item"
 tags: ["adu", "ab-1033", "alameda", "legislation", "condo", "california", "2026"]
-draft: false
+draft: true
 verifiedPublished: "23 Oct 2026"
 lastVerified: "23 Oct 2026"
 nextReview: "Jan 2027"
