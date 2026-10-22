@@ -6,11 +6,11 @@ author: "Every Line Item"
 tags: ["adu cost", "750 sq ft cliff", "impact fees", "california", "2026"]
 draft: false
 verifiedPublished: "11 Oct 2026"
-lastVerified: "9 Oct 2026"
+lastVerified: "23 Oct 2026"
 nextReview: "Jan 2027"
 faqs:
   - question: "What is the 750 sq ft cliff for ADUs in California?"
-    answer: "State law (Gov. Code §66311.5) bars cities from charging impact fees on ADUs under 750 square feet. At 750 and above, cities may charge fees proportional to the primary dwelling's size. The 'cliff' is the cost jump at that threshold: a 749 sq ft ADU pays $0 in impact fees while an 800 sq ft ADU can owe $2,000–$20,000 depending on the city. Effective January 1, 2027, SB 1117 narrows the charge to only the square footage above 750 for a homeowner's first two ADUs."
+    answer: "State law (Gov. Code §66311.5) bars cities from charging impact fees on ADUs of 750 square feet or less. Above 750, cities may charge fees proportional to the primary dwelling's size. The 'cliff' is the cost jump at that threshold: a 749 sq ft ADU pays $0 in impact fees while an 800 sq ft ADU can owe $2,000–$20,000 depending on the city. Effective January 1, 2027, SB 1117 narrows the charge to only the square footage above 750 for a homeowner's first two ADUs."
   - question: "Does the 750 sq ft cliff apply to school fees?"
     answer: "No. School district developer fees are a separate regime (Ed. Code §17620), levied by school districts rather than cities. Districts may charge ADUs of 500 sq ft or more — the threshold is 500, not 750. An ADU between 500 and 749 sq ft pays school fees but no city impact fees. SB 1117 does not change school fees."
   - question: "How much does crossing 750 sq ft cost in real cities?"
@@ -28,8 +28,8 @@ This is the **750 sq ft cliff**, the single most consequential number in Califor
 
 State law — Gov. Code §66311.5, the ADU fee section — says two things:
 
-1. **ADUs under 750 square feet: no impact fees.** Not reduced, not deferred. Zero. Cities, counties, and special districts may not impose them.
-2. **ADUs of 750 square feet or more: fees must be "proportionate"** to the primary dwelling — typically (ADU sq ft ÷ house sq ft) × the single-family fee.
+1. **ADUs of 750 square feet or less: no impact fees.** Not reduced, not deferred. Zero. Cities, counties, and special districts may not impose them.
+2. **ADUs above 750 square feet: fees must be "proportionate"** to the primary dwelling — typically (ADU sq ft ÷ house sq ft) × the single-family fee.
 
 Since a 2025 cleanup bill (SB 543), the 750 is measured in **interior livable space**, and school fees use a different threshold entirely: **500 sq ft** (Ed. Code §17620). So a 600 sq ft ADU pays school district fees but no city impact fees — two cliffs, two rulers.
 
@@ -39,7 +39,7 @@ The law sets the threshold. Each city sets the price of crossing it.
 
 | City | At 749 sq ft | At 800 sq ft | The cliff |
 | --- | --- | --- | --- |
-| Torrance | $0 | **$2,243.47** flat | A single line in the fee schedule: "ADU 750 SF or greater" |
+| Torrance | $0 | **$2,243.47** flat | A single line in the fee schedule: "ADU 750 SF or greater" (schedule wording predates the 2026 change; state law now exempts 750 sq ft or less) |
 | Sacramento | $0 | **~$5,728** city impact fees | The "real cliff" — the city's own free plans are drawn at 747 sq ft for a reason |
 | Glendale | $0 | **up to $4,700** | The "50 sq ft cliff" — 749 pays nothing, 800 pays the schedule maximum |
 | Fullerton | $0 | **~$6,411** pro-rata | DIF on the full 800, scaled to the house |
