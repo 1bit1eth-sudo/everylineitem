@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "date": "2026-10-23",
+      "headline": "Correction: 6 Batch 19-28 items fixed on re-verification",
+      "detail": "Re-verification of the Batch 19-28 intake against source documents corrected 6 items: Burlingame MEP permits $738 to $729 (FY2024-25 issuance fee is $99, not $102); San Mateo County school fee effective date 2026-04-16 to 2026-06-15 (Resolution 25.26.15 takes effect sixty days after adoption); Buena Park and Newport Beach OC San capacity charges $1,368 to $1,710 (Table A bills per 1,000 sq ft or portion thereof, so an 800 sq ft ADU is one full block); Folsom building permit and processing fee effective dates 2026-01-01 to 2025-07-01 (Resolution 11481 Section A header). Amounts for the Folsom and San Mateo County items are unchanged.",
+      "jurisdictions": [
+        "Buena Park",
+        "Burlingame",
+        "Folsom",
+        "Newport Beach",
+        "San Mateo County"
+      ],
+      "items_added": 0
+    },
+    {
       "date": "2026-10-21",
       "headline": "Correction: Batch 20/22 changelog wording",
       "detail": "Two changelog entries overstated what is in the calculator: Batch 20 named Stanislaus County's $3,061 PFF figure as a headline figure, but $3,061 is the published cap only - the 800 sq ft amount is proportional to the primary dwelling and stays in the research file (the calculator carries the $2,625 permit and the $900 septic fee). Batch 22 credited Corona with a $5.38 school fee; Corona has no verified school item on file. No fee data changed in this correction.",
