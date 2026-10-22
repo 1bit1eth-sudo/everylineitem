@@ -24,6 +24,11 @@ const schools = items
   .filter(i => i.category === "school" && i.method === "per_sqft")
   .sort((a, b) => a.rate_low - b.rate_low);
 const atCeiling = schools.filter(s => s.rate_low === 5.38).length;
+const maxSchool = schools[schools.length - 1];
+const maxSchoolNote =
+  maxSchool.rate_low > 5.38
+    ? `in ${names[maxSchool.juris_id]}, where the district charges a Level II $${maxSchool.rate_low}/sq ft fee — above the $5.38 state maximum`
+    : `where districts charge the $5.38 state maximum`;
 
 const totals = new Map<string, number>();
 const counts = new Map<string, number>();
@@ -51,7 +56,7 @@ const facts = [
   {
     stat: `${fmt(schools[0].rate_low * 800)} → ${fmt(schools[schools.length - 1].rate_low * 800)}`,
     label: "School-fee spread",
-    desc: `The same 800 sq ft ADU pays ${fmt(schools[0].rate_low * 800)} in school fees in ${names[schools[0].juris_id]} and ${fmt(schools[schools.length - 1].rate_low * 800)} where districts charge the $5.38 state maximum — across ${schools.length} tracked districts.`,
+    desc: `The same 800 sq ft ADU pays ${fmt(schools[0].rate_low * 800)} in school fees in ${names[schools[0].juris_id]} and ${fmt(schools[schools.length - 1].rate_low * 800)} ${maxSchoolNote} — across ${schools.length} tracked districts.`,
   },
   {
     stat: `${atCeiling} of ${schools.length}`,
