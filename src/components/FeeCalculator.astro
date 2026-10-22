@@ -67,6 +67,7 @@ const selectClass =
             <optgroup label={regionLabel(region)}>
               {data.jurisdictions
                 .filter(j => j.region === region)
+                .sort((a, b) => a.name.localeCompare(b.name, "en-US"))
                 .map(j => (
                   <option
                     value={j.juris_id}
