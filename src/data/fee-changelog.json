@@ -2,6 +2,13 @@
   "entries": [
     {
       "date": "2026-10-23",
+      "headline": "New: SB 1117 permit-now-vs-January comparison in the calculator",
+      "detail": "The calculator now shows a 2027 preview alongside current impact fees: per-square-foot impact lines scale to the square footage above 750, and flat impact lines are marked where the city has not published a conversion. Only impact fees change; school fees, permit fees, and utility/capacity charges are unchanged, and the rule covers a homeowner's first two ADUs. A companion post draft covers the eight jurisdictions where January savings can be computed at 800 sq ft.",
+      "jurisdictions": [],
+      "items_added": 0
+    },
+    {
+      "date": "2026-10-23",
       "headline": "Correction: 750 sq ft boundary updated to current law (SB 543)",
       "detail": "The homepage Hayward example and the 750 sq ft cliff post stated the pre-2026 rule (exempt under 750, charged at 750 and above). Current Gov. Code §66311.5(c)(1), as amended by SB 543 effective January 1, 2026, exempts ADUs of 750 square feet or less; the charge starts above 750. The calculator already applied the current rule, so no fee amounts changed: Hayward is $0 at 750 and $3,823 at 751, and the homepage now carries the through-December-31-2026 qualifier with the SB 1117 change noted. The homepage change log now shows headlines only, with detail on the full log page.",
       "jurisdictions": [
