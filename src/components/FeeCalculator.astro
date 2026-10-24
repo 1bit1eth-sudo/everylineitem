@@ -2,6 +2,8 @@
 import rawFeesJson from "../data/fees.json";
 import {
   resultsHTML,
+  jurisAreas,
+  DEFAULT_PRIMARY_SQFT,
   type FeeData,
 } from "../lib/feeCalc";
 
@@ -17,6 +19,9 @@ const data = feesJson as unknown as FeeData;
 
 const DEFAULT_JURIS = "SAN-JOSE";
 const DEFAULT_SQFT = 800;
+const DEFAULT_PRIMARY = DEFAULT_PRIMARY_SQFT;
+const MIN_PRIMARY = 500;
+const MAX_PRIMARY = 10000;
 const MIN_SQFT = 200;
 const MAX_SQFT = 1200;
 const CLIFF_SQFT = data.rules.impact_exempt_max_sqft; // 750
@@ -66,7 +71,7 @@ const selectClass =
           regions.map(region => (
             <optgroup label={regionLabel(region)}>
               {data.jurisdictions
-                .filter(j => j.region === region)
+                .filter(j => j.region === region && j.status !== "illustrative")
                 .sort((a, b) => a.name.localeCompare(b.name, "en-US"))
                 .map(j => (
                   <option
@@ -123,6 +128,39 @@ const selectClass =
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="mt-5 grid gap-5 sm:grid-cols-2">
+    <label class="flex flex-col gap-2 text-sm font-medium">
+      <span>Primary dwelling size</span>
+      <span class="flex items-center gap-1">
+        <input
+          id="fee-primary"
+          type="number"
+          value={DEFAULT_PRIMARY}
+          min={MIN_PRIMARY}
+          max={MAX_PRIMARY}
+          step="50"
+          aria-label="Primary dwelling size in square feet"
+          class={selectClass}
+        />
+        <span class="text-sm font-normal opacity-70">sq ft</span>
+      </span>
+      <span class="text-xs font-normal opacity-70">
+        Only used to prorate dwelling-base impact fees (ADU ÷ primary). The
+        1,600 sq ft default is an assumption, not a verified figure — enter
+        your home's actual size.
+      </span>
+    </label>
+
+    <label id="fee-area-wrap" class="flex flex-col gap-2 text-sm font-medium" hidden>
+      <span>Area schedule</span>
+      <select id="fee-area" class={selectClass}></select>
+      <span class="text-xs font-normal opacity-70">
+        This jurisdiction has mutually exclusive area schedules — a parcel
+        pays one, not both.
+      </span>
+    </label>
   </div>
 
   <div class="mt-4 flex justify-end">
@@ -207,7 +245,44 @@ const selectClass =
   const jurisSel = document.getElementById("fee-juris") as HTMLSelectElement | null;
   const sqftInput = document.getElementById("fee-sqft") as HTMLInputElement | null;
   const sqftVal = document.getElementById("fee-sqft-val");
+  const primaryInput = document.getElementById("fee-primary") as HTMLInputElement | null;
+  const areaWrap = document.getElementById("fee-area-wrap") as HTMLElement | null;
+  const areaSel = document.getElementById("fee-area") as HTMLSelectElement | null;
   const results = document.getElementById("fee-results");
+
+  function jurisAreas(jurisId: string): string[] {
+    const areas = new Set<string>();
+    for (const i of data.fee_items || []) {
+      if (i.juris_id === jurisId && i.area != null && i.area !== "") {
+        areas.add(i.area);
+      }
+    }
+    return [...areas].sort((a, b) => a.localeCompare(b, "en-US"));
+  }
+
+  function syncAreaSelect() {
+    if (!jurisSel || !areaWrap || !areaSel) return;
+    const areas = jurisAreas(jurisSel.value);
+    if (areas.length === 0) {
+      areaWrap.hidden = true;
+      areaSel.innerHTML = "";
+      return;
+    }
+    areaWrap.hidden = false;
+    const prev = areaSel.value;
+    areaSel.innerHTML = areas
+      .map(a => `<option value="${a}">${a}</option>`)
+      .join("");
+    if (prev && areas.includes(prev)) areaSel.value = prev;
+  }
+
+  function calcOpts() {
+    const primary = primaryInput ? Math.round(Number(primaryInput.value)) : NaN;
+    return {
+      primarySqft: Number.isFinite(primary) && primary > 0 ? primary : 1600,
+      area: areaSel && areaWrap && !areaWrap.hidden && areaSel.value ? areaSel.value : null,
+    };
+  }
 
   function update() {
     if (!jurisSel || !sqftInput || !results) return;
@@ -215,13 +290,18 @@ const selectClass =
     if (sqftVal) {
       sqftVal.textContent = `${sqft.toLocaleString("en-US")} sq ft`;
     }
-    results.innerHTML = resultsHTML(data, jurisSel.value, sqft);
+    results.innerHTML = resultsHTML(data, jurisSel.value, sqft, calcOpts());
     syncShareUrl(); // [share-url] keep the URL copy-paste shareable
   }
 
   if (jurisSel && sqftInput && results) {
-    jurisSel.addEventListener("change", update);
+    jurisSel.addEventListener("change", () => {
+      syncAreaSelect();
+      update();
+    });
     sqftInput.addEventListener("input", update);
+    if (primaryInput) primaryInput.addEventListener("input", update);
+    if (areaSel) areaSel.addEventListener("change", update);
   }
 
   /* ============================================================
@@ -256,6 +336,23 @@ const selectClass =
         );
         if (match) jurisSel.value = match.value;
       }
+      syncAreaSelect();
+      const parea = params.get("area");
+      if (parea && areaSel && areaWrap && !areaWrap.hidden) {
+        const match = [...areaSel.options].find(o => o.value === parea);
+        if (match) areaSel.value = match.value;
+      }
+      const pprimary = params.get("primary");
+      if (pprimary !== null && pprimary !== "" && primaryInput) {
+        const n = Math.round(Number(pprimary));
+        if (Number.isFinite(n)) {
+          const min = Number(primaryInput.min);
+          const max = Number(primaryInput.max);
+          const lo = Number.isFinite(min) ? min : 0;
+          const hi = Number.isFinite(max) ? max : Infinity;
+          primaryInput.value = String(Math.min(hi, Math.max(lo, n)));
+        }
+      }
       const psqft = params.get("sqft");
       if (psqft !== null && psqft !== "" && sqftInput) {
         const n = Math.round(Number(psqft));
@@ -280,6 +377,12 @@ const selectClass =
       const url = new URL(window.location.href);
       url.searchParams.set("jurisdiction", jurisSel.value);
       url.searchParams.set("sqft", sqftInput.value);
+      if (primaryInput) url.searchParams.set("primary", primaryInput.value);
+      if (areaSel && areaWrap && !areaWrap.hidden && areaSel.value) {
+        url.searchParams.set("area", areaSel.value);
+      } else {
+        url.searchParams.delete("area");
+      }
       window.history.replaceState(null, "", url);
     } catch {
       /* non-fatal: the visible controls still work without URL sync */
@@ -360,7 +463,8 @@ const selectClass =
         const report = buildFeeReport(
           data,
           jurisSel.value,
-          Number(sqftInput.value)
+          Number(sqftInput.value),
+          calcOpts()
         );
         downloadFeeReportPDF(jsPDF, report);
         setStatus(
