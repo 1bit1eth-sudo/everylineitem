@@ -1,5 +1,6 @@
 ---
 import feesData from "@/data/fees.json";
+import { jurisStack } from "@/lib/feeCalc";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
@@ -33,16 +34,14 @@ const maxSchoolNote =
 const totals = new Map<string, number>();
 const counts = new Map<string, number>();
 const cliff = new Map<string, number>();
-for (const i of items) {
-  const v =
-    i.method === "per_sqft" ? i.rate_low * 800 : i.method === "flat" ? i.rate_low : 0;
-  totals.set(i.juris_id, (totals.get(i.juris_id) ?? 0) + v);
-  counts.set(i.juris_id, (counts.get(i.juris_id) ?? 0) + 1);
-  if (i.category === "impact") {
-    const c =
-      i.method === "per_sqft" ? i.rate_low * 751 : i.method === "flat" ? i.rate_low : 0;
-    cliff.set(i.juris_id, (cliff.get(i.juris_id) ?? 0) + c);
-  }
+for (const j of (feesData.jurisdictions as any[]).filter(j => j.juris_id !== "LA-BASE")) {
+  // Shared engine math: dwelling-base lines prorate at the 1,600 sq ft
+  // default primary, and mutually exclusive area schedules (Ontario)
+  // contribute their largest area only — never the sum of areas.
+  const stack = jurisStack(feesData as any, j.juris_id, 800);
+  totals.set(j.juris_id, stack.total);
+  counts.set(j.juris_id, stack.count);
+  cliff.set(j.juris_id, stack.cliff);
 }
 const ranked = [...totals.entries()]
   .filter(([j]) => (counts.get(j) ?? 0) >= 3)
@@ -56,7 +55,7 @@ const facts = [
   {
     stat: `${fmt(schools[0].rate_low * 800)} → ${fmt(schools[schools.length - 1].rate_low * 800)}`,
     label: "School-fee spread",
-    desc: `The same 800 sq ft ADU pays ${fmt(schools[0].rate_low * 800)} in school fees in ${names[schools[0].juris_id]} and ${fmt(schools[schools.length - 1].rate_low * 800)} ${maxSchoolNote} — across ${schools.length} tracked districts.`,
+    desc: `The same 800 sq ft ADU pays ${fmt(schools[0].rate_low * 800)} in school fees in ${names[schools[0].juris_id]} and ${fmt(schools[schools.length - 1].rate_low * 800)} ${maxSchoolNote} — across ${schools.length} tracked district line items (counted by district, not by jurisdiction: a jurisdiction can have more than one district).`,
   },
   {
     stat: `${atCeiling} of ${schools.length}`,
@@ -146,6 +145,18 @@ const facts = [
         Code &sect;66311.5 bars impact fees on ADUs of 750 sq ft or less. The
         "at 751 sq ft" column shows what the verified impact fees total one
         square foot above the line.
+      </p>
+      <p>
+        <strong class="font-semibold">Some fees are prorated, not flat.</strong>{" "}
+        A few cities publish a per-dwelling fee, not an ADU fee — the ADU pays
+        (ADU sq ft ÷ primary-dwelling sq ft) of it. For those lines this
+        index assumes a 1,600 sq ft primary dwelling and says so; the
+        calculator lets you enter your actual primary size. Ontario has two
+        mutually exclusive area schedules (General City, Ontario Ranch) — a
+        parcel pays one, so this index uses the larger area's total, never
+        their sum. See the{" "}
+        <a href="/changes/" class="text-accent underline decoration-dashed underline-offset-4">change log</a>{" "}
+        for the October 2026 correction that fixed the old summed figure.
       </p>
     </div>
 
