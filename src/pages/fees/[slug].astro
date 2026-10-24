@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import feesData from "@/data/fees.json";
 import {
   calcJurisdiction,
+  jurisAreas,
   categoryLabel,
   fmtUSD,
 } from "@/lib/feeCalc";
@@ -29,21 +30,70 @@ const postIds = new Set(posts.map(p => p.id));
 const postSlug = juris.post_slug && postIds.has(juris.post_slug) ? juris.post_slug : null;
 
 const result = calcJurisdiction(feesData as any, juris.juris_id, SQFT);
-const verifiedLines = result.lines.filter(
+
+// Jurisdictions with mutually exclusive area schedules (Ontario): a parcel
+// pays ONE area's rows, never the sum. Compute each area separately and
+// present the total as a range; shared rows (school, permit) are deduped.
+const areas = jurisAreas(feesData as any, juris.juris_id);
+const isAreaJuris = areas.length > 0;
+const areaResults = isAreaJuris
+  ? areas.map(a => ({
+      area: a,
+      result: calcJurisdiction(feesData as any, juris.juris_id, SQFT, { area: a }),
+    }))
+  : [{ area: null as string | null, result }];
+
+const dedupeLines = (pick: (l: any) => boolean) => {
+  const byId = new Map<string, any>();
+  for (const { result: r } of areaResults) {
+    for (const l of r.lines.filter(pick)) {
+      if (!byId.has(l.item.item_id)) byId.set(l.item.item_id, l);
+    }
+  }
+  return [...byId.values()];
+};
+const verifiedLines = dedupeLines(
   l => l.item.status === "verified" && l.kind !== "skipped"
 );
-const pendingLines = result.lines.filter(
+const pendingLines = dedupeLines(
   l => (l.item.status === "to_verify" || l.item.status === "conflict") && l.kind !== "skipped"
 );
 
-const verifiedTotalLow = verifiedLines.reduce((s, l) => s + l.low, 0);
-const verifiedHasRange = verifiedLines.some(l => l.high != null);
-const verifiedTotalHigh = verifiedLines.reduce((s, l) => s + (l.high ?? l.low), 0);
+const areaTotals = areaResults.map(({ area, result: r }) => {
+  const vl = r.lines.filter(l => l.item.status === "verified" && l.kind !== "skipped");
+  return {
+    area,
+    low: vl.reduce((s, l) => s + l.low, 0),
+    high: vl.reduce((s, l) => s + (l.high ?? l.low), 0),
+    hasRange: vl.some(l => l.high != null),
+  };
+});
+const verifiedTotalLow = isAreaJuris
+  ? Math.min(...areaTotals.map(t => t.low))
+  : areaTotals[0].low;
+const verifiedTotalHigh = isAreaJuris
+  ? Math.max(...areaTotals.map(t => t.high))
+  : areaTotals[0].high;
+const verifiedHasRange = isAreaJuris || areaTotals[0].hasRange;
 
 // The 750 sq ft cliff: impact fees at 751 sq ft vs $0 at 750 (state law).
-const at751 = calcJurisdiction(feesData as any, juris.juris_id, 751);
-const cliffAmount = at751.impactLow;
+// For area jurisdictions the cliff is a range across areas.
+const cliffByArea = isAreaJuris
+  ? areas.map(a => ({
+      area: a,
+      amount: calcJurisdiction(feesData as any, juris.juris_id, 751, { area: a }).impactLow,
+    }))
+  : [];
+const cliffAmount = isAreaJuris
+  ? Math.max(...cliffByArea.map(c => c.amount))
+  : calcJurisdiction(feesData as any, juris.juris_id, 751).impactLow;
+const cliffLow = isAreaJuris
+  ? Math.min(...cliffByArea.map(c => c.amount))
+  : cliffAmount;
 const showCliff = cliffAmount > 0;
+const cliffDisplay = isAreaJuris
+  ? `${fmtUSD(cliffLow)}–${fmtUSD(cliffAmount)}`
+  : fmtUSD(cliffAmount);
 
 const schoolLine = verifiedLines.find(l => l.item.category === "school");
 
@@ -61,17 +111,19 @@ const rateLabel = (item: any): string => {
 
 const title = `${juris.name} ADU Fees in 2026: Every Line Item, Sourced`;
 const description = verifiedLines.length > 0
-  ? `Verified government fees for an ADU in ${juris.name}, CA — ${fmtUSD(verifiedTotalLow)} across ${verifiedLines.length} line items for an ${SQFT} sq ft ADU. Every figure links to its official source.`
+  ? isAreaJuris
+    ? `Verified government fees for an ADU in ${juris.name}, CA — ${fmtUSD(verifiedTotalLow)}–${fmtUSD(verifiedTotalHigh)} across areas for an ${SQFT} sq ft ADU (a parcel pays one area schedule, not both). Every figure links to its official source.`
+    : `Verified government fees for an ADU in ${juris.name}, CA — ${fmtUSD(verifiedTotalLow)} across ${verifiedLines.length} line items for an ${SQFT} sq ft ADU. Every figure links to its official source.`
   : `ADU fees in ${juris.name}, CA — our researchers are verifying every line item against official sources. The 750 sq ft state-law cliff, explained.`;
 
 const faqs = [
   {
     q: `Are impact fees waived for ADUs under 750 sq ft in ${juris.name}?`,
-    a: `Yes. California law (Gov. Code \u00a766311.5) bars local agencies from charging impact fees on ADUs of 750 square feet or less. That applies in ${juris.name} the same as everywhere else in California.${showCliff ? ` At 751 sq ft, the impact fees we have verified for ${juris.name} total ${fmtUSD(cliffAmount)} — the cliff is real here.` : ""}`,
+    a: `Yes. California law (Gov. Code \u00a766311.5) bars local agencies from charging impact fees on ADUs of 750 square feet or less. That applies in ${juris.name} the same as everywhere else in California.${showCliff ? ` At 751 sq ft, the impact fees we have verified for ${juris.name} total ${cliffDisplay} — the cliff is real here.` : ""}`,
   },
   {
     q: `Where do these ${juris.name} ADU fee numbers come from?`,
-    a: "Every line item links to the official source document — the city or county fee schedule, the school district's developer-fee resolution, or the utility district's charges — with the date we last verified it. We publish no estimates.",
+    a: "Every line item links to the official source document — the city or county fee schedule, the school district's developer-fee resolution, or the utility district's charges — with the date we last verified it. We publish no fee modeled, no fee guessed.",
   },
   ...(schoolLine
     ? [
@@ -122,17 +174,19 @@ const faqSchema = {
               {verifiedHasRange && `–${fmtUSD(verifiedTotalHigh)}`}
             </p>
             <p class="mt-1 text-sm opacity-60">
-              across {verifiedLines.length} line {verifiedLines.length === 1 ? "item" : "items"}
+              {isAreaJuris
+                ? `range across areas — ${areaTotals.map(t => `${t.area} ${fmtUSD(t.low)}`).join(" · ")}; your parcel pays one area's schedule, not both`
+                : `across ${verifiedLines.length} line ${verifiedLines.length === 1 ? "item" : "items"}`}
             </p>
           </div>
           <div class="border border-border rounded-lg p-4">
             <p class="text-sm opacity-60">The 750 sq ft cliff</p>
             <p class="mt-1 text-2xl font-bold tabular-nums">
-              {showCliff ? fmtUSD(cliffAmount) : "$0*"}
+              {showCliff ? cliffDisplay : "$0*"}
             </p>
             <p class="mt-1 text-sm opacity-60">
               {showCliff
-                ? `impact fees at 751 sq ft — $0 at 750 sq ft by state law`
+                ? `impact fees at 751 sq ft${isAreaJuris ? ", by area" : ""} — $0 at 750 sq ft by state law`
                 : `no verified impact fees on file yet`}
             </p>
           </div>
@@ -155,7 +209,18 @@ const faqSchema = {
         <h2 class="mt-10 text-2xl font-semibold">Fee table</h2>
         <p class="mt-2 text-sm opacity-70">
           Amounts computed for an {SQFT} sq ft ADU from each item's published
-          rate. "Exempt" lines are $0 by state law at this size.
+          rate. "Exempt" lines are $0 by state law at this size.{
+            isAreaJuris && (
+              <>
+                {" "}This jurisdiction has two area schedules — a parcel pays
+                one, not both — so both schedules are listed below and the
+                total above is the range across areas, not the sum of all rows.
+                Dwelling-base impact fees are prorated at an assumed 1,600 sq
+                ft primary dwelling; use the calculator to enter your actual
+                primary size.
+              </>
+            )
+          }
         </p>
         <div class="mt-4 overflow-x-auto">
           <table class="w-full border-collapse text-sm">
@@ -220,7 +285,7 @@ const faqSchema = {
         <p class="mt-2 opacity-80">
           Our researchers are working through {juris.name}'s official fee
           schedules now. We publish a line item only after we have read the
-          source document — no estimates, ever. Check back soon, or run the
+          source document — no fee modeled, no fee guessed. Check back soon, or run the
           calculator for the statewide baseline in the meantime.
         </p>
         <p class="mt-4">
@@ -256,9 +321,9 @@ const faqSchema = {
       <div class="mt-8 rounded-lg border border-amber-500/40 bg-amber-500/10 px-4 py-3">
         <p class="font-semibold">The 750 sq ft cliff in {juris.name}</p>
         <p class="mt-1 text-sm opacity-90">
-          At 751 sq ft, the impact fees above total {fmtUSD(cliffAmount)}. At
+          At 751 sq ft, the impact fees above total {cliffDisplay}. At
           750 sq ft, state law (Gov. Code &sect;66311.5) sets them to $0.
-          One square foot can be worth {fmtUSD(cliffAmount)} here — size your
+          One square foot can be worth {cliffDisplay} here — size your
           ADU accordingly.
         </p>
       </div>

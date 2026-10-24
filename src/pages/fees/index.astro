@@ -29,8 +29,8 @@ const description = `Government ADU fees for ${jurisdictions.length} California 
     <p class="mt-4 text-lg opacity-80">
       {jurisdictions.length} California jurisdictions. Every fee below was
       read in the official source document — fee schedule, school district
-      resolution, or utility charges — and links straight to it. No estimates,
-      ever.
+      resolution, or utility charges — and links straight to it. No fee
+      modeled, no fee guessed.
     </p>
     <p class="mt-2 text-sm opacity-70">
       State law bars impact fees on ADUs of 750 sq ft or less (Gov. Code
@@ -38,7 +38,7 @@ const description = `Government ADU fees for ${jurisdictions.length} California 
     </p>
 
     {[...byRegion.entries()].map(([region, list]) => (
-      <section class="mt-10">
+      <section class="mt-10" id={region.toLowerCase().replace(/\s+/g, "-")}>
         <h2 class="text-xl font-semibold border-b border-border pb-2">
           {region}
           <span class="ml-2 text-sm font-normal opacity-60">{list.length}</span>

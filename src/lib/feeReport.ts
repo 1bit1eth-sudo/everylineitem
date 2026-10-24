@@ -7,6 +7,7 @@ import {
   categoryLabel,
   fmtRange,
   type CalcLine,
+  type CalcOpts,
   type FeeData,
 } from "./feeCalc";
 
@@ -50,18 +51,20 @@ function stripHtml(s: string): string {
 }
 
 /** Plain-text version of the 750 sq ft cliff callout. */
-export function cliffPlainText(data: FeeData, jurisId: string): string {
+export function cliffPlainText(data: FeeData, jurisId: string, opts: CalcOpts = {}): string {
   const at750 = calcJurisdiction(
     data,
     jurisId,
-    data.rules.impact_exempt_max_sqft
+    data.rules.impact_exempt_max_sqft,
+    opts
   );
   const at751 = calcJurisdiction(
     data,
     jurisId,
-    data.rules.impact_exempt_max_sqft + 1
+    data.rules.impact_exempt_max_sqft + 1,
+    opts
   );
-  const r = calcJurisdiction(data, jurisId, at750.sqft);
+  const r = calcJurisdiction(data, jurisId, at750.sqft, opts);
   const hasImpactItems = r.lines.some(
     l => l.item.category === "impact" && l.kind !== "skipped"
   );
@@ -85,9 +88,10 @@ export function cliffPlainText(data: FeeData, jurisId: string): string {
 export function buildFeeReport(
   data: FeeData,
   jurisId: string,
-  sqft: number
+  sqft: number,
+  opts: CalcOpts = {}
 ): FeeReport {
-  const r = calcJurisdiction(data, jurisId, sqft);
+  const r = calcJurisdiction(data, jurisId, sqft, opts);
   const lines: ReportLine[] = r.lines.map(l => ({
     feeName: l.item.fee_name,
     category: categoryLabel(l.item.category),
@@ -111,7 +115,7 @@ export function buildFeeReport(
     generatedAt: new Date().toISOString().slice(0, 10),
     totalText: fmtRange(r.totalLow, r.totalHigh),
     impactText: fmtRange(r.impactLow, r.impactHigh),
-    cliffText: cliffPlainText(data, jurisId),
+    cliffText: cliffPlainText(data, jurisId, opts),
     lines,
     skippedCount: r.skippedCount,
     skippedNote,

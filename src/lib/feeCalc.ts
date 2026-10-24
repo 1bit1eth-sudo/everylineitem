@@ -55,6 +55,21 @@ export interface FeeItem {
   confidence: string;
   status: string;
   notes: string | null;
+  /**
+   * True when rate_low is a per-dwelling base, not an ADU fee: the city
+   * publishes a dwelling-unit fee and ADUs pay (ADU sq ft / primary sq ft)
+   * of it under Gov. Code §66311.5(c)(1)(B). Only flagged lines prorate;
+   * a city-adopted ADU flat fee displays as-is.
+   */
+  dwelling_base?: boolean | null;
+  /** Optional cap on the prorated result (e.g. Westminster $4,000). */
+  cap?: number | null;
+  /**
+   * Mutually exclusive area schedule within the jurisdiction (e.g.
+   * Ontario "General City" vs "Ontario Ranch"). Null = applies to all
+   * areas. A parcel pays one area's rows, never the sum of all areas.
+   */
+  area?: string | null;
 }
 
 export interface FeeData {
@@ -102,11 +117,58 @@ function warn(msg: string): void {
   }
 }
 
+/**
+ * Default primary-dwelling size for static displays and the calculator.
+ * This is an ASSUMPTION, not a verified figure — every surface that uses
+ * it must label it as such. The calculator lets the user enter their
+ * actual primary size.
+ */
+export const DEFAULT_PRIMARY_SQFT = 1600;
+
+export interface CalcOpts {
+  primarySqft?: number;
+  /**
+   * Area schedule for jurisdictions with mutually exclusive areas
+   * (Ontario). Null/undefined resolves to the alphabetically first area,
+   * so exclusive areas are never summed by default.
+   */
+  area?: string | null;
+  /** When true, only status === "verified" items are included. */
+  verifiedOnly?: boolean;
+}
+
+/** Distinct non-null area schedules for a jurisdiction, sorted. */
+export function jurisAreas(data: FeeData, jurisId: string): string[] {
+  const areas = new Set<string>();
+  for (const i of data.fee_items) {
+    if (i.juris_id === jurisId && i.area != null && i.area !== "") {
+      areas.add(i.area);
+    }
+  }
+  return [...areas].sort((a, b) => a.localeCompare(b, "en-US"));
+}
+
+function resolveArea(
+  data: FeeData,
+  jurisId: string,
+  areaOpt: string | null | undefined
+): string | null {
+  if (areaOpt != null) return areaOpt;
+  const areas = jurisAreas(data, jurisId);
+  return areas.length > 0 ? areas[0] : null;
+}
+
+function clampPrimary(primarySqft: number | undefined): number {
+  const n = Math.round(primarySqft ?? DEFAULT_PRIMARY_SQFT);
+  return Number.isFinite(n) && n > 0 ? n : DEFAULT_PRIMARY_SQFT;
+}
+
 export function calcLine(
   item: FeeItem,
   juris: Jurisdiction,
   sqft: number,
-  rules: FeeRules
+  rules: FeeRules,
+  primarySqft: number = DEFAULT_PRIMARY_SQFT
 ): CalcLine {
   // 1. Size-tier scope
   if (item.min_sqft != null && sqft < item.min_sqft) {
@@ -173,12 +235,28 @@ export function calcLine(
           high: null,
         };
       }
+      // Dwelling-base lines prorate: (ADU sq ft / primary sq ft) × base.
+      // The ≤750 exemption above already zeroed smaller ADUs. A cap
+      // (e.g. Westminster) applies to the prorated result, not the base.
+      let low = item.rate_low;
+      let high = item.rate_high;
+      if (item.dwelling_base) {
+        low = (sqft / primarySqft) * item.rate_low;
+        high =
+          item.rate_high != null
+            ? (sqft / primarySqft) * item.rate_high
+            : null;
+      }
+      if (item.cap != null) {
+        low = Math.min(low, item.cap);
+        if (high != null) high = Math.min(high, item.cap);
+      }
       return {
         item,
         kind: "ok",
         reason: null,
-        low: Math.round(item.rate_low),
-        high: item.rate_high != null ? Math.round(item.rate_high) : null,
+        low: Math.round(low),
+        high: high != null ? Math.round(high) : null,
       };
     }
     case "per_sqft": {
@@ -302,6 +380,10 @@ export function calcLine(
 export interface CalcResult {
   juris: Jurisdiction;
   sqft: number;
+  /** Primary-dwelling size the proration used (assumption unless the user set it). */
+  primarySqft: number;
+  /** Resolved area schedule, or null for jurisdictions without areas. */
+  area: string | null;
   /** In-scope lines only (ok + exempt + skipped). */
   lines: CalcLine[];
   totalLow: number;
@@ -316,15 +398,20 @@ export interface CalcResult {
 export function calcJurisdiction(
   data: FeeData,
   jurisId: string,
-  sqft: number
+  sqft: number,
+  opts: CalcOpts = {}
 ): CalcResult {
   const juris = data.jurisdictions.find(j => j.juris_id === jurisId);
   if (!juris) {
     throw new Error(`[fee-calculator] unknown jurisdiction "${jurisId}"`);
   }
+  const primarySqft = clampPrimary(opts.primarySqft);
+  const area = resolveArea(data, jurisId, opts.area);
   const lines = data.fee_items
     .filter(i => i.juris_id === jurisId)
-    .map(item => calcLine(item, juris, sqft, data.rules))
+    .filter(i => area == null || i.area == null || i.area === area)
+    .filter(i => !opts.verifiedOnly || i.status === "verified")
+    .map(item => calcLine(item, juris, sqft, data.rules, primarySqft))
     .filter(l => l.kind !== "out_of_scope");
 
   let totalLow = 0;
@@ -361,6 +448,8 @@ export function calcJurisdiction(
   return {
     juris,
     sqft,
+    primarySqft,
+    area,
     lines,
     totalLow,
     totalHigh: hasRange ? totalHigh : null,
@@ -374,9 +463,11 @@ export function calcJurisdiction(
 // ---------------------------------------------------------------------------
 // SB 1117 comparison (effective Jan 1, 2027): for a homeowner's first two
 // ADUs, impact fees apply only to the square footage above 750. Per-sq-ft
-// lines scale to (sqft - 750); flat lines cannot be converted until cities
-// publish how flat fees map to the excess-area rule, so they are reported
-// as uncertain and never guessed.
+// lines scale to (sqft - 750); dwelling-base flat lines convert to
+// ((sqft - 750) / primary) × base once the primary size is known. Other
+// flat lines cannot be converted until cities publish how flat fees map
+// to the excess-area rule, so they are reported as uncertain and never
+// guessed.
 // ---------------------------------------------------------------------------
 
 export interface SB1117Line {
@@ -411,18 +502,23 @@ export interface SB1117Result {
 export function calcSB1117(
   data: FeeData,
   jurisId: string,
-  sqft: number
+  sqft: number,
+  opts: CalcOpts = {}
 ): SB1117Result {
   const juris = data.jurisdictions.find(j => j.juris_id === jurisId);
   if (!juris) {
     throw new Error(`[fee-calculator] unknown jurisdiction "${jurisId}"`);
   }
+  const primarySqft = clampPrimary(opts.primarySqft);
+  const area = resolveArea(data, jurisId, opts.area);
   const excess = Math.max(0, sqft - data.rules.impact_exempt_max_sqft);
   const lines: SB1117Line[] = [];
   for (const item of data.fee_items.filter(
     i => i.juris_id === jurisId && i.category === "impact"
   )) {
-    const line = calcLine(item, juris, sqft, data.rules);
+    if (area != null && item.area != null && item.area !== area) continue;
+    if (opts.verifiedOnly && item.status !== "verified") continue;
+    const line = calcLine(item, juris, sqft, data.rules, primarySqft);
     if (line.kind === "out_of_scope" || line.kind === "skipped") continue;
     if (line.kind === "exempt") {
       lines.push({
@@ -445,6 +541,26 @@ export function calcSB1117(
           item.rate_high != null
             ? Math.round(item.rate_high * excess)
             : null,
+        uncertain: false,
+      });
+    } else if (item.dwelling_base && item.method === "flat" && item.rate_low != null) {
+      // Dwelling-base lines convert exactly once the primary size is
+      // known: ((sqft − 750) / primary) × base. Caps still apply.
+      let futureLow = (excess / primarySqft) * item.rate_low;
+      let futureHigh =
+        item.rate_high != null
+          ? (excess / primarySqft) * item.rate_high
+          : null;
+      if (item.cap != null) {
+        futureLow = Math.min(futureLow, item.cap);
+        if (futureHigh != null) futureHigh = Math.min(futureHigh, item.cap);
+      }
+      lines.push({
+        item,
+        currentLow: line.low,
+        currentHigh: line.high,
+        futureLow: Math.round(futureLow),
+        futureHigh: futureHigh != null ? Math.round(futureHigh) : null,
         uncertain: false,
       });
     } else {
@@ -522,8 +638,8 @@ export function calcSB1117(
   };
 }
 
-function sb1117BlockHTML(data: FeeData, jurisId: string, sqft: number): string {
-  const sb = calcSB1117(data, jurisId, sqft);
+function sb1117BlockHTML(data: FeeData, jurisId: string, sqft: number, opts: CalcOpts = {}): string {
+  const sb = calcSB1117(data, jurisId, sqft, opts);
   const wrap = (inner: string) =>
     `<div class="mt-3 rounded-md border border-teal-600/40 bg-teal-50 p-4 dark:bg-teal-950/30">
       <div class="text-foreground/70 text-xs tracking-wide uppercase">Coming Jan 1, 2027 · SB 1117 — permit now vs permit after Jan 1</div>
@@ -564,7 +680,7 @@ function sb1117BlockHTML(data: FeeData, jurisId: string, sqft: number): string {
   return wrap(`
     <div class="mt-2 grid gap-3 sm:grid-cols-3">
       <div><div class="text-foreground/70 text-xs uppercase">2026 impact fees</div><div class="text-xl font-semibold tabular-nums">${fmtRange(sb.currentLow, sb.currentHigh)}</div></div>
-      <div><div class="text-foreground/70 text-xs uppercase">2027 impact fees (per-sq-ft lines)</div><div class="text-xl font-semibold tabular-nums">${fmtRange(sb.futureLow, sb.futureHigh)}</div></div>
+      <div><div class="text-foreground/70 text-xs uppercase">2027 impact fees (convertible lines)</div><div class="text-xl font-semibold tabular-nums">${fmtRange(sb.futureLow, sb.futureHigh)}</div></div>
       <div><div class="text-foreground/70 text-xs uppercase">You could save</div><div class="text-xl font-semibold tabular-nums">${fmtRange(sb.savingsLow, sb.savingsHigh)}</div></div>
     </div>
     <p class="mt-2 text-sm font-medium">${headline}</p>
@@ -659,15 +775,23 @@ function amountCellHTML(line: CalcLine): string {
 export function resultsHTML(
   data: FeeData,
   jurisId: string,
-  sqft: number
+  sqft: number,
+  opts: CalcOpts = {}
 ): string {
-  const r = calcJurisdiction(data, jurisId, sqft);
-  const at750 = calcJurisdiction(data, jurisId, data.rules.impact_exempt_max_sqft);
-  const at751 = calcJurisdiction(data, jurisId, data.rules.impact_exempt_max_sqft + 1);
+  const r = calcJurisdiction(data, jurisId, sqft, opts);
+  const at750 = calcJurisdiction(data, jurisId, data.rules.impact_exempt_max_sqft, opts);
+  const at751 = calcJurisdiction(data, jurisId, data.rules.impact_exempt_max_sqft + 1, opts);
 
   const badge = jurisBadgeHTML(r.juris.status);
   const totalText = fmtRange(r.totalLow, r.totalHigh);
   const impactText = fmtRange(r.impactLow, r.impactHigh);
+  const areaLabel = r.area != null ? ` · ${esc(r.area)} area` : "";
+  const hasDwellingBase = r.lines.some(
+    l => l.item.dwelling_base && l.kind === "ok"
+  );
+  const primaryNote = hasDwellingBase
+    ? `<div class="text-foreground/60 mt-2 text-xs">Dwelling-base impact fees prorated at a ${r.primarySqft.toLocaleString("en-US")} sq ft primary dwelling — an assumption, not a verified figure. Enter your actual primary size above to re-price them.</div>`
+    : "";
 
   const deltaLow = at751.totalLow - at750.totalLow;
   const deltaHigh =
@@ -713,15 +837,16 @@ export function resultsHTML(
     <div class="border-border rounded-md border p-4">
       <div class="text-foreground/70 text-xs tracking-wide uppercase">Estimated fees · ${esc(r.juris.name)}${badge}</div>
       <div class="mt-1 text-3xl font-semibold tabular-nums">${totalText}</div>
-      <div class="text-foreground/80 mt-1 text-sm">at ${sqft.toLocaleString("en-US")} sq ft · impact fees ${impactText}</div>
+      <div class="text-foreground/80 mt-1 text-sm">at ${sqft.toLocaleString("en-US")} sq ft${areaLabel} · impact fees ${impactText}</div>
       <div class="text-foreground/60 mt-2 text-xs">Checked ${esc(r.juris.last_verified)} · <a href="${esc(r.juris.fee_schedule_url)}" target="_blank" rel="noopener" class="text-accent underline decoration-dashed underline-offset-4">fee schedule ↗</a></div>
+      ${primaryNote}
     </div>
     <div class="rounded-md border border-amber-500/40 bg-amber-50 p-4 dark:bg-amber-950/30">
       <div class="text-foreground/70 text-xs tracking-wide uppercase">The 750 sq ft cliff</div>
       <p class="mt-1 text-sm">${cliffText}</p>
     </div>
   </div>
-  ${sb1117BlockHTML(data, jurisId, sqft)}
+  ${sb1117BlockHTML(data, jurisId, sqft, opts)}
   <div class="relative mt-6 w-full overflow-x-auto">
     <table class="w-full min-w-[40rem] border-collapse text-sm">
       <thead>
@@ -737,4 +862,86 @@ export function resultsHTML(
   ${skippedNote}
   <p class="border-border mt-4 border-t pt-4 text-sm font-medium">This calculator applies published fee schedules — it is not a construction quote. Totals cover government fees only: no design, construction, financing, or contingency costs.</p>
   <p class="text-foreground/70 mt-2 text-xs">Full breakdown with methodology notes: <a href="/posts/${esc(r.juris.post_slug)}/" class="text-accent underline decoration-dashed underline-offset-4">Read the ${esc(r.juris.name)} post →</a></p>`;
+}
+
+// ---------------------------------------------------------------------------
+// Verified-stack summary for index-style pages (Fee Index, embed card).
+// Same line-value math as the old inline loops, but with proration and
+// area-max semantics: dwelling-base flats prorate at the default primary
+// (caps applied), and for jurisdictions with mutually exclusive area
+// schedules the total is the LARGEST area variant, never the sum of areas.
+// Counts follow the Fee Index convention (every verified item in the
+// variant, including lines whose method contributes $0 here).
+// ---------------------------------------------------------------------------
+
+export interface JurisStack {
+  jurisId: string;
+  /** Largest area variant's verified total at sqft (rounded). */
+  total: number;
+  /** Largest area variant's verified impact total at 751 sq ft (rounded). */
+  cliff: number;
+  /** Verified per-sq-ft school total at sqft, or null. */
+  school: number | null;
+  /** Verified item count of the max-total variant. */
+  count: number;
+  /** Area that produced the max total, or null. */
+  area: string | null;
+}
+
+export function jurisStack(
+  data: FeeData,
+  jurisId: string,
+  sqft: number,
+  opts: CalcOpts = {}
+): JurisStack {
+  const primarySqft = clampPrimary(opts.primarySqft);
+  const areas = jurisAreas(data, jurisId);
+  const variants: (string | null)[] = areas.length > 0 ? areas : [null];
+  const valueAt = (item: FeeItem, size: number): number => {
+    if (item.method === "per_sqft") {
+      return item.rate_low != null ? item.rate_low * size : 0;
+    }
+    if (item.method === "flat") {
+      if (item.rate_low == null) return 0;
+      let v = item.dwelling_base
+        ? (size / primarySqft) * item.rate_low
+        : item.rate_low;
+      if (item.cap != null) v = Math.min(v, item.cap);
+      return v;
+    }
+    return 0;
+  };
+  let best: JurisStack | null = null;
+  let maxCliff = 0;
+  for (const variant of variants) {
+    const items = data.fee_items.filter(
+      i =>
+        i.juris_id === jurisId &&
+        i.status === "verified" &&
+        (variant == null || i.area == null || i.area === variant)
+    );
+    let total = 0;
+    let cliff = 0;
+    let school: number | null = null;
+    for (const i of items) {
+      total += valueAt(i, sqft);
+      if (i.category === "impact") {
+        cliff += valueAt(i, data.rules.impact_exempt_max_sqft + 1);
+      }
+      if (i.category === "school" && i.method === "per_sqft" && i.rate_low != null) {
+        school = (school ?? 0) + i.rate_low * sqft;
+      }
+    }
+    if (Math.round(cliff) > maxCliff) maxCliff = Math.round(cliff);
+    const stack: JurisStack = {
+      jurisId,
+      total: Math.round(total),
+      cliff: maxCliff,
+      school: school != null ? Math.round(school) : null,
+      count: items.length,
+      area: variant,
+    };
+    if (best == null || stack.total > best.total) best = stack;
+  }
+  return { ...(best as JurisStack), cliff: maxCliff };
 }
