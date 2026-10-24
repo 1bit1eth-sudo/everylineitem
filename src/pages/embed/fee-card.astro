@@ -6,31 +6,22 @@
  * Standalone page (no site chrome), data embedded, renders client-side from ?j=.
  */
 import feesData from "@/data/fees.json";
+import { jurisStack } from "@/lib/feeCalc";
 
 const cards = (feesData.jurisdictions as any[])
   .filter(j => j.juris_id !== "LA-BASE")
   .map(j => {
-    const items = (feesData.fee_items as any[]).filter(
-      i => i.juris_id === j.juris_id && i.status === "verified"
-    );
-    let total = 0;
-    let school: number | null = null;
-    let cliff = 0;
-    for (const i of items) {
-      const v = i.method === "per_sqft" ? i.rate_low * 800 : i.method === "flat" ? i.rate_low : 0;
-      total += v;
-      if (i.category === "school" && i.method === "per_sqft") school = i.rate_low * 800;
-      if (i.category === "impact") {
-        cliff += i.method === "per_sqft" ? i.rate_low * 751 : i.method === "flat" ? i.rate_low : 0;
-      }
-    }
+    // Shared engine math: dwelling-base lines prorate at the 1,600 sq ft
+    // default primary, and mutually exclusive area schedules contribute
+    // their largest area only — never the sum of areas.
+    const stack = jurisStack(feesData as any, j.juris_id, 800);
     return {
       id: j.juris_id,
       name: j.name,
-      total: Math.round(total),
-      school: school != null ? Math.round(school) : null,
-      cliff: Math.round(cliff),
-      count: items.length,
+      total: stack.total,
+      school: stack.school,
+      cliff: stack.cliff,
+      count: stack.count,
     };
   });
 ---
