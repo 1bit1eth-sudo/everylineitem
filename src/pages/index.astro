@@ -87,9 +87,37 @@ const feeSpread = [...schoolRows.slice(0, 5), ...schoolRows.slice(-5)].map(c => 
 // Jurisdiction picker for the hero — every jurisdiction in the fee matrix,
 // deep-linking into /compare/ with prefilled params.
 import feesData from "@/data/fees.json";
+import { calcJurisdiction, jurisAreas } from "@/lib/feeCalc";
 const heroJurisdictions = [...feesData.jurisdictions]
   .sort((a, b) => a.name.localeCompare(b.name, "en-US"))
   .map(j => ({ id: j.juris_id, name: j.name }));
+const feeRegions = [
+  ...new Set(
+    (feesData.jurisdictions as any[])
+      .filter(j => j.juris_id !== "LA-BASE")
+      .map(j => j.region as string)
+  ),
+].sort((a, b) => a.localeCompare(b, "en-US"));
+
+// Biggest verified 750 sq ft cliff, computed from the same engine as the
+// calculator — never hardcoded (PR #95 lesson). Dwelling-base lines prorate
+// at the 1,600 sq ft default primary; area jurisdictions take their max area.
+let topCliffJuris = "";
+let topCliff = 0;
+for (const j of (feesData.jurisdictions as any[]).filter(j => j.juris_id !== "LA-BASE")) {
+  const areas = jurisAreas(feesData as any, j.juris_id);
+  const variants: (string | null)[] = areas.length > 0 ? areas : [null];
+  for (const a of variants) {
+    const r = calcJurisdiction(feesData as any, j.juris_id, 751, {
+      area: a,
+      verifiedOnly: true,
+    });
+    if (r.impactLow > topCliff) {
+      topCliff = r.impactLow;
+      topCliffJuris = j.name as string;
+    }
+  }
+}
 
 // Trust line — newest verification date across all fee items.
 // last_verified mixes ISO ("2026-10-16") and human ("7 Oct 2026") formats,
@@ -301,6 +329,27 @@ const formatShortDate = (d: string | Date) =>
             </button>
           </form>
           <p class="mt-3 text-sm opacity-70">
+            Browse fees by region:{" "}
+            {feeRegions.map((r, idx) => (
+              <span>
+                {idx > 0 && " · "}
+                <a
+                  href={`/fees/#${r.toLowerCase().replace(/\s+/g, "-")}`}
+                  class="text-accent underline decoration-dashed underline-offset-4"
+                >
+                  {r}
+                </a>
+              </span>
+            ))}{" "}
+            ·{" "}
+            <a
+              href="/fees/"
+              class="text-accent underline decoration-dashed underline-offset-4"
+            >
+              All cities &rarr;
+            </a>
+          </p>
+          <p class="mt-3 text-sm opacity-70">
             {jurisCount} jurisdictions · every figure links to
             its official source · last verified {latestVerified} · no email needed.{" "}
             <LinkButton
@@ -378,7 +427,7 @@ const formatShortDate = (d: string | Date) =>
             ))}
           </div>
           <div class="px-4 py-3 text-sm">
-            <span class="opacity-60">Cheapest 5 and priciest 5 of {schoolRows.length} jurisdictions with verified school-fee line items.</span>{" "}
+            <span class="opacity-60">Cheapest 5 and priciest 5 of {schoolRows.length} jurisdictions with verified school-fee line items (the Fee Index counts {schoolFees.length} district line items — some jurisdictions have more than one district).</span>{" "}
             <a href="/compare/" class="text-accent font-semibold">
               Look up your jurisdiction &rarr;
             </a>
@@ -508,7 +557,7 @@ const formatShortDate = (d: string | Date) =>
         The first public index of what governments charge your ADU.
       </h2>
       <p class="mt-3 max-w-3xl">
-        {jurisCount} jurisdictions, {verifiedCount} verified line items. The same 800 sq ft ADU owes {fmtUSD(schoolLow)} in school fees in one city and {fmtUSD(schoolHigh)} in another — and impact fees can swing five figures across a single square foot at the 750 line — in Ontario, $96,171.
+        {jurisCount} jurisdictions, {verifiedCount} verified line items. The same 800 sq ft ADU owes {fmtUSD(schoolLow)} in school fees in one city and {fmtUSD(schoolHigh)} in another — and impact fees can swing five figures across a single square foot at the 750 line — in {topCliffJuris}, {fmtUSD(topCliff)}.
       </p>
       <p class="mt-4 flex flex-wrap gap-x-6 gap-y-2">
         <a href="/fee-index/" class="text-accent font-semibold">
