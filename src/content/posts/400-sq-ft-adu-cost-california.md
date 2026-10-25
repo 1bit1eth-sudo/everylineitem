@@ -2,7 +2,7 @@
 title: "400 sq ft ADU Cost in California: Why Smaller Is Not Cheaper (2026)"
 description: "We modeled a 400 sq ft detached ADU in Los Angeles County. Total: $215,000 — or $538 per square foot. Here is every phase, why fixed costs dominate, and when 400 still makes sense."
 pubDatetime: 2026-09-02T00:00:00Z
-modDatetime: 2026-09-06T00:00:00Z
+modDatetime: 2026-10-26T01:00:00Z
 tags: ["adu cost", "400 sq ft adu", "california", "2026", "cost per square foot"]
 draft: false
 featured: false
@@ -11,6 +11,19 @@ seriesCurrent: 400-sq-ft-adu-cost-california
 verifiedPublished: "2 Sep 2026"
 lastVerified: "5 Sep 2026"
 nextReview: "Dec 2026"
+faqs:
+  - question: "How much does a 400 sq ft ADU cost in California?"
+    answer: "About $215,000 in Los Angeles County in 2026 for a detached, single-story, new-construction unit with mid-grade finishes — roughly $538 per square foot. That is the modeled median in this series; coastal sites and sloped lots run higher."
+  - question: "Why is a 400 sq ft ADU more expensive per square foot than an 800?"
+    answer: "Because permits, utility connections, the kitchen, the bathroom, and much of the mechanical package are close to fixed. Halving the floor area mainly cuts lumber, drywall, flooring, and roofing — the cheaper phases. Absolute cost falls; cost per foot rises."
+  - question: "Is it better to build 400 or 800 square feet?"
+    answer: "If your lot and local rules allow 800, the larger unit usually delivers more space per dollar ($400 vs $538 per sq ft in these models). Choose 400 when setbacks, coverage limits, budget ceiling, or the intended use make the larger footprint unrealistic."
+  - question: "Does a smaller ADU mean cheaper permits?"
+    answer: "Only slightly. Soft costs on the 400 model are $28,000 versus $32,000 on the 800 model. Plan check and impact fees are often tied to valuation or flat ADU schedules, not linearly to square footage."
+  - question: "Can I live in a 400 sq ft ADU comfortably?"
+    answer: "Yes, if the plan is honest about storage, sleeping, and circulation. Studios and compact one-bedrooms work well when the kitchen and bath are right-sized and you are not trying to force a two-bedroom program into 400 feet."
+  - question: "How does this compare to a garage conversion?"
+    answer: "A typical two-car garage conversion can come in lower absolute dollars because you reuse the shell — but envelope, fire, egress, and parking-replacement costs often grow, and local rules can kill the project."
 ---
 > **Published:** 2 Sep 2026 · **Last verified:** 5 Sep 2026 · **Next review:** Dec 2026
 > Cost figures are re-checked against permit records quarterly. Changes are
@@ -156,6 +169,10 @@ We made a blank version of the six-phase ledger. Drop your contractor's numbers 
 Want the regional benchmark ranges for each phase, updated quarterly?
 
 **[Get the benchmark sheet →](/benchmarks/)**
+
+## Check the fee side for your city
+
+Size changes the fee side too: at 400 sq ft you are under the 750 sq ft line, so city impact fees are $0 by state law — one more reason the small unit's total behaves differently. See [the 750 sq ft cliff, explained](/posts/750-sq-ft-cliff-explained/), compare [Sacramento](/fees/sacramento/) and [Glendale](/fees/glendale/) schedules, or run your address through the [fee calculator](/compare/).
 
 ## Methodology and sources
 
