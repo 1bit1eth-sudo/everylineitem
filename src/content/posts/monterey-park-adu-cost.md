@@ -17,7 +17,7 @@ keyFacts:
   schoolFee: "depends on the parcel's district — verify with district"
   impactFee: "$4,955 (40% of $12,387 detached-unit rate)"
   sewerWater: "verify with city/district (county sanitation fee separate)"
-  freePlans: "not confirmed — verify with city"
+  freePlans: "Designer-owned program, 4 sets (June 2026) — purchase price not found"
   cliff750: "Yes (proportional at 750+; under-750 exempt stated)"
 faqs:
   - question: "How much does an 800 sq ft detached ADU cost in Monterey Park in 2026?"
@@ -29,7 +29,7 @@ faqs:
   - question: "How much are school district fees on an ADU in Monterey Park?"
     answer: "That depends on the parcel's district, and this post does not publish a combined school fee. The city's own fee pages state that there are four school districts in Monterey Park, each with its own fee schedule — Alhambra, Garvey, Los Angeles, and Montebello — and that the fee must be paid at the district's office before the city can issue the permit. No single rate can be quoted and no representative combination is invented here. An older Garvey form showing a $4.47 combined total dates from December 2022 rates and is not used as a current figure."
   - question: "Does Monterey Park offer pre-approved ADU plans?"
-    answer: "Not confirmed from any city source we could find. No plan set, catalog, or program page appears on the city's own site, so the $14,000 design line in our total is the series baseline for custom design, carried in full. Readers who want the background on plan programs generally should read [California's free ADU plans](/posts/free-adu-plans-california/) and then confirm availability with the city before assuming any saving."
+    answer: "Yes, through a designer-owned program — but no saving is counted here. The city's pre-approved ADU page states that, as of June 2026, four plan sets have been approved for its Designer-Owned Pre-Approved ADU Program, that the designs are roughly 70% complete for permitting, and that property owners must hire the design professional to finalize the plans, secure a permit, and customize them for the property. No purchase price is stated on the city page, so the $14,000 design line in our total is the series baseline for custom design, carried in full. Readers who want the background on plan programs generally should read [California's free ADU plans](/posts/free-adu-plans-california/) and then confirm the purchase price and the applicable plan set with the city before assuming any saving."
 ---
 
 > **DRAFT — not for publication until reviewed.**
@@ -50,7 +50,7 @@ Monterey Park is the clearest illustration in this batch of why the split-distri
 | School fees | not counted (depends on the parcel's district) |
 | County sanitation fee | not counted (verify with city/district) |
 | Published surcharges (archival, general plan, energy, accessibility) | not counted (application to ADU permit not fully stated) |
-| Pre-approved plans | not confirmed (verify with city) |
+| Pre-approved plans | designer-owned program, 4 sets (June 2026); price not found, no saving counted |
 
 ## The full line-item breakdown
 
@@ -66,7 +66,7 @@ Six phases, the same six used on every build in this series. Our method is descr
 | Landscaping & hardscape | $13,000 | 4% |
 | **Total** | **$312,117** | **$390 / sq ft** |
 
-The soft-costs phase is $14,000 of design from the series baseline, $5,162 of permit and plan check, and $4,955 of proportional impact fees. Everything else in that phase — the school fee, the county sanitation fee, and the published surcharges — is excluded, not estimated. A floor that quietly absorbed guesses would stop being a floor.
+The soft-costs phase is $14,000 of design from the series baseline, $5,162 of permit and plan check, and $4,955 of proportional impact fees. The city's designer-owned pre-approved plan program (four sets, June 2026) is not counted as a saving because no purchase price is published. Everything else in that phase — the school fee, the county sanitation fee, and the published surcharges — is excluded, not estimated. A floor that quietly absorbed guesses would stop being a floor.
 
 One scope note, because readers often ask for the companion figure: this post does not publish a verified total for a new 2,000 sq ft single-family home in Monterey Park. The fee schedule prices permits by valuation and never prices construction, so no honest total can be derived from it. The 2,000 sq ft figure appears here only as the denominator that makes the example legible — an 800 sq ft ADU is 40% of a 2,000 sq ft primary home, which is the proportion the state's impact-fee rule uses once the 750 sq ft cliff is crossed.
 
@@ -76,7 +76,8 @@ Every fee line we found, with exactly what it is and where it came from.
 
 | Fee line | Amount | Source / status |
 | --- | --- | --- |
-| Design & engineering | $14,000 | Series baseline, carried (no city pre-approved set confirmed) |
+| Design & engineering | $14,000 | Series baseline, carried (designer-owned pre-approved program exists, but no purchase price published, so no saving counted) |
+| Pre-approved ADU program | no saving counted | City program: four designer-owned plan sets approved as of June 2026, roughly 70% complete for permitting; owners must hire the design professional to finalize plans and customize them; purchase price not stated — verify with city |
 | Building valuation, R-3 Type VB (2024 IBC) | $177.63/sq ft | City of Monterey Park, Plan Check and Permit Fees 2026-2027, effective July 1, 2026 |
 | Building valuation, 800 sq ft | $142,104 | 800 × $177.63 |
 | Building permit | $2,849 | 2026-27 schedule, over $100,000: $2,270.86 + 43 × $13.44 |
@@ -84,7 +85,10 @@ Every fee line we found, with exactly what it is and where it came from.
 | Building permit + plan check (counted) | **$5,162** | $2,849 + $2,313 = $5,162 (rounded from $5,161.99); reproduces fees.json FI-172 exactly |
 | Development impact fee, detached unit rate | $12,387/unit | 2026-27 schedule, effective July 6, 2021 |
 | DIF exemption sentence | under 750 sq ft exempt | Same schedule: "Single Family House additions, alterations, and ADU under 750 sq. ft. are exempt" — confirming an 800 sq ft ADU is not exempt |
-| DIF, proportional for 800 sq ft ADU (counted) | **$4,955** | 40% × $12,387 = $4,954.80; proration from the state rule, not printed in the schedule — confirm billing treatment with city |
+| DIF, proportional for 800 sq ft ADU (counted) | **$4,955** | 40% × $12,387 = $4,954.80; proration from the state rule, not printed in the schedule — confirm billing treatment with city. The 2,000 sq ft primary dwelling is the series' standard denominator, not a city-stated figure for any particular parcel |
+| School fee, Los Angeles USD (parcel-scoped example only) | not counted | LAUSD June 2026 document example: residential $5.38/sq ft (1,000 sq ft × $5.38 = $5,380 example). Example calculation only, not a stated effective-date notice, and applies only to LAUSD-served parcels — do not use as a Monterey Park-wide rate |
+| Planning review, new ADU (FY 2025-26 only) | not counted | FY 2025-26 Master Schedule: "Planning Review - New Accessory Dwelling Unit 792.83"; FY 2026-27 equivalent not found — do not carry forward as a current figure |
+| Sewer connection, plumbing permit item | not counted | $84.57 per sewer connection in the 2026-27 schedule — a permit line, not a sewer capacity/connection charge |
 | School fee, four districts | not counted | City fee pages: "There are four school districts in Monterey Park. Each school district has its own fee schedule" (Alhambra, Garvey, Los Angeles, Montebello); fee paid at the district office before permit issuance |
 | Older Garvey combined figure | not used | A Garvey form effective December 13, 2022 shows a $4.47/sq ft combined total (Garvey 67% / Alhambra 33%); superseded vintage, not a current rate |
 | County sanitation fee | not counted | City schedule directs applicants to the Los Angeles County Sanitation Districts; no ADU amount stated — verify with city/district |
@@ -127,11 +131,13 @@ How to use this floor in practice: treat $312,117 as the number below which the 
 
 ## What this post does not claim
 
-No pre-approved plan set is claimed for Monterey Park, because none could be confirmed from the city itself. No school-fee dollar figure is claimed, because four districts split the city. No county sanitation dollar figure is claimed, because no ADU amount is stated. No 2,000 sq ft home total is claimed. The impact fee is claimed only as a state-law proration of a printed unit rate, with its confirmation caveat stated alongside it.
+No pre-approved plan saving is claimed, because the designer-owned program's purchase price is not published. No school-fee dollar figure is claimed, because four districts split the city. No county sanitation dollar figure is claimed, because no ADU amount is stated. No 2,000 sq ft home total is claimed. The impact fee is claimed only as a state-law proration of a printed unit rate, with its confirmation caveat stated alongside it.
 
 ## Sources
 
 - City of Monterey Park, Plan Check and Permit Fees 2026-2027, effective July 1, 2026 (building permit table; 2024 IBC valuation R-3 Type VB $177.63/sq ft; development impact fee $12,387 detached unit, effective July 6, 2021; under-750 exemption; surcharges) — http://www.montereypark.ca.gov/214/Fees-PDF (as of 26 Oct 2026)
+- City of Monterey Park, Accessory Dwelling Units page (Municipal Code Chapter 21.50, Ord. 2261 adopted April 16, 2025; Designer-Owned Pre-Approved ADU Program) — http://www.montereypark.ca.gov/1740/Accessory-Dwelling-Units-ADU (as of 26 Oct 2026)
+- City of Monterey Park, Pre-Approved ADU Plans page (four plan sets as of June 2026, roughly 70% complete; purchase price not stated) — http://www.montereypark.ca.gov/1651/Pre-Approved-ADU-Plans (as of 26 Oct 2026)
 - City of Monterey Park, Fees Paid to Other Agencies (four school districts; county sanitation fee) — http://www.montereypark.ca.gov/193/Fees-Paid-to-Other-Agencies (as of 26 Oct 2026)
 - California Government Code section 65852.2(f)(3)(A), ADU impact-fee rule, and section 66311.5 (SB 1117, effective January 1, 2027) — https://law.justia.com/codes/california/2021/code-gov/title-7/division-1/chapter-4/article-2/section-65852-2-d-1/ (as of 26 Oct 2026)
 
