@@ -2,6 +2,7 @@
 title: "The $59,854 Square Foot: 5 American Cities Where ADU Fees Break the Chart"
 description: "From a $59,854 one-square-foot fee cliff in Maryland to a $60 building permit in Wyoming — the five wildest ADU government-fee findings from our 148-city national dataset. Every figure from an official source."
 pubDatetime: 2026-10-05T02:00:00Z
+modDatetime: 2026-10-26T01:00:00Z
 author: "Every Line Item"
 tags: ["adu cost", "permit fees", "impact fees", "national", "2026"]
 draft: false
@@ -73,3 +74,12 @@ That is why this site prices the whole stack, line by line, in every city. The 1
 - **Montgomery County ADU proration:** how the county applies the per-unit SFD impact-tax rate to a 750 sq ft ADU under §4–506(B)'s proportionality rule. Not published; the $59,854 is the upper bound.
 - **Dublin Unified $7.36:** whether the district re-adopted Level 2 fees after the 2023 resolution's one-year effectiveness window. Not found in public documents.
 - **Portland waiver processing time:** the covenant must be recorded before permit issuance; we did not verify current processing timelines with PP&D.
+
+---
+
+## Related reading
+
+American outliers make California look tame — until you price the California baseline the same way.
+
+- [800 sq ft ADU cost breakdown](/posts/800-sq-ft-adu-cost-california/)
+- [Coastal vs inland ADU cost](/posts/coastal-vs-inland-adu-cost-california/)
