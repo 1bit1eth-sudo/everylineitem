@@ -2,6 +2,7 @@
 title: "The 750 Sq Ft Cliff, Explained: Why 50 Square Feet Can Cost $10,000"
 description: "California's most expensive 50 square feet: build an ADU at 749 sq ft and pay $0 in impact fees; build at 800 and owe thousands. How the 750 sq ft cliff works, with real numbers from Glendale, Sacramento, Torrance, Palo Alto, and Fontana — and what SB 1117 changes on Jan 1, 2027."
 pubDatetime: 2026-10-11T01:00:00Z
+modDatetime: 2026-10-26T01:00:00Z
 author: "Every Line Item"
 tags: ["adu cost", "750 sq ft cliff", "impact fees", "california", "2026"]
 draft: false
@@ -80,3 +81,12 @@ The 750 sq ft cliff is the closest thing California ADU law has to a cheat code,
 ## Disclaimer
 
 Fee law summary, not legal advice. Thresholds and rates change; SB 1117's implementation will vary by jurisdiction through 2027. Always verify current fees with your city and school district before budgeting.
+
+---
+
+## Related reading
+
+If the cliff changes your floor plan, the next numbers to run are the full 800 sq ft breakdown and the school-fee threshold, which uses a different ruler.
+
+- [800 sq ft ADU cost breakdown](/posts/800-sq-ft-adu-cost-california/)
+- [ADU school fees, explained](/posts/adu-school-fees-explained/)
