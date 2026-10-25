@@ -2,6 +2,7 @@
 title: "How Long Does an ADU Permit Take? The Timeline Nobody Puts in the Quote"
 description: "State law says 60 days. Reality says plan for more. The ADU permit timeline phase by phase — completeness review, plan check rounds, corrections, inspections — with the statutory clocks (60-day approval, 15-day completeness, 30-day pre-approved review) and why '6-month build' quotes hide 3–4 months of paper."
 pubDatetime: 2026-10-17T01:00:00Z
+modDatetime: 2026-10-26T01:00:00Z
 author: "Every Line Item"
 tags: ["adu permit", "timeline", "plan check", "california", "2026"]
 draft: false
@@ -74,3 +75,12 @@ Here is what the phases actually look like, with honest ranges:
 ## Disclaimer
 
 Timeline guide, not legal advice. Statutory clocks are statewide; implementation varies by city. Construction durations depend on scope, site, and market conditions. Always confirm current submittal requirements with your city's building department.
+
+---
+
+## Related reading
+
+Permit time and permit cost are two different lines. Pair this timeline with the soft-cost breakdown and the full 800 sq ft model.
+
+- [ADU soft costs in California](/posts/adu-soft-costs-permits-california/)
+- [800 sq ft ADU cost breakdown](/posts/800-sq-ft-adu-cost-california/)
