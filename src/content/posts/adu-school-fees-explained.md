@@ -2,6 +2,7 @@
 title: "ADU School Fees, Explained: Level 1, Level 2, and the 500 Sq Ft Exemption"
 description: "Why school district fees on the same 800 sq ft ADU range from $1,792 to $4,304 across California — who sets the rate, what Level 1 vs Level 2 means, why 500 sq ft is the magic number, and the 13-city data from our fee series."
 pubDatetime: 2026-10-14T01:00:00Z
+modDatetime: 2026-10-26T01:00:00Z
 author: "Every Line Item"
 tags: ["adu cost", "school fees", "developer fees", "california", "2026"]
 draft: false
@@ -91,3 +92,12 @@ SB 1117 (effective Jan 1, 2027) rewrites city impact-fee math. It does not touch
 ## Disclaimer
 
 Fee summary, not legal or tax advice. District rates change by board action; always verify the current adopted rate with your school district — not your city — before budgeting.
+
+---
+
+## Related reading
+
+School fees and city impact fees use different thresholds. Compare the gap between two districts, then the cliff that uses the 750 line.
+
+- [The school fee gap: Pasadena vs Campbell](/posts/school-fee-gap-pasadena-campbell/)
+- [The 750 sq ft cliff, explained](/posts/750-sq-ft-cliff-explained/)
