@@ -45,7 +45,8 @@ for (const file of readdirSync("./src/content/posts")) {
 const isThinPage = (pathname: string) =>
   /^\/tags\//.test(pathname) ||
   /^\/posts\/\d+\/$/.test(pathname) ||
-  /^\/search\/?$/.test(pathname);
+  /^\/search\/?$/.test(pathname) ||
+  /^\/embed\//.test(pathname);
 
 export default defineConfig({
   site: config.site.url,

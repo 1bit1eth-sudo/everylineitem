@@ -1,5 +1,7 @@
 ---
 import rawFeesJson from "../data/fees.json";
+import { getCollection } from "astro:content";
+import { postFilter } from "../utils/postFilter";
 import {
   resultsHTML,
   jurisAreas,
@@ -10,8 +12,13 @@ import {
 // Strip internal memos from the client bundle — internal_notes never ships.
 type RawFeeItem = Record<string, unknown>;
 const rawData = rawFeesJson as unknown as { fee_items: RawFeeItem[] } & Record<string, unknown>;
+// Only link to posts that are actually published (scheduled posts 404 until their date).
+const publishedPostIds = new Set((await getCollection("posts")).filter(postFilter).map(p => p.id));
 const feesJson = {
   ...rawData,
+  jurisdictions: (rawData.jurisdictions as RawFeeItem[]).map(j =>
+    j.post_slug && !publishedPostIds.has(j.post_slug as string) ? { ...j, post_slug: "" } : j
+  ),
   fee_items: rawData.fee_items.map(({ internal_notes: _internal, ...publicItem }) => publicItem),
 } as unknown as FeeData;
 
