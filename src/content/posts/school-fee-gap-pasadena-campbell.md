@@ -2,6 +2,7 @@
 title: "The $2,528 School Fee Gap: Pasadena ($2.24) vs Campbell ($5.40)"
 description: "Same 800 sq ft ADU, $2,528 difference in school fees — from school district boundaries alone. Pasadena Unified charges $2.24/sq ft; Campbell's two districts total $5.40/sq ft. Why the rate varies and who sets it."
 pubDatetime: 2026-10-21T01:00:00Z
+modDatetime: 2026-10-26T01:00:00Z
 author: "Every Line Item"
 tags: ["adu cost", "school fees", "comparison", "pasadena", "campbell", "california", "2026"]
 draft: false
@@ -63,3 +64,12 @@ A 500 sq ft ADU in Campbell saves $2,700 in school fees versus an 800 sq ft one.
 ## The bottom line
 
 $2,528 for the same 800 sq ft of housing, decided by a boundary line. School fees are the least-discussed of the big three soft costs — and the one you have the least power to change. Know your district before you budget.
+
+---
+
+## Related reading
+
+One gap, two districts. For the statewide school-fee rules behind it, and Pasadena's verified fee page:
+
+- [ADU school fees, explained](/posts/adu-school-fees-explained/)
+- [Pasadena fee page](/fees/pasadena/)
