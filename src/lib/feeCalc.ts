@@ -861,7 +861,7 @@ export function resultsHTML(
   </div>
   ${skippedNote}
   <p class="border-border mt-4 border-t pt-4 text-sm font-medium">This calculator applies published fee schedules — it is not a construction quote. Totals cover government fees only: no design, construction, financing, or contingency costs.</p>
-  <p class="text-foreground/70 mt-2 text-xs">Full breakdown with methodology notes: <a href="/posts/${esc(r.juris.post_slug)}/" class="text-accent underline decoration-dashed underline-offset-4">Read the ${esc(r.juris.name)} post →</a></p>`;
+  ${r.juris.post_slug ? `<p class="text-foreground/70 mt-2 text-xs">Full breakdown with methodology notes: <a href="/posts/${esc(r.juris.post_slug)}/" class="text-accent underline decoration-dashed underline-offset-4">Read the ${esc(r.juris.name)} post →</a></p>` : ""}`;
 }
 
 // ---------------------------------------------------------------------------
