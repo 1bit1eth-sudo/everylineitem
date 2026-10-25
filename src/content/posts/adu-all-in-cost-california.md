@@ -2,7 +2,7 @@
 title: "ADU All-In Cost in California: Contingency, Loan Interest, Tax, and Vacancy (2026)"
 description: "The $320,000 and $215,000 construction models are not what you actually spend. Add 12% contingency, construction loan interest, Prop 13 ADU-only tax, vacancy, and optional management — here are clear year-one all-in tables."
 pubDatetime: 2026-09-04T08:15:00Z
-modDatetime: 2026-09-06T00:00:00Z
+modDatetime: 2026-10-26T01:00:00Z
 tags: ["adu all-in cost", "contingency", "california", "2026"]
 draft: false
 featured: false
@@ -11,6 +11,17 @@ seriesCurrent: adu-all-in-cost-california
 verifiedPublished: "4 Sep 2026"
 lastVerified: "5 Sep 2026"
 nextReview: "Dec 2026"
+faqs:
+  - question: "What is the all-in cost of an 800 sq ft ADU in California?"
+    answer: "Using this series' $320,000 construction model plus 12% contingency, modeled loan interest, first-year ADU-only tax, and two months of vacancy, plan on roughly $381,000 self-managed in year one — about 1.19x construction under these assumptions."
+  - question: "Is contingency really necessary if I have a fixed-price contract?"
+    answer: "Yes. Fixed-price contracts still exclude owner-driven changes, unforeseen site conditions in many cases, and items outside the contractor's scope. A 10-15% owner contingency remains standard."
+  - question: "Will building an ADU reset Prop 13 on my whole house?"
+    answer: "No. Only the ADU's new construction value is added to your assessment. Your main house keeps its existing base year value."
+  - question: "Should I include management in all-in cost?"
+    answer: "If you will not self-manage, yes — typically 8-10% of rent. If you will self-manage, put $0 and be honest about your time."
+  - question: "Where does rent payback fit?"
+    answer: "All-in is the cost stack. Payback and cash-on-cash are the return stack — see ADU rent payback ROI."
 ---
 > **Published:** 4 Sep 2026 · **Last verified:** 5 Sep 2026 · **Next review:** Dec 2026
 > Cost figures are re-checked against permit records quarterly. Changes are
@@ -179,6 +190,10 @@ We made a blank version of the six-phase ledger. Drop your contractor's numbers 
 Want the regional benchmark ranges for each phase, updated quarterly?
 
 **[Get the benchmark sheet →](/benchmarks/)**
+
+## Check the fee side for your city
+
+The fee side of the all-in stack is the one you can pin down exactly by address. Compare verified city schedules — [Oakland](/fees/oakland/) (no ADU impact fees at any size), [Anaheim](/fees/anaheim/), [Sacramento](/fees/sacramento/) — or run your address through the [fee calculator](/compare/).
 
 ## Methodology and sources
 
