@@ -2,7 +2,7 @@
 title: "800 sq ft ADU Cost in California: A Full 2026 Line-Item Breakdown"
 description: "We modeled an 800 sq ft detached ADU in Los Angeles County and priced every phase. Total: $320,000. Here is where each dollar goes and why smaller is not cheaper."
 pubDatetime: 2026-08-26T00:00:00Z
-modDatetime: 2026-09-06T00:00:00Z
+modDatetime: 2026-10-26T01:00:00Z
 tags: ["adu cost", "800 sq ft adu", "los angeles", "california", "2026"]
 draft: false
 featured: true
@@ -25,6 +25,8 @@ faqs:
     answer: "No. An unpermitted ADU cannot be legally rented, will not appear in your property records, and creates disclosure problems at sale. California has a legalization pathway for some existing unpermitted units, but it requires bringing the structure up to code — which routinely costs more than permitting a new build correctly from the start."
   - question: "Do ADUs increase property tax?"
     answer: "Yes, but only on the new construction. The assessed value of the ADU is added to your existing assessment. Building an ADU does not trigger a reassessment of your main house, and your original base year value on the existing home is preserved."
+  - question: "Do government fees change the $320,000 total by city?"
+    answer: "Yes. The construction phases are modeled medians, but permit, school, and impact fees vary by city and are the only part you can look up exactly. Run your address through the fee calculator; for the size threshold that switches impact fees on and off, see the 750 sq ft cliff explainer."
 ---
 > **Published:** 26 Aug 2026 · **Last verified:** 5 Sep 2026 · **Next review:** Dec 2026
 > Cost figures are re-checked against permit records quarterly. Changes are
@@ -161,6 +163,10 @@ Want the regional benchmark ranges for each phase, updated quarterly?
 
 **[Get the benchmark sheet →](/benchmarks/)**
 
+## Check the fee side for your city
+
+The construction phases above are modeled medians. The government-fee side is where the same ADU's total moves most by address — and it is the only side you can look up exactly before you build. Run your address through the [fee calculator](/compare/), or compare verified city schedules: [Glendale](/fees/glendale/), [Sacramento](/fees/sacramento/), [Torrance](/fees/torrance/). For the size threshold that switches impact fees on and off, see [the 750 sq ft cliff, explained](/posts/750-sq-ft-cliff-explained/).
+
 ## Methodology and sources
 
 Every figure on this page is a **modeled median, not a quote.** Here is exactly how it was built, so you can check it or reproduce it yourself.
@@ -221,3 +227,7 @@ No. An unpermitted ADU cannot be legally rented, will not appear in your propert
 **Do ADUs increase property tax?**
 
 Yes, but only on the new construction. The assessed value of the ADU is added to your existing assessment. Building an ADU does not trigger a reassessment of your main house, and your original base year value on the existing home is preserved.
+
+**Do government fees change the $320,000 total by city?**
+
+Yes. The construction phases are modeled medians, but permit, school, and impact fees vary by city and are the only part you can look up exactly. Run your address through the [fee calculator](/compare/); for the size threshold that switches impact fees on and off, see [the 750 sq ft cliff, explained](/posts/750-sq-ft-cliff-explained/).

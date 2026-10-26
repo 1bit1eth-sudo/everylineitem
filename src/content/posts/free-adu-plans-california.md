@@ -2,6 +2,7 @@
 title: "Free ADU Plans: 7 California Cities That Hand You the Drawings"
 description: "Seven California cities offer pre-approved ADU plans — from Chula Vista's 12 SnapADU designs to Pasadena's free city-drawn prototypes. What 'free' actually saves you ($1,000–$3,000 in plan check) and what it doesn't."
 pubDatetime: 2026-10-24T01:00:00Z
+modDatetime: 2026-10-26T01:00:00Z
 author: "Every Line Item"
 tags: ["adu", "pre-approved plans", "guide", "permit fees", "california", "2026"]
 draft: false
@@ -56,3 +57,12 @@ What free does **not** save: the building permit itself (still $1,006–$7,541 d
 ## The bottom line
 
 Free plans are the closest thing to a subsidy most ADU builders will ever touch: $8,000–$20,000 in design fees plus weeks of review, for the cost of building exactly what the city drew. The constraint is the point — the savings come from not changing anything.
+
+---
+
+## Related reading
+
+Free plans cluster just under the 750 line for a reason. Read why that threshold matters, then what the full build costs.
+
+- [The 750 sq ft cliff, explained](/posts/750-sq-ft-cliff-explained/)
+- [800 sq ft ADU cost breakdown](/posts/800-sq-ft-adu-cost-california/)

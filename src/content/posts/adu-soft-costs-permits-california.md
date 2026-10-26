@@ -2,7 +2,7 @@
 title: "ADU Soft Costs in California: Permits, Design, and Plan Check Line Items (2026)"
 description: "Soft costs on California ADUs typically land around $28,000–$40,000 before construction starts. Here is every design, engineering, plan check, and fee line — with ranges by jurisdiction type."
 pubDatetime: 2026-09-04T10:00:00Z
-modDatetime: 2026-09-09T00:00:00Z
+modDatetime: 2026-10-26T01:00:00Z
 tags: ["adu permits", "soft costs", "california", "2026"]
 draft: false
 featured: false
@@ -20,6 +20,8 @@ faqs:
     answer: "No. Doubling from 400 to 800 sq ft added only about $4,000 in soft costs. Design, engineering, and permits are closer to fixed than homeowners expect — one reason smaller ADUs cost more per square foot."
   - question: "Which soft cost varies the most by city?"
     answer: "Utility and impact charges. Design and plan check are relatively stable; water, sewer, and development impact fees swing by thousands of dollars between jurisdictions — sometimes more than the entire architecture fee."
+  - question: "Can I look up my city's exact permit fees?"
+    answer: "Yes. The fee calculator covers 156 California jurisdictions with 409 verified line items, and city fee pages show each schedule. Permit lines are the most city-specific part of soft costs; design and plan-check lines move less."
 ---
 > **Published:** 4 Sep 2026 · **Last verified:** 9 Sep 2026 · **Next review:** Dec 2026
 > Cost figures are re-checked against permit records quarterly. Changes are
@@ -180,6 +182,10 @@ Want the regional benchmark ranges for each phase, updated quarterly?
 
 **[Get the benchmark sheet →](/benchmarks/)**
 
+## Check the fee side for your city
+
+Permit and plan-check lines vary more by city than by square footage. Compare verified schedules — [Glendale](/fees/glendale/), [Torrance](/fees/torrance/), [Sacramento](/fees/sacramento/) — or run your own address through the [fee calculator](/compare/). For how long the permit itself takes, see [the ADU permit timeline](/posts/adu-permit-timeline/).
+
 ## Methodology and sources
 
 Every figure on this page is a **modeled median, not a quote.** Here is exactly how it was built, so you can check it or reproduce it yourself.
@@ -241,3 +247,7 @@ Stock or pre-approved plans can reduce drafting and plan-check time. You still n
 **Where should I read next?**
 
 Start with the full build models: [800 sq ft detached](/posts/800-sq-ft-adu-cost-california/), [400 sq ft detached](/posts/400-sq-ft-adu-cost-california/), and [garage conversion](/posts/garage-conversion-adu-cost-california/). Soft costs are phase one of those totals.
+
+**Can I look up my city's exact permit fees?**
+
+Yes. The [fee calculator](/compare/) covers 156 California jurisdictions with 409 verified line items, and city fee pages show each schedule. Permit lines are the most city-specific part of soft costs; design and plan-check lines move less.

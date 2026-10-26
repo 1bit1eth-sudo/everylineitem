@@ -2,6 +2,7 @@
 title: "Bay Area ADU Fees Ranked: Oakland vs San Francisco vs Palo Alto vs San Jose"
 description: "The same 800 sq ft ADU, four Bay Area fee philosophies: Palo Alto ~$303,000 (corrected), Oakland $322,000, San Francisco $325,000, San Jose ~$400,000. Why the 'expensive Bay Area' assumption falls apart once you read the fee schedules — and where the 750 sq ft cliff bites hardest."
 pubDatetime: 2026-10-15T01:00:00Z
+modDatetime: 2026-10-26T01:00:00Z
 author: "Every Line Item"
 tags: ["adu cost", "bay area", "comparison", "oakland", "san francisco", "palo alto", "san jose", "2026"]
 draft: false
@@ -60,3 +61,12 @@ SB 1117's marginal rule (fees only above 750 sq ft) rewrites the Palo Alto row m
 ## Disclaimer
 
 Model estimates, not quotes. Bay Area construction costs run above the Southern California baseline used in some rows; San Jose's total is explicitly our estimate. Always verify current fees with each city before budgeting.
+
+---
+
+## Related reading
+
+Rankings hide the line items. For the Bay Area city behind one of these totals, read its full breakdown.
+
+- [San Jose ADU fees](/posts/san-jose-bay-area-adu-cost/)
+- [Coastal vs inland ADU cost](/posts/coastal-vs-inland-adu-cost-california/)

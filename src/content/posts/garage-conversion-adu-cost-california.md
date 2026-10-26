@@ -2,7 +2,7 @@
 title: "Garage Conversion ADU Cost in California: Full 2026 Line-Item Breakdown"
 description: "We modeled a typical 2-car garage conversion ADU in Los Angeles County (~450 sq ft living). Total: $190,000. See which phases shrink vs a new detached build — and which grow."
 pubDatetime: 2026-09-04T12:00:00Z
-modDatetime: 2026-09-06T00:00:00Z
+modDatetime: 2026-10-26T01:00:00Z
 tags: ["garage conversion", "adu cost", "california", "2026"]
 draft: false
 featured: false
@@ -20,6 +20,8 @@ faqs:
     answer: "It depends on your jurisdiction. Many California cities no longer require replacement parking for garage conversions near transit, but the rules vary by city and lot. Confirm with your local planning department before budgeting."
   - question: "Is a garage conversion ADU worth it?"
     answer: "It is the lowest-cash path to a legal rental unit in this series, but the $422 per square foot is higher than the $400 of a new 800 sq ft build — the expensive parts (kitchen, bathroom, electrical panel, egress) do not shrink. Compare total outlay, not just sticker price."
+  - question: "Do garage conversions pay impact fees?"
+    answer: "Usually no city impact fees, because most conversions fall at or under 750 sq ft, where state law bars impact fees. School fees use a separate 500 sq ft threshold, so a conversion can owe school fees while owing no city impact fees."
 ---
 > **Published:** 4 Sep 2026 · **Last verified:** 5 Sep 2026 · **Next review:** Dec 2026
 > Cost figures are re-checked against permit records quarterly. Changes are
@@ -151,6 +153,10 @@ Want the regional benchmark ranges for each phase, updated quarterly?
 
 **[Get the benchmark sheet →](/benchmarks/)**
 
+## Check the fee side for your city
+
+A conversion's fee side looks different from a detached build's — and size still matters: most conversions fall under 750 sq ft, where city impact fees are $0 by state law. Check the [fee calculator](/compare/) for your city, compare [Glendale](/fees/glendale/) and [Long Beach](/fees/long-beach/) schedules, and read [the 750 sq ft cliff, explained](/posts/750-sq-ft-cliff-explained/) before you fix the floor plan.
+
 ## Methodology and sources
 
 Every figure on this page is a **modeled median, not a quote.** Here is exactly how it was built, so you can check it or reproduce it yourself.
@@ -211,3 +217,7 @@ Often shorter in pure construction than a new detached build — commonly on the
 **Should I convert or build detached?**
 
 Convert when the garage is sound, parking is solvable, and you want lower absolute cost. Build detached when you need more space, the garage is poor quality, or conversion rules/parking make the retrofit a dead end. Compare against the [800](/posts/800-sq-ft-adu-cost-california/) and [400](/posts/400-sq-ft-adu-cost-california/) detached models using the same six phases.
+
+**Do garage conversions pay impact fees?**
+
+Usually no city impact fees, because most conversions fall at or under 750 sq ft, where state law bars impact fees. School fees use a separate 500 sq ft threshold, so a conversion can owe school fees while owing no city impact fees. See [the 750 sq ft cliff, explained](/posts/750-sq-ft-cliff-explained/).

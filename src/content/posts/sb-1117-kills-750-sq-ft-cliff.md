@@ -2,6 +2,7 @@
 title: "On Jan 1, 2027, California Kills the 750 Sq Ft Cliff — Here's What You'd Save"
 description: "SB 1117, signed Sept 29, 2026, rewrites the ADU impact-fee rule: from Jan 1, 2027, cities may charge fees only on square footage above 750 — not the whole unit. City-by-city savings table: Palo Alto ~$8,000–$20,000 → ~$500–$1,250; Anaheim ~$10,411 → a fraction. What changes, what doesn't, and the December-vs-January permit question."
 pubDatetime: 2026-10-12T01:00:00Z
+modDatetime: 2026-10-26T01:00:00Z
 author: "Every Line Item"
 tags: ["sb 1117", "adu law", "impact fees", "750 sq ft cliff", "california", "2026"]
 draft: false
@@ -80,3 +81,12 @@ Model both paths with your city's actual numbers before deciding. A $1,390 savin
 ## Disclaimer
 
 Legislative summary, not legal advice. Dollar figures above are our estimates from published 2026 fee schedules, not city-published 2027 figures. Implementation will vary by jurisdiction. Always verify current fees with your city before budgeting.
+
+---
+
+## Related reading
+
+SB 1117 changes the math, not the size decision. Run both sizes through the same stack, then your own address through the calculator.
+
+- [400 sq ft ADU cost](/posts/400-sq-ft-adu-cost-california/)
+- [Fee calculator](/compare/)
