@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "date": "2026-10-28",
+      "headline": "Batch 29: 5 new jurisdictions, 11 verified fee items",
+      "detail": "Atherton, Daly City, Eureka, La Puente, National City. Atherton enters with a $0 town impact-fee program and a $0/$1,860 setback-forked planning fee; Daly City with its $851 ADU planning fee + $281 address assignment; Eureka with $215 + $94 planning lines and $85.30 issuance; National City with $66 issuance and the $700 Sweetwater availability review. La Puente enters with no verified items yet - Rowland USD's $5.17 rate is FY2024-25 only and Hacienda La Puente USD (most of the city) has no published rate - 12/1 re-verification. Held for 12/1 across the batch: all school fees (Atherton PARTIAL feeder adoptions; Daly City rate not found; Eureka not found; National City 2021 rates only), all proportioned impact fees (Daly City $16.10/sq ft AB 1600; Eureka $701/unit DIF; National City TDIF rate not found), and all fixture/meter/EDU-dependent utility dollars.",
+      "jurisdictions": [
+        "Atherton",
+        "Daly City",
+        "Eureka",
+        "La Puente",
+        "National City"
+      ],
+      "items_added": 11
+    },
+    {
       "date": "2026-10-24",
       "headline": "Correction: impact fees prorated to primary-dwelling size; Ontario areas no longer summed",
       "detail": "Methodology correction, not a fee-schedule change. (1) Ontario: General City and Ontario Ranch are mutually exclusive area schedules (Res. 2025-010; Ontario Ranch DIF schedule eff. 7/1/2026) — a parcel pays one, not both. The old $96,171 cliff and $97,507 stack summed both areas at their full per-dwelling bases; both figures are withdrawn. At the 1,600 sq ft default primary, an 800 sq ft ADU now shows General City $18,798 + school $1,336 = $20,134, or Ontario Ranch $29,288 + school $1,336 = $30,624. The calculator has an area selector; jurisdiction and Fee Index pages show the range across areas. (2) Proration: cities that publish a per-dwelling base (not an ADU fee) now prorate as (ADU sq ft / primary sq ft) x base under Gov. Code §66311.5(c)(1)(B), with a new primary-dwelling input in the calculator (1,600 sq ft default, labeled as an assumption). El Monte's encoded $4,087 becomes base $10,217.26 (the $4,087 was the 800/2,000 example; at the default primary an 800 sq ft ADU pays $5,109; the SB 1117 note is recomputed to ~$319 at the same primary, and the Quimby exclusion is flagged unverified for 12/1 review). Lynwood's $2,756 becomes base $4,822.63 (the $2,756 was the 800/1,400 example; at the default primary an 800 sq ft ADU pays $2,411; two further schedule rows totaling $336.70 are under review for ADU applicability). Westminster is now min(prorated $17,179 base, $4,000 cap) instead of a flat $4,000. SB 1117 2027 conversions now cover dwelling-base lines too: ((sqft - 750) / primary) x base. Flat lines whose derivation is genuinely unpublished (including Hayward, a city-published ADU flat fee) stay marked 'conversion not published yet' and are never guessed. (3) Hayward park fee corrected $3,823 to $3,812 per the Adopted FY2025-26 Master Fee Schedule (eff. 7/1/2025); no FY2026-27 schedule was found as of 24 Oct 2026. Note: Fee Index figures previously shared with journalists used the old summed Ontario figures; they are corrected here and on the Fee Index page. Lines whose sources do not state a per-dwelling base are unchanged pending a second-phase source review.",
