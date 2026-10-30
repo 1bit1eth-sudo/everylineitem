@@ -107,7 +107,7 @@ Every fee line we found, with exactly what it is and where it came from.
 
 ## The clearest 750 sq ft cliff in California code
 
-Read §19.04.030(2)(P)(7)(a) and there is nothing to interpret. Subsection (a) does three things in sequence. First, it defines the "impact fees" in play as Mitigation Fee Act (Gov. Code §66000(b)) and Quimby Act (§66477) fees — and explicitly carves out water/sewer connection and capacity charges, which are handled separately in subsection (b). Second, it exempts ADUs and JADUs under 750 square feet entirely. Third, for ADUs at or above 750 square feet, it sets the charge as the ADU's square footage divided by the primary dwelling's square footage, multiplied by the standard fee for a new single-family unit.
+Read §19.04.030(2)(P)(7)(a) and there is nothing to interpret. Subsection (a) does three things in sequence. First, it defines the "impact fees" in play as Mitigation Fee Act (Gov. Code §66000(b)) and Quimby Act (§66477) fees — and explicitly carves out water/sewer connection and capacity charges, which are handled separately in subsection (b). Second, it exempts ADUs and JADUs under 750 square feet entirely. Third, for ADUs at or above 750 square feet, it sets the charge as the ADU's square footage divided by the primary dwelling's square footage, multiplied by the standard fee for a new single-family unit. Note: at exactly 750 square feet, the ordinance's "at or above 750" language would charge, while state law (Gov. Code §66311.5(c)(1)(A)) bars impact fees on ADUs of 750 square feet or less.
 
 That standard is the most itemized in the series — seven lines, published by the Public Works Land Development Division (2022 base, adjusted every July 15 by the ENR index, so treat the base as a floor for the current figure):
 
@@ -122,7 +122,7 @@ That standard is the most itemized in the series — seven lines, published by t
 | Parkland & open space (Infill AB1600, detached) | $8,044.32/unit |
 | **Standard total** | **$17,330.78/unit** |
 
-Work the formula for our example: 800 ÷ 1,500 × $17,330.78 = **$9,243.08**. That is the number in our total — and the 1,500 sq ft house is our assumption, stated plainly, because the ordinance gives the formula but no example house. A smaller primary dwelling raises the ADU's share; a larger one lowers it. The 750 sq ft cliff itself needs no assumption: below it, the ordinance says $0.
+Work the formula for our example: 800 ÷ 1,500 × $17,330.78 = **$9,243.08**. That is the number in our total — and the 1,500 sq ft house is our assumption, stated plainly, because the ordinance gives the formula but no example house. A smaller primary dwelling raises the ADU's share; a larger one lowers it. The 750 sq ft cliff itself needs no assumption: below it, the ordinance says $0. At the site's 1,600 sq ft default primary size, the same formula gives $8,665.39.
 
 The January 2026 DCA 25-11 amendment packet keeps the same pro-rata structure, so the formula is current through the latest published draft. Final council adoption, however, is unconfirmed.
 
