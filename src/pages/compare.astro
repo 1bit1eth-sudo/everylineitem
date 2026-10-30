@@ -208,7 +208,16 @@ const inputClass =
                   data-stage={row.id}
                   data-extra={row.extra ? "1" : undefined}
                 >
-                  <td class="py-2 pe-3">{row.label}</td>
+                  <td class="py-2 pe-3">
+                    {row.label}
+                    {
+                      row.extra && (
+                        <span class="ms-2 text-xs opacity-70">
+                          Modular/prefab only
+                        </span>
+                      )
+                    }
+                  </td>
                   <td class="py-2 pe-3 tabular-nums" data-bench>
                     {money(row.amount)}
                   </td>

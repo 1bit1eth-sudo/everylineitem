@@ -802,8 +802,38 @@ export function resultsHTML(
     l => l.item.category === "impact" && l.kind !== "skipped"
   );
 
+  // Category breakdown of the 750→751 total jump, from the same two
+  // calculations the card already shows. A line out of scope at one size
+  // counts as $0 there, so tier swaps (e.g. permit tiers) net correctly.
+  // The breakdown sums to the displayed low-end jump (deltaLow); when the
+  // 751 side has ranged lines, the high end of the jump is larger.
+  const deltaByCat = new Map<string, number>();
+  for (const id of new Set([
+    ...at750.lines.map(l => l.item.item_id),
+    ...at751.lines.map(l => l.item.item_id),
+  ])) {
+    const l750 = at750.lines.find(l => l.item.item_id === id);
+    const l751 = at751.lines.find(l => l.item.item_id === id);
+    const d = (l751?.low ?? 0) - (l750?.low ?? 0);
+    if (d !== 0) {
+      const cat = (l751 ?? l750)!.item.category;
+      deltaByCat.set(cat, (deltaByCat.get(cat) ?? 0) + d);
+    }
+  }
+  const jumpBreakdown = [...deltaByCat.entries()]
+    .sort((a, b) => Math.abs(b[1]) - Math.abs(a[1]))
+    .map(
+      ([cat, d]) =>
+        `${categoryLabel(cat)} ${d >= 0 ? "+" : "-"}$${Math.abs(d).toLocaleString("en-US")}`
+    )
+    .join(", ");
+  const jumpNote =
+    jumpBreakdown !== ""
+      ? ` Jump breakdown${deltaHigh != null ? " (low end)" : ""}: ${jumpBreakdown}.`
+      : "";
+
   const cliffText = hasImpactItems
-    ? `At ${data.rules.impact_exempt_max_sqft} sq ft, this jurisdiction's impact fees are <strong>${fmtRange(at750.impactLow, at750.impactHigh)}</strong> — state law bars them. At ${data.rules.impact_exempt_max_sqft + 1} sq ft they become <strong>${fmtRange(at751.impactLow, at751.impactHigh)}</strong>, and the fee total jumps by about <strong>${fmtRange(deltaLow, deltaHigh)}</strong>. Drag the slider across 750 to watch it happen.`
+    ? `At ${data.rules.impact_exempt_max_sqft} sq ft, this jurisdiction's impact fees are <strong>${fmtRange(at750.impactLow, at750.impactHigh)}</strong> — state law bars them. At ${data.rules.impact_exempt_max_sqft + 1} sq ft they become <strong>${fmtRange(at751.impactLow, at751.impactHigh)}</strong>, and the fee total jumps by about <strong>${fmtRange(deltaLow, deltaHigh)}</strong>. Drag the slider across 750 to watch it happen.${jumpNote}`
     : `No impact-fee line items are on file for this jurisdiction yet, so the 750 sq ft cliff does not move its total.`;
 
   const rows = r.lines
