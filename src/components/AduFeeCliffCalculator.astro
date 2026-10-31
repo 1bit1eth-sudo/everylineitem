@@ -1,0 +1,454 @@
+---
+// Component: src/components/AduFeeCliffCalculator.astro
+// Standalone ADU 750 sq ft impact-fee cliff calculator; no external libraries, no global CSS conflicts.
+// Corrections (2026-10-30): (1) section number §66324 -> §66311.5 (impact-fee rules live in §66311.5)
+// (2) exemption boundary <750 -> ≤750 (current §66311.5(c)(1)(A) exempts "750 sq ft or less"; the cliff starts at 751)
+// (3) SB 1117 comparison added (effective 2027-01-01; up to 2 ADUs charged only on area above 750 sq ft)
+---
+
+<section class="eli-cliff-wrapper" aria-label="California ADU 750 sq ft Impact Fee Cliff Calculator">
+  <div class="eli-cliff-header">
+    <span class="eli-cliff-badge">California ADU Fee Analyzer (Gov. Code § 66311.5 & SB 1117)</span>
+    <h2 class="eli-cliff-title">750 sq ft Impact Fee Cliff & Proportional Calculator</h2>
+    <p class="eli-cliff-subtitle">
+      Compare how crossing the 750 sq ft threshold triggers local development impact fees, and what SB 1117 (from Jan 1, 2027) changes for properties with up to 2 ADUs.
+    </p>
+  </div>
+
+  <div class="eli-cliff-banner" role="note">
+    Calculated under 2026 rules. From January 1, 2027, SB 1117 changes how impact fees apply.
+  </div>
+
+  <div class="eli-cliff-grid">
+    <!-- Left: user input sliders -->
+    <div class="eli-cliff-controls">
+      <div class="eli-cliff-input-group">
+        <div class="eli-cliff-label-row">
+          <label for="eli-adu-sqft">Planned ADU Size</label>
+          <span class="eli-cliff-val" id="eli-adu-sqft-display">750 sq ft</span>
+        </div>
+        <input type="range" id="eli-adu-sqft" min="300" max="1200" step="1" value="750" />
+        <div class="eli-cliff-range-hints">
+          <span>300 sq ft</span>
+          <span class="eli-cliff-highlight-mark">750 sq ft (Exempt Limit)</span>
+          <span>1,200 sq ft</span>
+        </div>
+      </div>
+
+      <div class="eli-cliff-input-group">
+        <div class="eli-cliff-label-row">
+          <label for="eli-primary-sqft">Existing Primary Home Size</label>
+          <span class="eli-cliff-val" id="eli-primary-sqft-display">1,800 sq ft</span>
+        </div>
+        <input type="range" id="eli-primary-sqft" min="1000" max="4000" step="50" value="1800" />
+        <div class="eli-cliff-range-hints">
+          <span>1,000 sq ft</span>
+          <span>2,500 sq ft</span>
+          <span>4,000 sq ft</span>
+        </div>
+      </div>
+
+      <div class="eli-cliff-input-group">
+        <div class="eli-cliff-label-row">
+          <label for="eli-base-fee">Jurisdiction Base Single-Family Impact Fee</label>
+          <span class="eli-cliff-val" id="eli-base-fee-display">$28,000</span>
+        </div>
+        <input type="range" id="eli-base-fee" min="5000" max="65000" step="1000" value="28000" />
+        <div class="eli-cliff-range-hints">
+          <span>$5,000 (Low)</span>
+          <span>$28,000 (CA Avg)</span>
+          <span>$65,000 (High)</span>
+        </div>
+      </div>
+
+      <div class="eli-cliff-quick-btn-row">
+        <button type="button" class="eli-cliff-preset-btn" id="eli-btn-750">Test 750 sq ft (Exempt)</button>
+        <button type="button" class="eli-cliff-preset-btn" id="eli-btn-751">Test 751 sq ft (Cliff Triggered)</button>
+      </div>
+    </div>
+
+    <!-- Right: live calculation results -->
+    <div class="eli-cliff-results">
+      <div id="eli-status-banner" class="eli-cliff-banner eli-cliff-banner-ok">
+        <strong>Exempt Zone (750 sq ft or less):</strong> Your ADU qualifies for $0 local development impact fees under California state law, saving you <strong>$11,667</strong>.
+      </div>
+
+      <div class="eli-cliff-cards">
+        <div class="eli-cliff-card">
+          <span class="eli-cliff-card-label">Estimated ADU Impact Fee</span>
+          <strong class="eli-cliff-card-number" id="eli-final-fee">$0</strong>
+          <span class="eli-cliff-card-sub" id="eli-fee-formula">750 sq ft or less State Exemption Applied</span>
+        </div>
+
+        <div class="eli-cliff-card eli-cliff-card-safe">
+          <span class="eli-cliff-card-label">If Built at 750 sq ft</span>
+          <strong class="eli-cliff-card-number">$0</strong>
+          <span class="eli-cliff-card-sub">100% Exempt under State Mandate</span>
+        </div>
+      </div>
+
+      <p class="eli-cliff-sb-line" id="eli-sb-line">
+        From Jan 1, 2027 (SB 1117, up to 2 ADUs): $0 — no change at this size.
+      </p>
+
+      <!-- Scenario comparison table -->
+      <table class="eli-cliff-table">
+        <thead>
+          <tr>
+            <th>Scenario</th>
+            <th>ADU Size</th>
+            <th>Calculation Rule</th>
+            <th>Est. Impact Fee</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Optimized Under-Cliff</strong></td>
+            <td>750 sq ft</td>
+            <td>750 sq ft or less Exemption</td>
+            <td class="eli-cliff-text-green">$0</td>
+          </tr>
+          <tr class="eli-cliff-row-current">
+            <td><strong>Your Current Plan</strong></td>
+            <td id="eli-table-current-sqft">750 sq ft</td>
+            <td id="eli-table-current-rule">State Exempt (≤ 750 sq ft)</td>
+            <td id="eli-table-current-fee">$0</td>
+          </tr>
+          <tr>
+            <td><strong>SB 1117 Rate (2027+)</strong></td>
+            <td id="eli-table-sb-sqft">750 sq ft</td>
+            <td>Excess over 750 sq ft only</td>
+            <td id="eli-table-sb-fee">$0</td>
+          </tr>
+          <tr>
+            <td><strong>Unproportional Flat Cap</strong></td>
+            <td id="eli-table-flat-sqft">750 sq ft</td>
+            <td>Legacy Full Single-Family Rate</td>
+            <td id="eli-table-flat-fee">$28,000</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="eli-cliff-disclaimer">
+        *Note: Covers development impact fees (park, traffic, school district thresholds vary separately at 500 sq ft under Ed. Code § 17620). Does not exempt standard building permit plan-check or water/sewer connection capacity charges. SB 1117 figures apply from Jan 1, 2027, to properties with up to 2 ADUs, and exclude connection/capacity charges.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .eli-cliff-wrapper {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 28px 0;
+    color: #0f172a;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+  }
+  .eli-cliff-header {
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+  }
+  .eli-cliff-badge {
+    display: inline-block;
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 999px;
+    margin-bottom: 8px;
+  }
+  .eli-cliff-title {
+    font-size: 22px;
+    font-weight: 800;
+    margin: 0 0 6px 0;
+    color: #0f172a;
+  }
+  .eli-cliff-subtitle {
+    font-size: 14px;
+    color: #475569;
+    margin: 0;
+    line-height: 1.5;
+  }
+  .eli-cliff-banner {
+    background: #fffbeb;
+    border: 1px solid #f59e0b;
+    border-radius: 8px;
+    color: #92400e;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    padding: 10px 14px;
+    margin-bottom: 20px;
+  }
+  .eli-cliff-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 24px;
+  }
+  @media (max-width: 768px) {
+    .eli-cliff-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .eli-cliff-controls {
+    background: #f8fafc;
+    padding: 18px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+  }
+  .eli-cliff-input-group {
+    margin-bottom: 18px;
+  }
+  .eli-cliff-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .eli-cliff-val {
+    color: #1d4ed8;
+    font-weight: 800;
+    font-size: 15px;
+  }
+  .eli-cliff-input-group input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+    accent-color: #2563eb;
+  }
+  .eli-cliff-range-hints {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #64748b;
+    margin-top: 4px;
+  }
+  .eli-cliff-highlight-mark {
+    color: #b45309;
+    font-weight: 700;
+  }
+  .eli-cliff-quick-btn-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .eli-cliff-preset-btn {
+    flex: 1;
+    padding: 8px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #1e293b;
+    transition: background 0.15s;
+  }
+  .eli-cliff-preset-btn:hover {
+    background: #f1f5f9;
+  }
+  .eli-cliff-banner {
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 13.5px;
+    line-height: 1.45;
+    margin-bottom: 16px;
+  }
+  .eli-cliff-banner-warn {
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    color: #92400e;
+  }
+  .eli-cliff-banner-ok {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    color: #166534;
+  }
+  .eli-cliff-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .eli-cliff-card {
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+  }
+  .eli-cliff-card-safe {
+    background: #f8fafc;
+  }
+  .eli-cliff-card-label {
+    display: block;
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 4px;
+  }
+  .eli-cliff-card-number {
+    display: block;
+    font-size: 24px;
+    font-weight: 800;
+    color: #0f172a;
+  }
+  .eli-cliff-card-sub {
+    display: block;
+    font-size: 11.5px;
+    color: #475569;
+    margin-top: 4px;
+  }
+  .eli-cliff-sb-line {
+    font-size: 13px;
+    color: #1d4ed8;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    line-height: 1.45;
+  }
+  .eli-cliff-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+  .eli-cliff-table th,
+  .eli-cliff-table td {
+    border-bottom: 1px solid #e2e8f0;
+    padding: 8px 6px;
+    text-align: left;
+  }
+  .eli-cliff-table th {
+    color: #475569;
+    font-weight: 700;
+    background: #f8fafc;
+  }
+  .eli-cliff-row-current {
+    background: #eff6ff;
+    font-weight: 600;
+  }
+  .eli-cliff-text-green {
+    color: #15803d;
+    font-weight: 700;
+  }
+  .eli-cliff-disclaimer {
+    font-size: 11.5px;
+    color: #64748b;
+    margin: 0;
+    line-height: 1.4;
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    const aduInput = document.getElementById("eli-adu-sqft");
+    const primaryInput = document.getElementById("eli-primary-sqft");
+    const baseFeeInput = document.getElementById("eli-base-fee");
+
+    const aduDisplay = document.getElementById("eli-adu-sqft-display");
+    const primaryDisplay = document.getElementById("eli-primary-sqft-display");
+    const baseFeeDisplay = document.getElementById("eli-base-fee-display");
+
+    const statusBanner = document.getElementById("eli-status-banner");
+    const finalFeeEl = document.getElementById("eli-final-fee");
+    const feeFormulaEl = document.getElementById("eli-fee-formula");
+    const sbLineEl = document.getElementById("eli-sb-line");
+
+    const tableCurrentSqft = document.getElementById("eli-table-current-sqft");
+    const tableCurrentRule = document.getElementById("eli-table-current-rule");
+    const tableCurrentFee = document.getElementById("eli-table-current-fee");
+    const tableSbSqft = document.getElementById("eli-table-sb-sqft");
+    const tableSbFee = document.getElementById("eli-table-sb-fee");
+    const tableFlatSqft = document.getElementById("eli-table-flat-sqft");
+    const tableFlatFee = document.getElementById("eli-table-flat-fee");
+
+    const btn750 = document.getElementById("eli-btn-750");
+    const btn751 = document.getElementById("eli-btn-751");
+
+    function formatUSD(num) {
+      return "$" + Math.round(num).toLocaleString("en-US");
+    }
+
+    function updateCalculator() {
+      const aduSqft = parseInt(aduInput.value, 10);
+      const primarySqft = parseInt(primaryInput.value, 10);
+      const baseFee = parseInt(baseFeeInput.value, 10);
+
+      aduDisplay.textContent = aduSqft.toLocaleString("en-US") + " sq ft";
+      primaryDisplay.textContent = primarySqft.toLocaleString("en-US") + " sq ft";
+      baseFeeDisplay.textContent = formatUSD(baseFee);
+
+      const ratio = Math.min(aduSqft / primarySqft, 1);
+      const proportionalFee = Math.round(baseFee * ratio);
+      // Current law: Gov. Code § 66311.5(c)(1)(A) exempts ADUs of 750 sq ft OR LESS.
+      const isExempt = aduSqft <= 750;
+      const actualFee = isExempt ? 0 : proportionalFee;
+
+      // SB 1117 (from Jan 1, 2027, up to 2 ADUs): only the area in excess of
+      // 750 sq ft is charged, proportionally against the primary home.
+      const excessSqft = Math.max(0, aduSqft - 750);
+      const sbFee = Math.round(baseFee * Math.min(excessSqft / primarySqft, 1));
+      const sbSavings = actualFee - sbFee;
+
+      finalFeeEl.textContent = formatUSD(actualFee);
+      tableCurrentSqft.textContent = aduSqft.toLocaleString("en-US") + " sq ft";
+      tableSbSqft.textContent = aduSqft.toLocaleString("en-US") + " sq ft";
+      tableSbFee.textContent = formatUSD(sbFee);
+      tableFlatSqft.textContent = aduSqft.toLocaleString("en-US") + " sq ft";
+      tableFlatFee.textContent = formatUSD(baseFee);
+
+      if (isExempt) {
+        statusBanner.className = "eli-cliff-banner eli-cliff-banner-ok";
+        statusBanner.innerHTML =
+          "<strong>Exempt Zone (750 sq ft or less):</strong> Your ADU qualifies for $0 local development impact fees under California state law, saving you <strong>" +
+          formatUSD(proportionalFee) +
+          "</strong>.";
+        feeFormulaEl.textContent = "750 sq ft or less State Exemption Applied";
+        tableCurrentRule.textContent = "State Exempt (≤ 750 sq ft)";
+        tableCurrentFee.textContent = "$0";
+        sbLineEl.textContent =
+          "From Jan 1, 2027 (SB 1117, up to 2 ADUs): $0 — no change at this size.";
+      } else {
+        const diff = aduSqft - 750;
+        statusBanner.className = "eli-cliff-banner eli-cliff-banner-warn";
+        statusBanner.innerHTML =
+          "<strong>750 sq ft Cliff Triggered:</strong> Reducing your plan by <strong>" +
+          diff +
+          " sq ft</strong> (to 750 sq ft) drops this fee from <strong>" +
+          formatUSD(actualFee) +
+          "</strong> to <strong>$0</strong>.";
+        feeFormulaEl.textContent =
+          "Proportional Ratio: " + (ratio * 100).toFixed(1) + "% of Primary Home";
+        tableCurrentRule.textContent =
+          "Proportional (" + (ratio * 100).toFixed(1) + "% ratio)";
+        tableCurrentFee.textContent = formatUSD(actualFee);
+        sbLineEl.textContent =
+          "From Jan 1, 2027 (SB 1117, up to 2 ADUs): " +
+          formatUSD(sbFee) +
+          " — saving " +
+          formatUSD(sbSavings) +
+          " vs current law.";
+      }
+    }
+
+    aduInput.addEventListener("input", updateCalculator);
+    primaryInput.addEventListener("input", updateCalculator);
+    baseFeeInput.addEventListener("input", updateCalculator);
+
+    btn750.addEventListener("click", function () {
+      aduInput.value = "750";
+      updateCalculator();
+    });
+
+    btn751.addEventListener("click", function () {
+      aduInput.value = "751";
+      updateCalculator();
+    });
+
+    updateCalculator();
+  })();
+</script>
