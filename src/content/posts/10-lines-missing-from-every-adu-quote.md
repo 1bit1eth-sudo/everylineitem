@@ -1,10 +1,10 @@
 ---
 title: "10 Lines Missing From Every ADU Quote (With Dollar Ranges)"
 description: "A contractor's 'all-in' ADU quote rarely includes the government lines, the tax line, or the reserve line. Ten lines that show up after you sign, with dollar ranges from verified California fee ledgers — and the lines we refuse to price without a source."
-pubDatetime: 2027-02-01T01:00:00Z
+pubDatetime: 2026-10-31T10:17:00Z
 author: "Every Line Item"
 tags: ["adu cost", "contractor bid", "adu quote", "california", "2026"]
-draft: true
+draft: false
 faqs:
   - question: "Why are the ranges in this guide so wide?"
     answer: "Because California cities price the same line differently. A building permit plus plan check is $1,672 in Anaheim and $13,798 in La Habra on verified 800 sq ft figures. The range is the honest answer; a single number would be a guess about your city."
