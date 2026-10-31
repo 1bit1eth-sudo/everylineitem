@@ -518,5 +518,58 @@ const inputClass =
   set:html={JSON.stringify(comparePayload)}
 />
 
+<style is:global>
+  /* Jurisdiction combobox dropdown (JS-created nodes, so global styles).
+     Colors come from the theme variables, so light/dark both work. */
+  .jscb-wrap {
+    position: relative;
+  }
+  .jscb-list {
+    position: absolute;
+    z-index: 50;
+    left: 0;
+    right: 0;
+    top: calc(100% + 4px);
+    max-height: 16rem;
+    overflow-y: auto;
+    background: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: 0.375rem;
+    box-shadow: 0 8px 24px rgb(0 0 0 / 0.12);
+    padding: 0.25rem;
+  }
+  .jscb-group {
+    padding: 0.375rem 0.75rem 0.25rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+  .jscb-opt {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+  }
+  .jscb-opt:hover,
+  .jscb-opt.active {
+    background: var(--color-muted);
+  }
+  .jscb-region {
+    opacity: 0.6;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+  .jscb-empty {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    opacity: 0.7;
+  }
+</style>
+
 <script is:inline src="/scripts/adu-compare.js"></script>
 <script is:inline src="/scripts/quote-check.js"></script>
+<script is:inline src="/scripts/juris-combobox.js"></script>
