@@ -8,6 +8,7 @@ import {
   categoryLabel,
   fmtUSD,
 } from "@/lib/feeCalc";
+import { formatVerified } from "@/utils/formatVerified";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
@@ -165,6 +166,31 @@ const faqSchema = {
     <p class="text-lg opacity-80">
       Every government fee we could verify for an ADU in {juris.name}, from
       official sources. Figures below are for an {SQFT} sq ft ADU unless noted.
+    </p>
+    <p class="mt-3 text-sm opacity-70">
+      Every figure links to its official source document.
+      {juris.last_verified && (
+        <> Last verified {formatVerified(juris.last_verified)}.</>
+      )}{" "}
+      Fees are re-verified on a rolling schedule (next full pass Dec 2026).{" "}
+      {/^https?:\/\//.test(juris.fee_schedule_url ?? "") && (
+        <>
+          <a
+            href={juris.fee_schedule_url}
+            target="_blank"
+            rel="noopener"
+            class="text-accent underline decoration-dashed underline-offset-4"
+          >
+            Official fee schedule &nearr;
+          </a>{" "}
+        </>
+      )}
+      <LinkButton
+        class="underline decoration-dashed underline-offset-4"
+        href="/methodology/"
+      >
+        How we price &rarr;
+      </LinkButton>
     </p>
 
     {verifiedLines.length > 0 ? (
