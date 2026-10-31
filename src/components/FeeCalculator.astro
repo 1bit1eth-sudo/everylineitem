@@ -73,6 +73,13 @@ const selectClass =
   <div class="mt-5 grid gap-5 sm:grid-cols-2">
     <label class="flex flex-col gap-2 text-sm font-medium">
       <span>Jurisdiction</span>
+      <input
+        type="search"
+        data-juris-filter="fee-juris"
+        placeholder="Type to filter jurisdictions…"
+        aria-label="Filter jurisdictions"
+        class={selectClass}
+      />
       <select id="fee-juris" class={selectClass} data-combobox>
         {
           regions.map(region => (
@@ -494,3 +501,5 @@ const selectClass =
     });
   }
 </script>
+
+<script is:inline src="/scripts/juris-filter.js"></script>
