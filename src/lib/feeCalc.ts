@@ -894,6 +894,286 @@ export function resultsHTML(
   ${r.juris.post_slug ? `<p class="text-foreground/70 mt-2 text-xs">Full breakdown with methodology notes: <a href="/posts/${esc(r.juris.post_slug)}/" class="text-accent underline decoration-dashed underline-offset-4">Read the ${esc(r.juris.name)} post →</a></p>` : ""}`;
 }
 
+export interface CategoryTotal {
+  category: string;
+  /** Sum of ok + exempt lines only; skipped lines are excluded, like the total. */
+  low: number;
+  high: number | null;
+  hasRange: boolean;
+}
+
+/**
+ * Per-category totals for one calcJurisdiction result, in
+ * CATEGORY_LABELS order (unknown categories last, alphabetical).
+ * Sums to totalLow / totalHigh when ranges are folded the same way.
+ */
+export function categoryTotals(r: CalcResult): CategoryTotal[] {
+  const byCat = new Map<string, { low: number; high: number; hasRange: boolean }>();
+  for (const l of r.lines) {
+    if (l.kind === "skipped") continue;
+    const cur = byCat.get(l.item.category) ?? { low: 0, high: 0, hasRange: false };
+    cur.low += l.low;
+    if (l.high != null) {
+      cur.high += l.high;
+      cur.hasRange = true;
+    } else {
+      cur.high += l.low;
+    }
+    byCat.set(l.item.category, cur);
+  }
+  const knownOrder = Object.keys(CATEGORY_LABELS);
+  return [...byCat.entries()]
+    .sort(([a], [b]) => {
+      const ia = knownOrder.indexOf(a);
+      const ib = knownOrder.indexOf(b);
+      if (ia !== -1 && ib !== -1) return ia - ib;
+      if (ia !== -1) return -1;
+      if (ib !== -1) return 1;
+      return a.localeCompare(b, "en-US");
+    })
+    .map(([category, v]) => ({
+      category,
+      low: v.low,
+      high: v.hasRange ? v.high : null,
+      hasRange: v.hasRange,
+    }));
+}
+
+export interface SideInput {
+  jurisId: string;
+  sqft: number;
+  area?: string | null;
+}
+
+function moneyDiffSigned(n: number): string {
+  if (n === 0) return "$0";
+  return (n > 0 ? "+" : "−") + fmtUSD(Math.abs(n));
+}
+
+/**
+ * Side-by-side fee comparison for two jurisdictions at (possibly) two
+ * sizes. Shared by JurisdictionCompare.astro (SSR default) and its client
+ * script, so both render identical results.
+ *
+ * Comparison unit is the category total (ok + exempt lines; skipped lines
+ * excluded, exactly like each side's total). Individual fee lines differ
+ * by city, so line-by-line comparison would be false precision.
+ * Differences use low ends; a footnote says so when either side ranges.
+ */
+export function sideBySideHTML(
+  data: FeeData,
+  a: SideInput,
+  b: SideInput,
+  primarySqft: number = DEFAULT_PRIMARY_SQFT
+): string {
+  const resA = calcJurisdiction(data, a.jurisId, a.sqft, {
+    primarySqft,
+    area: a.area ?? null,
+  });
+  const resB = calcJurisdiction(data, b.jurisId, b.sqft, {
+    primarySqft,
+    area: b.area ?? null,
+  });
+  const catsA = categoryTotals(resA);
+  const catsB = categoryTotals(resB);
+  const catOrder = Object.keys(CATEGORY_LABELS);
+  const unionCats = [...new Set([...catsA.map(c => c.category), ...catsB.map(c => c.category)])].sort(
+    (x, y) => {
+      const ix = catOrder.indexOf(x);
+      const iy = catOrder.indexOf(y);
+      if (ix !== -1 && iy !== -1) return ix - iy;
+      if (ix !== -1) return -1;
+      if (iy !== -1) return 1;
+      return x.localeCompare(y, "en-US");
+    }
+  );
+  const catVal = (cats: ReturnType<typeof categoryTotals>, cat: string) =>
+    cats.find(c => c.category === cat);
+
+  const diffLow = resB.totalLow - resA.totalLow;
+  const ranged = resA.hasRange || resB.hasRange;
+  const pct =
+    resA.totalLow > 0
+      ? `${diffLow >= 0 ? "+" : "−"}${Math.abs(Math.round((diffLow / resA.totalLow) * 100))}%`
+      : "—";
+  const diffClass =
+    diffLow > 0
+      ? "text-accent"
+      : diffLow < 0
+        ? "text-green-600 dark:text-green-400"
+        : "";
+  const psfA = Math.round(resA.totalLow / a.sqft);
+  const psfB = Math.round(resB.totalLow / b.sqft);
+
+  const barRow = (label: string, aLow: number, bLow: number, aText: string, bText: string, big: boolean) => {
+    const max = Math.max(aLow, bLow, 1);
+    const wa = Math.round((aLow / max) * 100);
+    const wb = Math.round((bLow / max) * 100);
+    return `<div>
+      <div class="flex items-baseline justify-between gap-2 text-sm">
+        <span class="${big ? "font-semibold" : "font-medium"}">${label}</span>
+        <span class="text-foreground/70 text-xs tabular-nums">A ${aText} · B ${bText}</span>
+      </div>
+      <div class="mt-1 space-y-1">
+        <div class="flex items-center gap-2">
+          <span class="w-3 text-xs font-medium" aria-hidden="true">A</span>
+          <div class="${big ? "h-4" : "h-3"} rounded bg-accent" style="width: ${wa}%"></div>
+          <span class="text-xs tabular-nums">${aText}</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="w-3 text-xs font-medium" aria-hidden="true">B</span>
+          <div class="${big ? "h-4" : "h-3"} rounded bg-teal-600 dark:bg-teal-500" style="width: ${wb}%"></div>
+          <span class="text-xs tabular-nums">${bText}</span>
+        </div>
+      </div>
+    </div>`;
+  };
+
+  const chartRows = [
+    barRow(
+      "Total fees",
+      resA.totalLow,
+      resB.totalLow,
+      fmtRange(resA.totalLow, resA.totalHigh),
+      fmtRange(resB.totalLow, resB.totalHigh),
+      true
+    ),
+    ...unionCats.map(cat => {
+      const ca = catVal(catsA, cat);
+      const cb = catVal(catsB, cat);
+      return barRow(
+        categoryLabel(cat),
+        ca?.low ?? 0,
+        cb?.low ?? 0,
+        fmtRange(ca?.low ?? 0, ca?.high ?? null),
+        fmtRange(cb?.low ?? 0, cb?.high ?? null),
+        false
+      );
+    }),
+  ].join(`<div class="border-border my-3 border-t"></div>`);
+
+  const tableRows = unionCats
+    .map(cat => {
+      const ca = catVal(catsA, cat);
+      const cb = catVal(catsB, cat);
+      const av = ca?.low ?? 0;
+      const bv = cb?.low ?? 0;
+      const d = bv - av;
+      return `<tr class="border-border border-b">
+        <td class="py-2 pe-3">${esc(categoryLabel(cat))}</td>
+        <td class="py-2 pe-3 text-right tabular-nums whitespace-nowrap">${fmtRange(av, ca?.high ?? null)}</td>
+        <td class="py-2 pe-3 text-right tabular-nums whitespace-nowrap">${fmtRange(bv, cb?.high ?? null)}</td>
+        <td class="py-2 text-right tabular-nums whitespace-nowrap ${d > 0 ? "text-accent" : d < 0 ? "text-green-600 dark:text-green-400" : ""}">${moneyDiffSigned(d)}</td>
+      </tr>`;
+    })
+    .join("");
+
+  const notes: string[] = [];
+  for (const [tag, r] of [["A", resA], ["B", resB]] as const) {
+    if (r.lines.length === 0) {
+      notes.push(
+        `${tag} (${esc(r.juris.name)}): no fee items are on file yet, so its total is $0 — that is missing data, not a free permit.`
+      );
+    } else if (r.skippedCount > 0) {
+      notes.push(
+        `${tag} (${esc(r.juris.name)}): ${r.skippedCount} line item${r.skippedCount > 1 ? "s are" : " is"} excluded from the total — the schedule data on file does not cover ${r.skippedCount > 1 ? "them" : "it"}. We do not guess missing rates.`
+      );
+    }
+  }
+  const cliff = data.rules.impact_exempt_max_sqft;
+  if ((a.sqft <= cliff) !== (b.sqft <= cliff)) {
+    notes.push(
+      `The two sizes straddle the ${cliff} sq ft cliff: the smaller side's impact fees are $0 by state law (${data.rules.citation}) while the larger side pays them. That gap is law, not price.`
+    );
+  }
+  const hasDwellingBase =
+    resA.lines.some(l => l.item.dwelling_base && l.kind === "ok") ||
+    resB.lines.some(l => l.item.dwelling_base && l.kind === "ok");
+  if (hasDwellingBase) {
+    notes.push(
+      `Dwelling-base impact fees are prorated at a ${primarySqft.toLocaleString("en-US")} sq ft primary dwelling — an assumption, not a verified figure. Enter your actual primary size above to re-price them.`
+    );
+  }
+  if (ranged) {
+    notes.push(
+      `Differences use low ends. Either side has ranged lines, so the high-end gap is larger than the difference shown.`
+    );
+  }
+  const notesHTML =
+    notes.length > 0
+      ? `<ul class="text-foreground/70 mt-3 list-disc space-y-1 ps-5 text-xs">${notes.map(n => `<li>${n}</li>`).join("")}</ul>`
+      : "";
+
+  const postLink = (r: CalcResult) =>
+    r.juris.post_slug
+      ? `<a href="/posts/${esc(r.juris.post_slug)}/" class="text-accent underline decoration-dashed underline-offset-4">Full post: ${esc(r.juris.name)} →</a>`
+      : "";
+  const schedLink = (r: CalcResult) =>
+    r.juris.fee_schedule_url
+      ? `<a href="${esc(r.juris.fee_schedule_url)}" target="_blank" rel="noopener" class="text-accent underline decoration-dashed underline-offset-4">${esc(r.juris.name)} fee schedule ↗</a>`
+      : "";
+
+  const areaLabelA = resA.area != null ? ` · ${esc(resA.area)} area` : "";
+  const areaLabelB = resB.area != null ? ` · ${esc(resB.area)} area` : "";
+
+  return `
+  <div class="grid gap-3 sm:grid-cols-3">
+    <div class="border-border rounded-md border p-4">
+      <div class="text-foreground/70 text-xs tracking-wide uppercase">A · ${esc(resA.juris.name)}${jurisBadgeHTML(resA.juris.status)}</div>
+      <div class="mt-1 text-2xl font-semibold tabular-nums">${fmtRange(resA.totalLow, resA.totalHigh)}</div>
+      <div class="text-foreground/80 mt-1 text-sm">at ${a.sqft.toLocaleString("en-US")} sq ft${areaLabelA} · impact fees ${fmtRange(resA.impactLow, resA.impactHigh)}</div>
+      <div class="text-foreground/60 mt-2 text-xs">Checked ${esc(resA.juris.last_verified)}</div>
+    </div>
+    <div class="border-border rounded-md border p-4">
+      <div class="text-foreground/70 text-xs tracking-wide uppercase">B · ${esc(resB.juris.name)}${jurisBadgeHTML(resB.juris.status)}</div>
+      <div class="mt-1 text-2xl font-semibold tabular-nums">${fmtRange(resB.totalLow, resB.totalHigh)}</div>
+      <div class="text-foreground/80 mt-1 text-sm">at ${b.sqft.toLocaleString("en-US")} sq ft${areaLabelB} · impact fees ${fmtRange(resB.impactLow, resB.impactHigh)}</div>
+      <div class="text-foreground/60 mt-2 text-xs">Checked ${esc(resB.juris.last_verified)}</div>
+    </div>
+    <div class="border-border border-accent/40 rounded-md border p-4">
+      <div class="text-foreground/70 text-xs tracking-wide uppercase">Difference (B − A)</div>
+      <div class="mt-1 text-2xl font-semibold tabular-nums ${diffClass}">${moneyDiffSigned(diffLow)}</div>
+      <div class="mt-1 text-sm">${pct} · low end</div>
+    </div>
+  </div>
+  <div class="mt-6 space-y-4" aria-hidden="true">
+    ${chartRows}
+  </div>
+  <div class="relative mt-6 w-full overflow-x-auto">
+    <table class="w-full min-w-[36rem] border-collapse text-sm">
+      <caption class="sr-only">Fee comparison by category between ${esc(resA.juris.name)} and ${esc(resB.juris.name)}</caption>
+      <thead>
+        <tr class="border-border border-b text-left">
+          <th class="py-2 pe-3 font-semibold">Category</th>
+          <th class="py-2 pe-3 text-right font-semibold">A · ${esc(resA.juris.name)}</th>
+          <th class="py-2 pe-3 text-right font-semibold">B · ${esc(resB.juris.name)}</th>
+          <th class="py-2 text-right font-semibold">Diff (B − A)</th>
+        </tr>
+      </thead>
+      <tbody>${tableRows}</tbody>
+      <tfoot>
+        <tr class="border-border border-t-2 font-semibold">
+          <td class="py-3 pe-3">Total</td>
+          <td class="py-3 pe-3 text-right tabular-nums">${fmtRange(resA.totalLow, resA.totalHigh)}</td>
+          <td class="py-3 pe-3 text-right tabular-nums">${fmtRange(resB.totalLow, resB.totalHigh)}</td>
+          <td class="py-3 text-right tabular-nums ${diffClass}">${moneyDiffSigned(diffLow)}</td>
+        </tr>
+        <tr class="text-foreground/90">
+          <td class="py-2 pe-3">$/sq ft (low end)</td>
+          <td class="py-2 pe-3 text-right tabular-nums">$${psfA.toLocaleString("en-US")}</td>
+          <td class="py-2 pe-3 text-right tabular-nums">$${psfB.toLocaleString("en-US")}</td>
+          <td class="py-2 text-right tabular-nums">${moneyDiffSigned(psfB - psfA)}</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  ${notesHTML}
+  <div class="border-border mt-4 flex flex-col gap-2 border-t pt-4 text-sm sm:flex-row sm:flex-wrap sm:gap-6">
+    ${[postLink(resA), postLink(resB), schedLink(resA), schedLink(resB)].filter(Boolean).join("")}
+    <a href="#fee-calculator" class="text-accent underline decoration-dashed underline-offset-4">Line detail in the single-city calculator ↑</a>
+  </div>`;
+}
+
 // ---------------------------------------------------------------------------
 // Verified-stack summary for index-style pages (Fee Index, embed card).
 // Same line-value math as the old inline loops, but with proration and
