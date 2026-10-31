@@ -1,0 +1,293 @@
+---
+import rawFeesJson from "../data/fees.json";
+import { getCollection } from "astro:content";
+import { postFilter } from "../utils/postFilter";
+import {
+  sideBySideHTML,
+  jurisAreas,
+  DEFAULT_PRIMARY_SQFT,
+  type FeeData,
+} from "../lib/feeCalc";
+
+// Same public-data strip as FeeCalculator.astro: internal memos never ship,
+// and post links only go to published posts.
+type RawFeeItem = Record<string, unknown>;
+const rawData = rawFeesJson as unknown as { fee_items: RawFeeItem[] } & Record<string, unknown>;
+const publishedPostIds = new Set((await getCollection("posts")).filter(postFilter).map(p => p.id));
+const feesJson = {
+  ...rawData,
+  jurisdictions: (rawData.jurisdictions as RawFeeItem[]).map(j =>
+    j.post_slug && !publishedPostIds.has(j.post_slug as string) ? { ...j, post_slug: "" } : j
+  ),
+  fee_items: rawData.fee_items.map(({ internal_notes: _internal, ...publicItem }) => publicItem),
+} as unknown as FeeData;
+
+const data = feesJson as unknown as FeeData;
+
+const DEFAULT_A = "SAN-JOSE";
+const DEFAULT_B = "LONG-BEACH";
+const DEFAULT_SQFT = 800;
+const MIN_SQFT = 200;
+const MAX_SQFT = 1200;
+const CLIFF_SQFT = data.rules.impact_exempt_max_sqft; // 750
+const cliffPct = ((CLIFF_SQFT - MIN_SQFT) / (MAX_SQFT - MIN_SQFT)) * 100;
+
+const regionLabel = (r: string) =>
+  r === "SoCal" ? "Southern California" : r;
+const regions = [...new Set(data.jurisdictions.map(j => j.region))];
+const jurisOptions = (region: string) =>
+  data.jurisdictions
+    .filter(j => j.region === region && j.status !== "illustrative")
+    .sort((a, b) => a.name.localeCompare(b.name, "en-US"));
+
+const selectClass =
+  "border-border bg-background focus:border-accent focus:ring-accent w-full rounded-md border px-3 py-2 text-base font-normal focus:ring-1 focus:outline-none";
+
+const ssrHTML = sideBySideHTML(
+  data,
+  { jurisId: DEFAULT_A, sqft: DEFAULT_SQFT, area: null },
+  { jurisId: DEFAULT_B, sqft: DEFAULT_SQFT, area: null },
+  DEFAULT_PRIMARY_SQFT
+);
+---
+
+<section
+  id="jurisdiction-compare"
+  class="border-border bg-background mb-8 rounded-lg border p-4 sm:p-6"
+  aria-labelledby="jurisdiction-compare-title"
+>
+  <div>
+    <h2 id="jurisdiction-compare-title" class="text-xl font-semibold">
+      Compare fees in two cities
+    </h2>
+    <p class="text-foreground/80 mt-2 text-sm">
+      Same home, two cities — or two sizes. Pick a jurisdiction and a size on
+      each side. Every figure comes from that city's published fee schedule,
+      compared by category so unlike fee lines are never forced to match.
+    </p>
+    <div
+      class="mt-3 rounded-md border border-teal-600/40 bg-teal-50 px-3 py-2 text-sm dark:bg-teal-950/30"
+      role="note"
+    >
+      <strong class="font-semibold">Figures reflect current 2026 rules.</strong>
+      From Jan 1, 2027, SB 1117 changes impact fees for your first two ADUs
+      (only the area above 750 sq ft counts) — the single-city calculator
+      above shows the 2027 comparison for each city.
+    </div>
+  </div>
+
+  <div class="mt-5 grid gap-5 sm:grid-cols-2">
+    {
+      (["a", "b"] as const).map(side => {
+        const defJuris = side === "a" ? DEFAULT_A : DEFAULT_B;
+        const areas = jurisAreas(data, defJuris);
+        return (
+          <div class="space-y-4">
+            <label class="flex flex-col gap-2 text-sm font-medium">
+              <span>{side === "a" ? "City A" : "City B"}</span>
+              <select id={`jsc-juris-${side}`} class={selectClass}>
+                {regions.map(region => (
+                  <optgroup label={regionLabel(region)}>
+                    {jurisOptions(region).map(j => (
+                      <option
+                        value={j.juris_id}
+                        selected={j.juris_id === defJuris}
+                      >
+                        {j.name}
+                      </option>
+                    ))}
+                  </optgroup>
+                ))}
+              </select>
+            </label>
+
+            <div class="flex flex-col gap-2 text-sm font-medium">
+              <span>
+                ADU size ·{" "}
+                <span id={`jsc-sqft-${side}-val`} class="tabular-nums">
+                  {DEFAULT_SQFT.toLocaleString("en-US")} sq ft
+                </span>
+              </span>
+              <div class="relative pt-1 pb-5">
+                <input
+                  id={`jsc-sqft-${side}`}
+                  type="range"
+                  min={MIN_SQFT}
+                  max={MAX_SQFT}
+                  step="1"
+                  value={DEFAULT_SQFT}
+                  aria-label={`City ${side.toUpperCase()} ADU size in square feet`}
+                  class="accent-accent w-full"
+                />
+                <div
+                  class="pointer-events-none absolute top-1 bottom-0"
+                  style={`left: ${cliffPct}%`}
+                  aria-hidden="true"
+                >
+                  <div class="bg-amber-500/70 mx-auto h-full w-px"></div>
+                  <div class="text-amber-700 dark:text-amber-400 absolute top-full -translate-x-1/2 text-[0.65rem] font-semibold whitespace-nowrap">
+                    750 cliff
+                  </div>
+                </div>
+                <div
+                  class="text-foreground/60 flex justify-between text-xs tabular-nums"
+                  aria-hidden="true"
+                >
+                  <span>{MIN_SQFT}</span>
+                  <span>{MAX_SQFT}</span>
+                </div>
+              </div>
+            </div>
+
+            <label
+              id={`jsc-area-${side}-wrap`}
+              class="flex flex-col gap-2 text-sm font-medium"
+              hidden={areas.length === 0}
+            >
+              <span>Area schedule</span>
+              <select id={`jsc-area-${side}`} class={selectClass}>
+                {areas.map(a => (
+                  <option value={a}>{a}</option>
+                ))}
+              </select>
+              <span class="text-xs font-normal opacity-70">
+                This jurisdiction has mutually exclusive area schedules — a
+                parcel pays one, not both.
+              </span>
+            </label>
+          </div>
+        );
+      })
+    }
+  </div>
+
+  <label class="mt-5 flex max-w-xs flex-col gap-2 text-sm font-medium">
+    <span>Primary dwelling size (shared)</span>
+    <span class="flex items-center gap-1">
+      <input
+        id="jsc-primary"
+        type="number"
+        value={DEFAULT_PRIMARY_SQFT}
+        min="500"
+        max="10000"
+        step="50"
+        aria-label="Primary dwelling size in square feet, shared by both sides"
+        class={selectClass}
+      />
+      <span class="text-sm font-normal opacity-70">sq ft</span>
+    </span>
+    <span class="text-xs font-normal opacity-70">
+      Only used to prorate dwelling-base impact fees (ADU ÷ primary). The
+      1,600 sq ft default is an assumption, not a verified figure.
+    </span>
+  </label>
+
+  <div id="jsc-results" class="mt-6" aria-live="polite">
+    <Fragment set:html={ssrHTML} />
+  </div>
+</section>
+
+<script>
+  import { sideBySideHTML, jurisAreas } from "../lib/feeCalc";
+
+  // Reuses the single calculator's embedded fee data (#fee-data) so the
+  // 488 KB schedule ships once, not twice. Without it the server-rendered
+  // default above stays and the controls simply do not enhance.
+  const dataEl = document.getElementById("fee-data");
+  const data = dataEl ? JSON.parse(dataEl.textContent || "null") : null;
+
+  const selA = document.getElementById("jsc-juris-a") as HTMLSelectElement | null;
+  const selB = document.getElementById("jsc-juris-b") as HTMLSelectElement | null;
+  const sqftA = document.getElementById("jsc-sqft-a") as HTMLInputElement | null;
+  const sqftB = document.getElementById("jsc-sqft-b") as HTMLInputElement | null;
+  const sqftAVal = document.getElementById("jsc-sqft-a-val");
+  const sqftBVal = document.getElementById("jsc-sqft-b-val");
+  const primaryInput = document.getElementById("jsc-primary") as HTMLInputElement | null;
+  const areaWrapA = document.getElementById("jsc-area-a-wrap") as HTMLElement | null;
+  const areaSelA = document.getElementById("jsc-area-a") as HTMLSelectElement | null;
+  const areaWrapB = document.getElementById("jsc-area-b-wrap") as HTMLElement | null;
+  const areaSelB = document.getElementById("jsc-area-b") as HTMLSelectElement | null;
+  const results = document.getElementById("jsc-results");
+
+  function syncArea(
+    jurisSel: HTMLSelectElement,
+    wrap: HTMLElement,
+    sel: HTMLSelectElement
+  ) {
+    if (!data) return;
+    const areas = jurisAreas(data, jurisSel.value);
+    if (areas.length === 0) {
+      wrap.hidden = true;
+      sel.innerHTML = "";
+      return;
+    }
+    wrap.hidden = false;
+    const prev = sel.value;
+    sel.innerHTML = areas
+      .map(a => `<option value="${a}">${a}</option>`)
+      .join("");
+    if (prev && areas.includes(prev)) sel.value = prev;
+  }
+
+  function primarySqft(): number {
+    const n = primaryInput ? Math.round(Number(primaryInput.value)) : NaN;
+    return Number.isFinite(n) && n > 0 ? n : 1600;
+  }
+
+  function areaOf(
+    wrap: HTMLElement,
+    sel: HTMLSelectElement
+  ): string | null {
+    return wrap && !wrap.hidden && sel.value ? sel.value : null;
+  }
+
+  function update() {
+    if (!data || !selA || !selB || !sqftA || !sqftB || !results) return;
+    if (sqftAVal) {
+      sqftAVal.textContent = `${Number(sqftA.value).toLocaleString("en-US")} sq ft`;
+    }
+    if (sqftBVal) {
+      sqftBVal.textContent = `${Number(sqftB.value).toLocaleString("en-US")} sq ft`;
+    }
+    try {
+      results.innerHTML = sideBySideHTML(
+        data,
+        {
+          jurisId: selA.value,
+          sqft: Number(sqftA.value),
+          area: areaWrapA && areaSelA ? areaOf(areaWrapA, areaSelA) : null,
+        },
+        {
+          jurisId: selB.value,
+          sqft: Number(sqftB.value),
+          area: areaWrapB && areaSelB ? areaOf(areaWrapB, areaSelB) : null,
+        },
+        primarySqft()
+      );
+    } catch (err) {
+      console.error("[jurisdiction-compare]", err);
+    }
+  }
+
+  if (data && selA && selB && sqftA && sqftB && results) {
+    const bind = (
+      jurisSel: HTMLSelectElement,
+      sqftInput: HTMLInputElement,
+      wrap: HTMLElement | null,
+      areaSel: HTMLSelectElement | null
+    ) => {
+      jurisSel.addEventListener("change", () => {
+        if (wrap && areaSel) syncArea(jurisSel, wrap, areaSel);
+        update();
+      });
+      sqftInput.addEventListener("input", update);
+      if (areaSel) areaSel.addEventListener("change", update);
+    };
+    bind(selA, sqftA, areaWrapA, areaSelA);
+    bind(selB, sqftB, areaWrapB, areaSelB);
+    if (primaryInput) primaryInput.addEventListener("input", update);
+    if (areaWrapA && areaSelA) syncArea(selA, areaWrapA, areaSelA);
+    if (areaWrapB && areaSelB) syncArea(selB, areaWrapB, areaSelB);
+    update();
+  }
+</script>
