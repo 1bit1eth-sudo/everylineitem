@@ -868,7 +868,7 @@ export function resultsHTML(
       <div class="text-foreground/70 text-xs tracking-wide uppercase">Estimated fees · ${esc(r.juris.name)}${badge}</div>
       <div class="mt-1 text-3xl font-semibold tabular-nums">${totalText}</div>
       <div class="text-foreground/80 mt-1 text-sm">at ${sqft.toLocaleString("en-US")} sq ft${areaLabel} · impact fees ${impactText}</div>
-      <div class="text-foreground/60 mt-2 text-xs">Checked ${esc(r.juris.last_verified)} · <a href="${esc(r.juris.fee_schedule_url)}" target="_blank" rel="noopener" class="text-accent underline decoration-dashed underline-offset-4">fee schedule ↗</a></div>
+      <div class="text-foreground/60 mt-2 text-xs">Checked ${esc(r.juris.last_verified)}${r.juris.fee_schedule_url ? ` · <a href="${esc(r.juris.fee_schedule_url)}" target="_blank" rel="noopener" class="text-accent underline decoration-dashed underline-offset-4">fee schedule ↗</a>` : ""}</div>
       ${primaryNote}
     </div>
     <div class="rounded-md border border-amber-500/40 bg-amber-50 p-4 dark:bg-amber-950/30">
