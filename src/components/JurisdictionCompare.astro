@@ -85,7 +85,7 @@ const ssrHTML = sideBySideHTML(
           <div class="space-y-4">
             <label class="flex flex-col gap-2 text-sm font-medium">
               <span>{side === "a" ? "City A" : "City B"}</span>
-              <select id={`jsc-juris-${side}`} class={selectClass}>
+              <select id={`jsc-juris-${side}`} class={selectClass} data-combobox>
                 {regions.map(region => (
                   <optgroup label={regionLabel(region)}>
                     {jurisOptions(region).map(j => (
