@@ -1,6 +1,6 @@
 ---
-title: "Sewer, Water, Power: The ADU Utility Bills Nobody Itemizes"
-description: "Capacity charges, connection fees, panel upgrades — the $0 to $10,000 range nobody puts in the quote. Real utility numbers from 13 California cities, and why sewer is the most volatile line in the ADU ledger."
+title: "Sewer, Water, Power: ADU Utility Bills"
+description: "Capacity charges, connection fees, panel upgrades — the $0 to $10,000 range nobody puts in the quote. Why sewer is the most volatile ADU line."
 pubDatetime: 2026-11-01T01:00:00Z
 author: "Every Line Item"
 tags: ["adu cost", "utilities", "sewer", "water", "california", "guide", "2026"]
@@ -8,7 +8,6 @@ draft: false
 verifiedPublished: "1 Nov 2026"
 lastVerified: "1 Nov 2026"
 nextReview: "Jan 2027"
-ogImage: "https://everylineitem.com/images/pinterest/adu-utility-bills-sewer-water-power.png"
 faqs:
   - question: "How much are utility connection fees for an ADU in California?"
     answer: "It ranges from $0 to roughly $10,000 depending on the city. Some cities (Torrance, Oakland, Sacramento) charge ADUs nothing for sewer; others levy capacity charges of $1,000–$7,000+. Water and power are usually billed at actual installation cost. The single biggest variable is sewer — the same 800 sq ft ADU can owe $0 or $6,727+ depending on the jurisdiction."
@@ -23,7 +22,7 @@ faqs:
 
 Ask a contractor what utilities cost on an ADU and you'll usually get a shrug inside the bid. Ask thirteen California cities and you get everything from **$0 to $7,751** — for the same 800 sq ft box. Sewer, water, and power are the least itemized lines in ADU construction, and sewer is the most volatile of the three.
 
-This post maps the real numbers from our published series: what each utility actually costs, which cities charge nothing, and where the traps are.
+This post maps the real numbers from our published series: what each utility actually costs, which cities charge nothing, and where the traps are. Figures are compiled from the city and district fee schedules in our [fee index](/fees/) — confirm your meter size and district charges with your utility before budgeting.
 
 ## Sewer: the $0-to-$7,000 spread
 
