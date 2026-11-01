@@ -70,12 +70,6 @@ const areaTotals = areaResults.map(({ area, result: r }) => {
     hasRange: vl.some(l => l.high != null),
   };
 });
-// Temporary AdSense measure (2026-11-01): a jurisdiction page with no fee rows
-// at all stays out of the search index until its first items land. As of this
-// change that is El Centro, Kern County, San Gabriel, South Pasadena,
-// Vacaville, Clovis, Diamond Bar, and La Puente. The condition lifts itself
-// when rows appear; there is no manual list to maintain.
-const noFeeRows = verifiedLines.length === 0 && pendingLines.length === 0;
 const verifiedTotalLow = isAreaJuris
   ? Math.min(...areaTotals.map(t => t.low))
   : areaTotals[0].low;
@@ -156,7 +150,7 @@ const faqSchema = {
 };
 ---
 
-<Layout title={title} description={description} noindex={noFeeRows}>
+<Layout title={title} description={description}>
   <Fragment slot="head">
     <script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} />
   </Fragment>
