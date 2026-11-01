@@ -3,7 +3,7 @@ title: Privacy Policy
 description: How Every Line Item collects, uses, and does not sell personal information.
 ---
 
-**Last updated:** 16 October 2026
+**Last updated:** 1 November 2026
 
 This page explains what Every Line Item (`everylineitem.com`) collects and what we do with it. Short version: we collect as little as we can, we do not sell your information to contractors, and you can unsubscribe or ask us to delete what we hold.
 
@@ -53,7 +53,7 @@ We may disclose information if required by law or to protect the site against ab
 
 ## Display advertising
 
-This site shows ads through **Google AdSense** (publisher ID `pub-9855716660139171`). Google's use of advertising cookies enables it and its partners to serve ads to you based on your visit to this site and/or other sites on the Internet. Google may use cookies or similar technologies to serve, personalize, and measure these ads. You can opt out of personalized advertising in [Google Ads Settings](https://www.google.com/settings/ads) and read how Google uses data from partner sites at [policies.google.com/technologies/partner-sites](https://policies.google.com/technologies/partner-sites). You can also limit many ad cookies through your browser settings and industry opt-out tools such as [optout.aboutads.info](https://optout.aboutads.info/).
+This site is configured for display advertising through **Google AdSense** (publisher ID `pub-9855716660139171`). Ads will appear once the AdSense account for this site is approved; until then, no advertising is served. Google's use of advertising cookies enables it and its partners to serve ads to you based on your visit to this site and/or other sites on the Internet. Google may use cookies or similar technologies to serve, personalize, and measure these ads. You can opt out of personalized advertising in [Google Ads Settings](https://www.google.com/settings/ads) and read how Google uses data from partner sites at [policies.google.com/technologies/partner-sites](https://policies.google.com/technologies/partner-sites). You can also limit many ad cookies through your browser settings and industry opt-out tools such as [optout.aboutads.info](https://optout.aboutads.info/) and [the Network Advertising Initiative opt-out](https://optout.networkadvertising.org/).
 
 Essential cookies or local storage may still be used for basic site functions (for example remembering light/dark theme).
 
@@ -62,6 +62,16 @@ Essential cookies or local storage may still be used for basic site functions (f
 - Unsubscribe from Buttondown emails using the link in any message
 - Email [corrections@everylineitem.com](mailto:corrections@everylineitem.com) to ask us to delete your subscriber record or answer privacy questions
 - Clear cookies/local storage in your browser for this site
+
+## California privacy rights (CCPA/CPRA)
+
+If you are a California resident, you have the right to know what personal information we collect and why, to request deletion of your personal information, and to opt out of the sale or sharing of your personal information. We do not sell your personal information. Advertising cookies, when ads are served, are described under Display advertising above, and you can limit them with the opt-out tools listed there. To exercise any of these rights, email [corrections@everylineitem.com](mailto:corrections@everylineitem.com) with the subject "Privacy request". We verify requests by replying to the address they came from and respond within the period required by law.
+
+The data controller for this site is **Every Line Item**, reachable at the email address above.
+
+## Retention
+
+We keep Buttondown subscriber records until you unsubscribe or ask us to delete them. Messages sent to corrections@everylineitem.com are kept only as long as needed to verify and log the correction or answer the question.
 
 ## Children
 
