@@ -8,7 +8,6 @@ draft: false
 verifiedPublished: "29 Oct 2026"
 lastVerified: "29 Oct 2026"
 nextReview: "Jan 2027"
-ogImage: "https://everylineitem.com/images/pinterest/3-adu-laws-2027.png"
 faqs:
   - question: "What ADU laws take effect January 1, 2027 in California?"
     answer: "Three signed Sep 29, 2026: SB 1117 (impact fees on ADUs over 750 sq ft are charged only on the square footage above 750, for the first two ADUs on a lot); SB 1196 (the CPUC must set firm utility connection timelines for ADUs, with penalties for utilities that miss them); and AB 956 (cities must ministerially approve up to two detached ADUs on single-family lots, up from one). All three take effect Jan 1, 2027."
