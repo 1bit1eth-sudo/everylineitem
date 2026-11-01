@@ -71,9 +71,40 @@ const ssrPsfText =
     : (ssrPsfDiff > 0 ? "+" : "−") +
       "$" +
       Math.abs(ssrPsfDiff).toLocaleString("en-US");
+// Six-phase mix bars — inline styles only, so the same markup renders
+// identically in SSR and in the client script (public scripts are not scanned
+// by Tailwind, so classes used only there would ship unstyled).
+const PHASE_COLORS: Record<string, string> = {
+  soft: "#0072B2",
+  site: "#E69F00",
+  framing: "#009E73",
+  envelope: "#D55E00",
+  systems: "#56B4E9",
+  landscape: "#CC79A7",
+  other: "#999999",
+};
+const phaseSegments = (sc: AduScenario) => {
+  const segs = PHASES.map(p => ({
+    label: p.label.split(" (")[0],
+    amount: sc.phases[p.id] || 0,
+    color: PHASE_COLORS[p.id] ?? PHASE_COLORS.other,
+  }));
+  const extra = (sc.extraPhases ?? []).reduce((s, e) => s + e.amount, 0);
+  if (extra > 0)
+    segs.push({ label: "Other", amount: extra, color: PHASE_COLORS.other });
+  return segs.map(s => ({
+    ...s,
+    pct: sc.total > 0 ? (s.amount / sc.total) * 100 : 0,
+  }));
+};
+const phaseBarLabel = (
+  tag: string,
+  segs: ReturnType<typeof phaseSegments>
+) =>
+  `${tag} phase mix: ${segs.map(s => `${s.label} ${Math.round(s.pct)}%`).join(", ")}`;
 const ssrCards = [
-  { tag: "Build A", sc: ssrA, largest: largestPhase(ssrA) },
-  { tag: "Build B", sc: ssrB, largest: largestPhase(ssrB) },
+  { tag: "Build A", sc: ssrA, largest: largestPhase(ssrA), segs: phaseSegments(ssrA) },
+  { tag: "Build B", sc: ssrB, largest: largestPhase(ssrB), segs: phaseSegments(ssrB) },
 ];
 const ssrNotes = [ssrA.note, ssrB.note].filter(Boolean).join(" ");
 const qcDefault = ssrA;
@@ -168,6 +199,15 @@ const inputClass =
         . Not a quote. See <a class={linkClass} href="/methodology/"
           >Methodology</a
         >.
+      </p>
+
+      <p class="text-sm">
+        <a
+          href="#qc-results"
+          class="text-accent underline decoration-dashed underline-offset-4"
+        >
+          ↓ Jump to flags and questions
+        </a>
       </p>
 
       <div class="relative w-full overflow-x-auto">
@@ -341,7 +381,7 @@ const inputClass =
         class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3"
       >
         {
-          ssrCards.map(({ tag, sc, largest }) => (
+          ssrCards.map(({ tag, sc, largest, segs }) => (
             <div class="border-border rounded-md border p-4">
               <div class="text-foreground/70 text-xs tracking-wide uppercase">
                 {tag} · {sc.shortLabel}
@@ -355,6 +395,33 @@ const inputClass =
               </div>
               <div class="text-foreground/80 mt-2 text-sm">
                 Largest phase: {largest.label} ({money(largest.amount)})
+              </div>
+              <div class="mt-3">
+                <div
+                  style="display:flex;height:14px;border-radius:4px;overflow:hidden"
+                  role="img"
+                  aria-label={phaseBarLabel(tag, segs)}
+                >
+                  {segs.map(s => (
+                    <div
+                      style={`width:${s.pct.toFixed(1)}%;background:${s.color}`}
+                      title={`${s.label} ${money(s.amount)} (${Math.round(s.pct)}%)`}
+                    />
+                  ))}
+                </div>
+                <div
+                  style="display:flex;flex-wrap:wrap;gap:4px 12px;font-size:12px"
+                  class="mt-2"
+                >
+                  {segs.map(s => (
+                    <span>
+                      <span
+                        style={`display:inline-block;width:10px;height:10px;border-radius:2px;background:${s.color};margin-right:4px`}
+                      />
+                      {s.label} {Math.round(s.pct)}%
+                    </span>
+                  ))}
+                </div>
               </div>
               <div class="text-foreground/60 mt-2 text-xs">
                 Modeled median · checked {sc.lastVerified}

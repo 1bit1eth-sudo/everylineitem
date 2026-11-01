@@ -16,6 +16,7 @@ import changelog from "@/data/fee-changelog.json";
 import { getSortedPosts } from "@/utils/getSortedPosts";
 import { useTranslations } from "@/i18n";
 import config from "@/config";
+import { parseVerified, formatVerified } from "@/utils/formatVerified";
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -126,32 +127,11 @@ for (const j of (feesData.jurisdictions as any[]).filter(j => j.juris_id !== "LA
 }
 
 // Trust line — newest verification date across all fee items.
-// last_verified mixes ISO ("2026-10-16") and human ("7 Oct 2026") formats,
-// so parse both before comparing.
-const MONTHS: Record<string, number> = {
-  Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5,
-  Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11,
-};
-const parseVerified = (s: string): number => {
-  const iso = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s);
-  if (iso) return Date.UTC(+iso[1], +iso[2] - 1, +iso[3]);
-  const human = /^(\d{1,2}) ([A-Za-z]{3}) (\d{4})$/.exec(s);
-  if (human && MONTHS[human[2]] !== undefined)
-    return Date.UTC(+human[3], MONTHS[human[2]], +human[1]);
-  return 0;
-};
 const latestVerifiedRaw = feesData.fee_items
   .map(i => i.last_verified as string)
   .filter(Boolean)
   .sort((a, b) => parseVerified(b) - parseVerified(a))[0];
-// Display newest-first value as "16 Oct 2026" regardless of stored format.
-const latestVerified = (() => {
-  const t = parseVerified(latestVerifiedRaw);
-  if (!t) return latestVerifiedRaw;
-  const d = new Date(t);
-  const names = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-  return `${d.getUTCDate()} ${names[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
-})();
+const latestVerified = formatVerified(latestVerifiedRaw);
 
 // Browse index — replaces the old link-dump paragraph
 const regions = [
@@ -312,10 +292,18 @@ const formatShortDate = (d: string | Date) =>
           >
             <label class="block">
               <span class="text-sm font-medium opacity-70">Your jurisdiction</span>
+              <input
+                type="search"
+                data-juris-filter="hero-juris"
+                placeholder="Type to filter cities…"
+                aria-label="Filter jurisdictions"
+                class="border-border bg-background focus:border-accent mt-1 block w-56 rounded border px-2 py-2 text-sm"
+              />
               <select
                 id="hero-juris"
                 class="border-border bg-background focus:border-accent mt-1 block w-56 rounded border px-2 py-2 text-sm"
               >
+                <option value="" disabled selected>Choose your jurisdiction…</option>
                 {heroJurisdictions.map(j => (
                   <option value={j.id}>{j.name}</option>
                 ))}
@@ -733,7 +721,15 @@ const formatShortDate = (d: string | Date) =>
             <p class="font-semibold">2026 ADU benchmark sheet</p>
             <p class="mt-1 text-sm opacity-90">
               Quarterly cost ranges for every build on this site, in one CSV.
-              Free download, no email needed.
+              Free download, no email needed. Use it to sanity-check a bid:
+              compare your quote's phase totals to the inland/coastal ranges.
+              Medians are published figures; the low/high ends are modeled —{" "}
+              <a
+                href="/methodology/"
+                class="text-accent font-semibold underline decoration-dashed underline-offset-4"
+              >
+                see Methodology for what's inside
+              </a>.
             </p>
             <p class="mt-2">
               <LinkButton
@@ -781,3 +777,5 @@ const formatShortDate = (d: string | Date) =>
     });
   });
 </script>
+
+<script is:inline src="/scripts/juris-filter.js"></script>

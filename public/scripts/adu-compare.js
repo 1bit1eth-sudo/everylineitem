@@ -31,6 +31,79 @@ function largestPhase(s, phases) {
   return best;
 }
 
+// Six-phase mix bars. Inline styles only: public scripts are not scanned by
+// Tailwind, so classes used only here would ship unstyled. Mirrors the SSR
+// bars in compare.astro.
+const PHASE_COLORS = {
+  soft: "#0072B2",
+  site: "#E69F00",
+  framing: "#009E73",
+  envelope: "#D55E00",
+  systems: "#56B4E9",
+  landscape: "#CC79A7",
+  other: "#999999",
+};
+
+function escAttr(s) {
+  return String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+}
+
+function phaseBarHTML(tag, s, phases) {
+  const segs = [];
+  for (const p of phases) {
+    segs.push({
+      label: p.label.split(" (")[0],
+      amount: s.phases[p.id] || 0,
+      color: PHASE_COLORS[p.id] || PHASE_COLORS.other,
+    });
+  }
+  let extra = 0;
+  for (const e of s.extraPhases || []) extra += e.amount;
+  if (extra > 0)
+    segs.push({ label: "Other", amount: extra, color: PHASE_COLORS.other });
+  const total = s.total || 0;
+  let bars = "";
+  let legend = "";
+  let aria = tag + " phase mix: ";
+  segs.forEach(function (seg, i) {
+    const pct = total > 0 ? (seg.amount / total) * 100 : 0;
+    const rpct = Math.round(pct);
+    bars +=
+      '<div style="width:' +
+      pct.toFixed(1) +
+      "%;background:" +
+      seg.color +
+      '" title="' +
+      escAttr(seg.label) +
+      " " +
+      escAttr(money(seg.amount)) +
+      " (" +
+      rpct +
+      '%)"></div>';
+    legend +=
+      '<span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:' +
+      seg.color +
+      ';margin-right:4px"></span>' +
+      escAttr(seg.label) +
+      " " +
+      rpct +
+      "%</span>";
+    aria += seg.label + " " + rpct + "%" + (i < segs.length - 1 ? ", " : "");
+  });
+  return (
+    '<div style="margin-top:12px">' +
+    '<div style="display:flex;height:14px;border-radius:4px;overflow:hidden" role="img" aria-label="' +
+    escAttr(aria) +
+    '">' +
+    bars +
+    "</div>" +
+    '<div style="display:flex;flex-wrap:wrap;gap:4px 12px;font-size:12px;margin-top:8px">' +
+    legend +
+    "</div>" +
+    "</div>"
+  );
+}
+
 function initCompare() {
   const dataEl = document.getElementById("adu-compare-data");
   const root = document.getElementById("adu-compare");
@@ -206,6 +279,7 @@ function initCompare() {
         " (" +
         money(la.amount) +
         ")</div>" +
+        phaseBarHTML("Build A", a, payload.phases) +
         '<div class="text-foreground/60 mt-2 text-xs">Modeled median · checked ' +
         (a.lastVerified || "") +
         "</div>" +
@@ -227,6 +301,7 @@ function initCompare() {
         " (" +
         money(lb.amount) +
         ")</div>" +
+        phaseBarHTML("Build B", b, payload.phases) +
         '<div class="text-foreground/60 mt-2 text-xs">Modeled median · checked ' +
         (b.lastVerified || "") +
         "</div>" +

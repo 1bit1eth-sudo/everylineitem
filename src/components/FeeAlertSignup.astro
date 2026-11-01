@@ -47,6 +47,13 @@ const headingId = `${idPrefix}-heading`;
     class="embeddable-buttondown-form flex flex-col gap-2"
   >
     <label for={jurisId} class="sr-only">Jurisdiction</label>
+    <input
+      type="search"
+      data-juris-filter={jurisId}
+      placeholder="Type to filter jurisdictions…"
+      aria-label="Filter jurisdictions"
+      class="border-border bg-background focus:border-accent focus:ring-accent w-full rounded-md border px-3 py-2 text-base font-normal focus:ring-1 focus:outline-none"
+    />
     <select
       id={jurisId}
       class="border-border bg-background focus:border-accent focus:ring-accent w-full rounded-md border px-3 py-2 text-base font-normal focus:ring-1 focus:outline-none"
@@ -91,3 +98,5 @@ const headingId = `${idPrefix}-heading`;
     }
   });
 </script>
+
+<script is:inline src="/scripts/juris-filter.js"></script>
