@@ -1,6 +1,24 @@
 {
   "entries": [
     {
+      "date": "2026-11-01",
+      "headline": "Prep batch (Grok review pending): FI-013 floor removed, OC San unified to $1,710 block, Irvine skeleton",
+      "detail": "PREP ONLY — no PR yet; Grok gate decides next. (1) FI-013 (San José): 751 floor removed to null, matching FI-230; $5.38 kept, status to_verify kept; city guidance (under 750 exempt) kept as a city-attributed note only, since the district page states $5.38/sq ft with no ADU threshold. FLAG FOR GROK: the San José post cites city Bulletin #210 (updated 16 Sep 2026) stating school fees apply from 751 sq ft, which supports the removed 751 floor and conflicts with the Fees page's 'less than 750' wording — the two city documents disagree by 1 sq ft and must be reconciled before merge. (2) OC San 8 items unified to the $1,710 block per Table A FY 2026-27 (Average Demand, 1,000 sq ft or portion thereof, no minimum for ADUs): FI-121 (per_sqft $1.71 -> flat $1,710), FI-202 and FI-351 (flat $1,695 FY2025-26 -> $1,710), FI-204 (flat $1,368 proportional -> $1,710); FI-127, FI-178, FI-432, FI-440 already $1,710, notes only. A 'qualifying' exemption to_verify note was added to all 8 (OC SAN-59 §§2.13–2.15 text not located as of 2026-11-01); no item zeroed on it. FI-351's prior §2.13 claim was moved to internal_notes as unverified. Statuses preserved (no verified item downgraded); last_verified set to 2026-11-01 only on the 4 amount-changed items plus FI-013. (3) Irvine skeleton: new jurisdiction (to_verify, fee_schedule_url blank) with 3 to_verify stubs FI-601 (permit inspection), FI-602 (planning), FI-603 (IRWD connection), all rate null — no Task 2/11 figure encoded. Stub numbers use the FI-600 range to avoid collision with unmerged FI-518/519 batches. Post slug falls back to the general soft-costs guide (La Puente pattern) until an Irvine post exists.",
+      "jurisdictions": [
+        "Irvine",
+        "San José",
+        "Anaheim",
+        "Fullerton",
+        "Huntington Beach",
+        "La Habra",
+        "Costa Mesa",
+        "Orange County",
+        "Buena Park",
+        "Newport Beach"
+      ],
+      "items_added": 3
+    },
+    {
       "date": "2026-10-28",
       "headline": "Batch 29: 5 new jurisdictions, 11 verified fee items",
       "detail": "Atherton, Daly City, Eureka, La Puente, National City. Atherton enters with a $0 town impact-fee program and a $0/$1,860 setback-forked planning fee; Daly City with its $851 ADU planning fee + $281 address assignment; Eureka with $215 + $94 planning lines and $85.30 issuance; National City with $66 issuance and the $700 Sweetwater availability review. La Puente enters with no verified items yet - Rowland USD's $5.17 rate is FY2024-25 only and Hacienda La Puente USD (most of the city) has no published rate - 12/1 re-verification. Held for 12/1 across the batch: all school fees (Atherton PARTIAL feeder adoptions; Daly City rate not found; Eureka not found; National City 2021 rates only), all proportioned impact fees (Daly City $16.10/sq ft AB 1600; Eureka $701/unit DIF; National City TDIF rate not found), and all fixture/meter/EDU-dependent utility dollars.",
