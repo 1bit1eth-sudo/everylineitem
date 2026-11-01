@@ -8,7 +8,6 @@ draft: false
 verifiedPublished: "8 Nov 2026"
 lastVerified: "8 Nov 2026"
 nextReview: "Jan 2027"
-ogImage: "https://everylineitem.com/images/pinterest/adu-financing-compared-heloc-construction-loan.png"
 faqs:
   - question: "What is the best way to finance an ADU in California?"
     answer: "There is no universal best option — it depends on your equity, existing mortgage rate, and timeline. A HELOC (roughly 6.5–9.5% variable in 2026 ranges) suits owners with a low existing mortgage rate who want flexibility. A construction-to-permanent loan (~7.25% fixed in 2026 ranges) suits ground-up builds with one closing. Cash-out refinancing works when your current rate is near market rates. Compare total interest and closing costs, not just the rate."
@@ -96,3 +95,5 @@ What it doesn't do: fund construction. Think of it as erasing Phase 1's soft-cos
 ## The bottom line
 
 Financing doesn't change what the ADU costs — it changes when and how you pay for it. The cheapest money is usually the money you already have (a low-rate primary mortgage you don't disturb, plus a HELOC for the build). The most expensive is the cash-out refi that reprices a 3% mortgage to 7% to free $150,000. Run the lifetime-interest math, not the monthly-payment math — and talk to a lender before you talk to a contractor.
+
+Cheapest structure first: a [JADU](/posts/jadu-cost-california/) carries no impact fees, no school fees, and no connection charges, which changes how much you need to borrow. For how the fee layer differs by city, see our [Orange County comparison](/posts/orange-county-adu-cost-compared/).
