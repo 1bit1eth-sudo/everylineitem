@@ -8,7 +8,6 @@ draft: false
 verifiedPublished: "30 Oct 2026"
 lastVerified: "30 Oct 2026"
 nextReview: "Jan 2027"
-ogImage: "https://everylineitem.com/images/pinterest/adu-property-tax-prop-13.png"
 faqs:
   - question: "Does building an ADU raise my property tax in California?"
     answer: "Yes — but only on the new construction. Under Prop 13 and Property Tax Rule 463, the assessor adds the value of the ADU to your existing base-year value. Your original house keeps its Prop 13 protection (2% annual cap). You do not get reassessed on the whole property."

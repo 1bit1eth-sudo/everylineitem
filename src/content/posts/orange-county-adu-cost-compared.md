@@ -89,6 +89,8 @@ Anaheim's distinction: its school district resolution explicitly names ADUs — 
 3. **Garden Grove is the balanced choice.** Free plans, dual-cliff fee structure, mid-range everything. The "city of free plans" label is earned.
 4. **SB 1117 reshuffles this table on 1 Jan 2027.** Anaheim's $10,411 impact fee is the most exposed to the marginal-fee rewrite — fees applying only above 750 sq ft will cut it hardest. Our [fee calculator](/compare/) reflects the new math after the quarterly re-verification.
 
+If the budget is the binding constraint, the cheapest structure in the state is not a detached ADU at all — it is a [JADU](/posts/jadu-cost-california/), which carries no impact fees, no school fees, and no connection charges.
+
 ## Methodology note
 
 Construction phases 2–6 are carried from the [Los Angeles County baseline](/posts/800-sq-ft-adu-cost-california/) in all three cities; none publishes phase-level construction costs. Only the fee layer is city-specific, sourced from official fee schedules, ordinances, and district resolutions. Unconfirmed items are marked in each city post.

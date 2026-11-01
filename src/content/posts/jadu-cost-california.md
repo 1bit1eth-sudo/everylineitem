@@ -119,6 +119,8 @@ Sharing the bathroom is the cheapest path HCD itself describes. Separating it co
 
 Note the stacking row: on a single-family lot, state law as interpreted by HCD allows **one detached ADU + one conversion ADU + one JADU** — three units where one house stood. The JADU is the cheapest of the three to add because two of its cost phases do not exist.
 
+Fees still vary by city — see how the fee layer compares across three Orange County cities in our [Orange County comparison](/posts/orange-county-adu-cost-compared/).
+
 ## What moves the number most in a JADU
 
 **1. Bathroom: shared vs. separate.** Covered above — the largest single cost decision and the largest legal decision, in one.

@@ -66,7 +66,7 @@ None of this converts a slow permit into a winning claim, and most delays still 
 
 Permit timelines are already the least honest line in most ADU quotes. Our [ADU permit timeline](/posts/adu-permit-timeline/) walks the statutory clocks phase by phase and explains why "six months, start to finish" usually hides three to four months of paper. The _Shi_ ruling adds a second reason to treat that paper seriously: delay is no longer just lost time. It is a cost category with a legal name, a statute behind it, and now a published appellate decision saying applicants are the people the deadline was written to protect.
 
-If you are comparing cities, the fee side still matters as much as the clock: see how permit fees stack up in our [ADU permit fees, ranked](/posts/adu-permit-fees-ranked/), and how timing interacts with the 2027 law change in [Should you rush your permit before SB 1117?](/posts/sb-1117-should-you-rush-permit/). How we verify statutes, opinions, and fee schedules before publishing is documented in our [Methodology](/methodology/).
+If you are comparing cities, the fee side still matters as much as the clock: see how permit fees stack up in our [fee index](/fees/), and how timing interacts with the 2027 law change in our [SB 1117 comparison](/compare/). How we verify statutes, opinions, and fee schedules before publishing is documented in our [Methodology](/methodology/).
 
 ## Sources
 

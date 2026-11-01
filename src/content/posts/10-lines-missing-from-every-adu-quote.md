@@ -1,6 +1,6 @@
 ---
-title: "10 Lines Missing From Every ADU Quote (With Dollar Ranges)"
-description: "A contractor's 'all-in' ADU quote rarely includes the government lines, the tax line, or the reserve line. Ten lines that show up after you sign, with dollar ranges from verified California fee ledgers — and the lines we refuse to price without a source."
+title: "10 Lines Missing From Every ADU Quote"
+description: "A contractor's 'all-in' quote rarely includes government, tax, or reserve lines. Ten lines after signing, with ranges from verified California fee ledgers."
 pubDatetime: 2026-10-31T10:17:00Z
 author: "Every Line Item"
 tags: ["adu cost", "contractor bid", "adu quote", "california", "2026"]
@@ -18,7 +18,7 @@ faqs:
 
 A contractor's quote is a price for building. It is not a price for owning the permission to build, connecting to the city, paying the school district, or covering what goes wrong. Those lines arrive after you sign — from the city, the district, the utility, and the county assessor.
 
-This guide lists ten of them, with dollar ranges drawn only from verified sources: our published fee ledgers, the fee items in our dataset marked verified, and the official documents behind them. The model is an 800 sq ft ADU, the same baseline our ledger posts use. Where we could not verify a range, we say so and leave the line out of the total instead of inventing a number.
+This guide lists ten of them, with dollar ranges drawn only from verified sources: our published [fee ledgers](/fees/), the fee items in our dataset marked verified, and the official documents behind them. The model is an 800 sq ft ADU, the same baseline our ledger posts use. Where we could not verify a range, we say so and leave the line out of the total instead of inventing a number.
 
 ## 1. Plan check + building permit: $1,672–$13,798
 

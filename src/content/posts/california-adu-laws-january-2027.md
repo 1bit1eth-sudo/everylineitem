@@ -36,7 +36,7 @@ Three California laws land on ADU projects on January 1, 2027. Two of them rewri
 
 **What it does.** SB 1117 (Chapter 809) adds Gov. Code §66311.5: for up to two ADUs, a local agency may assess covered impact fees **only on the area in excess of 750 square feet**, proportionate under the existing §66324 framework. An 800 sq ft ADU is billed as if it were 50.
 
-**What it does to your bill.** Covered city/county impact fees collapse — in our [Folsom autopsy](/posts/folsom-adu-fees/), a worked proportional example falls from ~$10,477 to ~$40. Every jurisdiction page in our [fee index](/fees/) now carries a "What changes on January 1, 2027" block with the same summary.
+**What it does to your bill.** Covered city/county impact fees collapse — in a worked proportional example, fees fall from ~$10,477 to ~$40. Every jurisdiction page in our [fee index](/fees/) now carries a "What changes on January 1, 2027" block with the same summary.
 
 **What it does not touch.** School developer fees are not covered impact fees — Folsom's $8,208 Level II school fee is identical on January 2. Connection and capacity charges for water and sewer are expressly excluded (§66311.5(c)(2)). Charter cities are covered; a third ADU on the lot is billed the old way.
 

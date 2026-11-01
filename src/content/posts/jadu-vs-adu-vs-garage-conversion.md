@@ -8,7 +8,6 @@ draft: false
 verifiedPublished: "27 Oct 2026"
 lastVerified: "27 Oct 2026"
 nextReview: "Jan 2027"
-ogImage: "https://everylineitem.com/images/pinterest/jadu-vs-adu-vs-garage.png"
 faqs:
   - question: "What is the cheapest way to add an ADU in California?"
     answer: "A JADU (Junior ADU) is structurally cheapest — it lives inside your existing house, so site work, foundation, envelope, and landscaping phases nearly vanish, and every fee line (impact, school, utility connection) is $0 by law. A garage conversion runs about $190,000 for ~450 sq ft in LA County. A new detached 800 sq ft ADU is $320,000 in our baseline. But 'cheapest to build' is not 'cheapest per bedroom' or 'best rental income' — the table below compares all three."
