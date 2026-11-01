@@ -1,6 +1,6 @@
 ---
-title: "The 499 Sq Ft Line: Why One Square Foot Costs You $2,690"
-description: "California school fees on ADUs turn on a single sentence: units with less than 500 square feet of interior livable space are exempt. At the 2026 state cap of $5.38 per square foot, the 500th square foot triggers $2,690 — and the exact boundary is the one thing you must confirm with your district."
+title: "The 499 Sq Ft Line: One Foot Costs $2,690"
+description: "School fees turn on one sentence: units under 500 sq ft of interior livable space are exempt. At the 2026 cap of $5.38/sq ft, the 500th foot triggers $2,690."
 pubDatetime: 2026-10-31T18:03:29Z
 author: "Every Line Item"
 tags: ["school fees", "adu law", "sb 543", "california", "2026"]
@@ -29,6 +29,8 @@ Senate Bill 543 (McNerney), Chapter 520, Statutes of 2025, approved October 10, 
 That last phrase is doing all the work. Under Education Code §17620, "other residential construction" is charged a school developer fee only if the resulting increase in assessable space exceeds 500 square feet. An ADU under 500 square feet therefore does not trigger the fee at all. And when the fee does trigger, it applies to the full area — not just the square footage above 500. That is what makes it a cliff rather than a slope: the 500th foot does not cost $5.38. It costs the whole $2,690.
 
 The $2,690 figure follows the statute's own words. It is 500 square feet times the State Allocation Board's 2026 maximum Level 1 residential rate of $5.38 per square foot, approved January 28, 2026. At the same rate, an 800 square foot ADU pays $4,304 in school fees — the figure our fee calculator shows for every district at the cap.
+
+Sources: the "less than 500" exemption is in [Gov. Code §66311.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=66311.5), as amended by SB 543; the 2026 Level 1 rate and the SB 543 changes are summarized in HCD's [ADU Handbook (March 2026)](https://www.hcd.ca.gov/sites/default/files/docs/policy-and-research/adu-handbook-update.pdf).
 
 ## The table at the cap rate
 
