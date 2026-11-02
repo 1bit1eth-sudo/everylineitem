@@ -1165,7 +1165,7 @@
     },
     {
       "county": "Alameda",
-      "fee_schedule_url": null,
+      "fee_schedule_url": "https://www.fremont.gov/government/departments/finance/master-fee-schedule",
       "juris_id": "FREMONT",
       "last_verified": "9 Oct 2026",
       "name": "Fremont",
@@ -1204,7 +1204,7 @@
     },
     {
       "county": "Los Angeles",
-      "fee_schedule_url": null,
+      "fee_schedule_url": "https://www.downeyca.org/our-city/departments/amended-fy-19-20-user-fees",
       "juris_id": "DOWNEY",
       "last_verified": "9 Oct 2026",
       "name": "Downey",
@@ -1256,7 +1256,7 @@
     },
     {
       "county": "Los Angeles",
-      "fee_schedule_url": null,
+      "fee_schedule_url": "https://www.cityoflancasterca.org/our-city/departments-services/finance/citywide-fee-schedules",
       "juris_id": "LANCASTER",
       "last_verified": "9 Oct 2026",
       "name": "Lancaster",
@@ -1295,7 +1295,7 @@
     },
     {
       "county": "Ventura",
-      "fee_schedule_url": null,
+      "fee_schedule_url": "https://oxnardca.api.civicclerk.com/v1/Meetings/GetAttachmentFile(fileId=21438)",
       "juris_id": "OXNARD",
       "last_verified": "9 Oct 2026",
       "name": "Oxnard",
