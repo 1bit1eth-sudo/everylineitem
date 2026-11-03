@@ -6,7 +6,7 @@ author: "Every Line Item"
 tags: ["adu cost", "insurance", "landlord", "california", "guide", "2026"]
 draft: false
 verifiedPublished: "5 Nov 2026"
-lastVerified: "5 Nov 2026"
+lastVerified: "3 Nov 2026"
 nextReview: "Jan 2027"
 ogImage: "https://everylineitem.com/images/pinterest/do-you-need-separate-insurance-adu.png"
 faqs:
@@ -18,7 +18,7 @@ faqs:
     answer: "A builder's risk policy (course of construction) covers the structure while it's being built — fire, theft of materials, vandalism, weather. Your contractor should carry general liability and workers' comp; verify both are current. Your existing homeowners policy typically does not cover a construction site."
 ---
 
-> **Published:** 5 Nov 2026 · **Last verified:** 5 Nov 2026 · **Next review:** Jan 2027
+> **Published:** 5 Nov 2026 · **Last verified:** 3 Nov 2026 · **Next review:** Jan 2027
 > This is general information about insurance categories, not insurance advice. Policies vary by carrier and state — confirm with a licensed agent.
 
 Nobody puts insurance in the ADU quote. But from the day the foundation is poured to the day the first tenant moves in, the ADU passes through three distinct insurance phases — and the wrong coverage in any of them can cost more than the premium you skipped.
@@ -34,14 +34,14 @@ Your homeowners policy covers your house. It does not cover a construction site.
 - **What it doesn't:** The contractor's tools (their problem), your existing house (still under homeowners), earthquakes and floods (separate policies as always in California).
 - **Your contractor's coverage:** Verify current **general liability** and **workers' compensation** certificates before work starts. If a worker is injured and the contractor has no workers' comp, the liability can reach you.
 
-Cost varies by project value and duration; get the quote when you get the bid — it's a real line item, typically a few hundred to low thousands for an ADU-scale project.
+Cost varies by project value and duration; get the quote when you get the bid — it's a real line item. Industry guides price builder's risk at roughly 1–5% of construction cost, so for an ADU-scale build, budget low-four-figures and up; there is no official benchmark, so the quote is the number that counts.
 
 ## Phase 2: Completed, owner-occupied or family use — homeowners endorsement
 
 Once the ADU is finished and you're using it yourself (home office, family member, guest house):
 
 - **Attached ADUs** (including garage conversions and JADUs) are typically covered under your existing homeowners policy as part of the primary dwelling. Confirm with your carrier and update the **replacement cost** — your coverage limit should reflect the added structure.
-- **Detached ADUs** are usually covered as "other structures" (Coverage B in a standard HO-3 policy), typically at 10% of the dwelling limit. On a $500,000 dwelling limit, that's $50,000 for the ADU — likely far short of a $300,000+ structure. **You will probably need an endorsement or increased limits.**
+- **Detached ADUs** are usually covered as "other structures" (Coverage B in a standard HO-3 policy), typically at 10% of the dwelling limit. On a $500,000 dwelling limit, that's $50,000 for the ADU — likely far short of a $300,000+ structure. **You will probably need an endorsement or increased limits.** One more check before you rent it out: ask your carrier whether the detached unit stays inside Coverage B once it's tenant-occupied — the standard form carves out rented other structures, and carriers apply that exclusion differently, so don't assume the 10% bucket follows the unit into its rental phase.
 
 The call to make: tell your carrier the ADU exists, get the replacement-cost valuation updated, and ask specifically whether the detached unit needs a scheduled endorsement. Do this before final inspection, not after.
 
@@ -58,7 +58,7 @@ A **landlord policy** (often a DP-3 dwelling fire form) covers:
 - **Liability** — if a tenant is injured on the property, plus legal defense
 - **Lost rental income** — if a covered peril makes the unit uninhabitable
 
-What it does **not** cover: the tenant's belongings. Tenants need their own **renter's insurance** — you can require it in the lease (California landlords may require renters insurance but may not force tenants to name the landlord as additional insured).
+What it does **not** cover: the tenant's belongings. Tenants need their own **renter's insurance** — you can make it a lease condition (California has no statute requiring tenants to carry it, but landlords commonly require it in the written lease). Note the paperwork distinction: a certificate listing you as an interested party only gives you cancellation notice, while additional-insured status extends liability coverage to you — a different, stronger designation. Check what the lease actually requires and what the tenant's carrier offers; the two are not interchangeable.
 
 **Cost:** The Insurance Information Institute estimates a landlord policy runs about **25% more** than a standard homeowners policy for a comparable unit. On a $2,000/year homeowners premium, budget roughly $2,500 for the landlord equivalent — though ADU-specific pricing varies widely by carrier, construction type, and wildfire zone.
 
@@ -75,3 +75,11 @@ What it does **not** cover: the tenant's belongings. Tenants need their own **re
 ## The bottom line
 
 Insurance is three policies across the ADU's life, not one: **builder's risk** during construction, an updated **homeowners** policy (with adequate "other structures" limits) when it's done, and a **landlord policy** when it's rented. None of them appear in the construction quote. Price all three phases before you break ground — the premiums are small next to the build, and the gaps are where the real money hides.
+
+## Sources
+
+- Insurance Information Institute, "Coverage for renting out your home" — landlord policies "generally cost about 25 percent more than a standard homeowners policy"; short-term rentals require notifying the insurer and may need an endorsement, while regular hosting counts as business use that standard policies do not cover; landlords commonly require tenants to buy renters insurance before signing a lease. https://www.iii.org/article/coverage-for-renting-out-your-home
+- ISO Homeowners 3 – Special Form (HO 00 03), Coverage B – Other Structures: limit "not more than 10% of the limit of liability that applies to Coverage A," as reproduced in the form analysis at https://www.propertycasualty360.com/fcs/2022/02/07/homeowners-ho-00-03-03-22-revisions-section-i-property-coverages-a-c-analysis-part-2/
+- California Department of Insurance, "Earthquake Insurance" guide (rev. April 25, 2024) — "Homeowners, renters, and condominium insurance policies do not cover damage from natural disasters such as earthquakes, floods, and landslides" (fire following an earthquake excepted). https://www.insurance.ca.gov/01-consumers/105-type/95-guides/03-res/eq-ins.cfm
+- Builder's risk pricing: no III or CA DOI benchmark was found (checked November 3, 2026); the 1–5% of construction cost range is from industry/broker guides only, and the post states it as such rather than as an official figure.
+- Renters-insurance requirement: no California statute or CA DOI source stating that landlords may not demand additional-insured status was found (checked November 3, 2026); the post therefore states lease practice, not law, on the interested-party vs. additional-insured distinction.
