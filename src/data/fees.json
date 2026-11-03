@@ -1315,7 +1315,7 @@
       "primary_sqft_default": null,
       "valuation_psf": null,
       "valuation_basis": null,
-      "fee_schedule_url": null,
+      "fee_schedule_url": "https://sanbernardino.gov/DocumentCenter/View/341/Schedule-of-Fees---Building--Safety-Division-PDF",
       "last_verified": "28 Oct 2026",
       "status": "verified"
     },
@@ -1380,7 +1380,7 @@
       "primary_sqft_default": null,
       "valuation_psf": null,
       "valuation_basis": null,
-      "fee_schedule_url": null,
+      "fee_schedule_url": "https://www.westminster-ca.gov/home/showpublisheddocument/9167/638887968590430000",
       "last_verified": "21 Nov 2026",
       "status": "verified"
     },

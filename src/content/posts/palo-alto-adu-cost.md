@@ -27,13 +27,13 @@ faqs:
   - question: "What is the 750 sq ft cliff in Palo Alto?"
     answer: "The steepest per-square-foot cliff we've documented. ADUs under 750 sq ft are fully exempt from development impact fees; at 750+, fees apply proportionally to the primary dwelling. On an 800 sq ft ADU, that's $0 at 749 sq ft versus roughly $8,000–$20,000 at 750 — up to $20,000 for one square foot."
   - question: "Did everylineitem correct its Palo Alto numbers?"
-    answer: "Yes. Our initial matrix entry listed a $76,385 impact fee and 5.42% permit rate — neither verified against official documents. The corrected figures (DIF ~$8,000–$20,000 proportional; permit 1.76% per the FY24 schedule) come from the City of Palo Alto's official August 2025 impact fee sheet and FY24 PDS fee schedule. We publish corrections, not quiet edits."
+    answer: "Yes. Our initial matrix entry listed a $76,385 impact fee and 5.42% permit rate — neither verified against official documents. The corrected figures (DIF ~$8,000–$20,000 proportional; permit 1.76% per the FY24 schedule) come from the City of Palo Alto's official August 2026 FY27 impact fee sheet and FY24 PDS fee schedule. We publish corrections, not quiet edits."
 ---
 > **Published:** 4 Nov 2026 · **Last verified:** 4 Nov 2026 · **Next review:** Jan 2027
 > Cost figures are re-checked against permit records quarterly. Changes are
 > logged in [Corrections](/corrections/).
 
-A correction first, because it matters more than the numbers: our initial research matrix listed Palo Alto's impact fee at $76,385 and its permit rate at 5.42%. Neither figure survived contact with the city's official documents. The actual impact fee sheet (August 2025) yields roughly **$8,000–$20,000** on an 800 sq ft ADU after the proportional reduction; the actual permit schedule (FY24) charges **1.76%** of valuation, not 5.42%. We got it wrong, we checked, and this post carries the corrected numbers. That is the policy.
+A correction first, because it matters more than the numbers: our initial research matrix listed Palo Alto's impact fee at $76,385 and its permit rate at 5.42%. Neither figure survived contact with the city's official documents. The actual impact fee sheet (August 2026 FY27 sheet) yields roughly **$8,000–$20,000** on an 800 sq ft ADU after the proportional reduction; the actual permit schedule (FY24) charges **1.76%** of valuation, not 5.42%. We got it wrong, we checked, and this post carries the corrected numbers. That is the policy.
 
 With the correction in place, Palo Alto becomes the most interesting city in the series — not the most expensive, but the one with the **steepest per-square-foot cliff** and the **most dramatic SB 1117 effect**. The total lands at **about $303,000, or roughly $379 per square foot** — a series-low candidate, built from the most lopsided fee structure we've published.
 
@@ -51,11 +51,11 @@ With the correction in place, Palo Alto becomes the most interesting city in the
 | Line item | Amount | Source / note |
 | --- | --- | --- |
 | School district fee (PAUSD) | $3,832 | $4.79/sq ft × 800; PAUSD audited financials |
-| Impact fees (Parks, Community Center, Libraries, Public Safety, General Gov) | ~$7,947* | August 2025 city sheet; proportional (800/2,000 house) |
+| Impact fees (Parks, Community Center, Libraries, Public Safety, General Gov) | ~$8,000* | August 2026 FY27 city sheet; proportional (800/2,000 house) |
 | Building permit | ~$5,790* | 1.76% × $320,000 + $158; FY24 PDS schedule (FY26 unverified) |
-| Plan check | Verify with city | Separate rate not found in FY24 schedule |
+| Plan check | Verify with city | FY24 schedule lists Building Plan Check at 75% of the permit fee; FY26 rates unverified — confirm amount with city |
 | Sewer / water (CPAU) | Verify with city | Rate schedules exist; no ADU-specific amounts published |
-| **Soft cost subtotal (verified portion)** | **~$17,569*** | |
+| **Soft cost subtotal (verified portion)** | **~$17,622*** | |
 
 Phases 2–6 (construction) are carried from the series baseline at approximately $285,000; Palo Alto does not publish phase-level construction costs.
 
@@ -63,7 +63,7 @@ Phases 2–6 (construction) are carried from the series baseline at approximatel
 
 ## The $20,000 question mark
 
-Palo Alto's per-square-foot impact rates are the highest unit rates in the series — Parks alone is $18.65/sq ft, plus Community Center ($1.44), Libraries ($0.86), and two per-unit fees. But the **proportional reduction** (fee scaled by ADU-to-house ratio) brings the actual bill down to $8,000–$20,000.
+Palo Alto's per-square-foot impact rates are the highest unit rates in the series — Parks alone is $18.75/sq ft, plus Community Center ($1.44), Libraries ($0.86), and two per-unit fees. But the **proportional reduction** (fee scaled by ADU-to-house ratio) brings the actual bill down to $8,000–$20,000.
 
 The cliff is what makes it remarkable. At 749 sq ft: **$0** — full exemption, stated plainly on the city's fee sheet ("ADUs under 750 sq. ft. are exempt from Development Impact Fees"). At 750: the proportional fee switches on. One square foot, up to $20,000. No other city in the series concentrates this much consequence into a single square foot.
 
@@ -82,3 +82,10 @@ We corrected the matrix, flagged the source file, and wrote this post from the v
 ## The bottom line
 
 Palo Alto is the series' cliff-maximalist: the steepest single-foot consequence, the most dramatic 2027 reprieve, and — after correction — potentially the cheapest total we've published. Build at 749 sq ft and the fee sheet is nearly empty. Build at 800 and you're paying for the privilege. Come January, the question mark shrinks to $500.
+
+## Sources
+
+- City of Palo Alto, Development Impact and In-Lieu Fees (as of August 17, 2026) — Parks $18.75/sq ft, Community Center $1.44/sq ft, Libraries $0.86/sq ft; ADUs under 750 sq ft exempt from development impact fees: https://www.paloalto.gov/files/assets/public/v/2/development-services/planning-review/6.-planning-fees/fy27-impact-fee-information-sheet.pdf
+- City of Palo Alto, FY24 Adopted Municipal Fee Schedule (Planning and Development Services) — building permit 1.76% of construction value ($1–$4,000,000), base fee $158.21; Building Plan Check 75% of the permit fee: https://www.paloalto.gov/files/assets/public/v/1/planning-amp-development-services/fy24_pds_fee-schedule.pdf
+- Palo Alto Unified School District, School Impact Fees — $4.79/sq ft residential: https://www.pausd.org/about-us/funding/school-impact-fees
+- SB 1117 (Chapter 809, Statutes of 2026; effective January 1, 2027) — impact fees on up to two ADUs charged only on area above 750 sq ft; school fees unchanged.
