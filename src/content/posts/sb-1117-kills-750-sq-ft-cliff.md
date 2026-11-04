@@ -1,6 +1,6 @@
 ---
 title: "On Jan 1, 2027, California Kills the 750 Sq Ft Cliff — Here's What You'd Save"
-description: "SB 1117, signed Sept 29, 2026, rewrites the ADU impact-fee rule: from Jan 1, 2027, cities may charge fees only on square footage above 750 — not the whole unit. City-by-city savings table: Palo Alto ~$8,000–$20,000 → ~$500–$1,250; Anaheim ~$10,411 → a fraction. What changes, what doesn't, and the December-vs-January permit question."
+description: "SB 1117, signed Sept 29, 2026, rewrites the ADU impact-fee rule: from Jan 1, 2027, cities may charge fees only on square footage above 750 — not the whole unit. City-by-city savings table: Palo Alto ~$18,090 → ~$1,130; Anaheim ~$10,411 → a fraction. What changes, what doesn't, and the December-vs-January permit question."
 pubDatetime: 2026-10-12T01:00:00Z
 modDatetime: 2026-10-26T01:00:00Z
 author: "Every Line Item"
@@ -15,11 +15,11 @@ faqs:
   - question: "Does SB 1117 affect school district fees?"
     answer: "No. School developer fees are levied by school districts under Ed. Code §17620, a separate regime from city impact fees. SB 1117 amends only Gov. Code §66311.5 (the ADU fee section) and does not touch school fees. A $4,304 school fee on an 800 sq ft ADU stays $4,304."
   - question: "Should I delay my ADU permit to January 2027 because of SB 1117?"
-    answer: "It depends on your city's cliff height and your permit timeline. In Palo Alto, the difference could approach $20,000; in Torrance, about $2,243 minus whatever marginal rate replaces the flat fee; in Salinas or Oakland, $0 either way. Permits pulled in 2026 use the old math. But delaying a permit has its own costs — design, financing, and construction inflation — so model both paths rather than assuming delay wins."
+    answer: "It depends on your city's cliff height and your permit timeline. In Palo Alto, the difference is about $16,960; in Torrance, about $2,243 minus whatever marginal rate replaces the flat fee; in Salinas or Oakland, $0 either way. Permits pulled in 2026 use the old math. But delaying a permit has its own costs — design, financing, and construction inflation — so model both paths rather than assuming delay wins."
 ---
 > **Published:** 12 Oct 2026 · **Last verified:** 9 Oct 2026 · **Next review:** Jan 2027
 > Cost figures are re-checked against permit records quarterly. Changes are
-> logged in [Corrections](/corrections/).
+> logged in [Corrections](/corrections/). How we verify figures is on our [Methodology](/methodology/) page.
 
 The most expensive sentence in California ADU law is about to be rewritten.
 
@@ -33,7 +33,7 @@ Our estimates below apply each city's published impact-fee rates to 50 sq ft ins
 
 | City | Impact fees at 800 sq ft (2026 rules) | Est. at 800 sq ft (2027 marginal rules) | Est. savings |
 | --- | --- | --- | --- |
-| Palo Alto | ~$8,000–$20,000 | ~$500–$1,250 | **~$7,500–$18,750** |
+| Palo Alto | ~$18,090 | ~$1,130 | **~$16,960** |
 | Anaheim | ~$10,411 | ~$650 | **~$9,750** |
 | Fullerton | ~$6,411 | ~$400 | **~$6,000** |
 | Sacramento | ~$5,728 | ~$360 | **~$5,370** |
@@ -44,6 +44,8 @@ Our estimates below apply each city's published impact-fee rates to 50 sq ft ins
 | Oakland | $0 | $0 | $0 |
 
 *Torrance's flat $2,243.47 has no published per-square-foot rate, so there is no marginal arithmetic to do yet — the city must invent the math. We will check the January 2027 fee schedule.
+
+Palo Alto row: [FY27 city impact-fee sheet](https://www.cityofpaloalto.org/files/assets/public/v/5/development-services/planning-review/6.-planning-fees/fy27-impact-fee-information-sheet.pdf) (as of August 17, 2026), proportional to a 2,000 sq ft primary dwelling — the same basis as the other four carryover posts. The 2027 figure is our arithmetic: $18,090 × 50/800 ≈ $1,130.
 
 The pattern is stark: **the taller the cliff, the bigger the rescue.** Palo Alto homeowners save the most because Palo Alto charged the most. Salinas and Oakland homeowners save nothing because their cities never charged the fee at all — a quiet vindication of the waiver approach.
 
@@ -62,7 +64,7 @@ No urgency clause, so the January 1, 2027 effective date holds (Cal. Const. art.
 
 Here is the uncomfortable part: **permits pulled in 2026 use the old math.** Nothing in SB 1117 is retroactive.
 
-If your plans show 800 sq ft and your building permit issues in December 2026, you pay the full cliff — up to ~$20,000 in Palo Alto. If it issues in January 2027, you may pay ~$500–$1,250. That makes permit timing the most expensive scheduling decision in ADU construction right now, worth anywhere from $0 (Salinas) to ~$19,000 (Palo Alto).
+If your plans show 800 sq ft and your building permit issues in December 2026, you pay the full cliff — ~$18,090 in Palo Alto. If it issues in January 2027, you may pay ~$1,130. That makes permit timing the most expensive scheduling decision in ADU construction right now, worth anywhere from $0 (Salinas) to ~$16,960 (Palo Alto).
 
 But delay is not free. Three costs cut the other way:
 
@@ -70,7 +72,7 @@ But delay is not free. Three costs cut the other way:
 2. **Financing carry** — land and design costs accrue interest while you wait.
 3. **Fee-schedule risk** — cities will republish schedules for 2027; nothing guarantees every other line stays flat.
 
-Model both paths with your city's actual numbers before deciding. A $1,390 saving in Riverside may not survive two months of delay; a ~$18,000 saving in Palo Alto very plausibly does.
+Model both paths with your city's actual numbers before deciding. A $1,390 saving in Riverside may not survive two months of delay; a ~$16,960 saving in Palo Alto very plausibly does.
 
 ## What we are watching
 
