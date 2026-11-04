@@ -31,7 +31,7 @@ Here is what each one does, in the order it hits your budget.
 
 **After:** That 800 sq ft ADU pays on **50** square feet. The 751st square foot stops being the most expensive one on the drawing.
 
-**Dollar impact (illustrative):** In Palo Alto, where the proportional DIF runs ~$8,000–$20,000 on an 800 sq ft ADU under current practice, the post-2027 figure drops to roughly **$500–$1,250**. In Anaheim (~$10,411 DIF), the savings are similarly dramatic. Cities with $0 ADU impact fees (Oakland, Salinas, Oceanside) are unaffected — there is nothing to reduce.
+**Dollar impact (illustrative):** In Palo Alto, where the proportional DIF runs ~$18,090 on an 800 sq ft ADU under the FY27 sheet (as of August 17, 2026), the post-2027 figure drops to roughly **$1,130**. In Anaheim (~$10,411 DIF), the savings are similarly dramatic. Cities with $0 ADU impact fees (Oakland, Salinas, Oceanside) are unaffected — there is nothing to reduce.
 
 **What does not change:** School fees (separate Ed. Code regime), building permit fees, utility connection charges, and permits pulled in 2026 (assessed under 2026 rules).
 
