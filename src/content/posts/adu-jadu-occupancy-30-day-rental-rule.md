@@ -1,7 +1,7 @@
 ---
 title: "ADU and JADU Occupancy Rules: What the Statute Actually Says"
 description: "The occupancy and rental rules for California ADUs and JADUs, quoted from the statute text: AB 976 bars owner-occupancy requirements for standard ADUs, AB 1154 limits JADU owner-occupancy to shared-bathroom units, and both unit types carry a 30-day rental floor — worded differently in each statute."
-pubDatetime: 2026-12-09T01:00:00Z
+pubDatetime: 2026-12-14T01:00:00Z
 author: "Every Line Item"
 tags: ["adu law", "jadu", "owner occupancy", "rental rules", "california", "2026"]
 draft: false

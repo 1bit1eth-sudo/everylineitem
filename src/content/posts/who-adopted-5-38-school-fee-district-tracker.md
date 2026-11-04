@@ -1,7 +1,7 @@
 ---
 title: "Who Adopted the $5.38 School Fee (and Who Hasn't): District Tracker"
 description: "The State Allocation Board raised the Level 1 school-fee cap to $5.38 per sq ft on January 28, 2026 — but each district must adopt it separately. The first monthly edition of our tracker: 14 districts verified, with board dates and effective dates from district documents, and the districts we have not verified yet."
-pubDatetime: 2027-02-01T01:00:00Z
+pubDatetime: 2026-12-15T01:00:00Z
 author: "Every Line Item"
 tags: ["school fees", "developer fees", "district tracker", "california", "2026"]
 draft: true
