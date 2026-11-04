@@ -32,6 +32,14 @@ The most valuable messages we get are from contractors and estimators telling us
 
 ## Change log
 
+### 4 November 2026 — Campbell: permit example, impact-fee cap, and total corrected to the FY 2027 schedule
+
+**Changed:** Campbell post total **~$318,000 → ~$310,000** (~$398 → ~$388/sq ft). Building permit example on a $100,000 valuation **~$3,529 → $2,880** core (2.00% permit + 33% plan check + General Plan 0.16% + technology 0.04% + training 0.02%), plus $254 in schedule add-ons (Title 24 $237, seismic $13, SB 1473 $4) and the $400 construction license tax, for $3,534 in permit-related lines. The previous $3,929 all-in figure is withdrawn — its $649 remainder did not reconcile with the schedule's published add-ons. Impact fee no longer "rates not published": the FY 2027 schedule (effective July 1, 2026) publishes a Park In-Lieu cap of **$9,328 per unit** for an ADU of 750 sq ft or larger, calculated per state law, JADU $0 (the FY 2026 cap was $9,129). The cited schedule resolution is corrected: the FY 2026 cover was #13333, not #13279, and the FY 2026 document link is no longer live — the city's site now lists only the FY 2026-27 schedule. West Valley Sanitation sewer figures ($567.68/drainage fixture unit, cap $6,727; $86.42/fixture unit capacity, cap $1,024) are now marked [to verify]: the district's current published schedule could not be located, so they are carried from FY 2024-25 rates. Campbell Union's mixed threshold wording is now flagged: its rate table says "over 500 sq. ft." while its "Who Pays" section says "exceeding 750 square feet" — both on the same district page. Published date unified to 2 Nov 2026 (the post's timestamp previously rendered as 1 Nov in Pacific time).
+
+**Reason:** Cross-check against the city's current fee schedule and the school district's developer-fee page.
+
+**Source:** [City of Campbell FY 2027 Master Fee Schedule (effective July 1, 2026)](http://www.campbellca.gov/DocumentCenter/View/29705/FY-2027-Master-Fee-Schedule---Effective-July-1-2026), [Campbell Union School District developer fees](https://www.campbellusd.org/developerfees)
+
 ### 7 October 2026 — Anaheim: city reply received after publication
 
 **Changed:** Anaheim post no longer states "no reply by publication." The city's Building Division replied on Oct 7, 2026, after publication: sanitation fees average **$1.71/sq ft** (the city's own figure, matching OC San's average-demand rate) and park fees apply to construction of **750 sq ft and above**. School-fee questions were treated as address-specific; water connection charges were referred to Water Engineering.
