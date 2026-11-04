@@ -12,11 +12,11 @@ faqs:
   - question: "When does SB 1117 take effect?"
     answer: "January 1, 2027. SB 1117 (Chapter 809, Statutes of 2026), signed September 29, 2026, has no urgency clause, so the standard January 1 effective date holds. This post was published 48 days out; we will check in on the countdown as implementation schedules publish."
   - question: "What is the 750 sq ft cliff?"
-    answer: "Under current law (Gov. Code §66311.5), ADUs under 750 square feet are exempt from impact fees, but at 750 and above many cities charged the full per-square-foot fee on the entire unit — including the first 750 feet that would have been free. A 749 sq ft ADU pays $0; an 800 sq ft ADU can owe $2,000–$20,000. SB 1117 narrows the charge to only the square footage above 750 for a homeowner's first two ADUs."
+    answer: "Under current law (Gov. Code §66311.5), ADUs under 750 square feet are exempt from impact fees, but at 750 and above many cities charged the full per-square-foot fee on the entire unit — including the first 750 feet that would have been free. A 749 sq ft ADU pays $0; an 800 sq ft ADU can owe $2,000–~$18,090. SB 1117 narrows the charge to only the square footage above 750 for a homeowner's first two ADUs."
   - question: "How much will SB 1117 save on an 800 sq ft ADU?"
-    answer: "It scales with the cliff's height. Our estimates: Palo Alto ~$7,500–$18,750, Anaheim ~$9,750, Fullerton ~$6,000, Sacramento ~$5,370, Glendale ~$4,400, Riverside ~$1,390. In Salinas and Oakland, $0 — there was never a cliff. Torrance's flat $2,243.47 has no published per-foot rate, so its new number is unconfirmed. These are our arithmetic from 2026 fee schedules, not city-published 2027 figures."
+    answer: "It scales with the cliff's height. Our estimates: Palo Alto ~$16,960, Anaheim ~$9,750, Fullerton ~$6,000, Sacramento ~$5,370, Glendale ~$4,400, Riverside ~$1,390. In Salinas and Oakland, $0 — there was never a cliff. Torrance's flat $2,243.47 has no published per-foot rate, so its new number is unconfirmed. These are our arithmetic from 2026 fee schedules, not city-published 2027 figures."
   - question: "Should I delay my ADU permit to January 2027?"
-    answer: "It depends on your city's cliff height and your timeline. In Palo Alto, the difference could approach $20,000; in Riverside, about $1,390 may not survive two months of delay costs — construction inflation, financing carry, and 2027 fee-schedule changes all cut the other way. Permits pulled in 2026 use the old math. Model both paths with your city's actual numbers rather than assuming delay wins."
+    answer: "It depends on your city's cliff height and your timeline. In Palo Alto, the difference could approach $17,000; in Riverside, about $1,390 may not survive two months of delay costs — construction inflation, financing carry, and 2027 fee-schedule changes all cut the other way. Permits pulled in 2026 use the old math. Model both paths with your city's actual numbers rather than assuming delay wins."
 ---
 > **Published:** 14 Nov 2026 · **Last verified:** 9 Oct 2026 · **Next review:** Jan 2027
 > Cost figures are re-checked against permit records quarterly. Changes are
@@ -30,7 +30,7 @@ This is the kickoff of the SB 1117 countdown. Between now and January 1, we are 
 
 The [750 sq ft cliff, explained](/posts/750-sq-ft-cliff-explained/): state law (Gov. Code §66311.5) bars cities from charging impact fees on ADUs under 750 square feet. At 750 and above, cities could charge fees "proportionate" to the primary dwelling — and many charged the full per-square-foot fee on **the entire unit**, including the 749 feet that would have been exempt.
 
-That is the cliff: a 749 sq ft ADU pays **$0** in impact fees; an 800 sq ft ADU can owe **$2,243** (Torrance) to **~$20,000** (Palo Alto). The same 51 square feet, priced at $2,243–$20,000 depending on your address. Since a 2025 cleanup bill, the 750 is measured in interior livable space.
+That is the cliff: a 749 sq ft ADU pays **$0** in impact fees; an 800 sq ft ADU can owe **$2,243** (Torrance) to **~$18,090** (Palo Alto). The same 51 square feet, priced at $2,243–~$18,090 depending on your address. Since a 2025 cleanup bill, the 750 is measured in interior livable space.
 
 SB 1117, signed September 29, 2026 (Chapter 809, Statutes of 2026), changes the rule effective January 1, 2027: for a homeowner's **first two** ADUs on a lot, impact fees may be imposed **only on the livable square footage above 750** — marginal, the way income tax brackets work. An 800 sq ft ADU would owe fees on 50 sq ft, not 800.
 
@@ -40,7 +40,7 @@ From [our SB 1117 savings analysis](/posts/sb-1117-kills-750-sq-ft-cliff/), appl
 
 | City | 800 sq ft, 2026 rules | Est. 2027 (marginal) | Est. savings |
 | --- | --- | --- | --- |
-| Palo Alto | ~$8,000–$20,000 | ~$500–$1,250 | **~$7,500–$18,750** |
+| Palo Alto | ~$18,090 | ~$1,130 | **~$16,960** |
 | Anaheim | ~$10,411 | ~$650 | **~$9,750** |
 | Fullerton | ~$6,411 | ~$400 | **~$6,000** |
 | Sacramento | ~$5,728 | ~$360 | **~$5,370** |
@@ -58,7 +58,7 @@ Forty-eight days is long enough to finish a plan set and short enough to miss a 
 
 **1. Should your plans say 800 or 749?** Under 2026 rules, 749 is the cheat code — $0 in impact fees in every city in the state, entirely legal. Under 2027 rules, the 749-vs-800 decision barely matters for impact fees (you would owe on 50 sq ft at most). If your permit issues in December, 749 saves you the cliff. If it issues in January, 800 costs you almost nothing extra. The right answer depends on which side of New Year's your permit lands.
 
-**2. When does your permit actually issue?** Permits pulled in 2026 use the old math — nothing in SB 1117 is retroactive. The uncomfortable truth: if your plans show 800 sq ft and your permit issues in December, you pay the full cliff; if it issues in January, you may pay a fraction. That makes permit timing the most expensive scheduling decision in ADU construction right now — worth anywhere from $0 (Salinas) to ~$19,000 (Palo Alto). But delay is not free: construction inflation reprices labor and materials every month, financing carries while you wait, and cities will republish 2027 fee schedules with no guarantee every other line stays flat. Model both paths.
+**2. When does your permit actually issue?** Permits pulled in 2026 use the old math — nothing in SB 1117 is retroactive. The uncomfortable truth: if your plans show 800 sq ft and your permit issues in December, you pay the full cliff; if it issues in January, you may pay a fraction. That makes permit timing the most expensive scheduling decision in ADU construction right now — worth anywhere from $0 (Salinas) to ~$17,000 (Palo Alto). But delay is not free: construction inflation reprices labor and materials every month, financing carries while you wait, and cities will republish 2027 fee schedules with no guarantee every other line stays flat. Model both paths.
 
 **3. What is still unconfirmed?** Three items, labeled honestly and queued for our December 1 quarterly re-verification:
 

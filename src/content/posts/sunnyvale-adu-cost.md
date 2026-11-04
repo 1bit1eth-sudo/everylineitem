@@ -100,7 +100,7 @@ Three state rules frame every number above. Under Government Code §65852.2(f)(3
 
 ## How Sunnyvale compares
 
-Only published posts are used here. In the Bay Area, published totals are Palo Alto **~$303,000**, Fremont **$314,000**, Campbell **~$318,000**, and Oakland **$322,000**. Sunnyvale's $311,604 floor sits between Palo Alto's and Fremont's — and unlike Palo Alto's floor, it already includes a computed permit stack. Once the transportation fee question is answered, expect Sunnyvale to land near or above Fremont.
+Only published posts are used here. In the Bay Area, published totals are Palo Alto **~$313,000** (FY27 DIF ~$18,090, as of August 17, 2026), Fremont **$314,000**, Campbell **~$318,000**, and Oakland **$322,000**. Sunnyvale's $311,604 floor now sits below all four — and unlike Palo Alto's figure, it already includes a computed permit stack. Once the transportation fee question is answered, expect Sunnyvale to land near or above Fremont.
 
 ## What this post does not claim
 

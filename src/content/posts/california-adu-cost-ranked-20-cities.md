@@ -11,7 +11,7 @@ nextReview: "Dec 2026"
 ogImage: "https://everylineitem.com/images/pinterest/california-adu-cost-ranked-20-cities.png"
 faqs:
   - question: "Which California city is cheapest for building an ADU?"
-    answer: "Among firm totals, Long Beach is lowest at $313,000. Five cities carry preliminary (*) totals lower still — Salinas (~$300,000*), Fontana (~$305,000*), Santa Maria ($306,000*), Lakewood (~$310,000*), and San Bernardino (~$316,000*) — each with stated assumptions or unverified items. Pasadena (~$310,000) and Campbell (~$318,000) are also marked preliminary by the series' tilde convention, while Palo Alto (~$303,000) reflects the published correction. At the top, San Francisco ($325,000) and the San Diego outlier ($344,000) anchor the range. Rankings shift as we publish more cities; this table updates monthly."
+    answer: "Among firm totals, Long Beach is lowest at $313,000, now level with Palo Alto (~$313,000) after the FY27 correction. Five cities carry preliminary (*) totals lower still — Salinas (~$300,000*), Fontana (~$305,000*), Santa Maria ($306,000*), Lakewood (~$310,000*), and San Bernardino (~$316,000*) — each with stated assumptions or unverified items. Pasadena (~$310,000) and Campbell (~$318,000) are also marked preliminary by the series' tilde convention, while Palo Alto (~$313,000) reflects the published FY27 correction. At the top, San Francisco ($325,000) and the San Diego outlier ($344,000) anchor the range. Rankings shift as we publish more cities; this table updates monthly."
   - question: "Why do ADU costs vary so much between California cities?"
     answer: "Construction costs (phases 2–6) are similar statewide — the spread lives almost entirely in Phase 1 soft costs: school fees ($1,792–~$4,320), impact fees ($0–~$11,173), permit fees ($1,006–~$19,500), and sewer charges ($0–~$7,751). Same ADU, same state, different fee schedules."
   - question: "Does the ranking change when new cities are added?"
@@ -31,15 +31,15 @@ But read the asterisks first. Among the 15 cities with **firm totals**, the spre
 | Rank | City | Total (800 sq ft) | Per sq ft | Key fee line |
 | --- | --- | --- | --- | --- |
 | 1 | Salinas | **~$300,000\*** | $375 | DIF $0 (series first full waiver) |
-| 2 | Palo Alto | **~$303,000** | $379 | Permit ~$5,790 (1.76% of valuation, corrected) |
-| 3 | Fontana | **~$305,000\*** | $381 | Preliminary — see post |
-| 4 | Santa Maria | **$306,000\*** | $383 | Sewer charged proportionally (series only) |
-| 5 | Chula Vista | **$308,000** | $385 | Flat-fee ADU permit ~$3,951 |
-| 6 | Riverside | **$309,000** | $386 | Permit $1,006 (series low); free 800 sq ft plans |
-| 7 | Lakewood | **~$310,000\*** | $388 | Preliminary — see post |
-| 8 | Pasadena | **~$310,000** | $388 | School $1,792 (series low) |
-| 9 | Long Beach | **$313,000** | $391 | School $4,304 |
-| 10 | Oceanside | **$313,000** | $391 | DIF $0 |
+| 2 | Fontana | **~$305,000\*** | $381 | Preliminary — see post |
+| 3 | Santa Maria | **$306,000\*** | $383 | Sewer charged proportionally (series only) |
+| 4 | Chula Vista | **$308,000** | $385 | Flat-fee ADU permit ~$3,951 |
+| 5 | Riverside | **$309,000** | $386 | Permit $1,006 (series low); free 800 sq ft plans |
+| 6 | Lakewood | **~$310,000\*** | $388 | Preliminary — see post |
+| 7 | Pasadena | **~$310,000** | $388 | School $1,792 (series low) |
+| 8 | Long Beach | **$313,000** | $391 | School $4,304 |
+| 9 | Oceanside | **$313,000** | $391 | DIF $0 |
+| 10 | Palo Alto | **~$313,000** | $391 | DIF ~$18,090 (FY27, proportional); permit ~$5,790 |
 | 11 | Sacramento | **$316,000** | $395 | School $4,104 |
 | 12 | San Bernardino | **~$316,000\*** | $395 | Preliminary — see post |
 | 13 | Torrance | **$317,000** | $396 | DIF $2,243.47 (series low); school $4,304 |
@@ -57,8 +57,8 @@ But read the asterisks first. Among the 15 cities with **firm totals**, the spre
 
 **Ten cities added.** The Day 25 table ranked 10; this edition doubles it. The biggest movers in the story:
 
-- **The floor dropped.** Santa Maria ($306,000*) was already the nominal low in v1 but excluded for unverified items. Now five asterisked preliminary entries reach lower — Salinas at ~$300,000* on the back of a full DIF waiver, and Palo Alto at ~$303,000 after correcting a widely-circulated bad number.
-- **The Palo Alto correction.** Batch-matrix research caught a real error: DIF was rumored at ~$76,000 and permits at 5.42%. Both wrong. DIF is ~$8,000–$20,000; permits are 1.76% (~$5,790). The corrected total is a **series-low candidate**, not the series high it was assumed to be.
+- **The floor dropped.** Santa Maria ($306,000*) was already the nominal low in v1 but excluded for unverified items. Now five asterisked preliminary entries reach lower — Salinas at ~$300,000* on the back of a full DIF waiver — and Palo Alto at ~$313,000 after correcting a widely-circulated bad number, now level with Long Beach rather than undercutting it.
+- **The Palo Alto correction.** Batch-matrix research caught a real error: DIF was rumored at ~$76,000 and permits at 5.42%. Both wrong. DIF is ~$18,090 on the FY27 sheet (proportional, as of August 17, 2026); permits are 1.76% (~$5,790). The corrected total is **level with Long Beach at the low end of the firm totals**, not the series high it was assumed to be.
 - **San Diego is still the outlier.** At $344,000, it sits $19,000 above San Francisco — more than the entire rest of the firm spread combined. Its soft-cost stack, not its construction cost, explains the gap.
 
 ## What the spread tells you
