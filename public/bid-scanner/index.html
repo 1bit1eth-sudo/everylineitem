@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bid Scanner — Check Your ADU Quote Line by Line | Every Line Item</title>
+<meta name="description" content="Paste a contractor bid and see each line sorted into the six ADU cost stages, checked against modeled benchmark ranges and verified government fees. Everything stays in your browser.">
+<link rel="canonical" href="https://everylineitem.com/bid-scanner/">
+<style>
+:root{
+  --bg:#fdfdfd; --fg:#282728; --accent:#006cac; --accent-fg:#ffffff;
+  --muted:#e6e6e6; --muted-fg:#6b7280; --border:#ece9e9;
+  --flag:#b3261e; --flag-bg:#fdecea; --ok:#1e7b34; --ok-bg:#e6f4ea;
+  --warn-bg:#fff4e0; --warn-fg:#7a4a00;
+  --card:#ffffff;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#212737; --fg:#eaedf3; --accent:#ff6b01; --accent-fg:#ffffff;
+    --muted:#343f60; --muted-fg:#afb9ca; --border:#ab4b08;
+    --flag:#ff9d94; --flag-bg:#3d1f1d; --ok:#7ddb96; --ok-bg:#16281a;
+    --warn-bg:#3a2c10; --warn-fg:#ffcf8a;
+    --card:#28304a;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:16px; line-height:1.6;
+}
+a{color:var(--accent); text-decoration:underline; text-decoration-style:dashed; text-underline-offset:4px}
+a:hover{text-decoration-style:solid}
+h1{font-size:1.9rem; line-height:1.25; margin:.4rem 0 .6rem}
+h2{font-size:1.35rem; margin:1.8rem 0 .6rem}
+h3{font-size:1.1rem; margin:1.2rem 0 .4rem}
+p{margin:.5rem 0}
+.small{font-size:.85rem; color:var(--muted-fg)}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.9em}
+.wrap{max-width:760px; margin:0 auto; padding:0 1rem 3rem}
+.topbar{display:flex; flex-wrap:wrap; gap:.4rem 1.2rem; align-items:baseline; padding:1rem 1rem .4rem; max-width:760px; margin:0 auto}
+.topbar .brand{font-weight:700; font-size:1.05rem; color:var(--fg); text-decoration:none}
+.topbar nav a{font-size:.9rem}
+.notice{border:1px solid var(--border); border-left:4px solid var(--accent); background:var(--card); border-radius:6px; padding:.7rem .9rem; margin:1rem 0}
+.notice.flag{border-left-color:var(--flag); background:var(--flag-bg)}
+.notice.warn{border-left-color:var(--warn-fg); background:var(--warn-bg)}
+label{font-weight:600; display:block; margin:.9rem 0 .25rem}
+select, input[type="number"], input[type="text"], textarea{
+  font:inherit; color:var(--fg); background:var(--card);
+  border:1px solid var(--border); border-radius:6px; padding:.55rem .7rem; width:100%;
+}
+select:focus, input:focus, textarea:focus{outline:2px dashed var(--accent); outline-offset:1px; border-color:var(--accent)}
+textarea{min-height:220px; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.9rem; line-height:1.5}
+.controls{display:flex; flex-wrap:wrap; gap:.6rem; margin:.8rem 0}
+button{
+  font:inherit; font-weight:600; cursor:pointer; border-radius:6px;
+  border:1px solid var(--accent); background:var(--accent); color:var(--accent-fg);
+  padding:.55rem 1rem;
+}
+button.secondary{background:transparent; color:var(--accent)}
+button:disabled{opacity:.5; cursor:default}
+.grid2{display:grid; grid-template-columns:1fr 1fr; gap:0 1rem}
+@media (max-width:560px){ .grid2{grid-template-columns:1fr} }
+table{width:100%; border-collapse:collapse; font-size:.92rem; margin:.6rem 0}
+th, td{border-bottom:1px solid var(--border); padding:.45rem .35rem; text-align:left; vertical-align:top}
+th{font-size:.82rem; color:var(--muted-fg); text-transform:uppercase; letter-spacing:.03em}
+td.num, th.num{text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums}
+td select{padding:.3rem .4rem; font-size:.88rem}
+.line-text{word-break:break-word}
+.pill{display:inline-block; font-size:.78rem; font-weight:700; padding:.05rem .45rem; border-radius:999px; margin-left:.35rem; vertical-align:middle}
+.pill.ok{background:var(--ok-bg); color:var(--ok)}
+.pill.flag{background:var(--flag-bg); color:var(--flag)}
+.pill.warn{background:var(--warn-bg); color:var(--warn-fg)}
+.pill.neutral{background:var(--muted); color:var(--muted-fg)}
+.bar-row{margin:.9rem 0}
+.bar-head{display:flex; justify-content:space-between; gap:.5rem; flex-wrap:wrap; font-size:.95rem}
+.bar-head .amt{font-weight:700; font-variant-numeric:tabular-nums}
+.track{position:relative; height:20px; background:var(--muted); border-radius:4px; margin:.3rem 0 .15rem; overflow:hidden}
+.range-band{position:absolute; top:0; bottom:0; background:var(--accent); opacity:.28}
+.median-tick{position:absolute; top:0; bottom:0; width:2px; background:var(--accent)}
+.bid-bar{position:absolute; top:5px; bottom:5px; background:var(--accent); border-radius:2px; min-width:2px}
+.bid-bar.out{ background:var(--flag)}
+.bar-scale{font-size:.8rem; color:var(--muted-fg)}
+ul.flags, ol.questions{margin:.5rem 0; padding-left:1.3rem}
+ul.flags li, ol.questions li{margin:.45rem 0}
+ul.flags li::marker{color:var(--flag)}
+details{border:1px solid var(--border); border-radius:6px; padding:.6rem .9rem; margin:1rem 0; background:var(--card)}
+summary{font-weight:700; cursor:pointer}
+footer.site{border-top:1px solid var(--border); margin-top:2.5rem; padding-top:1rem; font-size:.88rem; color:var(--muted-fg)}
+footer.site a{color:var(--muted-fg)}
+.hidden{display:none}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="/">Every Line Item</a>
+  <nav>
+    <a href="/fees/">Fees by City</a>
+    <a href="/compare/">Compare</a>
+    <a href="/posts/">Posts</a>
+    <a href="/fee-index/">Fee Index</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <h1>Bid Scanner</h1>
+  <p class="small">Paste a contractor bid. Every line is sorted into the six ADU cost stages, checked against modeled benchmark ranges and verified government fees — and turned into questions to ask before you sign.</p>
+
+  <div class="notice" role="note">
+    <strong>Private by design.</strong> Everything you paste stays in your browser. This page sends nothing to any server — no account, no email, no upload. The only network requests are to load this site&rsquo;s own public benchmark and fee tables (two CSV files). Closing the page erases your bid; nothing is saved.
+  </div>
+
+  <p><strong>Construction ranges are modeled, not quotes. This scanner flags questions — it does not judge a contractor.</strong></p>
+
+  <div id="data-notice" class="notice hidden" role="status"></div>
+
+  <section aria-label="Settings">
+    <div class="grid2">
+      <div>
+        <label for="region-select">Region (benchmark ranges)</label>
+        <select id="region-select">
+          <option value="inland" selected>Inland SoCal — 800 sq ft mid-grade model</option>
+          <option value="coastal">Coastal — 800 sq ft mid-grade model</option>
+        </select>
+      </div>
+      <div>
+        <label for="size-input">ADU size (sq ft)</label>
+        <input type="number" id="size-input" value="800" min="100" max="2000" step="10">
+        <div class="small">Benchmarks are modeled for an 800 sq ft ADU. The fee check below scales school fees with size; see &ldquo;How the checks work&rdquo;.</div>
+      </div>
+    </div>
+    <div>
+      <label for="jurisdiction-select">Jurisdiction (for the government-fee check)</label>
+      <select id="jurisdiction-select">
+        <option value="">— Select a city or county (optional) —</option>
+      </select>
+      <div class="small">Verified fees come from the Q3 2026 fee index. <span id="fee-link-slot"></span></div>
+    </div>
+  </section>
+
+  <section aria-label="Your bid">
+    <h2>1. Paste your bid</h2>
+    <p class="small">One line per item, with an amount. Lines like <span class="mono">Framing labor — $42,000</span> or <span class="mono">$8,500 — Architectural plans</span> both work. Amounts need a <span class="mono">$</span>, a comma, or cents (for example <span class="mono">1,234</span> or <span class="mono">1234.56</span>); a bare number such as <span class="mono">2026</span> is not read as money. Lines without a readable amount are listed below, never dropped.</p>
+    <label for="bid-input">Bid text</label>
+    <textarea id="bid-input" spellcheck="false" placeholder="Architectural plans and Title 24 — $8,500&#10;Excavation and grading — $12,000&#10;Concrete foundation and slab — $28,000&#10;Framing lumber and labor — $42,000"></textarea>
+    <div class="controls">
+      <button id="scan-btn" type="button">Scan my bid</button>
+      <button id="sample-btn" type="button" class="secondary">Load sample bid</button>
+      <button id="clear-btn" type="button" class="secondary">Clear</button>
+    </div>
+  </section>
+
+  <section aria-label="Parsed lines" id="lines-section" class="hidden">
+    <h2>2. Your lines <span class="small" id="lines-count"></span></h2>
+    <p class="small">The stage for each line was guessed from its words. If a guess is wrong, fix it with the dropdown — totals, flags, and questions update right away.</p>
+    <table>
+      <thead><tr><th>Line</th><th class="num">Amount</th><th>Stage</th><th><span class="small">Remove</span></th></tr></thead>
+      <tbody id="lines-body"></tbody>
+    </table>
+    <h3>Add a line</h3>
+    <div class="grid2">
+      <div><label for="add-text">Item</label><input type="text" id="add-text" placeholder="Sewer lateral connection"></div>
+      <div><label for="add-amount">Amount ($)</label><input type="number" id="add-amount" min="0" step="1" placeholder="6500"></div>
+    </div>
+    <div>
+      <label for="add-stage">Stage</label>
+      <select id="add-stage"></select>
+    </div>
+    <div class="controls"><button id="add-line-btn" type="button" class="secondary">Add line</button></div>
+    <div id="unparsed-box" class="hidden">
+      <h3>Lines without a readable amount</h3>
+      <p class="small">These lines were not counted in any total. Add an amount with &ldquo;Add a line&rdquo; above, or fix the wording and scan again.</p>
+      <ul id="unparsed-list" class="small"></ul>
+    </div>
+  </section>
+
+  <section aria-label="Results" id="results-section" class="hidden">
+    <h2>3. Results</h2>
+    <p class="small">Benchmarks are the Q3 2026 modeled ranges for an 800 sq ft mid-grade ADU (medians published in our posts; low/high modeled around them). A stage outside its range is a question, not a verdict.</p>
+    <div id="stage-bars"></div>
+    <p><strong>Bid total: <span id="bid-total" class="mono"></span></strong> &nbsp;·&nbsp; Modeled total range: <span id="total-range" class="mono"></span></p>
+    <p><span id="gov-fee-box"></span></p>
+    <div class="controls">
+      <button id="copy-btn" type="button" class="secondary">Copy summary</button>
+      <a id="compare-link" class="small" href="/compare/">Open the fee calculator on /compare/</a>
+    </div>
+
+    <h3>Red flags <span id="flags-count" class="pill neutral"></span></h3>
+    <ul id="flags-list" class="flags"></ul>
+
+    <h3>Questions to ask your contractor</h3>
+    <ol id="questions-list" class="questions"></ol>
+
+    <h3>Keep reading</h3>
+    <ul>
+      <li><a href="/posts/how-to-read-adu-bid/">How to read an ADU bid</a> — what each stage should contain, and the allowance traps to watch for.</li>
+      <li><a href="/compare/">Compare fees by city</a> — the fee calculator, with verified fees and the 750 sq ft cliff.</li>
+      <li id="fee-page-item" class="hidden"><a id="fee-page-link" href="/fees/">Verified fees for your jurisdiction</a></li>
+      <li><a href="/downloads/adu-benchmark-ranges-2026-q3.csv">Benchmark ranges (CSV, Q3 2026)</a> · <a href="/downloads/adu-fee-index-2026-q3.csv">Fee index (CSV, Q3 2026)</a></li>
+    </ul>
+  </section>
+
+  <details>
+    <summary>How the checks work</summary>
+    <h3>Classification</h3>
+    <p>No AI and no outside service. Each line is scored against a keyword list for the six stages (for example <span class="mono">permit</span>, <span class="mono">plans</span>, <span class="mono">engineering</span> point to Soft costs; <span class="mono">excavation</span>, <span class="mono">concrete</span>, <span class="mono">foundation</span> point to Site + foundation). The highest score wins; a line with no keyword match is left Unclassified for you to place. Utility-connection lines (sewer lateral, water service, electrical service) are classified under Systems + interior, and are also tracked separately for the missing-utility check.</p>
+    <h3>Red-flag rules</h3>
+    <ol>
+      <li><strong>Missing stage.</strong> A stage with no lines at all is flagged — soft costs and utility connections especially, because they are the two items most often billed separately after signing.</li>
+      <li><strong>Wording.</strong> <span class="mono">allowance</span>, <span class="mono">TBD</span>, <span class="mono">TBC</span>, <span class="mono">by owner</span>, <span class="mono">owner-supplied</span>, <span class="mono">excludes</span>, <span class="mono">excluded</span>, <span class="mono">not included</span>, and <span class="mono">NIC</span> are flagged on the line where they appear (case-insensitive).</li>
+      <li><strong>Out of range.</strong> A stage total below the low end or above the high end of the modeled range for your region is flagged.</li>
+      <li><strong>Government fees.</strong> Lines with fee words (permit, plan check, school fee, impact fee, city/county fee, development fee, inspection fee) are summed. If none appear, that is flagged. If a jurisdiction is selected, the sum is compared with a verified-fee estimate for your ADU size: school fees are $0 under 500 sq ft and the per-sq-ft rate at 500 sq ft or more (Gov. Code §66311.5); impact fees are $0 at 750 sq ft or less and the 751 sq ft cliff amount above that; all other verified fees are taken as-is from the Q3 2026 fee index. A difference larger than $1,000 and larger than half the verified estimate is flagged as &ldquo;far from verified&rdquo;.</li>
+    </ol>
+    <h3>What this is not</h3>
+    <p>The benchmark ranges are modeled from published medians, not quotes and not a price list. A flag means &ldquo;ask about this&rdquo;, not &ldquo;this contractor is wrong&rdquo;. Site conditions, finish grade, and scope change real prices by tens of thousands of dollars.</p>
+    <h3>Data</h3>
+    <p>Benchmark ranges: <a href="/downloads/adu-benchmark-ranges-2026-q3.csv">adu-benchmark-ranges-2026-q3.csv</a> (Q3 2026). Verified fees: <a href="/downloads/adu-fee-index-2026-q3.csv">adu-fee-index-2026-q3.csv</a> (Q3 2026 fee index, 69 jurisdictions). If either file cannot be loaded, the page falls back to a built-in sample and says so on the page. Jurisdiction links point to that jurisdiction&rsquo;s verified-fee page under <span class="mono">/fees/</span>.</p>
+  </details>
+</main>
+
+<footer class="site wrap">
+  <p>Every Line Item — California ADU costs, line by line. Fees from official documents; construction ranges are modeled. <a href="/methodology/">Methodology</a> · <a href="/privacy/">Privacy</a> · <a href="/corrections/">Corrections</a></p>
+  <p>Construction ranges are modeled, not quotes. This scanner flags questions — it does not judge a contractor.</p>
+</footer>
+
+<noscript><p style="max-width:760px;margin:0 auto;padding:1rem">This tool runs entirely in your browser and needs JavaScript to scan a bid.</p></noscript>
+
+<script>
+"use strict";
+/* Bid Scanner — all processing is client-side. The only network requests
+   this page makes are fetch() calls to this site's own two CSV files. */
+
+/* ---------- Stages ---------- */
+const STAGES = [
+  { key: "soft",        label: "Soft costs",          csv: "Soft costs" },
+  { key: "site",        label: "Site + foundation",   csv: "Site work + foundation" },
+  { key: "framing",     label: "Framing",             csv: "Framing + structure" },
+  { key: "envelope",    label: "Envelope",            csv: "Building envelope" },
+  { key: "systems",     label: "Systems + interior",  csv: "Systems + interior" },
+  { key: "landscaping", label: "Landscaping",         csv: "Landscaping + hardscape" },
+];
+const STAGE_LABELS = Object.fromEntries(STAGES.map((s) => [s.key, s.label]));
+
+/* ---------- Keyword dictionary (CONFIG) ----------
+   Each entry: [keyword, weight]. Matching is case-insensitive on whole
+   words (plurals allowed). Longer, more specific phrases weigh more.
+   Utility-connection words also feed the missing-utility check. */
+const CONFIG = {
+  soft: [
+    ["plan check", 3], ["plancheck", 3], ["building permit", 3], ["permit fee", 3],
+    ["school fee", 3], ["impact fee", 3], ["development fee", 3],
+    ["architect", 2], ["architectural", 2], ["engineering", 2], ["engineer", 2],
+    ["title 24", 2], ["energy calc", 2], ["structural calc", 2], ["soils report", 2],
+    ["geotech", 2], ["geotechnical", 2], ["permit", 2], ["plans", 2],
+    ["design", 1], ["survey", 1], ["city fee", 2], ["county fee", 2],
+    ["inspection fee", 2], ["planning", 1], ["entitlement", 2], ["blueprint", 1],
+  ],
+  site: [
+    ["excavation", 3], ["excavate", 3], ["retaining wall", 3], ["stem wall", 3],
+    ["foundation", 3], ["footing", 2], ["concrete", 2], ["slab", 2],
+    ["grading", 2], ["earthwork", 2], ["trenching", 2], ["trench", 2],
+    ["backfill", 2], ["compaction", 2], ["demolition", 2], ["shoring", 2],
+    ["underpinning", 2], ["pier", 1], ["caisson", 2], ["haul", 1], ["demo", 1],
+  ],
+  framing: [
+    ["roof framing", 3], ["floor framing", 3], ["wall framing", 3],
+    ["framing", 3], ["frame", 1], ["lumber", 2], ["joist", 2], ["stud", 2],
+    ["beam", 2], ["truss", 2], ["sheathing", 2], ["subfloor", 2], ["posts", 1],
+  ],
+  envelope: [
+    ["roofing", 3], ["waterproofing", 2], ["waterproof", 2], ["skylight", 2],
+    ["windows", 2], ["window", 2], ["siding", 2], ["stucco", 2],
+    ["insulation", 2], ["flashing", 2], ["gutters", 2], ["downspout", 2],
+    ["cladding", 2], ["roof", 1], ["doors", 1], ["door", 1], ["exterior", 1],
+  ],
+  systems: [
+    ["electrical service", 3], ["water service", 3], ["water meter", 3],
+    ["sewer lateral", 3], ["sewer connection", 3], ["mini-split", 2],
+    ["water heater", 2], ["electrical", 2], ["plumbing", 2], ["plumber", 2],
+    ["hvac", 2], ["mechanical", 2], ["drywall", 2], ["flooring", 2],
+    ["cabinets", 2], ["cabinet", 2], ["countertop", 2], ["fixtures", 2],
+    ["fixture", 2], ["painting", 2], ["paint", 1], ["tile", 2],
+    ["appliances", 1], ["appliance", 1], ["furnace", 2], ["duct", 1],
+    ["wiring", 2], ["panel", 1], ["outlets", 1], ["lighting", 1],
+    ["bath", 1], ["kitchen", 1], ["shower", 1], ["toilet", 1], ["sink", 1],
+    ["faucet", 1], ["sewer", 2], ["utility", 1], ["hookup", 2], ["hook-up", 2],
+    ["gas line", 2], ["floor", 1],
+  ],
+  landscaping: [
+    ["landscaping", 3], ["landscape", 2], ["hardscape", 3], ["finish grade", 2],
+    ["irrigation", 2], ["driveway", 2], ["patio", 2], ["fencing", 2],
+    ["fence", 2], ["pavers", 2], ["pergola", 2], ["walkway", 2],
+    ["sod", 1], ["planting", 1], ["plants", 1], ["deck", 1],
+  ],
+};
+
+/* Words that mark a line as a government fee (rule 4), independent of stage. */
+const FEE_WORDS = [
+  "permit", "plan check", "plancheck", "school fee", "impact fee",
+  "city fee", "county fee", "development fee", "inspection fee",
+  "building permit", "permit fee",
+];
+/* Words that flag a line as vague or owner-carried (rule 2). */
+const WORDING_FLAGS = [
+  { re: /\ballowance\b/i, label: "allowance" },
+  { re: /\btbd\b/i, label: "TBD" },
+  { re: /\btbc\b/i, label: "TBC" },
+  { re: /\bby owner\b/i, label: "by owner" },
+  { re: /\bowner[- ]supplied\b/i, label: "owner-supplied" },
+  { re: /\bowner to provide\b/i, label: "owner to provide" },
+  { re: /\bexcludes\b/i, label: "excludes" },
+  { re: /\bexcluded\b/i, label: "excluded" },
+  { re: /\bnot included\b/i, label: "not included" },
+  { re: /\bnot in scope\b/i, label: "not in scope" },
+  { re: /\bnic\b/i, label: "NIC" },
+];
+/* Words that show a utility connection is in the bid (rule 1). */
+const UTILITY_WORDS = [
+  "sewer", "water meter", "water service", "water connection", "utility",
+  "hookup", "hook-up", "service panel", "electrical service", "gas service",
+  "lateral", "meter upgrade", "panel upgrade",
+];
+
+/* ---------- Embedded fallback data ----------
+   Used only if the live CSVs cannot be fetched. Benchmarks are the full
+   Q3 2026 table; jurisdictions are a sample of 8 (the live file has 69). */
+const FALLBACK_BENCHMARKS = [
+  { phase: "Soft costs", inland: [22000, 26000, 34000], coastal: [34000, 42000, 55000] },
+  { phase: "Site work + foundation", inland: [28000, 34000, 50000], coastal: [40000, 48000, 70000] },
+  { phase: "Framing + structure", inland: [38000, 44000, 52000], coastal: [48000, 56000, 68000] },
+  { phase: "Building envelope", inland: [32000, 38000, 46000], coastal: [42000, 50000, 62000] },
+  { phase: "Systems + interior", inland: [128000, 145000, 168000], coastal: [145000, 162000, 190000] },
+  { phase: "Landscaping + hardscape", inland: [10000, 13000, 18000], coastal: [16000, 22000, 32000] },
+  { phase: "Total (800 sf mid-grade model)", inland: [258000, 300000, 368000], coastal: [325000, 380000, 477000] },
+];
+const FALLBACK_JURISDICTIONS = [
+  { jurisdiction: "Anaheim", county: "Orange", school_fee_per_sqft: 5.38, school_fee_800sqft: 4304, verified_fees_800sqft: 26865, impact_fees_at_751sqft: 19521, verified_line_items: 4 },
+  { jurisdiction: "Burbank", county: "Los Angeles", school_fee_per_sqft: null, school_fee_800sqft: null, verified_fees_800sqft: 11951, impact_fees_at_751sqft: 7078, verified_line_items: 4 },
+  { jurisdiction: "Fullerton", county: "Orange", school_fee_per_sqft: 5.38, school_fee_800sqft: 4304, verified_fees_800sqft: 6836, impact_fees_at_751sqft: 0, verified_line_items: 4 },
+  { jurisdiction: "Oakland", county: "Alameda", school_fee_per_sqft: 5.17, school_fee_800sqft: 4136, verified_fees_800sqft: 4136, impact_fees_at_751sqft: 0, verified_line_items: 3 },
+  { jurisdiction: "Palo Alto", county: "Santa Clara", school_fee_per_sqft: 4.79, school_fee_800sqft: 3832, verified_fees_800sqft: 3832, impact_fees_at_751sqft: 0, verified_line_items: 1 },
+  { jurisdiction: "Sacramento", county: "Sacramento", school_fee_per_sqft: 5.13, school_fee_800sqft: 4104, verified_fees_800sqft: 4104, impact_fees_at_751sqft: 0, verified_line_items: 1 },
+  { jurisdiction: "San Diego County (unincorporated)", county: "San Diego", school_fee_per_sqft: null, school_fee_800sqft: null, verified_fees_800sqft: null, impact_fees_at_751sqft: null, verified_line_items: 0 },
+  { jurisdiction: "Los Angeles", county: "Los Angeles", school_fee_per_sqft: 5.38, school_fee_800sqft: 4304, verified_fees_800sqft: 4304, impact_fees_at_751sqft: 0, verified_line_items: 1 },
+];
+/* Jurisdiction name -> /fees/ slug. Generated from src/data/fees.json
+   (main 17be6d7, 2026-11-05): slug is the lowercased juris_id. */
+const JURIS_SLUGS = {
+ "Alameda (city)": "alameda-city",
+ "Alameda County (unincorporated)": "alameda-county",
+ "Anaheim": "anaheim",
+ "Arcadia": "arcadia",
+ "Bakersfield": "bakersfield",
+ "Baldwin Park": "baldwin-park",
+ "Berkeley": "berkeley",
+ "Burbank": "burbank",
+ "Coachella": "coachella",
+ "Contra Costa County (unincorporated)": "contra-costa-county",
+ "Costa Mesa": "costa-mesa",
+ "Culver City": "culver-city",
+ "Davis": "davis",
+ "El Monte": "el-monte",
+ "Encinitas": "encinitas",
+ "Escondido": "escondido",
+ "Fountain Valley": "fountain-valley",
+ "Fullerton": "fullerton",
+ "Garden Grove": "garden-grove",
+ "Glendale": "glendale",
+ "Hayward": "hayward",
+ "Huntington Beach": "huntington-beach",
+ "La Habra": "la-habra",
+ "La Mesa": "la-mesa",
+ "Livermore": "livermore",
+ "Long Beach": "long-beach",
+ "Los Altos": "los-altos",
+ "Los Gatos": "los-gatos",
+ "Lynwood": "lynwood",
+ "Menlo Park": "menlo-park",
+ "Modesto": "modesto",
+ "Monterey": "monterey",
+ "Monterey Park": "monterey-park",
+ "Oakland": "oakland",
+ "Orange (city)": "orange",
+ "Pacifica": "pacifica",
+ "Palm Springs": "palm-springs",
+ "Palmdale": "palmdale",
+ "Palo Alto": "palo-alto",
+ "Piedmont": "piedmont",
+ "Placer County (unincorporated)": "placer-county",
+ "Rancho Cucamonga": "rancho-cucamonga",
+ "Redwood City": "redwood-city",
+ "Richmond": "richmond",
+ "Riverside": "riverside",
+ "Riverside County (unincorporated)": "riverside-county",
+ "Sacramento": "sacramento",
+ "Sacramento County (unincorporated)": "sacramento-county",
+ "San Bernardino County (unincorporated)": "san-bernardino-county",
+ "San Diego County (unincorporated)": "sd-county",
+ "San Francisco": "sf",
+ "San José": "san-jose",
+ "San Luis Obispo": "san-luis-obispo",
+ "San Luis Obispo County": "san-luis-obispo-county",
+ "San Mateo": "san-mateo",
+ "Santa Barbara County (unincorporated)": "santa-barbara-county",
+ "Santa Clara County (unincorporated)": "santa-clara-county",
+ "Santa Cruz": "santa-cruz",
+ "Santa Cruz County (unincorporated)": "santa-cruz-county",
+ "Santa Maria": "santa-maria",
+ "Simi Valley": "simi-valley",
+ "Sonoma County (unincorporated)": "sonoma-county",
+ "Temple City": "temple-city",
+ "Thousand Oaks": "thousand-oaks",
+ "Torrance": "torrance",
+ "Tracy": "tracy",
+ "Ventura County (unincorporated)": "ventura-county",
+ "Vista": "vista",
+ "Whittier": "whittier"
+};
+
+/* Sample bid (also available with ?sample=1). Built to exercise the flags:
+   no utility-connection line, no priced government-fee line, a TBD permit
+   line, an allowance, a by-owner line, and four stages below range. */
+const SAMPLE_BID = [
+  "Architectural plans and Title 24 — $8,500",
+  "Permit fees — TBD",
+  "Excavation and grading — $12,000",
+  "Concrete foundation and slab — $28,000",
+  "Framing lumber and labor — $42,000",
+  "Roofing and windows — $30,000",
+  "Electrical rough-in — $18,000",
+  "Plumbing and fixtures — $22,000",
+  "HVAC mini-split — $9,500",
+  "Drywall, paint, flooring — $31,000",
+  "Cabinets and countertops — $14,000",
+  "Landscaping allowance — $4,000",
+  "Owner to provide appliances",
+].join("\n");
+
+/* ---------- Helpers ---------- */
+const $ = (id) => document.getElementById(id);
+const money = (n) => "$" + Math.round(n).toLocaleString("en-US");
+const num = (v) => {
+  const n = parseFloat(String(v ?? "").replace(/[^0-9.]/g, ""));
+  return Number.isFinite(n) ? n : 0;
+};
+const esc = (s) =>
+  String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
+/* Minimal CSV parser (handles quoted fields and commas inside quotes). */
+function parseCSV(text) {
+  const rows = [];
+  let cur = [""], inQ = false, field = "";
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (inQ) {
+      if (c === '"') {
+        if (text[i + 1] === '"') { field += '"'; i++; } else { inQ = false; }
+      } else { field += c; }
+    } else if (c === '"') { inQ = true; }
+    else if (c === ",") { cur.push(field); field = ""; }
+    else if (c === "\n" || c === "\r") {
+      if (c === "\r" && text[i + 1] === "\n") i++;
+      cur.push(field); field = "";
+      if (cur.some((x) => x.trim() !== "")) rows.push(cur);
+      cur = [""];
+    } else { field += c; }
+  }
+  if (field !== "" || cur.length > 1) { cur.push(field); rows.push(cur); }
+  if (!rows.length) return [];
+  const head = rows[0].map((h) => h.trim());
+  return rows.slice(1).map((r) => Object.fromEntries(head.map((h, i) => [h, (r[i] ?? "").trim()])));
+}
+
+/* Benchmark CSV -> { soft: {inland:[lo,med,hi], coastal:[...]}, ... , total: {...} } */
+function parseBenchmarks(rows) {
+  const out = {};
+  for (const r of rows) {
+    const stage = STAGES.find((s) => s.csv === (r.Phase || "").trim());
+    if (stage) {
+      out[stage.key] = {
+        inland: [num(r["Inland SoCal low"]), num(r["Inland median"]), num(r["Inland high"])],
+        coastal: [num(r["Coastal low"]), num(r["Coastal median"]), num(r["Coastal high"])],
+      };
+    } else if ((r.Phase || "").indexOf("Total") === 0) {
+      out.total = {
+        inland: [num(r["Inland SoCal low"]), num(r["Inland median"]), num(r["Inland high"])],
+        coastal: [num(r["Coastal low"]), num(r["Coastal median"]), num(r["Coastal high"])],
+      };
+    }
+  }
+  return out;
+}
+function fallbackBenchmarks() {
+  const out = {};
+  for (const b of FALLBACK_BENCHMARKS) {
+    const stage = STAGES.find((s) => s.csv === b.phase);
+    if (stage) out[stage.key] = { inland: b.inland, coastal: b.coastal };
+    else if (b.phase.indexOf("Total") === 0) out.total = { inland: b.inland, coastal: b.coastal };
+  }
+  return out;
+}
+function parseJurisdictions(rows) {
+  return rows
+    .map((r) => ({
+      jurisdiction: r.jurisdiction || "",
+      county: r.county || "",
+      school_fee_per_sqft: r.school_fee_per_sqft === "" ? null : num(r.school_fee_per_sqft),
+      school_fee_800sqft: r.school_fee_800sqft === "" ? null : num(r.school_fee_800sqft),
+      verified_fees_800sqft: r.verified_fees_800sqft === "" ? null : num(r.verified_fees_800sqft),
+      impact_fees_at_751sqft: r.impact_fees_at_751sqft === "" ? null : num(r.impact_fees_at_751sqft),
+      verified_line_items: num(r.verified_line_items),
+    }))
+    .filter((j) => j.jurisdiction);
+}
+
+/* ---------- Amount + classification ---------- */
+/* Amounts need a $ sign, a comma, or cents. A bare number (2026) is not money. */
+const AMOUNT_RE = /\$\s*(\d[\d,]*\.?\d*)|(\d{1,3}(?:,\d{3})+(?:\.\d{2})?)|(\d+\.\d{2})/g;
+function parseAmount(text) {
+  let m, last = null;
+  AMOUNT_RE.lastIndex = 0;
+  while ((m = AMOUNT_RE.exec(text)) !== null) {
+    const raw = (m[1] || m[2] || m[3] || "").replace(/,/g, "");
+    const v = parseFloat(raw);
+    if (Number.isFinite(v)) last = v;
+  }
+  return last;
+}
+function keywordRe(kw) {
+  const e = kw.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return new RegExp("\\b" + e + "(?:s|es)?\\b", "i");
+}
+function classifyLine(text) {
+  const scores = {};
+  for (const s of STAGES) {
+    let score = 0;
+    for (const [kw, w] of CONFIG[s.key]) {
+      if (keywordRe(kw).test(text)) score += w;
+    }
+    scores[s.key] = score;
+  }
+  let best = null, bestScore = 0;
+  for (const s of STAGES) {
+    if (scores[s.key] > bestScore) { best = s.key; bestScore = scores[s.key]; }
+  }
+  return best; /* null = no keyword match -> Unclassified */
+}
+function wordingMatches(text) {
+  return WORDING_FLAGS.filter((f) => f.re.test(text)).map((f) => f.label);
+}
+function isFeeLine(text) {
+  return FEE_WORDS.some((w) => keywordRe(w).test(text));
+}
+function hasUtility(text) {
+  const t = text.toLowerCase();
+  return UTILITY_WORDS.some((w) => t.includes(w));
+}
+
+/* Parse pasted text into lines. Lines without an amount are kept as
+   unparsed — never silently dropped. */
+function parseBidText(text) {
+  const lines = [], unparsed = [];
+  for (const raw of text.split(/\r?\n/)) {
+    const line = raw.trim();
+    if (!line) continue;
+    const amount = parseAmount(line);
+    if (amount === null || amount <= 0) {
+      unparsed.push({ text: line, wording: wordingMatches(line), fee: isFeeLine(line), utility: hasUtility(line) });
+    } else {
+      lines.push({
+        text: line, amount,
+        stage: classifyLine(line),
+        wording: wordingMatches(line),
+        fee: isFeeLine(line),
+        utility: hasUtility(line),
+      });
+    }
+  }
+  return { lines, unparsed };
+}
+
+/* ---------- Fee estimate (rule 4) ----------
+   Verified-fee estimate for an ADU of `size` sq ft, modeled from the
+   Q3 2026 fee index row for one jurisdiction:
+   - school fees: $0 under 500 sq ft (Gov. Code 66311.5 deeming), else the
+     per-sq-ft rate times size;
+   - impact fees: $0 at 750 sq ft or less, else the 751 sq ft cliff amount;
+   - all other verified fees: the verified 800 sq ft total minus the school
+     and impact parts, taken as-is. Returns null if the row has no verified
+     total. This is a modeled estimate, not a city quote. */
+function verifiedFeeEstimate(jur, size) {
+  if (!jur || jur.verified_fees_800sqft === null || jur.verified_fees_800sqft === undefined) return null;
+  const perSqft = jur.school_fee_per_sqft || 0;
+  const school = size < 500 ? 0 : perSqft * size;
+  const impact = size <= 750 ? 0 : (jur.impact_fees_at_751sqft || 0);
+  const other = Math.max(0,
+    (jur.verified_fees_800sqft || 0) - (jur.school_fee_800sqft || 0) - (jur.impact_fees_at_751sqft || 0));
+  return { school, impact, other, total: school + impact + other };
+}
+
+/* ---------- Scan: flags + questions ---------- */
+function computeScan(lines, unparsed, opts) {
+  const { region, size, jurisName, benchmarks, jurisdictions } = opts;
+  const totals = {};
+  for (const s of STAGES) totals[s.key] = 0;
+  let unclassifiedTotal = 0;
+  for (const l of lines) {
+    if (l.stage && totals[l.stage] !== undefined) totals[l.stage] += l.amount;
+    else unclassifiedTotal += l.amount;
+  }
+  const bidTotal = lines.reduce((a, l) => a + l.amount, 0);
+  const flags = [];
+  const questions = [];
+  const addFlag = (rule, text, question) => {
+    flags.push({ rule, text });
+    if (question && !questions.includes(question)) questions.push(question);
+  };
+
+  /* Rule 1 — missing stage, and missing utility connections. */
+  const stageHas = {};
+  for (const s of STAGES) stageHas[s.key] = lines.some((l) => l.stage === s.key);
+  const missingQ = {
+    soft: "Are permit, plan-check, and school fees included in this price, or will I pay them separately — and if separately, how much should I budget?",
+    site: "Does this price cover excavation, grading, and the foundation, or is site work priced later after a soils report?",
+    framing: "Is framing — lumber and labor — included, and what grade of lumber is assumed?",
+    envelope: "Does this cover roofing, windows, doors, siding, and insulation, and which products are specified?",
+    systems: "Does this cover electrical, plumbing, HVAC, drywall, flooring, and finishes — and to what finish level?",
+    landscaping: "Is landscaping, driveway, and walkway restoration included, or will the lot be left unfinished?",
+  };
+  for (const s of STAGES) {
+    if (!stageHas[s.key]) {
+      addFlag(1, "No " + s.label.toLowerCase() + " lines in this bid.", missingQ[s.key]);
+    }
+  }
+  const allText = lines.concat(unparsed).map((l) => l.text);
+  if (!allText.some((t) => hasUtility(t))) {
+    addFlag(1,
+      "No utility-connection line: no sewer, water, or electrical service connection appears in this bid.",
+      "How are sewer, water, and electrical service connections handled — are they in this bid, priced separately, or my responsibility? Ask for the connection cost in writing.");
+  }
+
+  /* Rule 2 — vague / owner-carried wording, per line. */
+  const wordingQ = (label, text, amount) => {
+    const ref = "the line \u201C" + text + "\u201D" + (amount ? " (" + money(amount) + ")" : "");
+    if (label === "allowance") return "The allowance on " + ref + " — what exactly does it cover, what happens if the real cost is higher, and who pays the difference?";
+    if (label === "TBD" || label === "TBC") return ref + " is listed as " + label + " — when will it be priced, and will the price change the contract total?";
+    if (label === "by owner" || label === "owner-supplied" || label === "owner to provide") return ref + " is by owner — what exactly must I supply or pay for, by when, and what happens if it is late?";
+    return ref + " is listed as " + label + " — what will it cost me separately, and who arranges it?";
+  };
+  for (const l of lines.concat(unparsed)) {
+    for (const w of (l.wording || [])) {
+      addFlag(2, "Line \u201C" + l.text + "\u201D is marked " + w + ".", wordingQ(w, l.text, l.amount || null));
+    }
+  }
+
+  /* Rule 3 — stage total outside the modeled range. */
+  for (const s of STAGES) {
+    if (!stageHas[s.key]) continue;
+    const r = benchmarks[s.key] && benchmarks[s.key][region];
+    if (!r) continue;
+    const [lo, med, hi] = r;
+    const t = totals[s.key];
+    const regionName = region === "coastal" ? "Coastal" : "Inland SoCal";
+    if (t > hi) {
+      addFlag(3, s.label + " totals " + money(t) + " — above the modeled range (" + money(lo) + "–" + money(hi) + ", median " + money(med) + ") for " + regionName + ".",
+        s.label + " totals " + money(t) + ", above our modeled range of " + money(lo) + "–" + money(hi) + ". What drives the difference — scope, site conditions, or materials?");
+    } else if (t < lo) {
+      addFlag(3, s.label + " totals " + money(t) + " — below the modeled range (" + money(lo) + "–" + money(hi) + ", median " + money(med) + ") for " + regionName + ".",
+        s.label + " totals " + money(t) + ", below our modeled range of " + money(lo) + "–" + money(hi) + ". What is not included at this price?");
+    }
+  }
+
+  /* Rule 4 — government fees. */
+  const feeLines = lines.filter((l) => l.fee);
+  const bidGov = feeLines.reduce((a, l) => a + l.amount, 0);
+  const feeLinesNoAmount = unparsed.filter((u) => u.fee);
+  for (const u of feeLinesNoAmount) {
+    addFlag(4, "Fee line \u201C" + u.text + "\u201D has no amount.",
+      "The fee line \u201C" + u.text + "\u201D has no amount — how much should I budget for it?");
+  }
+  let feeEstimate = null, juris = null;
+  if (jurisName) {
+    juris = (jurisdictions || []).find((j) => j.jurisdiction === jurisName) || null;
+    if (juris) feeEstimate = verifiedFeeEstimate(juris, size);
+  }
+  if (feeLines.length === 0 && feeLinesNoAmount.length === 0) {
+    addFlag(4, "No government fees appear in this bid — no permit, plan-check, school, or impact fee lines.",
+      "Which permit and impact fees will I owe, and can you list them line by line so I can check them against the city's fee schedule?");
+  } else if (feeEstimate) {
+    const diff = bidGov - feeEstimate.total;
+    if (Math.abs(diff) > Math.max(1000, 0.5 * feeEstimate.total)) {
+      const dir = diff > 0 ? "above" : "below";
+      addFlag(4, "Government fees in this bid total " + money(bidGov) + ", but verified fees for " + jurisName + " at " + size + " sq ft are about " + money(feeEstimate.total) + " — " + money(Math.abs(diff)) + " " + dir + " the verified estimate.",
+        "Your bid lists " + money(bidGov) + " in government fees, but the verified total for " + jurisName + " is about " + money(feeEstimate.total) + ". Can you itemize each fee so we can check it against the city's fee schedule?");
+    }
+  }
+
+  return { totals, unclassifiedTotal, bidTotal, flags, questions, bidGov, feeEstimate, juris };
+}
+
+/* ---------- Page state + rendering (browser only) ---------- */
+const state = {
+  benchmarks: fallbackBenchmarks(),
+  jurisdictions: FALLBACK_JURISDICTIONS.slice(),
+  usingFallback: false,
+  fallbackNote: "",
+  lines: [],
+  unparsed: [],
+  scanned: false,
+};
+
+async function loadData() {
+  const notice = $("data-notice");
+  let benchOk = false, jurisOk = false;
+  try {
+    const res = await fetch("/downloads/adu-benchmark-ranges-2026-q3.csv");
+    if (!res.ok) throw new Error("benchmark CSV " + res.status);
+    const rows = parseCSV(await res.text());
+    const b = parseBenchmarks(rows);
+    if (STAGES.every((s) => b[s.key])) { state.benchmarks = b; benchOk = true; }
+  } catch (e) { /* fall back to embedded table */ }
+  try {
+    const res = await fetch("/downloads/adu-fee-index-2026-q3.csv");
+    if (!res.ok) throw new Error("fee CSV " + res.status);
+    const rows = parseCSV(await res.text());
+    const j = parseJurisdictions(rows);
+    if (j.length >= 10) { state.jurisdictions = j; jurisOk = true; }
+  } catch (e) { /* fall back to embedded sample */ }
+  state.usingFallback = !(benchOk && jurisOk);
+  if (state.usingFallback) {
+    const missing = [!benchOk ? "benchmark ranges" : null, !jurisOk ? "fee index" : null].filter(Boolean).join(" and ");
+    state.fallbackNote = "Could not load the live " + missing + " — showing built-in sample data instead. Check the CSV links at the bottom of the page.";
+    notice.textContent = state.fallbackNote;
+    notice.classList.remove("hidden");
+  } else {
+    notice.classList.add("hidden");
+  }
+  populateJurisdictions();
+}
+
+function populateJurisdictions() {
+  const sel = $("jurisdiction-select");
+  const current = sel.value;
+  sel.querySelectorAll("option:not([value=''])").forEach((o) => o.remove());
+  for (const j of state.jurisdictions) {
+    const o = document.createElement("option");
+    o.value = j.jurisdiction;
+    o.textContent = j.jurisdiction + (j.county ? " (" + j.county + " County)" : "");
+    sel.appendChild(o);
+  }
+  if (current && state.jurisdictions.some((j) => j.jurisdiction === current)) sel.value = current;
+}
+
+function currentOpts() {
+  return {
+    region: $("region-select").value,
+    size: Math.max(100, Math.min(2000, parseInt($("size-input").value, 10) || 800)),
+    jurisName: $("jurisdiction-select").value || "",
+    benchmarks: state.benchmarks,
+    jurisdictions: state.jurisdictions,
+  };
+}
+
+function renderLines() {
+  const body = $("lines-body");
+  body.innerHTML = "";
+  $("lines-count").textContent = "(" + state.lines.length + " priced lines)";
+  state.lines.forEach((l, idx) => {
+    const tr = document.createElement("tr");
+    const tdText = document.createElement("td");
+    tdText.className = "line-text";
+    tdText.textContent = l.text;
+    if (l.wording.length) {
+      const pill = document.createElement("span");
+      pill.className = "pill warn";
+      pill.textContent = l.wording.join(", ");
+      tdText.appendChild(document.createTextNode(" "));
+      tdText.appendChild(pill);
+    }
+    const tdAmt = document.createElement("td");
+    tdAmt.className = "num";
+    tdAmt.textContent = money(l.amount);
+    const tdStage = document.createElement("td");
+    const sel = document.createElement("select");
+    sel.setAttribute("aria-label", "Stage for line " + (idx + 1));
+    const opt0 = document.createElement("option");
+    opt0.value = "";
+    opt0.textContent = "Unclassified";
+    sel.appendChild(opt0);
+    for (const s of STAGES) {
+      const o = document.createElement("option");
+      o.value = s.key;
+      o.textContent = s.label;
+      sel.appendChild(o);
+    }
+    sel.value = l.stage || "";
+    sel.addEventListener("change", () => {
+      l.stage = sel.value || null;
+      renderResults();
+    });
+    tdStage.appendChild(sel);
+    const tdRm = document.createElement("td");
+    const rm = document.createElement("button");
+    rm.type = "button";
+    rm.className = "secondary";
+    rm.textContent = "Remove";
+    rm.addEventListener("click", () => {
+      state.lines.splice(idx, 1);
+      renderLines();
+      renderResults();
+    });
+    tdRm.appendChild(rm);
+    tr.appendChild(tdText); tr.appendChild(tdAmt); tr.appendChild(tdStage); tr.appendChild(tdRm);
+    body.appendChild(tr);
+  });
+  const up = $("unparsed-box");
+  if (state.unparsed.length) {
+    up.classList.remove("hidden");
+    const ul = $("unparsed-list");
+    ul.innerHTML = "";
+    for (const u of state.unparsed) {
+      const li = document.createElement("li");
+      li.textContent = u.text + (u.wording.length ? "  [" + u.wording.join(", ") + "]" : "");
+      ul.appendChild(li);
+    }
+  } else {
+    up.classList.add("hidden");
+  }
+}
+
+function renderResults() {
+  const res = computeScan(state.lines, state.unparsed, currentOpts());
+  const opts = currentOpts();
+  const bars = $("stage-bars");
+  bars.innerHTML = "";
+  for (const s of STAGES) {
+    const r = state.benchmarks[s.key] && state.benchmarks[s.key][opts.region];
+    const t = res.totals[s.key];
+    const has = state.lines.some((l) => l.stage === s.key);
+    const row = document.createElement("div");
+    row.className = "bar-row";
+    const head = document.createElement("div");
+    head.className = "bar-head";
+    const name = document.createElement("span");
+    name.innerHTML = "<strong>" + esc(s.label) + "</strong> ";
+    const pill = document.createElement("span");
+    if (!has) { pill.className = "pill flag"; pill.textContent = "Missing"; }
+    else if (r && t > r[2]) { pill.className = "pill flag"; pill.textContent = "Above range"; }
+    else if (r && t < r[0]) { pill.className = "pill flag"; pill.textContent = "Below range"; }
+    else { pill.className = "pill ok"; pill.textContent = "In range"; }
+    name.appendChild(pill);
+    const amt = document.createElement("span");
+    amt.className = "amt";
+    amt.textContent = money(t);
+    head.appendChild(name); head.appendChild(amt);
+    row.appendChild(head);
+    if (r) {
+      const [lo, med, hi] = r;
+      const scale = Math.max(hi, t, 1);
+      const track = document.createElement("div");
+      track.className = "track";
+      const band = document.createElement("div");
+      band.className = "range-band";
+      band.style.left = (lo / scale * 100) + "%";
+      band.style.width = ((hi - lo) / scale * 100) + "%";
+      const tick = document.createElement("div");
+      tick.className = "median-tick";
+      tick.style.left = (med / scale * 100) + "%";
+      const bar = document.createElement("div");
+      bar.className = "bid-bar" + (t > hi || t < lo ? " out" : "");
+      bar.style.width = Math.min(100, t / scale * 100) + "%";
+      track.appendChild(band); track.appendChild(tick); track.appendChild(bar);
+      row.appendChild(track);
+      const sc = document.createElement("div");
+      sc.className = "bar-scale";
+      sc.textContent = "Modeled range " + money(lo) + "–" + money(hi) + " (median " + money(med) + ") · " + (opts.region === "coastal" ? "Coastal" : "Inland SoCal") + " · shaded band is the range, the line is the median, the bar is your bid.";
+      row.appendChild(sc);
+    }
+    bars.appendChild(row);
+  }
+  if (res.unclassifiedTotal > 0) {
+    const p = document.createElement("p");
+    p.className = "small";
+    p.textContent = "Unclassified lines total " + money(res.unclassifiedTotal) + " — place them with the dropdowns above so the stage bars are complete.";
+    bars.appendChild(p);
+  }
+  $("bid-total").textContent = money(res.bidTotal);
+  const tot = state.benchmarks.total && state.benchmarks.total[opts.region];
+  $("total-range").textContent = tot ? money(tot[0]) + " – " + money(tot[2]) + " (median " + money(tot[1]) + ")" : "—";
+
+  const gov = $("gov-fee-box");
+  if (!opts.jurisName) {
+    gov.textContent = "Government fees in this bid: " + money(res.bidGov) + ". Select a jurisdiction above to compare with verified fees.";
+  } else if (res.feeEstimate) {
+    const e = res.feeEstimate;
+    gov.textContent = "Government fees in this bid: " + money(res.bidGov) + ". Verified estimate for " + opts.jurisName + " at " + opts.size + " sq ft: about " + money(e.total) +
+      " (school " + money(e.school) + " + impact " + money(e.impact) + " + other verified " + money(e.other) + "). Difference: " + money(res.bidGov - e.total) + ".";
+  } else {
+    gov.textContent = "Government fees in this bid: " + money(res.bidGov) + ". No verified fee total in the index for " + opts.jurisName + " — check the city's fee schedule directly.";
+  }
+
+  const flagsList = $("flags-list");
+  flagsList.innerHTML = "";
+  $("flags-count").textContent = res.flags.length + (res.flags.length === 1 ? " flag" : " flags");
+  $("flags-count").className = "pill " + (res.flags.length ? "flag" : "ok");
+  if (!res.flags.length) {
+    const li = document.createElement("li");
+    li.textContent = "No red flags. That does not mean the bid is cheap — it means every stage is present, in range, and free of vague wording.";
+    flagsList.appendChild(li);
+  }
+  for (const f of res.flags) {
+    const li = document.createElement("li");
+    li.textContent = f.text;
+    flagsList.appendChild(li);
+  }
+  const qList = $("questions-list");
+  qList.innerHTML = "";
+  if (!res.questions.length) {
+    const li = document.createElement("li");
+    li.textContent = "Nothing flagged — still worth asking what is excluded and when the price is fixed.";
+    qList.appendChild(li);
+  }
+  for (const q of res.questions) {
+    const li = document.createElement("li");
+    li.textContent = q;
+    qList.appendChild(li);
+  }
+
+  const feeItem = $("fee-page-item");
+  const slug = opts.jurisName && JURIS_SLUGS[opts.jurisName];
+  if (slug) {
+    feeItem.classList.remove("hidden");
+    const link = $("fee-page-link");
+    link.href = "/fees/" + slug + "/";
+    link.textContent = "Verified fees for " + opts.jurisName + " — /fees/" + slug + "/";
+    $("fee-link-slot").innerHTML = "";
+    const a = document.createElement("a");
+    a.href = "/fees/" + slug + "/";
+    a.textContent = "See verified fees for " + opts.jurisName;
+    $("fee-link-slot").appendChild(a);
+  } else {
+    feeItem.classList.add("hidden");
+    $("fee-link-slot").innerHTML = "";
+  }
+  $("results-section").classList.remove("hidden");
+}
+
+function scan() {
+  const parsed = parseBidText($("bid-input").value);
+  state.lines = parsed.lines;
+  state.unparsed = parsed.unparsed;
+  state.scanned = true;
+  const sec = $("lines-section");
+  sec.classList.remove("hidden");
+  if (!state.lines.length && !state.unparsed.length) {
+    $("lines-body").innerHTML = "<tr><td colspan=\"4\">No lines found — paste a bid first.</td></tr>";
+    $("results-section").classList.add("hidden");
+    $("bid-input").focus();
+    return;
+  }
+  renderLines();
+  renderResults();
+}
+
+function summaryText() {
+  const res = computeScan(state.lines, state.unparsed, currentOpts());
+  const opts = currentOpts();
+  const out = ["Every Line Item — Bid Scanner summary"];
+  out.push("Region: " + (opts.region === "coastal" ? "Coastal" : "Inland SoCal") + " · ADU size: " + opts.size + " sq ft" + (opts.jurisName ? " · Jurisdiction: " + opts.jurisName : ""));
+  out.push("");
+  for (const s of STAGES) {
+    const r = state.benchmarks[s.key] && state.benchmarks[s.key][opts.region];
+    out.push(s.label + ": " + money(res.totals[s.key]) + (r ? " (modeled range " + money(r[0]) + "–" + money(r[2]) + ")" : ""));
+  }
+  out.push("Bid total: " + money(res.bidTotal));
+  out.push("Government fees in bid: " + money(res.bidGov) + (res.feeEstimate ? " · verified estimate: about " + money(res.feeEstimate.total) : ""));
+  out.push("");
+  out.push("Red flags (" + res.flags.length + "):");
+  for (const f of res.flags) out.push("- " + f.text);
+  out.push("");
+  out.push("Questions to ask your contractor:");
+  for (const q of res.questions) out.push("- " + q);
+  out.push("");
+  out.push("Construction ranges are modeled, not quotes. This scanner flags questions — it does not judge a contractor.");
+  return out.join("\n");
+}
+
+/* Exposed for automated testing (no DOM needed for these). */
+if (typeof window !== "undefined") {
+  window.BidScanner = {
+    parseBidText, classifyLine, parseAmount, computeScan, parseCSV,
+    parseBenchmarks, parseJurisdictions, verifiedFeeEstimate,
+    STAGES, CONFIG, SAMPLE_BID, FALLBACK_BENCHMARKS, FALLBACK_JURISDICTIONS,
+  };
+}
+
+/* ---------- Init (browser only) ---------- */
+if (typeof document !== "undefined" && document.getElementById("bid-input")) {
+  const addStage = $("add-stage");
+  for (const s of STAGES) {
+    const o = document.createElement("option");
+    o.value = s.key;
+    o.textContent = s.label;
+    addStage.appendChild(o);
+  }
+  $("scan-btn").addEventListener("click", scan);
+  $("sample-btn").addEventListener("click", () => {
+    $("bid-input").value = SAMPLE_BID;
+    scan();
+  });
+  $("clear-btn").addEventListener("click", () => {
+    $("bid-input").value = "";
+    state.lines = [];
+    state.unparsed = [];
+    state.scanned = false;
+    $("lines-section").classList.add("hidden");
+    $("results-section").classList.add("hidden");
+    $("bid-input").focus();
+  });
+  $("add-line-btn").addEventListener("click", () => {
+    const text = $("add-text").value.trim();
+    const amount = parseFloat($("add-amount").value);
+    if (!text || !Number.isFinite(amount) || amount <= 0) return;
+    state.lines.push({
+      text: text + " — " + money(amount), amount,
+      stage: $("add-stage").value || classifyLine(text),
+      wording: wordingMatches(text), fee: isFeeLine(text), utility: hasUtility(text),
+    });
+    $("add-text").value = "";
+    $("add-amount").value = "";
+    $("lines-section").classList.remove("hidden");
+    renderLines();
+    renderResults();
+  });
+  $("region-select").addEventListener("change", () => { if (state.scanned) renderResults(); });
+  $("size-input").addEventListener("change", () => { if (state.scanned) renderResults(); });
+  $("jurisdiction-select").addEventListener("change", () => { if (state.scanned) renderResults(); });
+  $("copy-btn").addEventListener("click", async () => {
+    const text = summaryText();
+    try {
+      await navigator.clipboard.writeText(text);
+      $("copy-btn").textContent = "Copied";
+      setTimeout(() => { $("copy-btn").textContent = "Copy summary"; }, 2000);
+    } catch (e) {
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); $("copy-btn").textContent = "Copied"; } catch (e2) { /* clipboard unavailable */ }
+      document.body.removeChild(ta);
+      setTimeout(() => { $("copy-btn").textContent = "Copy summary"; }, 2000);
+    }
+  });
+  loadData();
+  if (typeof location !== "undefined" && /[?&]sample=1\b/.test(location.search)) {
+    $("bid-input").value = SAMPLE_BID;
+    scan();
+  }
+}
+</script>
+</body>
+</html>
