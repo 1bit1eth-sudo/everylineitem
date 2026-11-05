@@ -1,6 +1,15 @@
 {
   "entries": [
     {
+      "date": "2026-11-05",
+      "headline": "Clovis fee lines added from the Master Development Fee Schedule (14 items, amounts pending verification)",
+      "detail": "Clovis's Master Development Fee Schedule 2024-2025 (effective July 21, 2025) added 14 line items: six core development impact fees ($20,961/unit combined), Water Major Facilities density endpoints ($13,795 down to $5,655/unit), Major Street Fees by area ($115-$11,712/unit), and a Loma Vista-only Neighborhood Park Deposit ($6,127). All 14 are listed without figures until verification completes. The 750 sq ft cliff figure on fee pages now totals verified items only, so a page with no verified rows no longer shows a dollar total from unconfirmed lines. School fees not added: Clovis Unified posts two residential tiers ($5.38 vs $6.38/sq ft) and the ADU assignment is unresolved.",
+      "jurisdictions": [
+        "Clovis"
+      ],
+      "items_added": 14
+    },
+    {
       "date": "2026-11-04",
       "headline": "Campbell post corrected to FY 2027 schedule; CalHFA grant post added for December 18 slot",
       "detail": "Campbell post total moved ~$318,000 to ~$310,000: permit example corrected to $2,880 core + $254 add-ons (prior $3,529/$3,929 withdrawn, $649 remainder did not reconcile); impact fee now published at $9,328/unit cap (FY 2026 cap $9,129); schedule resolution corrected (#13333, not #13279); WVSD sewer figures marked [to verify] (current district schedule not located); CUSD mixed 500/750 sq ft wording flagged. New post on the CalHFA ADU Grant (closed since December 28, 2023, no new round posted as of November 4, 2026) added for the December 18 slot; December 19 remains open for the unpermitted-ADU legalization post (not written this session).",
