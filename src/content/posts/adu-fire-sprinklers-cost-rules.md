@@ -6,20 +6,20 @@ author: "Every Line Item"
 tags: ["adu cost", "fire sprinklers", "building code", "california", "2026"]
 draft: false
 verifiedPublished: "13 Nov 2026"
-lastVerified: "9 Oct 2026"
+lastVerified: "5 Nov 2026"
 nextReview: "Jan 2027"
 ogImage: "https://everylineitem.com/images/pinterest/adu-fire-sprinklers-cost-rules.png"
 faqs:
   - question: "Does my ADU need fire sprinklers in California?"
-    answer: "Apply the two-question test. (1) Is the primary dwelling equipped with fire sprinklers? If yes, the ADU needs them too — CAL FIRE's Information Bulletin 25-004 requires sprinklers in all ADUs, attached or detached, when the primary dwelling has a system. (2) Is the ADU newly constructed? The California Residential Code requires automatic sprinkler systems in all newly constructed one- and two-family dwellings, which includes a new detached ADU. If the answer to both is no — an older unsprinklered house plus a conversion ADU — sprinklers are generally not required."
+    answer: "Apply the two-question test. (1) Is the primary dwelling equipped with fire sprinklers? If yes, the ADU needs them too — CAL FIRE's Information Bulletin 25-004 requires sprinklers in all ADUs, attached or detached, when the primary dwelling has a system. (2) Is the ADU newly constructed? The California Residential Code requires automatic sprinkler systems in newly constructed one- and two-family dwellings — but Section R309.2 has an ADU exception: a detached ADU needs no sprinklers when all four conditions are met (it meets the state's ADU definition, the existing primary home has no sprinklers, the detached ADU is 1,200 sq ft or smaller, and it is on the same lot as the primary home). If any condition fails — for example, a detached ADU over 1,200 sq ft — new construction requires sprinklers. If the answer to both is no — an older unsprinklered house plus a conversion ADU — sprinklers are generally not required."
   - question: "Can building an ADU force me to install sprinklers in my existing house?"
-    answer: "No. State law is explicit: the addition of an ADU shall not trigger a requirement to install fire sprinklers in the existing primary dwelling. The City of San Rafael's ADU guidance states the same rule in the other direction — sprinklers cannot be required in an ADU if they are not required for the primary residence."
+    answer: "No. State law is explicit: the addition of an ADU shall not trigger a requirement to install fire sprinklers in the existing primary dwelling. The City of San Rafael's ADU guidance states the same rule in the other direction — sprinklers cannot be required in an ADU if they are not required for the primary residence. (That holds for alterations and for detached ADUs within the R309.2 exception; a new detached ADU over 1,200 sq ft can still require sprinklers.)"
   - question: "Do converted ADUs and JADUs need sprinklers?"
     answer: "Conversions and JADUs are treated as alterations, not new construction. The Residential Code's exception for additions and alterations to existing buildings that are not already sprinklered generally applies — unless the primary dwelling itself has sprinklers, in which case the ADU must match. Local amendments vary, so confirm with the local fire authority."
   - question: "How much does an NFPA 13D sprinkler system cost for an ADU?"
     answer: "Published ranges vary by source and by whether the system goes in during construction or as a retrofit. HomeAdvisor's 2025 cost data puts new-construction residential sprinklers at $0.50–$3 per square foot and retrofits at $2–$7. An NFPA Fire Protection Research Foundation study found an average of $1.61 per sprinklered square foot across a range of $0.38–$3.66, including design, installation, permits, and water tap and meter fees. California contractors quoted in industry press report $3–$4 per square foot for new buildings. These are national/industry figures, not ADU-specific bids — get a C-16 contractor quote for your project."
 ---
-> **Published:** 13 Nov 2026 · **Last verified:** 9 Oct 2026 · **Next review:** Jan 2027
+> **Published:** 13 Nov 2026 · **Last verified:** 5 Nov 2026 · **Next review:** Jan 2027
 > Cost figures are re-checked against official sources quarterly. Changes are
 > logged in [Corrections](/corrections/).
 
@@ -32,7 +32,7 @@ The controlling guidance is the CAL FIRE Office of the State Fire Marshal's [Inf
 1. **If the primary dwelling has sprinklers, the ADU gets sprinklers.** "All ADUs, attached or detached, require fire sprinklers if the primary dwelling is equipped with a fire sprinkler system." New detached ADU, attached addition, garage conversion, JADU — the configuration does not matter. Sprinklered house means sprinklered ADU.
 2. **An ADU can never force sprinklers into the existing house.** "The addition of an ADU shall not trigger fire sprinklers to be installed in the primary dwelling." This has been state law since SB 1069 (2016) and was reinforced by SB 897 (2022). San Rafael's [ADU guidance](https://www.cityofsanrafael.org/question/are-fire-sprinklers-required/) phrases the protection plainly: construction of an ADU cannot trigger a requirement that sprinklers be installed in the existing primary dwelling — and sprinklers cannot be required in an ADU if they are not required for the primary residence.
 
-The bulletin adds a third rule for new construction: automatic residential sprinkler systems are required in **all newly constructed dwellings**, including those built with an ADU. This mirrors the California Residential Code (R313.2), which requires sprinkler systems in newly constructed one- and two-family dwellings.
+The bulletin adds a third rule for new construction: automatic residential sprinkler systems are required in **newly constructed dwellings**. That mirrors the California Residential Code ([Section R309.2](https://up.codes/viewer/california/ca-residential-code-2025/chapter/3/building-planning#R309.2), formerly R313.2) — with one exception that matters for ADUs: a detached ADU needs no sprinklers when all four conditions are met (it meets the state's ADU definition under [Gov. Code §66313](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=66313.&lawCode=GOV), the existing primary home has no sprinklers, the detached ADU is 1,200 sq ft or smaller, and it sits on the same lot as the primary home). Fail any one condition and the new-construction rule applies.
 
 ## The decision table
 
@@ -41,7 +41,7 @@ Combine those rules and every common ADU configuration resolves:
 | Configuration | Primary home sprinklered? | ADU needs sprinklers? |
 | --- | --- | --- |
 | New detached ADU | Yes | **Yes** — matches the primary |
-| New detached ADU | No | **Yes** — it is new construction under CRC R313.2 |
+| New detached ADU | No | **No — if all four R309.2 conditions are met** (state-law ADU, unsprinklered primary, detached ADU ≤1,200 sq ft, same lot); **Yes if any condition fails** (e.g. over 1,200 sq ft) |
 | Attached ADU (addition) | Yes | **Yes** — matches the primary |
 | Attached ADU (addition) | No | **Usually no** — alteration exception for existing unsprinklered buildings |
 | Garage / interior conversion | Yes | **Yes** — matches the primary |
@@ -49,9 +49,9 @@ Combine those rules and every common ADU configuration resolves:
 | JADU (within the house) | Yes | **Yes** — matches the primary |
 | JADU (within the house) | No | **Usually no** — interior alteration |
 
-The asymmetry is the point: a new detached ADU is the only common configuration that can require sprinklers even when the primary home has none, because it counts as a newly constructed dwelling. Everything else follows the primary home's status.
+The asymmetry is narrower than it first looks: a new detached ADU is the only common configuration that can require sprinklers even when the primary home has none — and only when it falls outside the R309.2 exception (over 1,200 sq ft, attached, or otherwise failing one of the four conditions). A detached ADU that meets all four conditions needs no sprinklers despite being new construction. Everything else follows the primary home's status.
 
-Three caveats. First, **local amendments vary**: some cities layer their own exceptions on top of the state rules — Los Altos Hills, for example, exempts detached ADUs up to 1,200 square feet when the primary residence is unsprinklered, provided fire access and water supply requirements are met. Check your local fire authority's amendments before assuming the state default. Second, **Fire Hazard Severity Zones** can add requirements under the California Fire Code and Building Code (Chapter 7A) without restricting ADU development itself, per the bulletin. Third, the local authority having jurisdiction has the final word — the bulletin is guidance, and your fire department's interpretation governs your permit.
+Three caveats. First, **the 1,200 sq ft exception is state law, not a local favor**: it comes from the Residential Code itself ([R309.2, Exception 2](https://up.codes/viewer/california/ca-residential-code-2025/chapter/3/building-planning#R309.2)), so it applies statewide — Los Altos Hills' rule uses the same 1,200 sq ft threshold, with its own fire-access and water-supply conditions attached. Local amendments can still add requirements on top, so check your local fire authority's amendments before assuming the state default. Second, **Fire Hazard Severity Zones** can add requirements under the California Fire Code and Building Code (Chapter 7A) without restricting ADU development itself, per the bulletin. Third, the local authority having jurisdiction has the final word — the bulletin is guidance, and your fire department's interpretation governs your permit.
 
 ## The cost: published ranges, honestly labeled
 
@@ -67,7 +67,7 @@ The line items behind the range are worth knowing even without exact prices. Spr
 
 ## The honest bottom line
 
-For most California ADU projects, the sprinkler question is answered before you price anything: if your house was built before the sprinkler mandate and has no system, a conversion or attached ADU almost certainly needs none, and your new detached ADU needs one because it is new construction. Budget it from published ranges, get the C-16 quote early — the water meter question is the one that moves the number — and never let anyone tell you the ADU forces sprinklers into your existing house. State law says it cannot.
+For most California ADU projects, the sprinkler question is answered before you price anything: if your house was built before the sprinkler mandate and has no system, a conversion or attached ADU almost certainly needs none, and your new detached ADU needs one **only if it falls outside the [R309.2 exception](https://up.codes/viewer/california/ca-residential-code-2025/chapter/3/building-planning#R309.2)** — over 1,200 sq ft, attached, or failing any of the four conditions. A detached ADU that meets all four needs no sprinklers at all. Budget it from published ranges, get the C-16 quote early — the water meter question is the one that moves the number — and never let anyone tell you the ADU forces sprinklers into your existing house. State law says it cannot.
 
 ## Disclaimer
 
