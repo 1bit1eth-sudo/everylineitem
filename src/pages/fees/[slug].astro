@@ -75,12 +75,7 @@ const areaTotals = areaResults.map(({ area, result: r }) => {
 // change that is El Centro, Kern County, San Gabriel, South Pasadena,
 // Vacaville, Clovis, Diamond Bar, and La Puente. The condition lifts itself
 // when rows appear; there is no manual list to maintain.
-const noFeeRows =
-  (verifiedLines.length === 0 && pendingLines.length === 0) ||
-  // Temporary (2026-11-05): Clovis re-noindexed until the cliff/FAQ
-  // to_verify leak is fixed — its 14 to_verify rows lift the auto-noindex
-  // while the cliff box still totals them ($57,445). Remove with the fix.
-  juris.juris_id === "CLOVIS";
+const noFeeRows = verifiedLines.length === 0 && pendingLines.length === 0;
 const verifiedTotalLow = isAreaJuris
   ? Math.min(...areaTotals.map(t => t.low))
   : areaTotals[0].low;
@@ -91,15 +86,21 @@ const verifiedHasRange = isAreaJuris || areaTotals[0].hasRange;
 
 // The 750 sq ft cliff: impact fees at 751 sq ft vs $0 at 750 (state law).
 // For area jurisdictions the cliff is a range across areas.
+// Verified-only (2026-11-05): the cliff box and the FAQ both describe this
+// total as "the impact fees we have verified", so to_verify rows must not
+// enter it. Without this, a page with zero verified rows still showed a
+// dollar total (Clovis: $57,445 from 14 unconfirmed rows). With it, the
+// total is $0 when nothing is verified, showCliff goes false, and the cliff
+// box + the FAQ amount sentence hide themselves.
 const cliffByArea = isAreaJuris
   ? areas.map(a => ({
       area: a,
-      amount: calcJurisdiction(feesData as any, juris.juris_id, 751, { area: a }).impactLow,
+      amount: calcJurisdiction(feesData as any, juris.juris_id, 751, { area: a, verifiedOnly: true }).impactLow,
     }))
   : [];
 const cliffAmount = isAreaJuris
   ? Math.max(...cliffByArea.map(c => c.amount))
-  : calcJurisdiction(feesData as any, juris.juris_id, 751).impactLow;
+  : calcJurisdiction(feesData as any, juris.juris_id, 751, { verifiedOnly: true }).impactLow;
 const cliffLow = isAreaJuris
   ? Math.min(...cliffByArea.map(c => c.amount))
   : cliffAmount;
