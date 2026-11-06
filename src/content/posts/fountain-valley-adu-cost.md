@@ -34,7 +34,7 @@ faqs:
 
 > **DRAFT — not for publication until reviewed.**
 
-An 800 sq ft detached ADU in Fountain Valley costs at least **$305,301, or about $382 per square foot**, on verified figures alone — and anyone searching for Fountain Valley ADU fees will find that the city's own schedule never names an ADU at all. There is no ADU line, no ADU waiver, and no ADU surcharge in the FY 2026-27 schedule. What there is, instead, is a valuation table and a set of percentages, and this post is the arithmetic of applying them to an 800 sq ft unit. That is both the strength and the limit of the number: every dollar in it can be traced to a table cell, and every dollar that cannot be traced that way is left out.
+Fountain Valley's FY 2026-27 schedule never names an ADU at all — no ADU line, no ADU waiver, no ADU surcharge. The building permit is instead arithmetic from a valuation table: at the February 2026 ICC rate of $175.92 per square foot, an 800 sq ft unit values at $140,736 and lands in the $140,001–$141,000 band, giving $2,880.17 for permit, plan check, and issuance, plus $421.04 in planning add-ons. An 800 sq ft detached ADU here costs at least **$305,301, or about $382 per square foot**, on verified figures alone — every dollar traceable to a table cell, and every dollar that cannot be traced that way left out.
 
 ## The valuation table is the permit
 
