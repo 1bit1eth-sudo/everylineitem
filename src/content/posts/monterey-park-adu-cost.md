@@ -34,7 +34,7 @@ faqs:
 
 > **DRAFT — not for publication until reviewed.**
 
-An 800 sq ft detached ADU in Monterey Park costs at least **$312,117, or about $390 per square foot**, on verified figures alone — and it is the cleanest arithmetic in this batch. Anyone searching for Monterey Park ADU fees will find a permit table that does something rare in this series: it reproduces, to the dollar, the figure already stored in the fee database. The same schedule then splits the city four ways for school fees and leaves its impact-fee proration to state law rather than printing it. This post takes the clean number, shows its working, and refuses to pretend the split parts are equally clean.
+Monterey Park's permit table does something rare in this series: it reproduces, to the dollar, the figure already stored in the fee database — a building permit and plan check of **$5,162** on an 800 sq ft ADU. An 800 sq ft detached ADU here costs at least **$312,117, or about $390 per square foot**, on verified figures alone. The same schedule then splits the city four ways for school fees and leaves its impact-fee proration to state law rather than printing it. This post takes the clean number, shows its working, and refuses to pretend the split parts are equally clean.
 
 Monterey Park is the clearest illustration in this batch of why the split-district rule exists. Four districts, four fee schedules, one building counter that will not issue a permit until the district has been paid. There is no average district, no typical parcel, and no honest single number — so there is no school fee in the total.
 

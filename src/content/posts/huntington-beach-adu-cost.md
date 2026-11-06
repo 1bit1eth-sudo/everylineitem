@@ -34,7 +34,7 @@ faqs:
 
 > **DRAFT — not for publication until reviewed.**
 
-An 800 sq ft detached ADU in Huntington Beach costs at least **$307,431, or about $384 per square foot**, on verified figures alone — and anyone searching for Huntington Beach ADU fees will notice immediately that this city does something most cities in this series do not: it prices its impact fees for ADUs as their own lines, per unit, instead of forcing readers to prorate a single-family stack. The four-line ADU stack is $3,721, the sewer capacity block is $1,710, and everything else a budget normally needs — the permit, the plan check, the planning review, the school fee — is still blank. This post counts what the FY 2026/27 schedule actually prices for an ADU, and leaves the rest blank on purpose.
+Huntington Beach prices its ADU impact fees as their own lines, per unit, instead of making readers prorate a single-family stack: four dedicated "Accessory Dwelling per Unit" lines in the FY 2026/27 schedule total $3,721, and the parkland line alone is $3,224 — about 87% of the stack. The sewer charge follows a different rule entirely: Orange County Sanitation sells capacity in 1,000-square-foot blocks, so an 800 sq ft ADU occupies one full block and pays $1,710. An 800 sq ft detached ADU here costs at least **$307,431, or about $384 per square foot**, on verified figures alone — the permit, the plan check, the planning review, and the school fee still blank.
 
 ## The parkland line is the impact fee
 

@@ -34,7 +34,7 @@ faqs:
 
 > **DRAFT — not for publication until reviewed.**
 
-An 800 sq ft detached ADU in Piedmont costs at least **$310,293, or about $388 per square foot**, on verified figures alone — and anyone searching for Piedmont ADU fees will find the rarest combination in this series: a city that charges no impact fee whatsoever, paired with the largest permit bill this batch counts. The $8,293 permit total is not a flat fee the schedule states outright; it is eight lines, each derived from a valuation, a percentage, or a flat charge, that add up to a number no single schedule cell contains. This post shows every line, so the total can be checked rather than trusted.
+Piedmont charges no impact fee whatsoever — and pairs that zero with the largest permit bill this batch counts. An 800 sq ft detached ADU here costs at least **$310,293, or about $388 per square foot**, on verified figures alone, and the **$8,293** permit total is not a flat fee the schedule states outright; it is eight lines, each derived from a valuation, a percentage, or a flat charge, that add up to a number no single schedule cell contains. This post shows every line, so the total can be checked rather than trusted.
 
 ## The permit bill, line by line
 

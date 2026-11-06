@@ -29,7 +29,6 @@ export default defineAstroPaperConfig({
     search: "pagefind",
   },
   socials: [
-    { name: "github", url: "https://github.com/1bit1eth-sudo/everylineitem" },
     { name: "youtube", url: "https://www.youtube.com/@everylineitem-e5l" },
   ],
   shareLinks: [
