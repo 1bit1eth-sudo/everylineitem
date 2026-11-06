@@ -42,6 +42,16 @@ The most valuable messages we get are from contractors and estimators telling us
 
 ---
 
+### 6 November 2026 — Oceanside: $0 DIF exemption marked unconfirmed (after publication)
+
+**Changed:** The Oceanside post no longer presents the ordinance's $0 DIF as settled. The $0 is now marked **unconfirmed (6 Nov 2026)**: the city's ADU page no longer carries the waiver language this post captured in September 2025, and the city says information relying on the ADU ordinance (Article 30, Section 3006) is no longer applicable while it certifies the ordinance with HCD. The title now reads "The $0 Exemption, Unconfirmed"; the description, editor's note, first paragraph, FAQ, fee tables, and SB 1117 section carry the same status. The park fee the 2025 draft proposed is now an adopted schedule (single-family $6.03/sq ft, effective January 20, 2026, Resolution #25-R0669-1), with its ADU application marked not confirmed — the draft's up-to-$4,824 figure is now framed as the adopted schedule's figure if it applies to ADUs. Last verified advanced 22 Oct → 6 Nov 2026. The post's $313,000 total is unchanged (it was priced on the ordinance's $0), but the total now rests on an unconfirmed line. The post's ogImage still shows the previous title and needs a new image in the next design round.
+
+**Reason:** Live check of the city's ADU page on 6 November 2026 found the waiver language gone and an HCD certification notice in its place; the park schedule's adoption was confirmed from the city's official fee schedule PDF the same day.
+
+**Source:** [City of Oceanside ADU page](https://www.ci.oceanside.ca.us/government/development-services/planning/accessory-dwelling-unit-adu), [City of Oceanside Fee Schedule (parks revised effective January 20, 2026; Resolution #25-R0669-1)](https://www.oceansidelibrary.org/home/showpublisheddocument/10180/639171152084370000)
+
+---
+
 ### 5 November 2026 — ADU fire sprinklers: detached-ADU exception corrected (before publication)
 
 **Changed:** The sprinkler post's decision table flipped for the most common case: a new detached ADU with an unsprinklered primary home was **Yes** and is now **No — if all four R309.2 conditions are met** (state-law ADU, unsprinklered primary, detached ADU ≤1,200 sq ft, same lot); **Yes if any condition fails** (e.g. over 1,200 sq ft). The post previously cited CRC R313.2; the section is now **R309.2** in the 2025 California Residential Code, with the ADU exception stated in full and linked. The Los Altos Hills framing is corrected: the 1,200 sq ft exception is state law, not a local carve-out. FAQ #1 (the two-question test) and the bottom line now carry the same exception. The post is scheduled to publish 13 Nov 2026; the error was caught before publication. Last verified advanced 9 Oct → 5 Nov 2026 for the rule section; cost ranges are unchanged from the 9 Oct check.
