@@ -1,0 +1,192 @@
+---
+import feesData from "@/data/fees.json";
+import type { FeeData } from "@/lib/feeCalc";
+import {
+  summarizeSB1117,
+  fmtSpan,
+  realJurisdictions,
+  hasVerifiedRows,
+  daysUntilSB1117,
+} from "@/lib/sb1117Pages";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import LinkButton from "@/components/LinkButton.astro";
+
+const data = feesData as unknown as FeeData;
+const days = daysUntilSB1117();
+const inForce = days === 0;
+
+const rows = realJurisdictions(data)
+  .filter(j => hasVerifiedRows(data, j.juris_id))
+  .map(j => {
+    const s800 = summarizeSB1117(data, j.juris_id, 800);
+    const s1000 = summarizeSB1117(data, j.juris_id, 1000);
+    return { j, s800, s1000 };
+  })
+  .filter(r => r.s1000.hasImpactLines);
+
+const ranked = [...rows].sort(
+  (a, b) =>
+    b.s1000.savings.high - a.s1000.savings.high ||
+    b.s1000.uncertain.high - a.s1000.uncertain.high ||
+    b.s1000.current.high - a.s1000.current.high ||
+    a.j.name.localeCompare(b.j.name, "en-US")
+);
+const withSavings = ranked.filter(r => r.s1000.savings.high > 0);
+const top = withSavings[0];
+
+const title = "SB 1117 ADU Impact Fee Savings by City (2027)";
+const description = `How SB 1117 changes ADU impact fees on January 1, 2027 in ${rows.length} California cities and counties with verified impact-fee data. Ranked by savings at 1,000 sq ft, every figure sourced.`;
+
+const listSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: title,
+  itemListElement: withSavings.slice(0, 25).map((r, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    url: `https://everylineitem.com/sb-1117/${r.j.juris_id.toLowerCase()}/`,
+    name: `${r.j.name}: ${fmtSpan(r.s1000.savings)} less at 1,000 sq ft`,
+  })),
+};
+---
+
+<Layout title={title} description={description}>
+  <Fragment slot="head">
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={JSON.stringify(listSchema)}
+    />
+  </Fragment>
+  <Header />
+  <Breadcrumb />
+  <main id="main-content" class="app-layout pb-8">
+    <p class="font-mono text-sm tracking-wide uppercase opacity-60">
+      {
+        inForce
+          ? "SB 1117 · in effect since Jan 1, 2027"
+          : `SB 1117 · ${days} ${days === 1 ? "day" : "days"} until Jan 1, 2027`
+      }
+    </p>
+    <h1 class="my-4 text-3xl font-bold sm:text-4xl">
+      SB 1117 ADU Fee Savings, City by City
+    </h1>
+    <p class="text-lg opacity-80">
+      {inForce ? "Since" : "From"} January 1, 2027, impact fees on a homeowner's first
+      two ADUs apply only to the square footage above 750 — not the whole unit. How
+      much that moves depends entirely on how your city charges.
+      {
+        top && (
+          <>
+            {" "}
+            The biggest verified difference we have found at 1,000 sq ft is in{" "}
+            <a
+              class="text-accent underline decoration-dashed underline-offset-4"
+              href={`/sb-1117/${top.j.juris_id.toLowerCase()}/`}
+            >
+              {top.j.name}
+            </a>
+            : about {fmtSpan(top.s1000.savings)}.
+          </>
+        )
+      }
+    </p>
+    <p class="mt-3 text-sm opacity-70">
+      {rows.length} jurisdictions with verified impact-fee lines;
+      {" "}{withSavings.length} show a computable saving. Verified rows only, every
+      figure linked to its source on the city page. School, permit and utility fees
+      do not change.{" "}
+      <LinkButton
+        class="underline decoration-dashed underline-offset-4"
+        href="/methodology/">How we price &rarr;</LinkButton
+      >
+    </p>
+
+    <div class="mt-8 overflow-x-auto">
+      <table class="w-full border-collapse text-sm">
+        <thead>
+          <tr class="border-border border-b text-left">
+            <th class="py-2 pe-3 font-semibold">Jurisdiction</th>
+            <th class="py-2 pe-3 text-right font-semibold">Saving, 800 sq ft</th
+            >
+            <th class="py-2 pe-3 text-right font-semibold"
+              >Impact fees 2026, 1,000 sq ft</th
+            >
+            <th class="py-2 pe-3 text-right font-semibold">2027, 1,000 sq ft</th
+            >
+            <th class="py-2 text-right font-semibold">Saving, 1,000 sq ft</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            ranked.map(r => (
+              <tr class="border-border border-b">
+                <td class="py-2 pe-3">
+                  <a
+                    class="hover:text-accent font-medium underline decoration-dashed underline-offset-4"
+                    href={`/sb-1117/${r.j.juris_id.toLowerCase()}/`}
+                  >
+                    {r.j.name}
+                  </a>
+                  <span class="block text-xs opacity-50">
+                    {r.j.county} County
+                  </span>
+                </td>
+                <td class="py-2 pe-3 text-right tabular-nums">
+                  {r.s800.savings.high > 0 ? fmtSpan(r.s800.savings) : "$0"}
+                </td>
+                <td class="py-2 pe-3 text-right tabular-nums">
+                  {fmtSpan(r.s1000.current)}
+                </td>
+                <td class="py-2 pe-3 text-right tabular-nums">
+                  {fmtSpan(r.s1000.futureCarried)}
+                  {r.s1000.uncertain.high > 0 && "*"}
+                </td>
+                <td class="py-2 text-right font-bold tabular-nums">
+                  {r.s1000.savings.high > 0 ? fmtSpan(r.s1000.savings) : "$0"}
+                </td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-2 text-sm opacity-70">
+      * Has flat impact fees with no published conversion to the excess-area
+      rule. We carry those at their 2026 amount rather than guess, so the real
+      2027 figure could be lower. Dwelling-base flat fees are prorated
+      (ADU &divide; primary) assuming a 1,600 sq ft primary dwelling — an
+      assumption, not a verified figure. Ranges reflect fee ranges in the
+      source or, for cities with separate area schedules, the spread across
+      areas.
+    </p>
+
+    <div class="border-border mt-8 rounded-lg border px-4 py-3">
+      <p class="font-semibold">A fee comparison, not advice to wait</p>
+      <p class="mt-1 text-sm opacity-90">
+        Waiting for 2027 can cost money too: fee schedules reset each fiscal
+        year, construction prices move, and financing has a clock. SB 1117
+        covers a homeowner's first two ADUs and impact fees only.
+      </p>
+    </div>
+
+    <div class="mt-10 flex flex-wrap gap-3">
+      <LinkButton
+        href="/compare/#fee-calculator"
+        class="bg-accent rounded px-5 py-3 font-semibold text-white"
+      >
+        Calculate your exact size &rarr;
+      </LinkButton>
+      <LinkButton
+        href="/posts/sb-1117-explained-plain-english/"
+        class="border-border rounded border px-5 py-3 font-medium"
+      >
+        SB 1117 in plain English &rarr;
+      </LinkButton>
+    </div>
+  </main>
+  <Footer />
+</Layout>
