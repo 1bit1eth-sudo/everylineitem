@@ -1,0 +1,365 @@
+---
+import feesData from "@/data/fees.json";
+import { fmtRange, type FeeData } from "@/lib/feeCalc";
+import {
+  SB1117_SIZES,
+  summarizeSB1117,
+  fmtSpan,
+  realJurisdictions,
+  hasVerifiedRows,
+  daysUntilSB1117,
+} from "@/lib/sb1117Pages";
+import { formatVerified } from "@/utils/formatVerified";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import LinkButton from "@/components/LinkButton.astro";
+
+const data = feesData as unknown as FeeData;
+
+export async function getStaticPaths() {
+  const d = feesData as unknown as FeeData;
+  return realJurisdictions(d).map(j => ({
+    params: { slug: j.juris_id.toLowerCase() },
+    props: { juris: j },
+  }));
+}
+
+const { juris } = Astro.props;
+const slug = juris.juris_id.toLowerCase();
+const days = daysUntilSB1117();
+const inForce = days === 0;
+
+const summaries = SB1117_SIZES.map(s =>
+  summarizeSB1117(data, juris.juris_id, s)
+);
+const hasImpact = summaries.some(s => s.hasImpactLines);
+const verifiedAny = hasVerifiedRows(data, juris.juris_id);
+// Index only pages that say something specific: at least one verified
+// impact-fee row. Everything else is still built (internal links resolve)
+// but kept out of the index, like empty /fees/[slug] pages.
+// Also noindex when every verified impact line is $0 (e.g. a city-wide ADU
+// exemption): true, but too thin to stand as its own search result.
+const chargesImpact = summaries.some(s => s.current.high > 0);
+const noindex = !verifiedAny || !hasImpact || !chargesImpact;
+
+const detail = summaries.find(s => s.sqft === 1000)!;
+const s800 = summaries.find(s => s.sqft === 800)!;
+const isArea = detail.byArea.length > 0;
+const anyUncertain = summaries.some(s => s.uncertain.high > 0);
+const maxSavings = Math.max(...summaries.map(s => s.savings.high));
+
+const longTitle = `${juris.name} ADU Fees Under SB 1117: 2026 vs 2027`;
+const title =
+  longTitle.length <= 60
+    ? longTitle
+    : `${juris.name} SB 1117 ADU Fees`.length <= 60
+      ? `${juris.name} SB 1117 ADU Fees`
+      : `${juris.name} ADU Fees 2027`;
+
+const description = hasImpact
+  ? `How SB 1117 changes ADU impact fees in ${juris.name}, CA from January 1, 2027: ${fmtSpan(s800.current)} today vs ${fmtSpan(s800.futureCarried)} after for an 800 sq ft ADU. Verified fee lines, each linked to its official source.`
+  : `SB 1117 and ADU fees in ${juris.name}, CA: what changes on January 1, 2027, and what does not. Every figure links to its official source.`;
+
+const savingsSentence = (sqft: number) => {
+  const s = summaries.find(x => x.sqft === sqft)!;
+  if (!s.hasImpactLines)
+    return `No verified impact-fee lines are on file for ${juris.name}, so SB 1117 changes nothing we can compute.`;
+  if (s.savings.high > 0)
+    return `For ${sqft === 800 ? "an" : "a"} ${sqft.toLocaleString("en-US")} sq ft ADU, verified impact fees go from ${fmtSpan(s.current)} to ${fmtSpan(s.futureCarried)} — about ${fmtSpan(s.savings)} less.`;
+  if (s.uncertain.high > 0)
+    return `Computed savings at ${sqft.toLocaleString("en-US")} sq ft are $0, but ${fmtSpan(s.uncertain)} in flat impact fees has no published conversion yet, so the real change could be larger.`;
+  return `At ${sqft.toLocaleString("en-US")} sq ft, ${juris.name}'s verified impact fees do not change under SB 1117.`;
+};
+
+const faqs = [
+  {
+    q: `How much does SB 1117 save on ADU fees in ${juris.name}?`,
+    a: `${savingsSentence(800)} ${hasImpact ? savingsSentence(1000) : ""} Only impact fees change; school fees, permit fees and utility connection or capacity charges stay the same.`.trim(),
+  },
+  {
+    q: `Should I wait until January 2027 to pull an ADU permit in ${juris.name}?`,
+    a: `This page compares fees only. ${maxSavings > 0 ? `In ${juris.name} the verified impact-fee difference is up to ${fmtUSD0(maxSavings)} at the sizes shown.` : `In ${juris.name} we found no verified impact-fee difference at the sizes shown.`} Waiting also has costs — schedule changes, construction-price movement, financing — and SB 1117 applies to a homeowner's first two ADUs. Weigh both before deciding.`,
+  },
+  {
+    q: `Does SB 1117 change anything for ADUs of 750 sq ft or less?`,
+    a: `No. ADUs of 750 sq ft or less already owe $0 in impact fees under Gov. Code §66311.5. SB 1117 changes what happens above 750 sq ft: impact fees apply only to the square footage over 750 instead of the whole unit.`,
+  },
+];
+function fmtUSD0(n: number) {
+  return "$" + Math.round(n).toLocaleString("en-US");
+}
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map(f => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+---
+
+<Layout title={title} description={description} noindex={noindex}>
+  <Fragment slot="head">
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={JSON.stringify(faqSchema)}
+    />
+  </Fragment>
+  <Header />
+  <Breadcrumb />
+  <main id="main-content" class="app-layout pb-8" data-backUrl="/sb-1117/">
+    <p class="font-mono text-sm tracking-wide uppercase opacity-60">
+      {juris.county} County &middot; SB 1117 &middot;
+      {
+        inForce
+          ? " in effect since Jan 1, 2027"
+          : ` ${days} ${days === 1 ? "day" : "days"} until Jan 1, 2027`
+      }
+    </p>
+    <h1 class="my-4 text-3xl font-bold sm:text-4xl">
+      {juris.name} ADU Impact Fees: Before and After SB 1117
+    </h1>
+    <p class="text-lg opacity-80">
+      {
+        inForce ? (
+          <>
+            Since January 1, 2027, SB 1117 charges impact fees on a homeowner's
+            first two ADUs only for the square footage above 750. Here is what
+            that did to {juris.name}'s verified impact-fee lines.
+          </>
+        ) : (
+          <>
+            From January 1, 2027, SB 1117 charges impact fees on a homeowner's
+            first two ADUs only for the square footage above 750. Here is what
+            that does to {juris.name}'s verified impact-fee lines — permit in
+            2026 vs permit in 2027.
+          </>
+        )
+      }
+    </p>
+    <p class="mt-3 text-sm opacity-70">
+      Verified rows only; every line links to its official source.
+      {
+        juris.last_verified && (
+          <> Last verified {formatVerified(juris.last_verified)}.</>
+        )
+      }{" "}
+      <LinkButton
+        class="underline decoration-dashed underline-offset-4"
+        href="/methodology/"
+      >
+        How we price &rarr;
+      </LinkButton>
+    </p>
+
+    {
+      hasImpact ? (
+        <>
+          <h2 class="mt-10 text-2xl font-semibold">Impact fees by ADU size</h2>
+          {isArea && (
+            <p class="mt-2 text-sm opacity-70">
+              {juris.name} has separate area schedules (
+              {detail.byArea.map(a => a.area).join(", ")}). A parcel pays one
+              area's fees, so figures are ranges across areas, never a sum.
+            </p>
+          )}
+          <div class="mt-4 overflow-x-auto">
+            <table class="w-full border-collapse text-sm">
+              <thead>
+                <tr class="border-border border-b text-left">
+                  <th class="py-2 pe-3 font-semibold">ADU size</th>
+                  <th class="py-2 pe-3 text-right font-semibold">
+                    {inForce ? "Old rule" : "Permit in 2026"}
+                  </th>
+                  <th class="py-2 pe-3 text-right font-semibold">
+                    {inForce ? "SB 1117 (now)" : "Permit in 2027"}
+                  </th>
+                  <th class="py-2 text-right font-semibold">Difference</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-border border-b">
+                  <td class="py-2 pe-3 font-medium">750 sq ft</td>
+                  <td class="py-2 pe-3 text-right tabular-nums">$0</td>
+                  <td class="py-2 pe-3 text-right tabular-nums">$0</td>
+                  <td class="py-2 text-right tabular-nums opacity-60">
+                    exempt either way
+                  </td>
+                </tr>
+                {summaries.map(s => (
+                  <tr class="border-border border-b">
+                    <td class="py-2 pe-3 font-medium">
+                      {s.sqft.toLocaleString("en-US")} sq ft
+                    </td>
+                    <td class="py-2 pe-3 text-right tabular-nums">
+                      {fmtSpan(s.current)}
+                    </td>
+                    <td class="py-2 pe-3 text-right tabular-nums">
+                      {fmtSpan(s.futureCarried)}
+                      {s.uncertain.high > 0 && (
+                        <span title="Some flat fees have no published conversion yet">
+                          *
+                        </span>
+                      )}
+                    </td>
+                    <td class="py-2 text-right font-bold tabular-nums">
+                      {s.savings.high > 0 ? `−${fmtSpan(s.savings)}` : "$0"}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          {anyUncertain && (
+            <p class="mt-2 text-sm opacity-70">
+              * {juris.name} has flat impact fees with no published conversion
+              to the excess-area rule. Rather than guess, the 2027 column
+              carries them at their 2026 amount — so the real 2027 bill could be
+              lower and the real saving larger than shown.
+            </p>
+          )}
+          <p class="mt-2 text-sm opacity-70">
+            Dwelling-base flat fees are prorated (ADU &divide; primary) and
+            converted assuming a 1,600 sq ft primary dwelling — an assumption,
+            not a verified figure. The calculator lets you enter your actual
+            primary size for an exact figure.
+          </p>
+
+          <h2 class="mt-10 text-2xl font-semibold">
+            Line by line at 1,000 sq ft
+          </h2>
+          <p class="mt-2 text-sm opacity-70">
+            1,000 sq ft puts 250 sq ft above the 750 line — the 2027 column
+            charges only that excess.
+            {isArea && ` Shown for the ${detail.byArea[0].area} schedule.`}
+          </p>
+          <div class="mt-4 overflow-x-auto">
+            <table class="w-full border-collapse text-sm">
+              <thead>
+                <tr class="border-border border-b text-left">
+                  <th class="py-2 pe-3 font-semibold">Impact fee</th>
+                  <th class="py-2 pe-3 text-right font-semibold">2026</th>
+                  <th class="py-2 pe-3 text-right font-semibold">2027</th>
+                  <th class="py-2 text-right font-semibold">Source</th>
+                </tr>
+              </thead>
+              <tbody>
+                {detail.primary.lines.map(l => (
+                  <tr class="border-border border-b align-top">
+                    <td class="py-2 pe-3 font-medium">{l.item.fee_name}</td>
+                    <td class="py-2 pe-3 text-right tabular-nums">
+                      {fmtRange(l.currentLow, l.currentHigh)}
+                    </td>
+                    <td class="py-2 pe-3 text-right tabular-nums">
+                      {l.uncertain ? (
+                        <span class="opacity-60">not published</span>
+                      ) : (
+                        fmtRange(l.futureLow ?? 0, l.futureHigh)
+                      )}
+                    </td>
+                    <td class="py-2 text-right">
+                      {l.item.source_url ? (
+                        <a
+                          href={l.item.source_url}
+                          target="_blank"
+                          rel="noopener"
+                          class="text-accent underline decoration-dashed underline-offset-4"
+                        >
+                          official doc &nearr;
+                        </a>
+                      ) : (
+                        <span class="opacity-50">—</span>
+                      )}
+                      {l.item.last_verified && (
+                        <span class="block text-xs opacity-60">
+                          verified {formatVerified(l.item.last_verified)}
+                        </span>
+                      )}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </>
+      ) : (
+        <div class="border-border mt-8 rounded-lg border p-6">
+          <h2 class="text-xl font-semibold">No verified impact fees on file</h2>
+          <p class="mt-2 opacity-80">
+            {verifiedAny
+              ? `We have verified other ${juris.name} fee lines, but no impact-fee line yet — so there is nothing for SB 1117 to change in our data. School, permit and utility fees are not affected by SB 1117 either way.`
+              : `We have not published verified fee figures for ${juris.name} yet. We publish a line only after reading its official source document.`}
+          </p>
+        </div>
+      )
+    }
+
+    <div class="border-border mt-8 rounded-lg border px-4 py-3">
+      <p class="font-semibold">What SB 1117 does not change</p>
+      <p class="mt-1 text-sm opacity-90">
+        School developer fees, building permit and plan-check fees, and
+        water/sewer connection or capacity charges stay the same. SB 1117 covers
+        a homeowner's first two ADUs. This is a fee comparison, not advice to
+        wait: delay, construction-price movement and financing have costs of
+        their own.
+      </p>
+    </div>
+
+    <h2 class="mt-10 text-2xl font-semibold">Common questions</h2>
+    <div class="mt-4 space-y-4">
+      {
+        faqs.map(f => (
+          <div class="border-border rounded-lg border p-4">
+            <p class="font-semibold">{f.q}</p>
+            <p class="mt-1 text-sm opacity-80">{f.a}</p>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="mt-10 flex flex-wrap gap-3">
+      <LinkButton
+        href={`/compare/?j=${juris.juris_id}&sqft=1000#fee-calculator`}
+        class="bg-accent rounded px-5 py-3 font-semibold text-white"
+      >
+        Run your exact size &rarr;
+      </LinkButton>
+      <LinkButton
+        href={`/fees/${slug}/`}
+        class="border-border rounded border px-5 py-3 font-medium"
+      >
+        All {juris.name} ADU fees &rarr;
+      </LinkButton>
+      <LinkButton
+        href="/sb-1117/"
+        class="border-border rounded border px-5 py-3 font-medium"
+      >
+        SB 1117 savings, every city &rarr;
+      </LinkButton>
+    </div>
+    <p class="mt-6 text-sm opacity-70">
+      Background:{" "}
+      <a
+        class="text-accent underline decoration-dashed underline-offset-4"
+        href="/posts/sb-1117-explained-plain-english/"
+        >SB 1117 in plain English</a
+      >
+      {" "}&middot;{" "}
+      <a
+        class="text-accent underline decoration-dashed underline-offset-4"
+        href="/posts/sb-1117-wait-or-permit-now/">Wait or permit now?</a
+      >
+      {" "}&middot;{" "}
+      <a
+        class="text-accent underline decoration-dashed underline-offset-4"
+        href="/posts/sb-1117-kills-750-sq-ft-cliff/">The 750 sq ft cliff</a
+      >
+    </p>
+  </main>
+  <Footer />
+</Layout>
