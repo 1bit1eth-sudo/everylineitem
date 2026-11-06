@@ -17,6 +17,7 @@ import {
   transformerNotationWordHighlight,
 } from "@shikijs/transformers";
 import { transformerFileName } from "./src/utils/transformers/fileName";
+import { calcJurisdiction, jurisAreas } from "./src/lib/feeCalc";
 import config from "./astro-paper.config";
 import { readdirSync, readFileSync } from "node:fs";
 
@@ -48,6 +49,36 @@ const isThinPage = (pathname: string) =>
   /^\/search\/?$/.test(pathname) ||
   /^\/embed\//.test(pathname);
 
+// Fee pages with no fee rows at all are noindex (see src/pages/fees/[slug].astro);
+// keep them out of the sitemap too. Computed with the same calculator the fee
+// page uses, so the two stay in sync — including jurisdictions whose items are
+// all skipped (e.g. Downey: one verified item, no rate, so no row renders).
+// The set lifts itself when rows land; there is no manual list to maintain.
+const feesData = JSON.parse(readFileSync("./src/data/fees.json", "utf8"));
+const zeroRowFeePages = new Set(
+  feesData.jurisdictions
+    .filter((j: { juris_id: string }) => j.juris_id !== "LA-BASE")
+    .filter((j: { juris_id: string }) => {
+      const areas = jurisAreas(feesData, j.juris_id);
+      const results =
+        areas.length > 0
+          ? areas.map(a =>
+              calcJurisdiction(feesData, j.juris_id, 800, { area: a })
+            )
+          : [calcJurisdiction(feesData, j.juris_id, 800)];
+      return !results.some(r =>
+        r.lines.some(
+          (l: { item: { status: string }; kind: string }) =>
+            (l.item.status === "verified" ||
+              l.item.status === "to_verify" ||
+              l.item.status === "conflict") &&
+            l.kind !== "skipped"
+        )
+      );
+    })
+    .map((j: { juris_id: string }) => `/fees/${j.juris_id.toLowerCase()}/`)
+);
+
 export default defineConfig({
   site: config.site.url,
   integrations: [
@@ -56,7 +87,8 @@ export default defineConfig({
       filter: page =>
         (config.features?.showArchives !== false ||
           !page.endsWith("/archives/")) &&
-        !isThinPage(new URL(page).pathname),
+        !isThinPage(new URL(page).pathname) &&
+        !zeroRowFeePages.has(new URL(page).pathname),
       serialize: item => {
         const lastmod = postLastmod.get(new URL(item.url).pathname);
         return lastmod ? { ...item, lastmod } : item;
