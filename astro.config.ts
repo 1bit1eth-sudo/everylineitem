@@ -17,7 +17,7 @@ import {
   transformerNotationWordHighlight,
 } from "@shikijs/transformers";
 import { transformerFileName } from "./src/utils/transformers/fileName";
-import { calcJurisdiction, jurisAreas } from "./src/lib/feeCalc";
+import { calcJurisdiction, calcSB1117, jurisAreas } from "./src/lib/feeCalc";
 import config from "./astro-paper.config";
 import { readdirSync, readFileSync } from "node:fs";
 
@@ -79,6 +79,42 @@ const zeroRowFeePages = new Set(
     .map((j: { juris_id: string }) => `/fees/${j.juris_id.toLowerCase()}/`)
 );
 
+// SB 1117 pages with no non-zero verified impact fees are noindex (see
+// src/pages/sb-1117/[slug].astro); keep them out of the sitemap too.
+// Computed with the same calculator the page uses, so the two stay in sync.
+const noindexSB1117Pages = new Set(
+  feesData.jurisdictions
+    .filter((j: { juris_id: string }) => j.juris_id !== "LA-BASE")
+    .filter((j: { juris_id: string }) => {
+      const verifiedAny = feesData.fee_items.some(
+        (i: { juris_id: string; status: string }) =>
+          i.juris_id === j.juris_id && i.status === "verified"
+      );
+      if (!verifiedAny) return true;
+      const areas = jurisAreas(feesData, j.juris_id);
+      const runs = [800, 1000, 1200].flatMap(sqft =>
+        areas.length > 0
+          ? areas.map(a =>
+              calcSB1117(feesData, j.juris_id, sqft, {
+                area: a,
+                verifiedOnly: true,
+              })
+            )
+          : [
+              calcSB1117(feesData, j.juris_id, sqft, {
+                verifiedOnly: true,
+              }),
+            ]
+      );
+      const hasImpact = runs.some(r => r.hasImpactLines);
+      const chargesImpact = runs.some(
+        r => (r.currentHigh ?? r.currentLow) > 0
+      );
+      return !hasImpact || !chargesImpact;
+    })
+    .map((j: { juris_id: string }) => `/sb-1117/${j.juris_id.toLowerCase()}/`)
+);
+
 export default defineConfig({
   site: config.site.url,
   integrations: [
@@ -88,7 +124,8 @@ export default defineConfig({
         (config.features?.showArchives !== false ||
           !page.endsWith("/archives/")) &&
         !isThinPage(new URL(page).pathname) &&
-        !zeroRowFeePages.has(new URL(page).pathname),
+        !zeroRowFeePages.has(new URL(page).pathname) &&
+        !noindexSB1117Pages.has(new URL(page).pathname),
       serialize: item => {
         const lastmod = postLastmod.get(new URL(item.url).pathname);
         return lastmod ? { ...item, lastmod } : item;
