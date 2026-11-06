@@ -34,7 +34,7 @@ faqs:
 
 > **DRAFT — not for publication until reviewed.**
 
-An 800 sq ft detached ADU in Thousand Oaks costs at least **$302,754, or about $378 per square foot**, on verified figures alone — and the most important number in this post is one that is deliberately missing. Anyone researching Thousand Oaks ADU fees will find a district rate that looks ready to multiply and a city schedule that looks ready to price a permit, and both impressions fall apart on a closer read: the district never says what square footage its rate multiplies for an ADU above 750 sq ft, and the city never says an ADU is priced under its residential tables at all. This post counts only what survives that closer read, and leaves the rest labeled rather than estimated.
+The most important number in Thousand Oaks' ADU fee story is one that is deliberately missing. The district publishes a **$3.36 per square foot** school rate and an exemption at the 750 sq ft line — but never says what square footage its rate multiplies for an ADU above that line: full footage gives **$2,688**, excess-only gives **$168**, a **$2,520** gap no published district sentence closes. An 800 sq ft detached ADU here costs at least **$302,754, or about $378 per square foot**, on verified figures alone, counting only a flat **$754** planning application charge. The city schedule, meanwhile, never says an ADU is priced under its residential tables at all. This post counts only what survives that closer read, and leaves the rest labeled rather than estimated.
 
 ## The 800 sq ft question the district page does not answer
 
