@@ -38,6 +38,10 @@ export interface FeeReport {
   feeScheduleUrl: string;
   lastVerified: string;
   status: string;
+  /** False when the jurisdiction has no verified lines — totalText then reads "No verified fees yet". */
+  hasVerified: boolean;
+  /** Excluded unverified range, or null when nothing is pending. */
+  pendingNote: string | null;
 }
 
 function lineAmountText(l: CalcLine): string {
@@ -50,26 +54,33 @@ function stripHtml(s: string): string {
   return s.replace(/<[^>]*>/g, "");
 }
 
-/** Plain-text version of the 750 sq ft cliff callout. */
+/** Plain-text version of the 750 sq ft cliff callout. Verified-only: the
+ *  report total never includes unverified rows, and neither does the cliff. */
 export function cliffPlainText(data: FeeData, jurisId: string, opts: CalcOpts = {}): string {
+  const optsV: CalcOpts = { ...opts, verifiedOnly: true };
   const at750 = calcJurisdiction(
     data,
     jurisId,
     data.rules.impact_exempt_max_sqft,
-    opts
+    optsV
   );
   const at751 = calcJurisdiction(
     data,
     jurisId,
     data.rules.impact_exempt_max_sqft + 1,
-    opts
+    optsV
   );
-  const r = calcJurisdiction(data, jurisId, at750.sqft, opts);
+  const r = calcJurisdiction(data, jurisId, at750.sqft, optsV);
   const hasImpactItems = r.lines.some(
     l => l.item.category === "impact" && l.kind !== "skipped"
   );
+  const hasPendingImpact = r.pendingLines.some(
+    l => l.item.category === "impact" && l.kind !== "skipped"
+  );
   if (!hasImpactItems) {
-    return "No impact-fee line items are on file for this jurisdiction yet, so the 750 sq ft cliff does not move its total.";
+    return hasPendingImpact
+      ? "Impact fees for this jurisdiction are still being verified — the cliff amount will show once the first impact-fee line is confirmed."
+      : "No impact-fee line items are on file for this jurisdiction yet, so the 750 sq ft cliff does not move its total.";
   }
   const deltaLow = at751.totalLow - at750.totalLow;
   const deltaHigh =
@@ -91,20 +102,40 @@ export function buildFeeReport(
   sqft: number,
   opts: CalcOpts = {}
 ): FeeReport {
-  const r = calcJurisdiction(data, jurisId, sqft, opts);
-  const lines: ReportLine[] = r.lines.map(l => ({
-    feeName: l.item.fee_name,
-    category: categoryLabel(l.item.category),
-    amountText: lineAmountText(l),
-    note:
-      l.reason ??
-      (l.item.notes && l.kind !== "skipped" ? l.item.notes : null),
-    sourceUrl: l.item.source_url,
-    sourceNote: l.item.source_note,
-  }));
+  // The emailed PDF is a user-facing total, so it is verified-only by
+  // construction (see resultsHTML). Pending lines are listed by name with
+  // no figure, and the excluded range is reported once, below the table.
+  const optsV: CalcOpts = { ...opts, verifiedOnly: true };
+  const r = calcJurisdiction(data, jurisId, sqft, optsV);
+  const lines: ReportLine[] = [
+    ...r.lines.map(l => ({
+      feeName: l.item.fee_name,
+      category: categoryLabel(l.item.category),
+      amountText: lineAmountText(l),
+      note:
+        l.reason ??
+        (l.item.notes && l.kind !== "skipped" ? l.item.notes : null),
+      sourceUrl: l.item.source_url,
+      sourceNote: l.item.source_note,
+    })),
+    ...r.pendingLines.map(l => ({
+      feeName: l.item.fee_name,
+      category: categoryLabel(l.item.category),
+      amountText: "Verifying",
+      note:
+        "Amount not yet confirmed — excluded from the total." +
+        (l.reason ? ` ${l.reason}` : ""),
+      sourceUrl: l.item.source_url,
+      sourceNote: l.item.source_note,
+    })),
+  ];
   const skippedNote =
     r.skippedCount > 0
       ? `${r.skippedCount} line item${r.skippedCount > 1 ? "s are" : " is"} excluded from the total — the fee schedule data on file does not cover ${r.skippedCount > 1 ? "them" : "it"} (marked "—" above). We do not guess missing rates.`
+      : null;
+  const pendingNote =
+    r.pendingCount > 0
+      ? `${r.pendingCount} line item${r.pendingCount > 1 ? "s are" : " is"} still being verified (${fmtRange(r.pendingLow, r.pendingHigh)} if confirmed) and excluded from the total above. Unverified amounts are never $0; they are unknown.`
       : null;
 
   return {
@@ -113,9 +144,9 @@ export function buildFeeReport(
     county: r.juris.county,
     sqft: r.sqft,
     generatedAt: new Date().toISOString().slice(0, 10),
-    totalText: fmtRange(r.totalLow, r.totalHigh),
-    impactText: fmtRange(r.impactLow, r.impactHigh),
-    cliffText: cliffPlainText(data, jurisId, opts),
+    totalText: r.hasVerified ? fmtRange(r.totalLow, r.totalHigh) : "No verified fees yet",
+    impactText: r.hasVerified ? fmtRange(r.impactLow, r.impactHigh) : "—",
+    cliffText: cliffPlainText(data, jurisId, optsV),
     lines,
     skippedCount: r.skippedCount,
     skippedNote,
@@ -123,6 +154,8 @@ export function buildFeeReport(
     feeScheduleUrl: r.juris.fee_schedule_url,
     lastVerified: r.juris.last_verified,
     status: r.juris.status,
+    hasVerified: r.hasVerified,
+    pendingNote,
   };
 }
 
@@ -287,6 +320,15 @@ export function downloadFeeReportPDF(
     const sk = doc.splitTextToSize(report.skippedNote, contentW);
     doc.text(sk, M, y);
     y += sk.length * 11 + 10;
+  }
+
+  if (report.pendingNote) {
+    ensure(40);
+    doc.setTextColor(120, 120, 120);
+    doc.setFontSize(9);
+    const pn = doc.splitTextToSize(report.pendingNote, contentW);
+    doc.text(pn, M, y);
+    y += pn.length * 11 + 10;
   }
 
   // Disclaimer

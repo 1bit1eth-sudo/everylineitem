@@ -71,10 +71,15 @@ const cards = (feesData.jurisdictions as any[])
       if (c && card) {
         card.hidden = false;
         document.getElementById("c-name").textContent = c.name;
+        // A jurisdiction with no verified lines shows no dollar total —
+        // $0 would read as a price. jurisStack is verified-only, so a
+        // zero count means "nothing verified yet", not "free".
         document.getElementById("c-total").textContent =
-          "$" + c.total.toLocaleString("en-US");
+          c.count > 0 ? "$" + c.total.toLocaleString("en-US") : "No verified fees yet";
         document.getElementById("c-sub").textContent =
-          `verified government fees · ${c.count} line item${c.count === 1 ? "" : "s"}`;
+          c.count > 0
+            ? `verified government fees · ${c.count} line item${c.count === 1 ? "" : "s"}`
+            : "No verified fee lines on file yet.";
         const rows = [];
         if (c.school != null)
           rows.push(`School district fee <b>$${c.school.toLocaleString("en-US")}</b>`);

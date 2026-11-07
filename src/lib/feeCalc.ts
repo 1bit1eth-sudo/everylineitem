@@ -393,6 +393,26 @@ export interface CalcResult {
   skippedCount: number;
   impactLow: number;
   impactHigh: number | null;
+  /**
+   * Verified lines that determine an amount (ok + exempt). A total is only
+   * shown when this is above zero — otherwise the result is "no verified
+   * fees yet", never $0 as a price.
+   */
+  verifiedCount: number;
+  /** True when at least one verified line determines an amount. */
+  hasVerified: boolean;
+  /**
+   * In-scope lines still being verified (to_verify / conflict), excluded
+   * from the total when verifiedOnly is set. Empty unless verifiedOnly.
+   * Their would-be amounts are reported separately as pendingLow /
+   * pendingHigh — never folded into the total.
+   */
+  pendingLines: CalcLine[];
+  pendingCount: number;
+  /** What the pending ok lines would add if confirmed (low end). */
+  pendingLow: number;
+  /** Pending high end, or null when no pending line ranges. */
+  pendingHigh: number | null;
 }
 
 export function calcJurisdiction(
@@ -407,12 +427,24 @@ export function calcJurisdiction(
   }
   const primarySqft = clampPrimary(opts.primarySqft);
   const area = resolveArea(data, jurisId, opts.area);
-  const lines = data.fee_items
+  const inScope = data.fee_items
     .filter(i => i.juris_id === jurisId)
-    .filter(i => area == null || i.area == null || i.area === area)
-    .filter(i => !opts.verifiedOnly || i.status === "verified")
+    .filter(i => area == null || i.area == null || i.area === area);
+  const lines = (opts.verifiedOnly
+    ? inScope.filter(i => i.status === "verified")
+    : inScope
+  )
     .map(item => calcLine(item, juris, sqft, data.rules, primarySqft))
     .filter(l => l.kind !== "out_of_scope");
+  // Lines excluded by the verification gate: computed for display only —
+  // their amounts never enter the total. Only ok lines contribute to the
+  // pending range; skipped lines have no amount to report.
+  const pendingLines = opts.verifiedOnly
+    ? inScope
+        .filter(i => i.status !== "verified")
+        .map(item => calcLine(item, juris, sqft, data.rules, primarySqft))
+        .filter(l => l.kind !== "out_of_scope")
+    : [];
 
   let totalLow = 0;
   let totalHigh = 0;
@@ -445,6 +477,23 @@ export function calcJurisdiction(
     }
   }
 
+  let pendingLow = 0;
+  let pendingHigh = 0;
+  let pendingHasRange = false;
+  for (const l of pendingLines) {
+    if (l.kind !== "ok") continue;
+    pendingLow += l.low;
+    if (l.high != null) {
+      pendingHigh += l.high;
+      pendingHasRange = true;
+    } else {
+      pendingHigh += l.low;
+    }
+  }
+  const verifiedCount = lines.filter(
+    l => l.kind === "ok" || l.kind === "exempt"
+  ).length;
+
   return {
     juris,
     sqft,
@@ -457,6 +506,12 @@ export function calcJurisdiction(
     skippedCount,
     impactLow,
     impactHigh: impactHasRange ? impactHigh : null,
+    verifiedCount,
+    hasVerified: verifiedCount > 0,
+    pendingLines,
+    pendingCount: pendingLines.length,
+    pendingLow,
+    pendingHigh: pendingHasRange ? pendingHigh : null,
   };
 }
 
@@ -497,6 +552,12 @@ export interface SB1117Result {
   uncertainLow: number;
   uncertainHigh: number | null;
   hasImpactLines: boolean;
+  /**
+   * In-scope impact lines excluded by verifiedOnly. When this is above
+   * zero and hasImpactLines is false, the jurisdiction has impact fees on
+   * file but none verified yet — the UI must say so, not "no impact fees".
+   */
+  pendingImpactCount: number;
 }
 
 export function calcSB1117(
@@ -513,13 +574,17 @@ export function calcSB1117(
   const area = resolveArea(data, jurisId, opts.area);
   const excess = Math.max(0, sqft - data.rules.impact_exempt_max_sqft);
   const lines: SB1117Line[] = [];
+  let pendingImpactCount = 0;
   for (const item of data.fee_items.filter(
     i => i.juris_id === jurisId && i.category === "impact"
   )) {
     if (area != null && item.area != null && item.area !== area) continue;
-    if (opts.verifiedOnly && item.status !== "verified") continue;
     const line = calcLine(item, juris, sqft, data.rules, primarySqft);
     if (line.kind === "out_of_scope" || line.kind === "skipped") continue;
+    if (opts.verifiedOnly && item.status !== "verified") {
+      pendingImpactCount++;
+      continue;
+    }
     if (line.kind === "exempt") {
       lines.push({
         item,
@@ -635,6 +700,7 @@ export function calcSB1117(
     uncertainLow,
     uncertainHigh: uncertainHasRange ? uncertainHigh : null,
     hasImpactLines: lines.length > 0,
+    pendingImpactCount,
   };
 }
 
@@ -647,7 +713,9 @@ function sb1117BlockHTML(data: FeeData, jurisId: string, sqft: number, opts: Cal
     </div>`;
   if (!sb.hasImpactLines) {
     return wrap(
-      `<p class="mt-1 text-sm">No impact-fee line items are on file for this jurisdiction yet, so SB 1117 changes nothing here.</p>`
+      sb.pendingImpactCount > 0
+        ? `<p class="mt-1 text-sm">Impact fees here are still being verified, so SB 1117 savings will show once the first impact-fee line is confirmed.</p>`
+        : `<p class="mt-1 text-sm">No impact-fee line items are on file for this jurisdiction yet, so SB 1117 changes nothing here.</p>`
     );
   }
   if (sqft <= data.rules.impact_exempt_max_sqft) {
@@ -771,6 +839,12 @@ function amountCellHTML(line: CalcLine): string {
  * Full results block (total cards + cliff callout + breakdown table +
  * notes + disclaimer) for one jurisdiction + size. Used for the
  * server-rendered default and re-rendered by the client on every input.
+ *
+ * User-facing totals are verified-only by construction: unverified rows
+ * never enter a total, a subtotal, a comparison, or a chart — here or in
+ * any caller. Their would-be amounts are reported separately as an
+ * excluded range (pendingLow / pendingHigh), and jurisdictions with no
+ * verified lines show "No verified fees yet" instead of $0.
  */
 export function resultsHTML(
   data: FeeData,
@@ -778,14 +852,24 @@ export function resultsHTML(
   sqft: number,
   opts: CalcOpts = {}
 ): string {
-  const r = calcJurisdiction(data, jurisId, sqft, opts);
-  const at750 = calcJurisdiction(data, jurisId, data.rules.impact_exempt_max_sqft, opts);
-  const at751 = calcJurisdiction(data, jurisId, data.rules.impact_exempt_max_sqft + 1, opts);
+  const optsV: CalcOpts = { ...opts, verifiedOnly: true };
+  const r = calcJurisdiction(data, jurisId, sqft, optsV);
+  const at750 = calcJurisdiction(data, jurisId, data.rules.impact_exempt_max_sqft, optsV);
+  const at751 = calcJurisdiction(data, jurisId, data.rules.impact_exempt_max_sqft + 1, optsV);
 
   const badge = jurisBadgeHTML(r.juris.status);
-  const totalText = fmtRange(r.totalLow, r.totalHigh);
-  const impactText = fmtRange(r.impactLow, r.impactHigh);
   const areaLabel = r.area != null ? ` · ${esc(r.area)} area` : "";
+  const impactText = fmtRange(r.impactLow, r.impactHigh);
+  const totalText = r.hasVerified
+    ? fmtRange(r.totalLow, r.totalHigh)
+    : "No verified fees yet";
+  const totalSub = r.hasVerified
+    ? `at ${sqft.toLocaleString("en-US")} sq ft${areaLabel} · impact fees ${impactText}`
+    : `No verified fee lines on file for ${esc(r.juris.name)} yet.`;
+  const pendingCardNote =
+    r.pendingCount > 0
+      ? `<div class="text-foreground/80 mt-2 text-xs">${r.hasVerified ? "Plus " : ""}${fmtRange(r.pendingLow, r.pendingHigh)} in ${r.pendingCount} fee line${r.pendingCount > 1 ? "s" : ""} still being verified — excluded from this total${r.hasVerified ? "." : ", and no total is shown until the first line is confirmed."}</div>`
+      : "";
   const hasDwellingBase = r.lines.some(
     l => l.item.dwelling_base && l.kind === "ok"
   );
@@ -798,9 +882,13 @@ export function resultsHTML(
     at751.totalHigh != null && at750.totalHigh != null
       ? at751.totalHigh - at750.totalHigh
       : null;
-  const hasImpactItems = r.lines.some(
+  const hasVerifiedImpact = r.lines.some(
     l => l.item.category === "impact" && l.kind !== "skipped"
   );
+  const hasPendingImpact = r.pendingLines.some(
+    l => l.item.category === "impact" && l.kind !== "skipped"
+  );
+  const hasImpactItems = hasVerifiedImpact || hasPendingImpact;
 
   // Category breakdown of the 750→751 total jump, from the same two
   // calculations the card already shows. A line out of scope at one size
@@ -832,9 +920,11 @@ export function resultsHTML(
       ? ` Jump breakdown${deltaHigh != null ? " (low end)" : ""}: ${jumpBreakdown}.`
       : "";
 
-  const cliffText = hasImpactItems
+  const cliffText = hasVerifiedImpact
     ? `At ${data.rules.impact_exempt_max_sqft} sq ft, this jurisdiction's impact fees are <strong>${fmtRange(at750.impactLow, at750.impactHigh)}</strong> — state law bars them. At ${data.rules.impact_exempt_max_sqft + 1} sq ft they become <strong>${fmtRange(at751.impactLow, at751.impactHigh)}</strong>, and the fee total jumps by about <strong>${fmtRange(deltaLow, deltaHigh)}</strong>. Drag the slider across 750 to watch it happen.${jumpNote}`
-    : `No impact-fee line items are on file for this jurisdiction yet, so the 750 sq ft cliff does not move its total.`;
+    : hasPendingImpact
+      ? `The impact fees here are still being verified, so the cliff amount is not shown yet. At ${data.rules.impact_exempt_max_sqft} sq ft or less, state law bars impact fees ($0); above that, the verified amount will appear here once the first impact-fee line is confirmed.`
+      : `No impact-fee line items are on file for this jurisdiction yet, so the 750 sq ft cliff does not move its total.`;
 
   const rows = r.lines
     .map(l => {
@@ -857,6 +947,33 @@ export function resultsHTML(
     })
     .join("");
 
+  // Pending lines are listed by name with no figure — their amounts are
+  // unverified, so the table shows "—" and the excluded range is reported
+  // once, below the table, instead of per line.
+  const pendingRows = r.pendingLines
+    .map(l => {
+      const note = `Still verifying — amount not yet confirmed.${l.reason ? ` ${esc(l.reason)}` : ""}`;
+      const srcNote =
+        l.item.notes && l.kind !== "skipped"
+          ? `<div class="text-foreground/60 mt-1 text-xs">${esc(l.item.notes)}</div>`
+          : "";
+      return `<tr class="border-border border-b align-top">
+        <td class="py-2 pe-3">
+          <div class="font-medium">${esc(l.item.fee_name)}${itemBadgeHTML(l.item.status)}</div>
+          <div class="text-foreground/60 text-xs">${esc(categoryLabel(l.item.category))}</div>
+          <div class="text-foreground/60 mt-1 text-xs">${note}</div>${srcNote}
+        </td>
+        <td class="py-2 pe-3 text-right tabular-nums whitespace-nowrap"><span class="text-foreground/50" title="Still verifying — excluded from the total">—</span></td>
+        <td class="py-2 text-sm">${sourceCellHTML(l.item)}</td>
+      </tr>`;
+    })
+    .join("");
+
+  const pendingNote =
+    r.pendingCount > 0
+      ? `<p class="text-foreground/70 mt-3 text-xs">Still being verified: ${r.pendingCount} line item${r.pendingCount > 1 ? "s" : ""} (${fmtRange(r.pendingLow, r.pendingHigh)} if confirmed) — excluded from the total above. Unverified amounts are never $0; they are unknown, so the total above is the verified subtotal, not a complete bill.</p>`
+      : "";
+
   const skippedNote =
     r.skippedCount > 0
       ? `<p class="text-foreground/70 mt-3 text-xs">${r.skippedCount} line item${r.skippedCount > 1 ? "s are" : " is"} excluded from the total — the fee schedule data on file does not cover ${r.skippedCount > 1 ? "them" : "it"} (marked “—” above). We do not guess missing rates.</p>`
@@ -865,10 +982,11 @@ export function resultsHTML(
   return `
   <div class="grid gap-3 sm:grid-cols-2">
     <div class="border-border rounded-md border p-4">
-      <div class="text-foreground/70 text-xs tracking-wide uppercase">Estimated fees · ${esc(r.juris.name)}${badge}</div>
+      <div class="text-foreground/70 text-xs tracking-wide uppercase">Verified fees · ${esc(r.juris.name)}${badge}</div>
       <div class="mt-1 text-3xl font-semibold tabular-nums">${totalText}</div>
-      <div class="text-foreground/80 mt-1 text-sm">at ${sqft.toLocaleString("en-US")} sq ft${areaLabel} · impact fees ${impactText}</div>
+      <div class="text-foreground/80 mt-1 text-sm">${totalSub}</div>
       <div class="text-foreground/60 mt-2 text-xs">Checked ${esc(r.juris.last_verified)}${r.juris.fee_schedule_url ? ` · <a href="${esc(r.juris.fee_schedule_url)}" target="_blank" rel="noopener" class="text-accent underline decoration-dashed underline-offset-4">fee schedule ↗</a>` : ""}</div>
+      ${pendingCardNote}
       ${primaryNote}
     </div>
     <div class="rounded-md border border-amber-500/40 bg-amber-50 p-4 dark:bg-amber-950/30">
@@ -876,7 +994,7 @@ export function resultsHTML(
       <p class="mt-1 text-sm">${cliffText}</p>
     </div>
   </div>
-  ${sb1117BlockHTML(data, jurisId, sqft, opts)}
+  ${sb1117BlockHTML(data, jurisId, sqft, optsV)}
   <div class="relative mt-6 w-full overflow-x-auto">
     <table class="w-full min-w-[40rem] border-collapse text-sm">
       <thead>
@@ -886,9 +1004,10 @@ export function resultsHTML(
           <th class="py-2 font-semibold">Source</th>
         </tr>
       </thead>
-      <tbody>${rows}</tbody>
+      <tbody>${rows}${pendingRows}</tbody>
     </table>
   </div>
+  ${pendingNote}
   ${skippedNote}
   <p class="border-border mt-4 border-t pt-4 text-sm font-medium">This calculator applies published fee schedules — it is not a construction quote. Totals cover government fees only: no design, construction, financing, or contingency costs.</p>
   ${r.juris.post_slug ? `<p class="text-foreground/70 mt-2 text-xs">Full breakdown with methodology notes: <a href="/posts/${esc(r.juris.post_slug)}/" class="text-accent underline decoration-dashed underline-offset-4">Read the ${esc(r.juris.name)} post →</a></p>` : ""}`;
@@ -966,13 +1085,18 @@ export function sideBySideHTML(
   b: SideInput,
   primarySqft: number = DEFAULT_PRIMARY_SQFT
 ): string {
+  // Both sides are verified-only by construction (see resultsHTML): a side
+  // with no verified lines shows "No verified fees yet" and is excluded
+  // from the difference, the bars, and the $/sq ft row.
   const resA = calcJurisdiction(data, a.jurisId, a.sqft, {
     primarySqft,
     area: a.area ?? null,
+    verifiedOnly: true,
   });
   const resB = calcJurisdiction(data, b.jurisId, b.sqft, {
     primarySqft,
     area: b.area ?? null,
+    verifiedOnly: true,
   });
   const catsA = categoryTotals(resA);
   const catsB = categoryTotals(resB);
@@ -992,18 +1116,24 @@ export function sideBySideHTML(
 
   const diffLow = resB.totalLow - resA.totalLow;
   const ranged = resA.hasRange || resB.hasRange;
+  const comparable = resA.hasVerified && resB.hasVerified;
   const pct =
-    resA.totalLow > 0
+    comparable && resA.totalLow > 0
       ? `${diffLow >= 0 ? "+" : "−"}${Math.abs(Math.round((diffLow / resA.totalLow) * 100))}%`
       : "—";
   const diffClass =
-    diffLow > 0
+    comparable && diffLow > 0
       ? "text-accent"
-      : diffLow < 0
+      : comparable && diffLow < 0
         ? "text-green-600 dark:text-green-400"
         : "";
   const psfA = Math.round(resA.totalLow / a.sqft);
   const psfB = Math.round(resB.totalLow / b.sqft);
+  /** Display amount for one side: "—" when it has no verified lines. */
+  const sideAmount = (r: CalcResult, low: number, high: number | null) =>
+    r.hasVerified ? fmtRange(low, high) : "—";
+  /** Bar/table value for one side: 0 when it has no verified lines. */
+  const sideLow = (r: CalcResult, low: number) => (r.hasVerified ? low : 0);
 
   const barRow = (label: string, aLow: number, bLow: number, aText: string, bText: string, big: boolean) => {
     const max = Math.max(aLow, bLow, 1);
@@ -1032,10 +1162,10 @@ export function sideBySideHTML(
   const chartRows = [
     barRow(
       "Total fees",
-      resA.totalLow,
-      resB.totalLow,
-      fmtRange(resA.totalLow, resA.totalHigh),
-      fmtRange(resB.totalLow, resB.totalHigh),
+      sideLow(resA, resA.totalLow),
+      sideLow(resB, resB.totalLow),
+      sideAmount(resA, resA.totalLow, resA.totalHigh),
+      sideAmount(resB, resB.totalLow, resB.totalHigh),
       true
     ),
     ...unionCats.map(cat => {
@@ -1043,10 +1173,10 @@ export function sideBySideHTML(
       const cb = catVal(catsB, cat);
       return barRow(
         categoryLabel(cat),
-        ca?.low ?? 0,
-        cb?.low ?? 0,
-        fmtRange(ca?.low ?? 0, ca?.high ?? null),
-        fmtRange(cb?.low ?? 0, cb?.high ?? null),
+        sideLow(resA, ca?.low ?? 0),
+        sideLow(resB, cb?.low ?? 0),
+        sideAmount(resA, ca?.low ?? 0, ca?.high ?? null),
+        sideAmount(resB, cb?.low ?? 0, cb?.high ?? null),
         false
       );
     }),
@@ -1056,27 +1186,33 @@ export function sideBySideHTML(
     .map(cat => {
       const ca = catVal(catsA, cat);
       const cb = catVal(catsB, cat);
-      const av = ca?.low ?? 0;
-      const bv = cb?.low ?? 0;
-      const d = bv - av;
+      const av = sideLow(resA, ca?.low ?? 0);
+      const bv = sideLow(resB, cb?.low ?? 0);
+      const d = comparable ? bv - av : 0;
       return `<tr class="border-border border-b">
         <td class="py-2 pe-3">${esc(categoryLabel(cat))}</td>
-        <td class="py-2 pe-3 text-right tabular-nums whitespace-nowrap">${fmtRange(av, ca?.high ?? null)}</td>
-        <td class="py-2 pe-3 text-right tabular-nums whitespace-nowrap">${fmtRange(bv, cb?.high ?? null)}</td>
-        <td class="py-2 text-right tabular-nums whitespace-nowrap ${d > 0 ? "text-accent" : d < 0 ? "text-green-600 dark:text-green-400" : ""}">${moneyDiffSigned(d)}</td>
+        <td class="py-2 pe-3 text-right tabular-nums whitespace-nowrap">${sideAmount(resA, av, ca?.high ?? null)}</td>
+        <td class="py-2 pe-3 text-right tabular-nums whitespace-nowrap">${sideAmount(resB, bv, cb?.high ?? null)}</td>
+        <td class="py-2 text-right tabular-nums whitespace-nowrap ${comparable && d > 0 ? "text-accent" : comparable && d < 0 ? "text-green-600 dark:text-green-400" : ""}">${comparable ? moneyDiffSigned(d) : "—"}</td>
       </tr>`;
     })
     .join("");
 
   const notes: string[] = [];
   for (const [tag, r] of [["A", resA], ["B", resB]] as const) {
-    if (r.lines.length === 0) {
+    if (!r.hasVerified) {
       notes.push(
-        `${tag} (${esc(r.juris.name)}): no fee items are on file yet, so its total is $0 — that is missing data, not a free permit.`
+        `${tag} (${esc(r.juris.name)}): no verified fees yet — its total is not shown. That is missing data, not a free permit.`
       );
-    } else if (r.skippedCount > 0) {
+    }
+    if (r.skippedCount > 0) {
       notes.push(
         `${tag} (${esc(r.juris.name)}): ${r.skippedCount} line item${r.skippedCount > 1 ? "s are" : " is"} excluded from the total — the schedule data on file does not cover ${r.skippedCount > 1 ? "them" : "it"}. We do not guess missing rates.`
+      );
+    }
+    if (r.pendingCount > 0) {
+      notes.push(
+        `${tag} (${esc(r.juris.name)}): ${r.pendingCount} line item${r.pendingCount > 1 ? "s are" : " is"} still being verified (${fmtRange(r.pendingLow, r.pendingHigh)} if confirmed) — excluded from this side's total.`
       );
     }
   }
@@ -1120,20 +1256,20 @@ export function sideBySideHTML(
   <div class="grid gap-3 sm:grid-cols-3">
     <div class="border-border rounded-md border p-4">
       <div class="text-foreground/70 text-xs tracking-wide uppercase">A · ${esc(resA.juris.name)}${jurisBadgeHTML(resA.juris.status)}</div>
-      <div class="mt-1 text-2xl font-semibold tabular-nums">${fmtRange(resA.totalLow, resA.totalHigh)}</div>
-      <div class="text-foreground/80 mt-1 text-sm">at ${a.sqft.toLocaleString("en-US")} sq ft${areaLabelA} · impact fees ${fmtRange(resA.impactLow, resA.impactHigh)}</div>
+      <div class="mt-1 text-2xl font-semibold tabular-nums">${resA.hasVerified ? fmtRange(resA.totalLow, resA.totalHigh) : "No verified fees yet"}</div>
+      <div class="text-foreground/80 mt-1 text-sm">${resA.hasVerified ? `at ${a.sqft.toLocaleString("en-US")} sq ft${areaLabelA} · impact fees ${fmtRange(resA.impactLow, resA.impactHigh)}` : "No verified fee lines on file yet."}</div>
       <div class="text-foreground/60 mt-2 text-xs">Checked ${esc(resA.juris.last_verified)}</div>
     </div>
     <div class="border-border rounded-md border p-4">
       <div class="text-foreground/70 text-xs tracking-wide uppercase">B · ${esc(resB.juris.name)}${jurisBadgeHTML(resB.juris.status)}</div>
-      <div class="mt-1 text-2xl font-semibold tabular-nums">${fmtRange(resB.totalLow, resB.totalHigh)}</div>
-      <div class="text-foreground/80 mt-1 text-sm">at ${b.sqft.toLocaleString("en-US")} sq ft${areaLabelB} · impact fees ${fmtRange(resB.impactLow, resB.impactHigh)}</div>
+      <div class="mt-1 text-2xl font-semibold tabular-nums">${resB.hasVerified ? fmtRange(resB.totalLow, resB.totalHigh) : "No verified fees yet"}</div>
+      <div class="text-foreground/80 mt-1 text-sm">${resB.hasVerified ? `at ${b.sqft.toLocaleString("en-US")} sq ft${areaLabelB} · impact fees ${fmtRange(resB.impactLow, resB.impactHigh)}` : "No verified fee lines on file yet."}</div>
       <div class="text-foreground/60 mt-2 text-xs">Checked ${esc(resB.juris.last_verified)}</div>
     </div>
     <div class="border-border border-accent/40 rounded-md border p-4">
       <div class="text-foreground/70 text-xs tracking-wide uppercase">Difference (B − A)</div>
-      <div class="mt-1 text-2xl font-semibold tabular-nums ${diffClass}">${moneyDiffSigned(diffLow)}</div>
-      <div class="mt-1 text-sm">${pct} · low end</div>
+      <div class="mt-1 text-2xl font-semibold tabular-nums ${diffClass}">${comparable ? moneyDiffSigned(diffLow) : "—"}</div>
+      <div class="mt-1 text-sm">${comparable ? `${pct} · low end` : "No comparison — one side has no verified fees yet."}</div>
     </div>
   </div>
   <div class="mt-6 space-y-4" aria-hidden="true">
@@ -1154,15 +1290,15 @@ export function sideBySideHTML(
       <tfoot>
         <tr class="border-border border-t-2 font-semibold">
           <td class="py-3 pe-3">Total</td>
-          <td class="py-3 pe-3 text-right tabular-nums">${fmtRange(resA.totalLow, resA.totalHigh)}</td>
-          <td class="py-3 pe-3 text-right tabular-nums">${fmtRange(resB.totalLow, resB.totalHigh)}</td>
-          <td class="py-3 text-right tabular-nums ${diffClass}">${moneyDiffSigned(diffLow)}</td>
+          <td class="py-3 pe-3 text-right tabular-nums">${resA.hasVerified ? fmtRange(resA.totalLow, resA.totalHigh) : "—"}</td>
+          <td class="py-3 pe-3 text-right tabular-nums">${resB.hasVerified ? fmtRange(resB.totalLow, resB.totalHigh) : "—"}</td>
+          <td class="py-3 text-right tabular-nums ${diffClass}">${comparable ? moneyDiffSigned(diffLow) : "—"}</td>
         </tr>
         <tr class="text-foreground/90">
           <td class="py-2 pe-3">$/sq ft (low end)</td>
-          <td class="py-2 pe-3 text-right tabular-nums">$${psfA.toLocaleString("en-US")}</td>
-          <td class="py-2 pe-3 text-right tabular-nums">$${psfB.toLocaleString("en-US")}</td>
-          <td class="py-2 text-right tabular-nums">${moneyDiffSigned(psfB - psfA)}</td>
+          <td class="py-2 pe-3 text-right tabular-nums">${resA.hasVerified ? `$${psfA.toLocaleString("en-US")}` : "—"}</td>
+          <td class="py-2 pe-3 text-right tabular-nums">${resB.hasVerified ? `$${psfB.toLocaleString("en-US")}` : "—"}</td>
+          <td class="py-2 text-right tabular-nums">${comparable ? moneyDiffSigned(psfB - psfA) : "—"}</td>
         </tr>
       </tfoot>
     </table>
