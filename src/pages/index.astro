@@ -126,8 +126,12 @@ for (const j of (feesData.jurisdictions as any[]).filter(j => j.juris_id !== "LA
   }
 }
 
-// Trust line — newest verification date across all fee items.
+// Trust line — newest verification date across VERIFIED fee items only.
+// (All-items scope pulled the date from to_verify rows — e.g. 5 Nov 2026
+// from Clovis — while the numbers on this page all come from verified rows,
+// whose newest date is 24 Oct 2026. Same scope as /fee-index/.)
 const latestVerifiedRaw = feesData.fee_items
+  .filter(i => i.status === "verified")
   .map(i => i.last_verified as string)
   .filter(Boolean)
   .sort((a, b) => parseVerified(b) - parseVerified(a))[0];
@@ -205,17 +209,17 @@ const guides = [
 const videos = [
   {
     kind: "Short",
-    date: "Nov 3, 2026",
-    title: "Chula Vista ADU Permit: $3,951 — Same Price, Any Size",
-    dek: "Chula Vista prices ADU permits like a menu, not a formula: $3,951 flat, with no valuation math at all.",
-    url: "https://youtube.com/shorts/hku7fsIzW-U",
+    date: "Nov 6, 2026",
+    title: "Garden Grove ADU: Two Fee Cliffs (750 & 500)",
+    dek: "Garden Grove has two fee cliffs, not one: school fees switch on at 500 sq ft, impact fees at 750 — one square foot can flip a fee on.",
+    url: "https://youtube.com/shorts/DSxQ1eYs4j4",
   },
   {
     kind: "Short",
-    date: "Nov 1, 2026",
-    title: "Campbell ADU: The $5.40 School Fee Your Quote Won't Show",
-    dek: "Campbell's school fee is the highest in our series — and it never appears in a contractor quote.",
-    url: "https://youtube.com/shorts/hfZMuzqckfo",
+    date: "Nov 5, 2026",
+    title: "Fullerton ADU: Cheapest Permit, Priciest Park Fee",
+    dek: "Fullerton's ADU permit is the cheapest in the series — and its park fee is the priciest. The cheap permit doesn't mean a cheap build.",
+    url: "https://youtube.com/shorts/chWm27X9irw",
   },
 ];
 
@@ -653,9 +657,11 @@ const formatShortDate = (d: string | Date) =>
       </div>
     </section>
 
-    {/* LATEST + VIDEOS */}
+    {/* LATEST + VIDEOS — single column: the page container is max-w-3xl
+        (768px), so a two-column split starved the Latest titles to ~110px
+        and clipped the price. Stacking gives Latest the full 736px. */}
     <section aria-label="Latest posts and videos" class="pt-12 pb-6">
-      <div class="grid gap-10 lg:grid-cols-[1fr_22rem]">
+      <div class="grid gap-10">
         <div>
           <h2 class="text-2xl font-semibold">Latest</h2>
           <ul class="mt-2 divide-y divide-border">
