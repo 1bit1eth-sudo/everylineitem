@@ -32,6 +32,16 @@ The most valuable messages we get are from contractors and estimators telling us
 
 ## Change log
 
+### 8 November 2026 — Moreno Valley: "$0 impact fees" corrected to $0 City DIF only (after publication)
+
+**Changed:** The Moreno Valley post no longer states the impact fee is **$0** for an ADU. The adopted DIF schedule (effective July 1, 2023) lists the City DIF as Exempt for an ADU, but the same schedule's ADU row lists the other impact-fee columns as proportional for ADUs 750 sq ft and larger — DIF[2] and SKR mitigation "Based on Square footage," MSHCP $500/acre, TUMF by the proportional rule, and Workforce Development $0.13/sq ft — so an 800 sq ft ADU can owe those fees. The title, keyFacts, FAQ answers, summary and comparison tables, the fee table (five proportional rows added), the footnote section, and the SB 1117 section now carry the corrected framing: City DIF **$0**, proportional lines disclosed but not totalled. The post's **$310,000** total is unchanged. The post was published 7 Nov 2026 with the "$0 impact fees" wording; the error was caught the same day.
+
+**Reason:** The schedule's ADU row was read as the City DIF column only. A same-day re-check of the adopted schedule, the city's ADU handout ("DIF fees will apply to ADUs that are 750 square feet or larger"), and the city's October 2025 payment register (ADUs pay MSHCP in practice — $35,862.26 collected for August 2025) showed the proportional lines apply at 750+ sq ft. The 2024 DIF schedule and study never mention ADUs, so they do not overturn the 2023 ADU row; Resolution No. 2025-22 (adopted April 15, 2025) deferred the 2024 schedule's automatic increases to January 1, 2028 and January 1, 2030.
+
+**Source:** [City of Moreno Valley Development Impact Fee schedule (effective July 1, 2023)](http://ci.moreno-valley.ca.us/departments/financial-mgmt-svcs/fin-pdf/ImpactFees.pdf), [City of Moreno Valley ADU handout (revised August 3, 2023)](https://Moreno-valley.ca.us/city_hall/forms/building-safety/ADU-pkg.pdf), [City Council minutes, April 15, 2025, Item J.2 — Resolution No. 2025-22](https://pub-morenovalley.escribemeetings.com/FileStream.ashx?DocumentId=4461), [City of Moreno Valley October 2025 Payment Register](http://moreno-valley.ca.us/departments/financial-mgmt-svcs/pdf/fin-ops/reg/2025/2025-October.pdf)
+
+---
+
 ### 7 November 2026 — Fee calculator and comparison totals: unverified fees excluded
 
 **Changed:** The /compare/ fee calculator, the two-city comparison, and the emailed PDF report now total **verified fees only**. Rows marked `to_verify` (or `conflict`) are listed by name with no figure and their would-be amounts are reported once as an excluded range — they no longer enter any total, subtotal, comparison, chart, or $/sq ft figure. Jurisdictions with no verified lines show "No verified fees yet" instead of a dollar total, and no comparison is drawn when either side has no verified fees. The embeddable fee card shows the same "No verified fees yet" state instead of $0.
