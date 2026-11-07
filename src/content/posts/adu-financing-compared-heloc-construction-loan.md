@@ -1,23 +1,23 @@
 ---
 title: "ADU Financing Compared: HELOC vs Construction Loan vs Cash-Out Refi"
-description: "Four ways to fund a $320,000 ADU — HELOC, construction-to-permanent, cash-out refinance, and home equity loan — plus the CalHFA grant that covers pre-development. Rate ranges, timelines, and the decision math, with no invented numbers."
+description: "Four ways to fund a $320,000 ADU — HELOC, construction-to-permanent, cash-out refinance, and home equity loan — plus the CalHFA grant that used to cover pre-development. Rate ranges, timelines, and the decision math, with no invented numbers."
 pubDatetime: 2026-11-08T01:00:00Z
 author: "Every Line Item"
 tags: ["adu cost", "financing", "heloc", "construction loan", "california", "guide", "2026"]
 draft: false
 verifiedPublished: "8 Nov 2026"
-lastVerified: "8 Nov 2026"
+lastVerified: "7 Nov 2026"
 nextReview: "Jan 2027"
 faqs:
   - question: "What is the best way to finance an ADU in California?"
-    answer: "There is no universal best option — it depends on your equity, existing mortgage rate, and timeline. A HELOC (roughly 6.5–9.5% variable in 2026 ranges) suits owners with a low existing mortgage rate who want flexibility. A construction-to-permanent loan (~7.25% fixed in 2026 ranges) suits ground-up builds with one closing. Cash-out refinancing works when your current rate is near market rates. Compare total interest and closing costs, not just the rate."
+    answer: "There is no universal best option — it depends on your equity, existing mortgage rate, and timeline. A HELOC (roughly 6.5–9.5% variable in 2026 ranges) suits owners with a low existing mortgage rate who want flexibility. A construction-to-permanent loan (~7–10% variable during the build, converting to a fixed rate near the 30-year average of about 7.2% in November 2026) suits ground-up builds with one closing. Cash-out refinancing works when your current rate is near market rates. Compare total interest and closing costs, not just the rate."
   - question: "Can I get a grant to help pay for ADU pre-development costs?"
-    answer: "California's CalHFA ADU Grant Program provides up to $40,000 for pre-development costs — site surveys, architectural designs, permits, and related soft costs — for eligible low- to moderate-income homeowners building on their primary residence. It does not cover construction itself. Check CalHFA's current program status, as funding rounds open and close."
+    answer: "California's CalHFA ADU Grant Program provided up to $40,000 for pre-development costs — site surveys, architectural designs, permits, and related soft costs — for eligible low- to moderate-income homeowners building on their primary residence. It did not cover construction itself. The latest funding round was fully allocated on December 28, 2023, and CalHFA has posted no new round, so the grant is not currently available. Check CalHFA's program page (calhfa.ca.gov/adu) for updates before counting on it."
   - question: "How much does financing add to the total cost of an ADU?"
     answer: "On a $320,000 build, financing cost depends on the instrument and rate. Illustrations (not quotes): a $150,000 HELOC draw at 8.75% runs about $1,094/month interest-only during construction; a $250,000 30-year loan at 6.75% is about $1,621/month principal and interest. Add closing costs ($2,000–$15,000 depending on product), lender fees, and a construction reserve. Talk to a lender for actual quotes."
 ---
 
-> **Published:** 8 Nov 2026 · **Last verified:** 8 Nov 2026 · **Next review:** Jan 2027
+> **Published:** 8 Nov 2026 · **Last verified:** 7 Nov 2026 · **Next review:** Jan 2027
 > Rate ranges below are 2026 published ranges from lender and industry sources, not quotes. Rates move — get current quotes before deciding.
 > This is general information, not financial advice.
 
@@ -34,7 +34,7 @@ A Home Equity Line of Credit lets you borrow against existing equity, drawing on
 - **Rate:** Roughly 6.5–9.5% variable (2026 published ranges vary by source)
 - **Timeline:** 3–6 weeks to close
 - **Best for:** Owners with a sub-5% primary mortgage they don't want to touch; phased or uncertain budgets
-- **Watch out for:** Variable rates can rise mid-project. Stress-test the payment at +2% before you sign. Annual fees and draw-period terms vary.
+- **Watch out for:** Variable rates can rise mid-project. Stress-test the payment at +2% before you sign. Annual fees and draw-period terms vary. Weaker-credit rates run higher.
 - **Tax note:** Interest may be deductible if used for home improvement — ask your CPA, not your lender.
 
 **Illustration:** A $150,000 draw at an assumed 8.75%, interest-only, costs about $1,094/month during construction. (Illustration only.)
@@ -43,17 +43,17 @@ A Home Equity Line of Credit lets you borrow against existing equity, drawing on
 
 One loan funds construction in staged draws, then automatically converts to a 30-year fixed mortgage. One application, one closing, one rate lock.
 
-- **Rate:** Roughly 7.25% fixed (2026 published ranges; varies by lender)
+- **Rate:** Roughly 7–10% variable during construction, converting to a fixed permanent rate near the 30-year average (~7.2% in November 2026, Freddie Mac PMMS)
 - **Timeline:** 6–10 weeks to close — longest of the four
 - **Best for:** Ground-up detached builds where you want payment certainty from day one
 - **Watch out for:** Typically capped around 80% loan-to-value. Requires detailed plans and contractor bids upfront — the most paperwork-intensive approval.
-- **Advantage:** Often the lowest long-term monthly payment of the four, with no later refinance needed.
+- **Advantage:** Roughly tied with cash-out refinance for the lowest long-term monthly payment, with no later refinance needed.
 
 ### 3. Cash-out refinance — the reset
 
 Replace your existing mortgage with a larger one; take the difference as cash. Simple structure, one payment.
 
-- **Rate:** Same as a new primary mortgage — roughly 5.5–7% in 2026 ranges
+- **Rate:** Same as a new primary mortgage — roughly 6.5–7.5% in November 2026 ranges (Freddie Mac 30-year average 7.18%)
 - **Timeline:** 4–8 weeks to close
 - **Best for:** Owners whose existing rate is already near current market rates
 - **Watch out for:** If you locked a sub-5% rate in 2020–2021, refinancing reprices your *entire* mortgage balance upward — the ADU cash comes at the cost of a permanently higher rate on money you already owed. Closing costs run $5,000–$15,000. And the amortization clock resets to year one.
@@ -63,23 +63,23 @@ Replace your existing mortgage with a larger one; take the difference as cash. S
 
 A second mortgage for a fixed amount at a fixed rate. Predictable payments, less flexibility than a HELOC.
 
-- **Rate:** Roughly 6–8% fixed (2026 published ranges)
+- **Rate:** Roughly 6.5–8.5% fixed (2026 published ranges; national averages 7.5–8.7%)
 - **Timeline:** 2–4 weeks to close
 - **Best for:** Owners who want HELOC-like access to equity with fixed-payment certainty
 - **Watch out for:** You receive the full amount upfront and pay interest on all of it from day one — bad fit if the budget is uncertain or phased.
 
 ## The grant: CalHFA ADU Grant Program
 
-Before any loan: California's **CalHFA ADU Grant Program** provides **up to $40,000** for pre-development costs — architectural designs, site surveys, soil reports, permits, and related soft costs. Eligibility targets low- to moderate-income homeowners building on their primary residence.
+Before any loan: California's **CalHFA ADU Grant Program** provided **up to $40,000** for pre-development costs — architectural designs, site surveys, soil reports, permits, and related soft costs. Eligibility targeted low- to moderate-income homeowners building on their primary residence.
 
-What it doesn't do: fund construction. Think of it as erasing Phase 1's soft-cost hurdle — the $20,000–$40,000 of permits, fees, and design this series documents — so the loan only needs to cover the build. Funding rounds open and close; check CalHFA's current program status before counting on it. A Pasadena couple in industry reporting used the grant for permits and design, then financed construction separately — the two-stage approach this grant enables.
+What it didn't do: fund construction. Think of it as erasing Phase 1's soft-cost hurdle — the $20,000–$40,000 of permits, fees, and design this series documents — so the loan only needed to cover the build. The latest funding round was fully allocated on December 28, 2023, and CalHFA has posted no new round as of November 2026, so do not count on the grant in your budget. Sign up for CalHFA's ADU eNews updates if you want to hear first if funding returns.
 
 ## The decision matrix
 
 | | HELOC | Construction-to-perm | Cash-out refi | Home equity loan |
 | --- | --- | --- | --- | --- |
 | Rate type | Variable | Fixed | Fixed (new mortgage) | Fixed |
-| 2026 range | ~6.5–9.5% | ~7.25% | ~5.5–7% | ~6–8% |
+| 2026 range | ~6.5–9.5% | ~7–10% build, ~7.2% perm | ~6.5–7.5% | ~6.5–8.5% |
 | Close time | 3–6 weeks | 6–10 weeks | 4–8 weeks | 2–4 weeks |
 | Closing costs | $2K–$5K | Moderate | $5K–$15K | $2K–$5K |
 | Flexibility | High | Low | Medium | Low |
@@ -87,7 +87,7 @@ What it doesn't do: fund construction. Think of it as erasing Phase 1's soft-cos
 
 ## Common mistakes (from industry reporting)
 
-1. **Underestimating total cost by 10–20%.** The $320,000 build is $350,000+ with financing costs, reserves, and the items nobody itemizes. Our [all-in cost post](/posts/adu-all-in-cost-california/) covers the full picture.
+1. **Underestimating total cost by 10–20%.** Industry surveys (NAHB-aggregated data) find the average renovation overrun falls between 10 and 20 percent of the total project cost. The $320,000 build is $350,000+ with financing costs, reserves, and the items nobody itemizes. Our [all-in cost post](/posts/adu-all-in-cost-california/) covers the full picture.
 2. **Choosing variable without stress-testing.** Model the HELOC payment at +2–3% before committing.
 3. **Starting permits without secured financing.** Lenders want to see permits; permit offices don't care about your lender. Sequence it: pre-approval before final permit applications.
 4. **Ignoring the reserve.** Budget a 10–15% construction contingency *on top of* the loan — lenders won't fund overruns mid-project.
@@ -97,3 +97,12 @@ What it doesn't do: fund construction. Think of it as erasing Phase 1's soft-cos
 Financing doesn't change what the ADU costs — it changes when and how you pay for it. The cheapest money is usually the money you already have (a low-rate primary mortgage you don't disturb, plus a HELOC for the build). The most expensive is the cash-out refi that reprices a 3% mortgage to 7% to free $150,000. Run the lifetime-interest math, not the monthly-payment math — and talk to a lender before you talk to a contractor.
 
 Cheapest structure first: a [JADU](/posts/jadu-cost-california/) carries no impact fees, no school fees, and no connection charges, which changes how much you need to borrow. For how the fee layer differs by city, see our [Orange County comparison](/posts/orange-county-adu-cost-compared/).
+
+## Disclaimer
+
+Model estimate, not a quote. Rate ranges are 2026 published lender and industry ranges, not offers of credit — your rate depends on credit, equity, loan-to-value, and the day you lock. The CalHFA ADU Grant Program's latest funding round was fully allocated on December 28, 2023; check CalHFA's current status before counting on grant money. This is general information, not financial advice. Talk to a licensed lender — and your CPA for tax questions — before deciding.
+
+## Sources
+
+- CalHFA ADU Grant Program — [calhfa.ca.gov/adu](https://www.calhfa.ca.gov/adu/) (checked 7 Nov 2026: latest round fully allocated 28 Dec 2023, no new round posted)
+- Freddie Mac Primary Mortgage Market Survey — [freddiemac.com/pmms](https://www.freddiemac.com/pmms) (30-year fixed average 7.18%, week ending 5 Nov 2026)
