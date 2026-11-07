@@ -32,6 +32,22 @@ The most valuable messages we get are from contractors and estimators telling us
 
 ## Change log
 
+### 7 November 2026 — Fee calculator and comparison totals: unverified fees excluded
+
+**Changed:** The /compare/ fee calculator, the two-city comparison, and the emailed PDF report now total **verified fees only**. Rows marked `to_verify` (or `conflict`) are listed by name with no figure and their would-be amounts are reported once as an excluded range — they no longer enter any total, subtotal, comparison, chart, or $/sq ft figure. Jurisdictions with no verified lines show "No verified fees yet" instead of a dollar total, and no comparison is drawn when either side has no verified fees. The embeddable fee card shows the same "No verified fees yet" state instead of $0.
+
+**Scope of the error:** Every jurisdiction with unverified rows was affected. The largest case was Clovis: the calculator showed **$76,895** for an 800 sq ft ADU as if it were a total, when all 14 rows on file were unverified — including $57,445 of impact fees. The same pattern showed $27,283 for South Pasadena (10 unverified rows), $17,016 for San José (3 of 5 rows unverified), $16,936 for Oakland (the $12,800 conflict permit line included), $14,957 for Fullerton, and $11,806 for Sacramento. Verified-only totals are lower in every mixed case (Clovis $76,895 → no total shown; South Pasadena $27,283 → no total shown; San José $17,016 → $10,676; Oakland $16,936 → $4,136; Fullerton $14,957 → $6,836; Sacramento $11,806 → $4,104). Jurisdictions whose rows were all verified are unchanged (Redlands $6,993, Santa Clara $11,369, Milpitas $709).
+
+**Reason:** The calculator's shared engine (`src/lib/feeCalc.ts`) summed every in-scope row regardless of verification status. The fee pages (`/fees/[slug]/`) were already verified-only since the 5 Nov 2026 template fix (PR #167) — only the /compare/ calculator, the two-city comparison, and the PDF report still summed unverified rows. The fix applies the verification gate at the calculation source, so all three surfaces (plus the embed card) now agree with the fee pages. The fee index, SB 1117 pages, and homepage cliff were already verified-only and are unchanged.
+
+**Note:** The excluded range for Clovis ($76,895) is itself the sum of the unverified rows on file, not a bill for one parcel — it adds mutually exclusive variants together (both Water Major density rates, $13,795 and $5,655; all five Major Street area fees). Those rows need area/density tags in a follow-up data fix; this change does not alter fees.json.
+
+**Source:** `src/data/fees.json` (Clovis rows CLOVIS-NEW-01–14, all `to_verify`, verified 5 Nov 2026); calculator code `src/lib/feeCalc.ts` (`calcJurisdiction`, `resultsHTML`, `sideBySideHTML`).
+
+**Live date:** 7 November 2026.
+
+---
+
 ### 6 November 2026 — Fee-waiver cities: Oceanside waiver marked unconfirmed (after publication)
 
 **Changed:** The fee-waiver post no longer states that Oceanside's ordinance waives all ADU impact fees. The Oceanside section now says the waiver is **unconfirmed**: the waiver language our September 2025 capture showed is no longer on the city's ADU page, and the city says information relying on the ADU ordinance (Article 30, Section 3006) is no longer applicable while it certifies the ordinance with HCD. The post's description, both Oceanside FAQ answers, the durability ranking (Oceanside now third, unconfirmed), and the bottom line now read "two confirmed $0s, one unconfirmed." The new parks fee schedule (single-family $6.03/sq ft, effective January 20, 2026, Resolution #25-R0669-1) is still reported, with its ADU application marked not confirmed. The post was published 6 Nov 2026 with the waiver stated as fact; the error was caught the same day.
