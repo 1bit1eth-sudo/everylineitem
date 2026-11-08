@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1500" viewBox="0 0 1000 1500">
+<rect width="1000" height="1500" fill="#212737"/>
+<rect width="1000" height="8" fill="#ff6b01"/>
+<text x="60" y="96" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="52" font-weight="700" fill="#ffffff">Free ADU Plans: 7 Cities</text>
+<text x="60" y="146" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="26" fill="#afb9ca">The city hands you the drawings — build them as drawn</text>
+<line x1="60" y1="186" x2="940" y2="186" stroke="#343f60" stroke-width="2"/>
+<rect x="60" y="216" width="430" height="170" rx="12" fill="#343f60"/>
+<text x="84" y="258" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">ARCHITECT FEES SAVED</text>
+<text x="84" y="318" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="40" font-weight="700" fill="#ff6b01">$8,000–$20,000</text>
+<text x="84" y="358" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#eaedf3">Custom drawings, eliminated</text>
+<rect x="510" y="216" width="430" height="170" rx="12" fill="#343f60"/>
+<text x="534" y="258" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">MOST DESIGNS</text>
+<text x="534" y="318" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="48" font-weight="700" fill="#ff6b01">12 plans</text>
+<text x="534" y="358" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#eaedf3">Chula Vista City Standard Plans</text>
+<text x="60" y="456" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">The seven programs</text>
+<text x="60" y="490" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#afb9ca">Free plans, city by city.</text>
+<text x="60" y="540" text-anchor="start" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#afb9ca">CITY</text>
+<text x="916" y="540" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#afb9ca">PLANS</text>
+<line x1="60" y1="556" x2="940" y2="556" stroke="#343f60" stroke-width="2"/>
+<rect x="60" y="570" width="880" height="104" rx="10" fill="#2d3550"/>
+<text x="84" y="618.0" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#eaedf3">Chula Vista</text>
+<text x="84" y="652.0" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">12 City Standard Plans, SnapADU</text>
+<text x="916" y="630.0" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#eaedf3">Varies</text>
+<rect x="60" y="690" width="880" height="104" rx="10" fill="#283046"/>
+<text x="84" y="738.0" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#eaedf3">Garden Grove · Anaheim</text>
+<text x="84" y="772.0" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">ADU Go · ADU Express, 4 designs each</text>
+<text x="916" y="750.0" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#eaedf3">Free</text>
+<rect x="60" y="810" width="880" height="104" rx="10" fill="#283046"/>
+<text x="84" y="858.0" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#eaedf3">Pasadena</text>
+<text x="84" y="892.0" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">4 standard plans, 2 drawn free</text>
+<text x="916" y="870.0" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#eaedf3">2 free</text>
+<rect x="60" y="930" width="880" height="104" rx="10" fill="#283046"/>
+<text x="84" y="978.0" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#eaedf3">Fontana · Sacramento</text>
+<text x="84" y="1012.0" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">738 &amp; 747 sq ft — sized under the cliff</text>
+<text x="916" y="990.0" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#eaedf3">Free</text>
+<text x="60" y="1106" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#ff6b01">Free plans are the closest thing to a subsidy.</text>
+<text x="60" y="1146" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="22" fill="#eaedf3">The savings come from not changing anything.</text>
+<text x="60" y="1226" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">Availability changes — confirm with the city</text>
+<text x="60" y="1256" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">Permit, school, impact and utility fees still apply</text>
+<rect x="0" y="1370" width="1000" height="130" fill="#1a1f2c"/>
+<line x1="60" y1="1370" x2="940" y2="1370" stroke="#ff6b01" stroke-width="4"/>
+<text x="60" y="1412" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#ff6b01">Every Line Item</text>
+<text x="60" y="1448" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="22" fill="#afb9ca">everylineitem.com</text>
+<text x="940" y="1448" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">California ADU Costs · 2026</text>
+</svg>
