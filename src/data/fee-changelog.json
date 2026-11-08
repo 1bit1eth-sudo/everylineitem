@@ -36,55 +36,42 @@
       "date": "2026-11-06",
       "headline": "Bid Scanner tool, SB 1117 landing pages, AdSense reinforcement",
       "detail": "New Bid Scanner tool: paste a bid and it sorts every line into the six build phases, flags four red-flag patterns and drafts contractor questions; pasted text never leaves the browser. SB 1117 landing pages for all 161 jurisdictions (800/1,000/1,200 sq ft, 2026 vs 2027 impact fees, verified rows only). AdSense reinforcement: google-adsense-account meta tag on every page, new Disclaimer page, footer cleanup. Fee-waiver cities post published and corrected after Oceanside's waiver wording was removed from the city's ADU page ('two confirmed $0s, one unconfirmed'). Garden Grove Short #19 and long-form #6 ('The $5.38 Ceiling') published on YouTube.",
-      "jurisdictions": [
-        "Oceanside"
-      ],
+      "jurisdictions": ["Oceanside"],
       "items_added": 0
     },
     {
       "date": "2026-11-05",
       "headline": "Clovis fee lines added from the Master Development Fee Schedule (14 items, amounts pending verification)",
       "detail": "Clovis's Master Development Fee Schedule 2024-2025 (effective July 21, 2025) added 14 line items: six core development impact fees ($20,961/unit combined), Water Major Facilities density endpoints ($13,795 down to $5,655/unit), Major Street Fees by area ($115-$11,712/unit), and a Loma Vista-only Neighborhood Park Deposit ($6,127). All 14 are listed without figures until verification completes. The 750 sq ft cliff figure on fee pages now totals verified items only, so a page with no verified rows no longer shows a dollar total from unconfirmed lines. School fees not added: Clovis Unified posts two residential tiers ($5.38 vs $6.38/sq ft) and the ADU assignment is unresolved.",
-      "jurisdictions": [
-        "Clovis"
-      ],
+      "jurisdictions": ["Clovis"],
       "items_added": 14
     },
     {
       "date": "2026-11-04",
       "headline": "Campbell post corrected to FY 2027 schedule; CalHFA grant post added for December 18 slot",
       "detail": "Campbell post total moved ~$318,000 to ~$310,000: permit example corrected to $2,880 core + $254 add-ons (prior $3,529/$3,929 withdrawn, $649 remainder did not reconcile); impact fee now published at $9,328/unit cap (FY 2026 cap $9,129); schedule resolution corrected (#13333, not #13279); WVSD sewer figures marked [to verify] (current district schedule not located); CUSD mixed 500/750 sq ft wording flagged. New post on the CalHFA ADU Grant (closed since December 28, 2023, no new round posted as of November 4, 2026) added for the December 18 slot; December 19 remains open for the unpermitted-ADU legalization post (not written this session).",
-      "jurisdictions": [
-        "Campbell"
-      ],
+      "jurisdictions": ["Campbell"],
       "items_added": 0
     },
     {
       "date": "2026-11-04",
       "headline": "Palo Alto DIF unified to the FY27 sheet ($18,090); JADU occupancy post added",
       "detail": "Palo Alto's DIF for an 800 sq ft ADU is now a single FY27 figure, $18,090: the FY27 sheet total of $45,226 for a 2,000 sq ft primary, prorated 800/2,000, replacing the ~$8,000-$20,000 range; the post total moved to ~$313,000. Prior figures are kept in the post as prior-year-sheet context only. A new post on ADU/JADU occupancy and the 30-day rental rule was added (now in the December 14 slot).",
-      "jurisdictions": [
-        "Palo Alto"
-      ],
+      "jurisdictions": ["Palo Alto"],
       "items_added": 0
     },
     {
       "date": "2026-11-03",
       "headline": "FI-017 scenario fix ($18,090); insurance post sources; AB 1033 post added",
       "detail": "FI-017 (Palo Alto FY27 impact fees) corrected to the 800 sq ft ADU proportional scenario at $18,090. Sources added to the ADU insurance post (III, CA DOI). AB 1033 post (separate sale of ADUs) added for the December 13 slot.",
-      "jurisdictions": [
-        "Palo Alto"
-      ],
+      "jurisdictions": ["Palo Alto"],
       "items_added": 0
     },
     {
       "date": "2026-11-03",
       "headline": "Fee-schedule URLs filled for San Bernardino and Westminster; 11-04/05/06 posts source-checked",
       "detail": "San Bernardino (city Building & Safety fee schedule PDF, footer dated 07/2020) and Westminster (Res. 5307, adopted 2025-06-25) fee-schedule URLs added; Lakewood stays empty (no current city fee schedule found). Palo Alto, insurance, and fee-waiver-city posts checked against original sources: Palo Alto parks rate corrected to $18.75/sq ft, Oceanside parks-rate claim replaced with the adopted rate.",
-      "jurisdictions": [
-        "San Bernardino",
-        "Westminster"
-      ],
+      "jurisdictions": ["San Bernardino", "Westminster"],
       "items_added": 0
     },
     {
@@ -124,10 +111,7 @@
       "date": "2026-10-23",
       "headline": "Correction: 750 sq ft boundary updated to current law (SB 543)",
       "detail": "The homepage Hayward example and the 750 sq ft cliff post stated the pre-2026 rule (exempt under 750, charged at 750 and above). Current Gov. Code §66311.5(c)(1), as amended by SB 543 effective January 1, 2026, exempts ADUs of 750 square feet or less; the charge starts above 750. The calculator already applied the current rule, so no fee amounts changed: Hayward is $0 at 750 and $3,823 at 751, and the homepage now carries the through-December-31-2026 qualifier with the SB 1117 change noted. The homepage change log now shows headlines only, with detail on the full log page.",
-      "jurisdictions": [
-        "Hayward",
-        "Ontario"
-      ],
+      "jurisdictions": ["Hayward", "Ontario"],
       "items_added": 0
     },
     {
@@ -291,9 +275,7 @@
       "date": "2026-10-21",
       "headline": "Batch 5 late addition: Rosemead, 1 verified fee item",
       "detail": "Rosemead's Batch 5 research was not in the 2026-10-19 deep-dive backfill, so its single confirmed dollar item - the $111 ADU covenant fee (FY 2025-26 fee schedule) - lands now. School, DIF, permit and connection lines remain PARTIAL or not found - 12/1 re-verification.",
-      "jurisdictions": [
-        "Rosemead"
-      ],
+      "jurisdictions": ["Rosemead"],
       "items_added": 1
     },
     {
