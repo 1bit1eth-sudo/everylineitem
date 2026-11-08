@@ -301,11 +301,11 @@ const formatShortDate = (d: string | Date) =>
                 data-juris-filter="hero-juris"
                 placeholder="Type to filter cities…"
                 aria-label="Filter jurisdictions"
-                class="border-border bg-background focus:border-accent mt-1 block w-56 rounded border px-2 py-2 text-sm"
+                class="border-border bg-background focus:border-accent mt-1 block w-64 rounded border px-2 py-2 text-sm"
               />
               <select
                 id="hero-juris"
-                class="border-border bg-background focus:border-accent mt-1 block w-56 rounded border px-2 py-2 text-sm"
+                class="border-border bg-background focus:border-accent mt-1 block w-64 rounded border px-2 py-2 text-sm"
               >
                 <option value="" disabled selected>Choose your jurisdiction…</option>
                 {heroJurisdictions.map(j => (
@@ -403,7 +403,7 @@ const formatShortDate = (d: string | Date) =>
               $0; every figure links to the district's official document.
             </p>
           </div>
-          <div class="hidden sm:grid sm:grid-cols-[1fr_7rem_6rem] gap-4 px-4 py-2 border-b border-border text-sm font-semibold opacity-60">
+          <div class="hidden sm:grid sm:grid-cols-[1fr_6rem_5rem] gap-4 px-4 py-2 border-b border-border text-sm font-semibold opacity-60">
             <span>Jurisdiction</span>
             <span class="text-right">Rate</span>
             <span class="text-right">800 sq ft</span>
@@ -414,7 +414,7 @@ const formatShortDate = (d: string | Date) =>
                 href={source}
                 target="_blank"
                 rel="noopener"
-                class="grid grid-cols-[1fr_auto] sm:grid-cols-[1fr_7rem_6rem] gap-x-4 gap-y-1 px-4 py-3 hover:bg-black/5 transition-colors"
+                class="grid grid-cols-[1fr_auto] sm:grid-cols-[1fr_6rem_5rem] gap-x-4 gap-y-1 px-4 py-3 hover:bg-black/5 transition-colors"
                 title="Open the official source document"
               >
                 <span class="font-semibold">{juris}</span>
