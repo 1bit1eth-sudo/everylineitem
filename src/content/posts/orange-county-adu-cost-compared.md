@@ -91,6 +91,8 @@ Anaheim's distinction: its school district resolution explicitly names ADUs — 
 
 If the budget is the binding constraint, the cheapest structure in the state is not a detached ADU at all — it is a [JADU](/posts/jadu-cost-california/), which carries no impact fees, no school fees, and no connection charges.
 
+Financing for any of the three cities works the same way — see our [ADU financing comparison](/posts/adu-financing-compared-heloc-construction-loan/).
+
 ## Methodology note
 
 Construction phases 2–6 are carried from the [Los Angeles County baseline](/posts/800-sq-ft-adu-cost-california/) in all three cities; none publishes phase-level construction costs. Only the fee layer is city-specific, sourced from official fee schedules, ordinances, and district resolutions. Unconfirmed items are marked in each city post.

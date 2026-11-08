@@ -121,6 +121,8 @@ Note the stacking row: on a single-family lot, state law as interpreted by HCD a
 
 Fees still vary by city — see how the fee layer compares across three Orange County cities in our [Orange County comparison](/posts/orange-county-adu-cost-compared/).
 
+For how to pay for it, see our [ADU financing comparison](/posts/adu-financing-compared-heloc-construction-loan/).
+
 ## What moves the number most in a JADU
 
 **1. Bathroom: shared vs. separate.** Covered above — the largest single cost decision and the largest legal decision, in one.
