@@ -1,12 +1,13 @@
 ---
 title: "San Mateo County ADU Cost 2026: $314,637 Floor, Unincorporated Permit Stack"
 description: "800 sq ft detached ADU in unincorporated San Mateo County: $314,637 floor built from a full county permit stack, a fire review fee, and a $4,304 school fee. Percentage surcharges are quantified but not counted pending the county's combined-fee worksheet."
-pubDatetime: 2027-02-01T01:00:00Z
+pubDatetime: 2026-11-08T00:00:00Z
 author: "Every Line Item"
 tags: ["adu cost", "san mateo county", "california", "permit fees", "2026"]
-draft: true
+draft: false
 series: ca-adu
 seriesCurrent: san-mateo-county-adu-cost
+verifiedPublished: "8 Nov 2026"
 lastVerified: "27 Oct 2026"
 nextReview: "Jan 2027"
 keyFacts:
@@ -32,9 +33,11 @@ faqs:
     answer: "The $1,621.96 in percentage surcharges, a conditional geotechnical report review ($892 building / $773 planning, only where a geotechnical report is required), a Department of Public Works review ($400, trigger unclear for an ADU), roadway mitigation fees (rate not located), Mid-Coast park fees (area-limited), and sewer and water connection and capacity charges from the serving special districts. Construction phases 2–6 are carried from the series baseline; the county does not publish phase-level construction costs."
 ---
 
-> **DRAFT — not published.** This post is a floor estimate built only from verified fee lines. Unverified fees are excluded, not estimated. Last verified 27 Oct 2026.
+> **Published:** 8 Nov 2026 · **Last verified:** 27 Oct 2026 · **Next review:** Jan 2027
+> Cost figures are re-checked against permit records quarterly. Changes are
+> logged in [Corrections](/corrections/).
 
-Unincorporated San Mateo County's $314,637 is the richest floor in this batch — and the first county draft in the series. Unlike a city post, it has a genuine permit stack computed from the county's own schedules, not a single fee line. It also has the batch's most honest complication: the school fee depends on the parcel's district, and the surcharges are quantified but deliberately uncounted.
+Unincorporated San Mateo County's $314,637 floor is the only ledger in this series built from a full county permit stack — $8,333 in flat county fees computed line by line from the county's own schedules, not a single fee line. It also has the series' most honest complication: the school fee depends on the parcel's district, and the surcharges are quantified but deliberately uncounted.
 
 The permit stack is the core of the post. The Building Service Fee Schedule (effective April 1, 2026) charges new residential construction at **$8.33 per square foot**, covering permit processing, plan review, and inspection — **$6,664** on 800 sq ft. The Full Review application filing fee adds **$595**. The Planning Service Fee Schedule (effective July 23, 2026) charges **$887** for Planning Review of Building Permit Plans including one resubmittal. The county fire review adds **$187** for single-family new construction under Note 7. That is **$8,333** in flat county fees before the school line.
 
@@ -109,7 +112,11 @@ Three state rules frame every number above. Under Government Code §65852.2(f)(3
 
 ## How San Mateo County compares
 
-Only published posts are used here. Published Bay Area totals: Palo Alto **~$303,000**, Fremont **$314,000**, Campbell **~$318,000**, Oakland **$322,000**. The county's $314,637 sits mid-band — and unlike the city floors around it, it already counts a full permit stack. Add the $1,621.96 in surcharges and it reaches about $316,259, still mid-band, before any parcel-specific fees. That completeness is the point: this floor is closer to a budget than the thinner city floors in this batch.
+Only published posts are used here. Published Bay Area totals: Palo Alto **~$313,000**, Campbell **~$310,000**, Oakland **$322,000**. The county's $314,637 sits mid-band — and unlike the city floors around it, it already counts a full permit stack. Add the $1,621.96 in surcharges and it reaches about $316,259, still mid-band, before any parcel-specific fees. That completeness is the point: this floor is closer to a budget than the thinner city floors around it.
+
+## A note on SB 1117
+
+Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. San Mateo County's Affordable Housing Impact Fee is already $0 for second units, and no per-square-foot impact fee is counted in this ledger, so SB 1117 changes nothing we can compute here — there is nothing to reduce. See the full comparison at [San Mateo County: 2026 vs 2027, line by line](/sb-1117/san-mateo-county/). School fees, permit fees and sewer/water charges are outside SB 1117's impact-fee definition and do not change.
 
 ## What this post does not claim
 
