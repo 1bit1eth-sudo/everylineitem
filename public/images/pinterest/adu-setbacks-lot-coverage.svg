@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1500" viewBox="0 0 1000 1500">
+<rect width="1000" height="1500" fill="#212737"/>
+<rect width="1000" height="8" fill="#ff6b01"/>
+<text x="60" y="96" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="52" font-weight="700" fill="#ffffff">Setbacks and Lot Coverage</text>
+<text x="60" y="146" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="26" fill="#afb9ca">The rules that shrink your floor plan</text>
+<line x1="60" y1="186" x2="940" y2="186" stroke="#343f60" stroke-width="2"/>
+<rect x="60" y="216" width="430" height="170" rx="12" fill="#343f60"/>
+<text x="84" y="258" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">SETBACK CAP (STATE)</text>
+<text x="84" y="318" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="48" font-weight="700" fill="#ff6b01">4 feet</text>
+<text x="84" y="358" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#eaedf3">side and rear lot lines · §66321(b)(3)</text>
+<rect x="510" y="216" width="430" height="170" rx="12" fill="#343f60"/>
+<text x="534" y="258" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">FLOOR CITIES MUST ALLOW</text>
+<text x="534" y="318" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="48" font-weight="700" fill="#ff6b01">800 sq ft</text>
+<text x="534" y="358" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#eaedf3">16 ft tall · §66314(d)(7)</text>
+<text x="60" y="456" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Coverage and FAR still apply</text>
+<text x="60" y="490" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#afb9ca">Coverage and FAR decide how much you can fill.</text>
+<text x="60" y="540" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#afb9ca">RULE</text>
+<text x="916" y="540" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#afb9ca">WHAT IT MEANS</text>
+<line x1="60" y1="556" x2="940" y2="556" stroke="#343f60" stroke-width="2"/>
+<rect x="60" y="570" width="880" height="104" rx="10" fill="#2d3550"/>
+<text x="84" y="618" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#eaedf3">4-foot cap</text>
+<text x="84" y="652" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">Cities cannot require more, side or rear</text>
+<text x="916" y="630" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#eaedf3">§66321(b)(3)</text>
+<rect x="60" y="690" width="880" height="104" rx="10" fill="#283046"/>
+<text x="84" y="738" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#eaedf3">Conversions</text>
+<text x="84" y="772" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">Existing structures need no setback</text>
+<text x="916" y="750" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#eaedf3">Walls stand where they stand</text>
+<rect x="60" y="810" width="880" height="104" rx="10" fill="#283046"/>
+<text x="84" y="858" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#eaedf3">Lot coverage / FAR</text>
+<text x="84" y="892" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">Footprint and floor-area caps still apply</text>
+<text x="916" y="870" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#eaedf3">45% of 5,000 sq ft = 2,250</text>
+<rect x="60" y="930" width="880" height="104" rx="10" fill="#283046"/>
+<text x="84" y="978" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#eaedf3">The 800 sq ft floor</text>
+<text x="84" y="1012" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">Coverage cannot shrink you below it</text>
+<text x="916" y="990" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#eaedf3">800 sq ft · 16 ft · 4-ft setbacks</text>
+<text x="60" y="1106" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#ff6b01">Design for both: the edges and the middle</text>
+<text x="60" y="1146" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="22" fill="#eaedf3">Under 750 sq ft, impact and school fees are $0.</text>
+<text x="60" y="1226" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">General guide to California ADU law, not legal advice</text>
+<text x="60" y="1256" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">Confirm your city's standards before designing</text>
+<rect x="0" y="1370" width="1000" height="130" fill="#1a1f2c"/>
+<line x1="60" y1="1370" x2="940" y2="1370" stroke="#ff6b01" stroke-width="4"/>
+<text x="60" y="1412" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#ff6b01">Every Line Item</text>
+<text x="60" y="1448" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="22" fill="#afb9ca">everylineitem.com</text>
+<text x="940" y="1448" text-anchor="end" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">California ADU Costs · 2026</text>
+</svg>
