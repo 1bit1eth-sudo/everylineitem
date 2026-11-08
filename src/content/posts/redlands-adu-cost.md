@@ -87,6 +87,8 @@ Every fee line we found, with exactly what it is and where it came from.
 
 Soft costs in the breakdown table are rounded to $21,000 (exact $20,992); the total is rounded to the nearest $1,000.
 
+The city's fee lines are also listed on the [Redlands fee page](/fees/redlands/), with verification status and source links.
+
 ## Eight lines, one ordinance, one cliff
 
 Every city in this series charges ADU impact fees, and most of them scatter the lines across several documents and several methods — flat, per-square-foot, pro-rata, percentage of valuation. Redlands puts all eight in Ordinance No. 2968, all per-square-foot, all with a 751 sq ft minimum. Open Space and Parks ($1.1794) and Transportation ($1.3954) together are $2.5748 per square foot — 47% of the $5.4405 total. The smallest line, Solid Waste at $0.0702, is $56.16 on our example: real money, but barely a rounding error against the whole.
