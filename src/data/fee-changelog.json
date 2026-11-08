@@ -2,6 +2,27 @@
   "entries": [
     {
       "date": "2026-11-08",
+      "detail": "Clovis Unified School District's official Developer Fees page (retrieved November 8, 2026) posts Residential New Construction (Level 2) at $6.38/sq ft and states ADUs over 500 sq ft are 'generally assessed in a manner consistent with new residential construction, and fees are applied to the entire square footage of the unit' (Ed. Code §17620); ADUs of 500 sq ft or less are exempt under Gov. Code §66311.5(c)(3). The item stays unverified: the district page never states 'an ADU is charged $6.38' in so many words, the adopting resolution and effective date for the Level II rate were not found, and district boundaries do not match city boundaries (verify per parcel). The $5,104 figure for an 800 sq ft ADU is not published as an official figure. Clovis now has 15 fee rows, all unverified.",
+      "headline": "Clovis school fee line added (unverified): Clovis USD Level II $6.38/sq ft for ADUs over 500 sq ft",
+      "items_added": 1,
+      "jurisdictions": ["Clovis"]
+    },
+    {
+      "date": "2026-11-08",
+      "headline": "Vacaville development impact fees verified from the 2026 city schedule (6 items)",
+      "detail": "Vacaville's 2026 Connection & Development Impact Fees schedule (effective January 1, 2026, ENR 1.1%) adds 12 line items. Six development impact fees are verified and prorated to the primary dwelling under VMC Ch. 11.01 (Ord. 2005): traffic $6,965, park and recreation $4,176, fire $520, police $371, general facilities $497, greenbelt $176 (all single-family, less than 1,000 sq ft band); at the 1,600 sq ft default primary, an 800 sq ft ADU pays $6,354 of city DIF, and ADUs under 750 sq ft pay $0. Water and sewer connection fees ($13,023/$11,465 water, $6,408/$5,184 sewer, $3,526 meter install) stay unverified: whether a detached ADU on a served lot triggers a new connection is unconfirmed. School fees stay unverified at $5.17/sq ft: the city sheet defers to the districts and predates the SAB's January 2026 increase to $5.38, and neither Vacaville USD nor Travis USD has a published 2026 adoption.",
+      "jurisdictions": ["Vacaville"],
+      "items_added": 12
+    },
+    {
+      "date": "2026-11-08",
+      "headline": "Carlsbad: boundary school districts modelled as exclusive areas; FY 2026-27 schedule rows added",
+      "detail": "Carlsbad gains 17 fee rows in one consolidated branch (replacing four October boundary branches and the November 5 schedule branch, which could not merge together). The four boundary school rows now carry area tags so a parcel pays one district's fee, never the sum: Carlsbad USD $5.38/sq ft verified (FI-534), San Dieguito Union HSD $2.83 + Encinitas Union SD $2.55 verified as one paired area totalling the $5.38 cap (FI-535/FI-536), San Marcos USD $5.17 to_verify (FI-537; $5.17 basis corroborated by the district's FY 2024-25 annual report, 2026 $5.38 adoption still unconfirmed). Without the tags the three verified rows summed to $10.76/sq ft ($8,608 at 800 sq ft); each area now totals $4,304. Thirteen FY 2026-27 Master Fee Schedule rows added as to_verify (sewer General Capacity $1,294/EDU, Affordable Housing Impact $2,925/unit, Public Facilities Fee 1.82%/3.5% of valuation, water connection/capacity endpoints, Certificate of Occupancy $89, SWPPP $221, Waste Management $45). The duplicate CUSD to_verify row CARLSBAD-NEW-01 was dropped (verified FI-534 covers it). FI-006 $3,000 permit placeholder stays to_verify. Jurisdiction fee_schedule_url now points to the FY 2026-27 Master Fee Schedule.",
+      "jurisdictions": ["Carlsbad"],
+      "items_added": 17
+    },
+    {
+      "date": "2026-11-08",
       "headline": "Five more city cost posts published; ADU financing guide goes live",
       "detail": "Five new city cost posts published (San Mateo County $314,637 floor, Grover Beach $305,000 floor, Chico $308,000 floor, Watsonville $308,000 floor, Vallejo $307,000 floor; published city posts 48 to 53). ADU financing guide published: HELOC vs construction loan vs cash-out refinance for a $320,000 build, with the CalHFA grant corrected to past tense (fully allocated December 28, 2023). Moreno Valley impact-fee framing corrected ($0 City DIF only; proportional lines apply at 750+ sq ft).",
       "jurisdictions": [
