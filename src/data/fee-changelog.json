@@ -1,6 +1,34 @@
 {
   "entries": [
     {
+      "date": "2026-11-09",
+      "detail": "Diamond Bar gains 15 fee rows (port of the November 5 draft, re-verified November 9). Eight plan-check/permit lines are verified from the City of Diamond Bar FY 2026-27 Fee Schedule - Building Construction Fees (effective July 1, 2026): permit-fee tiers ($100,001+ band $2,738.66 + $20.45/$1,000), plan check 85% of permit fee, Energy Enforcement 10%, Permit System Replacement 15.3%, General Plan Update 6%, Records Archiving 1%, SMIP 0.013% residential, BSASRF $1 per $25,000. They carry no total yet: Diamond Bar has no valuation basis on file, so feeCalc skips valuation-based lines. Seven rows stay unverified: Certificate of Occupancy $306 (general schedule line only, no ADU-specific line - cf. FI-463); Traffic $900, Park $2,175 and Sewer Connection $2,410 (March 2021 draft Housing Element Table IV-6 amounts only - current amounts unconfirmed, annual CPI adjustment applies); Walnut Valley USD school fee $5.17/sq ft (FY 2024/25 confirmed; April 2026 Level I study justifies $5.38 but board adoption unconfirmed; area-tagged Walnut Valley USD, Pomona USD share unconfirmed); Walnut Valley Water District capacity charges $5,630 (5/8- or 3/4-inch) and $9,384 (1-inch) (September 2025 Rules & Regulations App. C, new or larger connections only - ADU applicability unconfirmed).",
+      "headline": "Diamond Bar fee rows added (15): 8 permit lines verified from the FY 2026-27 schedule; 7 rows stay unverified",
+      "items_added": 15,
+      "jurisdictions": ["Diamond Bar"]
+    },
+    {
+      "date": "2026-11-09",
+      "headline": "Vacaville ADU planning fee found: $2,794 flat (FY 2026-27 schedule)",
+      "detail": "The City of Vacaville's FY 2026-27 Service and Facility Rental Fees workbook (Planning Applications table) lists 'Accessory Dwelling Units' at $2,794 flat — the first row of the Planning Division fee table, found via the Planning Division Forms and Fees page. This closes matrix target #6, which was 'Not found' because the master fee schedule had not been located; ADUs are ministerial under VMC §14.09.270.040, but the city still charges the planning application fee (the ADU submittal checklist requires City Planner approval before the checklist is completed). The fee is verified, applies to the 800 sq ft spec scenario in full, and is not an impact fee, so SB 1117 (effective January 1, 2027) does not change it. Vacaville now has 14 fee rows (9 verified).",
+      "jurisdictions": ["Vacaville"],
+      "items_added": 1
+    },
+    {
+      "date": "2026-11-08",
+      "detail": "Vacaville's school fees are verified and split into two exclusive areas (a parcel pays one district's fee, never both). Vacaville USD: $5.38/sq ft residential, verified on the district's own Developer Fee Information page (ADUs of 500+ sq ft charged on the entire new square footage; under 500 sq ft exempt), corroborated by the district's 2026 Addendum to Fee Justification Study (Public Economics, July 8, 2026) justifying the $5.38 maximum; the adopting resolution and effective date were not found, so no effective date is stated. Travis USD: $5.17/sq ft Level I residential from May 5, 2025, verified on the district's 2024-25 Developer Fee Annual and Five-Year Report (Oct 14, 2025). That report also resolves the old $6.78 figure: it was Travis USD's Level II rate from May 5, 2024 to May 4, 2025, and Level II collection ended May 5, 2025. Vacaville's verified total for an 800 sq ft ADU is now $10,490 (Travis USD area) to $10,658 (Vacaville USD area) across 7 line items.",
+      "headline": "Vacaville school fees verified: Vacaville USD $5.38, Travis USD $5.17 (exclusive areas)",
+      "items_added": 1,
+      "jurisdictions": ["Vacaville"]
+    },
+    {
+      "date": "2026-11-08",
+      "detail": "Seven development-scale lines from the Master Development Fee Schedule 2024-2025 (eff. July 21, 2025) recorded as unverified rows CLOVIS-NEW-16..22: Water Supply $13,880/gross acre, Utility Undergrounding Area 1 $9,119/gross acre, Sewer Oversize $1,123/gross acre, Sewer Front Footage $32.30/linear foot, Water Oversize $1,826/gross acre, Water Front Footage $29.75/linear foot, Fire Transition $1,209/gross acre. They are charged per gross acre (or per linear foot) of a development, and the city has published no rule for how they apply to a single ADU on an already-developed lot, so no ADU figure is shown for them and they are excluded from all calculator totals. The Fire Transition Fee's purpose and definition were not found in any retrieved city document. Fire/Police 'Growth Areas' rows (CLOVIS-NEW-03/04) now cite the nexus basis (all land uses, entire sphere of influence); the $6,127 Loma Vista line is confirmed as the Neighborhood Park Deposit for Street Area 4, not part of the Area 4 street total. Clovis now has 22 fee rows, all unverified.",
+      "headline": "Clovis: seven development-scale fee lines recorded (unverified); Fire/Police nexus basis added",
+      "items_added": 7,
+      "jurisdictions": ["Clovis"]
+    },
+    {
       "date": "2026-11-08",
       "detail": "Clovis Unified School District's official Developer Fees page (retrieved November 8, 2026) posts Residential New Construction (Level 2) at $6.38/sq ft and states ADUs over 500 sq ft are 'generally assessed in a manner consistent with new residential construction, and fees are applied to the entire square footage of the unit' (Ed. Code §17620); ADUs of 500 sq ft or less are exempt under Gov. Code §66311.5(c)(3). The item stays unverified: the district page never states 'an ADU is charged $6.38' in so many words, the adopting resolution and effective date for the Level II rate were not found, and district boundaries do not match city boundaries (verify per parcel). The $5,104 figure for an 800 sq ft ADU is not published as an official figure. Clovis now has 15 fee rows, all unverified.",
       "headline": "Clovis school fee line added (unverified): Clovis USD Level II $6.38/sq ft for ADUs over 500 sq ft",
