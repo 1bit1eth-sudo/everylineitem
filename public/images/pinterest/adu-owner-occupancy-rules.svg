@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1500" viewBox="0 0 1000 1500">
+<rect width="1000" height="1500" fill="#212737"/>
+<rect width="1000" height="8" fill="#ff6b01"/>
+<text x="60" y="96" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="52" font-weight="700" fill="#ffffff">ADU Owner-Occupancy Rules</text>
+<text x="60" y="146" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="26" fill="#afb9ca">Standard ADUs: no · JADUs: it depends</text>
+<line x1="60" y1="186" x2="940" y2="186" stroke="#343f60" stroke-width="2"/>
+<rect x="60" y="216" width="430" height="170" rx="12" fill="#343f60"/>
+<text x="84" y="258" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">STANDARD ADU</text>
+<text x="84" y="318" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="40" font-weight="700" fill="#ff6b01">No requirement</text>
+<text x="84" y="358" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#eaedf3">Rent both units · live anywhere</text>
+<rect x="510" y="216" width="430" height="170" rx="12" fill="#343f60"/>
+<text x="534" y="258" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">JADU — AB 1154 (2026)</text>
+<text x="534" y="318" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="40" font-weight="700" fill="#ff6b01">Shared bath</text>
+<text x="534" y="358" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#eaedf3">Owner must occupy one unit</text>
+<text x="60" y="456" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">The bottom line, by unit type</text>
+<text x="60" y="490" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#afb9ca">The rule follows the property, not the person.</text>
+<text x="60" y="540" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#afb9ca">UNIT TYPE</text>
+<text x="916" y="540" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#afb9ca" text-anchor="end">OCCUPANCY</text>
+<line x1="60" y1="556" x2="940" y2="556" stroke="#343f60" stroke-width="2"/>
+<rect x="60" y="570" width="880" height="104" rx="10" fill="#2d3550"/>
+<text x="84" y="618" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#eaedf3">Standard detached ADU</text>
+<text x="84" y="652" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">State law bars the requirement</text>
+<text x="916" y="630" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#eaedf3" text-anchor="end">No</text>
+<rect x="60" y="690" width="880" height="104" rx="10" fill="#283046"/>
+<text x="84" y="738" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#eaedf3">Attached / garage conversion</text>
+<text x="84" y="772" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">Same protection as detached</text>
+<text x="916" y="750" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#eaedf3" text-anchor="end">No</text>
+<rect x="60" y="810" width="880" height="104" rx="10" fill="#283046"/>
+<text x="84" y="858" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#eaedf3">JADU, shared bathroom</text>
+<text x="84" y="892" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">Owner must occupy one unit</text>
+<text x="916" y="870" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#eaedf3" text-anchor="end">Yes</text>
+<rect x="60" y="930" width="880" height="104" rx="10" fill="#283046"/>
+<text x="84" y="978" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#eaedf3">SB 9 lot split</text>
+<text x="84" y="1012" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">3-year applicant affidavit</text>
+<text x="916" y="990" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#eaedf3" text-anchor="end">Yes — different regime</text>
+<text x="60" y="1106" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#ff6b01">No, you don't have to live there.</text>
+<text x="60" y="1146" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="22" fill="#eaedf3">Don't let SB 9 confusion talk you out of it.</text>
+<text x="60" y="1226" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">General information only · not legal advice</text>
+<text x="60" y="1256" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">Check your city's ordinance for local strings</text>
+<rect x="0" y="1370" width="1000" height="130" fill="#1a1f2c"/>
+<line x1="60" y1="1370" x2="940" y2="1370" stroke="#ff6b01" stroke-width="4"/>
+<text x="60" y="1412" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#ff6b01">Every Line Item</text>
+<text x="60" y="1448" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="22" fill="#afb9ca">everylineitem.com</text>
+<text x="940" y="1448" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca" text-anchor="end">California ADU Costs · 2026</text>
+</svg>

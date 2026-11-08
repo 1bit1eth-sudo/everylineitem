@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1500" viewBox="0 0 1000 1500">
+<rect width="1000" height="1500" fill="#212737"/>
+<rect width="1000" height="8" fill="#ff6b01"/>
+<text x="60" y="96" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="48" font-weight="700" fill="#ffffff">Sell an ADU Separately?</text>
+<text x="60" y="146" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="26" fill="#afb9ca">AB 1033 is a permission slip for cities</text>
+<line x1="60" y1="186" x2="940" y2="186" stroke="#343f60" stroke-width="2"/>
+<rect x="60" y="216" width="430" height="170" rx="12" fill="#343f60"/>
+<text x="84" y="258" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">WITHOUT A LOCAL ORDINANCE</text>
+<text x="84" y="318" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="48" font-weight="700" fill="#ff6b01">No sale</text>
+<text x="84" y="358" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#eaedf3">Your city must opt in first</text>
+<rect x="510" y="216" width="430" height="170" rx="12" fill="#343f60"/>
+<text x="534" y="258" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">LIENHOLDER CONSENT</text>
+<text x="534" y="318" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="40" font-weight="700" fill="#ff6b01">Every one</text>
+<text x="534" y="358" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#eaedf3">A veto point, not a formality</text>
+<text x="60" y="456" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">The four state requirements</text>
+<text x="60" y="490" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#afb9ca">Every local ordinance must include all four.</text>
+<text x="60" y="540" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#afb9ca">REQUIREMENT</text>
+<text x="916" y="540" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#afb9ca" text-anchor="end">DETAIL</text>
+<line x1="60" y1="556" x2="940" y2="556" stroke="#343f60" stroke-width="2"/>
+<rect x="60" y="570" width="880" height="104" rx="10" fill="#2d3550"/>
+<text x="84" y="618" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#eaedf3">Davis-Stirling Act</text>
+<text x="84" y="652" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">Create the condo under CID law</text>
+<text x="916" y="630" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#eaedf3" text-anchor="end">HOA + disclosures</text>
+<rect x="60" y="690" width="880" height="104" rx="10" fill="#283046"/>
+<text x="84" y="738" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#eaedf3">Subdivision Map Act</text>
+<text x="84" y="772" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">Record a condominium plan</text>
+<text x="916" y="750" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#eaedf3" text-anchor="end">Map + plan</text>
+<rect x="60" y="810" width="880" height="104" rx="10" fill="#283046"/>
+<text x="84" y="858" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#eaedf3">Safety inspection</text>
+<text x="84" y="892" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">Before the plan is recorded</text>
+<text x="916" y="870" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#eaedf3" text-anchor="end">C of O or HUD report</text>
+<rect x="60" y="930" width="880" height="104" rx="10" fill="#283046"/>
+<text x="84" y="978" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#eaedf3">Lienholder consent</text>
+<text x="84" y="1012" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">Written consent from each lienholder</text>
+<text x="916" y="990" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" fill="#eaedf3" text-anchor="end">No consent, no sale</text>
+<text x="60" y="1106" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#ff6b01">Start with your city's ordinance</text>
+<text x="60" y="1146" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="22" fill="#eaedf3">and with your lender — before you start with a map.</text>
+<text x="60" y="1226" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">Legislative summary · not legal advice</text>
+<text x="60" y="1256" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca">No fee amounts — cost items only</text>
+<rect x="0" y="1370" width="1000" height="130" fill="#1a1f2c"/>
+<line x1="60" y1="1370" x2="940" y2="1370" stroke="#ff6b01" stroke-width="4"/>
+<text x="60" y="1412" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#ff6b01">Every Line Item</text>
+<text x="60" y="1448" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="22" fill="#afb9ca">everylineitem.com</text>
+<text x="940" y="1448" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="18" fill="#afb9ca" text-anchor="end">California ADU Costs · 2026</text>
+</svg>
