@@ -105,7 +105,7 @@ const cliffLow = isAreaJuris
   ? Math.min(...cliffByArea.map(c => c.amount))
   : cliffAmount;
 const showCliff = cliffAmount > 0;
-const cliffDisplay = isAreaJuris
+const cliffDisplay = isAreaJuris && cliffLow !== cliffAmount
   ? `${fmtUSD(cliffLow)}–${fmtUSD(cliffAmount)}`
   : fmtUSD(cliffAmount);
 
@@ -128,7 +128,7 @@ const longTitle = `${juris.name} ADU Fees in 2026: Every Line Item, Sourced`;
 const title = longTitle.length <= 60 ? longTitle : `${juris.name} ADU Fees 2026, Line by Line`.length <= 60 ? `${juris.name} ADU Fees 2026, Line by Line` : `${juris.name} ADU Fees 2026`;
 const description = verifiedLines.length > 0
   ? isAreaJuris
-    ? `Verified government fees for an ADU in ${juris.name}, CA — ${fmtUSD(verifiedTotalLow)}–${fmtUSD(verifiedTotalHigh)} across areas for an ${SQFT} sq ft ADU (a parcel pays one area schedule, not both). Every figure links to its official source.`
+    ? `Verified government fees for an ADU in ${juris.name}, CA — ${fmtUSD(verifiedTotalLow)}${verifiedTotalHigh !== verifiedTotalLow ? `–${fmtUSD(verifiedTotalHigh)}` : ""} across areas for an ${SQFT} sq ft ADU (a parcel pays one area schedule, not both). Every figure links to its official source.`
     : `Verified government fees for an ADU in ${juris.name}, CA — ${fmtUSD(verifiedTotalLow)} across ${verifiedLines.length} line items for an ${SQFT} sq ft ADU. Every figure links to its official source.`
   : `ADU fees in ${juris.name}, CA — our researchers are verifying every line item against official sources. The 750 sq ft state-law cliff, explained.`;
 
@@ -218,7 +218,7 @@ const faqSchema = {
             <p class="text-sm opacity-60">Verified fees, {SQFT} sq ft ADU</p>
             <p class="mt-1 text-2xl font-bold tabular-nums">
               {fmtUSD(verifiedTotalLow)}
-              {verifiedHasRange && `–${fmtUSD(verifiedTotalHigh)}`}
+              {verifiedHasRange && verifiedTotalHigh !== verifiedTotalLow && `–${fmtUSD(verifiedTotalHigh)}`}
             </p>
             <p class="mt-1 text-sm opacity-60">
               {isAreaJuris
