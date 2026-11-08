@@ -1,6 +1,6 @@
 ---
 title: "San Bernardino ADU Fees 2026: The Clearest 750 Sq Ft Cliff in California Code"
-description: "An 800 sq ft detached ADU in San Bernardino priced phase by phase — $316,000*. The city with the clearest 750 sq ft cliff in California code: §19.04.030 spells out the pro-rata impact-fee formula in plain ordinance language. School fees confirmed at $4,304; the building permit schedule and water/sewer dollar figures are not published."
+description: "An 800 sq ft detached ADU in San Bernardino priced phase by phase — $316,000 floor. The city with the clearest 750 sq ft cliff in California code: §19.04.030 spells out the pro-rata impact-fee formula in plain ordinance language. School fees confirmed at $4,304; the building permit schedule and water/sewer dollar figures are not published."
 pubDatetime: 2026-10-28T01:00:00Z
 author: "Every Line Item"
 tags: ["adu cost", "san-bernardino", "california", "permit fees", "2026"]

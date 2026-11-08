@@ -1,6 +1,6 @@
 ---
-title: "Upland ADU Cost 2026: $308,000 — A Parks-Heavy DIF Schedule"
-description: "An 800 sq ft detached ADU in Upland priced phase by phase — $308,000. The Parks DIF at $4.80 per square foot is 61% of all per-square-foot lines, the cliff is published on the city's own ADU page, and the SB 1117 saving at 1,000 sq ft is $5,235. School and permit fees are not yet verified, so this total is a floor."
+title: "Upland ADU Cost 2026: $308,000 Floor — A Parks-Heavy DIF Schedule"
+description: "An 800 sq ft detached ADU in Upland priced phase by phase — $308,000 floor. The Parks DIF at $4.80 per square foot is 61% of all per-square-foot lines, the cliff is published on the city's own ADU page, and the SB 1117 saving at 1,000 sq ft is $5,235. School and permit fees are not yet verified, so this total is a floor."
 pubDatetime: 2026-11-07T01:00:00Z
 author: "Every Line Item"
 tags: ["adu cost", "upland", "california", "permit fees", "2026"]

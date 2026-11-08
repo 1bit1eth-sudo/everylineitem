@@ -4,6 +4,58 @@
 // Corrections (2026-10-30): (1) section number §66324 -> §66311.5 (impact-fee rules live in §66311.5)
 // (2) exemption boundary <750 -> ≤750 (current §66311.5(c)(1)(A) exempts "750 sq ft or less"; the cliff starts at 751)
 // (3) SB 1117 comparison added (effective 2027-01-01; up to 2 ADUs charged only on area above 750 sq ft)
+// Corrections (2026-11-08): (4) the base fee is no longer an unsourced "$28,000 (CA Avg)".
+// It defaults to the fee calculator's jurisdiction's VERIFIED impact fees at
+// 1,600 sq ft (single-family scale: at ADU size = primary size the proration
+// reproduces the verified impact total). When that city has no verified
+// impact fees, the slider is a labeled modeled example instead.
+// (5) primary-dwelling default 1,800 -> 1,600 sq ft, matching the site-wide
+// default (FeeCalculator, JurisdictionCompare, /fee-index/, SB 1117 pages).
+import rawFeesJson from "../data/fees.json";
+import {
+  calcJurisdiction,
+  jurisAreas,
+  DEFAULT_PRIMARY_SQFT,
+  type FeeData,
+} from "../lib/feeCalc";
+
+const data = rawFeesJson as unknown as FeeData;
+// Same default jurisdiction as the fee calculator above this tool.
+const DEFAULT_JURIS = "SAN-JOSE";
+/** Single-family scale: the base fee is the verified impact total at 1,600 sq ft. */
+const BASE_SQFT = 1600;
+const MODELLED_BASE = 28000;
+
+/** Verified impact fees at single-family scale; 0 when none are verified. Area jurisdictions take their max area. */
+function verifiedBaseAtSingleFamilyScale(jurisId: string, area: string | null): number {
+  const areas = jurisAreas(data, jurisId);
+  const variants: (string | null)[] =
+    area != null ? [area] : areas.length > 0 ? areas : [null];
+  let best = 0;
+  for (const a of variants) {
+    const r = calcJurisdiction(data, jurisId, BASE_SQFT, {
+      primarySqft: DEFAULT_PRIMARY_SQFT,
+      area: a,
+      verifiedOnly: true,
+    });
+    if (r.impactLow > best) best = r.impactLow;
+  }
+  return best;
+}
+
+const defaultVerifiedBase = verifiedBaseAtSingleFamilyScale(DEFAULT_JURIS, null);
+const defaultBase = defaultVerifiedBase > 0 ? defaultVerifiedBase : MODELLED_BASE;
+const defaultIsVerified = defaultVerifiedBase > 0;
+const defaultJurisName = calcJurisdiction(data, DEFAULT_JURIS, BASE_SQFT, {
+  primarySqft: DEFAULT_PRIMARY_SQFT,
+  verifiedOnly: true,
+}).juris.name;
+const fmtUSD = (n: number) => "$" + Math.round(n).toLocaleString("en-US");
+const defaultSourceText = defaultIsVerified
+  ? `Verified — ${defaultJurisName} impact fees at 1,600 sq ft: ${fmtUSD(defaultVerifiedBase)}. Move the slider to model a different base.`
+  : `Modeled example — ${defaultJurisName} has no verified impact fees on file, so this ${fmtUSD(MODELLED_BASE)} is an example, not a city figure. Pick a city in the calculator above to use its verified figure.`;
+// Default proportional fee at 750 sq ft (exempt zone) for the static banner.
+const defaultSaving = Math.round(defaultBase * (750 / DEFAULT_PRIMARY_SQFT));
 ---
 
 <section class="eli-cliff-wrapper" aria-label="California ADU 750 sq ft Impact Fee Cliff Calculator">
@@ -38,9 +90,9 @@
       <div class="eli-cliff-input-group">
         <div class="eli-cliff-label-row">
           <label for="eli-primary-sqft">Existing Primary Home Size</label>
-          <span class="eli-cliff-val" id="eli-primary-sqft-display">1,800 sq ft</span>
+          <span class="eli-cliff-val" id="eli-primary-sqft-display">1,600 sq ft</span>
         </div>
-        <input type="range" id="eli-primary-sqft" min="1000" max="4000" step="50" value="1800" />
+        <input type="range" id="eli-primary-sqft" min="1000" max="4000" step="50" value="1600" />
         <div class="eli-cliff-range-hints">
           <span>1,000 sq ft</span>
           <span>2,500 sq ft</span>
@@ -51,14 +103,14 @@
       <div class="eli-cliff-input-group">
         <div class="eli-cliff-label-row">
           <label for="eli-base-fee">Jurisdiction Base Single-Family Impact Fee</label>
-          <span class="eli-cliff-val" id="eli-base-fee-display">$28,000</span>
+          <span class="eli-cliff-val" id="eli-base-fee-display">{fmtUSD(defaultBase)}</span>
         </div>
-        <input type="range" id="eli-base-fee" min="5000" max="65000" step="1000" value="28000" />
+        <input type="range" id="eli-base-fee" min="5000" max="100000" step="1000" value={defaultBase} />
         <div class="eli-cliff-range-hints">
           <span>$5,000 (Low)</span>
-          <span>$28,000 (CA Avg)</span>
-          <span>$65,000 (High)</span>
+          <span>$100,000 (High)</span>
         </div>
+        <p class="eli-cliff-source" id="eli-base-fee-source">{defaultSourceText}</p>
       </div>
 
       <div class="eli-cliff-quick-btn-row">
@@ -70,7 +122,7 @@
     <!-- Right: live calculation results -->
     <div class="eli-cliff-results">
       <div id="eli-status-banner" class="eli-cliff-banner eli-cliff-banner-ok">
-        <strong>Exempt Zone (750 sq ft or less):</strong> Your ADU qualifies for $0 local development impact fees under California state law, saving you <strong>$11,667</strong>.
+        <strong>Exempt Zone (750 sq ft or less):</strong> Your ADU qualifies for $0 local development impact fees under California state law, saving you <strong>{fmtUSD(defaultSaving)}</strong>.
       </div>
 
       <div class="eli-cliff-cards">
@@ -124,7 +176,7 @@
             <td><strong>Unproportional Flat Cap</strong></td>
             <td id="eli-table-flat-sqft">750 sq ft</td>
             <td>Legacy Full Single-Family Rate</td>
-            <td id="eli-table-flat-fee">$28,000</td>
+            <td id="eli-table-flat-fee">{fmtUSD(defaultBase)}</td>
           </tr>
         </tbody>
       </table>
@@ -228,6 +280,12 @@
     font-size: 11px;
     color: #64748b;
     margin-top: 4px;
+  }
+  .eli-cliff-source {
+    font-size: 12px;
+    color: #475569;
+    line-height: 1.45;
+    margin: 8px 0 0 0;
   }
   .eli-cliff-highlight-mark {
     color: #b45309;
@@ -343,77 +401,160 @@
   }
 </style>
 
-<script is:inline>
-  (function () {
-    const aduInput = document.getElementById("eli-adu-sqft");
-    const primaryInput = document.getElementById("eli-primary-sqft");
-    const baseFeeInput = document.getElementById("eli-base-fee");
+<script>
+  import { calcJurisdiction, jurisAreas } from "../lib/feeCalc";
 
-    const aduDisplay = document.getElementById("eli-adu-sqft-display");
-    const primaryDisplay = document.getElementById("eli-primary-sqft-display");
-    const baseFeeDisplay = document.getElementById("eli-base-fee-display");
+  // The fee calculator above this tool embeds the same public fee data
+  // (#fee-data) and its jurisdiction selector (#fee-juris). This tool reads
+  // both, so its base fee follows the selected city instead of a guess.
+  const dataEl = document.getElementById("fee-data");
+  const feeData = dataEl ? JSON.parse(dataEl.textContent || "null") : null;
+  const jurisSel = document.getElementById("fee-juris") as HTMLSelectElement | null;
+  const areaWrap = document.getElementById("fee-area-wrap") as HTMLElement | null;
+  const areaSel = document.getElementById("fee-area") as HTMLSelectElement | null;
 
-    const statusBanner = document.getElementById("eli-status-banner");
-    const finalFeeEl = document.getElementById("eli-final-fee");
-    const feeFormulaEl = document.getElementById("eli-fee-formula");
-    const sbLineEl = document.getElementById("eli-sb-line");
+  const aduInput = document.getElementById("eli-adu-sqft") as HTMLInputElement;
+  const primaryInput = document.getElementById("eli-primary-sqft") as HTMLInputElement;
+  const baseFeeInput = document.getElementById("eli-base-fee") as HTMLInputElement;
 
-    const tableCurrentSqft = document.getElementById("eli-table-current-sqft");
-    const tableCurrentRule = document.getElementById("eli-table-current-rule");
-    const tableCurrentFee = document.getElementById("eli-table-current-fee");
-    const tableSbSqft = document.getElementById("eli-table-sb-sqft");
-    const tableSbFee = document.getElementById("eli-table-sb-fee");
-    const tableFlatSqft = document.getElementById("eli-table-flat-sqft");
-    const tableFlatFee = document.getElementById("eli-table-flat-fee");
+  const aduDisplay = document.getElementById("eli-adu-sqft-display");
+  const primaryDisplay = document.getElementById("eli-primary-sqft-display");
+  const baseFeeDisplay = document.getElementById("eli-base-fee-display");
+  const baseFeeSource = document.getElementById("eli-base-fee-source");
 
-    const btn750 = document.getElementById("eli-btn-750");
-    const btn751 = document.getElementById("eli-btn-751");
+  const statusBanner = document.getElementById("eli-status-banner");
+  const finalFeeEl = document.getElementById("eli-final-fee");
+  const feeFormulaEl = document.getElementById("eli-fee-formula");
+  const sbLineEl = document.getElementById("eli-sb-line");
 
-    function formatUSD(num) {
-      return "$" + Math.round(num).toLocaleString("en-US");
+  const tableCurrentSqft = document.getElementById("eli-table-current-sqft");
+  const tableCurrentRule = document.getElementById("eli-table-current-rule");
+  const tableCurrentFee = document.getElementById("eli-table-current-fee");
+  const tableSbSqft = document.getElementById("eli-table-sb-sqft");
+  const tableSbFee = document.getElementById("eli-table-sb-fee");
+  const tableFlatSqft = document.getElementById("eli-table-flat-sqft");
+  const tableFlatFee = document.getElementById("eli-table-flat-fee");
+
+  const btn750 = document.getElementById("eli-btn-750");
+  const btn751 = document.getElementById("eli-btn-751");
+
+  // Single-family scale: the base fee is the selected city's verified
+  // impact fees at 1,600 sq ft. At ADU size = primary size the proration
+  // reproduces the verified impact total, so the demo stays consistent
+  // with the calculator above.
+  const BASE_SQFT = 1600;
+  const MODELLED_BASE = 28000;
+  let verifiedBase = 0;
+  let verifiedJurisName = "";
+  let userOverrodeBase = false;
+
+  function formatUSD(num: number) {
+    return "$" + Math.round(num).toLocaleString("en-US");
+  }
+
+  function selectedArea(): string | null {
+    return areaWrap && !areaWrap.hidden && areaSel && areaSel.value
+      ? areaSel.value
+      : null;
+  }
+
+  function computeVerifiedBase(): { base: number; name: string } {
+    if (!feeData || !jurisSel) return { base: 0, name: "" };
+    const jurisId = jurisSel.value;
+    const areas = jurisAreas(feeData, jurisId);
+    const area = selectedArea();
+    const variants: (string | null)[] =
+      area != null ? [area] : areas.length > 0 ? areas : [null];
+    let best = 0;
+    let name = "";
+    for (const a of variants) {
+      const r = calcJurisdiction(feeData, jurisId, BASE_SQFT, {
+        primarySqft: BASE_SQFT,
+        area: a,
+        verifiedOnly: true,
+      });
+      name = r.juris.name;
+      if (r.impactLow > best) best = r.impactLow;
     }
+    return { base: best, name };
+  }
 
-    function updateCalculator() {
-      const aduSqft = parseInt(aduInput.value, 10);
-      const primarySqft = parseInt(primaryInput.value, 10);
-      const baseFee = parseInt(baseFeeInput.value, 10);
+  function sourceText(): string {
+    const baseFee = parseInt(baseFeeInput.value, 10);
+    if (verifiedBase > 0 && !userOverrodeBase) {
+      return (
+        `Verified \u2014 ${verifiedJurisName} impact fees at 1,600 sq ft: ` +
+        `${formatUSD(verifiedBase)}. Move the slider to model a different base.`
+      );
+    }
+    if (userOverrodeBase) {
+      return verifiedBase > 0
+        ? `Modeled \u2014 your input: ${formatUSD(baseFee)}. ` +
+            `${verifiedJurisName}'s verified figure is ${formatUSD(verifiedBase)} at 1,600 sq ft.`
+        : `Modeled \u2014 your input: ${formatUSD(baseFee)}. ` +
+            `${verifiedJurisName || "This jurisdiction"} has no verified impact fees on file.`;
+    }
+    return (
+      `Modeled example \u2014 ${verifiedJurisName || "This jurisdiction"} has no verified ` +
+      `impact fees on file, so this ${formatUSD(MODELLED_BASE)} is an example, not a city figure. ` +
+      `Pick a city in the calculator above to use its verified figure.`
+    );
+  }
 
-      aduDisplay.textContent = aduSqft.toLocaleString("en-US") + " sq ft";
-      primaryDisplay.textContent = primarySqft.toLocaleString("en-US") + " sq ft";
-      baseFeeDisplay.textContent = formatUSD(baseFee);
+  function syncBaseFromJurisdiction() {
+    const { base, name } = computeVerifiedBase();
+    verifiedBase = base;
+    verifiedJurisName = name;
+    userOverrodeBase = false;
+    baseFeeInput.value = String(base > 0 ? base : MODELLED_BASE);
+    updateCalculator();
+  }
 
-      const ratio = Math.min(aduSqft / primarySqft, 1);
-      const proportionalFee = Math.round(baseFee * ratio);
-      // Current law: Gov. Code § 66311.5(c)(1)(A) exempts ADUs of 750 sq ft OR LESS.
-      const isExempt = aduSqft <= 750;
-      const actualFee = isExempt ? 0 : proportionalFee;
+  function updateCalculator() {
+    const aduSqft = parseInt(aduInput.value, 10);
+    const primarySqft = parseInt(primaryInput.value, 10);
+    const baseFee = parseInt(baseFeeInput.value, 10);
 
-      // SB 1117 (from Jan 1, 2027, up to 2 ADUs): only the area in excess of
-      // 750 sq ft is charged, proportionally against the primary home.
-      const excessSqft = Math.max(0, aduSqft - 750);
-      const sbFee = Math.round(baseFee * Math.min(excessSqft / primarySqft, 1));
-      const sbSavings = actualFee - sbFee;
+    if (aduDisplay) aduDisplay.textContent = aduSqft.toLocaleString("en-US") + " sq ft";
+    if (primaryDisplay) primaryDisplay.textContent = primarySqft.toLocaleString("en-US") + " sq ft";
+    if (baseFeeDisplay) baseFeeDisplay.textContent = formatUSD(baseFee);
+    if (baseFeeSource) baseFeeSource.textContent = sourceText();
 
-      finalFeeEl.textContent = formatUSD(actualFee);
-      tableCurrentSqft.textContent = aduSqft.toLocaleString("en-US") + " sq ft";
-      tableSbSqft.textContent = aduSqft.toLocaleString("en-US") + " sq ft";
-      tableSbFee.textContent = formatUSD(sbFee);
-      tableFlatSqft.textContent = aduSqft.toLocaleString("en-US") + " sq ft";
-      tableFlatFee.textContent = formatUSD(baseFee);
+    const ratio = Math.min(aduSqft / primarySqft, 1);
+    const proportionalFee = Math.round(baseFee * ratio);
+    // Current law: Gov. Code \u00a7 66311.5(c)(1)(A) exempts ADUs of 750 sq ft OR LESS.
+    const isExempt = aduSqft <= 750;
+    const actualFee = isExempt ? 0 : proportionalFee;
 
-      if (isExempt) {
+    // SB 1117 (from Jan 1, 2027, up to 2 ADUs): only the area in excess of
+    // 750 sq ft is charged, proportionally against the primary home.
+    const excessSqft = Math.max(0, aduSqft - 750);
+    const sbFee = Math.round(baseFee * Math.min(excessSqft / primarySqft, 1));
+    const sbSavings = actualFee - sbFee;
+
+    if (finalFeeEl) finalFeeEl.textContent = formatUSD(actualFee);
+    if (tableCurrentSqft) tableCurrentSqft.textContent = aduSqft.toLocaleString("en-US") + " sq ft";
+    if (tableSbSqft) tableSbSqft.textContent = aduSqft.toLocaleString("en-US") + " sq ft";
+    if (tableSbFee) tableSbFee.textContent = formatUSD(sbFee);
+    if (tableFlatSqft) tableFlatSqft.textContent = aduSqft.toLocaleString("en-US") + " sq ft";
+    if (tableFlatFee) tableFlatFee.textContent = formatUSD(baseFee);
+
+    if (isExempt) {
+      if (statusBanner) {
         statusBanner.className = "eli-cliff-banner eli-cliff-banner-ok";
         statusBanner.innerHTML =
           "<strong>Exempt Zone (750 sq ft or less):</strong> Your ADU qualifies for $0 local development impact fees under California state law, saving you <strong>" +
           formatUSD(proportionalFee) +
           "</strong>.";
-        feeFormulaEl.textContent = "750 sq ft or less State Exemption Applied";
-        tableCurrentRule.textContent = "State Exempt (≤ 750 sq ft)";
-        tableCurrentFee.textContent = "$0";
-        sbLineEl.textContent =
-          "From Jan 1, 2027 (SB 1117, up to 2 ADUs): $0 — no change at this size.";
-      } else {
-        const diff = aduSqft - 750;
+      }
+      if (feeFormulaEl) feeFormulaEl.textContent = "750 sq ft or less State Exemption Applied";
+      if (tableCurrentRule) tableCurrentRule.textContent = "State Exempt (\u2264 750 sq ft)";
+      if (tableCurrentFee) tableCurrentFee.textContent = "$0";
+      if (sbLineEl) sbLineEl.textContent =
+        "From Jan 1, 2027 (SB 1117, up to 2 ADUs): $0 \u2014 no change at this size.";
+    } else {
+      const diff = aduSqft - 750;
+      if (statusBanner) {
         statusBanner.className = "eli-cliff-banner eli-cliff-banner-warn";
         statusBanner.innerHTML =
           "<strong>750 sq ft Cliff Triggered:</strong> Reducing your plan by <strong>" +
@@ -421,34 +562,39 @@
           " sq ft</strong> (to 750 sq ft) drops this fee from <strong>" +
           formatUSD(actualFee) +
           "</strong> to <strong>$0</strong>.";
-        feeFormulaEl.textContent =
-          "Proportional Ratio: " + (ratio * 100).toFixed(1) + "% of Primary Home";
-        tableCurrentRule.textContent =
-          "Proportional (" + (ratio * 100).toFixed(1) + "% ratio)";
-        tableCurrentFee.textContent = formatUSD(actualFee);
-        sbLineEl.textContent =
-          "From Jan 1, 2027 (SB 1117, up to 2 ADUs): " +
-          formatUSD(sbFee) +
-          " — saving " +
-          formatUSD(sbSavings) +
-          " vs current law.";
       }
+      if (feeFormulaEl) feeFormulaEl.textContent =
+        "Proportional Ratio: " + (ratio * 100).toFixed(1) + "% of Primary Home";
+      if (tableCurrentRule) tableCurrentRule.textContent =
+        "Proportional (" + (ratio * 100).toFixed(1) + "% ratio)";
+      if (tableCurrentFee) tableCurrentFee.textContent = formatUSD(actualFee);
+      if (sbLineEl) sbLineEl.textContent =
+        "From Jan 1, 2027 (SB 1117, up to 2 ADUs): " +
+        formatUSD(sbFee) +
+        " \u2014 saving " +
+        formatUSD(sbSavings) +
+        " vs current law.";
     }
+  }
 
-    aduInput.addEventListener("input", updateCalculator);
-    primaryInput.addEventListener("input", updateCalculator);
-    baseFeeInput.addEventListener("input", updateCalculator);
-
-    btn750.addEventListener("click", function () {
-      aduInput.value = "750";
-      updateCalculator();
-    });
-
-    btn751.addEventListener("click", function () {
-      aduInput.value = "751";
-      updateCalculator();
-    });
-
+  aduInput.addEventListener("input", updateCalculator);
+  primaryInput.addEventListener("input", updateCalculator);
+  baseFeeInput.addEventListener("input", () => {
+    userOverrodeBase = true;
     updateCalculator();
-  })();
+  });
+
+  if (btn750) btn750.addEventListener("click", function () {
+    aduInput.value = "750";
+    updateCalculator();
+  });
+  if (btn751) btn751.addEventListener("click", function () {
+    aduInput.value = "751";
+    updateCalculator();
+  });
+
+  if (jurisSel) jurisSel.addEventListener("change", syncBaseFromJurisdiction);
+  if (areaSel) areaSel.addEventListener("change", syncBaseFromJurisdiction);
+
+  syncBaseFromJurisdiction();
 </script>

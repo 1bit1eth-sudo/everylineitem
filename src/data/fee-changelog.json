@@ -16,7 +16,7 @@
     },
     {
       "date": "2026-11-07",
-      "headline": "Eleven posts published in one day; /compare/ now totals verified fees only",
+      "headline": "Ten new city cost posts; /compare/ now totals verified fees only",
       "detail": "Ten new city cost posts published (Redlands, Beverly Hills, Santa Clara, Los Altos Hills, Upland, Moreno Valley, Burlingame, Concord, Napa, Corona; published city posts 38 to 48) plus the Inland Empire comparison. /compare/ calculator, side-by-side comparison and PDF now total verified fees only: Clovis 800 sq ft $76,895 becomes 'No verified fees yet', San Jose $17,016 becomes $10,676, Oakland $16,936 becomes $4,136. The November 8 financing post was corrected before publication (CalHFA grant now past tense — fully allocated December 28, 2023; loan rates updated). Fee-page post links fixed for Carlsbad, Encinitas and Palo Alto.",
       "jurisdictions": [
         "Redlands",
@@ -34,17 +34,17 @@
     },
     {
       "date": "2026-11-06",
-      "headline": "Bid Scanner tool, SB 1117 landing pages, AdSense reinforcement",
-      "detail": "New Bid Scanner tool: paste a bid and it sorts every line into the six build phases, flags four red-flag patterns and drafts contractor questions; pasted text never leaves the browser. SB 1117 landing pages for all 161 jurisdictions (800/1,000/1,200 sq ft, 2026 vs 2027 impact fees, verified rows only). AdSense reinforcement: google-adsense-account meta tag on every page, new Disclaimer page, footer cleanup. Fee-waiver cities post published and corrected after Oceanside's waiver wording was removed from the city's ADU page ('two confirmed $0s, one unconfirmed'). Garden Grove Short #19 and long-form #6 ('The $5.38 Ceiling') published on YouTube.",
+      "headline": "Bid Scanner tool and SB 1117 landing pages for all 161 jurisdictions",
+      "detail": "New Bid Scanner tool: paste a bid and it sorts every line into the six build phases, flags four red-flag patterns and drafts contractor questions; pasted text never leaves the browser. SB 1117 landing pages for all 161 jurisdictions (800/1,000/1,200 sq ft, 2026 vs 2027 impact fees, verified rows only). Fee-waiver cities post published and corrected after Oceanside's waiver wording was removed from the city's ADU page ('two confirmed $0s, one unconfirmed').",
       "jurisdictions": ["Oceanside"],
       "items_added": 0
     },
     {
       "date": "2026-11-05",
-      "headline": "Clovis fee lines added from the Master Development Fee Schedule (14 items, amounts pending verification)",
-      "detail": "Clovis's Master Development Fee Schedule 2024-2025 (effective July 21, 2025) added 14 line items: six core development impact fees ($20,961/unit combined), Water Major Facilities density endpoints ($13,795 down to $5,655/unit), Major Street Fees by area ($115-$11,712/unit), and a Loma Vista-only Neighborhood Park Deposit ($6,127). All 14 are listed without figures until verification completes. The 750 sq ft cliff figure on fee pages now totals verified items only, so a page with no verified rows no longer shows a dollar total from unconfirmed lines. School fees not added: Clovis Unified posts two residential tiers ($5.38 vs $6.38/sq ft) and the ADU assignment is unresolved.",
+      "headline": "Clovis fee schedule read; 14 lines found, verification in progress",
+      "detail": "Clovis's Master Development Fee Schedule 2024-2025 (effective July 21, 2025) was read; 14 line items were found and are listed on the Clovis fee page by name only, without figures, until verification completes. No verified figures were added. The 750 sq ft cliff figure on fee pages now totals verified items only, so a page with no verified rows no longer shows a dollar total from unconfirmed lines. School fees not added: Clovis Unified posts two residential tiers ($5.38 vs $6.38/sq ft) and the ADU assignment is unresolved.",
       "jurisdictions": ["Clovis"],
-      "items_added": 14
+      "items_added": 0
     },
     {
       "date": "2026-11-04",

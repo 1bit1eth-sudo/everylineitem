@@ -1,6 +1,6 @@
 ---
 title: "Lancaster ADU Fees 2026: The City That Doesn't Publish Its Permit Fees"
-description: "An 800 sq ft detached ADU in Lancaster priced phase by phase — $305,000. The series' transparency story: the building permit valuation table isn't in the public index, the DIF table is from 2021, and only one of two school districts confirmed its rate. The city's own 799 sq ft pre-approved plan misses the 750 cliff by 49 square feet."
+description: "An 800 sq ft detached ADU in Lancaster priced phase by phase — $305,000 floor. The series' transparency story: the building permit valuation table isn't in the public index, the DIF table is from 2021, and only one of two school districts confirmed its rate. The city's own 799 sq ft pre-approved plan misses the 750 cliff by 49 square feet."
 pubDatetime: 2026-11-15T01:00:00Z
 author: "Every Line Item"
 tags: ["adu cost", "lancaster", "california", "permit fees", "2026"]

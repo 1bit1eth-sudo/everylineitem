@@ -1,6 +1,6 @@
 ---
-title: "Burlingame ADU Cost 2026: $309,000–$310,000 — Water and Sewer Capacity Priced per Square Foot, Basis Unclear"
-description: "An 800 sq ft detached ADU in Burlingame priced phase by phase — $309,000–$310,000. Water and sewer capacity charges are priced per square foot over 150 sq ft, but the assessable basis is ambiguous, so the total is a range. The school fee and the general building permit are not yet verified, so this total is a floor."
+title: "Burlingame ADU Cost 2026: $309,000–$310,000 Floor — Water and Sewer Capacity Priced per Square Foot, Basis Unclear"
+description: "An 800 sq ft detached ADU in Burlingame priced phase by phase — $309,000–$310,000 floor. Water and sewer capacity charges are priced per square foot over 150 sq ft, but the assessable basis is ambiguous, so the total is a range. The school fee and the general building permit are not yet verified, so this total is a floor."
 pubDatetime: 2026-11-07T08:00:00Z
 author: "Every Line Item"
 tags: ["adu cost", "burlingame", "california", "permit fees", "2026"]

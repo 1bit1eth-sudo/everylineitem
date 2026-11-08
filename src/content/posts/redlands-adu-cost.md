@@ -1,6 +1,6 @@
 ---
-title: "Redlands ADU Cost 2026: $309,000 — Eight Per-Square-Foot Impact Fees From One Ordinance"
-description: "An 800 sq ft detached ADU in Redlands priced phase by phase — $309,000. Every impact fee is a per-square-foot line from a single ordinance (Ord. 2968), so the 750 sq ft cliff is clean and the SB 1117 saving is exactly $4,080. School and permit fees are not yet verified, so this total is a floor."
+title: "Redlands ADU Cost 2026: $309,000 Floor — Eight Per-Square-Foot Impact Fees From One Ordinance"
+description: "An 800 sq ft detached ADU in Redlands priced phase by phase — $309,000 floor. Every impact fee is a per-square-foot line from a single ordinance (Ord. 2968), so the 750 sq ft cliff is clean and the SB 1117 saving is exactly $4,080. School and permit fees are not yet verified, so this total is a floor."
 pubDatetime: 2026-11-07T01:00:00Z
 author: "Every Line Item"
 tags: ["adu cost", "redlands", "california", "permit fees", "2026"]

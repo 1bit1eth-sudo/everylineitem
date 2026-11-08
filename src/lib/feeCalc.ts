@@ -1134,6 +1134,34 @@ export function sideBySideHTML(
     r.hasVerified ? fmtRange(low, high) : "—";
   /** Bar/table value for one side: 0 when it has no verified lines. */
   const sideLow = (r: CalcResult, low: number) => (r.hasVerified ? low : 0);
+  /**
+   * Categories with pending (to_verify/conflict) lines that would count if
+   * verified. A category with only pending lines is missing data, not a $0
+   * fee — it must never render as $0.
+   */
+  const pendingCats = (r: CalcResult): Set<string> =>
+    new Set(
+      r.pendingLines.filter(l => l.kind === "ok").map(l => l.item.category)
+    );
+  const pendingA = pendingCats(resA);
+  const pendingB = pendingCats(resB);
+  /**
+   * Display amount for one side of one category: the verified sum when the
+   * category has verified lines; "— (verifying)" when it has only pending
+   * lines; "—" when the side has no lines in the category at all. A
+   * verified $0 (e.g. an exempt impact fee) still shows as $0.
+   */
+  const catAmount = (
+    r: CalcResult,
+    cat: CategoryTotal | undefined,
+    pending: Set<string>,
+    category: string
+  ): string => {
+    if (!r.hasVerified) return "—";
+    if (cat) return fmtRange(cat.low, cat.high);
+    if (pending.has(category)) return `— ${itemBadgeHTML("to_verify")}`;
+    return "—";
+  };
 
   const barRow = (label: string, aLow: number, bLow: number, aText: string, bText: string, big: boolean) => {
     const max = Math.max(aLow, bLow, 1);
@@ -1175,8 +1203,8 @@ export function sideBySideHTML(
         categoryLabel(cat),
         sideLow(resA, ca?.low ?? 0),
         sideLow(resB, cb?.low ?? 0),
-        sideAmount(resA, ca?.low ?? 0, ca?.high ?? null),
-        sideAmount(resB, cb?.low ?? 0, cb?.high ?? null),
+        catAmount(resA, ca, pendingA, cat),
+        catAmount(resB, cb, pendingB, cat),
         false
       );
     }),
@@ -1188,12 +1216,15 @@ export function sideBySideHTML(
       const cb = catVal(catsB, cat);
       const av = sideLow(resA, ca?.low ?? 0);
       const bv = sideLow(resB, cb?.low ?? 0);
-      const d = comparable ? bv - av : 0;
+      // A category difference is only computable when both sides have the
+      // category verified; otherwise the gap is unknown, not $0.
+      const catComparable = comparable && ca != null && cb != null;
+      const d = catComparable ? bv - av : 0;
       return `<tr class="border-border border-b">
         <td class="py-2 pe-3">${esc(categoryLabel(cat))}</td>
-        <td class="py-2 pe-3 text-right tabular-nums whitespace-nowrap">${sideAmount(resA, av, ca?.high ?? null)}</td>
-        <td class="py-2 pe-3 text-right tabular-nums whitespace-nowrap">${sideAmount(resB, bv, cb?.high ?? null)}</td>
-        <td class="py-2 text-right tabular-nums whitespace-nowrap ${comparable && d > 0 ? "text-accent" : comparable && d < 0 ? "text-green-600 dark:text-green-400" : ""}">${comparable ? moneyDiffSigned(d) : "—"}</td>
+        <td class="py-2 pe-3 text-right tabular-nums whitespace-nowrap">${catAmount(resA, ca, pendingA, cat)}</td>
+        <td class="py-2 pe-3 text-right tabular-nums whitespace-nowrap">${catAmount(resB, cb, pendingB, cat)}</td>
+        <td class="py-2 text-right tabular-nums whitespace-nowrap ${catComparable && d > 0 ? "text-accent" : catComparable && d < 0 ? "text-green-600 dark:text-green-400" : ""}">${catComparable ? moneyDiffSigned(d) : "—"}</td>
       </tr>`;
     })
     .join("");

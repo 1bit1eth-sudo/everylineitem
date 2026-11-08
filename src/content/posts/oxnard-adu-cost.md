@@ -1,6 +1,6 @@
 ---
 title: "Oxnard ADU Fees 2026: Ventura County's Coastal Fee Profile"
-description: "An 800 sq ft detached ADU in Oxnard priced phase by phase — $308,000. Ventura County's coastal HCD #19 city keeps the standard 750 sq ft cliff in ordinance Sec. 15-183, runs permits on a valuation schedule it won't price out per square foot, and splits its $4,136 school fee across two districts."
+description: "An 800 sq ft detached ADU in Oxnard priced phase by phase — $308,000 floor. Ventura County's coastal HCD #19 city keeps the standard 750 sq ft cliff in ordinance Sec. 15-183, runs permits on a valuation schedule it won't price out per square foot, and splits its $4,136 school fee across two districts."
 pubDatetime: 2026-11-12T01:00:00Z
 author: "Every Line Item"
 tags: ["adu cost", "oxnard", "california", "permit fees", "2026"]

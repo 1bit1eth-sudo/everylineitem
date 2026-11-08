@@ -22,7 +22,7 @@ keyFacts:
   cliff750: "Yes (Gov. Code §66311.5)"
 faqs:
   - question: "How much does an ADU cost in Grover Beach in 2026?"
-    answer: "About $305,000 for an 800 sq ft detached, single-story, new-construction unit with mid-grade finishes in Grover Beach — roughly $381 per square foot, tied for the lowest total in this series so far. That total is a floor: the school district fee is not yet verified, so it is not in the total. Construction phases 2–6 are carried from the Los Angeles County baseline; Grover Beach does not publish phase-level construction costs."
+    answer: "About $305,000 for an 800 sq ft detached, single-story, new-construction unit with mid-grade finishes in Grover Beach — roughly $381 per square foot, tied for the lowest floor in this series so far. That total is a floor: the school district fee is not yet verified, so it is not in the total. Construction phases 2–6 are carried from the Los Angeles County baseline; Grover Beach does not publish phase-level construction costs."
   - question: "What does the $2,984 building permit cover?"
     answer: "The Master Fee Schedule (FY2026-27, effective July 1, 2026) prices an 800 sq ft ADU's building permit and plan check as a single flat $2,984 on the R3 single-family/duplex/ADU row, covering permit inspection and plan review. Planning review of the building plans adds $340 and permit processing adds $92 — both flat lines from the same schedule."
   - question: "Why is the water and sewer connection $0?"

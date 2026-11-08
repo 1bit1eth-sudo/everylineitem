@@ -1,6 +1,6 @@
 ---
-title: "Corona ADU Cost 2026: $305,000 — Every Impact Fee Is $0"
-description: "An 800 sq ft detached ADU in Corona priced phase by phase — $305,000, the lowest total in this series so far. Every impact fee is $0: the DIF Update 2026 leaves the ADU column blank, the county TUMF exempts ADUs program-wide, and Quimby is collected at subdivision. The only fee line is a $3,096 sewer capacity charge. School and permit fees are not yet verified, so this total is a floor."
+title: "Corona ADU Cost 2026: $305,000 Floor — Every Impact Fee Is $0"
+description: "An 800 sq ft detached ADU in Corona priced phase by phase — $305,000 floor, the lowest floor in this series so far. Every impact fee is $0: the DIF Update 2026 leaves the ADU column blank, the county TUMF exempts ADUs program-wide, and Quimby is collected at subdivision. The only fee line is a $3,096 sewer capacity charge. School and permit fees are not yet verified, so this total is a floor."
 pubDatetime: 2026-11-07T08:00:00Z
 author: "Every Line Item"
 tags: ["adu cost", "corona", "california", "permit fees", "2026"]
@@ -22,7 +22,7 @@ keyFacts:
   cliff750: "Yes (Gov. Code §66311.5)"
 faqs:
   - question: "How much does an ADU cost in Corona in 2026?"
-    answer: "About $305,000 for an 800 sq ft detached, single-story, new-construction unit with mid-grade finishes in Corona — roughly $381 per square foot, the lowest total in this series so far. That total is a floor: the school district fee and the building permit fee are not yet verified, so they are not in the total. Construction phases 2–6 are carried from the Los Angeles County baseline; Corona does not publish phase-level construction costs."
+    answer: "About $305,000 for an 800 sq ft detached, single-story, new-construction unit with mid-grade finishes in Corona — roughly $381 per square foot, the lowest floor in this series so far. That total is a floor: the school district fee and the building permit fee are not yet verified, so they are not in the total. Construction phases 2–6 are carried from the Los Angeles County baseline; Corona does not publish phase-level construction costs."
   - question: "Why are Corona's impact fees $0?"
     answer: "Three separate reasons. The DIF Update 2026 (effective July 1, 2026) leaves the ADU column blank for every city impact category. The regional Transportation Uniform Mitigation Fee is $0 because Riverside County Ordinance 824.20 exempts ADUs and JADUs from the program entirely. And the Quimby park fee is $0 for an ADU because it is collected at subdivision map, at $12,708 per single-family unit. The one impact line that does apply — the MSHCP proportional fee — is excluded from this ledger because it needs the primary dwelling's size to compute."
   - question: "What is Corona's only fee line?"
@@ -105,7 +105,7 @@ The $305,000 also carries one soft footnote. The sewer capacity charge comes fro
 | Sewer capacity charge | $3,096 | carried |
 | Pre-approved ADU plans | None found | none |
 
-The $15,000 gap to the baseline is the two missing fees, not a cheaper build. If the school fee lands at the $5.38 maximum and the permit fee lands near the series norm, Corona will sit at or above the baseline. The real story is the composition: the only ledger in the series with a single fee line, the lowest total, and a total that is honest about what it does not yet know.
+The $15,000 gap to the baseline is the two missing fees, not a cheaper build. If the school fee lands at the $5.38 maximum and the permit fee lands near the series norm, Corona will sit at or above the baseline. The real story is the composition: the only ledger in the series with a single fee line, the lowest floor, and a total that is honest about what it does not yet know.
 
 ## A note on SB 1117
 
