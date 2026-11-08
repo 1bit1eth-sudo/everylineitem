@@ -1,6 +1,6 @@
 ---
-title: "Concord ADU Cost 2026: $313,000–$316,000 — Flat-Band Impact Fees and Six Free Pre-Approved Plans"
-description: "An 800 sq ft detached ADU in Concord priced phase by phase — $313,000–$316,000. Two impact fees are flat amounts in a 750–1,200 sq ft band, and the tier depends on whether the ADU exceeds 40% of the primary dwelling — so the total is a range. The building permit fee is not yet verified, so this total is a floor. Concord offers six free pre-approved plans with plan-check fees waived."
+title: "Concord ADU Cost 2026: $313,000–$316,000 Floor — Flat-Band Impact Fees and Six Free Pre-Approved Plans"
+description: "An 800 sq ft detached ADU in Concord priced phase by phase — $313,000–$316,000 floor. Two impact fees are flat amounts in a 750–1,200 sq ft band, and the tier depends on whether the ADU exceeds 40% of the primary dwelling — so the total is a range. The building permit fee is not yet verified, so this total is a floor. Concord offers six free pre-approved plans with plan-check fees waived."
 pubDatetime: 2026-11-07T08:00:00Z
 author: "Every Line Item"
 tags: ["adu cost", "concord", "california", "permit fees", "2026"]
