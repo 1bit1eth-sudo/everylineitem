@@ -130,8 +130,9 @@ const siteStructuredData = {
       href={new URL(rssHref, Astro.site)}
     />
 
-    <!-- Filled at runtime by theme.ts to match the current background colour -->
-    <meta name="theme-color" content="" />
+    <!-- Filled at runtime by theme.ts to match the current background colour;
+         the light default below keeps the tag valid before JS runs. -->
+    <meta name="theme-color" content="#fdfdfd" />
 
     <!-- Extra head content injected by child layouts (e.g. JSON-LD, article meta) -->
     <slot name="head" />
