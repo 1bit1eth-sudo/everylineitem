@@ -1,6 +1,6 @@
 ---
 title: "Chula Vista ADU Fees 2026: The Flat-Rate Permit Experiment"
-description: "An 800 sq ft detached ADU in Chula Vista priced phase by phase — $308,000. The series standout for permit pricing transparency: a flat $3,951 ADU permit (no valuation math), 12 pre-approved SnapADU plans, and a DIF that scales proportionally to the primary residence. The school-fee split is half confirmed."
+description: "An 800 sq ft detached ADU in Chula Vista priced phase by phase — $308,000 floor. The series standout for permit pricing transparency: a flat $3,951 ADU permit (no valuation math), 12 pre-approved SnapADU plans, and a DIF that scales proportionally to the primary residence. The school-fee split is half confirmed."
 pubDatetime: 2026-10-25T01:00:00Z
 author: "Every Line Item"
 tags: ["adu cost", "chula-vista", "california", "permit fees", "2026"]
