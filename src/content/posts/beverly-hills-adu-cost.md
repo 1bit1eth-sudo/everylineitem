@@ -1,6 +1,6 @@
 ---
-title: "Beverly Hills ADU Cost 2026: $305,000 — $0 Water, $0 Wastewater, and a $1,416 Covenant"
-description: "An 800 sq ft detached ADU in Beverly Hills priced phase by phase — $305,000. The most expensive city in this series charges $0 for water capacity, $0 for wastewater capacity and $0 for planning on a building-permit-only ADU — but a $1,416 covenant recordation fee. The school fee is not yet verified, so this total is a floor."
+title: "Beverly Hills ADU Cost 2026: $305,000 Floor — $0 Water, $0 Wastewater, and a $1,416 Covenant"
+description: "An 800 sq ft detached ADU in Beverly Hills priced phase by phase — $305,000 floor. The most expensive city in this series charges $0 for water capacity, $0 for wastewater capacity and $0 for planning on a building-permit-only ADU — but a $1,416 covenant recordation fee. The school fee is not yet verified, so this total is a floor."
 pubDatetime: 2026-11-07T01:00:00Z
 author: "Every Line Item"
 tags: ["adu cost", "beverly-hills", "california", "permit fees", "2026"]
