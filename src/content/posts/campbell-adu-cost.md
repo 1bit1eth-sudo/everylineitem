@@ -67,6 +67,8 @@ Campbell sits in the heart of Silicon Valley, and its fee structure reads like i
 
 Phases 2–6 (construction) are carried from the series baseline at approximately $285,000; Campbell does not publish phase-level construction costs. Baseline $285,000 + soft costs at caps $24,933 ≈ **$310,000**.
 
+The city's fee lines are also listed on the [Campbell fee page](/fees/campbell/), with verification status and source links.
+
 \* **Assumptions:** $100,000 construction valuation for permit example (illustrative, not official); 800 sq ft ADU with standard fixture count; FY 2027 fee schedule (effective July 1, 2026); Cambrian/Moreland district parcels excluded. Sewer actual depends on fixture count — a full bath + kitchen ADU lands mid-range, not at the cap — and the sewer rates are carried from FY 2024-25 figures pending verification against the district's current schedule. The impact fee is proportional under state law, so the $9,328 cap is a ceiling, not the expected bill.
 
 ## Why Campbell stands out

@@ -88,6 +88,8 @@ Every fee line we found, with exactly what it is and where it came from.
 | Sewer — building sewer (plumbing permit) | $73.50/unit | Master Fee Schedule, plumbing section — nominal |
 | Sewer capacity charge | none found | No ADU sewer capacity charge line item exists in the schedule |
 
+The city's fee lines are also listed on the [Torrance fee page](/fees/torrance/), with verification status and source links.
+
 ## The flat-rate DIF: a series first
 
 Every city in this series charges ADU impact fees, and every one before Torrance scales them to something — the house, the valuation, the unit count. Burbank's formula ($15,166.33 × ADU square footage ÷ house square footage + 5% surcharge) is the most elaborate; Fullerton's pro-rata lands near $6,411 on a 1,500 sq ft house. Torrance's Planning Fee Schedule has one line: "Accessory Dwelling Unit: $2,243.47/unit — ADU 750 SF or greater in size."
@@ -132,7 +134,7 @@ The $3,000 gap is dominated by the assumed taxes. If the three unconfirmed city 
 
 ## A note on SB 1117
 
-Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. Torrance's flat-rate structure — "750 or greater, $2,243.47" — cannot survive that math unchanged: an 800 sq ft ADU would owe fees on 50 sq ft, not 800, which requires a per-square-foot rate the current schedule does not publish. We found no mention of SB 1117 in city materials; the January 2027 quarterly review will check for a revised fee schedule. School fees are outside SB 1117's impact-fee definition and stay at $4,304. Whether the three city taxes fall inside it is a question of interpretation — it is on our list to the city.
+Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. Torrance's flat-rate structure — "750 or greater, $2,243.47" — cannot survive that math unchanged: an 800 sq ft ADU would owe fees on 50 sq ft, not 800, which requires a per-square-foot rate the current schedule does not publish. See the full comparison at [Torrance: 2026 vs 2027, line by line](/sb-1117/torrance/). We found no mention of SB 1117 in city materials; the January 2027 quarterly review will check for a revised fee schedule. School fees are outside SB 1117's impact-fee definition and stay at $4,304. Whether the three city taxes fall inside it is a question of interpretation — it is on our list to the city.
 
 ## Disclaimer
 

@@ -87,6 +87,8 @@ Every fee line we found, with exactly what it is and where it came from.
 
 Soft costs in the breakdown table are rounded to $17,000 (exact $16,643); the total is rounded to the nearest $1,000.
 
+The city's fee lines are also listed on the [Beverly Hills fee page](/fees/beverly-hills/), with verification status and source links.
+
 ## The $0 city
 
 Three zeroes in a row is the story of this post. The water capacity charge and water supply fee: $0. The wastewater capacity fee: $0. The planning fee for a building-permit-only ADU: $0. All three are printed as $0 in the FY 2025–26 master fee schedule — not waived for ADUs, not missing from the schedule, priced at zero.
