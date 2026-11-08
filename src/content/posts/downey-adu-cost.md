@@ -1,13 +1,13 @@
 ---
 title: "Downey ADU Fees 2026: $0 Impact Fees Under 750 Sq Ft — $4,972 Permits Above It"
 description: "An 800 sq ft detached ADU in Downey priced phase by phase — $311,000. The series study in split personality: Ordinance 23-1507 waives impact fees under 750 sq ft, but valuation-based permits reach ~$4,972 on an assumed $150,000 valuation. The pre-approved plan program exists in name only — zero plans registered as of July 2026."
-pubDatetime: 2026-11-09T01:00:00Z
+pubDatetime: 2026-11-08T10:30:00Z
 author: "Every Line Item"
 tags: ["adu cost", "downey", "california", "permit fees", "2026"]
 draft: false
 series: ca-adu
 seriesCurrent: downey-adu-cost
-verifiedPublished: "9 Nov 2026"
+verifiedPublished: "8 Nov 2026"
 lastVerified: "9 Oct 2026"
 nextReview: "Jan 2027"
 ogImage: "https://everylineitem.com/images/pinterest/downey-adu-cost.png"
@@ -33,7 +33,7 @@ faqs:
   - question: "Does Downey have pre-approved ADU plans?"
     answer: "On paper, yes; in practice, not yet. The city runs a Pre-Approved Standard Plans program for detached ADUs on single-family lots under AB 1332 — but as of July 28, 2026, zero plans were registered. The city was still soliciting design professionals, so there is nothing a homeowner can actually download today."
 ---
-> **Published:** 9 Nov 2026 · **Last verified:** 9 Oct 2026 · **Next review:** Jan 2027
+> **Published:** 8 Nov 2026 · **Last verified:** 9 Oct 2026 · **Next review:** Jan 2027
 > Cost figures are re-checked against permit records quarterly. Changes are
 > logged in [Corrections](/corrections/).
 
