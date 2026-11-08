@@ -105,7 +105,7 @@ const defaultSaving = Math.round(defaultBase * (750 / DEFAULT_PRIMARY_SQFT));
           <label for="eli-base-fee">Jurisdiction Base Single-Family Impact Fee</label>
           <span class="eli-cliff-val" id="eli-base-fee-display">{fmtUSD(defaultBase)}</span>
         </div>
-        <input type="range" id="eli-base-fee" min="5000" max="100000" step="1000" value={defaultBase} />
+        <input type="range" id="eli-base-fee" min="5000" max="100000" step="1" value={defaultBase} />
         <div class="eli-cliff-range-hints">
           <span>$5,000 (Low)</span>
           <span>$100,000 (High)</span>
