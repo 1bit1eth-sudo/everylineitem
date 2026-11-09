@@ -65,6 +65,8 @@ Phases 2–6 (construction) are carried from the series baseline at approximatel
 
 \* **Assumptions:** 2-bedroom ADU; primary dwelling 2,000 sq ft (impact fee scales with this); mid-grade finishes; FY 2026 fee schedules. Sewer and water capacity charges are the largest unverified items — contact Pasadena Planning & Community Development before budgeting.
 
+The city's fee lines are also listed on the [Pasadena fee page](/fees/pasadena/), with verification status and source links.
+
 ## Why Pasadena stands out
 
 **The $2.24 school fee.** Pasadena Unified's developer fee schedule (revised July 1, 2025) sets residential fees at $2.24/sq ft — against a statewide Level 1 ceiling near $5.17 and series peers at $4.10–$5.40. On 800 sq ft, the spread between Pasadena ($1,792) and Campbell ($4,320) is $2,528 for the same ADU. Districts set their own rates within the state framework; PUSD has simply held its rate flat while others climbed.
