@@ -69,6 +69,8 @@ Six phases. The same six used on every build in this series.
 | Landscaping & hardscape | $13,000 | 4% |
 | **Total** | **$311,000\*** | **$389 / sq ft** |
 
+The city's fee lines are also listed on the [Downey fee page](/fees/downey/), with verification status and source links.
+
 ## The fee autopsy
 
 Every fee line we found, with exactly what it is and where it came from.
@@ -122,7 +124,7 @@ The $9,000 gap to the baseline comes from soft costs — a valuation-example per
 
 ## A note on SB 1117
 
-Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. Downey's ordinance-based proportional formula cannot survive that math unchanged — an 800 sq ft ADU would owe fees on 50 sq ft of proportional DIF, not 800, shrinking the cliff penalty to a sliver of its current size. We found no mention of SB 1117 in city materials; the January 2027 quarterly review will check for an amended Ordinance 23-1507. School fees are outside SB 1117's impact-fee definition and stay at $4,136 pending DUSD's resolution.
+Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. See the full comparison at [Downey: 2026 vs 2027, line by line](/sb-1117/downey/). Downey's ordinance-based proportional formula cannot survive that math unchanged — an 800 sq ft ADU would owe fees on 50 sq ft of proportional DIF, not 800, shrinking the cliff penalty to a sliver of its current size. We found no mention of SB 1117 in city materials; the January 2027 quarterly review will check for an amended Ordinance 23-1507. School fees are outside SB 1117's impact-fee definition and stay at $4,136 pending DUSD's resolution.
 
 ## Disclaimer
 
