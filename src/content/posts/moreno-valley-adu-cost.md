@@ -85,6 +85,8 @@ Every fee line we found, with exactly what it is and where it came from.
 
 Soft costs in the breakdown table are rounded to $22,000 (exact $22,050); the total is rounded to the nearest $1,000.
 
+The city's fee lines are also listed on the [Moreno Valley fee page](/fees/moreno-valley/), with verification status and source links.
+
 ## Seven free plans, and what they do not cover
 
 The "ADU for You" program is the most generous design offer in this series so far: seven free, city-owned, pre-approved detached ADU plans, each with multiple architectural styles, from a 306 sq ft studio to a 988 sq ft three-bedroom. The plans have already been reviewed by Building & Safety, which can speed up permitting. To qualify, the lot must be zoned residential with an existing single-family home or duplex, and it cannot sit in a geohazard, landslide, flood or Wildland-Urban Interface zone.
