@@ -81,6 +81,8 @@ Every fee line we found, with exactly what it is and where it came from.
 
 Soft costs in the breakdown table are rounded to $20,000 (exact $20,269); the total is rounded to the nearest $1,000.
 
+The city's fee lines are also listed on the [Los Altos Hills fee page](/fees/los-altos-hills/), with verification status and source links.
+
 ## Three impact fees, all $0
 
 The 2026 Impact Fee Schedule lists three fees that could apply to an ADU, and prices all three at zero. The Pathway Development Impact Fee: $0. The Recreation In-Lieu Fee: $0. The Storm Drainage Fee: $0. In most cities in this series, at least one of these lines carries a real number — Redlands charges $0.5113 per square foot for storm drainage alone, and Upland's storm drain DIF is $0.90 per square foot. Los Altos Hills charges nothing on any of them.
