@@ -7660,7 +7660,8 @@
       "status": "verified",
       "step": null,
       "threshold": null,
-      "item_id": "FI-313"
+      "item_id": "FI-313",
+      "area": "Long Beach USD"
     },
     {
       "applies_to": "all",
@@ -7683,7 +7684,8 @@
       "status": "verified",
       "step": null,
       "threshold": null,
-      "item_id": "FI-314"
+      "item_id": "FI-314",
+      "area": "Paramount USD"
     },
     {
       "applies_to": "all",
