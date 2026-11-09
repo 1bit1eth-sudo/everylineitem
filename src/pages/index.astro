@@ -516,6 +516,13 @@ const formatShortDate = (d: string | Date) =>
         <a href="/contact/" class="text-accent font-semibold">Contact &rarr;</a>{" "}
         <a href="/corrections/" class="text-accent font-semibold">Corrections policy &rarr;</a>
       </p>
+      <p class="mt-2 text-sm opacity-70">
+        Questions or a correction? Email{" "}
+        <a href="mailto:corrections@everylineitem.com" class="text-accent font-semibold">
+          corrections@everylineitem.com
+        </a>{" "}
+        — we read every message and reply when a response is needed.
+      </p>
     </section>
 
     {/* WHAT CHANGED — the fee change log, newest first */}
@@ -536,6 +543,7 @@ const formatShortDate = (d: string | Date) =>
               <li class="border-b border-border pb-4">
                 <p class="text-sm font-mono tabular-nums opacity-60">{e.date}</p>
                 <p class="font-semibold">{e.headline}</p>
+                <p class="mt-1 text-sm opacity-70 line-clamp-3">{e.detail}</p>
               </li>
             ))}
           </ul>
