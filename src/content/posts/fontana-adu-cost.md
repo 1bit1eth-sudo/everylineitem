@@ -67,6 +67,8 @@ Six phases. The same six used on every build in this series.
 | Landscaping & hardscape | $13,000 | 4% |
 | **Total** | **~$319,000** | **~$399 / sq ft** |
 
+The city's fee lines are also listed on the [Fontana fee page](/fees/fontana/), with verification status and source links.
+
 ## The fee autopsy
 
 Every fee line we found, with exactly what it is and where it came from.
@@ -109,7 +111,7 @@ Fontana lands a dollar under the baseline almost by accident: a transparent flat
 
 ## A note on SB 1117
 
-Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. Fontana's May 2026 DIF justification study already states the current pro-rata rule in plain language; the marginal rule will require a new schedule. We found no mention of SB 1117 in city materials; the January 2027 quarterly review will check. School fees ($4,304) are outside SB 1117 and unchanged.
+Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. See the full comparison at [Fontana: 2026 vs 2027, line by line](/sb-1117/fontana/). Fontana's May 2026 DIF justification study already states the current pro-rata rule in plain language; the marginal rule will require a new schedule. We found no mention of SB 1117 in city materials; the January 2027 quarterly review will check. School fees ($4,304) are outside SB 1117 and unchanged.
 
 ## Disclaimer
 
