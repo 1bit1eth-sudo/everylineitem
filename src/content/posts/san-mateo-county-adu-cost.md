@@ -78,6 +78,8 @@ Six phases. The same six used on every build in this series.
 | Landscaping & hardscape | $13,000 | 4% |
 | **Total** | **$314,637** | **$393 / sq ft** |
 
+The county's fee lines are also listed on the [San Mateo County fee page](/fees/san-mateo-county/), with verification status and source links.
+
 ## The fee autopsy
 
 Every fee line we found, with exactly what it is and where it came from.
