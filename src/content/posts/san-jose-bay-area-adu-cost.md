@@ -78,6 +78,8 @@ The rest of the $40,000 is design, structural engineering, Title 24 energy calcu
 
 Three more San José line items appear in the fee schedule, but we could not confirm how they apply to an ADU. **Not confirmed — check with the city:** the per-unit Construction Tax ($150) and Residential Construction Tax ($180) for a one-family unit; the $780 Sewage Treatment Plant Connection Fee for a single-family unit (state law limits connection fees on ADUs, [Gov. Code §66311.5(b), (e)](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=66311.5)); and whether a declared construction value higher than the city's $175.92/sq ft table raises the tax base. The city's [ADU fee estimator (beta)](https://www.sanjoseca.gov/your-government/departments-offices/planning-building-code-enforcement/building-division/building-permit-fees) or the ADU Ally (408-793-5302) can answer for your parcel.
 
+The city's fee lines are also listed on the [San José fee page](/fees/san-jose/), with verification status and source links.
+
 ## Where the Bay Area differs from Los Angeles and San Diego
 
 | | LA County | City of San Diego | San José (our estimate) |
