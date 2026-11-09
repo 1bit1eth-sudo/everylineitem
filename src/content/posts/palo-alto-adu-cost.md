@@ -35,7 +35,7 @@ faqs:
 
 A correction first, because it matters more than the numbers: our initial research matrix listed Palo Alto's impact fee at $76,385 and its permit rate at 5.42%. Neither figure survived contact with the city's official documents. Our first correction put the impact fee at ~$8,000, tracking a prior-year sheet. The current-year sheet — the FY27 sheet, as of August 17, 2026 — yields **~$18,090** on an 800 sq ft ADU after the proportional reduction, and this post now uses that figure throughout. The actual permit schedule (FY24) charges **1.76%** of valuation, not 5.42%. We got it wrong twice, we checked, and this post carries the corrected numbers. That is the policy.
 
-With the correction in place, Palo Alto becomes the most interesting city in the series — not the most expensive, but the one with the **steepest per-square-foot cliff** and the **most dramatic SB 1117 effect**. The total lands at **about $313,000, or roughly $391 per square foot** — level with Long Beach at the low end of the published ranking, built from the most lopsided fee structure we've published.
+With the correction in place, Palo Alto becomes the most interesting city in the series — not the most expensive, but the one with the **steepest per-square-foot cliff** and the **most dramatic SB 1117 effect**. See the full comparison at [Palo Alto: 2026 vs 2027, line by line](/sb-1117/palo-alto/). The total lands at **about $313,000, or roughly $391 per square foot** — level with Long Beach at the low end of the published ranking, built from the most lopsided fee structure we've published.
 
 ## The short answer
 
@@ -60,6 +60,8 @@ With the correction in place, Palo Alto becomes the most interesting city in the
 Phases 2–6 (construction) are carried from the series baseline at approximately $285,000; Palo Alto does not publish phase-level construction costs.
 
 \* **Assumptions:** 2,000 sq ft primary dwelling (DIF scales with this); $320,000 construction valuation; FY24 permit rates (FY26 not verified); mid-grade finishes. The DIF figure is our proportional calculation, not a number printed on the sheet — see the note below. The city calculates the actual.
+
+The city's fee lines are also listed on the [Palo Alto fee page](/fees/palo-alto/), with verification status and source links.
 
 ## The $18,090 question mark
 
