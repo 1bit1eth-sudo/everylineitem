@@ -83,6 +83,8 @@ Every fee line we found, with exactly what it is and where it came from.
 
 Soft costs in the breakdown table are rounded to $20,000 (exact $20,320); the total is rounded to the nearest $1,000.
 
+The city's fee lines are also listed on the [Upland fee page](/fees/upland/), with verification status and source links.
+
 ## Parks is 61% of the per-square-foot total
 
 The Parks DIF is the story of this post. At $4.80 per square foot it is 61% of the $7.90 per square foot total of all per-square-foot lines — and 69% of the $6.98 impact-fee lines alone. On 800 sq ft it is $3,840, more than the other four DIF lines combined ($1,744) and more than five times the water and sewer lines together ($736). A homeowner building an ADU in Upland is, in fee terms, mostly buying parkland.
