@@ -29,12 +29,13 @@ const atCeiling = schools.filter(s => s.rate_low === 5.38).length;
 const maxSchool = schools[schools.length - 1];
 const maxSchoolNote =
   maxSchool.rate_low > 5.38
-    ? `in ${names[maxSchool.juris_id]}, where the district charges a Level II $${maxSchool.rate_low}/sq ft fee — above the $5.38 state maximum`
-    : `where districts charge the $5.38 state maximum`;
+    ? `in ${names[maxSchool.juris_id]}, where the district charges a Level II $${maxSchool.rate_low}/sq ft fee — above the $5.38 Level I cap`
+    : `where districts charge the $5.38 Level I cap`;
 
 const totals = new Map<string, number>();
 const counts = new Map<string, number>();
 const cliff = new Map<string, number>();
+const schoolByJuris = new Map<string, number>();
 for (const j of (feesData.jurisdictions as any[]).filter(j => j.juris_id !== "LA-BASE")) {
   // Shared engine math: dwelling-base lines prorate at the 1,600 sq ft
   // default primary, and mutually exclusive area schedules (Ontario)
@@ -43,7 +44,35 @@ for (const j of (feesData.jurisdictions as any[]).filter(j => j.juris_id !== "LA
   totals.set(j.juris_id, stack.total);
   counts.set(j.juris_id, stack.count);
   cliff.set(j.juris_id, stack.cliff);
+  if (stack.school != null) schoolByJuris.set(j.juris_id, stack.school);
 }
+
+// School-fee spread is computed per jurisdiction from jurisStack's
+// school field — the jurisdiction's combined school fee (elementary +
+// high school shares summed at 800 sq ft). Comparing single district
+// rows is wrong: one row can be only one share of a split district
+// (Campbell's high school share FI-295 $1.61/sq ft is $1,288 alone,
+// but the parcel also pays the elementary share FI-294 $3.79/sq ft —
+// $4,320 combined). Jurisdictions whose only verified school row is a
+// partial (high school) share are excluded from the low end:
+// - LOS-GATOS: FI-182 LGSUHSD high school share only ($1.66/sq ft)
+// - SARATOGA: FI-248 LGSUHSD high school share only ($1.66/sq ft)
+// - EL-CENTRO: EL-CENTRO-NEW-01 CUHSD high school share only ($1.66/sq ft)
+// - ONTARIO: FI-319 Chaffey HSD 9-12 share only ($1.67/sq ft)
+// - LOS-ALTOS: FI-223 MVLA HSD high school share only ($1.72/sq ft;
+//   elementary share unverified)
+const PARTIAL_SCHOOL_JURIS = new Set([
+  "LOS-GATOS",
+  "SARATOGA",
+  "EL-CENTRO",
+  "ONTARIO",
+  "LOS-ALTOS",
+]);
+const schoolSpread = [...schoolByJuris.entries()]
+  .filter(([j, v]) => v != null && !PARTIAL_SCHOOL_JURIS.has(j))
+  .sort((a, b) => a[1] - b[1]);
+const [minSchoolJuris, minSchool] = schoolSpread[0];
+const [, maxSchoolTotal] = schoolSpread[schoolSpread.length - 1];
 const ranked = [...totals.entries()]
   .filter(([j]) => (counts.get(j) ?? 0) >= 3)
   .sort((a, b) => b[1] - a[1]);
@@ -63,14 +92,14 @@ const latestVerified = formatVerified(latestVerifiedRaw);
 
 const facts = [
   {
-    stat: `${fmt(schools[0].rate_low * 800)} → ${fmt(schools[schools.length - 1].rate_low * 800)}`,
+    stat: `${fmt(minSchool)} → ${fmt(maxSchoolTotal)}`,
     label: "School-fee spread",
-    desc: `The same 800 sq ft ADU pays ${fmt(schools[0].rate_low * 800)} in school fees in ${names[schools[0].juris_id]} and ${fmt(schools[schools.length - 1].rate_low * 800)} ${maxSchoolNote} — across ${schools.length} tracked district line items (counted by district, not by jurisdiction: a jurisdiction can have more than one district).`,
+    desc: `The same 800 sq ft ADU pays ${fmt(minSchool)} in school fees in ${names[minSchoolJuris]} and ${fmt(maxSchoolTotal)} ${maxSchoolNote}. Each figure is one jurisdiction's combined school fee — elementary and high school shares summed — and the low end leaves out jurisdictions where only one share is verified.`,
   },
   {
     stat: `${atCeiling} of ${schools.length}`,
     label: "Districts at the ceiling",
-    desc: "School districts charging the $5.38/sq ft state maximum — 40% of the districts we've verified. Six joined the ceiling club in the last three batches alone.",
+    desc: "School districts charging the $5.38/sq ft Level I cap — 40% of the districts we've verified. Six joined the ceiling club in the last three batches alone.",
   },
   {
     stat: fmt(topTotal),
