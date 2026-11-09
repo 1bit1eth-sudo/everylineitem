@@ -2,6 +2,13 @@
   "entries": [
 {
       "date": "2026-11-10",
+      "detail": "Hayward ADU fees re-verified in the Adopted Master Fee Schedule FY2026-27 (effective July 1, 2026, read live November 10): the park impact fee for ADUs of 750+ sq ft falls from $3,812 to $3,379 (Park Impact Fee – Residential, item 43a; the whole table moved down — studio $3,789, 1-bedroom $5,931, 2-bedroom $10,699, 3-bedroom $18,685, 4+ bedroom $25,991), and the ADU sewer connection charge rises from $5,295 to $5,825 per unit (September 1, 2026 column). The same schedule lists an ADU housing review fee of $158 (1–4 units $474, 5+ units $790) — confirmed in the document, not yet encoded as a fee row. The homepage 750 sq ft cliff example is corrected to $3,379. Hayward now has 3 rows (3 verified).",
+      "headline": "Hayward FY2027: park impact fee $3,812 → $3,379; ADU sewer connection $5,295 → $5,825",
+      "items_added": 0,
+      "jurisdictions": ["Hayward"]
+    },
+{
+      "date": "2026-11-10",
       "detail": "Source-URL correction, no fee amounts changed: FI-308 (Laguna Beach USD school fee) and FI-433 (Paramount USD school fee) source URLs move from http:// to https:// — the plain-http documents time out while the https versions load (Paramount via a 301 redirect). The homepage school-fee chart now excludes Chula Vista: its only verified school row is FI-269, the Sweetwater Union HSD share ($3.01/sq ft, grades 7-12), with the Chula Vista Elementary share unverified, so the $2,408 shown was a high-school portion only. The cheapest five are now Laguna Beach $1,640, Pasadena $1,792, Sierra Madre $1,792, Paramount $2,376 and Simi Valley $2,560; the headline spread ($1,640 → $9,968, 6.1×) is unchanged. The Fee Index 'Districts at the ceiling' note drops the stale 'Six joined the ceiling club in the last three batches alone' line and now states 38 districts charge the $5.38 Level I cap, up from 21 at the Q3 launch. No fee items added or changed; 619 items (486 verified) unchanged.",
       "headline": "Source URLs http→https for Laguna Beach and Paramount school fees; Chula Vista leaves the homepage chart",
       "items_added": 0,

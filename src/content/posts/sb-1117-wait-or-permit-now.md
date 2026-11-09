@@ -57,7 +57,7 @@ The flat amounts waiting on a conversion include the biggest cliffs in the state
 | Vista | $7,564 | Not published |
 | Burbank | $7,078 | Not published |
 | Concord | $6,581 | Not published |
-| Hayward | $3,812 | Not published |
+| Hayward | $3,379 | Not published |
 
 If your city is on this list, the January savings could be large — Ontario's flat fee is $37,595 in the General City area schedule or $58,576 in Ontario Ranch, and a parcel pays one area's schedule, not both, so either figure, in principle, is on the table — or the city could adopt a conversion that preserves most of it. Nobody knows yet. That uncertainty is itself the story: the cities with the most to lose from SB 1117 are the ones that have said the least about how they will implement it.
 
