@@ -85,6 +85,8 @@ Every fee line we found, with exactly what it is and where it came from.
 
 Soft costs in the breakdown table are rounded to $19,000 (exact $18,874.94); the total is rounded to the nearest $1,000.
 
+The city's fee lines are also listed on the [Vallejo fee page](/fees/vallejo/), with verification status and source links.
+
 ## A banded sewer charge
 
 The $2,865 capacity charge is the quirk, and the band is the point. The Vallejo Flood & Wastewater District does not charge a flat sewer fee: it prices detached ADUs by size band, and 800–899 sq ft on the Mainland is $2,865. A smaller ADU would fall in a lower band; a contained ADU — one inside the existing structure — is never charged at all. The band is where the money is: the capacity charge alone is more than half the verified fee stack, and the district's four lines together are over 80% of it.
