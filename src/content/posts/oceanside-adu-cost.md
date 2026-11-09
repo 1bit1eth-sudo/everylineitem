@@ -86,6 +86,8 @@ Six phases. The same six used on every build in this series.
 | Landscaping & hardscape | $13,000 | 4% |
 | **Total** | **$313,000** | **$392 / sq ft** |
 
+The city's fee lines are also listed on the [Oceanside fee page](/fees/oceanside/), with verification status and source links.
+
 ## The fee autopsy
 
 Every fee line we found, with exactly what it is and where it came from.
@@ -141,7 +143,7 @@ The $7,000 gap with the baseline is almost entirely the $0 DIF (unconfirmed) and
 
 ## A note on SB 1117
 
-Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. In Oceanside, SB 1117 collides with both documents at once. If the ordinance's $0 DIF survives, the new law changes nothing — $0 times anything is $0. The park schedule has now been adopted at $6.03/sq ft, so if it applies to ADUs, SB 1117 rewrites the math: the full-area $6.03/sq ft on 800 sq ft becomes $6.03 on the 50 sq ft above 750 — about **$302** instead of $4,824. Either way, the January 2027 quarterly review will check how the adopted schedule applies to ADUs and how the city reconciles it with the ordinance. School fees are outside SB 1117's impact-fee definition and stay at $3,832.
+Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. See the full comparison at [Oceanside: 2026 vs 2027, line by line](/sb-1117/oceanside/). In Oceanside, SB 1117 collides with both documents at once. If the ordinance's $0 DIF survives, the new law changes nothing — $0 times anything is $0. The park schedule has now been adopted at $6.03/sq ft, so if it applies to ADUs, SB 1117 rewrites the math: the full-area $6.03/sq ft on 800 sq ft becomes $6.03 on the 50 sq ft above 750 — about **$302** instead of $4,824. Either way, the January 2027 quarterly review will check how the adopted schedule applies to ADUs and how the city reconciles it with the ordinance. School fees are outside SB 1117's impact-fee definition and stay at $3,832.
 
 ## Disclaimer
 
