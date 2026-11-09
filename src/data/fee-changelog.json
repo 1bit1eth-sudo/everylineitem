@@ -229,6 +229,13 @@
       "items_added": 0
     },
     {
+      "date": "2026-11-05",
+      "detail": "Santa Clara County (unincorporated) gains nine building-fee schedule lines from the county Building Fee Schedule FY 2026-2027 (effective July 18, 2026), replacing the FI-015 $15,076 flat, which was post-arithmetic and not reproducible from the schedule: at the flat stated $360,000 valuation basis the schedule lines sum to $14,457.68 without the $2,808 planning review and $17,265.68 with it, neither equal to $15,076. The nine lines — building permit ($3,698.51 for the first $100,000 plus $11.30 per additional $1,000 in the $100,001-$500,000 band), plan check at 70% of the permit fee, mechanical/plumbing/electrical at 11% each ($410 minimum), planning review $2,808 at 500+ sq ft, information technology 3%, training and certification 0.73%, and comprehensive planning 0.205% of valuation — are all to_verify: the valuation basis for an 800 sq ft ADU is not in any county document retrieved, so feeCalc skips the valuation-based lines until a basis is confirmed, and whether the $2,808 planning review applies to a ministerial ADU is still open. The county water/sewer providers vary by parcel and are not encoded here.",
+      "headline": "Santa Clara County building fees split into FY 2026-27 schedule lines; FI-015 flat replaced",
+      "items_added": 9,
+      "jurisdictions": ["Santa Clara County"]
+    },
+    {
       "date": "2026-11-04",
       "headline": "Campbell post corrected to FY 2027 schedule; CalHFA grant post added for December 18 slot",
       "detail": "Campbell post total moved ~$318,000 to ~$310,000: permit example corrected to $2,880 core + $254 add-ons (prior $3,529/$3,929 withdrawn, $649 remainder did not reconcile); impact fee now published at $9,328/unit cap (FY 2026 cap $9,129); schedule resolution corrected (#13333, not #13279); WVSD sewer figures marked [to verify] (current district schedule not located); CUSD mixed 500/750 sq ft wording flagged. New post on the CalHFA ADU Grant (closed since December 28, 2023, no new round posted as of November 4, 2026) added for the December 18 slot; December 19 remains open for the unpermitted-ADU legalization post (not written this session).",
