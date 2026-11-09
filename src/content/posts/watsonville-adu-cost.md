@@ -83,6 +83,8 @@ Every fee line we found, with exactly what it is and where it came from.
 
 Soft costs in the breakdown table are rounded to $20,000 (exact $20,103.85); the total is rounded to the nearest $1,000.
 
+The city's fee lines are also listed on the [Watsonville fee page](/fees/watsonville/), with verification status and source links.
+
 ## Three zeros, three thresholds
 
 The $0 impact figure is not one decision but three, and each one is worth naming because each could flip on a different ADU. The Public Facilities fee is $0 by size: $0.40 per square foot applies only above 1,000 sq ft, so an 800 sq ft ADU is under the line — but a 1,200 sq ft ADU would pay it. The Affordable Housing In-Lieu fee is $0 by category: the Development Fee Summary prices an accessory dwelling unit at $0.00 outright, against $21,885 for a single-family detached home. And the Public Art allocation is $0 by two thresholds at once: 0.75% of valuation applies only at 2,000 sq ft or more of new floor area and $500,000 or more in valuation, and this ADU is under both.
