@@ -562,7 +562,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "https://www.slocounty.ca.gov/departments/planning-building/forms-documents/fees",
-      "last_verified": "2026-11-09",
+      "last_verified": "2026-11-10",
       "status": "verified"
     },
     {
@@ -16099,7 +16099,8 @@
       "confidence": "B",
       "status": "verified",
       "internal_notes": "REPLACES the $14,821 water-capacity figure committed in fb95f36: that is the charge for a NEW 1-inch-or-smaller meter / new residential use (Res. 2014-1359: base $4,127 + supplemental water $10,694, eff. 7/1/25), which 2.04.100(B) says an ADU is not — so it does not apply to an ordinary ADU. EXCEPTION: a detached ADU built with the construction of a new residential dwelling IS treated as a new residential use, and the new-meter capacity charges would then apply (water $14,821 for 1 inch or less; the sewer capacity amount is 'as established by resolution of the board' per 2.04.090 and no such resolution was found — NOT FOUND, do not guess). Monthly sewer service for an ADU is billed at the then-current multi-family rate starting six calendar months after the verification-of-service letter (or occupancy if sooner), with a credit if the County has not certified occupancy (2.04.100(D)) — a recurring service rate, not a one-time fee, so not encoded as a fee item. Nipomo CSD service area only.",
-      "notes": "No water/sewer capacity charges or connection fees for an ADU, except a detached ADU built with a new residential dwelling. Monthly sewer service is billed at the multi-family rate. Nipomo CSD service area only. SB 1117 (eff. 2027-01-01): for up to two ADUs, covered impact fees are charged only on the area above 750 sq ft — this line's pre-2027 basis will need re-checking for 2027."
+      "notes": "No water/sewer capacity charges or connection fees for an ADU, except a detached ADU built with a new residential dwelling. Monthly sewer service is billed at the multi-family rate. Nipomo CSD service area only. SB 1117 (eff. 2027-01-01): for up to two ADUs, covered impact fees are charged only on the area above 750 sq ft — this line's pre-2027 basis will need re-checking for 2027.",
+      "area": "Nipomo"
     },
     {
       "item_id": "SAN-LUIS-OBISPO-COUNTY-CSD-05",
@@ -16116,13 +16117,14 @@
       "max_sqft": null,
       "applies_to": "all",
       "source_url": "https://ncsd.ca.gov/wp-content/uploads/2025/07/2025-26-Fee-Schedule-and-Code-Book-Reference-1.pdf",
-      "source_note": "Nipomo Community Services District, 2025-26 Miscellaneous Fee Schedule, Resolution 2023-1681, Code Sec. 2.04.050(A): Application for Verification of Service Letter for Water and/or Sewer, $389. The district's Verification of Service form lists 'New Accessory Dwelling Unit (ADU)' as a service type. Re-verified live 2026-11-06 (curl + pdftotext). Re-verified live 2026-11-09: the 2025-26 Miscellaneous Fee Schedule (Res. 2023-1681) still serves $389 for the Application for Verification of Service Letter at Code Sec. 2.04.070(A). The district's Verification of Service form (FULL-APP-VERIFICATION-OF-SERVICE-8.1.pdf, forms page, confirmed live 2026-11-09) lists 'New Accessory Dwelling Unit (ADU)' — with 'with Fire Sprinklers' / 'without Fire Sprinklers' sub-options — under 'CHECK ALL APPLICABLE BOXES BELOW' with Water and Sewer columns, so the letter is the ADU intake instrument.",
+      "source_note": "Nipomo Community Services District, 2025-26 Miscellaneous Fee Schedule, Resolution 2023-1681, Code Sec. 2.04.070(A): Application for Verification of Service Letter for Water and/or Sewer, $389. The district's Verification of Service form lists 'New Accessory Dwelling Unit (ADU)' as a service type. Re-verified live 2026-11-06 (curl + pdftotext). Re-verified live 2026-11-09: the 2025-26 Miscellaneous Fee Schedule (Res. 2023-1681) still serves $389 for the Application for Verification of Service Letter at Code Sec. 2.04.070(A). The district's Verification of Service form (FULL-APP-VERIFICATION-OF-SERVICE-8.1.pdf, forms page, confirmed live 2026-11-09) lists 'New Accessory Dwelling Unit (ADU)' — with 'with Fire Sprinklers' / 'without Fire Sprinklers' sub-options — under 'CHECK ALL APPLICABLE BOXES BELOW' with Water and Sewer columns, so the letter is the ADU intake instrument. Re-verified live 2026-11-10: the same 2025-26 schedule PDF (77,285 bytes) still serves $389 for the Application for Verification of Service Letter at Code Sec. 2.04.070(A); Water Lateral Inspection $430 and Sewer Lateral Inspection $281 also unchanged.",
       "effective_date": "2025-07-01",
-      "last_verified": "2026-11-09",
-      "confidence": "C",
-      "status": "to_verify",
-      "internal_notes": "Nipomo CSD service area only. Fees adjust annually each July 1 per Code Sec. 2.04.010(B). PROMOTION NOTE (2026-11-09): amount + ADU application confirmed; promotion to verified is held for the daily routine's area-tag decision — this is a Nipomo-only fee and must not enter the county-wide verified total without an area tag (cf. cycle293/294/295 merge).",
-      "notes": "Required to confirm NCSD water/sewer service for the parcel; the district's form lists new ADUs as a service type. Nipomo CSD service area only."
+      "last_verified": "2026-11-10",
+      "confidence": "B",
+      "status": "verified",
+      "internal_notes": "Nipomo CSD service area only. Fees adjust annually each July 1 per Code Sec. 2.04.010(B). PROMOTED 2026-11-10 (cycle308): verified with area tag 'Nipomo' — the area-model question is settled by PR #197 (merged CSA area tags, incl. 'Nipomo (CSA 1)') and the Templeton/San Miguel/Oceano CSD area-tag precedent (cycles 302/304/305); the letter now enters only the Nipomo area schedule, never the county-wide total.",
+      "notes": "Required to confirm NCSD water/sewer service for the parcel; the district's form lists new ADUs as a service type. Nipomo CSD service area only.",
+      "area": "Nipomo"
     },
     {
       "item_id": "SAN-LUIS-OBISPO-COUNTY-CSD-07",
@@ -16145,7 +16147,8 @@
       "confidence": "C",
       "status": "to_verify",
       "internal_notes": "Nipomo CSD service area only. Applies only when a new water lateral is installed/inspected. Fees adjust annually each July 1 per Code Sec. 2.04.010(B).",
-      "notes": "Applies only when a new water lateral is installed. Nipomo CSD service area only."
+      "notes": "Applies only when a new water lateral is installed. Nipomo CSD service area only.",
+      "area": null
     },
     {
       "item_id": "SAN-LUIS-OBISPO-COUNTY-CSD-08",
@@ -16168,7 +16171,8 @@
       "confidence": "C",
       "status": "to_verify",
       "internal_notes": "Nipomo CSD service area only. Applies only when a new sewer lateral is installed/inspected. Fees adjust annually each July 1 per Code Sec. 2.04.010(B).",
-      "notes": "Applies only when a new sewer lateral is installed. Nipomo CSD service area only."
+      "notes": "Applies only when a new sewer lateral is installed. Nipomo CSD service area only.",
+      "area": null
     },
     {
       "item_id": "SAN-LUIS-OBISPO-COUNTY-CSD-09",
@@ -16191,7 +16195,8 @@
       "confidence": "C",
       "status": "to_verify",
       "internal_notes": "Applies only if a separate/new meter is installed; ADUs typically share the primary residence meter (the district provides one domestic meter per parcel per its Intent-to-Serve form). Nipomo CSD service area only. Fees adjust annually each July 1 per Code Sec. 2.04.010(B). Code 2.04.100(B)-(C): an ADU is not a new residential use for capacity/connection fees and no new/separate sewer connection is required for ADUs in existing structures, so a separate meter is the exception (detached ADU built with a new dwelling), not the rule.",
-      "notes": "Only if a separate meter is installed; the district provides one domestic meter per parcel. Nipomo CSD service area only."
+      "notes": "Only if a separate meter is installed; the district provides one domestic meter per parcel. Nipomo CSD service area only.",
+      "area": null
     },
     {
       "item_id": "MARIN-COUNTY-NEW-11",
