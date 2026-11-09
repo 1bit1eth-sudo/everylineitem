@@ -79,12 +79,15 @@ const fmtUSD = (n: number) => "$" + n.toLocaleString("en-US");
 // - ONTARIO: FI-319 Chaffey HSD 9-12 share only ($1.67/sq ft)
 // - LOS-ALTOS: FI-223 MVLA HSD high school share only ($1.72/sq ft;
 //   elementary share unverified)
+// - CHULA-VISTA: FI-269 Sweetwater HSD share only ($3.01/sq ft);
+//   elementary share unverified
 const PARTIAL_SCHOOL_JURIS = new Set([
   "LOS-GATOS",
   "SARATOGA",
   "EL-CENTRO",
   "ONTARIO",
   "LOS-ALTOS",
+  "CHULA-VISTA",
 ]);
 const jurisName = new Map(
   (feesData.jurisdictions as any[]).map(j => [j.juris_id, j.name as string])
