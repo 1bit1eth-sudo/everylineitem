@@ -70,6 +70,8 @@ Six phases. The same six used on every build in this series.
 | Landscaping & hardscape | $13,000 | 4% |
 | **Total** | **~$309,000** | **~$386 / sq ft** |
 
+The city's fee lines are also listed on the [Riverside fee page](/fees/riverside/), with verification status and source links.
+
 ## The fee autopsy
 
 Every fee line we found, with exactly what it is and where it came from.
@@ -104,7 +106,7 @@ The $11,000 gap to the baseline is mostly the permit bill: $1,006 here against a
 
 ## A note on SB 1117
 
-Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. Riverside's pro-rata structure will need marginal math — an 800 sq ft ADU would owe park DIF on 50 sq ft, not 800, which requires a per-square-foot park rate the current handout does not publish in ADU terms. We found no mention of SB 1117 in city materials; the January 2027 quarterly review will check for a revised fee schedule. School fees are outside SB 1117's impact-fee definition and stay at $4,136.
+Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. See the full comparison at [Riverside: 2026 vs 2027, line by line](/sb-1117/riverside/). Riverside's pro-rata structure will need marginal math — an 800 sq ft ADU would owe park DIF on 50 sq ft, not 800, which requires a per-square-foot park rate the current handout does not publish in ADU terms. We found no mention of SB 1117 in city materials; the January 2027 quarterly review will check for a revised fee schedule. School fees are outside SB 1117's impact-fee definition and stay at $4,136.
 
 ## Disclaimer
 
