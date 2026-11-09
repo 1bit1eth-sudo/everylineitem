@@ -62,28 +62,59 @@ const verifiedCount = (feesData.fee_items as any[]).filter(
 const schoolFees = (feesData.fee_items as any[])
   .filter(i => i.status === "verified" && i.juris_id !== "LA-BASE" && i.category === "school" && i.method === "per_sqft")
   .sort((a, b) => a.rate_low - b.rate_low);
-const schoolLow = Math.round(schoolFees[0].rate_low * 800);
-const schoolHigh = Math.round(schoolFees[schoolFees.length - 1].rate_low * 800);
 const fmtUSD = (n: number) => "$" + n.toLocaleString("en-US");
 
-// School-fee spread — one fee line, set by the school district, identical
-// math for every jurisdiction (rate × 800 sq ft). Honest 0-based axis:
-// the story is fee variance, not total-cost variance. Cheapest 5 + priciest 5
-// jurisdictions with verified per-sq-ft school-fee line items, computed from
-// fees.json so the chart can never drift from the Fee Index again.
+// School-fee spread — computed per jurisdiction from jurisStack's
+// school field: the jurisdiction's combined school fee (elementary +
+// high school shares summed at 800 sq ft). Comparing single district
+// rows is wrong: one row can be only one share of a split district
+// (Campbell's high school share FI-295 $1.61/sq ft is $1,288 alone,
+// but the parcel also pays the elementary share FI-294 $3.79/sq ft —
+// $4,320 combined). Same method as the Fee Index (PR #201).
+// Jurisdictions whose only verified school row is a partial
+// (high school) share are excluded from the low end:
+// - LOS-GATOS: FI-182 LGSUHSD high school share only ($1.66/sq ft)
+// - SARATOGA: FI-248 LGSUHSD high school share only ($1.66/sq ft)
+// - EL-CENTRO: EL-CENTRO-NEW-01 CUHSD high school share only ($1.66/sq ft)
+// - ONTARIO: FI-319 Chaffey HSD 9-12 share only ($1.67/sq ft)
+// - LOS-ALTOS: FI-223 MVLA HSD high school share only ($1.72/sq ft;
+//   elementary share unverified)
+const PARTIAL_SCHOOL_JURIS = new Set([
+  "LOS-GATOS",
+  "SARATOGA",
+  "EL-CENTRO",
+  "ONTARIO",
+  "LOS-ALTOS",
+]);
 const jurisName = new Map(
   (feesData.jurisdictions as any[]).map(j => [j.juris_id, j.name as string])
 );
-const schoolByJuris = new Map<string, any>();
+// Largest verified per-sq-ft school share per jurisdiction — the source
+// link for a combined figure points at its biggest share's document.
+const largestSchoolRow = new Map<string, any>();
 for (const i of schoolFees) {
-  if (!schoolByJuris.has(i.juris_id)) schoolByJuris.set(i.juris_id, i);
+  const prev = largestSchoolRow.get(i.juris_id);
+  if (!prev || i.rate_low > prev.rate_low) largestSchoolRow.set(i.juris_id, i);
 }
-const schoolRows = [...schoolByJuris.values()].map(i => ({
-  juris: jurisName.get(i.juris_id) ?? i.juris_id,
-  rate: i.rate_low as number,
-  total: Math.round((i.rate_low as number) * 800),
-  source: i.source_url as string,
-}));
+const schoolByJuris = new Map<string, number>();
+for (const j of (feesData.jurisdictions as any[]).filter(j => j.juris_id !== "LA-BASE")) {
+  const stack = jurisStack(feesData as any, j.juris_id, 800);
+  if (stack.school != null) schoolByJuris.set(j.juris_id, stack.school);
+}
+// Cheapest 5 + priciest 5 jurisdictions by combined school fee, computed
+// from fees.json so the chart can never drift from the Fee Index again.
+// Honest 0-based axis: the story is fee variance, not total-cost variance.
+const schoolRows = [...schoolByJuris.entries()]
+  .filter(([j]) => !PARTIAL_SCHOOL_JURIS.has(j))
+  .sort((a, b) => a[1] - b[1])
+  .map(([j, total]) => ({
+    juris: jurisName.get(j) ?? j,
+    rate: total / 800,
+    total,
+    source: (largestSchoolRow.get(j)?.source_url ?? "") as string,
+  }));
+const schoolLow = schoolRows[0].total;
+const schoolHigh = schoolRows[schoolRows.length - 1].total;
 const feeSpread = [...schoolRows.slice(0, 5), ...schoolRows.slice(-5)].map(c => ({
   ...c,
   totalLabel: "$" + c.total.toLocaleString("en-US"),
@@ -94,7 +125,7 @@ const feeSpread = [...schoolRows.slice(0, 5), ...schoolRows.slice(-5)].map(c => 
 // Jurisdiction picker for the hero — every jurisdiction in the fee matrix,
 // deep-linking into /compare/ with prefilled params.
 import feesData from "@/data/fees.json";
-import { calcJurisdiction, jurisAreas } from "@/lib/feeCalc";
+import { calcJurisdiction, jurisAreas, jurisStack } from "@/lib/feeCalc";
 const heroJurisdictions = [...feesData.jurisdictions]
   .sort((a, b) => a.name.localeCompare(b.name, "en-US"))
   .map(j => ({ id: j.juris_id, name: j.name }));
@@ -398,7 +429,7 @@ const formatShortDate = (d: string | Date) =>
               Same 800 sq ft ADU. School fees from {fmtUSD(schoolLow)} to {fmtUSD(schoolHigh)}.
             </h2>
             <p class="text-sm opacity-70">
-              One fee line, set by your school district — not your contractor.
+              Set by your school district — elementary and high-school shares combined where a parcel pays both — not your contractor.
               A {(schoolHigh / schoolLow).toFixed(1)}&times; spread before construction even starts. Bars start at
               $0; every figure links to the district's official document.
             </p>
@@ -434,7 +465,7 @@ const formatShortDate = (d: string | Date) =>
             ))}
           </div>
           <div class="px-4 py-3 text-sm">
-            <span class="opacity-60">Cheapest 5 and priciest 5 of {schoolRows.length} jurisdictions with verified school-fee line items (the Fee Index counts {schoolFees.length} district line items — some jurisdictions have more than one district).</span>{" "}
+            <span class="opacity-60">Cheapest 5 and priciest 5 of {schoolRows.length} jurisdictions with verified school fees. Each figure is one jurisdiction's combined school fee — elementary and high-school shares summed — and the low end leaves out jurisdictions where only one share is verified (the Fee Index counts {schoolFees.length} district line items — some jurisdictions have more than one district).</span>{" "}
             <a href="/compare/" class="text-accent font-semibold">
               Look up your jurisdiction &rarr;
             </a>{" "}
