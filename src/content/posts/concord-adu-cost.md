@@ -80,6 +80,8 @@ Every fee line we found, with exactly what it is and where it came from.
 
 Soft costs in the breakdown table are rounded to $25,000–$28,000 (exact $24,874–$28,264); the totals are rounded to the nearest $1,000.
 
+The city's fee lines are also listed on the [Concord fee page](/fees/concord/), with verification status and source links.
+
 ## The 40% line
 
 The tier rule is the whole story of this ledger, and it is worth reading slowly. Both impact fees are flat amounts for ADUs of 750–1,200 sq ft — not per-square-foot, not a percentage of valuation. Each fee has two tiers, and the tier is decided by one ratio: the ADU's size against the primary dwelling. If the ADU exceeds 40% of the primary dwelling, OSIP is $1,626 and Park Land is $8,345. If it is 40% or smaller, OSIP is $1,073 and Park Land is $5,508. For an 800 sq ft ADU, the boundary is a 2,000 sq ft primary home: a 1,900 sq ft house puts you in the high tier, a 2,100 sq ft house puts you in the low tier, and the difference is $3,390 across the two fees.
