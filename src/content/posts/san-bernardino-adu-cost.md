@@ -74,6 +74,8 @@ Six phases. The same six used on every build in this series.
 
 The honest caveat, same as every city post: San Bernardino does not publish phase-level construction costs, so phases two through six are carried from the Los Angeles County baseline, unchanged — we will not print a number we cannot anchor. What *is* rebuilt from San Bernardino sources, line by line, is the soft-cost phase. Two fee lines that exist in the city's code — the building permit and the water/sewer capacity charges — could not be priced from public documents. They are excluded from the total, not estimated. The DIF line is included, but only as the ordinance's own formula worked through with a stated assumption.
 
+The city's fee lines are also listed on the [San Bernardino fee page](/fees/san-bernardino/), with verification status and source links.
+
 ## Where San Bernardino differs from Los Angeles
 
 | | LA County baseline | San Bernardino | Difference |
@@ -144,7 +146,7 @@ DCA 25-11 — the ADU ordinance amendment working through §19.04.030(2)(P) — 
 
 ## A note on SB 1117
 
-Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. San Bernardino's ordinance formula — pro-rata on the *whole* ADU at 750 and above — cannot survive that math unchanged: an 800 sq ft ADU would owe fees on 50 sq ft of marginal area, not on 800 sq ft scaled by the house ratio. The city will need a revised calculation, and DCA 25-11 is the obvious place for it; we found no mention of SB 1117 in published city materials. School fees are outside SB 1117's impact-fee definition and stay at $4,304. Whether the water/sewer capacity charges fall inside it is a question of interpretation — it is on our list for the January review.
+Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. See the full comparison at [San Bernardino: 2026 vs 2027, line by line](/sb-1117/san-bernardino/). San Bernardino's ordinance formula — pro-rata on the *whole* ADU at 750 and above — cannot survive that math unchanged: an 800 sq ft ADU would owe fees on 50 sq ft of marginal area, not on 800 sq ft scaled by the house ratio. The city will need a revised calculation, and DCA 25-11 is the obvious place for it; we found no mention of SB 1117 in published city materials. School fees are outside SB 1117's impact-fee definition and stay at $4,304. Whether the water/sewer capacity charges fall inside it is a question of interpretation — it is on our list for the January review.
 
 ## Disclaimer
 

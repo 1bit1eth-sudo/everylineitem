@@ -73,6 +73,8 @@ Six phases. The same six used on every build in this series.
 
 The honest caveat, same as every city post: Glendale's agencies do not publish phase-level construction costs, and we found no public Glendale permit-valuation dataset to anchor one. So phases two through six are carried from the Los Angeles County baseline, unchanged — we will not print a number we cannot anchor. What *is* rebuilt from Glendale sources, line by line, is the soft-cost phase — with one transparent exception. The city publishes its permit *rate tiers* but not the residential *valuation table* ($/sq ft) that feeds them, so the building-permit line below is a worked example at a stated valuation, not a rate-table lookup. Everything else is arithmetic from published numbers.
 
+The city's fee lines are also listed on the [Glendale fee page](/fees/glendale/), with verification status and source links.
+
 ## Where Glendale differs from Los Angeles
 
 | Phase | LA County | Glendale | Difference |
@@ -115,7 +117,7 @@ The $2,000 gap is the net of offsetting forces. Working in Glendale's favor: no 
 
 Glendale's cliff is the narrowest in the series and the most unavoidable. In San Diego the cliff spans hundreds of square feet of design freedom; in Glendale it is 50. The ordinance allows 800 and exempts 749 — there is no compliant detached design between the exemption and the maximum that meaningfully changes the fee outcome. If you want the DIF line at $0, you build at 749 or below; at 800, you pay whatever the main-house proportion yields, up to $4,700.
 
-Starting 2027-01-01, [SB 1117](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB1117) changes the statewide rule so impact fees on the first two ADUs apply only to square footage *above* 750 — which would shrink Glendale's already-narrow cliff to the 50 sq ft sliver itself. The city's 2022 ordinance predates the law and will need updating; flagged for the December quarterly re-verification.
+Starting 2027-01-01, [SB 1117](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB1117) changes the statewide rule so impact fees on the first two ADUs apply only to square footage *above* 750 — which would shrink Glendale's already-narrow cliff to the 50 sq ft sliver itself. See the full comparison at [Glendale: 2026 vs 2027, line by line](/sb-1117/glendale/). The city's 2022 ordinance predates the law and will need updating; flagged for the December quarterly re-verification.
 
 ## What moves the number most in Glendale
 

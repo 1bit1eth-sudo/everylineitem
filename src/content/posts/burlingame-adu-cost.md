@@ -82,6 +82,8 @@ Every fee line we found, with exactly what it is and where it came from.
 
 Soft costs in the breakdown table are rounded to $21,000–$22,000 (exact $20,664.50–$21,815); the totals are rounded to the nearest $1,000.
 
+The city's fee lines are also listed on the [Burlingame fee page](/fees/burlingame/), with verification status and source links.
+
 ## The $1,150.50 question
 
 The capacity charges are the whole story of this ledger, and they turn on four words: "over 150 sq ft". The schedule prices water capacity at $3.04 per square foot and sewer capacity at $4.63 per square foot for a detached ADU over 150 sq ft. On the natural reading, only the area above 150 sq ft is assessed — 650 sq ft — giving water $1,976 and sewer $3,009.50. On the other reading, the full 800 sq ft is assessed, giving water $2,432 and sewer $3,704. The difference is $456 on water and $694.50 on sewer: $1,150.50 in total, which is exactly the width of the range in this post.

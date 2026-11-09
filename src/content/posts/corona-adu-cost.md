@@ -81,6 +81,8 @@ Every fee line we found, with exactly what it is and where it came from.
 
 Soft costs in the breakdown table are rounded to $17,000 (exact $17,096); the total is rounded to the nearest $1,000.
 
+The city's fee lines are also listed on the [Corona fee page](/fees/corona/), with verification status and source links.
+
 ## A blank column, three ways
 
 The $0 impact fee is not one decision but three, and each one is worth naming because each could change independently. The city DIF is blank by design: the DIF Update 2026, effective July 1, 2026, leaves the ADU column empty for every city category, from street and signal to library and community facilities. The regional TUMF is $0 by ordinance: Riverside County Ordinance 824.20 exempts ADUs and JADUs from the Transportation Uniform Mitigation Fee program entirely, not just in Corona but program-wide. And Quimby is $0 by timing: it is a subdivision exaction collected at map, $12,708 per single-family unit, so a backyard ADU on an existing lot never triggers it.

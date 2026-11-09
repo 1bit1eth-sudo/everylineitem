@@ -69,6 +69,8 @@ Six phases. The same six used on every build in this series.
 | Landscaping & hardscape | $13,000 | 4% |
 | **Total** | **$308,000** | **$385 / sq ft** |
 
+The city's fee lines are also listed on the [Chula Vista fee page](/fees/chula-vista/), with verification status and source links.
+
 ## The fee autopsy
 
 Every fee line we found, with exactly what it is and where it came from.
@@ -125,7 +127,7 @@ The $12,000 gap to the baseline comes mostly from soft costs: a flat $3,951 perm
 
 ## A note on SB 1117
 
-Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. Chula Vista's proportional formula ("proportionally to the primary residence, on a square footage basis") cannot survive that math unchanged — an 800 sq ft ADU would owe fees on 50 sq ft, not 800, which changes both the base and the ratio. We found no mention of SB 1117 in city materials; the January 2027 quarterly review will check for a revised fee bulletin. School fees are outside SB 1117's impact-fee definition and stay at $2,408 plus whatever CVESD charges.
+Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. See the full comparison at [Chula Vista: 2026 vs 2027, line by line](/sb-1117/chula-vista/). Chula Vista's proportional formula ("proportionally to the primary residence, on a square footage basis") cannot survive that math unchanged — an 800 sq ft ADU would owe fees on 50 sq ft, not 800, which changes both the base and the ratio. We found no mention of SB 1117 in city materials; the January 2027 quarterly review will check for a revised fee bulletin. School fees are outside SB 1117's impact-fee definition and stay at $2,408 plus whatever CVESD charges.
 
 ## Disclaimer
 

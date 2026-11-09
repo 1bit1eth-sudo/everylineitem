@@ -70,6 +70,8 @@ Six phases. The same six used on every build in this series.
 | Landscaping & hardscape | $13,000 | 4% |
 | **Total** | **~$320,000** | **~$400 / sq ft** |
 
+The city's fee lines are also listed on the [Santa Rosa fee page](/fees/santa-rosa/), with verification status and source links.
+
 ## The fee autopsy
 
 Every fee line we found, with exactly what it is and where it came from.
@@ -102,7 +104,7 @@ Dead even with the baseline on the headline — but the composition is inverted 
 
 ## A note on SB 1117
 
-Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. Santa Rosa's 25% tier for 751–950 sq ft is already gentler than the baseline cliff SB 1117 replaces — the city's 800 sq ft fee under the new marginal formula will depend on how Santa Rosa recalibrates its tier against the state mandate, and could move in either direction. Water and sewer demand/offset fees are connection/capacity charges, explicitly excluded from SB 1117's impact-fee definition — the $8,230 utility stack is unaffected. School fees stay at $4,136.
+Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. See the full comparison at [Santa Rosa: 2026 vs 2027, line by line](/sb-1117/santa-rosa/). Santa Rosa's 25% tier for 751–950 sq ft is already gentler than the baseline cliff SB 1117 replaces — the city's 800 sq ft fee under the new marginal formula will depend on how Santa Rosa recalibrates its tier against the state mandate, and could move in either direction. Water and sewer demand/offset fees are connection/capacity charges, explicitly excluded from SB 1117's impact-fee definition — the $8,230 utility stack is unaffected. School fees stay at $4,136.
 
 ## Sources
 

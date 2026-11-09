@@ -62,6 +62,8 @@ Six phases. The same six used on every build in this series.
 
 The honest caveat, same as every city post — with an addition: Santa Maria's agencies do not publish phase-level construction costs, and we found no public Santa Maria permit-valuation dataset to anchor one. So phases two through six are carried from the Los Angeles County baseline, unchanged — we will not print a number we cannot anchor. What *is* rebuilt from Santa Maria sources, line by line, is the soft-cost phase — but only the lines we could verify. Four fee lines (permit, plan check, DIF dollars, water/sewer dollars) exist in the city's fee schedule but could not be read from public documents. They are excluded from the total, not estimated.
 
+The city's fee lines are also listed on the [Santa Maria fee page](/fees/santa-maria/), with verification status and source links.
+
 ## Where Santa Maria differs from Los Angeles
 
 | Phase | LA County | Santa Maria | Difference |
@@ -102,7 +104,7 @@ The honest caveat, same as every city post — with an addition: Santa Maria's a
 
 Santa Maria's cliff is confirmed in ordinance but unpriced in practice — the worst combination for a builder. You know the rule (750 sq ft) and the mechanism (main-house proportionality) but not the number. Until the fee resolutions surface, the only honest advice is to get the DIF figure in writing from the Building Division before finalizing plans.
 
-Starting 2027-01-01, [SB 1117](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB1117) changes the statewide rule so impact fees on the first two ADUs apply only to square footage *above* 750 — which would convert Santa Maria's main-house-proportional structure to a marginal one. The city's 2024 ordinance predates the law and will need updating; flagged for the December quarterly re-verification.
+Starting 2027-01-01, [SB 1117](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB1117) changes the statewide rule so impact fees on the first two ADUs apply only to square footage *above* 750 — which would convert Santa Maria's main-house-proportional structure to a marginal one. See the full comparison at [Santa Maria: 2026 vs 2027, line by line](/sb-1117/santa-maria/). The city's 2024 ordinance predates the law and will need updating; flagged for the December quarterly re-verification.
 
 ## What moves the number most in Santa Maria
 

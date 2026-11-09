@@ -73,6 +73,8 @@ Six phases. The same six used on every build in this series.
 
 The honest caveat, same as every city post: Oakland's agencies do not publish phase-level construction costs, and we found no public Oakland permit-valuation dataset to anchor one. So phases two through six are carried from the Los Angeles County baseline, unchanged — the East Bay labor market is real, but we will not print a number we cannot anchor. What *is* rebuilt from Oakland sources is the soft-cost phase. That is where this city's story lives — and it is a story about a fee schedule that mostly says "not applicable."
 
+The city's fee lines are also listed on the [Oakland fee page](/fees/oakland/), with verification status and source links.
+
 ## Where Oakland differs from Los Angeles
 
 | Phase | LA County | Oakland | Difference |

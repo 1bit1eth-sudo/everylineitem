@@ -74,6 +74,8 @@ Six phases. The same six used on every build in this series.
 
 The honest caveat, same as every city post: Long Beach's agencies do not publish phase-level construction costs, and we found no public Long Beach permit-valuation dataset to anchor one. So phases two through six are carried from the Los Angeles County baseline, unchanged — we will not print a number we cannot anchor. What *is* rebuilt from Long Beach sources, line by line, is the soft-cost phase. That is where this city's story lives — and it is a story about a fee schedule that thought about ADUs specifically, then left one line blurry.
 
+The city's fee lines are also listed on the [Long Beach fee page](/fees/long-beach/), with verification status and source links.
+
 ## Where Long Beach differs from Los Angeles
 
 | Phase | LA County | Long Beach | Difference |
@@ -114,7 +116,7 @@ State law ([Gov. Code § 66311.5](https://leginfo.legislature.ca.gov/faces/codes
 | School district developer fees | **$4,304** | LBUSD, unaffected by the 750 rule |
 | Water / sewer capacity charges | ≈ $209 sewer; $0 water | Per the formulas above |
 
-The transportation fee schedule lists "Accessory, up to 220 sq ft" ($236.25), "Secondary, up to 640 sq ft" ($663.75), and full residential ($1,125.00) — but **no ADU-specific row**, unlike the other three fees. An 800 sq ft ADU exceeds 640, so a literal reading points to $1,125; but the 640 sq ft cap is a relic of the pre-2020 secondary-unit era, and the city's actual administrative practice for larger ADUs is not in any public document we could find. We carry the honest range rather than picking a tier. Note also: starting 2027-01-01, [SB 1117](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB1117) changes the statewide rule so impact fees apply only to square footage *above* 750 — which would shrink even this half-height cliff further.
+The transportation fee schedule lists "Accessory, up to 220 sq ft" ($236.25), "Secondary, up to 640 sq ft" ($663.75), and full residential ($1,125.00) — but **no ADU-specific row**, unlike the other three fees. An 800 sq ft ADU exceeds 640, so a literal reading points to $1,125; but the 640 sq ft cap is a relic of the pre-2020 secondary-unit era, and the city's actual administrative practice for larger ADUs is not in any public document we could find. We carry the honest range rather than picking a tier. Note also: starting 2027-01-01, [SB 1117](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB1117) changes the statewide rule so impact fees apply only to square footage *above* 750 — which would shrink even this half-height cliff further. See the full comparison at [Long Beach: 2026 vs 2027, line by line](/sb-1117/long-beach/).
 
 One more geographic wrinkle: ADUs over 750 sq ft inside the Southeast Area Specific Plan area owe an additional **$0.25 per gross square foot** ($200 on 800 sq ft) under the SEASP resource impact fee. Most lots are outside it; check the map before you budget.
 

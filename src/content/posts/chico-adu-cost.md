@@ -85,6 +85,8 @@ Every fee line we found, with exactly what it is and where it came from.
 
 Soft costs in the breakdown table are rounded to $20,000 (exact $20,087.60); the total is rounded to the nearest $1,000.
 
+The city's fee lines are also listed on the [Chico fee page](/fees/chico/), with verification status and source links.
+
 ## The school fee carries the ledger
 
 The school fee is 70% of the verified fee stack — $4,304 of $6,087.60 — which makes Chico the rare post where the district, not the city, sets the price. The rate is the $5.38 state maximum, adopted by Chico Unified and effective July 19, 2026, and it applies in full at 800 sq ft because the assessable space is over 500 sq ft. There is nothing proportional or banded about it: $5.38 times 800, verified from the district's own page.

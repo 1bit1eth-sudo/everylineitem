@@ -78,6 +78,8 @@ Every fee line we found, with exactly what it is and where it came from.
 
 Soft costs in the breakdown table are rounded to $37,000 (exact $36,555); the total is rounded to the nearest $1,000.
 
+The city's fee lines are also listed on the [Napa fee page](/fees/napa/), with verification status and source links.
+
 ## The $10,033 sewer line
 
 NapaSan prices sewer capacity in EDUs — equivalent dwelling units — and the banding is what makes this line so large. A detached ADU of 800–899 sq ft is 0.8 EDU under NapaSan Code §5.02.030.A.2, and the FY26/27 capacity charge is $12,541 per EDU, effective July 1, 2026. Multiply: 0.8 × $12,541 = $10,032.80. That is 44% of the $22,555 in verified fees in this ledger, and it is larger than the building permit and the school fee combined ($2,125 + $4,304 = $6,429).

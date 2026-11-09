@@ -85,6 +85,8 @@ Every fee line we found, with exactly what it is and where it came from.
 | Sewer (LACSD) | $1,801* | District No. 2, FY26/27 single-family rate; FY25/26 and ADU-specific basis unconfirmed |
 | Water | Not found | Two providers (city west, Golden State Water east); no ADU fee found |
 
+The city's fee lines are also listed on the [Lakewood fee page](/fees/lakewood/), with verification status and source links.
+
 ## Against the series baseline
 
 | | Lakewood | LA County baseline |
@@ -102,7 +104,7 @@ Lakewood undercuts the baseline by $6,000–$8,000 on the strength of two absenc
 
 ## A note on SB 1117
 
-Signed September 2026, effective January 2027: marginal impact fees above 750 sq ft. With no city DIF found, Lakewood has little to rewrite — the state-law cliff remains the only cliff. School fees ($2,376–$4,304) are outside SB 1117 and unchanged.
+Signed September 2026, effective January 2027: marginal impact fees above 750 sq ft. See the full comparison at [Lakewood: 2026 vs 2027, line by line](/sb-1117/lakewood/). With no city DIF found, Lakewood has little to rewrite — the state-law cliff remains the only cliff. School fees ($2,376–$4,304) are outside SB 1117 and unchanged.
 
 ## Disclaimer
 

@@ -70,6 +70,8 @@ Six phases. The same six used on every build in this series.
 | Landscaping & hardscape | $13,000 | 4% |
 | **Total** | **~$327,000** | **~$409 / sq ft** |
 
+The city's fee lines are also listed on the [Santa Barbara fee page](/fees/santa-barbara/), with verification status and source links.
+
 ## The fee autopsy
 
 Every fee line we found, with exactly what it is and where it came from.
@@ -102,7 +104,7 @@ The $7,000 premium over the baseline is the permit bill minus the missing DIF: $
 
 ## A note on SB 1117
 
-Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. Santa Barbara has no impact fees, so SB 1117 changes nothing on the DIF line — there is nothing to prorate. The permit fee, which is the actual story here, is outside SB 1117's scope entirely. School fees are outside SB 1117's impact-fee definition and stay at $4,136.
+Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. See the full comparison at [Santa Barbara: 2026 vs 2027, line by line](/sb-1117/santa-barbara/). Santa Barbara has no impact fees, so SB 1117 changes nothing on the DIF line — there is nothing to prorate. The permit fee, which is the actual story here, is outside SB 1117's scope entirely. School fees are outside SB 1117's impact-fee definition and stay at $4,136.
 
 ## Sources
 

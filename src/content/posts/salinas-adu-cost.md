@@ -67,6 +67,8 @@ Six phases. The same six used on every build in this series.
 | Landscaping & hardscape | $13,000 | 4% |
 | **Total** | **~$316,000** | **~$395 / sq ft** |
 
+The city's fee lines are also listed on the [Salinas fee page](/fees/salinas/), with verification status and source links.
+
 ## The fee autopsy
 
 Every fee line we found, with exactly what it is and where it came from.
@@ -108,7 +110,7 @@ Salinas lands $4,000 under the baseline with a completely different composition:
 
 ## A note on SB 1117
 
-Signed September 2026, effective January 2027: marginal impact fees above 750 sq ft. In Salinas, the marginal rate applies to a $0 base — nothing changes. School fees ($4,136) are outside SB 1117 and unchanged.
+Signed September 2026, effective January 2027: marginal impact fees above 750 sq ft. See the full comparison at [Salinas: 2026 vs 2027, line by line](/sb-1117/salinas/). In Salinas, the marginal rate applies to a $0 base — nothing changes. School fees ($4,136) are outside SB 1117 and unchanged.
 
 ## Disclaimer
 

@@ -70,6 +70,8 @@ Six phases. The same six used on every build in this series.
 | Landscaping & hardscape | $13,000 | 4% |
 | **Total** | **~$314,000** | **~$393 / sq ft** |
 
+The city's fee lines are also listed on the [Laguna Beach fee page](/fees/laguna-beach/), with verification status and source links.
+
 ## The fee autopsy
 
 Every fee line we found, with exactly what it is and where it came from.
@@ -105,7 +107,7 @@ The $6,000 discount to the baseline is the school fee doing quiet work: $1,640 h
 
 ## A note on SB 1117
 
-Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. Laguna Beach has no impact fees, so SB 1117 changes nothing locally — the codified cliff stays moot. Note that SB 1117's impact-fee definition explicitly excludes water and sewer connection/capacity charges, so the $1,720 sewer line and the LBCWD water formula are unaffected. School fees are outside SB 1117's definition and stay at $1,640.
+Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. See the full comparison at [Laguna Beach: 2026 vs 2027, line by line](/sb-1117/laguna-beach/). Laguna Beach has no impact fees, so SB 1117 changes nothing locally — the codified cliff stays moot. Note that SB 1117's impact-fee definition explicitly excludes water and sewer connection/capacity charges, so the $1,720 sewer line and the LBCWD water formula are unaffected. School fees are outside SB 1117's definition and stay at $1,640.
 
 ## Sources
 

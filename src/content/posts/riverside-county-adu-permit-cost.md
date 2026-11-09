@@ -101,7 +101,7 @@ Traditional, Craftsman, and Spanish exterior elevations. Eligibility covers SFR-
 
 ## SB 1117: almost nothing moves
 
-Effective January 1, 2027, SB 1117 (Chapter 809) limits covered impact fees on properties with two or fewer ADUs to the area above 750 sq ft. In unincorporated Riverside County, almost nothing moves, because the fees are already $0 or excluded:
+Effective January 1, 2027, SB 1117 (Chapter 809) limits covered impact fees on properties with two or fewer ADUs to the area above 750 sq ft. See the full comparison at [Riverside County: 2026 vs 2027, line by line](/sb-1117/riverside-county/). In unincorporated Riverside County, almost nothing moves, because the fees are already $0 or excluded:
 
 | Line item (800 sq ft ADU) | 2026 | 2027-01-01 (SB 1117) |
 | --- | --- | --- |

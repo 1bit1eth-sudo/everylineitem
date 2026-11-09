@@ -68,6 +68,8 @@ Six phases. The same six used on every build in this series.
 | Landscaping & hardscape | $13,000 | 4% |
 | **Total** | **$320,000** | **$400 / sq ft** |
 
+The city's fee lines are also listed on the [Burbank fee page](/fees/burbank/), with verification status and source links.
+
 ## The fee autopsy
 
 Every fee line we found, with exactly what it is and where it came from.
@@ -128,7 +130,7 @@ The $0 gap is a coincidence of the example math, not a finding — the five unco
 
 ## A note on SB 1117
 
-Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. Burbank's ADU-to-house pro-rata DIF and its proportional sewer charge will both need rewrites — an 800 sq ft ADU would owe fees on 50 sq ft, not 800. We found no mention of SB 1117 in city materials; the January 2027 quarterly review will check for an updated ordinance.
+Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. See the full comparison at [Burbank: 2026 vs 2027, line by line](/sb-1117/burbank/). Burbank's ADU-to-house pro-rata DIF and its proportional sewer charge will both need rewrites — an 800 sq ft ADU would owe fees on 50 sq ft, not 800. We found no mention of SB 1117 in city materials; the January 2027 quarterly review will check for an updated ordinance.
 
 ## Disclaimer
 

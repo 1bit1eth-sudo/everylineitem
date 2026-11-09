@@ -62,6 +62,8 @@ Six phases. The same six used on every build in this series.
 
 One honest caveat before the tables: Sacramento's agencies do not publish phase-level construction costs, and we found no public Sacramento permit-valuation dataset to anchor one. So phases two through six are carried from the Los Angeles County baseline, unchanged — we will not print a number we cannot anchor. What *is* rebuilt from Sacramento sources, line by line, is the soft-cost phase. That is where this city's story lives.
 
+The city's fee lines are also listed on the [Sacramento fee page](/fees/sacramento/), with verification status and source links.
+
 ## Where Sacramento differs from Los Angeles
 
 | Phase | LA County | Sacramento | Difference |

@@ -84,6 +84,8 @@ Every fee line we found, with exactly what it is and where it came from.
 
 Soft costs in the breakdown table are rounded to $25,000 (exact $25,368); the total is rounded to the nearest $1,000.
 
+The city's fee lines are also listed on the [Santa Clara fee page](/fees/santa-clara/), with verification status and source links.
+
 ## A scaled permit schedule, fully itemised
 
 Most cities in this series price the permit as a percentage of valuation or a single flat fee, and the homeowner has to take the number on trust. Santa Clara publishes a scaled schedule that prices by size band, and our 800 sq ft example falls in the 251–1,000 sq ft band: plan review $2,488.80 and permit inspection $2,309.70. Those two lines alone are $4,798.50 — more than the entire permit column in most cities we have published. Add permit issuance at $101 and the permit-plus-plan-check subtotal is $4,899.50.

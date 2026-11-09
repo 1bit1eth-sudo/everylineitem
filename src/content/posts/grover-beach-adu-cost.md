@@ -82,6 +82,8 @@ Every fee line we found, with exactly what it is and where it came from.
 
 Soft costs in the breakdown table are rounded to $17,000 (exact $17,416); the total is rounded to the nearest $1,000.
 
+The city's fee lines are also listed on the [Grover Beach fee page](/fees/grover-beach/), with verification status and source links.
+
 ## One flat line, two zeros
 
 The $2,984 permit is the quirk, and it is worth naming precisely because it is one line instead of a stack. Most cities in this series price the permit, the plan check, and the processing as separate lines with separate bases; Grover Beach's R3 row bundles permit inspection and plan review into a single flat figure for an 800 sq ft ADU. The $340 planning review and the $92 processing fee sit outside that bundle, but they are flat too — the whole verified stack is five lines, three of them priced, two of them $0.

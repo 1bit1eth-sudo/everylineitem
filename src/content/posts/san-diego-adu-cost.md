@@ -69,6 +69,8 @@ Notice the shape is identical to Los Angeles. Systems and interior is 46% here t
 
 What changed between LA and San Diego is **the hard-cost rate and the permit bill**, not the structure of the spend.
 
+The city's fee lines are also listed on the [San Diego fee page](/fees/sd-city/), with verification status and source links.
+
 ## Where San Diego differs from Los Angeles
 
 | Phase | LA County | City of San Diego | Difference |
@@ -138,7 +140,7 @@ School fees are not on this list. They follow a separate rule: ADUs under 500 sq
 
 That does not automatically make 750 the right answer. It does mean **the decision to cross 750 should be a deliberate one**, taken with the fee schedule open — not a last-minute "let's round up to 800" on the drawings.
 
-> **Coming Jan 1, 2027 — SB 1117:** For a homeowner's first two ADUs, impact fees will apply only to square footage *above* 750, calculated marginally — an 800 sq ft ADU would owe fees on 50 sq ft, not 800. The cliff math above reflects current 2026 rules. ([Gov. Code §66311.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=66311.5), as amended by SB 1117, Ch. 809, Stats. of 2026)
+> **Coming Jan 1, 2027 — SB 1117:** For a homeowner's first two ADUs, impact fees will apply only to square footage *above* 750, calculated marginally — an 800 sq ft ADU would owe fees on 50 sq ft, not 800. The cliff math above reflects current 2026 rules. ([Gov. Code §66311.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=66311.5), as amended by SB 1117, Ch. 809, Stats. of 2026) See the full comparison at [San Diego: 2026 vs 2027, line by line](/sb-1117/sd-city/).
 
 ## What moves the number most in San Diego
 

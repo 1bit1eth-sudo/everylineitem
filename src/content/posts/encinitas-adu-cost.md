@@ -70,6 +70,8 @@ Six phases. The same six used on every build in this series.
 | Landscaping & hardscape | $13,000 | 4% |
 | **Total** | **~$322,000** | **~$403 / sq ft** |
 
+The city's fee lines are also listed on the [Encinitas fee page](/fees/encinitas/), with verification status and source links.
+
 ## The fee autopsy
 
 Every fee line we found, with exactly what it is and where it came from.
@@ -102,7 +104,7 @@ The $2,000 premium over the baseline is the DIF line doing all the work: $22,040
 
 ## A note on SB 1117
 
-Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. Encinitas's current structure — full $27.55 rate on the entire unit once it hits 750 — is the state-law baseline that SB 1117 replaces. Under SB 1117, an 800 sq ft ADU would owe DIF on 50 sq ft, not 800: roughly $1,378 instead of $22,040. That is a ~$20,600 swing hanging on a January 1 effective date. We found no mention of SB 1117 in city materials; the January 2027 quarterly review will check for a revised fee schedule. School fees are outside SB 1117's impact-fee definition and stay at $3,832.
+Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. See the full comparison at [Encinitas: 2026 vs 2027, line by line](/sb-1117/encinitas/). Encinitas's current structure — full $27.55 rate on the entire unit once it hits 750 — is the state-law baseline that SB 1117 replaces. Under SB 1117, an 800 sq ft ADU would owe DIF on 50 sq ft, not 800: roughly $1,378 instead of $22,040. That is a ~$20,600 swing hanging on a January 1 effective date. We found no mention of SB 1117 in city materials; the January 2027 quarterly review will check for a revised fee schedule. School fees are outside SB 1117's impact-fee definition and stay at $3,832.
 
 ## Sources
 
