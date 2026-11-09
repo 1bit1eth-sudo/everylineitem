@@ -282,6 +282,16 @@ export function calcLine(
       };
     }
     case "pct_valuation": {
+      // MODELLING WARNING (2026-11-09): several pct_valuation rows are
+      // percentages of the *permit fee*, not of valuation — Diamond Bar
+      // NEW-02 (plan check 85% of permit fee), NEW-03..06 (% of permit &
+      // plan check), Marin NEW-02/03 (surcharges % of permit application +
+      // issuance), Campbell FI-298 (plan check 33% of permit fee), La Puente
+      // NEW-09/16/18. They are skipped while their jurisdiction has no
+      // valuation_psf, which is what keeps them harmless. Do NOT add a
+      // valuation_psf for those jurisdictions without re-encoding these
+      // rows first — rate x valuation would be wrong. See the rows'
+      // internal_notes (e.g. DIAMOND-BAR-NEW-02, MARIN-COUNTY-NEW-02).
       if (valuation == null) {
         warn(`${item.item_id}: pct_valuation but jurisdiction has no valuation_psf — skipped`);
         return {
