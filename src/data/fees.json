@@ -1720,7 +1720,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "https://www.tamcmonterey.org/files/bb560e1a8/Item+6+-+2026+Regional+Development+Impact+Fee+Update.pdf",
-      "last_verified": "2026-11-09",
+      "last_verified": "2026-11-10",
       "status": "verified"
     },
     {
@@ -15468,6 +15468,29 @@
       "status": "verified",
       "internal_notes": "Carmel-area unincorporated pockets only (Carmel Valley / Carmel-area attendance boundary). 800 x $3.78 = $3,024. District page states the CURRENT rate ($3.78) live on 2026-11-09; the page also links Res. No. 26-01 (Annual Developer Fee Report & Five Year Findings, FY 2024-2025) with no rate change indicated. School fees follow the state 500 sq ft threshold, not the 750 sq ft cliff.",
       "notes": "Carmel Unified residential developer fee; applies to ADUs of 500 sq ft or more. SB 1117 (eff. 2027-01-01): school fees are not covered impact fees — unchanged."
+    },
+    {
+      "item_id": "MONTEREY-COUNTY-NEW-12",
+      "juris_id": "MONTEREY-COUNTY",
+      "category": "impact",
+      "fee_name": "Fire capital facilities fee — Cypress Fire Protection District",
+      "method": "per_sqft",
+      "rate_low": 0.53,
+      "rate_high": null,
+      "base": null,
+      "threshold": null,
+      "step": null,
+      "min_sqft": null,
+      "max_sqft": null,
+      "applies_to": "all",
+      "source_url": "https://civassist.com/files/district_120_69bdc2dfb39785.00427130_merged.pdf",
+      "source_note": "Cypress Fire Protection District Resolution No. 2026-01, adopted March 26, 2026 (Motion 03-2026-08, 4 ayes / 1 absent, per the district's own minutes of that meeting in the May 28, 2026 packet): fire capital facilities improvement fee 'not to exceed .53 cents per square foot as allowed by Monterey County Ordinance No. 3602' — read as $0.53/sq ft (see internal note on the resolution's wording); the County collects the fee on the district's behalf. Rate + adoption re-verified live 2026-11-10 (agenda packet + minutes both fetched today). Row stays unverified pending the area-model decision — see internal note.",
+      "effective_date": "2026",
+      "last_verified": "2026-11-10",
+      "confidence": "C",
+      "status": "to_verify",
+      "internal_notes": "RATE + ADOPTION CONFIRMED LIVE 2026-11-10 (cycle310): Mar 26, 2026 agenda packet (14,202,050 bytes, md5 b6cec7bcac7908d2f0be91bfd04ebd13) carries Res. 2026-01; May 28, 2026 packet (10,844,381 bytes, md5 0e2dc63ceded7647ee5f56d692291136) carries the Mar 26 minutes with Motion 03-2026-08 approving it 4-1 absent. WORDING QUIRK: the resolution literally says '.53 cents per square foot'; read as $0.53/sq ft — a $0.0053 rate would be $4.24 on 800 sq ft and contradicts the 1995 mitigation analysis, the fee history, and the neighbouring Monterey County Regional FPD's $0.55/sq ft residential rate (Res. 2026-03, FY2026-27, same Ord. 3602 framework, different district — not encoded). ADU TREATMENT: no district-level ADU exemption exists in the materials; the <=750 sq ft exemption comes from state law (Gov. Code Sec. 66311.5, feeCalc auto-exempts category=impact at <=750 sq ft). 800 x $0.53 = $424. AREA-MODEL BLOCKER (why this row stays to_verify): the single-dimension area model already holds three mutually exclusive SCHOOL areas for this county (North Monterey County USD / Carmel USD / Salinas-area pockets, cycle292), and Cypress FPD OVERLAPS them — a Cypress/Pebble Beach parcel is in both a school area and this fire district. A v1 verified flip with area 'Cypress Fire Protection District' was built and REVERTED in this cycle: the local build rendered a fourth area schedule of $424 alone and a page range of '$424-$4,136 across areas', which is false for any real parcel (true total is school fee + $424). Do not flip to verified until the daily routine decides the model (two-dimension areas, combined areas, or another display). Cypress FPD covers the Cypress / Pebble Beach area; other unincorporated-county fire districts have their own rates.",
+      "notes": "Per-square-foot fire capital facilities fee; applies only in the Cypress Fire Protection District service area (Cypress / Pebble Beach). Other unincorporated-county fire districts have their own rates. SB 1117 (eff. 2027-01-01): for up to two ADUs, covered impact fees are charged only on the area above 750 sq ft — this line collapses to the 50-sq-ft marginal basis."
     },
     {
       "item_id": "SAN-LUIS-OBISPO-COUNTY-NEW-01",
