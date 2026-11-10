@@ -52,8 +52,8 @@ for (const j of (feesData.jurisdictions as any[]).filter(j => j.juris_id !== "LA
 // high school shares summed at 800 sq ft). Comparing single district
 // rows is wrong: one row can be only one share of a split district
 // (Campbell's high school share FI-295 $1.61/sq ft is $1,288 alone,
-// but the parcel also pays the elementary share FI-294 $3.79/sq ft —
-// $4,320 combined). Jurisdictions whose only verified school row is a
+// but the parcel also pays the elementary share FI-294 $3.77/sq ft —
+// $4,304 combined at the $5.38 Level I cap). Jurisdictions whose only verified school row is a
 // partial (high school) share are excluded from the low end:
 // - LOS-GATOS: FI-182 LGSUHSD high school share only ($1.66/sq ft)
 // - SARATOGA: FI-248 LGSUHSD high school share only ($1.66/sq ft)
@@ -80,6 +80,26 @@ const [topJuris, topTotal] = ranked[0];
 const [topCliffJuris, topCliff] = [...cliff.entries()].sort((a, b) => b[1] - a[1])[0];
 
 const fmt = (n: number) => "$" + Math.round(n).toLocaleString("en-US");
+
+// One-line stats for copying — every jurisdiction's combined school fee
+// on an 800 sq ft ADU, from verified line items only. Same jurisStack
+// math as the spread above. Jurisdictions whose only verified school row
+// is a partial (high school) share keep their line but are flagged, so a
+// copied line never reads as a combined fee.
+const schoolLines = [...schoolByJuris.entries()]
+  .sort((a, b) => names[a[0]].localeCompare(names[b[0]]))
+  .map(([j, v]) => {
+    const line = `${names[j]}: ${fmt(v)} school fees (800 sq ft)`;
+    return PARTIAL_SCHOOL_JURIS.has(j)
+      ? `${line} — high school share only`
+      : line;
+  });
+const schoolLinesText = schoolLines.join("\n");
+
+// Citation for the CSV dataset, reused by the visible text and the copy
+// button (via data-citation) so the two can never drift apart.
+const citation =
+  "Source: Every Line Item — California ADU Fee Index, Q3 2026. everylineitem.com/fee-index/";
 
 // Trust line — newest verification date across the verified line items
 // behind this index. Verified-only: to_verify items contribute no figure
@@ -167,6 +187,31 @@ const facts = [
             Download the index CSV &rarr;
           </LinkButton>
         </p>
+        <p class="mt-4 text-sm opacity-70">
+          Cite as: {citation}
+        </p>
+        <p class="mt-1 text-sm opacity-70">
+          Licensed under{" "}
+          <a
+            href="https://creativecommons.org/licenses/by/4.0/"
+            target="_blank"
+            rel="noopener"
+            class="text-accent underline decoration-dashed underline-offset-4"
+          >
+            CC BY 4.0
+          </a>{" "}
+          — free to reuse with attribution.
+        </p>
+        <p class="mt-2">
+          <button
+            type="button"
+            id="copy-citation"
+            data-citation={citation}
+            class="text-sm text-accent font-semibold underline decoration-dashed underline-offset-4"
+          >
+            Copy citation
+          </button>
+        </p>
       </div>
     </div>
 
@@ -205,6 +250,33 @@ const facts = [
       </p>
     </div>
 
+    <h2 class="mt-12 text-2xl font-semibold">One-line stats, ready to copy</h2>
+    <p class="mt-2 max-w-3xl text-sm opacity-70">
+      Every jurisdiction's combined school fee on an 800 sq ft ADU, from
+      verified line items only — elementary and high school shares summed.
+      Jurisdictions where only the high school share is verified are flagged
+      on their line. Copy one line or copy them all; if you republish them,
+      please cite the index — the citation is next to the CSV download above.
+    </p>
+    <p class="mt-3">
+      <button
+        type="button"
+        id="copy-school-lines"
+        class="border border-border px-4 py-2 rounded font-medium text-sm"
+      >
+        Copy all {schoolLines.length} lines
+      </button>
+    </p>
+    <details class="mt-4">
+      <summary class="cursor-pointer text-sm font-semibold">
+        Show all {schoolLines.length} jurisdictions
+      </summary>
+      <pre
+        id="school-lines"
+        class="mt-3 overflow-x-auto rounded-lg border border-border p-4 text-sm leading-relaxed"
+      >{schoolLinesText}</pre>
+    </details>
+
     <div class="mt-10 grid gap-8 lg:grid-cols-2">
       <div>
         <h2 class="text-2xl font-semibold">Get the Q4 edition</h2>
@@ -240,3 +312,5 @@ const facts = [
   </main>
   <Footer />
 </Layout>
+
+<script is:inline src="/scripts/copy-helpers.js"></script>
