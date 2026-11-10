@@ -1,6 +1,7 @@
 ---
 import feesData from "@/data/fees.json";
 import { jurisStack } from "@/lib/feeCalc";
+import { csvExportDate, csvFileNames } from "@/lib/csvExport";
 import { parseVerified, formatVerified } from "@/utils/formatVerified";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
@@ -96,6 +97,16 @@ const schoolLines = [...schoolByJuris.entries()]
   });
 const schoolLinesText = schoolLines.join("\n");
 
+// Public CSV filenames (generated at build time from the same verified
+// data as this page — see src/lib/csvExport). The dated file and the
+// latest file carry identical content; the Q3 URL is kept as a legacy
+// alias serving the same file.
+const csvDate = csvExportDate();
+const csvNames = csvFileNames(csvDate);
+const jurisWithVerified = new Set(
+  items.map(i => i.juris_id as string)
+).size;
+
 // Citation for the CSV dataset, reused by the visible text and the copy
 // button (via data-citation) so the two can never drift apart.
 const citation =
@@ -174,18 +185,29 @@ const facts = [
         <div>
           <p class="font-semibold">The full dataset</p>
           <p class="mt-1 text-sm opacity-70">
-            Every jurisdiction: school fee, verified total, 750 cliff, line-item
-            count. Free CSV, no email needed. This file is the Q3 2026 snapshot;
-            the figures on this page update live.
+            Every verified line item: jurisdiction, fee, rate, and the 800
+            sq ft amount, with the official source and check date. Free CSV,
+            no email needed. Generated {csvDate} from the same verified data
+            as this page — {items.length} verified line items across{" "}
+            {jurisWithVerified} jurisdictions.
           </p>
         </div>
         <p class="mt-3">
           <LinkButton
             class="text-accent font-semibold underline decoration-dashed underline-offset-4"
-            href="/downloads/adu-fee-index-2026-q3.csv"
+            href={`/downloads/${csvNames.latest}`}
           >
             Download the index CSV &rarr;
           </LinkButton>
+        </p>
+        <p class="mt-2 text-sm opacity-70">
+          Dated snapshot:{" "}
+          <a
+            href={`/downloads/${csvNames.dated}`}
+            class="text-accent underline decoration-dashed underline-offset-4"
+          >
+            {csvNames.dated}
+          </a>
         </p>
         <p class="mt-4 text-sm opacity-70">
           Cite as: {citation}
