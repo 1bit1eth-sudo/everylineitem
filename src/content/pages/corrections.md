@@ -32,6 +32,14 @@ The most valuable messages we get are from contractors and estimators telling us
 
 ## Change log
 
+### 10 November 2026 — Campbell school fee corrected: $5.40 → $5.38 combined ($4,320 → $4,304)
+
+**Changed:** The Campbell Union School District (K-8) developer fee is **$3.77/sq ft**, not $3.79 — so Campbell's combined school fee on an 800 sq ft ADU is **$4,304 ($5.38/sq ft)**, not $4,320 ($5.40/sq ft). The Campbell post's title, key facts, FAQ, phase table and "Why Campbell stands out" section are corrected, as is the Pasadena–Campbell gap post ($2,528 → $2,512). The "highest school-fee rate in this series" claim is withdrawn: $5.38 is the Level I cap, shared by the whole cap tier. The post total (~$310,000) is unchanged — the $16 difference rounds away; cost per square foot follows the corrected arithmetic, $388 → $387.
+
+**Reason:** The district's own School Facilities Fee Justification Report (Mar 17, 2026) justifies $3.77/sq ft (70% of the $5.38 SAB cap), and Campbell Union HSD's May 7, 2026 report (Table 8) independently lists the feeder-district share as $3.77. The district webpage's $3.79 cell is stale: $3.79 + $1.61 would total $5.40, above the Level I cap, while $3.77 + $1.61 = $5.38 exactly.
+
+**Source:** [Campbell Union School District Developer Fees page](https://www.campbellusd.org/developerfees) (Mar 17, 2026 Fee Justification Report linked there); corroborated by Campbell Union HSD's May 7, 2026 School Facilities Fee Justification Report, Table 8.
+
 ### 8 November 2026 — Moreno Valley: "$0 impact fees" corrected to $0 City DIF only (after publication)
 
 **Changed:** The Moreno Valley post no longer states the impact fee is **$0** for an ADU. The adopted DIF schedule (effective July 1, 2023) lists the City DIF as Exempt for an ADU, but the same schedule's ADU row lists the other impact-fee columns as proportional for ADUs 750 sq ft and larger — DIF[2] and SKR mitigation "Based on Square footage," MSHCP $500/acre, TUMF by the proportional rule, and Workforce Development $0.13/sq ft — so an 800 sq ft ADU can owe those fees. The title, keyFacts, FAQ answers, summary and comparison tables, the fee table (five proportional rows added), the footnote section, and the SB 1117 section now carry the corrected framing: City DIF **$0**, proportional lines disclosed but not totalled. The post's **$310,000** total is unchanged. The post was published 7 Nov 2026 with the "$0 impact fees" wording; the error was caught the same day.
