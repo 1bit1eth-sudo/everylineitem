@@ -1,6 +1,13 @@
 {
   "entries": [
 {
+      "date": "2026-11-11",
+      "detail": "City of Irvine: first verified fee rows encoded (4). School developer fees $5.38/sq ft in all three verified districts — Irvine USD (Board Res. No. 25-26-36, effective June 22, 2026), Tustin USD (district current-rates page; adoption paperwork not found), Saddleback Valley USD (via City of Laguna Woods FY 2026-27 fee sheet; SVUSD Res. No. 15:25-26 adopted March 5, 2026, effective date not found) — 800 sq ft = $4,304 in each area. Santa Ana USD (Irvine Business Complex / Airport Area) remains unverified (2026 study link 404s) and is not encoded. Slurry seal $0.04/sq ft, max $65/unit (Schedule IV item 2, IMC §6-3-320). Verified but NOT encoded: citywide development impact fee $5.34/sq ft residential (Res. 25-78, Focus Area 1 only, ADUs of 750+ sq ft pro-rated) — the single-dimension area model cannot combine a Focus-Area-1 fee with the school-district areas; building permit/plan-check/inspection per-sq-ft rates (Schedule II §3 $0.68/$0.56, §7 $0.86/$1.33, issuance $73.08) — the schedule never names ADU, so the ADU category mapping is unconfirmed; Systems Development Charge 1% of valuation (needs ICC valuation, no model); planning ADU case $217.64/hr with $1,500 deposit (a deposit, not a fixed fee); TCA fees (ADU applicability unknown); park fee (subdivision-only, no per-ADU rate). City Form 42-97 (rev. 02/25) lists ADUs of 749 sq ft or less as school-fee-exempt, conflicting with the 500 sq ft state threshold encoded here — flagged for re-verification.",
+      "headline": "City of Irvine: first verified rows — school fees $5.38 in three districts, slurry seal $0.04",
+      "items_added": 4,
+      "jurisdictions": ["Irvine"]
+    },
+{
       "date": "2026-11-10",
       "detail": "Hayward ADU fees re-verified in the Adopted Master Fee Schedule FY2026-27 (effective July 1, 2026, read live November 10): the park impact fee for ADUs of 750+ sq ft falls from $3,812 to $3,379 (Park Impact Fee – Residential, item 43a; the whole table moved down — studio $3,789, 1-bedroom $5,931, 2-bedroom $10,699, 3-bedroom $18,685, 4+ bedroom $25,991), and the ADU sewer connection charge rises from $5,295 to $5,825 per unit (September 1, 2026 column). The same schedule lists an ADU housing review fee of $158 (1–4 units $474, 5+ units $790) — confirmed in the document, not yet encoded as a fee row. The homepage 750 sq ft cliff example is corrected to $3,379. Hayward now has 3 rows (3 verified).",
       "headline": "Hayward FY2027: park impact fee $3,812 → $3,379; ADU sewer connection $5,295 → $5,825",
