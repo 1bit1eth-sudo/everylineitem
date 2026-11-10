@@ -2,6 +2,13 @@
   "entries": [
 {
       "date": "2026-11-10",
+      "detail": "Santa Clara County (unincorporated): Campbell Union Elementary School District developer fee verified at $3.77/sq ft residential (district School Facilities Fee Justification Report, Mar 17, 2026, read in full; 70% of the $5.38 SAB Level I maximum shared with Campbell Union HSD). New verified rows SANTA-CLARA-COUNTY-NEW-24 (Campbell Union ESD $3.77) and NEW-25 (CUHSD $1.61, Campbell Union-area pairing - same district, rate and adoption as NEW-11) cover the Campbell Union-ESD majority of Burbank CDP (52.42% per the cycle324 CDE/Census boundary map); the Luther Burbank ESD minority (47.37%) is a separate follow-up. Numbering skips to NEW-24/25 because unmerged branches already claim NEW-12..23 for the county. Discrepancy noted: the district webpage lists residential at $3.79/sq ft, $0.02 above the study; the study governs (its other rates match the page exactly, and $3.79 + $1.61 would exceed the $5.38 cap). Limitation: the board adoption resolution for the 2026 study was not separately sighted, so confidence is B and effective_date is the year-only '2026'; the 10-15-2026 annual Developer Fee Report is the follow-up corroboration. The same verification also corrects the City of Campbell's FI-294 (Campbell Union SD K-8) from $3.79 to $3.77 and FI-295's note ($5.40 → $5.38 combined cap total) — CUHSD's May 7, 2026 report Table 8 independently lists the feeder-district share as $3.77. The Campbell posts are corrected in the same change ($5.40 → $5.38 combined, $4,320 → $4,304; the gap post $2,528 → $2,512) and logged in /corrections/. Santa Clara County now has 643 rows (495 verified).",
+      "headline": "Santa Clara County: Campbell Union ESD school fee verified at $3.77/sq ft - Burbank majority split now covered",
+      "items_added": 2,
+      "jurisdictions": ["Santa Clara County"]
+    },
+{
+      "date": "2026-11-10",
       "detail": "Hayward ADU fees re-verified in the Adopted Master Fee Schedule FY2026-27 (effective July 1, 2026, read live November 10): the park impact fee for ADUs of 750+ sq ft falls from $3,812 to $3,379 (Park Impact Fee – Residential, item 43a; the whole table moved down — studio $3,789, 1-bedroom $5,931, 2-bedroom $10,699, 3-bedroom $18,685, 4+ bedroom $25,991), and the ADU sewer connection charge rises from $5,295 to $5,825 per unit (September 1, 2026 column). The same schedule lists an ADU housing review fee of $158 (1–4 units $474, 5+ units $790) — confirmed in the document, not yet encoded as a fee row. The homepage 750 sq ft cliff example is corrected to $3,379. Hayward now has 3 rows (3 verified).",
       "headline": "Hayward FY2027: park impact fee $3,812 → $3,379; ADU sewer connection $5,295 → $5,825",
       "items_added": 0,
