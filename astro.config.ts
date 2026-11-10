@@ -20,10 +20,14 @@ import { transformerFileName } from "./src/utils/transformers/fileName";
 import { calcJurisdiction, calcSB1117, jurisAreas } from "./src/lib/feeCalc";
 import config from "./astro-paper.config";
 import { readdirSync, readFileSync } from "node:fs";
+import { execSync } from "node:child_process";
+import { parseVerified } from "./src/utils/formatVerified";
 
 // Post URL -> last modified date (modDatetime, else pubDatetime), read from
 // frontmatter so sitemap entries carry an accurate <lastmod>.
 const postLastmod = new Map<string, string>();
+// pubDatetime (ms) of every non-draft post, for listing-page lastmod below.
+const publishedPostPub: number[] = [];
 for (const file of readdirSync("./src/content/posts")) {
   if (!/^[^_].*\.mdx?$/.test(file)) continue;
   const fm =
@@ -39,6 +43,10 @@ for (const file of readdirSync("./src/content/posts")) {
       `/posts/${file.replace(/\.mdx?$/, "")}/`,
       new Date(date).toISOString()
     );
+  }
+  const pub = pick("pubDatetime");
+  if (pub && !Number.isNaN(Date.parse(pub))) {
+    publishedPostPub.push(Date.parse(pub));
   }
 }
 
@@ -107,13 +115,105 @@ const noindexSB1117Pages = new Set(
             ]
       );
       const hasImpact = runs.some(r => r.hasImpactLines);
-      const chargesImpact = runs.some(
-        r => (r.currentHigh ?? r.currentLow) > 0
-      );
+      const chargesImpact = runs.some(r => (r.currentHigh ?? r.currentLow) > 0);
       return !hasImpact || !chargesImpact;
     })
     .map((j: { juris_id: string }) => `/sb-1117/${j.juris_id.toLowerCase()}/`)
 );
+
+// lastmod for the 211 sitemap URLs that are not posts. Every value comes
+// from a real record — nothing is invented, and a page with no record simply
+// keeps no lastmod:
+// - /fees/<slug>/ and /sb-1117/<slug>/: that jurisdiction's last_verified
+//   date in fees.json (the day its fees were last checked).
+// - Data hubs (/, /fee-index/, /fees/, /compare/, /sb-1117/): the newest
+//   verification date across VERIFIED fee items — the same scope the
+//   homepage "last verified" trust line already displays.
+// - /changes/: the newest entry date in the fee change log itself.
+// - Listing pages (/posts/, /archives/): the newest post actually listed
+//   (publish time passed, same rule as postFilter.ts) — a future-dated
+//   post must not set the listing's lastmod to a date in the future.
+// - Static content pages (/about/ etc.): no frontmatter date exists, so the
+//   last committed change to the page's source file is the honest date.
+//   Git may be unavailable in some build environments (shallow clone, no
+//   git); then the page keeps no lastmod rather than an invented date.
+const toISODate = (t: number) =>
+  t > 0 ? new Date(t).toISOString() : undefined;
+
+const pageLastmod = new Map<string, string>();
+for (const j of feesData.jurisdictions) {
+  const t = parseVerified(j.last_verified as string);
+  // A last_verified dated in the future (e.g. set to a scheduled post's
+  // publication slot: Alhambra 27 Nov 2026, Ontario 24 Nov 2026,
+  // Westminster 21 Nov 2026) is not a modification that has happened yet,
+  // and a future <lastmod> is invalid — those pages keep no lastmod until
+  // the date passes. Fixing the stored date itself is a data task, not
+  // this change.
+  if (!t || t > Date.now()) continue;
+  const iso = toISODate(t);
+  if (!iso) continue;
+  const slug = (j.juris_id as string).toLowerCase();
+  pageLastmod.set(`/fees/${slug}/`, iso);
+  pageLastmod.set(`/sb-1117/${slug}/`, iso);
+}
+const latestVerifiedISO = toISODate(
+  Math.max(
+    ...feesData.fee_items
+      .filter((i: { status: string }) => i.status === "verified")
+      .map((i: { last_verified: string }) =>
+        parseVerified(i.last_verified ?? "")
+      )
+  )
+);
+if (latestVerifiedISO) {
+  for (const p of ["/", "/fee-index/", "/fees/", "/compare/", "/sb-1117/"]) {
+    pageLastmod.set(p, latestVerifiedISO);
+  }
+}
+const changelog = JSON.parse(
+  readFileSync("./src/data/fee-changelog.json", "utf8")
+);
+const latestChangelogISO = toISODate(
+  Math.max(
+    ...changelog.entries.map((e: { date: string }) => Date.parse(e.date))
+  )
+);
+if (latestChangelogISO) pageLastmod.set("/changes/", latestChangelogISO);
+const margin = config.posts?.scheduledPostMargin ?? 15 * 60 * 1000;
+const latestPostISO = toISODate(
+  Math.max(...publishedPostPub.filter(t => Date.now() > t - margin))
+);
+if (latestPostISO) {
+  pageLastmod.set("/posts/", latestPostISO);
+  pageLastmod.set("/archives/", latestPostISO);
+}
+const gitDate = (file: string): string | undefined => {
+  try {
+    const out = execSync(`git log -1 --format=%cI -- ${file}`, {
+      cwd: process.cwd(),
+      encoding: "utf8",
+      timeout: 10000,
+      stdio: ["ignore", "pipe", "ignore"],
+    }).trim();
+    return toISODate(Date.parse(out));
+  } catch {
+    return undefined;
+  }
+};
+for (const slug of [
+  "about",
+  "benchmarks",
+  "contact",
+  "corrections",
+  "disclaimer",
+  "methodology",
+  "privacy",
+  "terms",
+  "worksheet",
+]) {
+  const d = gitDate(`src/content/pages/${slug}.md`);
+  if (d) pageLastmod.set(`/${slug}/`, d);
+}
 
 export default defineConfig({
   site: config.site.url,
@@ -127,7 +227,8 @@ export default defineConfig({
         !zeroRowFeePages.has(new URL(page).pathname) &&
         !noindexSB1117Pages.has(new URL(page).pathname),
       serialize: item => {
-        const lastmod = postLastmod.get(new URL(item.url).pathname);
+        const pathname = new URL(item.url).pathname;
+        const lastmod = postLastmod.get(pathname) ?? pageLastmod.get(pathname);
         return lastmod ? { ...item, lastmod } : item;
       },
     }),
