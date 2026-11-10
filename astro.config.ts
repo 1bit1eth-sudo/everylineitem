@@ -18,6 +18,7 @@ import {
 } from "@shikijs/transformers";
 import { transformerFileName } from "./src/utils/transformers/fileName";
 import { calcJurisdiction, calcSB1117, jurisAreas } from "./src/lib/feeCalc";
+import { generateFeeCsvFiles } from "./src/lib/csvExport";
 import config from "./astro-paper.config";
 import { readdirSync, readFileSync } from "node:fs";
 import { execSync } from "node:child_process";
@@ -63,6 +64,11 @@ const isThinPage = (pathname: string) =>
 // all skipped (e.g. Downey: one verified item, no rate, so no row renders).
 // The set lifts itself when rows land; there is no manual list to maintain.
 const feesData = JSON.parse(readFileSync("./src/data/fees.json", "utf8"));
+
+// Public CSV, generated at build time from fees.json (verified rows only).
+// Writes public/downloads/ (dated + latest + legacy q3 alias) so `astro
+// build` copies them into dist/; check-quality E8 verifies the result.
+const csvExport = generateFeeCsvFiles(feesData);
 const zeroRowFeePages = new Set(
   feesData.jurisdictions
     .filter((j: { juris_id: string }) => j.juris_id !== "LA-BASE")

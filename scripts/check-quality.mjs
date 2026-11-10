@@ -11,7 +11,7 @@ import path from "node:path";
 
 const DIST = path.resolve("dist");
 const WARN_RULES = new Set(["E1", "E2", "E3"]);
-const hits = { E1: [], E2: [], E3: [], E4: [], E5: [], E6: [], E7: [] };
+const hits = { E1: [], E2: [], E3: [], E4: [], E5: [], E6: [], E7: [], E8: [] };
 const DESC = {
   E1: "Every fee item has an http(s) source_url",
   E2: "Every fee item has a last_verified (checked) date",
@@ -20,9 +20,11 @@ const DESC = {
   E5: "No internal notes (TODO/FIXME/[확인 필요]/Korean internal memo text) in reader text",
   E6: "Every page has a non-empty <title>",
   E7: "Every page has a non-empty meta description",
+  E8: "Home, fee-index, changes, and the public CSV agree with fees.json (numeric consistency)",
 };
 
 const fees = JSON.parse(await readFile("src/data/fees.json", "utf8"));
+const changelog = JSON.parse(await readFile("src/data/fee-changelog.json", "utf8"));
 for (const f of fees.fee_items) {
   if (!/^https?:\/\//.test(f.source_url ?? "")) hits.E1.push(`${f.item_id}: source_url=${f.source_url}`);
   if (!String(f.last_verified ?? "").trim()) hits.E2.push(`${f.item_id}`);
@@ -63,6 +65,86 @@ for (const file of files) {
 
 let errors = 0;
 console.log(`check-quality: ${fees.fee_items.length} fee items, ${fees.jurisdictions.length} jurisdictions, ${files.length} HTML files`);
+
+// E8: numeric consistency. Every public number must be computed from
+// fees.json at build time — a hardcoded or stale figure fails the build.
+//   - home hero line: "<displayed> jurisdictions, <verified> verified line items"
+//   - fee-index intro: "<verified> verified line items across <displayed> jurisdictions"
+//     and coverage stat "<displayed> × <verified>"
+//   - public CSV (latest): data rows == verified items; distinct
+//     jurisdictions == jurisdictions with >= 1 verified row; the dated
+//     and legacy q3 files must exist with identical content.
+//   - change log: no entry may present the site-wide total as one
+//     jurisdiction's count ("<jurisdiction> now has <siteTotal> rows
+//     (<siteVerified> verified)").
+{
+  const verifiedItems = fees.fee_items.filter(i => i.status === "verified");
+  const verifiedCount = verifiedItems.length;
+  const siteTotal = fees.fee_items.length;
+  const displayedJuris = fees.jurisdictions.filter(j => j.juris_id !== "LA-BASE").length;
+  const jurisWithVerified = new Set(verifiedItems.map(i => i.juris_id)).size;
+
+  const parseCsvLine = (line) => {
+    const out = [];
+    let cur = "", quoted = false;
+    for (let k = 0; k < line.length; k++) {
+      const c = line[k];
+      if (quoted) {
+        if (c === '"') {
+          if (line[k + 1] === '"') { cur += '"'; k++; }
+          else quoted = false;
+        } else cur += c;
+      } else if (c === '"') quoted = true;
+      else if (c === ",") { out.push(cur); cur = ""; }
+      else cur += c;
+    }
+    out.push(cur);
+    return out;
+  };
+  const csvDir = path.join(DIST, "downloads");
+  let latestText = null;
+  try { latestText = await readFile(path.join(csvDir, "adu-fee-index-latest.csv"), "utf8"); }
+  catch { hits.E8.push("dist/downloads/adu-fee-index-latest.csv: missing (CSV generation failed?)"); }
+  if (latestText != null) {
+    const body = latestText.split(/\r?\n/).filter(l => l.trim() !== "" && !l.startsWith("#"));
+    const rows = body.slice(1);
+    if (rows.length !== verifiedCount)
+      hits.E8.push(`CSV latest: ${rows.length} data rows != ${verifiedCount} verified items`);
+    const csvJuris = new Set(rows.map(r => parseCsvLine(r)[0]));
+    if (csvJuris.size !== jurisWithVerified)
+      hits.E8.push(`CSV latest: ${csvJuris.size} jurisdictions != ${jurisWithVerified} with verified rows`);
+    if (!body[0].startsWith("jurisdiction,county,fee_name,category,rate,amount_800_sqft,status,source_url,last_verified,effective_date"))
+      hits.E8.push("CSV latest: header columns do not match the required 10 columns");
+    // Dated + legacy files must exist and carry identical content.
+    const dated = latestText.match(/# Reference date: (\d{4}-\d{2}-\d{2})/)?.[1];
+    if (!dated) hits.E8.push("CSV latest: no # Reference date comment line");
+    else {
+      for (const name of [`adu-fee-index-${dated}.csv`, "adu-fee-index-2026-q3.csv"]) {
+        try {
+          const other = await readFile(path.join(csvDir, name), "utf8");
+          if (other !== latestText) hits.E8.push(`CSV ${name}: content differs from latest`);
+        } catch { hits.E8.push(`CSV ${name}: missing`); }
+      }
+    }
+  }
+
+  const mustContain = async (rel, needle, label) => {
+    try {
+      const html = await readFile(path.join(DIST, rel), "utf8");
+      if (!html.includes(needle)) hits.E8.push(`${label}: missing "${needle}"`);
+    } catch { hits.E8.push(`${label}: ${rel} unreadable`); }
+  };
+  await mustContain("index.html", `${displayedJuris} jurisdictions, ${verifiedCount} verified line items`, "home hero");
+  await mustContain("fee-index/index.html", `${verifiedCount} verified line items across ${displayedJuris} jurisdictions`, "fee-index intro");
+  await mustContain("fee-index/index.html", `${displayedJuris} × ${verifiedCount}`, "fee-index coverage");
+
+  for (const e of changelog.entries ?? []) {
+    const m = /now has (\d+) rows \((\d+) verified\)/.exec(e.detail ?? "");
+    if (m && Number(m[1]) === siteTotal && Number(m[2]) === verifiedCount)
+      hits.E8.push(`changelog ${e.date}: site-wide total written as a jurisdiction count ("${m[0]}")`);
+  }
+}
+
 for (const [id, list] of Object.entries(hits)) {
   const level = WARN_RULES.has(id) ? "WARN" : "ERROR";
   console.log(`  [${list.length ? level : "ok"}] ${id} ${DESC[id]} -> ${list.length}`);
