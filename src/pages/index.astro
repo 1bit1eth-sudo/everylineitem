@@ -38,8 +38,6 @@ const latestPosts = [...sortedPosts]
 const homePath = getRelativeLocaleUrl(locale, "");
 
 const homeTitle = "California ADU Fee Index | Every Line Item";
-const homeDescription =
-  "Line-item California ADU costs by phase: 800 vs 400 sq ft, garage conversion, soft costs, modular, coastal, and ROI. Compare any two builds side by side.";
 
 // Stronger share/preview image than generic default-og.jpg (post/compare OG unchanged)
 const homeOgImage = new URL(
@@ -64,13 +62,19 @@ const schoolFees = (feesData.fee_items as any[])
   .sort((a, b) => a.rate_low - b.rate_low);
 const fmtUSD = (n: number) => "$" + n.toLocaleString("en-US");
 
+// Meta description (also OG + ItemList JSON-LD): Fee Index centered,
+// counts computed from fees.json so it never goes stale. Keep 150–160
+// chars: 158 at 162 jurisdictions / 499 verified (both 3 digits).
+const homeDescription =
+  `Source-linked California ADU fees for ${jurisCount} cities and counties: ${verifiedCount} verified line items — impact, school and utility fees, verified against official schedules.`;
+
 // School-fee spread — computed per jurisdiction from jurisStack's
 // school field: the jurisdiction's combined school fee (elementary +
 // high school shares summed at 800 sq ft). Comparing single district
 // rows is wrong: one row can be only one share of a split district
 // (Campbell's high school share FI-295 $1.61/sq ft is $1,288 alone,
-// but the parcel also pays the elementary share FI-294 $3.79/sq ft —
-// $4,320 combined). Same method as the Fee Index (PR #201).
+// but the parcel also pays the elementary share FI-294 $3.77/sq ft —
+// $4,304 combined). Same method as the Fee Index (PR #201).
 // Jurisdictions whose only verified school row is a partial
 // (high school) share are excluded from the low end:
 // - LOS-GATOS: FI-182 LGSUHSD high school share only ($1.66/sq ft)
