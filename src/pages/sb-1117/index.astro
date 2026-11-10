@@ -1,5 +1,7 @@
 ---
+import { getCollection } from "astro:content";
 import feesData from "@/data/fees.json";
+import { postFilter } from "@/utils/postFilter";
 import type { FeeData } from "@/lib/feeCalc";
 import {
   summarizeSB1117,
@@ -13,6 +15,12 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
 import LinkButton from "@/components/LinkButton.astro";
+
+// The plain-English explainer is scheduled (pubDatetime); until it is live,
+// point at the published 750 sq ft cliff explainer instead of a 404.
+const explainerLive = (await getCollection("posts"))
+  .filter(postFilter)
+  .some(p => p.id === "sb-1117-explained-plain-english");
 
 const data = feesData as unknown as FeeData;
 const days = daysUntilSB1117();
@@ -181,10 +189,12 @@ const listSchema = {
         Calculate your exact size &rarr;
       </LinkButton>
       <LinkButton
-        href="/posts/sb-1117-explained-plain-english/"
+        href={explainerLive
+          ? "/posts/sb-1117-explained-plain-english/"
+          : "/posts/sb-1117-kills-750-sq-ft-cliff/"}
         class="border-border rounded border px-5 py-3 font-medium"
       >
-        SB 1117 in plain English &rarr;
+        {explainerLive ? "SB 1117 in plain English" : "How SB 1117 kills the 750 sq ft cliff"} &rarr;
       </LinkButton>
     </div>
   </main>

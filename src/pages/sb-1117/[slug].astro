@@ -1,5 +1,7 @@
 ---
+import { getCollection } from "astro:content";
 import feesData from "@/data/fees.json";
+import { postFilter } from "@/utils/postFilter";
 import { fmtRange, type FeeData } from "@/lib/feeCalc";
 import {
   SB1117_SIZES,
@@ -27,6 +29,11 @@ export async function getStaticPaths() {
 }
 
 const { juris } = Astro.props;
+// Link the explainer only once it is live; it is scheduled (pubDatetime) and
+// would 404 on these pages until then.
+const explainerLive = (await getCollection("posts"))
+  .filter(postFilter)
+  .some(p => p.id === "sb-1117-explained-plain-english");
 const slug = juris.juris_id.toLowerCase();
 const days = daysUntilSB1117();
 const inForce = days === 0;
@@ -344,12 +351,16 @@ const faqSchema = {
     </div>
     <p class="mt-6 text-sm opacity-70">
       Background:{" "}
-      <a
-        class="text-accent underline decoration-dashed underline-offset-4"
-        href="/posts/sb-1117-explained-plain-english/"
-        >SB 1117 in plain English</a
-      >
-      {" "}&middot;{" "}
+      {explainerLive && (
+        <>
+          <a
+            class="text-accent underline decoration-dashed underline-offset-4"
+            href="/posts/sb-1117-explained-plain-english/"
+            >SB 1117 in plain English</a
+          >
+          {" "}&middot;{" "}
+        </>
+      )}
       <a
         class="text-accent underline decoration-dashed underline-offset-4"
         href="/posts/sb-1117-wait-or-permit-now/">Wait or permit now?</a
