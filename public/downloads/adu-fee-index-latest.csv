@@ -1,7 +1,7 @@
 # Source: Every Line Item — California ADU Fee Index. https://everylineitem.com/fee-index/
 # License: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) — free to reuse with attribution.
 # Reference date: 2026-11-11 (generated at build time from src/data/fees.json)
-# Scope: verified rows only — 528 verified line items across 160 jurisdictions. Unverified rows are excluded, never estimated.
+# Scope: verified rows only — 538 verified line items across 160 jurisdictions. Unverified rows are excluded, never estimated.
 # Amount at 800 sq ft: computed with the same math as the site calculator (800 sq ft ADU; 1,600 sq ft primary dwelling for prorated lines). Blank = the row has no computable amount at 800 sq ft. A range is shown as low-high.
 jurisdiction,county,fee_name,category,rate,amount_800_sqft,status,source_url,last_verified,effective_date
 Alameda (city),Alameda,Citywide development impact fees — ADUs exempt at all sizes ($0),impact,$0,0,verified,https://www.alamedaca.gov/files/assets/public/v/1/departments/alameda/comm-services/formsandhandouts/planning/adu-permit-packet_2.pdf,2026-10-15,2026
@@ -89,6 +89,16 @@ City of Irvine,Orange,School developer fee (Saddleback Valley USD),school,$5.38/
 City of Irvine,Orange,School developer fee (Tustin USD),school,$5.38/sq ft,4304,verified,https://www.tustin.k12.ca.us/departments/business-services/fiscal-services/developer-fees,11 Nov 2026,
 City of Los Angeles,Los Angeles,Affordable Housing Linkage Fee — ADU exemption ($0),impact,$0,0,verified,https://planning.lacity.gov/odocument/184600d8-71d7-4d74-baf1-1f9cd2603320/ZA_Memo_No_143.pdf,10 Nov 2026,
 City of Los Angeles,Los Angeles,Park fee — ADU exemption ($0),impact,$0,0,verified,https://planning.lacity.gov/odocument/184600d8-71d7-4d74-baf1-1f9cd2603320/ZA_Memo_No_143.pdf,10 Nov 2026,19 Dec 2019
+City of Los Angeles,Los Angeles,"Building permit fee, $100,001-$500,000 valuation band (Table 1-A)",plan_check_permit,see fee schedule,,verified,https://codelibrary.amlegal.com/codes/los_angeles/latest/lamc/0-0-0-173237,11 Nov 2026,16 Jul 2018
+City of Los Angeles,Los Angeles,Building plan check fee (90% of permit fee),plan_check_permit,90% of permit fee,,verified,https://codelibrary.amlegal.com/codes/los_angeles/latest/lamc/0-0-0-172789,11 Nov 2026,16 Jul 2018
+City of Los Angeles,Los Angeles,Building Standards Administration Special Revolving Fund fee (SB 1473),plan_check_permit,0.004% of valuation,,verified,https://www.dgs.ca.gov/-/media/Divisions/BSC/06-News/Information-Bulletins/2024/BSC-Bulletin-24-02-BSASRF-Reminders-Final.pdf,11 Nov 2026,
+City of Los Angeles,Los Angeles,Combined building-mechanical permit (165% of Table 1-A permit fee),plan_check_permit,165% of Table 1-A permit fee,,verified,https://codelibrary.amlegal.com/codes/los_angeles/latest/lamc/0-0-0-173237,11 Nov 2026,16 Jul 2018
+City of Los Angeles,Los Angeles,Development Services Center Surcharge (3% of permit fee),plan_check_permit,3% of permit fee,,verified,https://cityclerk.lacity.org/onlinedocs/2013/13-0046_ORD_184548_10-31-2016.pdf,11 Nov 2026,31 Oct 2016
+City of Los Angeles,Los Angeles,Energy code increase (10% of permit fee),plan_check_permit,10% of permit fee,,verified,https://codelibrary.amlegal.com/codes/los_angeles/latest/lamc/0-0-0-173237,11 Nov 2026,16 Jul 2018
+City of Los Angeles,Los Angeles,Fire Hydrant Fee (0.22% of valuation),plan_check_permit,0.22% of valuation,,verified,https://codelibrary.amlegal.com/codes/los_angeles/latest/lamc/0-0-0-172789,11 Nov 2026,12 May 2009
+City of Los Angeles,Los Angeles,General Plan Maintenance Surcharge (7% of permit fee),plan_check_permit,7% of permit fee,,verified,https://codelibrary.amlegal.com/codes/los_angeles/latest/lamc/0-0-0-190101,11 Nov 2026,16 Jul 2018
+City of Los Angeles,Los Angeles,"Strong Motion Instrumentation Program fee, residential (0.013% of valuation)",plan_check_permit,0.013% of valuation,,verified,https://www.conservation.ca.gov/cgs/Documents/program-smi/SMIP_Fee_Schedule.pdf,11 Nov 2026,
+City of Los Angeles,Los Angeles,Systems Development Surcharge (6% of permit fee),plan_check_permit,6% of permit fee,,verified,https://codelibrary.amlegal.com/codes/los_angeles/latest/lamc/0-0-0-190101,11 Nov 2026,16 Jul 2018
 City of Los Angeles,Los Angeles,School developer fee (Los Angeles USD),school,$5.38/sq ft,4304,verified,https://impactfee.lausd.org/apps/pages/index.jsp?uREC_ID=4418178&type=d&pREC_ID=2651424,10 Nov 2026,11 Aug 2026
 Claremont,Los Angeles,Water service connection charge — ADU sharing the existing service (Golden State Water Company),water_sewer,$0,0,verified,https://www.gswater.com/sites/main/files/file-attachments/1946-w_approval__rule_16_language__sample_forms_update.pdf?1725490157,2026-10-21,2024-08-31
 Clovis,Fresno,Community sanitation fee — Single family lot,impact,$552,276,verified,https://cms2.revize.com/revize/clovis/documents/Services/Planning%20Development/Engineering/Resources/PDS%20-%20Development%20Impact%20Fees%20-%20ATT%2001-A.pdf?t=202508122013150&t=202508122013150,2026-11-11,"August 12, 2024"
