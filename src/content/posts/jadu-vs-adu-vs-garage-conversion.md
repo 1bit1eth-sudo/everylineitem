@@ -30,7 +30,7 @@ This page synthesizes our three existing deep-dives — the [800 sq ft detached 
 | **Size** | 800 sq ft (new) | ~450 sq ft (existing shell) | ≤500 sq ft (inside house) |
 | **Build cost** | **$320,000** ($400/sq ft) | **$190,000** ($422/sq ft) | Not published¹ |
 | **Impact fees** | $0–$10,411 (city-dependent; $0 under 750 sq ft) | $0 (under 750 sq ft) | **$0** (by law) |
-| **School fees** | $1,792–$4,320 | ~$2,155 (450 sq ft × rate) | **$0** (by law) |
+| **School fees** | $1,792–$4,304 | ~$2,155 (450 sq ft × rate) | **$0** (by law) |
 | **Utility connections** | $0–$10,000+ (city-dependent) | Usually $0 (existing service) | **$0** (by law) |
 | **Parking** | None required (state law) | None required | None required |
 | **Timeline** | 9–14 months (permit + build) | 6–10 months | 3–6 months |
