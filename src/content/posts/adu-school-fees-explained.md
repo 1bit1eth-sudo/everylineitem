@@ -77,9 +77,9 @@ Every figure below is district rate × 800 sq ft, sourced from district document
 | Burbank | BUSD | $5.38* | **$4,304** (assumed) |
 | Torrance | TUSD | $5.38 | **$4,304** |
 | Fontana | FUSD | $5.38* | **$4,304** (vote unconfirmed) |
-| Campbell | CUHSD | $5.40 | **$4,320** (series high) |
+| Campbell | CUHSD | $5.38 | **$4,304** |
 
-The spread is $2,528 — from Pasadena's $1,792 to Campbell's $4,320 — on an identical 800 sq ft box. Six districts cluster at the $5.38 statutory maximum; the variance lives entirely in which districts have not yet adopted the latest SAB increase.
+The spread is $2,512 — from Pasadena's $1,792 to Campbell's $4,304 — on an identical 800 sq ft box. Eight districts cluster at the $5.38 statutory maximum; the variance lives entirely in which districts have not yet adopted the latest SAB increase.
 
 ## Why Lakewood is the interesting case
 
