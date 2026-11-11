@@ -148,6 +148,22 @@ export function jurisAreas(data: FeeData, jurisId: string): string[] {
   return [...areas].sort((a, b) => a.localeCompare(b, "en-US"));
 }
 
+/**
+ * Area-schedule note for the fee calculator and comparison tool, worded
+ * by area count (same rule as the fee-page meta in
+ * src/pages/fees/[slug].astro): 2 areas keep "one, not both"; 3+ say
+ * "one of N area schedules"; a single area says so outright. n === 0
+ * never renders — the area wrap stays hidden when a jurisdiction has no
+ * areas, and the calculator scripts only call this after the empty-areas
+ * early return — so it falls through to the 2-area wording.
+ */
+export function areaNote(n: number): string {
+  if (n === 1) return "This jurisdiction has one area schedule.";
+  if (n > 2)
+    return `This jurisdiction has mutually exclusive area schedules — a parcel pays one of ${n} area schedules.`;
+  return "This jurisdiction has mutually exclusive area schedules — a parcel pays one, not both.";
+}
+
 function resolveArea(
   data: FeeData,
   jurisId: string,

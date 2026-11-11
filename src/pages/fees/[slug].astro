@@ -33,8 +33,9 @@ const postSlug = juris.post_slug && postIds.has(juris.post_slug) ? juris.post_sl
 
 const result = calcJurisdiction(feesData as any, juris.juris_id, SQFT);
 
-// Jurisdictions with mutually exclusive area schedules (Ontario): a parcel
-// pays ONE area's rows, never the sum. Compute each area separately and
+// Jurisdictions with mutually exclusive area schedules (Ontario, Carlsbad,
+// Moreno Valley, Vacaville — and Marin County / Clovis once their area rows
+// merge): a parcel pays ONE area's rows, never the sum. Compute each area
 // present the total as a range; shared rows (school, permit) are deduped.
 const areas = jurisAreas(feesData as any, juris.juris_id);
 const isAreaJuris = areas.length > 0;
@@ -121,6 +122,17 @@ const cliffDisplay = isAreaJuris && cliffLow !== cliffAmount
 
 const schoolLine = verifiedLines.find(l => l.item.category === "school");
 
+// Area-count-aware wording: "not both" is only true for exactly two
+// schedules (Ontario, Moreno Valley, Vacaville). One schedule needs no
+// qualifier; three or more need "one of N" (Carlsbad has 3; Marin County
+// and Clovis will have 13 and 5 once their area rows merge).
+const areaNote =
+  areas.length === 2
+    ? "(a parcel pays one area schedule, not both)"
+    : areas.length > 2
+      ? `(a parcel pays one of ${areas.length} area schedules)`
+      : "";
+
 const rateLabel = (item: any): string => {
   if (item.method === "per_sqft") {
     const r = `$${item.rate_low}/sq ft`;
@@ -175,10 +187,14 @@ const skippedRateLabel = (item: any): string => {
 const longTitle = `${juris.name} ADU Fees in 2026: Every Line Item, Sourced`;
 // Keep <title> within ~60 chars so search results don't truncate it.
 const title = longTitle.length <= 60 ? longTitle : `${juris.name} ADU Fees 2026, Line by Line`.length <= 60 ? `${juris.name} ADU Fees 2026, Line by Line` : `${juris.name} ADU Fees 2026`;
+// Keep meta descriptions within ~160 chars so search results don't truncate
+// them: both verified branches use the short "Verified ADU fees in" prefix,
+// and the area branch drops the trailing sourcing sentence — the "one area
+// schedule" note is the longer, accuracy-critical part. (cycle348)
 const description = verifiedLines.length > 0
   ? isAreaJuris
-    ? `Verified government fees for an ADU in ${juris.name}, CA — ${fmtUSD(verifiedTotalLow)}${verifiedTotalHigh !== verifiedTotalLow ? `–${fmtUSD(verifiedTotalHigh)}` : ""} across areas for an ${SQFT} sq ft ADU (a parcel pays one area schedule, not both). Every figure links to its official source.`
-    : `Verified government fees for an ADU in ${juris.name}, CA — ${fmtUSD(verifiedTotalLow)} across ${verifiedLines.length} line items for an ${SQFT} sq ft ADU. Every figure links to its official source.`
+    ? `Verified ADU fees in ${juris.name}, CA — ${fmtUSD(verifiedTotalLow)}${verifiedTotalHigh !== verifiedTotalLow ? `–${fmtUSD(verifiedTotalHigh)}` : ""} across areas for an ${SQFT} sq ft ADU${areaNote ? ` ${areaNote}` : ""}.`
+    : `Verified ADU fees in ${juris.name}, CA — ${fmtUSD(verifiedTotalLow)} across ${verifiedLines.length} line item${verifiedLines.length === 1 ? "" : "s"} for an ${SQFT} sq ft ADU. Every figure links to its official source.`
   : skippedVerifiedLines.length > 0
     ? `ADU fees in ${juris.name}, CA — ${skippedVerifiedLines.length} verified fee rates on file (dollar amounts need your project's valuation). Every figure links to its official source.`
   : `ADU fees in ${juris.name}, CA — our researchers are verifying every line item against official sources. The 750 sq ft state-law cliff, explained.`;
@@ -282,7 +298,7 @@ const faqSchema = {
             <p class="mt-1 text-sm opacity-60">
               {verifiedLines.length > 0 ? (
                 isAreaJuris
-                  ? `range across areas — ${areaTotals.map(t => `${t.area} ${fmtUSD(t.low)}`).join(" · ")}; your parcel pays one area's schedule, not both`
+                  ? `range across areas — ${areaTotals.map(t => `${t.area} ${fmtUSD(t.low)}`).join(" · ")}${areas.length === 2 ? "; your parcel pays one area's schedule, not both" : areas.length > 2 ? `; your parcel pays one of ${areas.length} area schedules` : ""}`
                   : `across ${verifiedLines.length} line ${verifiedLines.length === 1 ? "item" : "items"}`
               ) : (
                 `${skippedVerifiedLines.length} verified rates — dollar amounts need your project's valuation`
@@ -324,12 +340,15 @@ const faqSchema = {
           rate. "Exempt" lines are $0 by state law at this size.{
             isAreaJuris && (
               <>
-                {" "}This jurisdiction has two area schedules — a parcel pays
-                one, not both — so both schedules are listed below and the
-                total above is the range across areas, not the sum of all rows.
-                Dwelling-base impact fees are prorated at an assumed 1,600 sq
-                ft primary dwelling; use the calculator to enter your actual
-                primary size.
+                {" "}This jurisdiction has{" "}
+                {areas.length === 2 ? "two" : areas.length} area schedules — a
+                parcel pays one, not{" "}
+                {areas.length === 2 ? "both" : `all ${areas.length}`} — so{" "}
+                {areas.length === 2 ? "both" : "all"} schedules are listed
+                below and the total above is the range across areas, not the
+                sum of all rows. Dwelling-base impact fees are prorated at an
+                assumed 1,600 sq ft primary dwelling; use the calculator to
+                enter your actual primary size.
               </>
             )
           }

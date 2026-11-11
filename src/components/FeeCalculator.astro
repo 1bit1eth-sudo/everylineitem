@@ -5,6 +5,7 @@ import { postFilter } from "../utils/postFilter";
 import {
   resultsHTML,
   jurisAreas,
+  areaNote,
   DEFAULT_PRIMARY_SQFT,
   type FeeData,
 } from "../lib/feeCalc";
@@ -170,9 +171,9 @@ const selectClass =
     <label id="fee-area-wrap" class="flex flex-col gap-2 text-sm font-medium" hidden>
       <span>Area schedule</span>
       <select id="fee-area" class={selectClass}></select>
-      <span class="text-xs font-normal opacity-70">
-        This jurisdiction has mutually exclusive area schedules — a parcel
-        pays one, not both.
+      {/* Note text is set per jurisdiction by syncAreaSelect() below. */}
+      <span id="fee-area-note" class="text-xs font-normal opacity-70">
+        {areaNote(jurisAreas(data, DEFAULT_JURIS).length)}
       </span>
     </label>
   </div>
@@ -251,7 +252,7 @@ const selectClass =
 />
 
 <script>
-  import { resultsHTML } from "../lib/feeCalc";
+  import { resultsHTML, areaNote } from "../lib/feeCalc";
   import { buildFeeReport, downloadFeeReportPDF } from "../lib/feeReport";
 
   const dataEl = document.getElementById("fee-data");
@@ -262,6 +263,7 @@ const selectClass =
   const primaryInput = document.getElementById("fee-primary") as HTMLInputElement | null;
   const areaWrap = document.getElementById("fee-area-wrap") as HTMLElement | null;
   const areaSel = document.getElementById("fee-area") as HTMLSelectElement | null;
+  const areaNoteEl = document.getElementById("fee-area-note") as HTMLElement | null;
   const results = document.getElementById("fee-results");
 
   function jurisAreas(jurisId: string): string[] {
@@ -283,6 +285,7 @@ const selectClass =
       return;
     }
     areaWrap.hidden = false;
+    if (areaNoteEl) areaNoteEl.textContent = areaNote(areas.length);
     const prev = areaSel.value;
     areaSel.innerHTML = areas
       .map(a => `<option value="${a}">${a}</option>`)
