@@ -5,6 +5,7 @@ import { postFilter } from "../utils/postFilter";
 import {
   sideBySideHTML,
   jurisAreas,
+  areaNote,
   DEFAULT_PRIMARY_SQFT,
   type FeeData,
 } from "../lib/feeCalc";
@@ -150,9 +151,9 @@ const ssrHTML = sideBySideHTML(
                   <option value={a}>{a}</option>
                 ))}
               </select>
-              <span class="text-xs font-normal opacity-70">
-                This jurisdiction has mutually exclusive area schedules — a
-                parcel pays one, not both.
+              {/* Note text is set per jurisdiction by syncArea() below. */}
+              <span data-area-note class="text-xs font-normal opacity-70">
+                {areaNote(areas.length)}
               </span>
             </label>
           </div>
@@ -188,7 +189,7 @@ const ssrHTML = sideBySideHTML(
 </section>
 
 <script>
-  import { sideBySideHTML, jurisAreas } from "../lib/feeCalc";
+  import { sideBySideHTML, jurisAreas, areaNote } from "../lib/feeCalc";
 
   // Reuses the single calculator's embedded fee data (#fee-data) so the
   // 488 KB schedule ships once, not twice. Without it the server-rendered
@@ -222,6 +223,8 @@ const ssrHTML = sideBySideHTML(
       return;
     }
     wrap.hidden = false;
+    const note = wrap.querySelector("[data-area-note]") as HTMLElement | null;
+    if (note) note.textContent = areaNote(areas.length);
     const prev = sel.value;
     sel.innerHTML = areas
       .map(a => `<option value="${a}">${a}</option>`)
