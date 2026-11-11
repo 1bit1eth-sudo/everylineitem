@@ -41,7 +41,7 @@ Our [December re-verification](/posts/december-2026-fee-reverification/) is trac
 
 ## Action 2 — Lock your school-fee number (SB 1117 doesn't touch it)
 
-School developer fees live under the **Education Code**, not §66311.5. They are outside SB 1117 and **unchanged on January 1**. Pasadena's $1,792 and Campbell's $4,320 survive the new law exactly as published.
+School developer fees live under the **Education Code**, not §66311.5. They are outside SB 1117 and **unchanged on January 1**. Pasadena's $1,792 and Campbell's $4,304 survive the new law exactly as published.
 
 That makes the school fee the one line you can finalize today with zero timing risk. Find your parcel's district (not your city — see the [full school fee ranking](/posts/adu-school-fees-ranked-california/)), confirm the district's current board-adopted rate, and check for two-district stacking. It is also the one line your city cannot waive, so there is no strategic reason to wait.
 
