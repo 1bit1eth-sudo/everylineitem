@@ -1,7 +1,7 @@
 # Source: Every Line Item — California ADU Fee Index. https://everylineitem.com/fee-index/
 # License: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) — free to reuse with attribution.
 # Reference date: 2026-11-11 (generated at build time from src/data/fees.json)
-# Scope: verified rows only — 520 verified line items across 160 jurisdictions. Unverified rows are excluded, never estimated.
+# Scope: verified rows only — 522 verified line items across 160 jurisdictions. Unverified rows are excluded, never estimated.
 # Amount at 800 sq ft: computed with the same math as the site calculator (800 sq ft ADU; 1,600 sq ft primary dwelling for prorated lines). Blank = the row has no computable amount at 800 sq ft. A range is shown as low-high.
 jurisdiction,county,fee_name,category,rate,amount_800_sqft,status,source_url,last_verified,effective_date
 Alameda (city),Alameda,Citywide development impact fees — ADUs exempt at all sizes ($0),impact,$0,0,verified,https://www.alamedaca.gov/files/assets/public/v/1/departments/alameda/comm-services/formsandhandouts/planning/adu-permit-packet_2.pdf,2026-10-15,2026
@@ -91,7 +91,9 @@ City of Los Angeles,Los Angeles,Affordable Housing Linkage Fee — ADU exemption
 City of Los Angeles,Los Angeles,Park fee — ADU exemption ($0),impact,$0,0,verified,https://planning.lacity.gov/odocument/184600d8-71d7-4d74-baf1-1f9cd2603320/ZA_Memo_No_143.pdf,10 Nov 2026,19 Dec 2019
 City of Los Angeles,Los Angeles,School developer fee (Los Angeles USD),school,$5.38/sq ft,4304,verified,https://impactfee.lausd.org/apps/pages/index.jsp?uREC_ID=4418178&type=d&pREC_ID=2651424,10 Nov 2026,11 Aug 2026
 Claremont,Los Angeles,Water service connection charge — ADU sharing the existing service (Golden State Water Company),water_sewer,$0,0,verified,https://www.gswater.com/sites/main/files/file-attachments/1946-w_approval__rule_16_language__sample_forms_update.pdf?1725490157,2026-10-21,2024-08-31
+Clovis,Fresno,Community sanitation fee — Single family lot,impact,$552,276,verified,https://cms2.revize.com/revize/clovis/documents/Services/Planning%20Development/Engineering/Resources/PDS%20-%20Development%20Impact%20Fees%20-%20ATT%2001-A.pdf?t=202508122013150&t=202508122013150,2026-11-11,"August 12, 2024"
 Clovis,Fresno,Fire Department Fee — Growth Areas,impact,"$2,253",1127,verified,https://cms2.revize.com/revize/clovis/documents/Services/Planning%20Development/Engineering/Resources/PDS%20-%20Development%20Impact%20Fees%20-%20ATT%2001-A.pdf?t=202508122013150&t=202508122013150,2026-11-11,"August 12, 2024"
+Clovis,Fresno,Library Facilities Impact Fee — Single family lot,impact,$766,383,verified,https://cms2.revize.com/revize/clovis/documents/Services/Planning%20Development/Engineering/Resources/PDS%20-%20Development%20Impact%20Fees%20-%20ATT%2001-A.pdf?t=202508122013150&t=202508122013150,2026-11-11,"August 12, 2024"
 Clovis,Fresno,Park Acquisition and Development — All Residential,impact,"$6,147",3074,verified,https://cms2.revize.com/revize/clovis/documents/Services/Planning%20Development/Engineering/Resources/PDS%20-%20Development%20Impact%20Fees%20-%20ATT%2001-A.pdf?t=202508122013150&t=202508122013150,2026-11-11,"August 12, 2024"
 Clovis,Fresno,Police Department Fee — Growth Areas,impact,"$1,582",791,verified,https://cms2.revize.com/revize/clovis/documents/Services/Planning%20Development/Engineering/Resources/PDS%20-%20Development%20Impact%20Fees%20-%20ATT%2001-A.pdf?t=202508122013150&t=202508122013150,2026-11-11,"August 12, 2024"
 Coachella,Riverside,"School district developer fee (CVUSD, residential)",school,$4.79/sq ft,3832,verified,https://files.smartsites.parentsquare.com/9154/cvusd_fee_just__report__11-2-2022_final.pdf,2026-10-16,2026
