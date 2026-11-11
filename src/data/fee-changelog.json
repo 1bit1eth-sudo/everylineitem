@@ -2,6 +2,20 @@
   "entries": [
 {
       "date": "2026-11-11",
+      "detail": "City of Clovis Neighborhood Park Deposit ($6,127 per unit, Street Area 4 — Loma Vista Specific Plan) verified in the Master Development Fee Schedule 2024-2025 (effective July 21, 2025, p.2; rates effective August 12, 2024), re-read live November 11, 2026 — no newer schedule published. The city ADU Informational Handout (8-16-23) states ADUs under 750 sq ft pay no impact fee and ADUs over 750 sq ft are charged proportionately to the primary dwelling, and Gov. Code §66311.5 governs the same rule, so the row is verified with dwelling-base proration (800 sq ft ADU at the 1,600 sq ft default primary: $3,063.50; $0 at 750 sq ft and under; SB 1117 2027 basis: $191.47). Area scope resolved from the city’s Street & Undergrounding Boundaries map (May 28, 2024; fee schedule p.7, in the June 10, 2024 City Council agenda packet, Item 15): Street Area 4 runs Locan Ave to McCall Ave, Bullard/Shaw Aves to the Gould Canal — the Loma Vista Specific Plan boundary — so the deposit and the Area 4 Major Street Fee apply to the same parcels and the row is tagged area “Area 4” (mutually exclusive with Areas 1\u20135). Clovis now has 22 rows (6 verified in this branch; the Major Street Area 1\u20135 verifications are a separate unmerged branch).",
+      "headline": "Clovis: Neighborhood Park Deposit verified — $6,127 per unit for Street Area 4 (Loma Vista)",
+      "items_added": 0,
+      "jurisdictions": ["Clovis"]
+    },
+{
+      "date": "2026-11-11",
+      "detail": "City of Clovis Major Street Fees, Areas 1-5 (SFR per unit: Area 1 $11,908, Area 2 $518, Area 3 $115, Area 4 $11,712, Area 5 $6,104) verified in the Master Development Fee Schedule 2024-2025 (effective July 21, 2025, pp.3-4), re-read live November 11, 2026 — no newer schedule published. Component sums (Outside Travel Lane + Center Travel Lane + Traffic Signals + Bridges) match the printed totals exactly in all five areas. The FY2023-24 AB 602 nexus sheets (Major Street fees, pp.16-19 + summary p.33) rate the fee per dwelling unit by trip generation, not dwelling size; the city ADU Informational Handout (8-16-23) proportional rule and Gov. Code §66311.5 govern the ADU charge, so the rows are verified with dwelling-base proration (800 sq ft ADU at the 1,600 sq ft default primary: Area 1 $5,954.00, Area 2 $259.00, Area 3 $57.50, Area 4 $5,856.00, Area 5 $3,052.00; $0 at 750 sq ft and under). The five areas are mutually exclusive area variants — a parcel pays one area’s fee only — so the fees page shows a range across areas. Clovis now has 22 rows (8 verified in this branch; the Library and Sanitation verifications are separate unmerged branches).",
+      "headline": "Clovis: Major Street Fees Areas 1-5 verified — $115-$11,908 per unit, prorated for ADUs over 750 sq ft",
+      "items_added": 0,
+      "jurisdictions": ["Clovis"]
+    },
+{
+      "date": "2026-11-11",
       "detail": "City of Clovis Community Sanitation Fee ($552 per unit, Single family lot) verified in the Master Development Fee Schedule 2024-2025 (effective July 21, 2025, p.2; rates effective August 12, 2024), re-read live November 11, 2026 — no newer schedule published. The FY2023-24 AB 602 nexus sheets (Community Sanitation Fee, p.28) rate the fee per dwelling unit (residential service is once a week per dwelling unit with no variation for dwelling size; a unit-based fee is a more direct connection to the service provided than a square-footage basis), and the city ADU Informational Handout (8-16-23) states ADUs under 750 sq ft pay no impact fee and ADUs over 750 sq ft are charged proportionately to the primary dwelling — so the row is verified with dwelling-base proration (800 sq ft ADU at the 1,600 sq ft default primary: $276.00; $0 at 750 sq ft and under). Clovis now has 22 rows (5 verified).",
       "headline": "Clovis: Community Sanitation Fee verified — $552 per unit, prorated for ADUs over 750 sq ft",
       "items_added": 0,
