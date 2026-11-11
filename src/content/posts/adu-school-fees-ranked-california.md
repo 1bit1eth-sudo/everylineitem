@@ -1,6 +1,6 @@
 ---
-title: "Every California ADU School Fee, Ranked: $1,792 to $4,320"
-description: "Every school district fee this site has published for an 800 sq ft ADU, ranked — from Pasadena's $1,792 to Campbell's $4,320, a $2,528 spread set by school district boundaries, not city limits. Two-district stacking, stale rate tables, and the parcel lottery explained."
+title: "Every California ADU School Fee, Ranked: $1,792 to $4,304"
+description: "Every school district fee this site has published for an 800 sq ft ADU, ranked — from Pasadena's $1,792 to Campbell's $4,304, a $2,512 spread set by school district boundaries, not city limits. Two-district stacking, stale rate tables, and the parcel lottery explained."
 pubDatetime: 2026-11-29T01:00:00Z
 author: "Every Line Item"
 tags: ["comparison", "school-fees", "adu-cost"]
@@ -12,7 +12,7 @@ faqs:
   - question: "Which California city has the lowest ADU school fee?"
     answer: "Pasadena, at $1,792 on an 800 sq ft ADU — $2.24 per square foot from Pasadena Unified (PUSD developer fee instructions, revised 7/1/2025). That is the lowest verified school fee across the 28 cities in this ranking."
   - question: "Which California city has the highest ADU school fee?"
-    answer: "Campbell, at $4,320 on an 800 sq ft ADU — $5.40 per square foot combined across two districts: Campbell Union (K-8) at $3.79 and Campbell Union High at $1.61. It exceeds the statewide $5.38 single-district Level 1 cap only because two districts stack on the same parcel."
+    answer: "Twelve cities tie at $4,304 on an 800 sq ft ADU — the $5.38/sq ft Level 1 cap. Campbell is one of them, reaching the cap by stacking two districts on the same parcel: Campbell Union (K-8) at $3.77 and Campbell Union High at $1.61. No city in this ranking exceeds the cap."
   - question: "Who sets ADU school fees — the city or the school district?"
     answer: "The school district. Under Education Code §17620, districts levy developer fees by board resolution, capped at the State Allocation Board's Level 1 maximum ($5.38/sq ft in 2026). Cities collect the fee at permit issuance as a pass-through and cannot waive it. That is why the ranking below ignores city limits."
   - question: "Do school fees change under SB 1117 on January 1, 2027?"
@@ -22,7 +22,7 @@ faqs:
 > Cost figures are re-checked against permit records quarterly. Changes are
 > logged in [Corrections](/corrections/).
 
-Same ADU. Same 800 square feet. Same state. **$2,528 apart** — and the difference comes from a line on a map you cannot see from the street.
+Same ADU. Same 800 square feet. Same state. **$2,512 apart** — and the difference comes from a line on a map you cannot see from the street.
 
 School district boundaries, not city limits, set your ADU school fee. We compared Pasadena and Campbell head-to-head in [October](/posts/school-fee-gap-pasadena-campbell/); this post is the full leaderboard — every school fee this site has published, ranked cheapest to most expensive, with the asterisks intact.
 
@@ -50,9 +50,8 @@ School district boundaries, not city limits, set your ADU school fee. We compare
 
 **16. Ontario — $4,192** ($5.24/sq ft).
 
-**17–27. $4,304 tier — Anaheim, Burbank\*, Fullerton, Glendale, Long Beach, San Bernardino, San Jose, Santa Ana, Torrance, Fontana\*, Santa Maria\*.** Eleven cities at the 2026 SAB Level 1 maximum of $5.38/sq ft — the modal outcome in California. Notes: Burbank's $5.38 assumes Resolution 1-27 passed (unconfirmed; falls to $4,136 at the prior rate); Santa Maria's figure is the verified Level 1 rate (a conditional Level 2 of $7,984 was published but never verified against a current adopted resolution, so it is not the ranked figure).
+**17–28. $4,304 tier — Anaheim, Burbank\*, Campbell, Fullerton, Glendale, Long Beach, San Bernardino, San Jose, Santa Ana, Torrance, Fontana\*, Santa Maria\*.** Twelve cities at the 2026 SAB Level 1 maximum of $5.38/sq ft — the modal outcome in California. Campbell reaches the cap by stacking two districts (Campbell Union K-8 $3.77 + Campbell Union High $1.61); it ties the cap rather than breaking it. Notes: Burbank's $5.38 assumes Resolution 1-27 passed (unconfirmed; falls to $4,136 at the prior rate); Santa Maria's figure is the verified Level 1 rate (a conditional Level 2 of $7,984 was published but never verified against a current adopted resolution, so it is not the ranked figure).
 
-**28. Campbell — $4,320** ($5.40/sq ft: Campbell Union K-8 $3.79 + Campbell Union High $1.61). Two districts, one parcel, one combined bill. The only city in the series to break the $5.38 single-district ceiling — and only by stacking two of them.
 
 **Unranked — Westminster.** The school fee could not be verified at publication: the city spans three to four districts and no current rate was found on any official district source. It is excluded from the total and marked "verify with city."
 
@@ -60,7 +59,7 @@ School district boundaries, not city limits, set your ADU school fee. We compare
 
 **Lakewood's street lottery.** Four school districts serve one city. Same 800 sq ft ADU: $2,376 on one parcel, $4,304 on another — an $1,928 gap decided entirely by which side of an invisible district line your lot sits on. Nothing about the ADU changes. The address does.
 
-**Campbell's stacking.** Most Californians think of "the school fee" as one number from one district. In Campbell, an elementary district and a high school district each levy their own per-square-foot rate on the same unit, and both get collected. Two resolutions, one bill, $5.40 combined.
+**Campbell's stacking.** Most Californians think of "the school fee" as one number from one district. In Campbell, an elementary district and a high school district each levy their own per-square-foot rate on the same unit, and both get collected. Two resolutions, one bill, $5.38 combined.
 
 **Alhambra's stale table.** The city tells applicants $3.79 — a number that exactly matches the 2022 SAB cap. If the district has since moved to the $5.17 or $5.38 cap and the city's table never caught up, applicants are budgeting from an old number and the true bill is higher. A city-published fee that the district itself hasn't confirmed is a forecast, not a price.
 
@@ -69,7 +68,7 @@ School district boundaries, not city limits, set your ADU school fee. We compare
 Two statewide constants worth knowing, since neither shows up in any city's marketing:
 
 - **The 500 sq ft threshold.** ADUs at or under 500 square feet pay no school developer fees (Education Code §17620; the state ADU handbook confirms it). Every figure above is for 800 sq ft, so all of them clear the threshold and pay on the full area.
-- **SB 1117 doesn't touch this line.** The January 1, 2027 law rewrites city/county impact fees; school fees are Education Code, not Government Code §66311.5. Pasadena's $1,792 and Campbell's $4,320 survive the new law unchanged.
+- **SB 1117 doesn't touch this line.** The January 1, 2027 law rewrites city/county impact fees; school fees are Education Code, not Government Code §66311.5. Pasadena's $1,792 and Campbell's $4,304 survive the new law unchanged.
 
 ## How to read your own bill
 
