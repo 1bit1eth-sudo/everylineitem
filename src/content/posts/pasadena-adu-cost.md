@@ -25,7 +25,7 @@ faqs:
   - question: "How much does an ADU cost in Pasadena in 2026?"
     answer: "About $310,000 for an 800 sq ft detached, single-story, new-construction unit with mid-grade finishes — roughly $388 per square foot. That figure rests on stated assumptions we have not fully confirmed: the exact building permit fee (Pasadena prices permits on valuation, and the city publishes $7,000–$13,000 estimates for its standard plans), the proportional impact fee (which depends on your primary dwelling's size), and sewer/water capacity charges we could not verify."
   - question: "How much are school district fees on an ADU in Pasadena?"
-    answer: "$1,792 on 800 sq ft at $2.24 per square foot — Pasadena Unified School District's developer fee schedule (revised July 1, 2025), collected by the City of Pasadena Permit Center. That is the lowest school-fee rate in this series by a wide margin; most cities charge $4,104–$4,320. ADUs of 500 sq ft or less pay $0."
+    answer: "$1,792 on 800 sq ft at $2.24 per square foot — Pasadena Unified School District's developer fee schedule (revised July 1, 2025), collected by the City of Pasadena Permit Center. That is the lowest school-fee rate in this series by a wide margin; most cities charge $4,104–$4,304. ADUs of 500 sq ft or less pay $0."
   - question: "Does Pasadena charge impact fees on ADUs?"
     answer: "Yes — Pasadena's Residential Impact Fee applies to ADUs of 750 sq ft or more, charged proportionally to the primary dwelling's square footage (calculated by the Public Works Department). A 2-bedroom ADU on a lot with a 2,000 sq ft house works out to roughly $11,173 using the FY 2026 rate schedule. ADUs under 750 sq ft are exempt. A 7-year affordability covenant or landlord agreement can reduce the fee."
   - question: "Does Pasadena have pre-approved ADU plans?"
@@ -35,7 +35,7 @@ faqs:
 > Cost figures are re-checked against permit records quarterly. Changes are
 > logged in [Corrections](/corrections/).
 
-Pasadena's school fee is $2.24 per square foot. Read that again: **$2.24**. Every other city in this series charges $4.10 to $5.40. On an 800 sq ft ADU, Pasadena Unified takes $1,792 — less than half of what Long Beach ($4,304) or Torrance ($4,304) collect for the same unit. The district simply has not raised its rate in years, and the gap is now the single biggest school-fee spread in our data.
+Pasadena's school fee is $2.24 per square foot. Read that again: **$2.24**. Every other city in this series charges $4.10 to $5.38. On an 800 sq ft ADU, Pasadena Unified takes $1,792 — less than half of what Long Beach ($4,304) or Torrance ($4,304) collect for the same unit. The district simply has not raised its rate in years, and the gap is now the single biggest school-fee spread in our data.
 
 But Pasadena gives with one hand and calculates with the other. Its Residential Impact Fee doesn't come as a flat number — it's **proportional to your primary dwelling's square footage**, computed by the Public Works Department per project. A 2-bedroom ADU behind a 2,000 sq ft house lands around $11,173 at FY 2026 rates. Behind a 1,200 sq ft bungalow, the same ADU costs considerably less in impact fees. No other city in the series ties the ADU fee this directly to the main house.
 
@@ -69,7 +69,7 @@ The city's fee lines are also listed on the [Pasadena fee page](/fees/pasadena/)
 
 ## Why Pasadena stands out
 
-**The $2.24 school fee.** Pasadena Unified's developer fee schedule (revised July 1, 2025) sets residential fees at $2.24/sq ft — against a statewide Level 1 ceiling near $5.17 and series peers at $4.10–$5.40. On 800 sq ft, the spread between Pasadena ($1,792) and Campbell ($4,320) is $2,528 for the same ADU. Districts set their own rates within the state framework; PUSD has simply held its rate flat while others climbed.
+**The $2.24 school fee.** Pasadena Unified's developer fee schedule (revised July 1, 2025) sets residential fees at $2.24/sq ft — against a statewide Level 1 ceiling near $5.17 and series peers at $4.10–$5.38. On 800 sq ft, the spread between Pasadena ($1,792) and Campbell ($4,304) is $2,512 for the same ADU. Districts set their own rates within the state framework; PUSD has simply held its rate flat while others climbed.
 
 **The proportional impact fee.** Most cities charge ADU impact fees as a flat amount or a fixed per-square-foot rate. Pasadena's formula — proportional to the primary dwelling — means two identical ADUs on the same street can owe different impact fees. It also creates a planning lever: the fee shrinks as the ratio of ADU to house shrinks. A 7-year affordability covenant (renting at or below 120% AMI) or a landlord agreement (family or city rental-assistance tenancy) can reduce it further — the first covenant-based ADU fee reduction we've documented in the series.
 

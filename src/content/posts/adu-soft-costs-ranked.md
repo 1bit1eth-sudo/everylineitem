@@ -40,7 +40,7 @@ The definition: permit + plan check + school + impact/DIF + water/sewer. The $14
 
 **8. Riverside — ~$7,000.** The $1,006 permit (series low) and free 800 sq ft pre-approved plan keep paper costs down. One of the cheapest cities to permit, full stop.
 
-**9. Campbell — ~$8,649 (floor\*).** Before sewer and DIF — both carry asterisks (West Valley Sanitation's per-fixture-unit math runs up to ~$7,750; impact-fee rates are unpublished). The series-high school fee ($4,320) is doing most of the lifting here.
+**9. Campbell — ~$8,633 (floor\*).** Before sewer and DIF — both carry asterisks (West Valley Sanitation's per-fixture-unit math runs up to ~$7,750; impact-fee rates are unpublished). The school fee ($4,304, tied at the Level 1 cap) is doing most of the lifting here.
 
 **10. Downey — ~$9,000.**
 

@@ -69,7 +69,7 @@ Burbank is also the first city to write "Accessory Dwelling Unit" as a named lin
 
 ### School district fees: nearly identical
 
-All four cities land within a $184 band — $4,136 to $4,320 on 800 sq ft. This line barely moves the comparison, which is itself a finding: the school fee is the most predictable line in the ledger.
+All four cities land within a $168 band — $4,136 to $4,304 on 800 sq ft. This line barely moves the comparison, which is itself a finding: the school fee is the most predictable line in the ledger.
 
 ### Sewer: the Burbank outlier
 

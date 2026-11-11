@@ -32,6 +32,14 @@ The most valuable messages we get are from contractors and estimators telling us
 
 ## Change log
 
+### 11 November 2026 — Campbell $5.40 citation sweep: nine posts corrected to $5.38 / $4,304
+
+**Changed:** The stale Campbell school-fee figures left over from the 10 November correction are swept from nine posts: $5.40 → **$5.38/sq ft**, $4,320 → **$4,304** on 800 sq ft, and the Pasadena–Campbell spread $2,528 → **$2,512**. Published posts corrected: the school-fee explainer (including "Six districts cluster at the cap" → eight, per the table), the 10-city ranking, the JADU-vs-ADU-vs-garage comparison, the LA County comparison ($184 band → $168), and the Pasadena post. Future-dated posts corrected before publication: the California school-fee ranking (Campbell drops from a unique #28 into the $4,304 tier, now 17–28 with twelve cities; the "only city to break the ceiling" claim is removed), the 20-city ranking, the soft-costs ranking (Campbell ~$8,649 → ~$8,633), and the SB 1117 final checklist. The San Diego County comparison, published the same day, also gets a wording fix: the city-vs-Encinitas swing is $16,500 on the permit counter alone, not $17,400.
+
+**Reason:** Same source as the 10 November correction — Campbell Union ESD $3.77/sq ft (Fee Justification Report, Mar 17, 2026) + Campbell Union HSD $1.61 = $5.38 combined, the Level I cap. No city in the series exceeds the cap.
+
+**Source:** [Campbell Union School District Developer Fees page](https://www.campbellusd.org/developerfees) (Mar 17, 2026 Fee Justification Report); Campbell Union HSD May 7, 2026 report, Table 8.
+
 ### 10 November 2026 — Campbell school fee corrected: $5.40 → $5.38 combined ($4,320 → $4,304)
 
 **Changed:** The Campbell Union School District (K-8) developer fee is **$3.77/sq ft**, not $3.79 — so Campbell's combined school fee on an 800 sq ft ADU is **$4,304 ($5.38/sq ft)**, not $4,320 ($5.40/sq ft). The Campbell post's title, key facts, FAQ, phase table and "Why Campbell stands out" section are corrected, as is the Pasadena–Campbell gap post ($2,528 → $2,512). The "highest school-fee rate in this series" claim is withdrawn: $5.38 is the Level I cap, shared by the whole cap tier. The post total (~$310,000) is unchanged — the $16 difference rounds away; cost per square foot follows the corrected arithmetic, $388 → $387.
