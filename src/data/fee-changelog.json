@@ -2,6 +2,20 @@
   "entries": [
 {
       "date": "2026-11-11",
+      "detail": "City of Clovis Community Sanitation Fee ($552 per unit, Single family lot) verified in the Master Development Fee Schedule 2024-2025 (effective July 21, 2025, p.2; rates effective August 12, 2024), re-read live November 11, 2026 — no newer schedule published. The FY2023-24 AB 602 nexus sheets (Community Sanitation Fee, p.28) rate the fee per dwelling unit (residential service is once a week per dwelling unit with no variation for dwelling size; a unit-based fee is a more direct connection to the service provided than a square-footage basis), and the city ADU Informational Handout (8-16-23) states ADUs under 750 sq ft pay no impact fee and ADUs over 750 sq ft are charged proportionately to the primary dwelling — so the row is verified with dwelling-base proration (800 sq ft ADU at the 1,600 sq ft default primary: $276.00; $0 at 750 sq ft and under). Clovis now has 22 rows (5 verified).",
+      "headline": "Clovis: Community Sanitation Fee verified — $552 per unit, prorated for ADUs over 750 sq ft",
+      "items_added": 0,
+      "jurisdictions": ["Clovis"]
+    },
+{
+      "date": "2026-11-11",
+      "detail": "City of Clovis Library Facilities Impact Fee ($766 per unit, Single family lot) verified in the Master Development Fee Schedule 2024-2025 (effective July 21, 2025, p.2; rates effective August 12, 2024), re-read live November 11, 2026 — no newer schedule published. The FY2023-24 AB 602 nexus sheets (Library Fee, p.32) rate the fee per dwelling unit (a per-home basis is more appropriate than a square-footage basis; the fee captures Clovis's portion of the Fresno County Library fee for the sphere of influence), and the city ADU Informational Handout (8-16-23) states ADUs under 750 sq ft pay no impact fee and ADUs over 750 sq ft are charged proportionately to the primary dwelling — so the row is verified with dwelling-base proration (800 sq ft ADU at the 1,600 sq ft default primary: $383.00; $0 at 750 sq ft and under). The '***' marker on the Library line has no footnote definition in the schedule and does not affect the rate; revisit at the December 2026 DIF program review. Clovis now has 22 rows (4 verified).",
+      "headline": "Clovis: Library Facilities Impact Fee verified — $766 per unit, prorated for ADUs over 750 sq ft",
+      "items_added": 0,
+      "jurisdictions": ["Clovis"]
+    },
+{
+      "date": "2026-11-11",
       "detail": "Campbell $5.40 citation sweep (follow-on to the 10 November Campbell correction): the stale $5.40/sq ft combined rate, $4,320 on 800 sq ft, and $2,528 Pasadena-Campbell spread are corrected to $5.38, $4,304 and $2,512 in nine posts — five already published (school-fee explainer, 10-city ranking, JADU-vs-ADU-vs-garage comparison, LA County comparison, Pasadena post) and four future-dated before publication (California school-fee ranking, 20-city ranking, soft-costs ranking, SB 1117 checklist). In the school-fee ranking Campbell drops from a unique #28 into the $4,304 tier (now 17-28, twelve cities) and the 'only city to break the ceiling' claim is removed; the soft-costs ranking Campbell total moves $8,649 to $8,633. The San Diego County comparison published the same day gets a wording fix: the city-vs-Encinitas swing is $16,500 on the permit counter alone, not $17,400. No fee amounts changed; 691 items (520 verified) after the 26-branch verification merge in the same change.",
       "headline": "Campbell $5.40 citation sweep: nine posts corrected to $5.38 / $4,304",
       "items_added": 0,
