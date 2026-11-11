@@ -41,6 +41,8 @@ This is the fourth regional comparison in the series (after LA County, Orange Co
 
 \*Oceanside's $7,541 is partial — priced from 2018 and 2021 rate tables, with the ADU's fee classification unconfirmed. Full footnotes: [Chula Vista](/posts/chula-vista-adu-cost/) · [Oceanside](/posts/oceanside-adu-cost/) · [San Diego](/posts/san-diego-adu-cost/).
 
+Fee lines for each city, with verification status and source links: [Chula Vista](/fees/chula-vista/) · [Oceanside](/fees/oceanside/) · [City of San Diego](/fees/sd-city/).
+
 The $36,000 spread between Chula Vista and the City of San Diego is the whole argument for checking the jurisdiction, not the zip code.
 
 ## Three philosophies
@@ -69,7 +71,7 @@ Construction phases 2–6 are nearly identical across all three — carried from
 
 ## What changes January 1, 2027
 
-SB 1117's marginal rule — impact fees only on square footage above 750, for a homeowner's first two ADUs — lands differently in each column:
+SB 1117's marginal rule — impact fees only on square footage above 750, for a homeowner's first two ADUs — lands differently in each column. Line-by-line 2026 vs 2027 comparisons: [Chula Vista](/sb-1117/chula-vista/) · [Oceanside](/sb-1117/oceanside/) · [City of San Diego](/sb-1117/sd-city/).
 
 - **City of San Diego:** the ~$5,000–$8,000 cliff collapses toward roughly **$313–$500** — the largest dollar rescue in this ranking. The $16,500 permit bill is untouched: permits are not impact fees.
 - **Chula Vista:** the proportional formula ("proportionally to the primary residence, on a square-footage basis") cannot survive marginal math unchanged — an 800 sq ft ADU would owe on 50 sq ft, not 800. The city has published nothing about implementation yet; the January 2027 review checks for a revised bulletin.
