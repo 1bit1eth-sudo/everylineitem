@@ -13,7 +13,7 @@ faqs:
   - question: "Which California city is cheapest for building an ADU?"
     answer: "Of the ten cities we've published with comparable 800 sq ft detached ADU totals, Long Beach is lowest at $313,000 and San Francisco highest at $325,000 — a $12,000 spread. Santa Maria (~$306,000*) may be lower but carries more unverified items. Rankings shift as we publish more cities; this table updates monthly."
   - question: "Why do ADU costs vary so much between California cities?"
-    answer: "Construction costs (phases 2–6) are similar statewide — the spread lives almost entirely in Phase 1 soft costs: school fees ($1,792–$4,320), impact fees ($0–$11,173), permit fees ($1,006–$19,500), and sewer charges ($0–$7,751). Same ADU, same state, different fee schedules."
+    answer: "Construction costs (phases 2–6) are similar statewide — the spread lives almost entirely in Phase 1 soft costs: school fees ($1,792–$4,304), impact fees ($0–$11,173), permit fees ($1,006–$19,500), and sewer charges ($0–$7,751). Same ADU, same state, different fee schedules."
 ---
 
 > **Published:** 3 Nov 2026 · **Last verified:** 3 Nov 2026 · **Next review:** Dec 2026
@@ -47,7 +47,7 @@ That spread is the entire thesis of this series in one table. Construction costs
 
 **$12,000 is small — and that's the point.** On a $320,000 build, the city-to-city spread is under 4%. Nobody should pick a city for ADU fees alone. But $12,000 is also real money, and it concentrates in lines you can actually plan around:
 
-- **School fees** are the most predictable spread: $1,792 (Pasadena, not yet ranked) to $4,320 (Campbell, not yet ranked). Within this table: $4,104–$4,304. District boundaries, not city boundaries, set this number.
+- **School fees** are the most predictable spread: $1,792 (Pasadena, not yet ranked) to $4,304 (Campbell, not yet ranked). Within this table: $4,104–$4,304. District boundaries, not city boundaries, set this number.
 - **Impact fees** are the most volatile: $0 (Oakland, Sacramento sewer-side) to ~$11,173 (Pasadena proportional). Within this table, Anaheim's ~$10,411 DIF is the high.
 - **Permit fees** are the least predictable: $1,006 (Torrance, series low) to ~$19,500 (San Francisco). Valuation-based cities punish expensive builds; flat-fee cities don't.
 
