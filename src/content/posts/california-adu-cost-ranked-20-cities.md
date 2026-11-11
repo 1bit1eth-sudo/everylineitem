@@ -13,7 +13,7 @@ faqs:
   - question: "Which California city is cheapest for building an ADU?"
     answer: "Among firm totals, Long Beach is lowest at $313,000, now level with Palo Alto (~$313,000) after the FY27 correction. Five cities carry preliminary (*) totals lower still — Salinas (~$300,000*), Fontana (~$305,000*), Santa Maria ($306,000*), Lakewood (~$310,000*), and San Bernardino (~$316,000*) — each with stated assumptions or unverified items. Pasadena (~$310,000) and Campbell (~$318,000) are also marked preliminary by the series' tilde convention, while Palo Alto (~$313,000) reflects the published FY27 correction. At the top, San Francisco ($325,000) and the San Diego outlier ($344,000) anchor the range. Rankings shift as we publish more cities; this table updates monthly."
   - question: "Why do ADU costs vary so much between California cities?"
-    answer: "Construction costs (phases 2–6) are similar statewide — the spread lives almost entirely in Phase 1 soft costs: school fees ($1,792–~$4,320), impact fees ($0–~$11,173), permit fees ($1,006–~$19,500), and sewer charges ($0–~$7,751). Same ADU, same state, different fee schedules."
+    answer: "Construction costs (phases 2–6) are similar statewide — the spread lives almost entirely in Phase 1 soft costs: school fees ($1,792–~$4,304), impact fees ($0–~$11,173), permit fees ($1,006–~$19,500), and sewer charges ($0–~$7,751). Same ADU, same state, different fee schedules."
   - question: "Does the ranking change when new cities are added?"
     answer: "Yes — materially. This edition adds ten cities to the Day 25 top-10 table, and the cheapest firm total is still Long Beach, but preliminary cities now undercut it. New entries, fee-schedule updates, and resolved asterisk items reshuffle the table monthly. The December update re-ranks everything and retires preliminary totals as verifications land."
 ---
@@ -43,7 +43,7 @@ But read the asterisks first. Among the 15 cities with **firm totals**, the spre
 | 11 | Sacramento | **$316,000** | $395 | School $4,104 |
 | 12 | San Bernardino | **~$316,000\*** | $395 | Preliminary — see post |
 | 13 | Torrance | **$317,000** | $396 | DIF $2,243.47 (series low); school $4,304 |
-| 14 | Campbell | **~$318,000** | $398 | School ~$4,320 (candidate series high) |
+| 14 | Campbell | **~$318,000** | $398 | School ~$4,304 |
 | 15 | Fullerton | **$318,000** | $398 | Permit $1,223 (cheapest at publication) |
 | 16 | Anaheim | **$320,000** | $400 | DIF ~$10,411\* (series high) |
 | 17 | Burbank | **$320,000** | $400 | Permit + plan check $3,692 |
@@ -65,7 +65,7 @@ But read the asterisks first. Among the 15 cities with **firm totals**, the spre
 
 **Among firm totals, $12,000 is the story — and it's small.** Under 4% of a $320,000 build. Nobody should pick a city for ADU fees alone. But $12,000 is also real money, and it concentrates in lines you can plan around:
 
-- **School fees** are the most predictable spread: $1,792 (Pasadena) to ~$4,320 (Campbell). District boundaries, not city boundaries, set this number.
+- **School fees** are the most predictable spread: $1,792 (Pasadena) to ~$4,304 (Campbell). District boundaries, not city boundaries, set this number.
 - **Impact fees** are the most volatile: $0 (Salinas, Oceanside, Oakland) to ~$10,411 (Anaheim's DIF).
 - **Permit fees** are the least predictable: $1,006 (Riverside) to ~$19,500 (San Francisco). Valuation-based cities punish expensive builds; flat-fee cities don't.
 - **The DIF waiver trend is accelerating.** Salinas (full waiver), Oceanside, Fremont, Santa Monica — more cities are dropping DIF to $0 for ADUs. This is the single biggest driver of the new low-end entries.
