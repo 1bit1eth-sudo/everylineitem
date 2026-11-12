@@ -282,6 +282,20 @@ const faqSchema = {
       </LinkButton>
     </p>
 
+    {juris.county === "Los Angeles" && juris.juris_id !== "LA-CITY" && (
+      <p class="mt-3 text-sm opacity-70">
+        {juris.name} is one of the cities in Los Angeles County — each city
+        runs its own fee schedule. For the City of Los Angeles itself, see
+        the{" "}
+        <a
+          href="/fees/la-city/"
+          class="text-accent underline decoration-dashed underline-offset-4"
+        >
+          City of Los Angeles fee table &rarr;
+        </a>
+      </p>
+    )}
+
     {verifiedLines.length > 0 || skippedVerifiedLines.length > 0 ? (
       <>
         <div class="mt-6 grid gap-4 sm:grid-cols-3">
