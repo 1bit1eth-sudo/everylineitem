@@ -10,8 +10,8 @@ import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 
 const DIST = path.resolve("dist");
-const WARN_RULES = new Set(["E1", "E2", "E3"]);
-const hits = { E1: [], E2: [], E3: [], E4: [], E5: [], E6: [], E7: [], E8: [] };
+const WARN_RULES = new Set(["E1", "E2", "E3", "E9", "E10"]);
+const hits = { E1: [], E2: [], E3: [], E4: [], E5: [], E6: [], E7: [], E8: [], E9: [], E10: [] };
 const DESC = {
   E1: "Every fee item has an http(s) source_url",
   E2: "Every fee item has a last_verified (checked) date",
@@ -21,6 +21,8 @@ const DESC = {
   E6: "Every page has a non-empty <title>",
   E7: "Every page has a non-empty meta description",
   E8: "Home, fee-index, changes, and the public CSV agree with fees.json (numeric consistency)",
+  E9: "Indexable pages: <title> is 60 characters or fewer",
+  E10: "Indexable pages: meta description is 160 characters or fewer",
 };
 
 const fees = JSON.parse(await readFile("src/data/fees.json", "utf8"));
@@ -61,6 +63,10 @@ for (const file of files) {
   if (!t || !visible(t[1]).trim()) hits.E6.push(rel);
   const d = html.match(/<meta\s+name="description"\s+content="([^"]*)"/i);
   if (!d || !d[1].trim()) hits.E7.push(rel);
+  const noindex = /<meta\s+name="robots"\s+content="[^"]*noindex/i.test(html);
+  const decode = (s) => s.replace(/&amp;/g, "&").replace(/&#39;|&#x27;|&apos;/g, "'").replace(/&quot;/g, '"').replace(/&lt;/g, "<").replace(/&gt;/g, ">");
+  if (!noindex && t && decode(t[1].trim()).length > 60) hits.E9.push(`${rel}: ${decode(t[1].trim()).length} chars`);
+  if (!noindex && d && decode(d[1]).length > 160) hits.E10.push(`${rel}: ${decode(d[1]).length} chars`);
 }
 
 let errors = 0;
