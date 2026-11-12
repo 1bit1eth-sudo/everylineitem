@@ -126,6 +126,8 @@ Most California jurisdictions publish permit records online, including the **dec
 2. Search recent ADU permits within about a mile of your address.
 3. Compare the declared valuation to the phase totals on this page.
 
+For the City of Los Angeles itself, the verified fee lines are on the [City of Los Angeles fee table](/fees/la-city/).
+
 Declared valuations run below contract price — treat them as a floor, not a total. Full detail on [Methodology](/methodology/).
 
 If your local numbers diverge meaningfully from ours, we want to know. See [Corrections](/corrections/).
