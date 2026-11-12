@@ -52,6 +52,8 @@ Southern California site-built context used elsewhere in this series: roughly **
 | **Unincorporated LA County** (and many contract cities on the county system) | [EPIC-LA](https://epicla.lacounty.gov/) | EPIC-LA portal; [LA County Open Data — EPIC-LA Permit Finder](https://data.lacounty.gov/datasets/epic-la-permit-finder) |
 | Other incorporated cities inside the county | That city's building department (sometimes still EPIC-LA) | Local fee schedule PDF + that city's permit portal |
 
+For the City of Los Angeles itself, the verified fee lines — permit, plan check, school, and impact fees, each linked to its official source — are on the [City of Los Angeles fee table](/fees/la-city/).
+
 This matters for **schedule, fee worksheets, and which declared valuations you can search** — not because this hub publishes a second set of City-only or County-only totals. The series medians remain the LA County mid-grade scenarios above. How those figures are anchored to public permit records is spelled out on [Methodology](/methodology/).
 
 Practical difference for a homeowner:
