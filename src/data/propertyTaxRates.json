@@ -1,0 +1,139 @@
+{
+  "counties": [
+    {
+      "county": "Los Angeles",
+      "example_tra": null,
+      "fiscal_year": "2024-25",
+      "rate_label": "County average",
+      "rate_pct": 1.181,
+      "source_url": "https://boe.ca.gov/legdiv/2024-2025/pub306.pdf",
+      "tra_book_label": "LA County Auditor-Controller TRA lookup",
+      "tra_book_url": "https://onlineapps.auditor.lacounty.gov/TRA/"
+    },
+    {
+      "county": "Orange",
+      "example_tra": {
+        "fiscal_year": "2026-27",
+        "place": "Anaheim",
+        "rate_pct": 1.05993,
+        "source_url": "https://ocauditor.gov/wp-content/uploads/2026/09/2026-27-Property-Tax-Rate-Book.pdf",
+        "tra": "01-001"
+      },
+      "fiscal_year": "2024-25",
+      "rate_label": "County average",
+      "rate_pct": 1.064,
+      "source_url": "https://boe.ca.gov/legdiv/2024-2025/pub306.pdf",
+      "tra_book_label": "Orange County 2026-27 Property Tax Rate Book",
+      "tra_book_url": "https://ocauditor.gov/wp-content/uploads/2026/09/2026-27-Property-Tax-Rate-Book.pdf"
+    },
+    {
+      "county": "Santa Clara",
+      "example_tra": {
+        "fiscal_year": "2025-26",
+        "place": "San Jose",
+        "rate_pct": 1.1867,
+        "source_url": "https://files.santaclaracounty.gov/exjcpb1531/2025-11/tax-rate-book-2025-2026.pdf?VersionId=HHMZ1VmGwFXqVvpM36xuptkIcV2V8ctE",
+        "tra": "098-001"
+      },
+      "fiscal_year": "2024-25",
+      "rate_label": "County average",
+      "rate_pct": 1.193,
+      "source_url": "https://boe.ca.gov/legdiv/2024-2025/pub306.pdf",
+      "tra_book_label": "Santa Clara County Compilation of Tax Rates, FY 2025-26",
+      "tra_book_url": "https://files.santaclaracounty.gov/exjcpb1531/2025-11/tax-rate-book-2025-2026.pdf?VersionId=HHMZ1VmGwFXqVvpM36xuptkIcV2V8ctE"
+    },
+    {
+      "county": "San Diego",
+      "example_tra": {
+        "fiscal_year": "2025-26",
+        "place": "City of San Diego",
+        "rate_pct": 1.25114,
+        "source_url": "https://sandiegocounty.gov/content/dam/sdc/auditor/trb2526/trbcomplete.pdf",
+        "tra": "08001"
+      },
+      "fiscal_year": "2024-25",
+      "rate_label": "County average",
+      "rate_pct": 1.171,
+      "source_url": "https://boe.ca.gov/legdiv/2024-2025/pub306.pdf",
+      "tra_book_label": "San Diego County Tax Rate Book, FY 2025-26",
+      "tra_book_url": "https://sandiegocounty.gov/content/dam/sdc/auditor/trb2526/trbcomplete.pdf"
+    },
+    {
+      "county": "San Mateo",
+      "example_tra": {
+        "fiscal_year": "2025-26",
+        "place": "City of San Mateo",
+        "rate_pct": 1.1201,
+        "source_url": "https://www.smcgov.org/media/157077/download?attachment=",
+        "tra": "012-001"
+      },
+      "fiscal_year": "2024-25",
+      "rate_label": "County average",
+      "rate_pct": 1.123,
+      "source_url": "https://boe.ca.gov/legdiv/2024-2025/pub306.pdf",
+      "tra_book_label": "San Mateo County Tax Rates and Valuation, FY 2025-26",
+      "tra_book_url": "https://www.smcgov.org/media/157077/download?attachment="
+    },
+    {
+      "county": "Alameda",
+      "example_tra": null,
+      "fiscal_year": "2024-25",
+      "rate_label": "County average",
+      "rate_pct": 1.22,
+      "source_url": "https://boe.ca.gov/legdiv/2024-2025/pub306.pdf",
+      "tra_book_label": "Alameda County Auditor-Controller property tax page",
+      "tra_book_url": "https://auditor.alamedacountyca.gov/property-tax/"
+    },
+    {
+      "county": "San Bernardino",
+      "example_tra": null,
+      "fiscal_year": "2024-25",
+      "rate_label": "County average",
+      "rate_pct": 1.127,
+      "source_url": "https://boe.ca.gov/legdiv/2024-2025/pub306.pdf",
+      "tra_book_label": null,
+      "tra_book_url": null
+    },
+    {
+      "county": "Riverside",
+      "example_tra": null,
+      "fiscal_year": "2024-25",
+      "rate_label": "County average",
+      "rate_pct": 1.173,
+      "source_url": "https://boe.ca.gov/legdiv/2024-2025/pub306.pdf",
+      "tra_book_label": "Riverside County Board Resolution No. 2025-224",
+      "tra_book_url": "https://media.rivcocob.org/proceeds/2025/p2025_08_26_files/03.05001.pdf"
+    },
+    {
+      "county": "Ventura",
+      "example_tra": {
+        "fiscal_year": "2025-26",
+        "place": "Fillmore",
+        "rate_pct": 1.1473,
+        "source_url": "https://vcportal.venturacounty.gov/auditor/docs/property-tax-reports/tax-rates/2025-2026/TRAs%2001001-01999%20Fillmore.pdf",
+        "tra": "01001"
+      },
+      "fiscal_year": "2024-25",
+      "rate_label": "County average",
+      "rate_pct": 1.116,
+      "source_url": "https://boe.ca.gov/legdiv/2024-2025/pub306.pdf",
+      "tra_book_label": "Ventura County Tax Rate Book, FY 2025-26 (Fillmore)",
+      "tra_book_url": "https://vcportal.venturacounty.gov/auditor/docs/property-tax-reports/tax-rates/2025-2026/TRAs%2001001-01999%20Fillmore.pdf"
+    },
+    {
+      "county": "Monterey",
+      "example_tra": null,
+      "fiscal_year": "2024-25",
+      "rate_label": "County average",
+      "rate_pct": 1.099,
+      "source_url": "https://boe.ca.gov/legdiv/2024-2025/pub306.pdf",
+      "tra_book_label": null,
+      "tra_book_url": null
+    }
+  ],
+  "fiscal_year": "2024-25",
+  "last_verified": "2026-11-13",
+  "note": "County averages are assessment-weighted averages from the BOE Annual Report. Every parcel has its own Tax Rate Area (TRA) rate, which differs from the county average. Representative TRA rates below were read directly from each county's published tax rate book.",
+  "source": "California State Board of Equalization, 2024-25 Annual Report",
+  "source_url": "https://boe.ca.gov/legdiv/2024-2025/pub306.pdf"
+}
