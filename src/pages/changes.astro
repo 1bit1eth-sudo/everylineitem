@@ -13,7 +13,7 @@ const jurisCount = (feesData.jurisdictions as any[]).filter(
   j => j.juris_id !== "LA-BASE"
 ).length;
 const description =
-  `Every fee-schedule change we've verified across ${jurisCount} California jurisdictions — what moved, when, and the source document. Get an email only when your city's fees change.`;
+  `Every fee-schedule change we've verified across ${jurisCount} California jurisdictions — what moved, when, and the source document.`;
 
 const formatDate = (iso: string) => {
   const [y, m, d] = iso.split("-").map(Number);
