@@ -41,6 +41,8 @@ Oxnard is the first coastal city in this series, and its fee profile reads like 
 
 Our six-phase total lands at **$308,000, or $385 per square foot** — a floor, not a total, marked with the asterisk where it appears. The building permit dollar figure could not be derived (the schedule is confirmed; the city's ADU valuation method is not), and the proportional DIF amount is excluded because the base dwelling fees are unpublished. The one fee we can count that other cities leave out: the **$1,705 ADU planning review**. Construction phases 2–6 are carried from the Los Angeles County baseline; Oxnard does not publish phase-level construction costs.
 
+The city's fee lines are also listed on the [Oxnard fee page](/fees/oxnard/), with verification status and source links.
+
 ## The short answer
 
 | 800 sq ft detached ADU · Oxnard · 2026 | Amount |
