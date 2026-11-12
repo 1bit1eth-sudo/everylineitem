@@ -439,4 +439,187 @@ export const POST_SEO: Record<string, PostSeo> = {
     description:
       "Building an ADU triggers a property tax reassessment — but only on the new construction, not your whole house.",
   },
+  // 2026-11-13 [traffic edition, work 7]: scheduled posts (11/13-12/24) whose
+  // fallback title or frontmatter description would exceed 60 / 160 on publish.
+  // Head tags only; H1, card text, frontmatter and body are unchanged.
+  "adu-fire-sprinklers-cost-rules": {
+    title: "ADU Fire Sprinklers in California: Rules and Cost",
+    description:
+      "The two-question sprinkler test for California ADUs: is it new construction, and is the main home sprinklered? CAL FIRE rules and NFPA 13D cost ranges.",
+  },
+  "sb-1117-countdown-48-days": {
+    title: "48 Days Until California Kills the 750 Sq Ft Cliff",
+    description:
+      "SB 1117 rewrites the ADU impact-fee rule on January 1, 2027, 48 days out. A recap of the 750 sq ft cliff, the savings table, and what 48 days means.",
+  },
+  "lancaster-adu-cost": {
+    title: "Lancaster ADU Fees 2026: Permit Fees Not Published",
+    description:
+      "An 800 sq ft detached ADU in Lancaster, phase by phase: $305,000 floor. The permit valuation table isn't public and the DIF table is from 2021.",
+  },
+  "adu-solar-title-24-explained": {
+    title: "Do ADUs Need Solar in California? Title 24, Explained",
+    description:
+      "When Title 24 requires solar on a California ADU (new detached vs conversion vs JADU), the 1.8 kW and solar-access exemptions, and what installers charge.",
+  },
+  "adu-permit-fees-ranked": {
+    title: "ADU Permit Fees Ranked: $1,006 to $19,200, Same 800 Sq Ft",
+    description:
+      "Every building-permit and plan-check figure we have published for an 800 sq ft detached ADU, ranked: Riverside's $1,006 to Oakland's $12,800–$19,200.",
+  },
+  "santa-ana-adu-cost": {
+    title: "Santa Ana ADU Fees 2026: 'Call the Permit Counter'",
+    description:
+      "An 800 sq ft detached ADU in Santa Ana, phase by phase: $308,000. The official FAQ answers permit cost with a phone number; the school fee is $4,304.",
+  },
+  "adu-setbacks-lot-coverage": {
+    title: "ADU Setbacks and Lot Coverage in California",
+    description:
+      "California caps ADU side and rear setbacks at 4 feet (Gov. Code §66321(b)(3)), but lot coverage, FAR, and open space rules still apply. How they interact.",
+  },
+  "sb-1117-explained-plain-english": {
+    title: "What SB 1117 Actually Says (Plain English) | Every Line Item",
+    description:
+      "SB 1117 (Chapter 809), effective Jan 1, 2027: impact fees on the first two ADUs per lot apply only to livable space above 750 sq ft. What it covers.",
+  },
+  "westminster-adu-cost": {
+    title: "Westminster ADU Fees 2026: New Fee Schedule, Unverifiable",
+    description:
+      "An 800 sq ft detached ADU in Westminster, phase by phase: $306,802* floor. The new schedule isn't verifiable online, so key lines say 'verify with city.'",
+  },
+  "adu-parking-rules-2026": {
+    title: "ADU Parking Rules in 2026: When You Don't Need a Space",
+    description:
+      "California bars ADU parking requirements in five cases (Gov. Code §66314(d)(10)-(11)) and caps it at one space per ADU otherwise. The exemptions and traps.",
+  },
+  "california-adu-cost-ranked-20-cities": {
+    title: "20 California Cities Ranked by Total ADU Cost",
+    description:
+      "One identical 800 sq ft ADU in 20 California cities: firm totals from Long Beach ($313,000) to San Francisco ($325,000), with San Diego at $344,000.",
+  },
+  "ontario-adu-cost": {
+    title: "Ontario ADU Fees 2026: Inland Empire's Next Data Point",
+    description:
+      "An 800 sq ft detached ADU in Ontario, phase by phase: $328,000. DIF: $37,595 per dwelling (General City) or $58,576 (Ontario Ranch), prorated for ADUs.",
+  },
+  "adu-owner-occupancy-rules": {
+    title: "ADU Owner-Occupancy Rules: Do You Have to Live There?",
+    description:
+      "For standard California ADUs, no: state law bars owner-occupancy requirements. JADUs are the exception, limited to JADUs sharing a bathroom with the home.",
+  },
+  "sb-1117-should-you-rush-permit": {
+    title: "36 Days to SB 1117: Rush Your Permit Before Jan 1?",
+    description:
+      "SB 1117 takes effect Jan 1, 2027. If your city has a steep 750 sq ft impact-fee cliff, waiting for January's marginal rates could save you five figures.",
+  },
+  "alhambra-adu-cost": {
+    title: "Alhambra ADU Fees 2026: San Gabriel Valley's Fee Profile",
+    description:
+      "An 800 sq ft detached ADU in Alhambra, phase by phase: $316,000. No DIF at all, a $2,000 New Construction Tax, and a $448 vs $7,222 water-meter step-up.",
+  },
+  "hoa-adu-rules-california": {
+    title: "HOAs and ADUs: What Your HOA Can and Can't Block in 2026",
+    description:
+      "California law makes HOA bans on ADUs void and unenforceable (Civil Code 4751). What your HOA can still do (reasonable design rules) and what it can't.",
+  },
+  "adu-school-fees-ranked-california": {
+    title: "California ADU School Fees Ranked: $1,792 to $4,304",
+    description:
+      "Every school district fee we have published for an 800 sq ft ADU, ranked: Pasadena's $1,792 to Campbell's $4,304, set by district lines, not city limits.",
+  },
+  "santa-monica-adu-cost": {
+    title: "Santa Monica ADU Fees 2026: The Coast Is Not Cheap",
+    description:
+      "An 800 sq ft detached ADU in Santa Monica, phase by phase: $305,000 floor. All ADU sizes skip the impact-fee stack; a $3,368 school fee leads soft costs.",
+  },
+  "december-2026-fee-reverification": {
+    title: "December 2026 ADU Fee Re-verification: 23 Cities",
+    description:
+      "Our December 2026 re-verification pass: 23 city fee schedules re-checked against October snapshots and school-fee resolutions re-confirmed. In progress.",
+  },
+  "adu-appraised-value": {
+    title: "Does an ADU Raise Your Home's Appraised Value?",
+    description:
+      "Appraisers use three approaches: sales comparison, income, and cost. How each one treats an ADU, and why construction cost is not appraised value.",
+  },
+  "west-covina-adu-cost": {
+    title: "West Covina ADU Fees 2026: School Fee Depends on Address",
+    description:
+      "An 800 sq ft detached ADU in West Covina, phase by phase: $314,000. Three school districts: your school fee is $3,064 to $4,136, set by your address.",
+  },
+  "selling-house-with-adu": {
+    title: "Selling a House With an ADU: What Changes | Every Line Item",
+    description:
+      "Disclosure rules, the permitted-vs-unpermitted value gap, how a two-ADU lot (AB 956) markets, and who buys ADU homes. A companion to our appraisal guide.",
+  },
+  "adu-soft-costs-ranked": {
+    title: "ADU Soft Costs Ranked: 26 California Cities",
+    description:
+      "Permits, plan check, school, impact, and utility fees for an 800 sq ft ADU across 26 California cities, from Lancaster's $3,000 to Ontario's $26,003.",
+  },
+  "fremont-adu-cost": {
+    title: "Fremont ADU Fees 2026: Zero City Impact Fees, $4,072 Sewer",
+    description:
+      "An 800 sq ft detached ADU in Fremont, phase by phase: $314,000. All five city impact-fee programs exempt ADUs; Union Sanitary's $4,072 sewer charge leads.",
+  },
+  "sb-1117-final-checklist": {
+    title: "25 Days to SB 1117: The Final Checklist | Every Line Item",
+    description:
+      "SB 1117 takes effect January 1, 2027. The checklist: confirm your city's marginal-rate table, lock your school-fee number, and start the utility timeline.",
+  },
+  "estimate-adu-rent": {
+    title: "How to Estimate Your ADU's Rent (Before You Build)",
+    description:
+      "Rent comps for ADUs, not apartments: sampling Craigslist and Zillow, adjusting for utilities and parking, and the 1% rule check. A worked example.",
+  },
+  "1000-sq-ft-adu-cost-california": {
+    title: "1,000 Sq Ft ADU Cost in California (2026)",
+    description:
+      "A 1,000 sq ft detached ADU in California runs roughly $390,000–$420,000 in 2026, about $392,000 on the LA County site where 800 sq ft runs $320,000.",
+  },
+  "encinitas-impact-fees-july-2026": {
+    title: "Encinitas Impact Fees Since July 20, 2026: 800 Sq Ft ADU",
+    description:
+      "Resolution 2026-34 set per-square-foot impact fees in Encinitas from July 20, 2026. Under 750 sq ft pays $0; 800 sq ft owes $16,464 plus 5% admin, or more.",
+  },
+  "milpitas-building-fees-november-2026": {
+    title: "Milpitas ADU Building Fees, Effective November 2, 2026",
+    description:
+      "Milpitas's adopted fees (effective Nov 2, 2026) price ADU plan review and inspection on a tiered table, with an 800 sq ft worked total of $4,584.80.",
+  },
+  "hayward-adu-fees-fy2027": {
+    title: "Hayward FY2027 ADU Fees: Park $3,379, Sewer $5,825",
+    description:
+      "Hayward's adopted FY2026-27 fee schedule (from July 1, 2026): park impact fee $3,812 to $3,379, sewer connection $5,295 to $5,825, ADU review fee $158.",
+  },
+  "can-you-sell-adu-separately-ab-1033": {
+    title: "Can You Sell an ADU Separately? AB 1033 Explained",
+    description:
+      "AB 1033 lets California cities opt in to separate ADU sales: only as condominiums, with every lienholder's consent, and only where an ordinance is adopted.",
+  },
+  "adu-jadu-occupancy-30-day-rental-rule": {
+    title: "ADU and JADU Occupancy Rules: What the Statute Actually Says",
+    description:
+      "California ADU and JADU occupancy rules from the statute text: AB 976, AB 1154's limit on JADU owner-occupancy, and the 30-day rental floor for both.",
+  },
+  "adu-utility-connection-capacity-fees-california": {
+    title: "ADU Utility Connection and Capacity Fees in California",
+    description:
+      "Connection and capacity charges aren't impact fees, so SB 1117 doesn't govern them. Gov. Code section 66311.5 sets a separate test for these charges.",
+  },
+  "adu-preapproved-plans-california": {
+    title: "Pre-Approved ADU Plans in California: What They Save",
+    description:
+      "San José, Oakland, and Pasadena pre-approved ADU plan programs, checked against the cities' own pages, and the site work no pre-approved plan removes.",
+  },
+  "calhfa-adu-grant-program-status": {
+    title: "The CalHFA $40,000 ADU Grant Is Closed: What to Watch",
+    description:
+      "California's $40,000 ADU grant is not open: CalHFA's latest round was fully allocated Dec 28, 2023, and no new round was posted as of Nov 4, 2026.",
+  },
+  "redlands-adu-fees": {
+    title: "Redlands ADU Fees 2026: One Square Foot Costs $6,563",
+    description:
+      "Redlands charges ADU impact fees per square foot — so square foot 751 triggers $6,563 and an 800 sq ft ADU owes $6,991. The full fee autopsy, sourced.",
+  },
 };
