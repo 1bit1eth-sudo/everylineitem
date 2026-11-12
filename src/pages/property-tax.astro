@@ -1,0 +1,749 @@
+---
+import rawFeesJson from "@/data/fees.json";
+import rawTaxRates from "@/data/propertyTaxRates.json";
+import {
+  annualTax,
+  monthlyTax,
+  defaultAddedValue,
+  findCounty,
+  fmtUsd,
+  fmtPct,
+  DEFAULT_SQFT,
+  MIN_SQFT,
+  MAX_SQFT,
+  type PropertyTaxData,
+} from "@/lib/propertyTax";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+
+const title = "ADU Property Tax Calculator | Every Line Item";
+const description =
+  "Estimate the added property tax for a California ADU. Only the new construction is reassessed — pick your county and added value.";
+
+const taxData = rawTaxRates as unknown as PropertyTaxData;
+
+// Jurisdictions for the select, grouped by region like the fee calculator.
+// LA-BASE is an illustrative series baseline, not a real jurisdiction.
+type Juris = { juris_id: string; name: string; county: string; region: string; status: string };
+const jurisdictions = (rawFeesJson as unknown as { jurisdictions: Juris[] })
+  .jurisdictions.filter(j => j.status !== "illustrative");
+const jurisById = new Map(jurisdictions.map(j => [j.juris_id, j]));
+const regions = [...new Set(jurisdictions.map(j => j.region))];
+const regionLabel = (r: string) => (r === "SoCal" ? "Southern California" : r);
+
+const DEFAULT_JURIS = "SAN-JOSE";
+const defaultJuris = jurisById.get(DEFAULT_JURIS)!;
+const defaultCounty = findCounty(taxData, defaultJuris.county)!;
+const defaultValue = defaultAddedValue(DEFAULT_SQFT);
+const defaultAnnual = annualTax(defaultValue, defaultCounty.rate_pct);
+const defaultMonthly = monthlyTax(defaultAnnual);
+
+const MONTHS = [
+  "January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December",
+];
+
+const faqs = [
+  {
+    q: "Does an ADU raise the property tax on my whole house?",
+    a: "No. California reassesses only the new construction, not the whole property. When an ADU is completed, the assessor estimates the increment of market value the ADU added and sets a new base year value for that increment only. The value of the existing property is not affected (BOE, “New Construction”; R&TC §70).",
+  },
+  {
+    q: "Is the added value the same as what the ADU cost to build?",
+    a: "No. The added tax is based on the market-value increment the assessor estimates — and that “will not necessarily be the cost of the new construction.” Construction cost is a planning starting point, not the assessed value.",
+  },
+  {
+    q: "Do solar panels or fire sprinklers add to the assessed value?",
+    a: "No. Active solar energy systems (R&TC §73) and fire systems (R&TC §74) are excluded from assessment. The exclusion for active solar ends January 1, 2027.",
+  },
+  {
+    q: "What is the supplemental assessment in the first year?",
+    a: "New construction also triggers a supplemental assessment (R&TC §75) for the remainder of the fiscal year after completion. California's fiscal year ends June 30, so an ADU completed in October is billed for about 8 months in its first year, on top of the regular annual tax that follows.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map(f => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
+const selectClass =
+  "border-border bg-background focus:border-accent focus:ring-accent w-full rounded-md border px-3 py-2 text-base font-normal focus:ring-1 focus:outline-none";
+const linkClass = "text-accent underline decoration-dashed underline-offset-4";
+---
+
+<Layout title={title} description={description}>
+  <Fragment slot="head">
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={JSON.stringify(faqSchema)}
+    />
+  </Fragment>
+  <Header />
+  <Breadcrumb />
+  <main id="main-content" class="app-layout pb-8">
+    <h1 class="my-4 text-3xl font-bold sm:text-4xl">
+      How Much Extra Property Tax Will an ADU Add?
+    </h1>
+    <p class="text-lg opacity-80">
+      An ADU does not re-tax your whole house. California reassesses only the
+      new construction — the assessor estimates how much market value the ADU
+      added, and that increment is taxed at your parcel's Tax Rate Area (TRA)
+      rate. Pick your city below and this page estimates the added tax.
+    </p>
+    <p class="mt-3 text-sm opacity-70">
+      This is planning math, not an assessment. Only your county assessor
+      sets the added value.
+    </p>
+
+    <section
+      id="property-tax-calculator"
+      class="border-border bg-background mt-8 mb-8 rounded-lg border p-4 sm:p-6"
+      aria-labelledby="property-tax-title"
+    >
+      <div>
+        <h2 id="property-tax-title" class="text-xl font-semibold">
+          ADU property tax calculator
+        </h2>
+        <p class="text-foreground/80 mt-2 text-sm">
+          Pick a jurisdiction and a size. The county rate below is the county
+          average from the Board of Equalization — your parcel's TRA rate will
+          differ. Enter your exact TRA rate from your tax bill if you know it.
+        </p>
+      </div>
+
+      <div class="mt-5 grid gap-5 sm:grid-cols-2">
+        <label class="flex flex-col gap-2 text-sm font-medium">
+          <span>Jurisdiction</span>
+          <input
+            type="search"
+            data-juris-filter="pt-juris"
+            placeholder="Type to filter jurisdictions…"
+            aria-label="Filter jurisdictions"
+            class={selectClass}
+          />
+          <select id="pt-juris" class={selectClass} data-combobox>
+            {
+              regions.map(region => (
+                <optgroup label={regionLabel(region)}>
+                  {jurisdictions
+                    .filter(j => j.region === region)
+                    .sort((a, b) => a.name.localeCompare(b.name, "en-US"))
+                    .map(j => (
+                      <option
+                        value={j.juris_id}
+                        selected={j.juris_id === DEFAULT_JURIS}
+                      >
+                        {j.name}
+                      </option>
+                    ))}
+                </optgroup>
+              ))
+            }
+          </select>
+          <span id="pt-county" class="text-xs font-normal opacity-70">
+            County: {defaultJuris.county}
+          </span>
+        </label>
+
+        <div class="flex flex-col gap-2 text-sm font-medium">
+          <span>
+            ADU size ·{" "}
+            <span id="pt-sqft-val" class="tabular-nums"
+              >{DEFAULT_SQFT.toLocaleString("en-US")} sq ft</span
+            >
+          </span>
+          <div class="relative pt-1 pb-5">
+            <input
+              id="pt-sqft"
+              type="range"
+              min={MIN_SQFT}
+              max={MAX_SQFT}
+              step="1"
+              value={DEFAULT_SQFT}
+              aria-label="ADU size in square feet"
+              class="accent-accent w-full"
+            />
+            <div
+              class="text-foreground/60 flex justify-between text-xs tabular-nums"
+              aria-hidden="true"
+            >
+              <span>{MIN_SQFT}</span>
+              <span>{MAX_SQFT}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-5 grid gap-5 sm:grid-cols-2">
+        <label class="flex flex-col gap-2 text-sm font-medium">
+          <span>
+            Added market value · <span class="text-xs font-normal opacity-70">Modeled</span>
+          </span>
+          <span class="flex items-center gap-1">
+            <span class="text-sm font-normal opacity-70">$</span>
+            <input
+              id="pt-value"
+              type="number"
+              value={defaultValue}
+              min="0"
+              step="1000"
+              aria-label="Added market value in dollars"
+              class={selectClass}
+            />
+          </span>
+          <span class="text-xs font-normal opacity-70">
+            Default is the site's construction-cost total for this size
+            ({fmtUsd(defaultValue)} at {DEFAULT_SQFT} sq ft). Construction
+            cost is not assessed value. The assessor estimates market value
+            added.
+          </span>
+        </label>
+
+        <label class="flex flex-col gap-2 text-sm font-medium">
+          <span>
+            Tax rate · <span id="pt-rate-label" class="text-xs font-normal opacity-70">County average</span>
+          </span>
+          <span class="flex items-center gap-1">
+            <input
+              id="pt-rate"
+              type="number"
+              value={defaultCounty.rate_pct}
+              min="0"
+              max="5"
+              step="0.00001"
+              aria-label="Tax rate in percent"
+              class={selectClass}
+            />
+            <span class="text-sm font-normal opacity-70">%</span>
+          </span>
+          <span id="pt-rate-note" class="text-xs font-normal opacity-70">
+            County average — Your parcel's TRA rate will differ. (BOE 2024-25
+            Annual Report, FY {defaultCounty.fiscal_year}.)
+          </span>
+          <span id="pt-tra-example" class="text-xs font-normal">
+            {
+              defaultCounty.example_tra && (
+                <>
+                  Example TRA: {defaultCounty.example_tra.place}{" "}
+                  {defaultCounty.example_tra.tra} —{" "}
+                  {fmtPct(defaultCounty.example_tra.rate_pct)} (FY{" "}
+                  {defaultCounty.example_tra.fiscal_year}){" "}
+                  <button
+                    id="pt-use-tra"
+                    type="button"
+                    class="text-accent underline decoration-dashed underline-offset-4"
+                  >
+                    Use this rate
+                  </button>
+                </>
+              )
+            }
+          </span>
+        </label>
+      </div>
+
+      <div class="mt-5 grid gap-5 sm:grid-cols-2">
+        <label class="flex flex-col gap-2 text-sm font-medium">
+          <span>Completion month <span class="text-xs font-normal opacity-70">(optional)</span></span>
+          <select id="pt-month" class={selectClass}>
+            <option value="" selected>Not sure yet</option>
+            {
+              MONTHS.map((m, i) => (
+                <option value={i + 1}>{m}</option>
+              ))
+            }
+          </select>
+          <span class="text-xs font-normal opacity-70">
+            Used only for the first-year supplemental assessment (R&amp;TC
+            §75). California's fiscal year ends June 30.
+          </span>
+        </label>
+        <div class="flex flex-col gap-2 text-sm font-medium">
+          <span>Rate book</span>
+          <span id="pt-book" class="text-xs font-normal opacity-80">
+            {
+              defaultCounty.tra_book_url ? (
+                <a
+                  class={linkClass}
+                  href={defaultCounty.tra_book_url}
+                  rel="noopener"
+                >
+                  {defaultCounty.tra_book_label} →
+                </a>
+              ) : (
+                "No single published TRA rate book found for this county."
+              )
+            }
+          </span>
+          <span class="text-xs font-normal opacity-70">
+            Mello-Roos / CFD flat charges are not part of the % rate and are
+            not included here. The $7,000 homeowner's exemption applies once
+            to the whole property — an ADU adds no extra exemption.
+          </span>
+        </div>
+      </div>
+
+      <div id="pt-results" class="mt-6" aria-live="polite">
+        <div class="grid gap-3 sm:grid-cols-3">
+          <div class="border-border rounded-md border p-4">
+            <div class="text-foreground/70 text-xs tracking-wide uppercase">
+              Estimated added tax per year
+            </div>
+            <div id="pt-annual" class="mt-1 text-2xl font-semibold tabular-nums">
+              {fmtUsd(defaultAnnual)}
+            </div>
+            <div id="pt-monthly" class="mt-1 text-sm tabular-nums">
+              {fmtUsd(defaultMonthly)} / month
+            </div>
+          </div>
+          <div class="border-border rounded-md border p-4">
+            <div class="text-foreground/70 text-xs tracking-wide uppercase">
+              First-year supplemental
+            </div>
+            <div id="pt-supplemental" class="mt-1 text-2xl font-semibold tabular-nums">
+              —
+            </div>
+            <div class="mt-1 text-sm">
+              Select a completion month to estimate it.
+            </div>
+          </div>
+          <div class="border-border rounded-md border p-4">
+            <div class="text-foreground/70 text-xs tracking-wide uppercase">
+              Rate used
+            </div>
+            <div id="pt-rate-used" class="mt-1 text-2xl font-semibold tabular-nums">
+              {fmtPct(defaultCounty.rate_pct)}
+            </div>
+            <div id="pt-rate-source" class="mt-1 text-sm">
+              {defaultJuris.county} County average, FY {defaultCounty.fiscal_year}
+            </div>
+          </div>
+        </div>
+        <p id="pt-norate" class="text-foreground/80 mt-3 text-sm" hidden>
+          Enter a tax rate above to see the estimate.
+        </p>
+      </div>
+
+      <p class="text-foreground/80 mt-4 text-sm">
+        This is planning math, not an assessment. Only your county assessor
+        sets the added value.
+      </p>
+    </section>
+
+    <section class="mt-10" aria-labelledby="how-it-works">
+      <h2 id="how-it-works" class="text-2xl font-semibold">How it works</h2>
+      <ol class="mt-3 list-decimal space-y-3 ps-5 text-base">
+        <li>
+          <strong class="font-semibold">Only the new construction is reassessed.</strong>{" "}
+          When an ADU is completed, the assessor estimates the increment of
+          market value the ADU added and sets a new base year value for that
+          increment only: “The value of the existing property is not
+          affected.” (
+          <a
+            class={linkClass}
+            href="https://www.boe.ca.gov/proptaxes/newconstructionproperty.htm"
+            rel="noopener"
+          >
+            BOE, “New Construction”
+          </a>
+          ;{" "}
+          <a
+            class={linkClass}
+            href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&sectionNum=70."
+            rel="noopener"
+          >
+            R&amp;TC §70
+          </a>
+          .)
+        </li>
+        <li>
+          <strong class="font-semibold">The 1% base levy applies, plus voter-approved bonds.</strong>{" "}
+          The total rate is set per Tax Rate Area (TRA), not per county — so
+          two parcels in the same county can pay different rates. The rate
+          above is the county average; your parcel's TRA rate will differ.
+        </li>
+        <li>
+          <strong class="font-semibold">The added value grows slowly.</strong>{" "}
+          Proposition 13 caps annual increases at 2%, so the added base year
+          value compounds at most 2% a year after the first assessment.
+        </li>
+        <li>
+          <strong class="font-semibold">Solar and fire systems are excluded.</strong>{" "}
+          Active solar energy systems (
+          <a
+            class={linkClass}
+            href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&sectionNum=73."
+            rel="noopener"
+          >
+            R&amp;TC §73
+          </a>
+          ) and fire systems (
+          <a
+            class={linkClass}
+            href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&sectionNum=74."
+            rel="noopener"
+          >
+            R&amp;TC §74
+          </a>
+          ) are excluded from assessment. The active solar exclusion ends
+          January 1, 2027.
+        </li>
+        <li>
+          <strong class="font-semibold">The first year has a supplemental bill.</strong>{" "}
+          New construction triggers a supplemental assessment (
+          <a
+            class={linkClass}
+            href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&sectionNum=75."
+            rel="noopener"
+          >
+            R&amp;TC §75
+          </a>
+          ) for the remainder of the fiscal year after completion — on top of
+          the regular annual tax that follows.
+        </li>
+      </ol>
+      <p class="text-foreground/80 mt-4 text-sm">
+        One-time fees are a different bill. The
+        <a class={linkClass} href="/compare/#fee-calculator">
+          ADU fee calculator
+        </a>{" "}
+        estimates the permit and impact fees for the same ADU.
+      </p>
+    </section>
+
+    <section class="mt-10" aria-labelledby="pt-faq">
+      <h2 id="pt-faq" class="text-2xl font-semibold">
+        Frequently asked questions
+      </h2>
+      <div class="mt-4 space-y-5">
+        {
+          faqs.map(f => (
+            <div>
+              <h3 class="text-base font-semibold">{f.q}</h3>
+              <p class="text-foreground/80 mt-1 text-sm">{f.a}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mt-10" aria-labelledby="pt-sources">
+      <h2 id="pt-sources" class="text-2xl font-semibold">Sources</h2>
+      <ul class="mt-3 list-disc space-y-1 ps-5 text-sm">
+        <li>
+          California State Board of Equalization, “New Construction” —{" "}
+          <a
+            class={linkClass}
+            href="https://www.boe.ca.gov/proptaxes/newconstructionproperty.htm"
+            rel="noopener"
+          >
+            boe.ca.gov/proptaxes/newconstructionproperty.htm
+          </a>
+        </li>
+        <li>
+          BOE 2024-25 Annual Report — county average tax rates, FY 2024-25 —{" "}
+          <a
+            class={linkClass}
+            href="https://boe.ca.gov/legdiv/2024-2025/pub306.pdf"
+            rel="noopener"
+          >
+            boe.ca.gov/legdiv/2024-2025/pub306.pdf
+          </a>
+        </li>
+        <li>
+          County tax rate books (representative TRA rates) —{" "}
+          <a
+            class={linkClass}
+            href="https://ocauditor.gov/wp-content/uploads/2026/09/2026-27-Property-Tax-Rate-Book.pdf"
+            rel="noopener"
+          >
+            Orange
+          </a>
+          ,{" "}
+          <a
+            class={linkClass}
+            href="https://files.santaclaracounty.gov/exjcpb1531/2025-11/tax-rate-book-2025-2026.pdf?VersionId=HHMZ1VmGwFXqVvpM36xuptkIcV2V8ctE"
+            rel="noopener"
+          >
+            Santa Clara
+          </a>
+          ,{" "}
+          <a
+            class={linkClass}
+            href="https://sandiegocounty.gov/content/dam/sdc/auditor/trb2526/trbcomplete.pdf"
+            rel="noopener"
+          >
+            San Diego
+          </a>
+          ,{" "}
+          <a
+            class={linkClass}
+            href="https://www.smcgov.org/media/157077/download?attachment="
+            rel="noopener"
+          >
+            San Mateo
+          </a>
+          ,{" "}
+          <a
+            class={linkClass}
+            href="https://vcportal.venturacounty.gov/auditor/docs/property-tax-reports/tax-rates/2025-2026/TRAs%2001001-01999%20Fillmore.pdf"
+            rel="noopener"
+          >
+            Ventura
+          </a>
+        </li>
+        <li>
+          Revenue and Taxation Code —{" "}
+          <a
+            class={linkClass}
+            href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&sectionNum=70."
+            rel="noopener"
+          >
+            §70
+          </a>
+          ,{" "}
+          <a
+            class={linkClass}
+            href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&sectionNum=71."
+            rel="noopener"
+          >
+            §71
+          </a>
+          ,{" "}
+          <a
+            class={linkClass}
+            href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&sectionNum=73."
+            rel="noopener"
+          >
+            §73
+          </a>
+          ,{" "}
+          <a
+            class={linkClass}
+            href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&sectionNum=75."
+            rel="noopener"
+          >
+            §75
+          </a>
+        </li>
+      </ul>
+      <p class="text-foreground/70 mt-3 text-sm">
+        Rates verified 13 Nov 2026. County averages are from the BOE Annual
+        Report and are re-checked when the BOE publishes a new edition.
+      </p>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<script
+  id="pt-rates"
+  type="application/json"
+  is:inline
+  set:html={JSON.stringify(taxData)}
+/>
+<script
+  id="pt-juris"
+  type="application/json"
+  is:inline
+  set:html={JSON.stringify(jurisdictions.map(j => ({ id: j.juris_id, county: j.county })))}
+/>
+
+<script>
+  import {
+    annualTax,
+    monthlyTax,
+    supplementalMonths,
+    supplementalTax,
+    defaultAddedValue,
+    findCounty,
+    fmtUsd,
+    fmtPct,
+  } from "../lib/propertyTax";
+
+  const ratesEl = document.getElementById("pt-rates");
+  const taxData = JSON.parse(ratesEl ? ratesEl.textContent || "{}" : "{}");
+  const jurisEl = document.getElementById("pt-juris");
+  const jurisList = JSON.parse(jurisEl ? jurisEl.textContent || "[]" : "[]");
+  const countyByJuris = new Map<string, string>(
+    jurisList.map((j: { id: string; county: string }) => [j.id, j.county] as [string, string])
+  );
+
+  const jurisSel = document.getElementById("pt-juris") as HTMLSelectElement | null;
+  const sqftInput = document.getElementById("pt-sqft") as HTMLInputElement | null;
+  const sqftVal = document.getElementById("pt-sqft-val");
+  const valueInput = document.getElementById("pt-value") as HTMLInputElement | null;
+  const rateInput = document.getElementById("pt-rate") as HTMLInputElement | null;
+  const rateLabel = document.getElementById("pt-rate-label");
+  const rateNote = document.getElementById("pt-rate-note");
+  const traExample = document.getElementById("pt-tra-example");
+  const countyEl = document.getElementById("pt-county");
+  const bookEl = document.getElementById("pt-book");
+  const monthSel = document.getElementById("pt-month") as HTMLSelectElement | null;
+  const annualEl = document.getElementById("pt-annual");
+  const monthlyEl = document.getElementById("pt-monthly");
+  const suppEl = document.getElementById("pt-supplemental");
+  const rateUsedEl = document.getElementById("pt-rate-used");
+  const rateSourceEl = document.getElementById("pt-rate-source");
+  const noRateEl = document.getElementById("pt-norate");
+
+  let valueTouched = false;
+
+  function currentCounty() {
+    if (!jurisSel) return "";
+    return countyByJuris.get(jurisSel.value) ?? "";
+  }
+
+  function currentRateData() {
+    const county = currentCounty();
+    return county ? findCounty(taxData, county) : null;
+  }
+
+  function parseRate(): number | null {
+    if (!rateInput) return null;
+    const n = Number(rateInput.value);
+    return Number.isFinite(n) && n > 0 && n <= 5 ? n : null;
+  }
+
+  function parseValue(): number {
+    if (!valueInput) return 0;
+    const n = Math.round(Number(valueInput.value));
+    return Number.isFinite(n) && n > 0 ? n : 0;
+  }
+
+  function syncCountyUI() {
+    const county = currentCounty();
+    const data = currentRateData();
+    if (countyEl) countyEl.textContent = `County: ${county || "—"}`;
+    if (rateLabel) rateLabel.textContent = data ? "County average" : "Your TRA rate";
+    if (rateNote) {
+      rateNote.textContent = data
+        ? `County average — Your parcel's TRA rate will differ. (BOE 2024-25 Annual Report, FY ${data.fiscal_year}.)`
+        : "County average not yet verified — enter your TRA rate. Find it on your tax bill or the county's rate book.";
+    }
+    if (rateInput) {
+      rateInput.value = data ? String(data.rate_pct) : "";
+      rateInput.placeholder = data ? "" : "e.g. 1.18";
+    }
+    if (traExample) {
+      const ex = data?.example_tra;
+      traExample.innerHTML = ex
+        ? `Example TRA: ${ex.place} ${ex.tra} — ${fmtPct(ex.rate_pct)} (FY ${ex.fiscal_year}) <button id="pt-use-tra" type="button" class="text-accent underline decoration-dashed underline-offset-4">Use this rate</button>`
+        : "";
+    }
+    if (bookEl) {
+      if (data?.tra_book_url) {
+        const a = document.createElement("a");
+        a.className = "text-accent underline decoration-dashed underline-offset-4";
+        a.href = data.tra_book_url;
+        a.rel = "noopener";
+        a.textContent = `${data.tra_book_label} →`;
+        bookEl.replaceChildren(a);
+      } else {
+        bookEl.textContent = "No single published TRA rate book found for this county.";
+      }
+    }
+  }
+
+  function rateSourceLabel(rate: number): string {
+    const county = currentCounty();
+    const data = currentRateData();
+    if (!data) return "Your TRA rate (entered)";
+    if (rate === data.rate_pct) return `${county} County average, FY ${data.fiscal_year}`;
+    const ex = data.example_tra;
+    if (ex && rate === ex.rate_pct)
+      return `Example TRA: ${ex.place} ${ex.tra}, FY ${ex.fiscal_year}`;
+    return "Your TRA rate (entered)";
+  }
+
+  function update() {
+    if (!sqftInput) return;
+    const sqft = Number(sqftInput.value);
+    if (sqftVal) sqftVal.textContent = `${sqft.toLocaleString("en-US")} sq ft`;
+    const value = parseValue();
+    const rate = parseRate();
+    if (rate === null || value <= 0) {
+      if (annualEl) annualEl.textContent = "—";
+      if (monthlyEl) monthlyEl.textContent = "—";
+      if (suppEl) suppEl.textContent = "—";
+      if (rateUsedEl) rateUsedEl.textContent = "—";
+      if (rateSourceEl) rateSourceEl.textContent = "";
+      if (noRateEl) noRateEl.hidden = false;
+      return;
+    }
+    if (noRateEl) noRateEl.hidden = true;
+    const annual = annualTax(value, rate);
+    if (annualEl) annualEl.textContent = fmtUsd(annual);
+    if (monthlyEl) monthlyEl.textContent = `${fmtUsd(monthlyTax(annual))} / month`;
+    const month = monthSel ? Number(monthSel.value) : NaN;
+    if (suppEl) {
+      if (Number.isInteger(month) && month >= 1 && month <= 12) {
+        const months = supplementalMonths(month);
+        const supp = supplementalTax(annual, month);
+        suppEl.textContent = months === 0 ? "$0" : fmtUsd(supp);
+        const hint = suppEl.parentElement?.querySelector(".text-sm");
+        if (hint) {
+          hint.textContent =
+            months === 0
+              ? "Completed in June — no months remain in the fiscal year."
+              : `For the ${months} month${months === 1 ? "" : "s"} left in the fiscal year after completion.`;
+        }
+      } else {
+        suppEl.textContent = "—";
+        const hint = suppEl.parentElement?.querySelector(".text-sm");
+        if (hint) hint.textContent = "Select a completion month to estimate it.";
+      }
+    }
+    if (rateUsedEl) rateUsedEl.textContent = fmtPct(rate);
+    if (rateSourceEl) rateSourceEl.textContent = rateSourceLabel(rate);
+  }
+
+  function onJurisdictionChange() {
+    syncCountyUI();
+    update();
+  }
+
+  if (jurisSel) jurisSel.addEventListener("change", onJurisdictionChange);
+  if (sqftInput) {
+    sqftInput.addEventListener("input", () => {
+      if (!valueTouched && valueInput) {
+        valueInput.value = String(defaultAddedValue(Number(sqftInput.value)));
+      }
+      update();
+    });
+  }
+  if (valueInput) {
+    valueInput.addEventListener("input", () => {
+      valueTouched = true;
+      update();
+    });
+  }
+  if (rateInput) rateInput.addEventListener("input", update);
+  if (monthSel) monthSel.addEventListener("change", update);
+  if (traExample) {
+    traExample.addEventListener("click", e => {
+      const t = e.target as HTMLElement | null;
+      if (t && t.id === "pt-use-tra") {
+        const ex = currentRateData()?.example_tra;
+        if (ex && rateInput) {
+          rateInput.value = String(ex.rate_pct);
+          update();
+        }
+      }
+    });
+  }
+
+  update();
+</script>
+
+<script is:inline src="/scripts/juris-filter.js"></script>
+<script is:inline src="/scripts/juris-combobox.js"></script>
