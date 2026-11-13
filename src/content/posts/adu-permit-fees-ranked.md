@@ -6,7 +6,7 @@ author: "Every Line Item"
 tags: ["adu cost", "permit fees", "ranking", "california", "2026"]
 draft: false
 verifiedPublished: "17 Nov 2026"
-lastVerified: "9 Oct 2026"
+lastVerified: "13 Nov 2026"
 nextReview: "Jan 2027"
 faqs:
   - question: "Which California city has the cheapest ADU building permit?"
@@ -14,11 +14,11 @@ faqs:
   - question: "Which California city has the most expensive ADU building permit?"
     answer: "Oakland, at $12,800–$19,200 — a valuation-based permit at 4–6% of assumed construction value, the series high by a wide margin. The range reflects the valuation band, not uncertainty in the rate. Note: Oakland charges $0 in impact fees on ADUs, so the permit carries what other cities spread across impact-fee lines."
   - question: "Why do most figures in this ranking have asterisks?"
-    answer: "The asterisk marks any figure that is partial, estimated, assumption-based, or priced from older rate tables — as each city's own post states. Examples: Oceanside's ~$7,541 uses 2018/2021 rate tables; Anaheim's $1,672 and Burbank's $3,692 are modeled from valuation schedules; Glendale's ≈$8,550 and Pasadena's $7,000–$13,000 are ranges. Unasterisked figures (Riverside, Fontana, Chula Vista, Oakland, Long Beach, Salinas) are taken directly from published fee schedules."
+    answer: "The asterisk marks any figure that is partial, estimated, assumption-based, or priced from older rate tables — as each city's own post states. Examples: Anaheim's $1,672 and Burbank's $3,692 are modeled from valuation schedules; Glendale's ≈$8,550 and Pasadena's $7,000–$13,000 are ranges. Unasterisked figures (Riverside, Fontana, Chula Vista, Oakland, Long Beach, Salinas, Oceanside) are taken directly from published fee schedules — Oceanside's $5,378 is plan check $1,862.70 + inspection $3,515.40 from the city's FY 2026-27 fee schedule, with 12% in surcharges charged at the counter on top."
   - question: "Does SB 1117 change building permit fees?"
     answer: "No. SB 1117 (effective January 1, 2027) changes only impact fees — narrowing them to square footage above 750 for a homeowner's first two ADUs. Building permit fees, plan check fees, and taxes are not impact fees under the statute and are unaffected. Every figure in this ranking stands as published regardless of the new law."
 ---
-> **Published:** 17 Nov 2026 · **Last verified:** 9 Oct 2026 · **Next review:** Jan 2027
+> **Published:** 17 Nov 2026 · **Last verified:** 13 Nov 2026 · **Next review:** Jan 2027
 > Cost figures are re-checked against permit records quarterly. Changes are
 > logged in [Corrections](/corrections/).
 
@@ -42,10 +42,10 @@ Every figure below is taken from that city's published post (keyFacts), for an 8
 | 8 | [Campbell](/posts/campbell-adu-cost/) | **~$3,929\*** | Valuation schedule, estimated |
 | 9 | [Chula Vista](/posts/chula-vista-adu-cost/) | **$3,951** | **Flat — no valuation math** |
 | 10 | [Garden Grove](/posts/garden-grove-adu-cost/) | **~$5,176\*** | Valuation schedule, estimated |
-| 11 | [Palo Alto](/posts/palo-alto-adu-cost/) | **~$5,790\*** | 1.76% of valuation, estimated |
-| 12 | [Salinas](/posts/salinas-adu-cost/) | **~$6,226** | Published schedule |
-| 13 | [Pasadena](/posts/pasadena-adu-cost/) | **$7,000–$13,000\*** | Valuation-based range |
-| 14 | [Oceanside](/posts/oceanside-adu-cost/) | **~$7,541\*** | Sq-ft-based; partial (2018/2021 tables) |
+| 11 | [Oceanside](/posts/oceanside-adu-cost/) | **$5,378** | Sq-ft-based; FY 2026-27 schedule |
+| 12 | [Palo Alto](/posts/palo-alto-adu-cost/) | **~$5,790\*** | 1.76% of valuation, estimated |
+| 13 | [Salinas](/posts/salinas-adu-cost/) | **~$6,226** | Published schedule |
+| 14 | [Pasadena](/posts/pasadena-adu-cost/) | **$7,000–$13,000\*** | Valuation-based range |
 | 15 | [Glendale](/posts/glendale-adu-cost/) | **≈ $8,550\*** | Valuation schedule, estimated |
 | 16 | [Oakland](/posts/oakland-adu-cost/) | **$12,800–$19,200** | **4–6% of valuation** |
 
@@ -55,7 +55,7 @@ Four pricing philosophies run the table. **Flat schedules** (Riverside, Chula Vi
 
 **1. The pricing model matters more than the city.** The three cheapest permits include two flat schedules; the five most expensive are all valuation-based. A city does not need high fees to land at the top — it needs a valuation schedule that assumes an expensive build and a high percentage. Oakland's 4–6% is the extreme: on a $320,000 assumed valuation, 6% is $19,200 before a single impact fee is charged.
 
-**2. Most of this table is asterisked — and that is the point.** Eleven of sixteen figures carry a \*. The asterisk is not a shrug; it is the site's honesty mechanism. Oceanside's ~$7,541 is the table's own math from 2018 and 2021 rate tables with the ADU's fee classification unconfirmed. Anaheim's $1,672 and Burbank's $3,692 are modeled from valuation schedules the cities publish but do not pre-compute for ADUs. Each city's post documents exactly what its asterisk means. Read the asterisk before you read the number.
+**2. Most of this table is asterisked — and that is the point.** Nine of sixteen figures carry a \*. The asterisk is not a shrug; it is the site's honesty mechanism. Oceanside's $5,378 carries none: it is plan check $1,862.70 + inspection $3,515.40 straight from the city's FY 2026-27 fee schedule, with the detached ADU confirmed as new single-family construction — the old ~$7,541 figure, built from 2018 and 2021 tables with fire and water review added, is retired. (Twelve percent in surcharges still applies at Oceanside's counter, on top of the $5,378.) Anaheim's $1,672 and Burbank's $3,692 are modeled from valuation schedules the cities publish but do not pre-compute for ADUs. Each city's post documents exactly what its asterisk means. Read the asterisk before you read the number.
 
 **3. Riverside owns the bottom — twice.** $1,006 is the series low (Fullerton's $1,223 held the record before Riverside's research), and Torrance merely ties its starting point. Riverside pairs the cheap permit with an 800 sq ft free pre-approved plan — the first city whose free plan matches our standard post size exactly, meaning both the design line and the permit line shrink at once.
 
