@@ -3,7 +3,7 @@ title: Privacy Policy
 description: How Every Line Item collects, uses, and does not sell personal information.
 ---
 
-**Last updated:** 6 November 2026
+**Last updated:** 14 November 2026
 
 This page explains what Every Line Item (`everylineitem.com`) collects and what we do with it. Short version: we collect as little as we can, we do not sell your information to contractors, and you can unsubscribe or ask us to delete what we hold.
 
@@ -15,7 +15,7 @@ Every Line Item publishes line-item cost breakdowns for California ADU and resid
 
 ### Email (benchmark sheet and fee-change alerts)
 
-If you subscribe on [Benchmarks](/benchmarks/), we collect the email address you submit so we can send the quarterly benchmark CSV and related updates. If you sign up for fee-change alerts (on the homepage or a fee page), we collect the email address you submit and the jurisdiction you choose, so we can email you when that jurisdiction's fees change. Alerts are sent by hand when our researchers re-verify a jurisdiction, not by automation, and carry no newsletter and no sales content. Email delivery is handled by **Buttondown**. You can unsubscribe from any email we send, or ask us to remove your address.
+If you subscribe on [Benchmarks](/benchmarks/), we collect the email address you submit so we can send the quarterly benchmark CSV and related updates. If you sign up for fee-change alerts (on the homepage, [Fee Index](/fee-index/), or [Changes](/changes/)), we collect the email address you submit and the jurisdiction you choose, so we can email you when that jurisdiction's fees change. Alerts are sent by hand when our researchers re-verify a jurisdiction, not by automation, and carry no newsletter and no sales content. Email delivery is handled by **Buttondown**. You can unsubscribe from any email we send, or ask us to remove your address.
 
 The blank [six-phase worksheet](/worksheet/) does **not** require an email.
 
@@ -41,7 +41,7 @@ See also [About](/about/) for how the site intends to make money (display ads, s
 
 ## How we use information
 
-- Deliver the benchmark sheet, fee-change alerts, and newsletter-style updates you opted into
+- Deliver the benchmark sheet and fee-change alerts you opted into
 - Respond to corrections and support email
 - Keep the site secure and working
 
@@ -53,7 +53,11 @@ We may disclose information if required by law or to protect the site against ab
 
 ## Display advertising
 
-This site is configured for display advertising through **Google AdSense** (publisher ID `pub-9855716660139171`). Ads will appear once the AdSense account for this site is approved; until then, no advertising is served. Google's use of advertising cookies enables it and its partners to serve ads to you based on your visit to this site and/or other sites on the Internet. Google may use cookies or similar technologies to serve, personalize, and measure these ads. You can opt out of personalized advertising in [Google Ads Settings](https://www.google.com/settings/ads) and read how Google uses data from partner sites at [policies.google.com/technologies/partner-sites](https://policies.google.com/technologies/partner-sites). You can also limit many ad cookies through your browser settings and industry opt-out tools such as [aboutads.info/choices](https://www.aboutads.info/choices/), [optout.aboutads.info](https://optout.aboutads.info/) and [the Network Advertising Initiative opt-out](https://optout.networkadvertising.org/). This site itself does not set advertising cookies; any such cookies are set by Google or its advertising partners when ads are displayed.
+This site is configured for display advertising through **Google AdSense** (publisher ID `pub-9855716660139171`). Ads will appear once the AdSense account for this site is approved; until then, no advertising is served. Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to this site or other websites. Google's use of advertising cookies enables it and its partners to serve advertisements to you based on your visit to this site and/or other sites on the Internet. Google may use cookies or similar technologies to serve, personalize, and measure these ads. You can opt out of personalized advertising in [Google Ads Settings](https://adssettings.google.com/) and read how Google uses data from partner sites at [policies.google.com/technologies/partner-sites](https://policies.google.com/technologies/partner-sites). You can also limit many ad cookies through your browser settings and industry opt-out tools such as [aboutads.info/choices](https://www.aboutads.info/choices/), [optout.aboutads.info](https://optout.aboutads.info/) and [the Network Advertising Initiative opt-out](https://optout.networkadvertising.org/). This site itself does not set advertising cookies; any such cookies are set by Google or its advertising partners when ads are displayed.
+
+## Affiliate links
+
+This site has no affiliate links today. If an affiliate link is added in the future, it will be disclosed on the page where it appears, and our editorial selection of fee figures is conducted independently of any commercial partnership.
 
 Essential cookies or local storage may still be used for basic site functions (for example remembering light/dark theme).
 
@@ -68,6 +72,10 @@ Essential cookies or local storage may still be used for basic site functions (f
 If you are a California resident, you have the right to know what personal information we collect and why, to request deletion of your personal information, and to opt out of the sale or sharing of your personal information. We do not sell your personal information. Advertising cookies, when ads are served, are described under Display advertising above, and you can limit them with the opt-out tools listed there. To exercise any of these rights, email [corrections@everylineitem.com](mailto:corrections@everylineitem.com) with the subject "Privacy request". We verify requests by replying to the address they came from and respond within the period required by law.
 
 The data controller for this site is **Every Line Item**, reachable at the email address above.
+
+## Visitors from the European Economic Area and the UK (GDPR)
+
+If you access this site from the European Economic Area or the UK, you may request access to, rectification of, or erasure of your personal data by emailing [corrections@everylineitem.com](mailto:corrections@everylineitem.com). This site has no cookie-consent banner and no Consent Management Platform; you can manage or disable cookies in your browser settings, as described under Your choices above.
 
 ## Retention
 
