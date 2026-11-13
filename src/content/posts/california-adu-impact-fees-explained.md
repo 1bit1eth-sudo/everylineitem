@@ -60,7 +60,7 @@ The law sets the threshold. Each city sets the price of crossing it. These figur
 | City | At 749 sq ft | At 800 sq ft | How the fee works |
 | --- | --- | --- | --- |
 | Torrance | $0 | **$2,243.47** flat | A single schedule line: "ADU 750 SF or greater" |
-| Sacramento | $0 | **~$5,728** city impact fees | The city's own free plans are drawn at 747 sq ft for a reason |
+| Sacramento | $0 | **~$5,347** city impact fees | The city's own free plans are drawn at 747 sq ft for a reason |
 | Glendale | $0 | **up to $4,700** | The "50 sq ft cliff" — 749 pays nothing, 800 pays the schedule maximum |
 | Fullerton | $0 | **~$6,411** pro-rata | Development impact fee on the full 800, scaled to the house |
 | Palo Alto | $0 | **~$8,000–$20,000** | The steepest per-foot cliff: parks fee near $18.65 per sq ft before proportionality |
