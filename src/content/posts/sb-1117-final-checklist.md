@@ -55,7 +55,7 @@ The action: file the utility hookup request as early as your utility allows — 
 
 The decision most readers face: pull the permit in December under the old math, or wait for January's marginal math? The framework ([full analysis here](/posts/sb-1117-should-you-rush-permit/)):
 
-- **Estimate your cliff height.** Our city-by-city arithmetic: Palo Alto ~$7,500–$18,750, Anaheim ~$9,750, Fullerton ~$6,000, Sacramento ~$5,370, Glendale ~$4,400, Riverside ~$1,390. In Salinas and Oakland, $0 — there was never a cliff. Torrance's flat fee: unconfirmed.
+- **Estimate your cliff height.** Our city-by-city arithmetic: Palo Alto ~$7,500–$18,750, Anaheim ~$9,750, Fullerton ~$6,000, Sacramento ~$5,013, Glendale ~$4,400, Riverside ~$1,390. In Salinas and Oakland, $0 — there was never a cliff. Torrance's flat fee: unconfirmed.
 - **Price the delay.** Two months of waiting carry construction inflation, financing carry on land or pre-development costs, and the risk that your city's 2027 fee schedule moves other lines against you.
 - **Remember the rule.** Permits pulled in 2026 are assessed under 2026 rules. There is no retroactive marginal treatment.
 
