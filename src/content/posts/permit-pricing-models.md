@@ -1,24 +1,24 @@
 ---
 title: "Valuation vs Flat vs Per-Sq-Ft: How Cities Actually Price Your ADU Permit"
-description: "Three permit pricing models across California cities — valuation-based (Pasadena, Campbell), flat-fee (Fontana $3,195, Chula Vista $3,951), and per-square-foot (Oceanside ~$7,541). How to read any fee schedule before you apply."
+description: "Three permit pricing models across California cities — valuation-based (Pasadena, Campbell), flat-fee (Fontana $3,195, Chula Vista $3,951), and per-square-foot (Oceanside $5,378). How to read any fee schedule before you apply."
 pubDatetime: 2026-10-20T01:00:00Z
 author: "Every Line Item"
 tags: ["adu cost", "permit fees", "guide", "california", "2026"]
 draft: false
 verifiedPublished: "20 Oct 2026"
-lastVerified: "20 Oct 2026"
+lastVerified: "13 Nov 2026"
 nextReview: "Jan 2027"
 ogImage: "https://everylineitem.com/images/pinterest/permit-pricing-models.png"
 faqs:
   - question: "How is an ADU building permit fee calculated in California?"
-    answer: "Three models exist. Valuation-based cities (Pasadena, Campbell) charge a percentage of your declared construction cost — Campbell charges 2.00% on the first $500,000 of valuation plus 33% of that for plan check. Flat-fee cities (Fontana $3,195; Chula Vista $3,951 for detached ADUs using standard plans) charge one number regardless of cost. Per-square-foot cities (Oceanside, ~$7,541 on 800 sq ft) charge by area. The model matters more than the rate: a valuation-based permit punishes expensive finishes, a flat fee rewards them."
+    answer: "Three models exist. Valuation-based cities (Pasadena, Campbell) charge a percentage of your declared construction cost — Campbell charges 2.00% on the first $500,000 of valuation plus 33% of that for plan check. Flat-fee cities (Fontana $3,195; Chula Vista $3,951 for detached ADUs using standard plans) charge one number regardless of cost. Per-square-foot cities (Oceanside, $5,378 on 800 sq ft) charge by area. The model matters more than the rate: a valuation-based permit punishes expensive finishes, a flat fee rewards them."
   - question: "Which California city has the cheapest ADU permit?"
     answer: "Of the cities in our series, Riverside at $1,006 (verified from the city's fee schedule) is the lowest we have published. Fontana's $3,195 flat fee and Chula Vista's $3,951 ADU-only flat fee are the most predictable — you know the number before you design anything."
   - question: "What is plan check and is it included in the permit fee?"
     answer: "Plan check is the city's engineering review of your drawings, and it is usually a separate line item — often 33–65% of the base permit fee. Campbell charges plan check at 33% of the permit fee. Some cities bundle it (Chula Vista's $3,951 includes intake, plan check, and inspection). Always ask whether a quoted permit number includes plan check or not."
 ---
 
-> **Published:** 20 Oct 2026 · **Last verified:** 20 Oct 2026 · **Next review:** Jan 2027
+> **Published:** 20 Oct 2026 · **Last verified:** 13 Nov 2026 · **Next review:** Jan 2027
 
 Every California city charges you for the same building permit. Almost none of them calculate it the same way.
 
@@ -63,19 +63,18 @@ An 800 sq ft detached ADU on Chula Vista's standard plans costs **$3,951** all-i
 
 ## Model 3: Per-square-foot — pay by the area
 
-**Cities:** Oceanside (~$7,541 on 800 sq ft)
+**Cities:** Oceanside ($5,378 on 800 sq ft)
 
-> **Editor's note (21 Oct 2026):** The Oceanside figures in this section are **under review**. They rest on 2018/2021-vintage rate tables — the city publishes no current FY rate table — and our [Oceanside breakdown](/posts/oceanside-adu-cost/) documents a separate open conflict between the city's ADU impact-fee exemption ordinance and an August 2025 draft fee study. Treat the ~$7,541 as a partial, dated figure until the review completes.
+> **Update (13 Nov 2026):** The review flagged here is closed. The city's FY 2026-27 Building Division Fee Schedule (Resolution 18-R0079-1) prices a detached ADU as new single-family construction: plan check $1,862.70 + inspection $3,515.40 = **$5,378**. Fire and water review fees from the 2018/2021 tables are not in the current schedule — unconfirmed, not $0 — and 12% in surcharges applies at the counter on top of the $5,378. The separate impact-fee question (ordinance $0 vs. the August 2025 draft study) is still open; our [Oceanside breakdown](/posts/oceanside-adu-cost/) carries it.
 
-**Oceanside** uses area-based plan check and inspection tables for new residential construction. On the "Custom or Model Homes" row at 1,000 sq ft (the bracket covering 800 sq ft):
+**Oceanside** uses area-based plan check and inspection tables for new residential construction. On the "Custom or Model Homes" row at 1,000 sq ft (the bracket covering 800 sq ft), per the city's FY 2026-27 Building Division Fee Schedule:
 - Plan check base: $1,862.70
 - Inspection base: $3,515.40
-- Fire plan check + inspection (20% of building): $1,075.62
-- Water plan check (15% of building): $279.41
-- Plus 10% General Plan surcharge and 2% technology surcharge
-- **Total: ≈ $7,541**
+- **Total: $5,378.10**
 
-That is the highest permit number in our series — roughly double Chula Vista's flat fee — on a rate table adopted in 2018 (plan check) and 2021 (miscellaneous). Whether Oceanside classifies a detached ADU under the "Custom Homes" row or the cheaper "Residential Addition" row ($2,522.34) is not confirmed in any published document; we have marked it as such.
+Fire plan check + inspection (20% of building, $1,075.62) and water plan check (15%, $279.41) appeared in the 2018/2021 tables but are not in the FY 2026-27 schedule — unconfirmed, not $0, and not in the $5,378. The 10% General Plan surcharge and 2% technology surcharge still apply at the counter, about $645 on top of the $5,378.
+
+That is mid-table in our series — about 1.4× Chula Vista's flat fee — and a detached ADU is confirmed as new single-family construction, so the cheaper "Residential Addition" row ($2,522.34) does not apply.
 
 **The incentive:** per-square-foot schedules punish size but ignore cost. Build small with expensive finishes and you win. Build large with cheap finishes and you lose.
 
@@ -85,9 +84,9 @@ That is the highest permit number in our series — roughly double Chula Vista's
 | --- | --- | --- | --- |
 | Valuation-based | Pasadena, Campbell | $3,529–$13,000 (varies) | Low — depends on your declared cost |
 | Flat-fee | Fontana, Chula Vista | $3,195–$4,963 (fixed) | High — one number |
-| Per-square-foot | Oceanside | ~$7,541 | Medium — depends on classification |
+| Per-square-foot | Oceanside | $5,378 | Medium — published schedule; 12% surcharges at the counter |
 
-The spread on the same 800 sq ft ADU: **$3,195 to ~$7,541** — a $4,346 gap from the pricing model alone, before a single impact fee or school fee is added.
+The spread on the same 800 sq ft ADU: **$3,195 to $5,378** — a $2,183 gap from the pricing model alone, before a single impact fee or school fee is added.
 
 ## How to read your city's fee schedule
 
