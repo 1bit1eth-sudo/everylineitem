@@ -26,6 +26,9 @@ pnpm-debug.log*
 # pagefind
 public/pagefind
 
+# per-jurisdiction estimate spreadsheets (build artifacts, regenerated from fees.json)
+public/downloads/estimate-*.xlsx
+
 # pnpm
 .pnpm-store
 
