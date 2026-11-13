@@ -15,7 +15,7 @@ faqs:
   - question: "Does the 750 sq ft cliff apply to school fees?"
     answer: "No. School district developer fees are a separate regime (Ed. Code §17620), levied by school districts rather than cities. Districts may charge ADUs of 500 sq ft or more — the threshold is 500, not 750. An ADU between 500 and 749 sq ft pays school fees but no city impact fees. SB 1117 does not change school fees."
   - question: "How much does crossing 750 sq ft cost in real cities?"
-    answer: "It varies enormously. In Torrance, crossing 750 switches on a flat $2,243.47. In Sacramento, about $5,728 in city impact fees. In Glendale, the schedule jumps from $0 at 749 to as much as $4,700 at 800. In Palo Alto, proportional development impact fees of roughly $8,000–$20,000 switch on. In Salinas and Oakland, nothing switches on — both waive ADU impact fees at any size."
+    answer: "It varies enormously. In Torrance, crossing 750 switches on a flat $2,243.47. In Sacramento, about $5,347 in city impact fees. In Glendale, the schedule jumps from $0 at 749 to as much as $4,700 at 800. In Palo Alto, proportional development impact fees of roughly $8,000–$20,000 switch on. In Salinas and Oakland, nothing switches on — both waive ADU impact fees at any size."
 ---
 > **Published:** 11 Oct 2026 · **Last verified:** 9 Oct 2026 · **Next review:** Jan 2027
 > Cost figures are re-checked against permit records quarterly. Changes are
@@ -41,7 +41,7 @@ The law sets the threshold. Each city sets the price of crossing it.
 | City | At 749 sq ft | At 800 sq ft | The cliff |
 | --- | --- | --- | --- |
 | Torrance | $0 | **$2,243.47** flat | A single line in the fee schedule: "ADU 750 SF or greater" (schedule wording predates the 2026 change; state law now exempts 750 sq ft or less) |
-| Sacramento | $0 | **~$5,728** city impact fees | The "real cliff" — the city's own free plans are drawn at 747 sq ft for a reason |
+| Sacramento | $0 | **~$5,347** city impact fees | The "real cliff" — the city's own free plans are drawn at 747 sq ft for a reason |
 | Glendale | $0 | **up to $4,700** | The "50 sq ft cliff" — 749 pays nothing, 800 pays the schedule maximum |
 | Fullerton | $0 | **~$6,411** pro-rata | DIF on the full 800, scaled to the house |
 | Palo Alto | $0 | **~$8,000–$20,000** | The steepest per-foot cliff in the series: $18.65/sq ft parks fee × proportionality |
