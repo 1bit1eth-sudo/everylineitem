@@ -214,6 +214,11 @@ export const POST_SEO: Record<string, PostSeo> = {
     description:
       "Seven California cities offer pre-approved ADU plans — from Chula Vista's 12 SnapADU designs to Pasadena's free city-drawn prototypes.",
   },
+  "fremont-adu-cost": {
+    title: "Fremont ADU Fees 2026: Zero DIF, $5,168 Sewer Line",
+    description:
+      "An 800 sq ft detached ADU in Fremont for $316,000 — zero city impact fees, a $5,168 sewer capacity charge, and a $4,304 school fee.",
+  },
   "fullerton-adu-cost": {
     title: "Fullerton ADU Fees 2026: $1,223 Permit, Two School Districts",
     description:
@@ -292,7 +297,7 @@ export const POST_SEO: Record<string, PostSeo> = {
   "oceanside-adu-cost": {
     title: "Oceanside ADU Fees 2026: The $0 Exemption, Unconfirmed",
     description:
-      "An 800 sq ft detached ADU in Oceanside priced phase by phase: about $313,000. The ordinance's ADU impact-fee waiver is unconfirmed as of 6 Nov 2026.",
+      "An 800 sq ft detached ADU in Oceanside for about $311,000 — a $5,378 permit from the FY 2026-27 schedule, and an unconfirmed $0 impact-fee waiver.",
   },
   "orange-county-adu-cost-compared": {
     title: "Orange County ADU Cost Compared 2026: Three Cities",
@@ -310,14 +315,14 @@ export const POST_SEO: Record<string, PostSeo> = {
       "An 800 sq ft detached ADU in Palo Alto priced phase by phase — about $313,000, level with the lowest published total in the series.",
   },
   "pasadena-adu-cost": {
-    title: "Pasadena ADU Fees 2026: $2.24 School Fees, Free Plans",
+    title: "Pasadena ADU Fees 2026: $0 Impact Fees, $2.24 School Fee",
     description:
-      "An 800 sq ft detached ADU in Pasadena priced phase by phase: about $310,000, a series-low $2.24/sq ft school fee, and city pre-approved plans.",
+      "An 800 sq ft detached ADU in Pasadena priced phase by phase: about $299,000, $0 impact fees up to 900 sq ft, and a series-low $2.24/sq ft school fee.",
   },
   "permit-pricing-models": {
     title: "How Cities Price ADU Permits: Valuation, Flat, Per Sq Ft",
     description:
-      "Three ADU permit pricing models: valuation-based (Pasadena, Campbell), flat-fee (Fontana $3,195, Chula Vista $3,951), and per-sq-ft (Oceanside ~$7,541).",
+      "Three ADU permit pricing models: valuation-based (Pasadena, Campbell), flat-fee (Fontana $3,195, Chula Vista $3,951), and per-sq-ft (Oceanside $5,378).",
   },
   "prefab-adu-brands-compared-california": {
     title: "Prefab ADU Brands Compared 2026: Two Publish Prices",
@@ -340,9 +345,9 @@ export const POST_SEO: Record<string, PostSeo> = {
       "Unincorporated Riverside County ADU permits: a $6,472.45 deposit (not the final cost), $0 county impact fees, and four free pre-approved plans.",
   },
   "sacramento-adu-cost": {
-    title: "Sacramento ADU Fees 2026: Crossing 750 Costs $5,728",
+    title: "Sacramento ADU Fees 2026: Crossing 750 Costs $5,347",
     description:
-      "Sacramento ADU fees: crossing 750 sq ft costs $5,728 in impact fees.",
+      "Sacramento ADU fees: crossing 750 sq ft costs $5,347 in impact fees.",
   },
   "salinas-adu-cost": {
     title: "Salinas ADU Fees 2026: The First City With Zero Impact Fees",
@@ -357,7 +362,7 @@ export const POST_SEO: Record<string, PostSeo> = {
   "san-diego-county-adu-fees-compared": {
     title: "San Diego County ADU Fees Compared: $308K to $344K",
     description:
-      "The same 800 sq ft ADU in Chula Vista ($308,000), Oceanside ($313,000), and the City of San Diego ($344,000): a $36,000 spread in one county.",
+      "The same 800 sq ft ADU in Chula Vista ($308,000), Oceanside ($311,000), and the City of San Diego ($344,000): a $36,000 spread in one county.",
   },
   "san-francisco-adu-cost": {
     title: "San Francisco ADU Fees 2026: No 750 Sq Ft Cliff",
@@ -383,6 +388,11 @@ export const POST_SEO: Record<string, PostSeo> = {
     title: "Santa Maria ADU Fees 2026: The Least Transparent Schedule",
     description:
       "Santa Maria ADU fees: the boom town with the least transparent fee schedule in the series.",
+  },
+  "santa-monica-adu-cost": {
+    title: "Santa Monica ADU Fees 2026: The Coast Is Not Cheap",
+    description:
+      "An 800 sq ft detached ADU in Santa Monica for $309,000 — $0 impact fees for all ADU sizes, a $3,669 permit, and a $3,368 school fee.",
   },
   "santa-rosa-adu-cost": {
     title: "Santa Rosa ADU Cost 2026: $320,000, Fire-Era Discount",
@@ -495,7 +505,7 @@ export const POST_SEO: Record<string, PostSeo> = {
   "california-adu-cost-ranked-20-cities": {
     title: "20 California Cities Ranked by Total ADU Cost",
     description:
-      "One identical 800 sq ft ADU in 20 California cities: firm totals from Long Beach ($313,000) to San Francisco ($325,000), with San Diego at $344,000.",
+      "One identical 800 sq ft ADU in 20 California cities: firm totals from Oceanside ($311,000) to San Francisco ($325,000), with San Diego at $344,000.",
   },
   "ontario-adu-cost": {
     title: "Ontario ADU Fees 2026: Inland Empire's Next Data Point",
@@ -527,11 +537,6 @@ export const POST_SEO: Record<string, PostSeo> = {
     description:
       "Every school district fee we have published for an 800 sq ft ADU, ranked: Pasadena's $1,792 to Campbell's $4,304, set by district lines, not city limits.",
   },
-  "santa-monica-adu-cost": {
-    title: "Santa Monica ADU Fees 2026: The Coast Is Not Cheap",
-    description:
-      "An 800 sq ft detached ADU in Santa Monica, phase by phase: $305,000 floor. All ADU sizes skip the impact-fee stack; a $3,368 school fee leads soft costs.",
-  },
   "december-2026-fee-reverification": {
     title: "December 2026 ADU Fee Re-verification: 23 Cities",
     description:
@@ -556,11 +561,6 @@ export const POST_SEO: Record<string, PostSeo> = {
     title: "ADU Soft Costs Ranked: 26 California Cities",
     description:
       "Permits, plan check, school, impact, and utility fees for an 800 sq ft ADU across 26 California cities, from Lancaster's $3,000 to Ontario's $26,003.",
-  },
-  "fremont-adu-cost": {
-    title: "Fremont ADU Fees 2026: Zero City Impact Fees, $4,072 Sewer",
-    description:
-      "An 800 sq ft detached ADU in Fremont, phase by phase: $314,000. All five city impact-fee programs exempt ADUs; Union Sanitary's $4,072 sewer charge leads.",
   },
   "sb-1117-final-checklist": {
     title: "25 Days to SB 1117: The Final Checklist | Every Line Item",

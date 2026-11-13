@@ -1,11 +1,218 @@
 {
   "entries": [
 {
+      "date": "2026-11-14",
+      "detail": "Buena Park school fee verified — Savanna ESD residential developer fee $2.585/sq ft (FI-547), confirmed by the district's Annual Developer Fee Report for the fiscal year ending June 30, 2026 (presented to the board 8 Sep 2026, agenda item 13-g); same rate as FY2024-25, and no 2026 board action changed it (all 2026 meetings Mar-Nov checked, no developer-fee item). Fund arithmetic cross-checked: $269,070.14 opening + $59,943.58 received + $7,441.48 interest - $63.08 treasurer fees - $283,971.42 construction = $52,420.70 ending balance, exact. Elementary share alone is $2,068 on 800 sq ft; the Anaheim Union HSD share for Savanna-area parcels is still unconfirmed, so no combined total is shown. Verified rows sitewide 538 → 539.",
+      "headline": "Buena Park: Savanna school fee verified — $2.585/sq ft",
+      "items_added": 1,
+      "jurisdictions": ["Buena Park"]
+    },
+{
+      "date": "2026-11-13",
+      "detail": "El Monte development impact fees re-verified - $10,217.26 SFR base unchanged. The FY 2026-27 Building Permit Fee Schedule (DocumentCenter View/7825, effective 7/1/2026) contains no development impact fee table - it refers DIF to the Public Works/Engineering Division only. The FY 2025-26 Public Works Engineering Fees schedule (View/7398) remains the city's current published DIF source (still linked from the city Permits page, checked 13 Nov 2026); its SFR components re-sum exactly: sewer $1,652.38 + storm drain $985.03 + street $868.83 + park $6,430.44 + traffic $72.39 = $10,009.07 + 2.08% tech $208.19 = $10,217.26 base, unchanged. No FY 2026-27 Public Works schedule found. FI-156 last verified 13 Nov 2026. No new fee rows in this run.",
+      "headline": "El Monte: development impact fees re-verified - $10,217.26 base unchanged",
+      "items_added": 0,
+      "jurisdictions": ["El Monte"]
+    },
+{
+      "date": "2026-11-13",
+      "detail": "FI-245 source corrected (Bakersfield school fee, BCSD $3.50/sq ft — rate unchanged): the cited source URL pointed to Greenfield Union SD's Apr 28, 2026 Fee Justification Study, a different district's document. No BCSD 2026 study was located, so the source now cites BCSD's June 2024 School Facility Fee Justification Report, whose Executive Summary states the 65% BCSD / 35% Kern High split; $3.50 = 65% x the $5.38 SAB Level I cap (Jan 28, 2026). Last verified 13 Nov 2026.",
+      "headline": "FI-245 source corrected to BCSD June 2024 report — $3.50/sq ft unchanged",
+      "items_added": 0,
+      "jurisdictions": ["Bakersfield"]
+    },
+{
+      "date": "2026-11-13",
+      "detail": "El Monte fee-schedule link updated from the FY 2025-26 schedule to the FY 2026/2027 Building Permit Fee Schedule (effective 2026-07-01, Resolution No. 10313; permit issuance $51.69 and school fees $3.36-$3.43/sq ft confirmed in the new document). No fee amounts changed in this run; FI-156 city development impact fees still cite the FY 2025-26 schedule and need re-checking against the FY 2026-27 document.",
+      "headline": "El Monte fee-schedule link updated to FY 2026-27",
+      "items_added": 0,
+      "jurisdictions": [
+        "El Monte"
+      ]
+    },
+{
+      "date": "2026-11-13",
+      "detail": "Southern Buena Park school fees verified from the districts' own 2026 documents: Centralia ESD $2.69/sq ft (Res. #1794, adopted 11 Mar 2026, effective 10 May 2026; 2026 Fee Justification Study, Koppel & Gruber, 30 Jan 2026), Cypress SD $2.69/sq ft (Res. 25/26-17, adopted 9 Apr 2026, effective 8 Jun 2026; 2026 Fee Justification Study, 20 Mar 2026), and Anaheim Union HSD $2.69/sq ft (Res. 2025/26-F-08, adopted 7 May 2026, effective 6 Jul 2026; 2026 Fee Justification Study, Koppel & Gruber, 13 Apr 2026). Each elementary + AUHSD pair sums to the $5.38 SAB Level I cap ($4,304 on 800 sq ft) under the Ed. Code 17623 50/50 allocation agreement, encoded as two mutually exclusive area schedules (Centralia/AUHSD, Cypress/AUHSD) so they never sum with the northern BPSD/FJUHSD row. Verified rows sitewide 538 to 542. Magnolia and Savanna elementary shares still unconfirmed.",
+      "headline": "Buena Park southern school fees verified (Centralia, Cypress, AUHSD)",
+      "items_added": 4,
+      "jurisdictions": ["Buena Park"]
+    },
+{
+      "date": "2026-11-13",
+      "detail": "OC San sewer capacity charge (CFCC) corrected to the FY 2026-27 Table A one-block reading — $1,710 flat on an 800 sq ft ADU. Anaheim FI-121: per-sq-ft $1.71 ($1,368 at 800 sq ft) → flat $1,710; Table A footnote 1 ('on a 1,000 square foot, or portion thereof, basis') resolves the rounding question the Oct 7 city reply left open, and the Anaheim post's fee table, key facts, and FAQ now read $1,710 with three unconfirmed assumptions remaining. La Habra FI-202 and Orange County FI-351: FY 2025-26 $1,695 → FY 2026-27 $1,710. The utility-bills post's Anaheim row and the Torrance post's passing mention are corrected to $1,710. Verified rows sitewide unchanged at 538 (corrections to existing verified rows, no new rows); Anaheim post total unchanged at $320,000.",
+      "headline": "OC San capacity charge corrected to $1,710 flat — Anaheim, La Habra, Orange County",
+      "items_added": 0,
+      "jurisdictions": ["Anaheim", "La Habra", "Orange County"]
+    },
+{
+      "date": "2026-11-13",
+      "detail": "City of Buena Park building permit fee schedule verified - Resolution No. 14482 (adopted Apr 12, 2022, eff. Jul 1, 2022), Attachment B, read visually from the 15-page scanned-image PDF via a live browser session on Nov 13, 2026 (the fee-table pages carry no text layer; Table A bands cross-checked 7/7: each band base equals the fee at the previous band's top). Nine new verified rows: Table A building permit fee $100,001-$500,000 band ($1,145 + $5.50 per $1,000 over $100,000, valuation_step, full 8-band table in the row notes); Permit Issuance Fee $25 flat; Building Plan Review 85% of the permit fee ($82 minimum); Electrical 10%, Plumbing 6%, Mechanical 6% of the base permit fee; ADU Review $605 per application (Planning item 41 - upgrades the 2022-vintage PARTIAL: no newer schedule found, all 49 Building Division Forms and Handouts entries checked); Zoning Compliance Plan Check $1.40 per $1,000 of valuation up to $250,000; General Plan Maintenance surcharge 4% of building fees. No 800 sq ft total: valuation is set by the Building Official or ICC data and no confirmed $/sq ft ADU valuation basis exists, so the valuation rows render with amount \u2014 until a basis is confirmed. Buena Park now has 10 rows, all verified; verified rows sitewide 538 \u2192 547 in this branch. The draft post's 'no current schedule located' text is now stale and needs a post-correction follow-up (deferred to avoid clashing with the pending school-fee branch).",
+      "headline": "Buena Park: Building permit fee schedule verified - Res. 14482 Table A + ADU Review $605",
+      "items_added": 9,
+      "jurisdictions": ["Buena Park"]
+    },
+{
+      "date": "2026-11-13",
+      "detail": "Buena Park school fee verified: combined $5.38/sq ft (Buena Park SD $3.59 K-8 + Fullerton Joint Union HSD $1.79, grades 9-12) from the FJUHSD 2026 Fee Justification Study (Apr 21, 2026; public hearing May 12, 2026) - $4,304 on an 800 sq ft ADU, most of the city; southern Buena Park (Centralia ESD / Anaheim Union HSD) not covered, rates unverified. Buena Park verified rows 1 -> 2; draft post total $304,000 -> $308,000 floor ($385/sq ft).",
+      "headline": "Buena Park school fee verified ($5.38/sq ft, BPSD + FJUHSD)",
+      "items_added": 1,
+      "jurisdictions": ["Buena Park"]
+    },
+{
+      "date": "2026-11-13",
+      "detail": "OC San interpretation standard confirmed from the district's own Table A/B 2026-27 (eff. July 1, 2026): ADUs pay the average-demand rate of $1,710 per 1,000 sq ft, and footnote 1 states all calculations are on a 1,000-sq-ft, or portion thereof, basis — so an 800 sq ft ADU is one full block at $1,710, not a pro-rata 0.8 x $1,710 = $1,368. Costa Mesa FI-204 corrected $1,368 to $1,710 (same per-block reading already used for Buena Park FI-432 and Newport Beach; the Batch 19-28 re-verification had corrected those two but missed Costa Mesa). Costa Mesa 800 sq ft verified fee total $5,846 unchanged — the Costa Mesa post already used $1,710; only the fee-database row and the post's stale pro-rata flag were corrected. Remaining OC San follow-ups: Anaheim FI-121 still encodes $1.71/sq ft (post uses a $1,368-$1,710 range) and La Habra FI-202 / Orange County FI-351 still carry the FY 2025-26 $1,695 rate — vintage check pending.",
+      "headline": "OC San ADU charge standard confirmed: $1,710 per block; Costa Mesa FI-204 corrected $1,368 to $1,710",
+      "items_added": 0,
+      "jurisdictions": ["Costa Mesa"]
+    },
+{
+      "date": "2026-11-13",
+      "detail": "Arcadia verified rows 1 to 12: building permit issuing fee $63 and solid waste fee $7 per permit (Res. No. 7558, eff. July 1, 2024); plan check 65%, energy review 20%, CalGreen review 10% of plan check, and technology fee 5.5% of permit and plan check fees - all percentages of the valuation-based permit fee, so they render as '—' with no dollar amount until the city pins down an ADU valuation basis (dwellings VA $164.40 / VB $154.24 per sq ft); ADU Permit $775 (Planning Fees, Res. No. 7684, eff. July 1, 2026) for the ADU-permit track only - a detached ADU of 800 sq ft or less needs only a building permit under ADC §9102.01.080(D)(1)(B), so it does not apply at 800 sq ft; Park Facilities Impact Fee $2.85/sq ft (Res. No. 6602) and Fire Protection Facilities Impact Fee $0.35/sq ft (Res. No. 7492), both applied to ADUs by the city's proportional rule (ADC §9102.01.080(G)(1)(B)) - 800 sq ft pays $2,280 + $280, $0 at 750 sq ft or less; water meter installation $159 and backflow test $287 for a new separate water connection (2026 Utility Rates & Service Charges). Not encoded, with reasons: the valuation-table building permit fee itself (band-1 per-$100 rate unreadable in the published PDF and no ADU construction type stated); Transportation Impact Fee $1,983 per PM peak-hour trip (Res. No. 7151 - no published ADU trip count); Zoning Clearance $383 (general clearance, not ADU-specific) and Covenant Preparation $420 (JADU deed restriction); bacteriological test $128 plus lab costs (total indeterminate); monthly meter and sewer charges (recurring bills, not one-time fees). AUSD $5.38 school fee adoption resolution (Feb 24, 2026 board meeting) not located in public search - FI-231 unchanged. Arcadia 800 sq ft verified fee total $4,304 to $7,380 (feeCalc verified).",
+      "headline": "Arcadia: 11 fee rows verified - permit, park and fire impact fees, water connection (1 verified row to 12)",
+      "items_added": 11,
+      "jurisdictions": ["Arcadia"]
+    },
+{
+      "date": "2026-11-13",
+      "detail": "El Monte: school developer fee and building permit issuance fee verified in the City of El Monte Building Permit Fee Schedule FY 2026/2027 (eff. 7/1/2026), read live November 13, 2026. Residential school fee $3.36-$3.43 per sq ft for projects over 500 sq ft (combined elementary + high-school total, paid at El Monte Union HSD; exact rate varies by elementary district per the schedule's justification-study note, so the range is encoded as one row with no area split); 800 sq ft ADU $2,688-$2,744, $0 under 500 sq ft per SB 543. Building permit issuance $51.69 flat per permit. The valuation-table permit fee and 85% plan check fee are not encoded: the schedule's Square Foot Construction Costs table did not extract as text, so no ADU valuation basis was confirmed. El Monte now has 3 rows, all verified; verified rows sitewide 538 to 540.",
+      "headline": "El Monte: school fee $3.36-$3.43/sq ft and $51.69 permit issuance verified",
+      "items_added": 2,
+      "jurisdictions": ["El Monte"]
+    },
+{
+      "date": "2026-11-13",
+      "detail": "Santa Maria Traffic Improvement Fee verified — $3.87 per sq ft for Single Family (also listed for Single Family Additions) in the City of Santa Maria 2025/2026 Public Works Fee Schedule (July 1, 2025-June 30, 2026), Traffic Improvement Fee Program table Rev. 07/01/2024, read live November 13, 2026. $3,096 on an 800 sq ft ADU; $0 at or below 750 sq ft under Gov. Code §66311.5(c). Santa Maria now has 2 rows (2 verified). Verified rows sitewide rise from 538 to 539. Not verified in this round: building permit fees (no adopted Santa Maria permit-fee table located; the June 2, 2026 council-adopted comprehensive user-fee schedule was not retrieved in verifiable form), the $4,281 single-family sewer connection fee (an ADU is not a new residential use for connection-fee purposes under Gov. Code §66324(b) unless built with a new single-family dwelling, and a new detached ADU's proportionate charge basis is not stated in the schedule), water connection fees (water service is Golden State Water; CPUC Resolution W-5262 removed connection fees and capacity charges for existing customers building ADUs), and the proposed development impact fee increase (2025 nexus-study draft, not adopted).",
+      "headline": "Santa Maria: Traffic Improvement Fee verified — $3.87/sq ft, $3,096 on an 800 sq ft ADU",
+      "items_added": 1,
+      "jurisdictions": ["Santa Maria"]
+    },
+{
+      "date": "2026-11-13",
+      "detail": "Palmdale verified rows 1 to 8 (7 new). School: AVUHSD high-school share $1.34/sq ft (Resolution No. 2024-25-16, adopted Nov 21, 2024, effective Jan 20, 2025; 26% of the $5.17 SAB maximum) pairs with PSD elementary share FI-243 ($3.83); 800 sq ft school total $4,136. PSD's 2026 Fee Justification Study (Sep 21, 2026) implies a ~26% AVUHSD share (~$1.40 of the $5.38 cap), but no AVUHSD 2026 document states $1.40, so the adopted $1.34 is used. The $1.25 rate in the FY 2023-24 Annual and Five-Year Report was the superseded pre-increase rate. Building permit (City of Palmdale Master Schedule of Fees & Penalties FY 2026-27, effective Aug 4, 2026): R-3 application fee $75 flat, permit issuance fee $37 flat; Table 1-A building permit fee with all 8 bands in the row notes (per-$1,000 rate applies to the amount in excess of the band floor; no confirmed $/sq ft ADU valuation basis, so no 800 sq ft total); plan check 85% of the Table 1-A fee; SMIP 0.013% of valuation (Group R, $13 per $100,000); Building Standards fee $1 per $25,000 (HSC Sec. 18931.6). The valuation-based rows render with amount '-' and carry no total (LA-CITY Table 1-A precedent). 800 sq ft flat-fee total from the new rows: $112 application + issuance; 800 sq ft total $4,248 (school $4,136 + flats $112). Not encoded: Palmdale park/fire/traffic/public-facility DIFs and the sewer capacity fee - the schedule states per-unit rates for new dwellings but no ADU row, so ADU applicability and the over-750 sq ft proportional amount are unverified; the 1.43 Group R-3/U combination-permit factor is likewise unconfirmed for ADU permits. Verified rows sitewide 538 to 545.",
+      "headline": "Palmdale: AVUHSD school share $1.34 + building permit fees verified - 1 to 8 verified rows",
+      "items_added": 7,
+      "jurisdictions": ["Palmdale"]
+    },
+{
+      "date": "2026-11-13",
+      "detail": "Antelope Valley Union High School District (9-12) school developer fee verified at $1.34/sq ft (Resolution No. 2024-25-16, adopted Nov 21, 2024, effective Jan 20, 2025) - the district's 26% share of the Level 1 maximum; with Lancaster SD's $3.98 (FI-317) the combined school fee is $5.32/sq ft, within the 2026 Level 1 cap of $5.38. No 2026 AVUHSD increase resolution was found, so $1.34 stands as the operative adopted rate. The 2024 news figure of $4.08 for AVUHSD was wrong - it was never the district's share. Six current development impact fees verified from the Citywide Fee Schedule effective October 1, 2025, Section 3 (superseding the stale 2021 Appendix B): traffic signal $1,399, traffic $2,227, park development $3,153, administrative offices $75, corporate yard $71, open space $372 per dwelling unit - all encoded with dwelling-base proration (800 sq ft ADU at the 1,600 sq ft default primary: $3,648.50; $0 at 750 sq ft and under). Not encoded, with reasons: drainage fee is now $0.48 per sq ft of lot (lot-size dependent, no ADU rule published); park in-lieu fee is bedroom-dependent ($591/$887/$1,184); biological fee is $770 per gross acre; LA County traffic fee is $1,869 per p.m. peak-hour trip in a bounded area only. The building permit valuation table is still not in the city's public fee schedule - the room-addition plan check band ($1,034 for 501-1,000 sq ft) is for additions, not new detached ADUs, so no permit row was added. Lancaster now has 8 fee rows, all verified; verified rows sitewide 538 to 545.",
+      "headline": "Lancaster: AVUHSD school fee and current DIF verified - 1 verified row to 8",
+      "items_added": 7,
+      "jurisdictions": ["Lancaster"]
+    },
+{
+      "date": "2026-11-13",
+      "detail": "Bakersfield school fee completed \u2014 Kern High School District 35% share verified at $1.88/sq ft (BAKERSFIELD-NEW-01), computed as 35% of the $5.38 SAB Level I maximum (Jan 28, 2026). BCSD's June 2024 School Facility Fee Justification Report states the split explicitly: 65% ($3.36 at the $5.17 cap) to Bakersfield City SD, remaining 35% ($1.81) to Kern High School District; the $5.38 cap is corroborated by Greenfield Union SD's 2026 Fee Justification Study (Apr 28, 2026), which also confirms the 65% elementary share. 800 sq ft = $1,504; combined with FI-245 (BCSD $3.50) the Bakersfield school fee totals $5.38/sq ft, the Level I cap. Confidence B: the $1.88 figure is computed, not stated directly by KHSD \u2014 KHSD's FY2024-25 annual report states only the total Level 1 fee. Bakersfield verified rows 1 \u2192 2. City building permit fees not added: the FY2026-27 Master Fee Schedule PDF sits behind CivicPlus asset links with no direct public URL, and third-party summaries are not official sources.",
+      "headline": "Bakersfield: Kern High School District share verified \u2014 $1.88/sq ft",
+      "items_added": 1,
+      "jurisdictions": ["Bakersfield"]
+    },
+{
+      "date": "2026-11-13",
+      "detail": "Downey permit fees verified in the City of Downey Proposed City User Fee Schedule FY 2026-2027 (read Nov 13, 2026; adopted-fees column, effective July 1, 2026): building permit issuance $60.01 flat per permit (Section 6, item 3); Planning Division building plan check $330.46 per application for residential single-family new construction or expansions (Section 5, item 64; added by Council Resolution No. 25-8325, Nov 2025); building permit fee $100,001-$500,000 valuation band $2,171.42 + $10.32 per $1,000 over $100,000 (Section 6, item 11; full 11-band table in the row notes; at the post's assumed $150,000 valuation the permit fee is $2,687.42). The valuation-band row carries no 800 sq ft total: Downey publishes no per-sq-ft ADU valuation and the Building Official sets project valuation. Downey now has 4 rows (4 verified); verified rows sitewide 538 to 541. Jurisdiction fee_schedule_url updated from the FY 19-20 amended schedule to the FY 2026-27 schedule. Not found: Downey Unified's adopted 2026 school developer fee rate - the State Allocation Board raised the Level 1 maximum to $5.38/sq ft on Jan 28, 2026, but no DUSD board resolution or district page adopting $5.38 was found (last district-cited rate is $5.17/sq ft in the city's Aug 2024 schedule, now stale), so no school row was added; and no published ADU water/sewer capacity charge - the FY 2026-27 schedule's meter fees ($5,235 for a new 1-inch meter, meter box and service line) apply only if a new separate meter is installed, not to a standard ADU on the existing service.",
+      "headline": "Downey: permit issuance, planning plan check, and valuation-band permit fee verified - 1 to 4 verified rows",
+      "items_added": 3,
+      "jurisdictions": ["Downey"]
+    },
+{
+      "date": "2026-11-13",
+      "detail": "Oceanside building permit fees verified - the first priced permit rows for OCEANSIDE (1 verified row to 4). City of Oceanside Building Division Fee Schedule, FY 2026-2027 (Res. No. 18-R0079-1), read November 13, 2026: plan check + inspection for a new single-family dwelling, Custom or Model Homes, 1,000 sq ft row (plan check $1,862.70 + inspection $3,515.40) = $5,378.10 - the city's ADU page assesses detached ADUs as new single-family dwellings, and the schedule's smallest Single Family row is 1,000 sq ft, so the 800 sq ft detached ADU carries this row's total. Surcharges confirmed from the same schedule: General Plan Update 10% and Technology Update 2% of the building permit fee - both render as a dash (percent of permit fee, not valuation; no ADU valuation basis on file), same treatment as the Los Angeles surcharge rows. Together the three rows confirm the Oceanside post's permit math (2018/2021-vintage tables) against the current FY schedule: $5,378.10 base plus the 12% surcharge load. Not verified in this run: fire review (20%) and water review (15%) from the post's older tables - not in the FY 2026-27 schedule; the $0 city impact-fee waiver - the ADU page carried the waiver language in a September 5 snapshot but not on the live page as of November 6, 2026, so it stays unconfirmed; the adopted parks fee ($6.03/sq ft single-family, eff. Jan 20, 2026) and its ADU application. Post text update is a follow-up, not in this branch.",
+      "headline": "Oceanside: building permit fees verified - $5,378.10 + surcharges at 800 sq ft",
+      "items_added": 3,
+      "jurisdictions": ["Oceanside"]
+    },
+{
+      "date": "2026-11-13",
+      "detail": "Santa Monica building permit fees verified - the first priced permit rows for SANTA-MONICA (1 verified row to 3). City of Santa Monica FY 2026-27 Fee Schedule, Exhibit B (Building and Safety), read November 13, 2026: formal plan review for new one- and two-family dwellings incl. accessory buildings, item 704.03 ($777.20 + $1.73/sq ft) = $2,161.20 at 800 sq ft; combination building permit, item 704.37 ($163.80 + $1.68/sq ft) = $1,507.80 at 800 sq ft; plan review + permit together $3,669.00. The Santa Monica post's permit line was 'not counted (verify with city)' because current rates were unpublished (latest table 7/1/19); the FY 2026-27 schedule is now published. Not verified in this run: the SMMUSD school fee adoption - the district's June 8, 2023 justification study proposes $4.21/sq ft ($3,368 on 800 sq ft) but board adoption minutes were not located, and no 2026 $5.38 adoption was found, so no school row was added; the Public Works impact-fee amounts above 750 sq ft; the $742.55 Title 24 energy-compliance review, $180.40 application processing, and 13% tech-enhancement fee (per-ADU application unconfirmed). Post text update is a follow-up, not in this branch.",
+      "headline": "Santa Monica: building plan review + permit verified - $3,669.00 at 800 sq ft",
+      "items_added": 2,
+      "jurisdictions": ["Santa Monica"]
+    },
+{
+      "date": "2026-11-13",
+      "detail": "Palo Alto FY27 impact fee FI-017 verified \u2014 $18,090 on an 800 sq ft ADU, proportional to a 2,000 sq ft primary dwelling. Re-verified live 13 Nov 2026 against the City of Palo Alto FY27 Impact Fee Information Sheet (as of August 17, 2026): single-family Community Facilities rates Parks $18.75, Community Center $1.44, Libraries $0.86 per sq ft; Public Safety $1,383 and General Gov. $1,743 per unit. Primary-dwelling total (21.05 x 2,000 + 3,126) = $45,226; ADU share 800/2,000 x $45,226 = $18,090.40, rounded to $18,090. Sheet states 'ADUs under 750 sq. ft. are exempt from Development Impact Fees' and 'ADUs 750 sq. ft. and larger. Fee is proportional to the size of the primary unit.' The 2,000 sq ft primary is the site series assumption, not a figure printed on the sheet \u2014 the sheet states the proportionality principle without printing a formula, as the Palo Alto post already discloses. Traffic fees (Charleston/Arastradero $1,743 per residential unit; citywide TIF $10,099 per net new PM peak-hour trip) remain excluded. No new fee rows in this run; verified rows sitewide 538 -> 539.",
+      "headline": "Palo Alto FY27 impact fee FI-017 verified \u2014 $18,090 on 800 sq ft ADU",
+      "items_added": 0,
+      "jurisdictions": ["Palo Alto"]
+    },
+{
+      "date": "2026-11-13",
+      "detail": "Pasadena verified rows 1 -> 19 (20 new rows: 18 verified, 2 to_verify), read live November 13, 2026. FY2027 General Fee Schedule (Resolution No. 10194, adopted June 8, 2026, effective July 1, 2026): building permit fee $100,001+ band $1,738 + $6 per $1,000 of valuation (fees 334-335) and plan check fees $100,001+ band - Building $2,607 + $9 (fees 421-422), Fire Exiting $504 + $2 (432-433), Public Works $321 + $1 (443-444), Current Planning $197 + $1 (454-455), Design and Historic Preservation $39 + $1 (465-466) - with the full six-band tables in the row notes; the City's March 2025 ADU fee study sample for a 600 sq ft ADU corroborates the plan check bundle (Building $1,952, Fire $400, Public Works $240, Zoning $167, Design and Historic $72). Construction Tax 1.92% of valuation (PMC 4.32.020, FY2027 STFC), General Plan Maintenance Fee 0.50% and Technology Fee 0.50% of valuation (GFS fees 321-322), each reduced 25% for ADUs of 900 sq ft or less on single-family sites (City ADU page; reductions effective July 17, 2025 for the RIF and Construction Tax) - encoded at the ADU-effective rates 1.44% / 0.375% / 0.375% up to 900 sq ft, with standard-rate companion rows above 900 sq ft. Residential Impact Fee and Traffic Reduction and Transportation Improvement Fee are $0 for ADUs of 900 sq ft or less (FY2027 STFC notes 11 and 10; FY2027 RIF per-bedroom fees studio $24,530.43 to 5+ bedrooms $45,406.92, and TR/TIF single-family tiers $4,474-$5,722 per dwelling unit, in the row notes for larger ADUs). Flat verified rows: Building and Safety Application/Plan Review Processing Fee $83 (GFS fee 359) and C&D Administrative Review Fee $427 (GFS fee 1213); SMIP 0.013% and Building Standards fee $4 per $100,000 (EDTECH Table 4 sample + PRC 2705(a) / HSC 18931.6(a)). To_verify: AB 717 Training Fee 1% of permit fee (no ADU-specific confirmation; percent-of-fee basis, not valuation) and sewer facilities charge $1,900 on a 2-bedroom basis ($9.50/gal/day x 200 gal/day; bedroom count unpublished, ADU applicability unconfirmed). No valuation basis: the City prices permits on ICC Building Valuation Data and publishes no $/sq ft ADU valuation, so valuation-based rows render with amount '-' and carry no 800 sq ft total; verified rows sitewide 538 -> 556. Note: the published Pasadena post still describes a proportional RIF of about $11,173 for an 800 sq ft 2-bedroom ADU behind a 2,000 sq ft house; the City's current ADU page and the adopted FY2027 schedule exempt ADUs of 900 sq ft or less, so the fee page now shows $0 for an 800 sq ft ADU - post text correction is a separate item.",
+      "headline": "Pasadena: building permit and plan check fees verified - FY2027 schedule, RIF and TR/TIF $0 for ADUs of 900 sq ft or less",
+      "items_added": 20,
+      "jurisdictions": [
+        "Pasadena"
+      ]
+    },
+{
+      "date": "2026-11-13",
+      "detail": "Fremont school, sewer, water, and permit-surcharge fees verified — the first new Fremont rows since FI-277 (Fremont grows from 1 row to 6, all verified). FUSD Level 1 school developer fee $5.38/sq ft (2026 Fee Justification Study, Table E-1; Board approved Mar 25, 2026; effective May 24, 2026): 800 sq ft = $4,304, superseding the $4.79 ($3,832) figure in the Fremont post. Union Sanitary District ADU sewer capacity charge $6.46/sq ft (Ordinance No. 35.24, Exhibit A; adopted Jul 27, 2026; effective Oct 1, 2026): 800 sq ft detached = $5,168, superseding the lapsed $5.09 ($4,072) rate; no charge for ADUs inside the living area or expanding the home by 150 sq ft or less. ACWD water capacity $0 for an ADU on an existing lot using the existing service (City Form 440F); the $9,350 comprehensive connection charge applies only to an ADU built with a new single-family home. Community Planning Fee 15% and Permitting Technology Fee 3% of plan review/inspection fees verified from the Building & Safety fee list — both render as '—' (percent of permit fees, not valuation; no ADU valuation basis on file). Not verified in this run: the current building permit valuation table (Master Fee Schedule PDF returns 403 from Fremont's site; the Nov 4, 2025 council agenda packet does not contain the schedule), the construction tax's ADU application ($3,037 per new single-family dwelling vs $0.76/sq ft in the ~2022 Housing Element), and the two planning deposits (Limited CPC-ADU/JADU $1,000; Limited Master PDU/ADU/JADU $2,000) — deposits against job-cost review, not fixed fees for every ADU. The Fremont post still shows the superseded $3,832 school and $4,072 sewer figures; post text update is a follow-up, not in this branch.",
+      "headline": "Fremont: school $5.38, sewer $6.46/sq ft verified — 5 new rows",
+      "items_added": 5,
+      "jurisdictions": ["Fremont"]
+    },
+{
+      "date": "2026-11-13",
+      "detail": "City of Sacramento ADU fees re-verified against the live CDD-0419 worksheet, revised 2026-07-12 (the 2023-10-01 revision is superseded; valuation $165.67/sq ft is now $170.80/sq ft). 750 sq ft column, read live November 13, 2026 from the current cityofsacramento.gov PDF: building permit fee $1,242.60 to $1,268.71 (FI-130), building plan review fee $425.00 to $532.86 (FI-131), fire department fees $308.00 to $730.00 (FI-132; new structure is Administrative Fee $176 + Plan Review $260/hr + Inspection $294, $0.11/sq ft with a $294 minimum), city development impact fees $5,725.64 to $5,347.14 (FI-133; STA Mitigation Fee + 2% admin $1,154.64 + Park Development Impact Fee $2,617.50 + SAFCA Development Impact Fee $1,575). The full 750 sq ft column sums to the worksheet total $10,624.40 exactly. All four rows move from to_verify to verified. School developer fee FI-134 corrected $5.13 to $5.38/sq ft per CDD-0226 revised 2026-09-09 (SCUSD; other in-city districts in the row notes: Elk Grove USD $7.23, Twin Rivers USD $5.38, Natomas USD $5.17, San Juan USD $5.38); $5.38 x 800 sq ft = $4,304. Sacramento now has 5 of 5 rows verified; verified rows sitewide 538 to 542. Jurisdiction valuation basis updated to $170.80/sq ft and the fee schedule URL moved to the current cityofsacramento.gov PDF.",
+      "headline": "Sacramento: CDD-0419 re-verified against the July 2026 revision - 4 rows verified, school fee corrected to $5.38",
+      "items_added": 0,
+      "jurisdictions": ["Sacramento"]
+    },
+{
+      "date": "2026-11-14",
+      "detail": "San Diego: deleted FI-003 and FI-004 (both to_verify). FI-003 ($16,500 flat \u201cBuilding permit fees, 800 sq ft worked total (IB-501)\u201d) duplicated the verified SD-CITY-NEW-02 plan check ($8,085.26) + NEW-03 inspection ($8,401.90) = $16,487.16, rounded. FI-004 ($5,000-$8,000 \u201cImpact fees newly triggered above 750 sq ft\u201d) had no source and is refuted by SDMC section 142.0640(b)(1)(A): the first two ADUs on a premises are exempt from DIF regardless of size (verified as SD-CITY-NEW-01, $0).",
+      "headline": "San Diego: removed two unsourced to_verify rows (FI-003 duplicate, FI-004 refuted estimate)",
+      "items_added": 0,
+      "jurisdictions": ["City of San Diego"]
+    },
+{
+      "date": "2026-11-13",
+      "detail": "City of San Diego water, sewer and school fees verified - three new rows (verified 538 to 541 on this branch; the unmerged round-1 branch adds 8 more separately). School developer fee: San Diego Unified levies the SAB Level I residential rate of $5.38 per sq ft (Board resolution 2026-03-10; current rates effective May 2026); IB-146 exempts ADUs under 500 sq ft, so an 800 sq ft ADU pays $4,304. Water and sewer plan check (IB-501 Table 501D, Aug 2026): $176.57 for SDU/Duplex/Townhome with no water meter change - the standard shared-meter case. County Water Authority capacity charges: $0 when the ADU shares the existing meter (Ordinance 2025-02 charges only on a new meter or a capacity increase); a new meter under 1 inch would cost $6,683 in CY2026. Not verified in this run: City of San Diego water/sewer capacity charges (published $3,047 water and $5,154 sewer per EDU in the Schedule for Water and Sewer Fees) - the schedule states no ADU-specific rule, so no row was added; see the research note for detail. FI-003/FI-004 untouched.",
+      "headline": "San Diego: school fee $5.38/sq ft, water/sewer plan check $176.57, CWA capacity $0 (shared meter)",
+      "items_added": 3,
+      "jurisdictions": ["City of San Diego"]
+    },
+{
+      "date": "2026-11-13",
+      "detail": "South Pasadena: Growth Management Fee ($1.64/sq ft, #185) and Park Impact Fee - Residential NEW ($7.65/sq ft, #187) verified in the Amended Schedule of Fees FY 2026-2027 (Res. 8000, eff. 2026-07-06, amended Res. 8037 2026-10-07), re-read live 2026-11-13. The Growth Fee applies to new residential construction (city permit conditions: 'required for new constructions and additions', SPMC Ch. 16A) and the Park Fee is due at permit issuance (Quimby Act / AB 1600, Fund 275); Gov. Code §66311.5 bars both at 750 sq ft or less. At 800 sq ft the calculator shows Growth $1,312 and Park $6,120 — with the standing caveat that the city's proportionality practice is unconfirmed (batch24 target #2, 12/1 re-verification): the true 2026 amount is (ADU sq ft / primary sq ft) x the full-sq-ft figure, and the SB 1117 2027 basis is the 50 sq ft excess only ($82.00 / $382.50). Six lines stay to_verify with rates re-confirmed from the same crawl: Park REMODEL #188 $7.65/sq ft (conversion-ADU variant — verifying it would double-count against #187 for detached ADUs), Sewer Construction #499 $859 and Sewer Connection/Inspection #495 $510 (alternatives depending on new vs existing lateral; ADU application unconfirmed), Water Service Installation #492 $9,147 and Water Meter #493 $1,200 (both under the schedule's 'Deposit-Based Fees' heading; separate-service case, Gov. Code §66324(d) may bar a separate connection), Public Works Plan Check #518 $1,160 (asterisk footnote not captured; ADU application unconfirmed). South Pasadena verified rows 0 to 2 in this branch; verified rows sitewide 538 to 540 in this branch. The /fees/south-pasadena/ page leaves the zero-row noindex state automatically when this merges (2 verified rows meets the 2-row AdSense bar).",
+      "headline": "South Pasadena: Growth + Park impact fees verified — $1.64 and $7.65 per sq ft",
+      "items_added": 0,
+      "jurisdictions": ["South Pasadena"]
+    },
+{
+      "date": "2026-11-13",
+      "detail": "City of Los Angeles phase 2: building permit issuing fee $27.00 verified (LAMC §98.0415(c), Ord. 181,758, eff. 8 Aug 2011) — flat $27 per building permit issued, no ADU or residential exception in the section; the §91.107.2.2 combined building-mechanical permit counts as one building permit. Read live November 13, 2026; currency corroborated by the Jul 2, 2026 City Clerk report (CF 25-0006-S57) quoting §98.0415(c) building permits $27.00. LA-CITY 800 sq ft verified total $4,304 → $4,331; verified rows sitewide 538 → 539. Not verified in this batch: LADWP water capacity — no published ADU rate; the only LADWP installation schedule found is FY2023/2024 and LADWP states charges are contingent on site-specific service requirements, so no row was created. LA Sanitation SFC (LA-CITY-NEW-14, $454–$619 to_verify in the cycle372 branch) re-checked live November 13, 2026: rates unchanged, still no ADU facility type in the BOE rates table — BOE selects the type at S-Permit application — so the row stays to_verify; no duplicate SFC row created.",
+      "headline": "Los Angeles: permit issuing fee $27 verified — LA-CITY 14 rows, 800 sq ft verified $4,331",
+      "items_added": 1,
+      "jurisdictions": ["City of Los Angeles"]
+    },
+{
       "date": "2026-11-13",
       "detail": "ADU fire sprinkler rules post published — the two-question test (CAL FIRE Information Bulletin 25-004; California Residential Code §R309.2 detached-ADU exception: no sprinklers when all four conditions hold — state ADU definition, unsprinklered primary home, 1,200 sq ft or smaller, same lot), plus published NFPA 13D cost ranges. Last verified 5 Nov 2026. Also live today: property tax calculator (/property-tax/, county-average rates from the State Board of Equalization 2024-25 annual report) and corrected meta descriptions for 36 scheduled posts. No new fee rows in this run.",
       "headline": "ADU fire sprinkler rules post published; property tax calculator live",
       "items_added": 0,
       "jurisdictions": []
+    },
+{
+      "date": "2026-11-12",
+      "detail": "South Pasadena: ADU Review - Ministerial ($633 flat, planning) verified in the Amended Schedule of Fees FY 2026-2027 (Res. 8000, eff. 2026-07-06, amended Res. 8037 2026-10-07), re-read live 2026-11-12. The line sits first in the Design Review section, ahead of Director Design Review #102 and Single Family Residence #104, with Multi Family #107-111 and Commercial #112-114 following - the section is a menu of design-review fees by project type, and #101 is the ADU's applicable line. Ministerial review is the standard ADU path (SPMC 36.350.200), so the fee applies to every ADU application. This corrects the batch24 finding that the planning fee appeared to be $0 (that finding rested on the April 2026 Willdan study, which contains neither #101 nor #168-171). Stacking with the Minor review line #171 ($222) is still unresolved - its section header is missing from the schedule extraction - so #171 stays to_verify and is not added to the total. The Technology Surcharge #183 (10% on planning permits) is not added; the $696.30 figure is recorded in the row notes for reference. South Pasadena now has its first verified row (0 to 1); verified rows sitewide 538 to 539 in this branch. The /fees/south-pasadena/ page leaves the zero-row noindex state automatically when this merges (1 verified row is still below the 2-row AdSense bar).",
+      "headline": "South Pasadena: ADU Review - Ministerial verified - $633 planning fee; first verified row for the city",
+      "items_added": 0,
+      "jurisdictions": ["South Pasadena"]
+    },
+{
+      "date": "2026-11-12",
+      "detail": "City of San Diego: 8 fee rows verified from the City's own documents, re-read live 2026-11-12. Development Impact Fee $0 for the standard case: SDMC section 142.0640(b)(1)(A) (Chapter 14, 7-2026 edition, Division 6) exempts the first two ADUs on a premises from DIF regardless of size, with the 143.1305(c)(1) urban-lot-split exception and the 3rd-or-later-ADU rule at 750 sq ft or more, corroborated by the City Public Spaces FAQ and Planning Commission Report PC-25-016 (2025-04-24). This refutes the unsourced FI-004 estimate of $5,000-$8,000 for impact fees above 750 sq ft. Building fees from IB-501 (Fee Schedule for Construction Permits-Structures, Aug 2026), Table 501A Res-SDU/DUP: plan check $8,085.26 and inspection $8,401.90 (base covers the first 3,000 sq ft; $4.10/$4.21 per sq ft above), together $16,487.16, confirming FI-003's $16,500 as the rounded combined total. Also verified: General Plan Maintenance Fee $737 (II.1), Mapping Fee $12.16 (II.2), SMIP 0.013% of valuation (III.5, PRC 2705), Building Standards Fee $1 per $25,000 (HSC 18931.6), and Fee Collection - Other Agencies $17.11 (V). SMIP and CBSC render as amount dash: no confirmed $/sq ft ADU valuation basis exists for SD-CITY. Verified total for an 800 sq ft ADU: $17,253.43. FI-003 and FI-004 are annotated superseded/refuted in this branch, not deleted (deletion is the daily routine's call). City of San Diego now has 8 verified rows (0 to 8); verified rows sitewide 538 to 546 in this branch. The /fees/san-diego/ page leaves the zero-row noindex state automatically when this merges.",
+      "headline": "City of San Diego: 8 fee rows verified - DIF $0, building plan check + inspection $16,487.16",
+      "items_added": 8,
+      "jurisdictions": ["City of San Diego"]
+    },
+{
+      "date": "2026-11-12",
+      "detail": "San Gabriel: 4 permit fees verified from the FY26-27 Master Fee Schedule PDF (city DocumentCenter View/25252), re-read live 2026-11-12 (359,463 bytes, SHA256 5fdb26970a5931d5ce37ccfb820443878008573d000118163b1ed0f9b3e18579, byte-identical to the cycle358/359/369 fetches the same day). Plan Review first 2 hours $397 (over-2-hours work is staff FBR plus outside costs and is not encoded; the $397 is the plan-review floor and the label states the 2-hour scope); Electrical new residential $0.35/sq ft for buildings under 2 units (800 sq ft = $280.00; the $450 SFR state limit does not bind at 800 sq ft); Combination permit issuance $62 (single issuance $43 is not the ADU case); Certificate of Occupancy $136 (temporary CofO $422 is not the standard case). Verified total at 800 sq ft: $875. These are permit fees, so the SGMC 153.047(U) proportionate rule for impact fees does not apply to them. The five impact-fee rows SG-NEW-01..05 stay to_verify: the schedule publishes no ADU-specific line or proration rule for them and the flat-vs-proportionate question can only be settled by city inquiry. San Gabriel now has 4 verified rows (0 to 4, above the 2-row AdSense bar); verified rows sitewide 538 to 542 in this branch. The /fees/san-gabriel/ page leaves the zero-row noindex state automatically when this merges.",
+      "headline": "San Gabriel: 4 permit fees verified - plan review, electrical, issuance, CofO ($875 at 800 sq ft)",
+      "items_added": 0,
+      "jurisdictions": ["San Gabriel"]
     },
 {
       "date": "2026-11-12",

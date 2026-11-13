@@ -29,7 +29,7 @@ faqs:
   - question: "Does Costa Mesa have pre-approved ADU plans?"
     answer: "A program, yes; published plans, not that we could find. The council approved a preapproved ADU design program in March 2025, but no plan set appears on the city's ADU pages as of October 2026. Until plans are actually published, budget the full $14,000 design line in the baseline rather than a discount."
   - question: "What about sewer and water charges for a Costa Mesa ADU?"
-    answer: "The sewer side is confirmed: Orange County Sanitation District charges ADUs at its average-demand rate, $1,710 per 1,000 sq ft or portion thereof, with no minimum charge for ADUs, so an 800 sq ft unit is one block at $1,710 — the same reading this series used for Buena Park on the same table. One flag: the site's fee database stores this line as $1,368 (a pro-rata 0.8 × $1,710 reading); the table's 'portion thereof' wording supports the one-block figure used here, but the district should confirm the fractional-area treatment before payment. The water side is not: retail water comes from Mesa Water District, a separate special district, and no ADU-specific connection charge was located in its published material. Verify the water connection with the district."
+    answer: "The sewer side is confirmed: Orange County Sanitation District charges ADUs at its average-demand rate, $1,710 per 1,000 sq ft or portion thereof, with no minimum charge for ADUs, so an 800 sq ft unit is one block at $1,710 — the same reading this series used for Buena Park on the same table. The fee database now matches: Table A footnote 1 states all calculations are on a 1,000-square-foot, or portion thereof, basis, so the earlier $1,368 pro-rata reading (0.8 × $1,710) was corrected to $1,710 on 13 Nov 2026. The water side is not: retail water comes from Mesa Water District, a separate special district, and no ADU-specific connection charge was located in its published material. Verify the water connection with the district."
 ---
 
 > **DRAFT — not for publication until reviewed.**
@@ -79,7 +79,7 @@ Every fee line we found, with exactly what it is and where it came from.
 | --- | --- | --- |
 | Design & engineering | $14,000 | Series baseline, carried (no published pre-approved plans to discount it) |
 | School fees — Newport-Mesa Unified | **$4,136** | $5.17/sq ft × 800 sq ft — district's official developer-fee page, Fee Justification Study 2025 |
-| OC San sewer capacity charge (CFCC) | **$1,710** | $1,710 per 1,000 sq ft or portion thereof, average-demand rate — OC San Table A, FY 2026–27, effective July 1, 2026; ADUs charged at average demand, minimum waived; 800 sq ft = one block (fee-database pro-rata reading $1,368 flagged for district confirmation) |
+| OC San sewer capacity charge (CFCC) | **$1,710** | $1,710 per 1,000 sq ft or portion thereof, average-demand rate — OC San Table A, FY 2026–27, effective July 1, 2026; ADUs charged at average demand, minimum waived; 800 sq ft = one block (fee-database pro-rata reading $1,368 corrected to $1,710 on 13 Nov 2026 — Table A footnote 1) |
 | Building permit (valuation tiers) | Verify with city | Master fee schedule tiers exist but are dated July 1, 2022; the FY 2026–27 consolidated schedule hearing has been continued to November 17, 2026, and the valuation method for ADUs is unconfirmed |
 | Building plan check | Verify with city | Schedule lists 65% of the permit fee, same dating problem as the permit itself |
 | Document retention | Verify with city | Schedule lists 5% of the permit fee, same dating problem |

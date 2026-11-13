@@ -1,7 +1,7 @@
 # Source: Every Line Item — California ADU Fee Index. https://everylineitem.com/fee-index/
 # License: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) — free to reuse with attribution.
 # Reference date: 2026-11-12 (generated at build time from src/data/fees.json)
-# Scope: verified rows only — 538 verified line items across 160 jurisdictions. Unverified rows are excluded, never estimated.
+# Scope: verified rows only — 539 verified line items across 160 jurisdictions. Unverified rows are excluded, never estimated.
 # Amount at 800 sq ft: computed with the same math as the site calculator (800 sq ft ADU; 1,600 sq ft primary dwelling for prorated lines). Blank = the row has no computable amount at 800 sq ft. A range is shown as low-high.
 jurisdiction,county,fee_name,category,rate,amount_800_sqft,status,source_url,last_verified,effective_date
 Alameda (city),Alameda,Citywide development impact fees — ADUs exempt at all sizes ($0),impact,$0,0,verified,https://www.alamedaca.gov/files/assets/public/v/1/departments/alameda/comm-services/formsandhandouts/planning/adu-permit-packet_2.pdf,2026-10-15,2026
@@ -57,7 +57,9 @@ Beverly Hills,Los Angeles,Wastewater capacity fee,water_sewer,$0,0,verified,http
 Buena Park,Orange,OC San Capital Facilities Capacity Charge for ADUs,utility_capacity,"$1,710",1710,verified,https://eocwd.com/wp-content/uploads/2026/07/OC-SAN-TABLE-A-B-2026-27.pdf,2026-10-23,2026-07-01
 Burbank,Los Angeles,"Development Impact Fees (Transportation + Community Facilities, pro-rata)",impact,"$7,077.62",7078,verified,https://www.burbankca.gov/documents/d/financial-services/fy-2026-27-adopted-fee-schedule-final-revised,7 Oct 2026,
 Burbank,Los Angeles,"Building Permit + Plan Check (R-3 Type B, 800 sq ft)",plan_check_permit,"$3,691.79",3692,verified,https://www.burbankca.gov/documents/d/financial-services/fy-2026-27-adopted-fee-schedule-final-revised,7 Oct 2026,
+Burbank,Los Angeles,Planning ADU Application Fee,plan_check_permit,"$1,728.42",1728,verified,https://www.burbankca.gov/documents/d/financial-services/fy-2026-27-adopted-fee-schedule-final-revised,2026-11-12,2026-07-01
 Burbank,Los Angeles,Public Works ADU Plan Check Review,plan_check_permit,$273.95,274,verified,https://www.burbankca.gov/documents/d/financial-services/fy-2026-27-adopted-fee-schedule-final-revised,7 Oct 2026,
+Burbank,Los Angeles,BUSD Developer Fee (residential),school,$5.38/sq ft,4304,verified,https://bhs.burbankusd.org/fs/resource-manager/view/c304c63d-e657-473d-b24d-916b3779886c,2026-11-12,2026-10-05
 Burbank,Los Angeles,"Sewer Facilities Charge (ADU, pro-rata)",utility_capacity,$908,908,verified,https://www.burbankca.gov/documents/d/financial-services/fy-2026-27-adopted-fee-schedule-final-revised,7 Oct 2026,
 Burlingame,San Mateo,Affordable Housing Impact Fee,impact,$0,0,verified,https://Burlingame.org/DocumentCenter/View/4777/Burlingame-Master-Fee-Schedule-FY2024-25?bidId=,2026-10-20,
 Burlingame,San Mateo,General Plan and Title 25 Zoning Ordinance Maintenance Fee,plan_check_permit,0.2% of valuation,,verified,https://Burlingame.org/DocumentCenter/View/4777/Burlingame-Master-Fee-Schedule-FY2024-25?bidId=,2026-10-20,

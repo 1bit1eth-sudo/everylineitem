@@ -8,7 +8,7 @@ draft: false
 series: ca-adu
 seriesCurrent: anaheim-adu-cost
 verifiedPublished: "7 Oct 2026"
-lastVerified: "7 Oct 2026"
+lastVerified: "13 Nov 2026"
 nextReview: "Jan 2027"
 ogImage: "https://everylineitem.com/images/pinterest/anaheim-adu-cost.png"
 keyFacts:
@@ -18,12 +18,12 @@ keyFacts:
   permitFee: "$1,672*"
   schoolFee: "$4,304"
   impactFee: "~$10,411*"
-  sewerWater: "$1,368–$1,710*"
+  sewerWater: "$1,710*"
   freePlans: "4 designs"
   cliff750: "Yes"
 faqs:
   - question: "How much does an ADU cost in Anaheim in 2026?"
-    answer: "About $320,000 for an 800 sq ft detached, single-story, new-construction unit with mid-grade finishes in Anaheim — roughly $400 per square foot, at parity with the LA County baseline. That figure rests on four stated assumptions we have not confirmed with the city: the permit-fee category applied to ADUs, the final adoption and calculation basis of the 2026 impact-fee update, whether the OC San capacity charge applies to a detached ADU, and city water connection charges. We emailed the city's Building Division on Oct 7, 2026 with these questions and the city replied the same day, after publication — confirming the sanitation average of $1.71 per square foot, that park fees apply to construction of 750 square feet and above, and referring school-fee (address-specific) and water-connection questions to the relevant departments. The 2026 impact-fee adoption and calculation basis remain unconfirmed."
+    answer: "About $320,000 for an 800 sq ft detached, single-story, new-construction unit with mid-grade finishes in Anaheim — roughly $400 per square foot, at parity with the LA County baseline. That figure rests on three stated assumptions we have not confirmed with the city: the permit-fee category applied to ADUs, the final adoption and calculation basis of the 2026 impact-fee update, and city water connection charges. We emailed the city's Building Division on Oct 7, 2026 with these questions and the city replied the same day, after publication — confirming the sanitation average of $1.71 per square foot, that park fees apply to construction of 750 square feet and above, and referring school-fee (address-specific) and water-connection questions to the relevant departments. The 2026 impact-fee adoption and calculation basis remain unconfirmed."
   - question: "Does Anaheim charge impact fees on ADUs?"
     answer: "ADUs under 750 square feet are fully exempt under state law (Gov. Code §66311.5). ADUs of 750 square feet or more pay impact fees proportional to the primary dwelling's square footage. Anaheim overhauled its impact fees in 2026 — the first update since 2011 — with adopted residential rates of $1,128 (police), $759 (fire), $1,610 (library), and $16,022 (parks) per unit, totaling $19,521. Our example math puts an 800 sq ft ADU's share at about $10,411 on a 1,500 sq ft house, but the resolutions' final adoption and the calculation basis are unconfirmed."
   - question: "How much are school district fees on an ADU in Anaheim?"
@@ -31,7 +31,7 @@ faqs:
   - question: "Does Anaheim have pre-approved ADU plans?"
     answer: "Yes — ADU Express, the most developed pre-approved program in this series. Four free detached plans (224, 499, 990, and 1,199 sq ft) with a seven-step process that includes a free utility 'meter spot' visit, typically within three business days. The 224 and 499 sq ft plans sit under the 750 sq ft impact-fee cliff; the 990 and 1,199 sq ft plans clear it and pay proportional fees."
 ---
-> **Published:** 7 Oct 2026 · **Last verified:** 7 Oct 2026 · **Next review:** Jan 2027
+> **Published:** 7 Oct 2026 · **Last verified:** 13 Nov 2026 · **Next review:** Jan 2027
 > Cost figures are re-checked against permit records quarterly. Changes are
 > logged in [Corrections](/corrections/).
 
@@ -39,7 +39,7 @@ Anaheim charges the steepest development impact fees in this series — and runs
 
 The city's 2026 impact-fee overhaul — its first since 2011 — sets residential rates that total **$19,521 per unit**, driven by a $16,022 parks fee. An 800 sq ft ADU, clearing the 750 sq ft cliff, pays a proportional share: our example math lands at **~$10,411** on a 1,500 sq ft house, the largest ADU impact-fee line we have published. Against that, the building permit is a relative bargain at **$1,672 with plan check included** — the only combined permit fee in the series — and ADU Express hands out four free pre-approved plans with a seven-step process. Our six-phase total lands at **$320,000, or $400 per square foot** — exactly the LA County baseline, built from very different parts.
 
-Four assumptions sit underneath that total, each marked where it appears: the permit-fee category applied to ADUs, the final adoption and calculation basis of the 2026 impact-fee update, whether the regional sewer charge applies, and city water connection charges. We emailed the city's Building Division on Oct 7, 2026 with these questions and the city replied the same day, after publication — confirming the sanitation average of $1.71 per square foot, that park fees apply to construction of 750 square feet and above, and referring school-fee (address-specific) and water-connection questions to the relevant departments. Construction phases 2–6 are carried from the Los Angeles County baseline; Anaheim does not publish phase-level construction costs.
+Three assumptions sit underneath that total, each marked where it appears: the permit-fee category applied to ADUs, the final adoption and calculation basis of the 2026 impact-fee update, and city water connection charges. We emailed the city's Building Division on Oct 7, 2026 with these questions and the city replied the same day, after publication — confirming the sanitation average of $1.71 per square foot, that park fees apply to construction of 750 square feet and above, and referring school-fee (address-specific) and water-connection questions to the relevant departments. Construction phases 2–6 are carried from the Los Angeles County baseline; Anaheim does not publish phase-level construction costs.
 
 ## The short answer
 
@@ -49,7 +49,7 @@ Four assumptions sit underneath that total, each marked where it appears: the pe
 | Cost per square foot | **$400** |
 | Largest single line | Systems + interior, $147,000 |
 | School district fees (two districts) | **$4,304** |
-| OC San sewer capacity charge | **$1,368–$1,710 (city confirmed $1.71/sq ft avg; rounding basis unconfirmed)** |
+| OC San sewer capacity charge | **$1,710** (OC San Table A FY 2026–27: average-demand $1,710 per 1,000 sq ft or portion thereof; ADUs charged at the average-demand rate, minimum does not apply) |
 | Building permit, plan check included (assumed category) | **~$1,672 (assumed)** |
 | DIF — four fees, pro-rata (assumed interpretation) | **~$10,411 (assumed)** |
 
@@ -79,7 +79,7 @@ Every fee line we found, with exactly what it is and where it came from.
 | Building permit (plan check included) | ~$1,672 | "Combined Plan Check and Building Permit Fees," Tier 3 — **assumes Residential Category 2; the city's ADU classification is unconfirmed** |
 | School fees (AESD + AUHSD) | **$4,304** | $5.38/sq ft × 800 — AUHSD $2.69 verified in May 2026 resolution; AESD $2.69 via 50/50 split collected by AUHSD |
 | DIF — police/fire/library/parks, pro-rata (example) | ~$10,411 | $19,521 × 800/1,500 — **the 2026 resolutions' final adoption and the calculation basis are unconfirmed** |
-| OC San capacity charge (CFCC) | $1,368–$1,710 | The city confirmed the **$1.71/sq ft average** in its Oct 7, 2026 reply — $1,368 at 800 sq ft on a straight average vs. $1,710 if OC San Table A's "per 1,000 sq ft or portion thereof" rounds up; **the rounding basis and applicability to a detached ADU are unconfirmed** |
+| OC San capacity charge (CFCC) | **$1,710** | OC San Table A FY 2026–27 (eff. July 1, 2026): average-demand $1,710 per 1,000 sq ft or portion thereof — an 800 sq ft ADU is one block. ADUs are charged at the average-demand rate and the minimum does not apply. The city's Oct 7, 2026 reply confirmed the $1.71/sq ft average. |
 | City water / sewer connection | **$0** | Existing connections used; an ADU "contained within the existing space" is not a new dwelling unit — **new detached ADU connection charges are unconfirmed** |
 
 ## The highest impact fees in the series
@@ -116,7 +116,7 @@ State law draws the line every city in this series follows: no impact fees under
 | Pre-approved plans | 4, free, in production | none |
 | ADU permits 2022–2024 (HCD) | top 12 statewide | — |
 
-The $0 gap is a coincidence of the example math, not a finding — the four unconfirmed assumptions dominate it. The real story is the composition: the series' highest impact fees paired with its only combined permit fee and its most developed free-plan program.
+The $0 gap is a coincidence of the example math, not a finding — the three unconfirmed assumptions dominate it. The real story is the composition: the series' highest impact fees paired with its only combined permit fee and its most developed free-plan program.
 
 ## A note on SB 1117
 

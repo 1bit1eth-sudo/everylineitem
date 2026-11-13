@@ -7,7 +7,7 @@ author: "Every Line Item"
 tags: ["adu", "pre-approved plans", "guide", "permit fees", "california", "2026"]
 draft: false
 verifiedPublished: "24 Oct 2026"
-lastVerified: "24 Oct 2026"
+lastVerified: "13 Nov 2026"
 nextReview: "Jan 2027"
 ogImage: "https://everylineitem.com/images/pinterest/free-adu-plans.png"
 faqs:
@@ -19,7 +19,8 @@ faqs:
     answer: "Usually only within narrow limits. Pasadena voids the pre-approval if you modify the drawings beyond minor site adaptations, and most programs require a hold-harmless agreement. Any structural change typically sends you back through full plan check — at which point the 'free' plan costs you the review you were trying to skip."
 ---
 
-> **Published:** 24 Oct 2026 · **Last verified:** 24 Oct 2026 · **Next review:** Jan 2027
+> **Published:** 24 Oct 2026 · **Last verified:** 13 Nov 2026 · **Next review:** Jan 2027
+> **Update (13 Nov 2026):** The permit range in "What 'free' actually saves" is corrected to $1,006–~$19,500. The old $7,541 top was Oceanside's superseded 2018/2021 schedule.
 
 The most expensive drawing in an ADU project is the first one. Custom ADU plans from a licensed architect run **$8,000–$20,000** — before the city has even looked at them. Then plan check adds its own fee and its own months.
 
@@ -45,7 +46,7 @@ Two patterns stand out. **Fontana and Sacramento size their free plans to dodge 
 2. **Plan check fees: ~$1,000–$3,000.** Pre-approved plans have cleared engineering review; the city typically charges only a reduced site-specific review. (Estimate based on plan-check-as-percentage-of-permit math across the series; confirm with your city.)
 3. **Time: weeks to months.** Full plan check cycles run 4–12 weeks per round, with corrections. Pre-approved plans compress this to a completeness check.
 
-What free does **not** save: the building permit itself (still $1,006–$7,541 depending on city), school fees, impact fees, utility connections, or soils and survey work for your specific lot.
+What free does **not** save: the building permit itself (still $1,006–~$19,500 depending on city), school fees, impact fees, utility connections, or soils and survey work for your specific lot.
 
 ## The catches
 

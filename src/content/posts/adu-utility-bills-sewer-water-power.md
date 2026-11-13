@@ -6,7 +6,7 @@ author: "Every Line Item"
 tags: ["adu cost", "utilities", "sewer", "water", "california", "guide", "2026"]
 draft: false
 verifiedPublished: "1 Nov 2026"
-lastVerified: "1 Nov 2026"
+lastVerified: "13 Nov 2026"
 nextReview: "Jan 2027"
 faqs:
   - question: "How much are utility connection fees for an ADU in California?"
@@ -17,7 +17,7 @@ faqs:
     answer: "A one-time fee for the right to send wastewater into the public system — essentially buying a slice of treatment-plant capacity. It is distinct from monthly sewer service charges. Amounts are set by the sewer district (not always the city), often per drainage fixture unit or per dwelling unit, and ADU treatment varies widely."
 ---
 
-> **Published:** 1 Nov 2026 · **Last verified:** 1 Nov 2026 · **Next review:** Jan 2027
+> **Published:** 1 Nov 2026 · **Last verified:** 13 Nov 2026 · **Next review:** Jan 2027
 > Utility figures are re-checked quarterly. Changes are logged in [Corrections](/corrections/).
 
 Ask a contractor what utilities cost on an ADU and you'll usually get a shrug inside the bid. Ask thirteen California cities and you get everything from **$0 to $7,751** — for the same 800 sq ft box. Sewer, water, and power are the least itemized lines in ADU construction, and sewer is the most volatile of the three.
@@ -36,7 +36,7 @@ Sewer capacity charges are set by sewer districts, which often aren't the city �
 | San Francisco | **$0** | Minimal/none |
 | Long Beach | ~$209 | Nominal |
 | Burbank | **$908** | With a 750 sq ft cliff — first in series |
-| Anaheim | $1,368–$1,710* | OC San $1.71/sq ft |
+| Anaheim | **$1,710** | OC San average-demand rate, $1,710 per 1,000 sq ft (or portion thereof) |
 | Fullerton | ~$1,710* | Per-sq-ft rate |
 | Garden Grove | ~$1,710* | Per-sq-ft rate |
 | Campbell | Up to **$6,727** + $1,024 capacity | West Valley Sanitation: $567.68/drainage fixture unit (cap $6,727) + $86.42/fixture unit treatment capacity (cap $1,024) |
@@ -44,7 +44,7 @@ Sewer capacity charges are set by sewer districts, which often aren't the city �
 Three patterns emerge:
 
 1. **The $0 cities.** Torrance, Oakland, Sacramento, and San Francisco charge ADUs nothing for sewer. This is usually a deliberate policy choice — the ADU rides on the existing lateral, and the district absorbs the marginal load.
-2. **The per-square-foot cities.** Anaheim, Fullerton, and Garden Grove (all Orange County, all on OC San) charge around $1.71/sq ft — roughly $1,368–$1,710 on 800 sq ft. Predictable, middle of the road.
+2. **The per-square-foot cities.** Anaheim, Fullerton, and Garden Grove (all Orange County, all on OC San) charge the average-demand rate — $1,710 per 1,000 sq ft or portion thereof, so $1,710 on an 800 sq ft ADU. Predictable, middle of the road.
 3. **The fixture-unit cities.** Campbell's West Valley Sanitation District charges per drainage fixture unit — $567.68 per DFU up to $6,727, plus a treatment capacity charge. A full bathroom + kitchen ADU can stack fixture units fast. This is the highest sewer exposure in our data.
 
 **Burbank's sewer cliff** deserves its own mention: the first 750-sq-ft-style cliff we've seen applied to sewer specifically, not just impact fees. Size the ADU at 749 and the sewer charge vanishes; at 750, it's $908.
