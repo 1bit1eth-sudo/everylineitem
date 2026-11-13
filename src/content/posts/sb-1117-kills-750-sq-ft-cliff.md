@@ -36,7 +36,7 @@ Our estimates below apply each city's published impact-fee rates to 50 sq ft ins
 | Palo Alto | ~$18,090 | ~$1,130 | **~$16,960** |
 | Anaheim | ~$10,411 | ~$650 | **~$9,750** |
 | Fullerton | ~$6,411 | ~$400 | **~$6,000** |
-| Sacramento | ~$5,728 | ~$360 | **~$5,370** |
+| Sacramento | ~$5,347 | ~$334 | **~$5,013** |
 | Glendale | up to $4,700 | ~$295 | **~$4,400** |
 | Torrance | $2,243.47 flat | TBD* | TBD* |
 | Riverside | ~$1,484 (park, pro-rata) | ~$95 | **~$1,390** |
