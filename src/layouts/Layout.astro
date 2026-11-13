@@ -122,6 +122,14 @@ const siteStructuredData = {
       plausible.init()
     </script>
 
+    <!-- Google Tag Manager (includes Google Analytics 4, G-EV2EETXDZ1) -->
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PKNVDWJN"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    </script>
+
     <!-- RSS autodiscovery -->
     <link
       rel="alternate"
@@ -184,6 +192,8 @@ const siteStructuredData = {
   <body
     class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col"
   >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKNVDWJN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <slot />
     <script>
       import "@/scripts/theme";
