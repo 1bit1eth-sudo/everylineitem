@@ -8,7 +8,7 @@ draft: false
 series: ca-adu
 seriesCurrent: burbank-adu-cost
 verifiedPublished: "7 Oct 2026"
-lastVerified: "7 Oct 2026"
+lastVerified: "12 Nov 2026"
 nextReview: "Jan 2027"
 ogImage: "https://everylineitem.com/images/pinterest/burbank-adu-cost.png"
 keyFacts:
@@ -16,22 +16,22 @@ keyFacts:
   totalCost: "$320,000"
   costPerSqFt: "$400"
   permitFee: "$3,692*"
-  schoolFee: "$4,304*"
+  schoolFee: "$4,304"
   impactFee: "~$7,078*"
   sewerWater: "$908"
   freePlans: "Paid registry"
   cliff750: "Yes (DIF + sewer)"
 faqs:
   - question: "How much does an ADU cost in Burbank in 2026?"
-    answer: "About $320,000 for an 800 sq ft detached, single-story, new-construction unit with mid-grade finishes in Burbank — roughly $400 per square foot, at parity with the LA County baseline. That figure rests on five stated assumptions we have not confirmed with the city: the school district fee rate ($5.38 vs. $5.17), whether the $1,728 Planning ADU fee applies to a ministerial permit, whether a detached ADU needs a separate water connection, the final adoption of the ADU ordinance update, and the parks allocation inside the community facilities fee. Construction phases 2–6 are carried from the Los Angeles County baseline; Burbank does not publish phase-level construction costs."
+    answer: "About $320,000 for an 800 sq ft detached, single-story, new-construction unit with mid-grade finishes in Burbank — roughly $400 per square foot, at parity with the LA County baseline. That figure rests on four stated assumptions we have not confirmed with the city: whether the $1,728 Planning ADU fee applies to a ministerial permit, whether a detached ADU needs a separate water connection, the final adoption of the ADU ordinance update, and the parks allocation inside the community facilities fee. Construction phases 2–6 are carried from the Los Angeles County baseline; Burbank does not publish phase-level construction costs."
   - question: "Does Burbank charge impact fees on ADUs?"
     answer: "ADUs under 750 square feet are fully exempt under state law (Gov. Code §66311.5), and Burbank's ordinance (BMC 10-1-620.3(K)(2)) says so explicitly. ADUs of 750 square feet or more pay impact fees proportional to the primary dwelling's square footage — the city's published DIF calculation guide uses the ADU-to-house ratio with the house size taken from the LA County Assessor portal. Our example math puts an 800 sq ft ADU's share at about $7,078 on an 1,800 sq ft house, including the 5% administration surcharge."
   - question: "How much are school district fees on an ADU in Burbank?"
-    answer: "$4,304 on 800 sq ft at $5.38 per square foot — if the Burbank Unified School District board adopted Resolution 1-27 in August 2026, which we could not confirm. The district's May 2026 justification study is the first in this series to name ADUs directly, stating that 'ADUs and JADUs over 500 square feet' generate students and will be levied. If the resolution did not pass, the prior $5.17 rate applies ($4,136). Burbank is a single-district city, so there is no split to track."
+    answer: "$4,304 on 800 sq ft at $5.38 per square foot. The Burbank Unified School District board adopted Resolution 1-27 on August 6, 2026 (unanimous vote, agenda item 12.a), and the $5.38 rate took effect October 5, 2026. The district's May 2026 justification study is the first in this series to name ADUs directly, stating that 'ADUs and JADUs over 500 square feet' generate students and will be levied. Burbank is a single-district city, so there is no split to track."
   - question: "Does Burbank have pre-approved ADU plans?"
     answer: "Yes, but not free ones. The Burbank Pre-Approved ADU Program (BPAP) is a designer registry: architects register their plans, the city lists them in a public library (currently two designs), and homeowners buy the plans from the designer. That contrasts with Garden Grove and Anaheim, which hand out city-produced plans for free. Registration review and permit review each target 30 business days."
 ---
-> **Published:** 7 Oct 2026 · **Last verified:** 7 Oct 2026 · **Next review:** Jan 2027
+> **Published:** 7 Oct 2026 · **Last verified:** 12 Nov 2026 · **Next review:** Jan 2027
 > Cost figures are re-checked against permit records quarterly. Changes are
 > logged in [Corrections](/corrections/).
 
@@ -39,7 +39,7 @@ Burbank is the first city in this series to put a 750 sq ft cliff on the sewer b
 
 The sewer facilities charge — $2,043 per residence — carries a footnote that reads like it was written for this series: ADUs greater than 750 square feet pay a proportional share based on an 1,800 sq ft average household. An 800 sq ft ADU clearing the cliff pays **$908**. Below it, $0. No other city we have published draws the state-law line on sewer. Meanwhile the fee schedule lists "Accessory Dwelling Unit" as its own line item twice — **$1,728.42** for the Planning application and **$273.95** for the Public Works plan check review — the first time ADU has appeared as a named fee anywhere in this series. Our six-phase total lands at **$320,000, or $400 per square foot** — exactly the LA County baseline, built from very different parts.
 
-Five assumptions sit underneath that total, each marked where it appears: the school district fee rate, whether the Planning ADU fee applies to a ministerial permit, whether a detached ADU needs a separate water connection, the final adoption of the ADU ordinance update, and the parks allocation inside the community facilities fee. Construction phases 2–6 are carried from the Los Angeles County baseline; Burbank does not publish phase-level construction costs.
+Four assumptions sit underneath that total, each marked where it appears: whether the Planning ADU fee applies to a ministerial permit, whether a detached ADU needs a separate water connection, the final adoption of the ADU ordinance update, and the parks allocation inside the community facilities fee. Construction phases 2–6 are carried from the Los Angeles County baseline; Burbank does not publish phase-level construction costs.
 
 ## The short answer
 
@@ -49,10 +49,10 @@ Five assumptions sit underneath that total, each marked where it appears: the sc
 | Cost per square foot | **$400** |
 | Largest single line | Systems + interior, $147,000 |
 | Building permit + plan check | **$3,692 (highest in the series)** |
-| School district fee (single district) | **$4,304 ($5.38 rate assumed)** |
+| School district fee (single district) | **$4,304 ($5.38 rate, Resolution 1-27)** |
 | DIF — transportation + community facilities, pro-rata | **~$7,078 (assumed)** |
 | Sewer facilities charge, pro-rata (750+ only) | **$908** |
-| ADU-specific schedule fees (Planning + Public Works) | **~$2,002 (assumed applicable)** |
+| ADU-specific schedule fees (Planning + Public Works) | **~$2,002** |
 
 ## The full line-item breakdown
 
@@ -79,9 +79,9 @@ Every fee line we found, with exactly what it is and where it came from.
 | Design & engineering | $14,000 | Series baseline, carried (BPAP plans are purchased from designers, not free) |
 | Building permit (R-3 Type B) | $2,142 | $1,647.14 + 3 × $165.02 per 100 sq ft over 500 — FY 2026-27 adopted fee schedule |
 | Plan check (R-3 Type B) | $1,550 | $1,193.28 + 3 × $118.77 per 100 sq ft over 500 — same schedule |
-| Planning — ADU application | $1,728 | "Accessory Dwelling Unit" line item, Pre-Development Review — **whether it applies to a ministerial ADU permit is unconfirmed** |
+| Planning — ADU application | $1,728 | "Accessory Dwelling Unit" line item, Art. III §1(C)(6) — the standard ADU permit application fee; applies to ministerial permits (BMC 10-1-620.7(A)(4)) |
 | Public Works — ADU plan check review | $274 | "Accessory Dwelling Unit (ADU) Plan Check Reviews" line item |
-| School fee (Burbank USD) | **$4,304** | $5.38/sq ft × 800 — **Resolution 1-27 adoption unconfirmed; falls to $4,136 at the prior $5.17 rate** |
+| School fee (Burbank USD) | **$4,304** | $5.38/sq ft × 800 — BUSD Resolution 1-27, adopted 6 Aug 2026, effective 5 Oct 2026 |
 | DIF — transportation + community facilities, pro-rata (example) | ~$7,078 | $15,166.33 × 800/1,800 + 5% surcharge — per the city's published ADU DIF calculation guide |
 | Sewer facilities charge, pro-rata | $908 | $2,043 × 800/1,800 — footnote (e): ADUs over 750 sq ft only |
 | Water connection | **$0** | Existing connection used — **whether a detached ADU requires a separate connection is unconfirmed (BWP discretion)** |
@@ -96,7 +96,7 @@ The practical effect: a 749 sq ft ADU pays $0 in sewer facilities charges; an 80
 
 Burbank's FY 2026-27 fee schedule names "Accessory Dwelling Unit" twice. The Planning section lists an ADU application at **$1,728.42**; the Public Works section lists an ADU plan check review at **$273.95**. No other city in this series has ADU as a named fee line — elsewhere the unit is processed under generic residential tiers and the schedule never says the word.
 
-One caution on the $1,728: it sits under the "Pre-Development Review" category, and the ordinance language tying it to the ADU permit application (BMC 10-1-620.7) does not resolve whether a ministerial, by-right ADU permit — the kind state law guarantees — is charged the pre-development rate. We count it in the total and mark it assumed.
+The $1,728 is confirmed, not assumed. BMC 10-1-620.7(A) requires every ADU applicant to file the ADU permit application with the Planning Division and pay the application fee in the Adopted Citywide Fee Schedule, and BMC 10-1-620.3(A) requires complete applications to be approved or denied ministerially within 60 days — the fee is part of the ministerial application itself. The schedule lists it as its own line item, Art. III §1(C)(6), not the (C)(1) Pre-Development Review fee ($4,676.54). We count it in the total as verified.
 
 ## The most expensive permit in the series
 
@@ -126,7 +126,7 @@ The school-fee cliff sits lower at 500 sq ft (SB 543), so the 800 sq ft example 
 | Pre-approved plans | 2, paid registry | none |
 | ADU permits 2022–2024 (HCD) | 818, 14th statewide | — |
 
-The $0 gap is a coincidence of the example math, not a finding — the five unconfirmed assumptions dominate it. The real story is the composition: the series' only sewer cliff, its only ADU-named fees, and its most expensive permit, all netting to exactly the baseline.
+The $0 gap is a coincidence of the example math, not a finding — the four unconfirmed assumptions dominate it. The real story is the composition: the series' only sewer cliff, its only ADU-named fees, and its most expensive permit, all netting to exactly the baseline.
 
 ## A note on SB 1117
 
@@ -134,4 +134,4 @@ Signed September 2026, effective January 2027: for a homeowner's first two ADUs,
 
 ## Disclaimer
 
-Model estimate, not a quote. Fees change; the assumptions above are the city's to confirm — the school district resolution, the Planning ADU fee's applicability, water connection requirements, the ordinance update's final adoption, and the parks allocation are all marked where they appear. Always verify current fees with the City of Burbank Community Development Department before budgeting.
+Model estimate, not a quote. Fees change; the assumptions above are the city's to confirm — the Planning ADU fee's applicability, water connection requirements, the ordinance update's final adoption, and the parks allocation are all marked where they appear. Always verify current fees with the City of Burbank Community Development Department before budgeting.
