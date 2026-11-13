@@ -48,6 +48,6 @@ SB 1117 (Chapter 809, Statutes of 2026) narrows impact fees for a lot's first tw
 ## Sources
 
 - City of Hayward, Adopted Master Fee Schedule FY2026-27, Effective July 1, 2026 — https://www.hayward-ca.gov/sites/default/files/2026-07/Adopted-FY2027-Master-Fee-Schedule-and-Hourly-Rates-Effective-260701.pdf
-- Hayward Unified school developer fee $5.38/sq ft: existing verification on file (fees.json FI-233); not re-verified in the FY2027 city schedule, which does not set school rates.
+- Hayward Unified school developer fee $5.38/sq ft: existing verification on file in our fee data; not re-verified in the FY2027 city schedule, which does not set school rates.
 
 All FY2027 figures above were read in the official schedule on 30 Oct 2026.

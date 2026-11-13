@@ -47,7 +47,7 @@ That makes the school fee the one line you can finalize today with zero timing r
 
 ## Action 3 — Start the utility timeline now
 
-[SB 1196](/posts/sb-1196-utility-hookup-backlog/) — effective the same day, January 1, 2027 — orders the CPUC to set hard utility-connection deadlines with penalties, and lets you file the hookup request alongside the building permit. But the current reality is a **9–12 month wait** after construction for the connection, and the new deadlines phase in; they do not erase the existing queue.
+[SB 1196](/posts/sb-1196-utility-hookup-backlog/) — effective the same day, January 1, 2027 — requires the CPUC to set electric hookup timelines with penalties by September 30, 2027, including filing the energization request alongside the building permit. Until then, the current reality is a **9–12 month wait** after construction for the connection, and the new deadlines phase in; they do not erase the existing queue.
 
 The action: file the utility hookup request as early as your utility allows — alongside the permit application if they accept it — rather than after final inspection. A finished ADU with no power is rent you cannot collect, and no fee-law change fixes a queue you joined late.
 
