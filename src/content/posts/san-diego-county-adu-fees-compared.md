@@ -1,16 +1,16 @@
 ---
 title: "San Diego County ADU Fees Compared: $308K to $344K in 30 Miles"
-description: "The same 800 sq ft ADU, three San Diego County fee philosophies: Chula Vista $308,000 (flat $3,951 permit, 12 pre-approved plans), Oceanside $313,000 (ordinance DIF $0 — but a city draft study disagrees), and the City of San Diego $344,000 (a ~$16,500 permit bill). A $36,000 spread inside one county — and the December-vs-January SB 1117 question."
+description: "The same 800 sq ft ADU, three San Diego County fee philosophies: Chula Vista $308,000 (flat $3,951 permit, 12 pre-approved plans), Oceanside $311,000 (ordinance DIF $0 — but a city draft study disagrees), and the City of San Diego $344,000 (a ~$16,500 permit bill). A $36,000 spread inside one county — and the December-vs-January SB 1117 question."
 pubDatetime: 2026-11-11T01:00:00Z
 author: "Every Line Item"
 tags: ["adu cost", "san diego county", "comparison", "chula vista", "oceanside", "san diego", "2026"]
 draft: false
 verifiedPublished: "11 Nov 2026"
-lastVerified: "9 Oct 2026"
+lastVerified: "13 Nov 2026"
 nextReview: "Jan 2027"
 faqs:
   - question: "Which city in San Diego County is cheapest for building an ADU?"
-    answer: "By our numbers, Chula Vista at $308,000 for an 800 sq ft detached ADU — roughly $385 per square foot, well under the LA County baseline. Oceanside follows at $313,000, and the City of San Diego at $344,000. The honest caveat: Chula Vista's total excludes its development impact fee dollar amount and sewer/water capacity charges (both 'verify with city'), so the real gap may be narrower."
+    answer: "By our numbers, Chula Vista at $308,000 for an 800 sq ft detached ADU — roughly $385 per square foot, well under the LA County baseline. Oceanside follows at $311,000, and the City of San Diego at $344,000. The honest caveat: Chula Vista's total excludes its development impact fee dollar amount and sewer/water capacity charges (both 'verify with city'), so the real gap may be narrower."
   - question: "How much are ADU permit fees in the City of San Diego versus Chula Vista?"
     answer: "About $16,500 versus $3,951 — a 4x gap on identical drawings. The City of San Diego bills plan check ($8,085.26) plus inspection ($8,401.90) at its single-dwelling rate (IB-501). Chula Vista's Fee Bulletin 10-400 lists a flat $3,951 for a detached ADU on one of its 12 pre-approved plans ($476 intake + $533 plan check + $2,942 inspection), with no valuation math at all."
   - question: "Does Oceanside charge impact fees on ADUs?"
@@ -18,9 +18,11 @@ faqs:
   - question: "What does SB 1117 change for San Diego County ADUs?"
     answer: "Effective January 1, 2027, for a homeowner's first two ADUs, impact fees may be imposed only on square footage above 750, calculated marginally. San Diego's 750 sq ft cliff — $5,000–$8,000 in newly triggered impact fees on an 800 sq ft unit (our estimate) — would fall to roughly $313–$500. Chula Vista's proportional DIF and Oceanside's $0/possible-$4,824 also face the same rewrite. School fees are unaffected."
 ---
-> **Published:** 11 Nov 2026 · **Last verified:** 9 Oct 2026 · **Next review:** Jan 2027
+> **Published:** 11 Nov 2026 · **Last verified:** 13 Nov 2026 · **Next review:** Jan 2027
 > Cost figures are re-checked against permit records quarterly. Changes are
 > logged in [Corrections](/corrections/).
+>
+> **Update 13 Nov 2026:** Oceanside's permit ($5,378) and total ($311,000) corrected from the city's FY 2026-27 fee schedule; the $7,541 figure (2018/2021 tables, fire and water review included) is retired.
 
 Three cities. One county. The same 800 sq ft detached ADU on paper — and a **$36,000** spread in what it costs, decided almost entirely by fee schedules.
 
@@ -30,16 +32,16 @@ This is the fourth regional comparison in the series (after LA County, Orange Co
 
 | | Chula Vista | Oceanside | City of San Diego |
 | --- | --- | --- | --- |
-| **Total (800 sq ft)** | **$308,000** | **$313,000** | **$344,000** |
-| Per sq ft | $385 | $392 | $430 |
-| Building permit + plan check | **$3,951 (flat)** | **~$7,541\*** | **~$16,500** |
+| **Total (800 sq ft)** | **$308,000** | **$311,000** | **$344,000** |
+| Per sq ft | $385 | $389 | $430 |
+| Building permit + plan check | **$3,951 (flat)** | **$5,378 (FY 2026-27)** | **~$16,500** |
 | School fee | $2,408 (HSD only, half-confirmed) | $3,832 (confirmed) | series baseline carried |
 | Impact / DIF | Pro-rata to house — **amount not published** | **$0 (ordinance)** — draft would add up to $4,824 | ~$5,000–$8,000 at 800 sq ft (our estimate) |
 | Sewer / water | Verify with city | Not found — verify with city | carried |
 | 750 sq ft cliff | Pro-rata DIF switches on at 750 | No cliff (ordinance says $0) | ~$5,000–$8,000 cliff (our estimate) |
 | Pre-approved plans | 12 (SnapADU partnership) | 0 (program exists, library empty) | Accepts County / Chula Vista / Encinitas plans |
 
-\*Oceanside's $7,541 is partial — priced from 2018 and 2021 rate tables, with the ADU's fee classification unconfirmed. Full footnotes: [Chula Vista](/posts/chula-vista-adu-cost/) · [Oceanside](/posts/oceanside-adu-cost/) · [San Diego](/posts/san-diego-adu-cost/).
+Oceanside's $5,378 is plan check ($1,862.70) + inspection ($3,515.40) from the city's FY 2026-27 fee schedule; 12% in surcharges applies at the counter on top. Full footnotes: [Chula Vista](/posts/chula-vista-adu-cost/) · [Oceanside](/posts/oceanside-adu-cost/) · [San Diego](/posts/san-diego-adu-cost/).
 
 Fee lines for each city, with verification status and source links: [Chula Vista](/fees/chula-vista/) · [Oceanside](/fees/oceanside/) · [City of San Diego](/fees/sd-city/).
 
@@ -53,7 +55,7 @@ The caveat is the size of what the menu does not price: the DIF dollar amount (p
 
 **Oceanside: the contradiction.** The zoning ordinance says, plainly, "The City shall not impose any impact fees upon the development of an ADU or JADU." Oakland reached $0 by exemption; Salinas by waiver; Oceanside by flat declaration. But the city's own August 2025 park DIF nexus draft — unadopted, still a draft — justifies up to **$6.03/sq ft** and exempts only ADUs under 750 sq ft. On 800 sq ft that is up to **$4,824** the ordinance says does not exist. We priced the post on the ordinance: **$0**. If the draft is ever adopted, Oceanside's ranking row moves $4,824 in the wrong direction overnight.
 
-Oceanside also carries the series' steepest permit bill at ~$7,541 — square-foot-based pricing (plan check + inspection + fire and water review + surcharges), more than seven times Riverside's $1,006. Three asterisks apply: the tables are old vintages, the ADU's fee classification is unconfirmed, and the draft's fate is unknown.
+Oceanside's permit bill is $5,378 — square-foot-based pricing (plan check $1,862.70 + inspection $3,515.40) from the city's FY 2026-27 fee schedule, with the detached ADU confirmed as new single-family construction — more than five times Riverside's $1,006. The old ~$7,541 figure added fire review (20%) and water review (15%) from 2018/2021 tables; those lines are not in the current schedule, so they are unconfirmed — not $0 — and 12% in surcharges applies at the counter on top. The draft's fate is still unknown.
 
 **City of San Diego: the heavyweight.** $344,000, or $430 per square foot — about 7% above the LA County baseline, most of it subcontractor rates rather than fees. But the fee philosophy is the story: plan check ($8,085.26) plus inspection ($8,401.90) at the single-dwelling rate — **~$16,500** — the kind of line that makes a $16,500 swing possible on the permit counter alone between the city and Encinitas on identical drawings. The 750 sq ft cliff bites here too: crossing 750 switches on roughly $5,000–$8,000 in impact fees (our estimate), making the last 50 sq ft cost $530–$590 per foot.
 
