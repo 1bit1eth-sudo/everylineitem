@@ -32,6 +32,14 @@ The most valuable messages we get are from contractors and estimators telling us
 
 ## Change log
 
+### 13 November 2026 — OC San capacity charge corrected to $1,710 flat (Anaheim, La Habra, Orange County)
+
+**Changed:** Anaheim's OC San sewer capacity charge is **$1,710** on an 800 sq ft ADU, not the $1,368–$1,710 range. OC San Table A FY 2026–27 charges ADUs at the average-demand rate of $1,710 per 1,000 sq ft, and footnote 1 requires calculations "on a 1,000 square foot, or portion thereof, basis" — so 800 sq ft is one $1,710 block, not a pro-rata 0.8 × $1,710. The Anaheim post's fee table, key facts, and FAQ are corrected (three unconfirmed assumptions remain; the OC San rounding basis is no longer one of them). La Habra and unincorporated Orange County move from the FY 2025–26 rate of $1,695 to the FY 2026–27 rate of **$1,710**. The utility-bills post's Anaheim row and the Torrance post's passing mention are corrected to $1,710. No change to the Anaheim $320,000 total — the $342 difference rounds away in the soft-costs phase.
+
+**Reason:** Re-read of the OC San CFCC Tables A/B 2026–27 (effective July 1, 2026). The same one-block reading was already applied to Costa Mesa (FI-204) and Buena Park (FI-432).
+
+**Source:** [OC San CFCC Tables A/B 2026–27](https://eocwd.com/wp-content/uploads/2026/07/OC-SAN-TABLE-A-B-2026-27.pdf) (effective July 1, 2026); City of Anaheim Building Division reply (Oct 7, 2026).
+
 ### 11 November 2026 — Campbell $5.40 citation sweep: nine posts corrected to $5.38 / $4,304
 
 **Changed:** The stale Campbell school-fee figures left over from the 10 November correction are swept from nine posts: $5.40 → **$5.38/sq ft**, $4,320 → **$4,304** on 800 sq ft, and the Pasadena–Campbell spread $2,528 → **$2,512**. Published posts corrected: the school-fee explainer (including "Six districts cluster at the cap" → eight, per the table), the 10-city ranking, the JADU-vs-ADU-vs-garage comparison, the LA County comparison ($184 band → $168), and the Pasadena post. Future-dated posts corrected before publication: the California school-fee ranking (Campbell drops from a unique #28 into the $4,304 tier, now 17–28 with twelve cities; the "only city to break the ceiling" claim is removed), the 20-city ranking, the soft-costs ranking (Campbell ~$8,649 → ~$8,633), and the SB 1117 final checklist. The San Diego County comparison, published the same day, also gets a wording fix: the city-vs-Encinitas swing is $16,500 on the permit counter alone, not $17,400.
