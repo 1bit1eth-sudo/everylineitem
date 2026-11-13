@@ -280,6 +280,17 @@ const faqSchema = {
       >
         How we price &rarr;
       </LinkButton>
+      {result.lines.some(l => l.item.status === "verified" && l.kind !== "skipped") && (
+        <>
+          {" "}
+          <LinkButton
+            class="underline decoration-dashed underline-offset-4"
+            href={`/downloads/estimate-${juris.juris_id.toLowerCase()}.xlsx`}
+          >
+            Download estimate (.xlsx) &darr;
+          </LinkButton>
+        </>
+      )}
     </p>
 
     {juris.county === "Los Angeles" && juris.juris_id !== "LA-CITY" && (
