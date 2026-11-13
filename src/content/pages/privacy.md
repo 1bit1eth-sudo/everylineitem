@@ -25,7 +25,7 @@ The site is hosted on **Cloudflare**. Like most sites, request logs (IP address,
 
 ### Analytics and cookies
 
-We use two privacy-friendly analytics services that do not use cookies or personal identifiers: **Cloudflare Web Analytics** (aggregate page-view data, no cookies) and **Plausible Analytics** (page-view measurement for `everylineitem.com`, cookieless and without cross-site tracking). We do not run analytics that tracks you across the web for advertising. If that changes, this page will be updated.
+We use two privacy-friendly analytics services that do not use cookies or personal identifiers: **Cloudflare Web Analytics** (aggregate page-view data, no cookies) and **Plausible Analytics** (page-view measurement for `everylineitem.com`, cookieless and without cross-site tracking). We also use **Google Tag Manager** to load **Google Analytics 4** (measurement ID `G-EV2EETXDZ1`), which measures aggregate usage such as pages viewed, approximate location, and device type, and may set first-party cookies such as `_ga`. Google Analytics does not track you across the web for advertising on this site. You can opt out of Google Analytics with the [Google Analytics Opt-out Add-on](https://tools.google.com/dlpage/gaoptout).
 
 ### Forms and email
 
@@ -47,7 +47,7 @@ See also [About](/about/) for how the site intends to make money (display ads, s
 
 ## Sharing
 
-We share data only with processors that help us run the site (for example Cloudflare for hosting, CDN, and aggregate web analytics; Buttondown for email). They are not permitted to sell your email as contractor leads.
+We share data only with processors that help us run the site (for example Cloudflare for hosting, CDN, and aggregate web analytics; Google for analytics through Google Analytics 4; Buttondown for email). They are not permitted to sell your email as contractor leads.
 
 We may disclose information if required by law or to protect the site against abuse.
 
