@@ -14,7 +14,7 @@ faqs:
   - question: "What is the 750 sq ft cliff?"
     answer: "Under current law (Gov. Code §66311.5), ADUs under 750 square feet are exempt from impact fees, but at 750 and above many cities charged the full per-square-foot fee on the entire unit — including the first 750 feet that would have been free. A 749 sq ft ADU pays $0; an 800 sq ft ADU can owe $2,000–~$18,090. SB 1117 narrows the charge to only the square footage above 750 for a homeowner's first two ADUs."
   - question: "How much will SB 1117 save on an 800 sq ft ADU?"
-    answer: "It scales with the cliff's height. Our estimates: Palo Alto ~$16,960, Anaheim ~$9,750, Fullerton ~$6,000, Sacramento ~$5,370, Glendale ~$4,400, Riverside ~$1,390. In Salinas and Oakland, $0 — there was never a cliff. Torrance's flat $2,243.47 has no published per-foot rate, so its new number is unconfirmed. These are our arithmetic from 2026 fee schedules, not city-published 2027 figures."
+    answer: "It scales with the cliff's height. Our estimates: Palo Alto ~$16,960, Anaheim ~$9,750, Fullerton ~$6,000, Sacramento ~$5,013, Glendale ~$4,400, Riverside ~$1,390. In Salinas and Oakland, $0 — there was never a cliff. Torrance's flat $2,243.47 has no published per-foot rate, so its new number is unconfirmed. These are our arithmetic from 2026 fee schedules, not city-published 2027 figures."
   - question: "Should I delay my ADU permit to January 2027?"
     answer: "It depends on your city's cliff height and your timeline. In Palo Alto, the difference could approach $17,000; in Riverside, about $1,390 may not survive two months of delay costs — construction inflation, financing carry, and 2027 fee-schedule changes all cut the other way. Permits pulled in 2026 use the old math. Model both paths with your city's actual numbers rather than assuming delay wins."
 ---
@@ -43,7 +43,7 @@ From [our SB 1117 savings analysis](/posts/sb-1117-kills-750-sq-ft-cliff/), appl
 | Palo Alto | ~$18,090 | ~$1,130 | **~$16,960** |
 | Anaheim | ~$10,411 | ~$650 | **~$9,750** |
 | Fullerton | ~$6,411 | ~$400 | **~$6,000** |
-| Sacramento | ~$5,728 | ~$360 | **~$5,370** |
+| Sacramento | ~$5,347 | ~$334 | **~$5,013** |
 | Glendale | up to $4,700 | ~$295 | **~$4,400** |
 | Torrance | $2,243.47 flat | TBD | TBD |
 | Riverside | ~$1,484 | ~$95 | **~$1,390** |
@@ -64,7 +64,7 @@ Forty-eight days is long enough to finish a plan set and short enough to miss a 
 
 - **The bill's own text.** We verified the mechanics against five secondary sources (California YIMBY, the Governor's signing release, Mondaq, Solid Ground Construction, AgentKee — all agreeing), but the official leginfo text was blocked by a Cloudflare human-verification wall in October. We will retry it on 12/1.
 - **Flat-fee cities.** Torrance's $2,243.47 flat fee has no published per-square-foot rate, so there is no marginal arithmetic to do — the city must invent the math. Long Beach's per-dwelling-unit flat fee raises the same legal question: does "marginal on square footage" even apply to a flat per-unit charge?
-- **Tiered and district fees.** Sacramento's $5,728 tier and San Jose's area-based parkland fees are not simple per-square-foot rates; how each city translates "marginal" into its own schedule is unknown until the 2027 schedules publish.
+- **Tiered and district fees.** Sacramento's $5,347 tier and San Jose's area-based parkland fees are not simple per-square-foot rates; how each city translates "marginal" into its own schedule is unknown until the 2027 schedules publish.
 
 Until those resolve, every 2027 dollar figure on this site is a labeled estimate, not a city figure. That is the rule for the whole countdown.
 
