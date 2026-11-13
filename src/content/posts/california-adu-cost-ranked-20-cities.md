@@ -1,30 +1,30 @@
 ---
-title: "The $12,000 Spread, Updated: Ranking 20 Cities by Total ADU Cost"
-description: "Twenty California cities, one identical 800 sq ft ADU. Firm totals range from Long Beach ($313,000) to San Francisco ($325,000) with San Diego an outlier at $344,000 — plus six preliminary totals dipping to ~$300,000. The spread still lives in Phase 1 soft costs."
+title: "The $14,000 Spread, Updated: Ranking 20 Cities by Total ADU Cost"
+description: "Twenty California cities, one identical 800 sq ft ADU. Firm totals range from Oceanside ($311,000) to San Francisco ($325,000) with San Diego an outlier at $344,000 — plus six preliminary totals dipping to ~$300,000. The spread still lives in Phase 1 soft costs."
 pubDatetime: 2026-11-23T01:00:00Z
 author: "Every Line Item"
 tags: ["adu cost", "comparison", "california", "ranking", "2026"]
 draft: false
 verifiedPublished: "23 Nov 2026"
-lastVerified: "23 Nov 2026"
+lastVerified: "13 Nov 2026"
 nextReview: "Dec 2026"
 ogImage: "https://everylineitem.com/images/pinterest/california-adu-cost-ranked-20-cities.png"
 faqs:
   - question: "Which California city is cheapest for building an ADU?"
-    answer: "Among firm totals, Long Beach is lowest at $313,000, now level with Palo Alto (~$313,000) after the FY27 correction. Five cities carry preliminary (*) totals lower still — Salinas (~$300,000*), Fontana (~$305,000*), Santa Maria ($306,000*), Lakewood (~$310,000*), and San Bernardino (~$316,000*) — each with stated assumptions or unverified items. Pasadena (~$310,000) and Campbell (~$318,000) are also marked preliminary by the series' tilde convention, while Palo Alto (~$313,000) reflects the published FY27 correction. At the top, San Francisco ($325,000) and the San Diego outlier ($344,000) anchor the range. Rankings shift as we publish more cities; this table updates monthly."
+    answer: "Among firm totals, Oceanside is lowest at $311,000 after its FY27 permit correction, undercutting Long Beach ($313,000) — which is now level with Palo Alto (~$313,000) after the FY27 correction. Five cities carry preliminary (*) totals lower still — Salinas (~$300,000*), Fontana (~$305,000*), Santa Maria ($306,000*), Lakewood (~$310,000*), and San Bernardino (~$316,000*) — each with stated assumptions or unverified items. Pasadena (~$310,000) and Campbell (~$318,000) are also marked preliminary by the series' tilde convention, while Palo Alto (~$313,000) reflects the published FY27 correction. At the top, San Francisco ($325,000) and the San Diego outlier ($344,000) anchor the range. Rankings shift as we publish more cities; this table updates monthly."
   - question: "Why do ADU costs vary so much between California cities?"
     answer: "Construction costs (phases 2–6) are similar statewide — the spread lives almost entirely in Phase 1 soft costs: school fees ($1,792–~$4,304), impact fees ($0–~$11,173), permit fees ($1,006–~$19,500), and sewer charges ($0–~$7,751). Same ADU, same state, different fee schedules."
   - question: "Does the ranking change when new cities are added?"
-    answer: "Yes — materially. This edition adds ten cities to the Day 25 top-10 table, and the cheapest firm total is still Long Beach, but preliminary cities now undercut it. New entries, fee-schedule updates, and resolved asterisk items reshuffle the table monthly. The December update re-ranks everything and retires preliminary totals as verifications land."
+    answer: "Yes — materially. This edition adds ten cities to the Day 25 top-10 table, and the cheapest firm total is now Oceanside ($311,000), but preliminary cities still undercut it. New entries, fee-schedule updates, and resolved asterisk items reshuffle the table monthly. The December update re-ranks everything and retires preliminary totals as verifications land."
 ---
 
-> **Published:** 23 Nov 2026 · **Last verified:** 23 Nov 2026 · **Next review:** Dec 2026
+> **Published:** 23 Nov 2026 · **Last verified:** 13 Nov 2026 · **Next review:** Dec 2026
 > This ranking updates monthly as new city posts publish. All figures are 800 sq ft detached ADU, 2026.
 > Changes logged in [Corrections](/corrections/).
 
 Twenty cities. Same 800 sq ft detached ADU. Same mid-grade finishes. **$44,000 apart** on paper — from Salinas (~$300,000*) to San Diego ($344,000).
 
-But read the asterisks first. Among the 15 cities with **firm totals**, the spread is exactly what [Day 25's table](/posts/california-adu-cost-ranked-10-cities/) found: **about $12,000** — Long Beach ($313,000) to San Francisco ($325,000), with San Diego ($344,000) still the outlier. The headline widening comes from five preliminary totals, each marked honestly. The thesis hasn't changed: the spread lives in Phase 1 — the soft costs. Construction barely moves between these cities.
+But read the asterisks first. Among the 15 cities with **firm totals**, the spread has widened since [Day 25's table](/posts/california-adu-cost-ranked-10-cities/): **about $14,000** — Oceanside ($311,000) to San Francisco ($325,000), with San Diego ($344,000) still the outlier. The headline widening comes from five preliminary totals, each marked honestly. The thesis hasn't changed: the spread lives in Phase 1 — the soft costs. Construction barely moves between these cities.
 
 ## The ranking
 
@@ -37,8 +37,8 @@ But read the asterisks first. Among the 15 cities with **firm totals**, the spre
 | 5 | Riverside | **$309,000** | $386 | Permit $1,006 (series low); free 800 sq ft plans |
 | 6 | Lakewood | **~$310,000\*** | $388 | Preliminary — see post |
 | 7 | Pasadena | **~$310,000** | $388 | School $1,792 (series low) |
-| 8 | Long Beach | **$313,000** | $391 | School $4,304 |
-| 9 | Oceanside | **$313,000** | $391 | DIF $0 |
+| 8 | Oceanside | **$311,000** | $389 | DIF $0 |
+| 9 | Long Beach | **$313,000** | $391 | School $4,304 |
 | 10 | Palo Alto | **~$313,000** | $391 | DIF ~$18,090 (FY27, proportional); permit ~$5,790 |
 | 11 | Sacramento | **$316,000** | $395 | School $4,104 |
 | 12 | San Bernardino | **~$316,000\*** | $395 | Preliminary — see post |
@@ -59,11 +59,12 @@ But read the asterisks first. Among the 15 cities with **firm totals**, the spre
 
 - **The floor dropped.** Santa Maria ($306,000*) was already the nominal low in v1 but excluded for unverified items. Now five asterisked preliminary entries reach lower — Salinas at ~$300,000* on the back of a full DIF waiver — and Palo Alto at ~$313,000 after correcting a widely-circulated bad number, now level with Long Beach rather than undercutting it.
 - **The Palo Alto correction.** Batch-matrix research caught a real error: DIF was rumored at ~$76,000 and permits at 5.42%. Both wrong. DIF is ~$18,090 on the FY27 sheet (proportional, as of August 17, 2026); permits are 1.76% (~$5,790). The corrected total is **level with Long Beach at the low end of the firm totals**, not the series high it was assumed to be.
+- **The Oceanside correction.** Oceanside's permit was listed at ~$7,541 from 2018/2021 rate tables; the published FY 2026-27 schedule prices plan check ($1,862.70) plus inspection ($3,515.40) at **$5,378.10**, cutting the city's total to **$311,000** — now the lowest firm total in this table, undercutting Long Beach.
 - **San Diego is still the outlier.** At $344,000, it sits $19,000 above San Francisco — more than the entire rest of the firm spread combined. Its soft-cost stack, not its construction cost, explains the gap.
 
 ## What the spread tells you
 
-**Among firm totals, $12,000 is the story — and it's small.** Under 4% of a $320,000 build. Nobody should pick a city for ADU fees alone. But $12,000 is also real money, and it concentrates in lines you can plan around:
+**Among firm totals, $14,000 is the story — and it's small.** Just over 4% of a $320,000 build. Nobody should pick a city for ADU fees alone. But $14,000 is also real money, and it concentrates in lines you can plan around:
 
 - **School fees** are the most predictable spread: $1,792 (Pasadena) to ~$4,304 (Campbell). District boundaries, not city boundaries, set this number.
 - **Impact fees** are the most volatile: $0 (Salinas, Oceanside, Oakland) to ~$10,411 (Anaheim's DIF).
