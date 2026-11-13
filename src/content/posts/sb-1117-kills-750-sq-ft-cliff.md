@@ -60,6 +60,8 @@ SB 1117 amends exactly one section — **Gov. Code §66311.5**, the ADU fee stat
 
 No urgency clause, so the January 1, 2027 effective date holds (Cal. Const. art. IV, §8(c)(1)).
 
+Source: SB 1117, Chapter 809, Statutes of 2026 — chaptered text, California Legislative Information: https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB1117
+
 ## The December-vs-January question
 
 Here is the uncomfortable part: **permits pulled in 2026 use the old math.** Nothing in SB 1117 is retroactive.

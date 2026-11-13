@@ -34,7 +34,7 @@ Three California laws land on ADU projects on January 1, 2027. Two of them rewri
 
 ## SB 1117 — impact fees shrink to the 50 sq ft margin
 
-**What it does.** SB 1117 (Chapter 809) adds Gov. Code §66311.5: for up to two ADUs, a local agency may assess covered impact fees **only on the area in excess of 750 square feet**, proportionate under the existing §66324 framework. An 800 sq ft ADU is billed as if it were 50.
+**What it does.** SB 1117 (Chapter 809) amends Gov. Code §66311.5: for up to two ADUs, a local agency may assess covered impact fees **only on the area in excess of 750 square feet**, proportionate under the existing §66324 framework. An 800 sq ft ADU is billed as if it were 50.
 
 **What it does to your bill.** Covered city/county impact fees collapse — in a worked proportional example, fees fall from ~$10,477 to ~$40. Every jurisdiction page in our [fee index](/fees/) now carries a "What changes on January 1, 2027" block with the same summary.
 
@@ -58,7 +58,7 @@ Every jurisdiction page in the [fee index](/fees/) shows the current verified ta
 
 - AB 956, Chapter 791 (2026) — enrolled text, California Legislative Information (Gov. Code §66323).
 - SB 1117, Chapter 809 (2026) — enrolled text, California Legislative Information (Gov. Code §66311.5).
-- SB 1196 (McNerney, 2026) — enrolled text, California Legislative Information (Public Utilities Code §§931, 934.5). Chapter number pending confirmation in our verification file; section citations are from the enrolled text.
+- SB 1196 (McNerney), Chapter 684, Statutes of 2026, approved September 27, 2026 — chaptered text, California Legislative Information (Public Utilities Code §§931, 934.5): https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB1196
 
 ## Disclaimer
 
