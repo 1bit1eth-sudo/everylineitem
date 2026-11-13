@@ -19,6 +19,7 @@ import {
 import { transformerFileName } from "./src/utils/transformers/fileName";
 import { calcJurisdiction, calcSB1117, jurisAreas } from "./src/lib/feeCalc";
 import { generateFeeCsvFiles } from "./src/lib/csvExport";
+import { generateEstimateXlsxFiles } from "./src/lib/estimateXlsx";
 import config from "./astro-paper.config";
 import { readdirSync, readFileSync } from "node:fs";
 import { execSync } from "node:child_process";
@@ -69,6 +70,9 @@ const feesData = JSON.parse(readFileSync("./src/data/fees.json", "utf8"));
 // Writes public/downloads/ (dated + latest + legacy q3 alias) so `astro
 // build` copies them into dist/; check-quality E8 verifies the result.
 const csvExport = generateFeeCsvFiles(feesData);
+// Per-jurisdiction estimate spreadsheets, same build step (verified rows
+// only; build artifacts, gitignored, so they never go stale).
+generateEstimateXlsxFiles(feesData);
 const zeroRowFeePages = new Set(
   feesData.jurisdictions
     .filter((j: { juris_id: string }) => j.juris_id !== "LA-BASE")
