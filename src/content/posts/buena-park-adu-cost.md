@@ -1,19 +1,19 @@
 ---
 title: "Buena Park ADU Fees 2026: A Verified $1,710 Sewer Charge and Park Fees That Wait on an Adopted Schedule"
-description: "An 800 sq ft detached ADU in Buena Park priced phase by phase — about $308,000 as a floor. Orange County Sanitation District's 2026-27 table charges ADUs $1,710 per 1,000 sq ft block, the BPSD + Fullerton Joint Union school fee is $5.38 per sq ft ($4,304 on 800 sq ft), the city's ADU code makes park fees proportional at 750 sq ft and above, and the adopted impact-fee schedule itself is not yet verified."
+description: "An 800 sq ft detached ADU in Buena Park priced phase by phase — about $309,000 as a floor. Orange County Sanitation District's 2026-27 table charges ADUs $1,710 per 1,000 sq ft block, the BPSD + Fullerton Joint Union school fee is $5.38 per sq ft ($4,304 on 800 sq ft), the city's ADU code makes park fees proportional at 750 sq ft and above, and the adopted impact-fee schedule itself is not yet verified."
 pubDatetime: 2027-02-01T01:00:00Z
 author: "Every Line Item"
 tags: ["adu cost", "buena park", "california", "permit fees", "2026"]
 draft: true
 series: ca-adu
 seriesCurrent: buena-park-adu-cost
-lastVerified: "13 Nov 2026"
+lastVerified: "14 Nov 2026"
 nextReview: "Jan 2027"
 keyFacts:
   city: "Buena Park"
-  totalCost: "$308,000*"
-  costPerSqFt: "$385*"
-  permitFee: "not verified (no current building-permit schedule located)"
+  totalCost: "$309,000*"
+  costPerSqFt: "$386*"
+  permitFee: "schedule verified (Res. 14482, eff. Jul 1, 2022); fee priced by valuation — amount excluded, no ADU valuation basis"
   schoolFee: "$4,304 on 800 sq ft ($5.38/sq ft, BPSD + FJUHSD; most of city — southern parcels in Centralia ESD / Anaheim Union HSD verify separately)"
   impactFee: "park fees proportional at 750+ (city ADU code; adopted amounts not verified)"
   sewerWater: "$1,710 (OC San Table A, average demand, eff. Jul 1, 2026)"
@@ -21,7 +21,7 @@ keyFacts:
   cliff750: "Yes (city ADU code + Gov. Code §65852.2(f)(3)(A))"
 faqs:
   - question: "How much does an ADU cost in Buena Park in 2026?"
-    answer: "About $308,000 as a floor for an 800 sq ft detached, single-story, new-construction unit with mid-grade finishes — roughly $385 per square foot. That floor counts the series-baseline construction phases, $14,000 of design, a $1,710 Orange County Sanitation District capacity charge that the district's own 2026-27 table states for ADUs, and a $4,304 school fee (Buena Park SD $3.59 plus Fullerton Joint Union HSD $1.79 per sq ft, the 2026 statutory maximum combined — most of the city; southern parcels in Centralia ESD / Anaheim Union HSD territory verify separately). The building permit and park impact fees are excluded: no current building-permit schedule was located and the adopted park-fee amounts are unverified. Construction phases 2–6 are carried from the Los Angeles County baseline; Buena Park does not publish phase-level construction costs."
+    answer: "About $309,000 as a floor for an 800 sq ft detached, single-story, new-construction unit with mid-grade finishes — roughly $386 per square foot. That floor counts the series-baseline construction phases, $14,000 of design, a $1,710 Orange County Sanitation District capacity charge that the district's own 2026-27 table states for ADUs, a $4,304 school fee (Buena Park SD $3.59 plus Fullerton Joint Union HSD $1.79 per sq ft, the 2026 statutory maximum combined — most of the city; southern parcels in Centralia ESD / Anaheim Union HSD territory verify separately), a $25 permit issuance fee, and a $605 ADU review fee — the last two from the city's current building-permit schedule (Resolution No. 14482, effective July 1, 2022). The building permit fee itself and the park impact fees are excluded: the permit fee is priced by valuation and no confirmed per-square-foot ADU valuation basis was located, and the adopted park-fee amounts are unverified. Construction phases 2–6 are carried from the Los Angeles County baseline; Buena Park does not publish phase-level construction costs."
   - question: "How much is the sewer charge on an ADU in Buena Park?"
     answer: "$1,710 on an 800 sq ft ADU. Orange County Sanitation District's Table A for 2026-27 (effective July 1, 2026) covers accessory dwelling units explicitly: ADUs are charged at the average demand rate of $1,710 per 1,000 square feet or portion thereof, and the table's minimum charge does not apply to ADUs. An 800 sq ft ADU is one block, so the charge is $1,710 — verified from the district's own table, not from the city's schedule."
   - question: "Does Buena Park charge impact fees on ADUs?"
@@ -32,9 +32,9 @@ faqs:
     answer: "Not confirmed. No city pre-approved ADU plan set was verified. The city's Building Division notes a city-paid 'Plan PreCheck' service, which is a pre-submittal plan review service — not a pre-approved plan set and not a permit-fee amount. Design stays at the $14,000 series baseline. The ADU code does cap new ADU sizes (850 sq ft for one bedroom or fewer, 1,000 sq ft for more), and an 800 sq ft unit fits within those limits."
 ---
 
-**DRAFT — not for publication until reviewed.** Numbers below are verified against City of Buena Park, Orange County Sanitation District, and Fullerton Joint Union High School District documents as of November 13, 2026, unless marked otherwise.
+**DRAFT — not for publication until reviewed.** Numbers below are verified against City of Buena Park, Orange County Sanitation District, and Fullerton Joint Union High School District documents as of November 14, 2026, unless marked otherwise.
 
-Buena Park ADU fees are the one file in this batch where a regional agency, not the city, supplies the only hard number. The city's own building-permit schedule could not be located, its adopted impact-fee schedule could not be verified, and its ADU code names only one fee category for ADUs — parks — without a dollar amount. An 800 sq ft detached ADU here lands at **$308,000, or $385 per square foot** — a floor, not a total. It counts the series-baseline construction phases, $14,000 of design, a $1,710 sewer capacity charge verified from the sanitation district's own table, and a $4,304 school fee verified from the high school district's 2026 fee justification study. The building permit and the park fees are excluded, each for a stated reason, and each marked "verify with city" below.
+Buena Park ADU fees are the one file in this batch where a regional agency, not the city, supplies the sewer number. The city's building-permit schedule is now located and verified — Resolution No. 14482, Attachment B, effective July 1, 2022, with a Table A valuation band, a $25 issuance fee, and a $605 ADU review fee — but the permit fee itself is priced by valuation and no confirmed per-square-foot ADU valuation basis was located, so its dollar amount stays out of the floor. The adopted impact-fee schedule could not be verified, and the ADU code names only one fee category for ADUs — parks — without a dollar amount. An 800 sq ft detached ADU here lands at **$309,000, or $386 per square foot** — a floor, not a total. It counts the series-baseline construction phases, $14,000 of design, a $1,710 sewer capacity charge verified from the sanitation district's own table, a $4,304 school fee verified from the high school district's 2026 fee justification study, and $630 of flat city permit fees ($25 issuance + $605 ADU review). The valuation-based building permit fee and the park fees are excluded, each for a stated reason, and each marked "verify with city" below.
 
 One line is deliberately absent. A verified floor total for a 2,000 sq ft single-family new construction cannot be stated from official sources: fee schedules price permits and fees, not construction, so no such figure is verified here and none is estimated. The 2,000 sq ft figure matters only as the proportionality denominator — an 800 sq ft ADU behind a 2,000 sq ft primary dwelling is 40% of the primary's size, the fraction the city's ADU code and the state rule use for fees at 750 sq ft and above.
 
@@ -42,17 +42,19 @@ One line is deliberately absent. A verified floor total for a 2,000 sq ft single
 
 | 800 sq ft detached ADU · Buena Park · 2026 | Amount |
 | --- | --- |
-| Total build cost (see assumptions) | **$308,000\*** |
-| Cost per square foot | **$385\*** |
+| Total build cost (see assumptions) | **$309,000\*** |
+| Cost per square foot | **$386\*** |
 | Largest single line | Systems + interior, $147,000 |
 | Design & engineering | **$14,000 (series baseline; no pre-approved plan set confirmed)** |
 | Sewer capacity charge (OC San) | **$1,710 (Table A, average demand, eff. Jul 1, 2026)** |
 | School fee | **$4,304 ($5.38/sq ft × 800 sq ft; BPSD + FJUHSD, most of city)** |
-| Building permit + plan check | **not counted (no current schedule located; verify with city)** |
+| Permit issuance fee | **$25 (Res. 14482, eff. Jul 1, 2022)** |
+| ADU review fee | **$605 per application (Res. 14482, eff. Jul 1, 2022)** |
+| Building permit fee + plan check | **not counted (priced by valuation; no ADU valuation basis — verify with city)** |
 | Park impact fees | **not counted (proportional at 750+; adopted amounts unverified)** |
 | Pre-approved plans | **not confirmed** |
 
-\* *Floor, not total: the building permit and plan check and park impact fees are excluded because they could not be verified as fixed ADU amounts. The school fee counts only for BPSD/FJUHSD parcels (most of the city); southern parcels in Centralia ESD / Anaheim Union HSD territory verify separately.*
+\* *Floor, not total: the valuation-based building permit fee and plan check and park impact fees are excluded because they could not be verified as fixed ADU amounts. The school fee counts only for BPSD/FJUHSD parcels (most of the city); southern parcels in Centralia ESD / Anaheim Union HSD territory verify separately.*
 
 ## The full line-item breakdown
 
@@ -60,15 +62,15 @@ Six phases. The same six used on every build in this series.
 
 | Phase | Cost | Share |
 | --- | --- | --- |
-| Soft costs (design, permits, fees) | $20,014 | 6% |
+| Soft costs (design, permits, fees) | $20,644 | 7% |
 | Site work + foundation | $38,000 | 12% |
 | Framing + structure | $48,000 | 16% |
 | Building envelope | $42,000 | 14% |
 | Systems + interior | **$147,000** | 48% |
 | Landscaping & hardscape | $13,000 | 4% |
-| **Total** | **$308,000\*** | **$385 / sq ft** |
+| **Total** | **$309,000\*** | **$386 / sq ft** |
 
-Soft costs break down as $14,000 design plus the $1,710 sewer capacity charge plus the $4,304 school fee. Construction phases 2–6 are carried from the Los Angeles County baseline; Buena Park does not publish phase-level construction costs.
+Soft costs break down as $14,000 design plus the $1,710 sewer capacity charge plus the $4,304 school fee plus a $25 permit issuance fee and a $605 ADU review fee. Construction phases 2–6 are carried from the Los Angeles County baseline; Buena Park does not publish phase-level construction costs.
 
 ## The fee autopsy
 
@@ -80,7 +82,13 @@ Every fee line found, with exactly what it is and where it came from.
 | Plan pre-check service | not a fee | City Building Division: city-paid "Plan PreCheck" review service — not a plan set, not a permit amount |
 | OC San capacity charge, ADU | **$1,710** | OC San Table A 2026-27 (eff. Jul 1, 2026): average demand $1,710 per 1,000 sq ft or portion thereof; minimum charge does not apply to ADUs; 800 sq ft = one block |
 | OC San Table B (reference) | SFR per-unit charges by bedroom count | Same document — Table B covers primary residences, not ADUs; ADU rates are on Table A |
-| Building permit + plan check | not counted | No current city building-permit schedule located; old planning schedules (2022 and undated) not used |
+| Building permit fee (Table A) | not counted — priced by valuation | City Res. No. 14482, Attachment B §C, Table A (eff. Jul 1, 2022): $100,001–$500,000 band is $1,145 + $5.50 per $1,000 over $100,000 (all 8 bands recorded with the fee data). No confirmed per-square-foot ADU valuation basis, so no 800 sq ft amount |
+| Permit issuance fee | **$25** | Res. No. 14482, Attachment B §C (eff. Jul 1, 2022): $25 flat per permit issuance |
+| Building plan review | not counted — 85% of permit fee | Res. No. 14482: 85% of the building permit fee, $82 minimum — amount follows the valuation-based permit fee |
+| Electrical / plumbing / mechanical | not counted — % of permit fee | Res. No. 14482: electrical 10%, plumbing 6%, mechanical 6% of the base permit fee — amounts follow the valuation-based permit fee |
+| ADU review fee | **$605** | Res. No. 14482, Attachment B, Planning item 41 (eff. Jul 1, 2022): $605 per application |
+| Zoning compliance plan check | not counted — $1.40 per $1,000 valuation | Res. No. 14482: $1.40 per $1,000 of valuation up to $250,000 — amount follows valuation |
+| General plan maintenance surcharge | not counted — 4% of building fees | Res. No. 14482: 4% of building fees — amount follows the valuation-based permit fee |
 | Park fees, ADU 750 sq ft+ | not counted | City ADU code §19.348.010 §15: proportionate park dedications/in-lieu fees per the adopted DIF schedule — adopted amounts unverified |
 | Nexus study maxima (reference only) | parks $10.47, transportation $0.11, water $0.27, sewer $0.24 per sq ft | Willdan nexus study update, final draft May 1, 2024 — maximum justified, adoption unverified; NOT adopted fees |
 | Nexus study ADU formula (reference) | ADU sq ft ÷ primary sq ft × single-family fee | Same study, ch. 2 — states the state-law proportional method with a worked 800/1,600 example |
@@ -92,7 +100,7 @@ Every fee line found, with exactly what it is and where it came from.
 
 ## Three things that can still move the number
 
-**1. The missing permit schedule.** No current Buena Park building-permit schedule was located — only old planning-fee schedules and a 2022 public-works schedule, neither of which prices a 2026 residential permit. The permit is normally one of the largest soft-cost lines, so its absence is the single biggest gap in this floor. The city should be asked for the current schedule before any budget uses this post.
+**1. The ADU valuation basis.** The building-permit schedule is no longer missing — Resolution No. 14482 (effective July 1, 2022) prices permits by valuation, with the $100,001–$500,000 band at $1,145 plus $5.50 per $1,000 over $100,000, plan review at 85% of the permit fee, and trade permits as percentages of it. What is still missing is the valuation basis itself: the city prices new construction by valuation set by the Building Official or ICC data, and no confirmed per-square-foot ADU valuation was located. Until that basis is confirmed, the permit fee, plan check, trade permits, zoning check, and plan-maintenance surcharge cannot be priced for an 800 sq ft ADU — they are the single biggest gap left in this floor.
 
 **2. The adopted park-fee amounts.** The ADU code points to an adopted Development Impact Fee Schedule that this session could not verify — only the 2024 nexus study's maximum-justified figures, which the study itself labels as maxima. Council action adopting the study and a new fee chapter was reported by a third-party summary, but the year and the adopted amounts were not verified against a city resolution. Until the adopted schedule is in hand, the park line cannot be priced even proportionally.
 
@@ -102,19 +110,21 @@ Every fee line found, with exactly what it is and where it came from.
 
 | | Buena Park | LA County baseline |
 | --- | --- | --- |
-| Total | $308,000\* | $320,000 |
-| Per sq ft | $385\* | $400 |
-| Building permit + plan check | not counted (no schedule located) | carried |
+| Total | $309,000\* | $320,000 |
+| Per sq ft | $386\* | $400 |
+| Building permit fee + plan check | not counted (valuation basis unverified) | carried |
+| Permit issuance + ADU review | $25 + $605 counted | carried |
 | Design | $14,000 | $14,000 |
 | School fee | $4,304 (BPSD + FJUHSD) | $4,304 |
 | Sewer capacity charge | $1,710 (OC San Table A) | carried |
 | Park impact fees | proportional at 750+, not counted | carried |
 | Pre-approved ADU plans | not confirmed | none |
 
-Buena Park is the only city in this batch with a verified, ADU-specific sewer dollar figure in its floor — and the only one whose floor still excludes the permit while counting the school fee.
+Buena Park is the only city in this batch with a verified, ADU-specific sewer dollar figure in its floor — and the only one whose floor counts the flat permit fees ($25 issuance + $605 ADU review) while the valuation-based permit fee waits on a valuation basis.
 
 ## Sources
 
+- City of Buena Park, Resolution No. 14482, Attachment B — Building Division fee schedule (adopted Apr 12, 2022; effective Jul 1, 2022; Table A valuation bands, permit issuance $25, plan review 85%, electrical 10% / plumbing 6% / mechanical 6%, ADU Review $605 per application, zoning $1.40 per $1,000, General Plan Maintenance 4%) — https://cms7files1.revize.com/buenaparkca/departments/Building/Resolution%20No.%2014482%20-%20Fees.pdf?t=202206201104360 — as of Nov 14, 2026
 - City of Buena Park, Accessory and Junior Accessory Dwelling Units code (Municipal Code §19.348.010, adopted Jun 2025; park-fee proportionality §15; ADU size limits) — https://www.buenapark.com/Document_center/City Departments/Community development/Planning Division/Codes, Ordinances, and Guidelines/ADUs and JADUs 2025 with logo.pdf — as of Oct 26, 2026
 - Orange County Sanitation District, Capital Facilities Capacity Charges Tables A and B, 2026-27 (eff. Jul 1, 2026; ADUs at average demand $1,710 per 1,000 sq ft or portion thereof; minimum charge does not apply to ADUs) — https://eocwd.com/wp-content/uploads/2026/07/OC-SAN-TABLE-A-B-2026-27.pdf — as of Oct 26, 2026
 - Fullerton Joint Union High School District, 2026 Fee Justification Study (Apr 21, 2026; FJUHSD share 33.33% of the $5.38 statutory maximum = $1.79/sq ft; allocation agreement with Buena Park School District) — https://files.smartsites.parentsquare.com/7740/fjuhsd_2026_fee-justification-study_2026-04-20.pdf — as of Nov 13, 2026
