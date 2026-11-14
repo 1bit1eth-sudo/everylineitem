@@ -166,6 +166,17 @@ const linkClass = "text-accent underline decoration-dashed underline-offset-4";
           <span id="pt-county" class="text-xs font-normal opacity-70">
             County: {defaultJuris.county}
           </span>
+          {/* Content loop (stage 2): tool -> data page. Follows the
+              selected jurisdiction — updated in syncCountyUI() below. */}
+          <span class="text-xs font-normal">
+            <a
+              id="pt-fee-link"
+              href={`/fees/${DEFAULT_JURIS.toLowerCase()}/`}
+              class="text-accent underline decoration-dashed underline-offset-4"
+            >
+              See {defaultJuris.name} verified fees &rarr;
+            </a>
+          </span>
         </label>
 
         <div class="flex flex-col gap-2 text-sm font-medium">
@@ -568,7 +579,7 @@ const linkClass = "text-accent underline decoration-dashed underline-offset-4";
   set:html={JSON.stringify(taxData)}
 />
 <script
-  id="pt-juris"
+  id="pt-juris-data"
   type="application/json"
   is:inline
   set:html={JSON.stringify(jurisdictions.map(j => ({ id: j.juris_id, county: j.county })))}
@@ -588,7 +599,7 @@ const linkClass = "text-accent underline decoration-dashed underline-offset-4";
 
   const ratesEl = document.getElementById("pt-rates");
   const taxData = JSON.parse(ratesEl ? ratesEl.textContent || "{}" : "{}");
-  const jurisEl = document.getElementById("pt-juris");
+  const jurisEl = document.getElementById("pt-juris-data");
   const jurisList = JSON.parse(jurisEl ? jurisEl.textContent || "[]" : "[]");
   const countyByJuris = new Map<string, string>(
     jurisList.map((j: { id: string; county: string }) => [j.id, j.county] as [string, string])
@@ -603,6 +614,7 @@ const linkClass = "text-accent underline decoration-dashed underline-offset-4";
   const rateNote = document.getElementById("pt-rate-note");
   const traExample = document.getElementById("pt-tra-example");
   const countyEl = document.getElementById("pt-county");
+  const feeLink = document.getElementById("pt-fee-link") as HTMLAnchorElement | null;
   const bookEl = document.getElementById("pt-book");
   const monthSel = document.getElementById("pt-month") as HTMLSelectElement | null;
   const annualEl = document.getElementById("pt-annual");
@@ -640,6 +652,13 @@ const linkClass = "text-accent underline decoration-dashed underline-offset-4";
     const county = currentCounty();
     const data = currentRateData();
     if (countyEl) countyEl.textContent = `County: ${county || "—"}`;
+    // Content loop (stage 2): keep the fee-table link on the selected
+    // jurisdiction. The server-rendered default is already correct.
+    if (feeLink && jurisSel) {
+      feeLink.href = `/fees/${jurisSel.value.toLowerCase()}/`;
+      const opt = jurisSel.options[jurisSel.selectedIndex];
+      if (opt) feeLink.textContent = `See ${opt.text} verified fees →`;
+    }
     if (rateLabel) rateLabel.textContent = data ? "County average" : "Your TRA rate";
     if (rateNote) {
       rateNote.textContent = data

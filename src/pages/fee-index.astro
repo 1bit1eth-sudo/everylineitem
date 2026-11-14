@@ -82,6 +82,18 @@ const ranked = [...totals.entries()]
 const [topJuris, topTotal] = ranked[0];
 const [topCliffJuris, topCliff] = [...cliff.entries()].sort((a, b) => b[1] - a[1])[0];
 
+// Content loop (stage 2): the index itself must lead somewhere. Ranked
+// lists, all computed from the same maps above — no hand-written list.
+// Each entry links to that jurisdiction's verified fee table.
+const feeSlug = (j: string) => `/fees/${j.toLowerCase()}/`;
+const topSchoolLow = schoolSpread.slice(0, 5);
+const topSchoolHigh = [...schoolSpread].slice(-5).reverse();
+const topStacks = ranked.slice(0, 5);
+const topCliffs = [...cliff.entries()]
+  .filter(([, v]) => v > 0)
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 5);
+
 const fmt = (n: number) => "$" + Math.round(n).toLocaleString("en-US");
 
 // One-line stats for copying — every jurisdiction's combined school fee
@@ -237,6 +249,58 @@ const facts = [
           </button>
         </p>
       </div>
+    </div>
+
+    <h2 class="mt-12 text-2xl font-semibold">Rankings — 800 sq ft ADU</h2>
+    <p class="mt-2 max-w-3xl text-sm opacity-70">
+      Top five in each list, from the same verified line items as the facts
+      above. Open a fee table to see the line items behind the figure.
+    </p>
+    <div class="mt-6 grid gap-8 sm:grid-cols-2">
+      <section>
+        <h3 class="font-semibold">Lowest school fees</h3>
+        <ol class="mt-2 space-y-1.5">
+          {topSchoolLow.map(([j, v]) => (
+            <li class="flex justify-between gap-3">
+              <a href={feeSlug(j)} class="text-accent underline decoration-dashed underline-offset-4">{names[j]}</a>
+              <span class="tabular-nums font-semibold">{fmt(v)}</span>
+            </li>
+          ))}
+        </ol>
+      </section>
+      <section>
+        <h3 class="font-semibold">Highest school fees</h3>
+        <ol class="mt-2 space-y-1.5">
+          {topSchoolHigh.map(([j, v]) => (
+            <li class="flex justify-between gap-3">
+              <a href={feeSlug(j)} class="text-accent underline decoration-dashed underline-offset-4">{names[j]}</a>
+              <span class="tabular-nums font-semibold">{fmt(v)}</span>
+            </li>
+          ))}
+        </ol>
+      </section>
+      <section>
+        <h3 class="font-semibold">Heaviest verified stacks</h3>
+        <ol class="mt-2 space-y-1.5">
+          {topStacks.map(([j, v]) => (
+            <li class="flex justify-between gap-3">
+              <a href={feeSlug(j)} class="text-accent underline decoration-dashed underline-offset-4">{names[j]}</a>
+              <span class="tabular-nums font-semibold">{fmt(v)}</span>
+            </li>
+          ))}
+        </ol>
+      </section>
+      <section>
+        <h3 class="font-semibold">Biggest 750 sq ft cliffs</h3>
+        <ol class="mt-2 space-y-1.5">
+          {topCliffs.map(([j, v]) => (
+            <li class="flex justify-between gap-3">
+              <a href={feeSlug(j)} class="text-accent underline decoration-dashed underline-offset-4">{names[j]}</a>
+              <span class="tabular-nums font-semibold">{fmt(v)}</span>
+            </li>
+          ))}
+        </ol>
+      </section>
     </div>
 
     <h2 class="mt-12 text-2xl font-semibold">How to read this</h2>
