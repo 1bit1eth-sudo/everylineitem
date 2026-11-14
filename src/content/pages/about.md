@@ -13,7 +13,7 @@ Every Line Item does one thing instead: **we model a specific scenario and price
 
 Every Line Item covers the cost of building an accessory dwelling unit (ADU) — and residential construction more broadly — in California: municipal plan-check and permit fees, school and park impact fees, utility capacity charges, and the construction costs themselves.
 
-As of 14 November 2026, the site covers **164 jurisdictions** with **538 verified fee lines**. Every fee figure links to the official source document it came from — the city or county fee schedule, the school district's developer-fee resolution, or the utility district's charges — with the date we last verified it. Figures we cannot verify from an official source are marked "verify with city" and excluded from every total. Fee schedules are re-verified on a rolling schedule, with the next full pass in December 2026.
+As of 14 November 2026, the site covers **163 jurisdictions** with **641 verified fee lines**. Every fee figure links to the official source document it came from — the city or county fee schedule, the school district's developer-fee resolution, or the utility district's charges — with the date we last verified it. Figures we cannot verify from an official source are marked "verify with city" and excluded from every total. Fee schedules are re-verified on a rolling schedule, with the next full pass in December 2026.
 
 ## The six-phase ledger
 
