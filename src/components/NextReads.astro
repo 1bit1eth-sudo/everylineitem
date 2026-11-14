@@ -1,0 +1,64 @@
+---
+import LinkButton from "./LinkButton.astro";
+
+/**
+ * "Keep reading" block (content-loop device A): two text links (same topic,
+ * deeper) plus the related tool as a button (device B). Every link comes
+ * from the page's own data relationships — the component takes links, it
+ * never hard-codes a list.
+ */
+type Link = { href: string; label: string };
+
+type Props = {
+  title?: string;
+  links: Link[];
+  cta?: Link;
+  /** One-line subscription note under the block (device H). Only passed
+   * where the page has no other signup form. */
+  subscribe?: Link;
+};
+
+const { title = "Keep reading", links, cta, subscribe } = Astro.props;
+---
+
+<section class="mt-10 border-t border-border pt-6" aria-label={title}>
+  <h2 class="text-xl font-semibold">{title}</h2>
+  <ul class="mt-3 space-y-2">
+    {
+      links.map(l => (
+        <li>
+          <a
+            href={l.href}
+            class="text-accent underline decoration-dashed underline-offset-4 hover:opacity-75"
+          >
+            {l.label} &rarr;
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  {
+    cta && (
+      <p class="mt-5">
+        <LinkButton
+          href={cta.href}
+          class="bg-accent rounded px-5 py-3 font-semibold text-white"
+        >
+          {cta.label} &rarr;
+        </LinkButton>
+      </p>
+    )
+  }
+  {
+    subscribe && (
+      <p class="mt-4 text-sm opacity-80">
+        <a
+          href={subscribe.href}
+          class="text-accent underline decoration-dashed underline-offset-4"
+        >
+          {subscribe.label} &rarr;
+        </a>
+      </p>
+    )
+  }
+</section>
