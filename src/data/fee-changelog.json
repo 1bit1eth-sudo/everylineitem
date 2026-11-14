@@ -2,6 +2,13 @@
   "entries": [
 {
       "date": "2026-11-14",
+      "detail": "Work 3 (AdSense 'low value content' response): /fees/ pages with fewer than 2 verified fee rows are now noindex and excluded from the sitemap — 34 pages (Bellflower, Calexico, Chino, Claremont, Coachella, Covina, Davis, El Centro, Encinitas, Garden Grove, Glendora, Inglewood, Kern County, La Mesa, Los Altos, Los Gatos, Lynwood, Montebello, Monterey Park, Moorpark, Mountain View, Pico Rivera, Redwood City, Rosemead, Sacramento County, San Bernardino, San Fernando, Santa Cruz County, San Diego County, Temple City, Thousand Oaks, Tracy, Walnut, Whittier). LA-BASE has no page. The condition lifts itself when a page reaches 2 verified rows; no fee data changed. Verified rows sitewide unchanged at 641.",
+      "headline": "Thin fee pages removed from search index — 34 pages now noindex (fewer than 2 verified rows)",
+      "items_added": 0,
+      "jurisdictions": ["Bellflower", "Calexico", "Chino", "Claremont", "Coachella", "Covina", "Davis", "El Centro", "Encinitas", "Garden Grove", "Glendora", "Inglewood", "Kern County (unincorporated)", "La Mesa", "Los Altos", "Los Gatos", "Lynwood", "Montebello", "Monterey Park", "Moorpark", "Mountain View", "Pico Rivera", "Redwood City", "Rosemead", "Sacramento County (unincorporated)", "San Bernardino", "San Fernando", "Santa Cruz County (unincorporated)", "San Diego County (unincorporated)", "Temple City", "Thousand Oaks", "Tracy", "Walnut", "Whittier"]
+    },
+{
+      "date": "2026-11-14",
       "detail": "SB 1117 countdown published — 48 days to January 1, 2027, when the 750 sq ft cliff becomes marginal math for a homeowner's first two ADUs. The savings table uses the corrected Sacramento cliff $5,347 (CDD-0419 rev. 2026-07-12: STA $1,154.64 + Park $2,617.50 + SAFCA $1,575), ~$5,013 saved on 800 sq ft; the stale $5,728 is corrected in five posts and logged in /corrections/ (14 Nov 2026). No new fee rows in this run.",
       "headline": "SB 1117 countdown published — 48 days out; Sacramento cliff corrected to $5,347",
       "items_added": 0,
