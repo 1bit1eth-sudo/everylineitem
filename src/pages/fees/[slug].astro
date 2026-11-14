@@ -81,12 +81,17 @@ const areaTotals = areaResults.map(({ area, result: r }) => {
     hasRange: vl.some(l => l.high != null),
   };
 });
-// Temporary AdSense measure (2026-11-01): a jurisdiction page with no fee rows
-// at all stays out of the search index until its first items land. As of this
-// change that is El Centro, Kern County, San Gabriel, South Pasadena,
-// Vacaville, Clovis, Diamond Bar, and La Puente. The condition lifts itself
-// when rows appear; there is no manual list to maintain.
-const noFeeRows = verifiedLines.length + skippedVerifiedLines.length === 0 && pendingLines.length + skippedPendingLines.length === 0;
+// 작업 3 (2026-11-14, AdSense "가치가 별로 없는 콘텐츠" 거절 대응): verified
+// 행이 2건 미만인 /fees/ 페이지는 noindex. fees.json 원본 기준으로 세므로
+// 800 sq ft 적용 여부와 무관하다. 2026-11-01의 "행 0건" 조건을 포함한다
+// (0건이면 2건 미만이므로). 보강으로 2건이 되면 조건이 저절로 해제된다.
+// 손으로 관리하는 목록은 없다. 기준 38831aa에서 35곳(LA-BASE 포함, 실제
+// 페이지 34곳)이 이 조건에 걸린다.
+const verifiedRowCount = (feesData as any).fee_items.filter(
+  (i: { juris_id: string; status: string }) =>
+    i.juris_id === juris.juris_id && i.status === "verified"
+).length;
+const thinFeePage = verifiedRowCount < 2;
 const verifiedTotalLow = isAreaJuris
   ? Math.min(...areaTotals.map(t => t.low))
   : areaTotals[0].low;
@@ -229,7 +234,7 @@ const faqSchema = {
 };
 ---
 
-<Layout title={title} description={description} noindex={noFeeRows}>
+<Layout title={title} description={description} noindex={thinFeePage}>
   <Fragment slot="head">
     <script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} />
   </Fragment>
