@@ -176,6 +176,24 @@ const latestVerifiedRaw = feesData.fee_items
   .sort((a, b) => parseVerified(b) - parseVerified(a))[0];
 const latestVerified = formatVerified(latestVerifiedRaw);
 
+// "What the numbers say" — editorial reading of the computed facts above
+// (AdSense "low value" work: the homepage states what the data means,
+// not just what it lists). Every figure comes from fees.json at build
+// time, never hardcoded (PR #95 lesson). Same math as the Fee Index:
+// the spread is per-jurisdiction combined school fees; the ceiling count
+// is verified school rows at the $5.38 Level I cap.
+const lowJuris = schoolRows[0].juris;
+const highJuris = schoolRows[schoolRows.length - 1].juris;
+const schoolRatio = (schoolHigh / schoolLow).toFixed(1);
+const districtsAtCeiling = schoolFees.filter(s => s.rate_low === 5.38).length;
+const districtsVerified = schoolFees.length;
+// Lowest COMBINED rate (schoolRows[0]): single-row rates mislead here —
+// the cheapest row is a high-school share ($1.34, AVUHSD), not a
+// district's rate. The combined low end is Laguna Beach, $2.05/sq ft.
+const lowCombinedRate = schoolRows[0].rate;
+const maxSchool = schoolFees[schoolFees.length - 1];
+const maxSchoolJuris = jurisName.get(maxSchool.juris_id) ?? maxSchool.juris_id;
+
 // Browse index — replaces the old link-dump paragraph
 const regions = [
   {
@@ -635,6 +653,24 @@ const formatShortDate = (d: string | Date) =>
         <a href="/tools/" class="text-accent font-semibold">
           Browse all tools &rarr;
         </a>
+      </p>
+    </section>
+
+    {/* WHAT THE NUMBERS SAY — editorial reading of the computed facts above.
+        AdSense "low value" work: the homepage states what the data means,
+        not just what it lists. Every figure is computed from fees.json. */}
+    <section aria-labelledby="numbers-heading" class="border-border border-b pt-12 pb-6">
+      <h2 id="numbers-heading" class="text-2xl font-semibold">
+        What the numbers say
+      </h2>
+      <p class="mt-3 max-w-3xl">
+        The same 800 sq ft ADU owes {fmtUSD(schoolLow)} in school fees in {lowJuris} and {fmtUSD(schoolHigh)} in {highJuris} — a {schoolRatio}× spread under one state cap. The 2026 Level I cap is $5.38 per square foot, and {districtsAtCeiling} of the {districtsVerified} school districts we have verified charge exactly that. Below the cap, districts set their own rates — {lowJuris} charges ${lowCombinedRate.toFixed(2)} per square foot, the lowest combined rate in the index. Above it, only a Level II fee can go further: {maxSchoolJuris} charges ${maxSchool.rate_low.toFixed(2)}. The gap is not a range in our model; it is what the districts actually adopted.
+      </p>
+      <p class="mt-3 max-w-3xl">
+        One square foot can switch impact fees on. In {topCliffJuris}, an ADU at 751 sq ft owes {fmtUSD(topCliff)} in impact fees that a 750 sq ft ADU does not — the largest verified cliff in the index. State law exempts ADUs of 750 sq ft or less from impact fees; above that line, fees are prorated against the primary dwelling. From 1 January 2027, SB 1117 narrows the cliff further: for the first two ADUs on a parcel, only the area above 750 sq ft is taxed. <a href="/sb-1117/" class="text-accent font-semibold">See what SB 1117 saves in your city &rarr;</a>
+      </p>
+      <p class="mt-3 max-w-3xl">
+        Every fee figure links to the official document it came from — a city fee schedule, a school district resolution, a utility's charges — with the date we last checked it. Figures we cannot verify from an official source are marked "verify with city" and left out of every total, never estimated. {verifiedCount} verified line items across {jurisCount} jurisdictions, last checked {latestVerified}. <a href="/methodology/" class="text-accent font-semibold">How we verify &rarr;</a>
       </p>
     </section>
 
