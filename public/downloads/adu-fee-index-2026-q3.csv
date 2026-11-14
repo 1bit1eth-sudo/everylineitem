@@ -1,7 +1,7 @@
 # Source: Every Line Item — California ADU Fee Index. https://everylineitem.com/fee-index/
 # License: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) — free to reuse with attribution.
 # Reference date: 2026-11-15 (generated at build time from src/data/fees.json)
-# Scope: verified rows only — 653 verified line items across 163 jurisdictions. Unverified rows are excluded, never estimated.
+# Scope: verified rows only — 654 verified line items across 163 jurisdictions. Unverified rows are excluded, never estimated.
 # Amount at 800 sq ft: computed with the same math as the site calculator (800 sq ft ADU; 1,600 sq ft primary dwelling for prorated lines). Blank = the row has no computable amount at 800 sq ft. A range is shown as low-high.
 jurisdiction,county,fee_name,category,rate,amount_800_sqft,status,source_url,last_verified,effective_date
 Alameda (city),Alameda,Citywide development impact fees — ADUs exempt at all sizes ($0),impact,$0,0,verified,https://www.alamedaca.gov/files/assets/public/v/1/departments/alameda/comm-services/formsandhandouts/planning/adu-permit-packet_2.pdf,2026-10-15,2026
@@ -273,6 +273,7 @@ Jurupa Valley,Riverside,TUMF,impact,$0,0,verified,https://www.jurupavalley.org/D
 Jurupa Valley,Riverside,ADU planning fee,planning,$0,0,verified,https://www.jurupavalley.org/466/Accessory-Dwelling-Units,2026-10-18,
 Jurupa Valley,Riverside,School district developer fee (Jurupa USD),school,$5.38/sq ft,4304,verified,https://jurupausd.org/our-district/BizServ/planning/Pages/Developers.aspx,2026-10-18,
 Kern County (unincorporated),Kern,"School developer fee (Greenfield USD share, residential)",school,$3.5/sq ft,2800,verified,https://4.files.edl.io/4b27/05/21/26/145151-ad2e4938-2283-4257-b5af-051bf3085e83.pdf,2026-11-09,2026-07-12
+Kern County (unincorporated),Kern,"School developer fee (Kern High SD share, residential)",school,$1.88/sq ft,1504,verified,https://4.files.edl.io/4b27/05/21/26/145151-ad2e4938-2283-4257-b5af-051bf3085e83.pdf,2026-11-15,2026
 La Habra,Orange,"Building permit + plan check + surcharges (800 sq ft detached ADU, formula-derived)",permit,"$13,798.11",13798,verified,https://www.lahabraca.gov/DocumentCenter/View/15404/Building-Schedule-Fees-New-Construction-FY25-26,2026-10-15,2026
 La Habra,Orange,City water connection fee — ADUs exempt by ordinance,water_sewer,$0,0,verified,https://ecode360.com/42846673,2026-10-15,2026
 La Habra,Orange,OC San sewer capacity fee (CFCC) — ADU average-demand rate,water_sewer,"$1,710",1710,verified,https://eocwd.com/wp-content/uploads/2026/07/OC-SAN-TABLE-A-B-2026-27.pdf,2026-11-13,2026-07-01
