@@ -1,6 +1,15 @@
 {
   "entries": [
 {
+        "date": "2026-11-15",
+        "detail": "Kern County (unincorporated): Kern High School District 35% share verified at $1.88/sq ft (KERN-NEW-02), computed as 35% of the $5.38 SAB Level I maximum (Jan 28, 2026). The Greenfield USD 2026 Fee Justification Study (Apr 28, 2026; Res. No. 26-15 adopted May 13, 2026) states the allocation agreement with KHSD -- Greenfield 65% = $3.50 of the maximum -- and covers unincorporated Kern County; the remaining 35% is KHSD's share by the same agreement. KHSD's FY 2024-25 annual report confirms the district levies the statutory maximum ($5.17/sq ft in effect then). 800 sq ft = $1,504; combined with KERN-NEW-01 (Greenfield $3.50) the school fee totals $5.38/sq ft, the Level I cap, for Greenfield-territory parcels. Confidence B: the $1.88 figure is computed, not stated directly by KHSD -- no KHSD-published $1.88 figure was located (KHSD's own rate page still posts no rate). Same computed basis as BAKERSFIELD-NEW-01, verified 2026-11-13. Kern County verified rows 1 → 2, so the /fees/kern-county/ page reaches the 2-verified-rows threshold and its noindex lifts. Verified rows sitewide 653 → 654.",
+        "headline": "Kern County: Kern High school-district share verified — $1.88/sq ft (was to_verify); county reaches 2 verified rows",
+        "items_added": 0,
+        "jurisdictions": [
+          "Kern County (unincorporated)"
+        ]
+    },
+{
       "date": "2026-11-14",
       "detail": "Buena Park building-permit valuation basis confirmed — there is no fixed $/sq ft rate. Res. No. 14482, Table A prices new residential permits 'Based on Building Valuation as Determined by the Building Official or Data Published by the International Code Council' (2019 CBC §109.3 — the applicant declares the permit value including materials and labor; the Building Official sets the final valuation). The city's February 2026 permit report confirms valuations are per-project: declared values on issued ADU permits were $130,000 for an 845 sq ft detached ADU, $150,000 for 1,000 sq ft, and $60,000 for 315 sq ft. The seven valuation-based rows (Table A permit fee, plan review 85%, electrical 10%, plumbing 6%, mechanical 6%, zoning, GPM 4%) therefore still carry no 800 sq ft dollar figure, and valuation_psf stays null — no number was invented. Verified rows sitewide unchanged at 653.",
       "headline": "Buena Park: no fixed valuation $/sq ft — permit value is set per project",
