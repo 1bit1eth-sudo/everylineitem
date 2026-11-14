@@ -579,7 +579,7 @@ const linkClass = "text-accent underline decoration-dashed underline-offset-4";
   set:html={JSON.stringify(taxData)}
 />
 <script
-  id="pt-juris"
+  id="pt-juris-data"
   type="application/json"
   is:inline
   set:html={JSON.stringify(jurisdictions.map(j => ({ id: j.juris_id, county: j.county })))}
@@ -599,7 +599,7 @@ const linkClass = "text-accent underline decoration-dashed underline-offset-4";
 
   const ratesEl = document.getElementById("pt-rates");
   const taxData = JSON.parse(ratesEl ? ratesEl.textContent || "{}" : "{}");
-  const jurisEl = document.getElementById("pt-juris");
+  const jurisEl = document.getElementById("pt-juris-data");
   const jurisList = JSON.parse(jurisEl ? jurisEl.textContent || "[]" : "[]");
   const countyByJuris = new Map<string, string>(
     jurisList.map((j: { id: string; county: string }) => [j.id, j.county] as [string, string])
