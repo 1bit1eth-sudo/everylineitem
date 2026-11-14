@@ -32,6 +32,14 @@ The most valuable messages we get are from contractors and estimators telling us
 
 ## Change log
 
+### 14 November 2026 — Sacramento cliff corrected: $5,728 → $5,347 (CDD-0419, July 2026 revision)
+
+**Changed:** The Sacramento 800 sq ft ADU impact-fee cliff is **$5,347**, not $5,728. The city's CDD-0419 ADU Fee Estimate, revised 2026-07-12, prices the 750 sq ft column at STA Mitigation Fee + 2% admin $1,154.64 + Park Development Impact Fee $2,617.50 + SAFCA Development Impact Fee $1,575 = **$5,347.14**. The SB 1117 savings estimate for Sacramento is ~$5,013 (marginal fee on the 50 sq ft above 750 is ~$334). The stale $5,728 is corrected in five posts: the 750 sq ft cliff explainer, the California impact-fees explainer, the SB 1117 cliff post, the SB 1117 countdown post (published today with the corrected figure), and the SB 1117 final checklist (scheduled 7 Dec 2026). The Sacramento city post and its fee rows already carried $5,347.14 (FI-133, verified 13 Nov 2026) — the error survived only in the cross-post citations. No other city's figures change.
+
+**Reason:** The $5,728 figure was the rounded pre-revision worksheet total ($5,725.64). Re-reading the live CDD-0419 worksheet on 13 Nov 2026 showed the July 2026 revision lowered the cliff to $5,347.14; the cross-posts had never been updated to the new revision.
+
+**Source:** [City of Sacramento CDD-0419 ADU Fee Estimate, revised 2026-07-12](https://www.cityofsacramento.gov/content/dam/portal/cdd/Building/Forms/CDD-0419_Accessory-Dwelling-Unit-Fee-Estimate.pdf) (750 sq ft column, read live 13 Nov 2026).
+
 ### 13 November 2026 — OC San capacity charge corrected to $1,710 flat (Anaheim, La Habra, Orange County)
 
 **Changed:** Anaheim's OC San sewer capacity charge is **$1,710** on an 800 sq ft ADU, not the $1,368–$1,710 range. OC San Table A FY 2026–27 charges ADUs at the average-demand rate of $1,710 per 1,000 sq ft, and footnote 1 requires calculations "on a 1,000 square foot, or portion thereof, basis" — so 800 sq ft is one $1,710 block, not a pro-rata 0.8 × $1,710. The Anaheim post's fee table, key facts, and FAQ are corrected (three unconfirmed assumptions remain; the OC San rounding basis is no longer one of them). La Habra and unincorporated Orange County move from the FY 2025–26 rate of $1,695 to the FY 2026–27 rate of **$1,710**. The utility-bills post's Anaheim row and the Torrance post's passing mention are corrected to $1,710. No change to the Anaheim $320,000 total — the $342 difference rounds away in the soft-costs phase.
