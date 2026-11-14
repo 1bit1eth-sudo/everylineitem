@@ -7,6 +7,8 @@ import Footer from "@/components/Footer.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
 import FeeAlertSignup from "@/components/FeeAlertSignup.astro";
 import LinkButton from "@/components/LinkButton.astro";
+import NextReads from "@/components/NextReads.astro";
+import { TOOLS } from "@/lib/related";
 
 const title = "Fee Change Log | Every Line Item";
 const jurisCount = (feesData.jurisdictions as any[]).filter(
@@ -65,6 +67,14 @@ const formatDate = (iso: string) => {
         How we verify &rarr;
       </LinkButton>
     </div>
+
+    <NextReads
+      links={[
+        { href: "/fee-index/", label: "California ADU Fee Index" },
+        { href: "/sb-1117/", label: "SB 1117 savings by city" },
+      ]}
+      cta={TOOLS.compare}
+    />
   </main>
   <Footer />
 </Layout>
