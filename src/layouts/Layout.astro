@@ -198,5 +198,35 @@ const siteStructuredData = {
     <script>
       import "@/scripts/theme";
     </script>
+    <script>
+      // Content loop (device G): record this page in localStorage so the
+      // "Recently viewed" block on home and hub pages can show it. Local
+      // only — nothing is sent to a server. Skips search results and the
+      // 404 page.
+      function recordRecentView() {
+        try {
+          if (window.location.pathname.startsWith("/search")) return;
+          if (document.title.startsWith("404")) return;
+          const key = "eli-recent";
+          const entry = {
+            href: window.location.pathname,
+            title: document.title,
+          };
+          const recent = JSON.parse(
+            window.localStorage.getItem(key) || "[]"
+          ) as { href: string; title: string }[];
+          const next = [
+            entry,
+            ...recent.filter(r => r.href !== entry.href),
+          ].slice(0, 10);
+          window.localStorage.setItem(key, JSON.stringify(next));
+        } catch {
+          // Storage unavailable (private mode, disabled) — ignore.
+        }
+      }
+
+      recordRecentView();
+      document.addEventListener("astro:page-load", recordRecentView);
+    </script>
   </body>
 </html>
