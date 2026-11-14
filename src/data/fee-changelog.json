@@ -2,6 +2,13 @@
   "entries": [
 {
       "date": "2026-11-14",
+      "detail": "Buena Park building-permit valuation basis confirmed — there is no fixed $/sq ft rate. Res. No. 14482, Table A prices new residential permits 'Based on Building Valuation as Determined by the Building Official or Data Published by the International Code Council' (2019 CBC §109.3 — the applicant declares the permit value including materials and labor; the Building Official sets the final valuation). The city's February 2026 permit report confirms valuations are per-project: declared values on issued ADU permits were $130,000 for an 845 sq ft detached ADU, $150,000 for 1,000 sq ft, and $60,000 for 315 sq ft. The seven valuation-based rows (Table A permit fee, plan review 85%, electrical 10%, plumbing 6%, mechanical 6%, zoning, GPM 4%) therefore still carry no 800 sq ft dollar figure, and valuation_psf stays null — no number was invented. Verified rows sitewide unchanged at 653.",
+      "headline": "Buena Park: no fixed valuation $/sq ft — permit value is set per project",
+      "items_added": 0,
+      "jurisdictions": ["Buena Park"]
+    },
+{
+      "date": "2026-11-14",
       "detail": "Carlsbad: the Certificate of Occupancy row (CARLSBAD-NEW-12) verified as $0 for a standard detached ADU — the published $89 is the fee for a standalone Certificate of Occupancy Permit (Master Fee Schedule FY 2026-27 #1012, per permit), issued for a change of use/occupancy under CMC 21.60.010, not a line on a new-construction building permit. The MFS lists 'Certificate of Occupancy' only once, among the standalone flat-fee Minor/Miscellaneous permits, and the valuation-based new-construction building section carries no CofO line. The city's Fee Guide REV. 12/23 Example 3 (800 SF detached ADU, total $8,220.58) lists a single Building permit fee of $1,330 and no CofO line — the listed lines sum exactly to $8,220.58 — and Example 1 (new detached single-family home) likewise lists no CofO line although a new home unquestionably receives a CofO. The city issues a 'Certificate of Occupancy Permit' for a change of use (PRE 2025-0032, July 21, 2025; Planning Commission Resolutions 7014 and 7100). The $89 is kept in the row notes as the standalone-permit reference amount. Verified rows sitewide 652 → 653.",
       "headline": "Carlsbad: certificate of occupancy is a standalone change-of-use permit fee — $0 on a standard ADU (was $89 to_verify)",
       "items_added": 0,

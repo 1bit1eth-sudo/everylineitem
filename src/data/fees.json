@@ -1731,9 +1731,9 @@
       "post_slug": "adu-soft-costs-permits-california",
       "primary_sqft_default": null,
       "valuation_psf": null,
-      "valuation_basis": null,
+      "valuation_basis": "No fixed $/sq ft — applicant-declared permit value (2019 CBC §109.3); Building Official sets the final valuation, checked against ICC Building Valuation Data (Res. No. 14482, Table A)",
       "fee_schedule_url": "https://eocwd.com/wp-content/uploads/2026/07/OC-SAN-TABLE-A-B-2026-27.pdf",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-11-14",
       "status": "verified"
     },
     {
@@ -6466,7 +6466,7 @@
       "last_verified": "2026-11-13",
       "confidence": "B",
       "status": "verified",
-      "internal_notes": "Computed rate, not directly stated: no KHSD-published $1.88 figure found - KHSD's FY2024-25 annual report states the total Level 1 fee ($5.17/sq ft) without the split; the 35% split is from BCSD's June 2024 justification report and the $5.38 cap from the SAB Jan 28, 2026 adjustment (corroborated by Greenfield Union SD's Apr 28, 2026 study, which also confirms the 65% elementary share). If KHSD publishes a 2026 justification study stating $1.88 directly, upgrade confidence to A. Note: FI-245's source URL resolves to the Greenfield Union 2026 study, not a BCSD study - the $3.50 figure is correct for BCSD too (65% of $5.38, per BCSD's 2024 report split), but the source label is a pre-existing mismatch, flagged not fixed here.",
+      "internal_notes": "Computed rate, not directly stated: no KHSD-published $1.88 figure found - KHSD's FY2024-25 annual report states the total Level 1 fee ($5.17/sq ft) without the split; the 35% split is from BCSD's June 2024 justification report and the $5.38 cap from the SAB Jan 28, 2026 adjustment (corroborated by Greenfield Union SD's Apr 28, 2026 study, which also confirms the 65% elementary share). If KHSD publishes a 2026 justification study stating $1.88 directly, upgrade confidence to A. Note (corrected 2026-11-14): FI-245's source URL was re-fetched and resolves to the BCSD June 2024 report itself (cover: 'for the BAKERSFIELD CITY SCHOOL DISTRICT, June 2024'; Exec. Summary: 65% $3.36 to BCSD, 35% $1.81 to Kern Union High School District; 'Greenfield' appears 0 times in the 29-page PDF). The earlier 'resolves to Greenfield study' flag was a pre-correction record - FI-245's source was corrected 2026-11-13.",
       "notes": "KHSD's 35% share of the $5.38 statutory maximum; combined with the BCSD share ($3.50, FI-245) the Bakersfield school fee totals $5.38/sq ft - the Level I cap. Some Bakersfield parcels fall in other elementary districts (Greenfield, Rosedale, Panama-Buena Vista) - verify your parcel's district."
     },
     {
@@ -17604,8 +17604,8 @@
       "last_verified": "11 Nov 2026",
       "confidence": "A",
       "status": "verified",
-      "internal_notes": "City of Irvine Form 42-97 (rev. 02/25) lists 'ADU is 749 sq. ft. or less' as a school-fee exemption reason, conflicting with the 500 sq ft state threshold encoded here; the form predates SB 543 (eff. 2026-01-01) and may be stale — re-verify the form's currency at the next check.",
-      "notes": "Most of Irvine; verify district by address. 800 sq ft = $4,304. ADUs under 500 sq ft: $0 per Gov. Code §66311.5(c)(3) deeming. City Form 42-97 (rev. 02/25) lists ADUs of 749 sq ft or less as exempt — encoded at the 500 sq ft state threshold; that discrepancy is unresolved."
+      "internal_notes": "City of Irvine Form 42-97 (rev. 02/25) lists 'ADU is 749 sq. ft. or less' as a school-fee exemption reason, conflicting with the 500 sq ft state threshold encoded here. Form re-verified 2026-11-14 (cycle424): still REV 02/25 on the live city site, 749 line intact — the form has not been revised since SB 543 took effect (2026-01-01). Whether city staff still apply the 749 checkbox in practice is unconfirmed; min_sqft 500 retained per IUSD/TUSD pages and Gov. Code §66311.5(c)(3) deeming. City confirmation would be needed to move to 750.",
+      "notes": "Most of Irvine; verify district by address. 800 sq ft = $4,304. ADUs under 500 sq ft: $0 per Gov. Code §66311.5(c)(3) deeming. City Form 42-97 (rev. 02/25, still current 14 Nov 2026) lists ADUs of 749 sq ft or less as exempt — encoded at the 500 sq ft state threshold; that discrepancy is unresolved."
     },
     {
       "item_id": "IRVINE-NEW-02",
