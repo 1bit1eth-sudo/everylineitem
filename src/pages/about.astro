@@ -4,6 +4,8 @@ import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
 import Main from "@/components/Main.astro";
+import NextReads from "@/components/NextReads.astro";
+import { siteInfoNextReads, TOOLS } from "@/lib/related";
 import Footer from "@/components/Footer.astro";
 import config from "@/config";
 
@@ -30,6 +32,8 @@ const { Content } = await render(about);
 
   <Main pageTitle={about.data.title} class="app-prose">
     <Content />
+
+    <NextReads links={siteInfoNextReads("/about/")} cta={TOOLS.compare} />
   </Main>
 
   <Footer />
