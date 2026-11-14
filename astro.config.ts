@@ -87,6 +87,9 @@ const firstMentionTargets = [
       href: `/fees/${j.juris_id.toLowerCase()}/`,
     })),
   { name: "Fee Index", href: "/fee-index/" },
+  // Content loop (stage 2): "SB 1117" is a site subject with its own hub —
+  // the first mention in a post body links to it, like the Fee Index.
+  { name: "SB 1117", href: "/sb-1117/" },
 ];
 {
   const seenNames = new Map<string, string>();
