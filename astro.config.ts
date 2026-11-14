@@ -64,6 +64,8 @@ const isThinPage = (pathname: string) =>
 // page uses, so the two stay in sync — including jurisdictions whose items are
 // all skipped (e.g. Downey: one verified item, no rate, so no row renders).
 // The set lifts itself when rows land; there is no manual list to maintain.
+// 작업 3 (2026-11-14): verified 행 2건 미만인 페이지도 사이트맵에서 뺀다
+// (템플릿의 noindex 조건과 같은 fees.json 원본 기준).
 const feesData = JSON.parse(readFileSync("./src/data/fees.json", "utf8"));
 
 // Public CSV, generated at build time from fees.json (verified rows only).
@@ -77,6 +79,12 @@ const zeroRowFeePages = new Set(
   feesData.jurisdictions
     .filter((j: { juris_id: string }) => j.juris_id !== "LA-BASE")
     .filter((j: { juris_id: string }) => {
+      // 작업 3: verified 2건 미만이면 사이트맵에서 뺀다.
+      const verifiedCount = feesData.fee_items.filter(
+        (i: { juris_id: string; status: string }) =>
+          i.juris_id === j.juris_id && i.status === "verified"
+      ).length;
+      if (verifiedCount < 2) return true;
       const areas = jurisAreas(feesData, j.juris_id);
       const results =
         areas.length > 0
