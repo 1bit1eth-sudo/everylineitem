@@ -2,6 +2,22 @@
   "entries": [
 {
       "date": "2026-11-14",
+      "detail": "Carlsbad: the Certificate of Occupancy row (CARLSBAD-NEW-12) verified as $0 for a standard detached ADU — the published $89 is the fee for a standalone Certificate of Occupancy Permit (Master Fee Schedule FY 2026-27 #1012, per permit), issued for a change of use/occupancy under CMC 21.60.010, not a line on a new-construction building permit. The MFS lists 'Certificate of Occupancy' only once, among the standalone flat-fee Minor/Miscellaneous permits, and the valuation-based new-construction building section carries no CofO line. The city's Fee Guide REV. 12/23 Example 3 (800 SF detached ADU, total $8,220.58) lists a single Building permit fee of $1,330 and no CofO line — the listed lines sum exactly to $8,220.58 — and Example 1 (new detached single-family home) likewise lists no CofO line although a new home unquestionably receives a CofO. The city issues a 'Certificate of Occupancy Permit' for a change of use (PRE 2025-0032, July 21, 2025; Planning Commission Resolutions 7014 and 7100). The $89 is kept in the row notes as the standalone-permit reference amount. Verified rows sitewide 652 → 653.",
+      "headline": "Carlsbad: certificate of occupancy is a standalone change-of-use permit fee — $0 on a standard ADU (was $89 to_verify)",
+      "items_added": 0,
+      "jurisdictions": ["Carlsbad"]
+    },
+{
+        "date": "2026-11-14",
+        "detail": "Carlsbad: six water connection/capacity rows (CARLSBAD-NEW-06..11) verified as $0 for a standard detached ADU — the published rates are new-service charges that a standard ADU does not trigger: Potable Water Connection Fee 5/8 in $5,865 (#594) / 1 in $13,197 (#596); SDCWA System Capacity Charge 5/8 in $6,501 (#610) / 1 in $10,402 (#612); Water Treatment Capacity Charge 5/8 in $182 (#624) / 1 in $291 (#626), all from Master Fee Schedule FY 2026-27. A detached ADU on an existing lot shares the lot's single water service — 'Only one water and sewer service allowed for existing lot' (city PRE 2025-0004, Apr 4, 2025) and 'Having a separate water, sewer or power connection from the existing primary residence is not required' (IB-111, Aug 2026) — so no new connection fee applies. If the existing meter is undersized, an upgrade may be required and the charge is only the incremental difference (CMWD Rules Ch. 2.12 credits the existing meter on exchange); where a 1 in meter is required only by a fire-sprinkler requirement, fees are based on the water-use meter size (CMWD Ord. 45). The six published rates are kept in the row notes as non-ADU reference amounts. Verified rows sitewide 646 → 652.",
+        "headline": "Carlsbad: water connection and capacity charges do not apply to a standard ADU — $0 (was $5,865–$13,197 to_verify, 6 rows)",
+        "items_added": 0,
+        "jurisdictions": [
+          "Carlsbad"
+        ]
+    },
+{
+      "date": "2026-11-14",
       "detail": "Carlsbad: Affordable Housing Impact Fee (CARLSBAD-NEW-03) verified as $0 for a standalone ADU — the $2,925 per-unit figure in Master Fee Schedule FY 2026-27 #1140 is the CMC 21.85.060 Inclusionary Housing Impact Fee, which applies only to residential projects whose discretionary-approval application was deemed complete before May 21, 1993, so a 2026 ADU cannot be charged it. City staff state 'The inclusionary housing ordinance does not apply to ADUs' (Planning Commission staff report, Lopez Residence ADU, June 18, 2025), and ADUs may instead satisfy inclusionary requirements (CMC 21.85.070.B; IB-157, Sept 2025). The $2,925 figure is kept in the row notes as the non-ADU reference amount. Verified rows sitewide 645 → 646.",
       "headline": "Carlsbad: Affordable Housing Impact Fee does not apply to ADUs — $0 (was $2,925 to_verify)",
       "items_added": 0,

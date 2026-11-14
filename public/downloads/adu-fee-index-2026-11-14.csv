@@ -1,7 +1,7 @@
 # Source: Every Line Item — California ADU Fee Index. https://everylineitem.com/fee-index/
 # License: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) — free to reuse with attribution.
 # Reference date: 2026-11-14 (generated at build time from src/data/fees.json)
-# Scope: verified rows only — 646 verified line items across 163 jurisdictions. Unverified rows are excluded, never estimated.
+# Scope: verified rows only — 653 verified line items across 163 jurisdictions. Unverified rows are excluded, never estimated.
 # Amount at 800 sq ft: computed with the same math as the site calculator (800 sq ft ADU; 1,600 sq ft primary dwelling for prorated lines). Blank = the row has no computable amount at 800 sq ft. A range is shown as low-high.
 jurisdiction,county,fee_name,category,rate,amount_800_sqft,status,source_url,last_verified,effective_date
 Alameda (city),Alameda,Citywide development impact fees — ADUs exempt at all sizes ($0),impact,$0,0,verified,https://www.alamedaca.gov/files/assets/public/v/1/departments/alameda/comm-services/formsandhandouts/planning/adu-permit-packet_2.pdf,2026-10-15,2026
@@ -104,11 +104,18 @@ Campbell,Santa Clara,Plan check fee,plan_check_permit,33% of permit fee,,verifie
 Campbell,Santa Clara,School developer fee (Campbell Union HSD),school,$1.61/sq ft,1288,verified,https://cuhsd.community.highbond.com/document/ad0e3d41-7644-40bd-be45-d997e81f3399/,19 Oct 2026,
 Campbell,Santa Clara,"School developer fee (Campbell Union SD, K-8)",school,$3.77/sq ft,3016,verified,https://www.campbellusd.org/developerfees,2026-11-10,2026
 Carlsbad,San Diego,Affordable Housing Impact Fee,impact,$0,0,verified,https://www.carlsbadca.gov/home/showpublisheddocument/27129/639208527170300000,2026-11-14,
+Carlsbad,San Diego,Certificate of Occupancy,plan_check_permit,$0,0,verified,https://www.carlsbadca.gov/home/showpublisheddocument/27129/639208527170300000,2026-11-14,
 Carlsbad,San Diego,Waste Management Plan (C&D) fee,plan_check_permit,$45,45,verified,https://www.carlsbadca.gov/home/showpublisheddocument/27129/639208527170300000,2026-11-14,1 Sep 2026
 Carlsbad,San Diego,"Developer fee (Carlsbad Unified SD, residential)",school,$5.38/sq ft,4304,verified,https://carlsbadusd.net/developer-fees,2026-10-28,
 Carlsbad,San Diego,"Developer fee (Encinitas Union SD, residential)",school,$2.55/sq ft,2040,verified,https://resources.finalsite.net/images/v1777917264/eusdnet/pd4tuyic5pgfpw1esi6u/DeveloperFeeCollectionPaymentPolicy.pdf,2026-10-29,
 Carlsbad,San Diego,"Developer fee (San Dieguito Union HSD, residential)",school,$2.83/sq ft,2264,verified,https://www.sduhsd.net/Our-District/Facilities/Developer-Fees/,2026-10-28,
+Carlsbad,San Diego,Potable Water Connection Fee — 1 in meter,utility_capacity,$0,0,verified,https://www.carlsbadca.gov/home/showpublisheddocument/27129/639208527170300000,2026-11-14,
+Carlsbad,San Diego,Potable Water Connection Fee — 5/8 in meter,utility_capacity,$0,0,verified,https://www.carlsbadca.gov/home/showpublisheddocument/27129/639208527170300000,2026-11-14,
+Carlsbad,San Diego,SDCWA System Capacity Charge — 1 in meter,utility_capacity,$0,0,verified,https://www.carlsbadca.gov/home/showpublisheddocument/27129/639208527170300000,2026-11-14,
+Carlsbad,San Diego,SDCWA System Capacity Charge — 5/8 in meter,utility_capacity,$0,0,verified,https://www.carlsbadca.gov/home/showpublisheddocument/27129/639208527170300000,2026-11-14,
 Carlsbad,San Diego,Sewer General Capacity Fee (per EDU),utility_capacity,"$1,294",1294,verified,https://www.carlsbadca.gov/home/showpublisheddocument/27129/639208527170300000,2026-11-14,
+Carlsbad,San Diego,Water Treatment Capacity Charge — 1 in meter,utility_capacity,$0,0,verified,https://www.carlsbadca.gov/home/showpublisheddocument/27129/639208527170300000,2026-11-14,
+Carlsbad,San Diego,Water Treatment Capacity Charge — 5/8 in meter,utility_capacity,$0,0,verified,https://www.carlsbadca.gov/home/showpublisheddocument/27129/639208527170300000,2026-11-14,
 Chico,Butte,Energy Plan Check Fee (minimum),plan_check_permit,$282,282,verified,https://catapultfilemanager-prod.s3.us-west-2.amazonaws.com/e12a7475-6d0d-4986-a8bb-538a9e5496e0/FY%202026-2027%20MASTER%20FEE%20SCHEDULE%20-%20Updated%2007-06-2026.pdf,2026-10-20,2026-07-06
 Chico,Butte,Seismic safety surcharge (Public Resources Code 2705),plan_check_permit,0.013% of valuation,,verified,https://catapultfilemanager-prod.s3.us-west-2.amazonaws.com/e12a7475-6d0d-4986-a8bb-538a9e5496e0/FY%202026-2027%20MASTER%20FEE%20SCHEDULE%20-%20Updated%2007-06-2026.pdf,2026-10-20,2026-07-06
 Chico,Butte,"ADU Permit, new detached structure or detached conversion",planning,"$1,460",1460,verified,https://catapultfilemanager-prod.s3.us-west-2.amazonaws.com/e12a7475-6d0d-4986-a8bb-538a9e5496e0/FY%202026-2027%20MASTER%20FEE%20SCHEDULE%20-%20Updated%2007-06-2026.pdf,2026-10-20,2026-07-06
