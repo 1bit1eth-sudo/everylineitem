@@ -17,6 +17,10 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
 import LinkButton from "@/components/LinkButton.astro";
+import NextReads from "@/components/NextReads.astro";
+import PrevNext from "@/components/PrevNext.astro";
+import { sb1117HubOrder } from "@/lib/hubOrder";
+import { TOOLS } from "@/lib/related";
 
 const data = feesData as unknown as FeeData;
 
@@ -37,6 +41,27 @@ const explainerLive = (await getCollection("posts"))
 const slug = juris.juris_id.toLowerCase();
 const days = daysUntilSB1117();
 const inForce = days === 0;
+
+// Content loop (devices A + E): prev/next in the hub's ranked order, and a
+// next-read block. Same-topic link = another SB 1117 page in the same county
+// (else the same region, else a ranked neighbour) — all from fees.json.
+const rankedOrder = sb1117HubOrder(data);
+const rankedIdx = rankedOrder.findIndex(j => j.juris_id === juris.juris_id);
+const prevJuris = rankedIdx > 0 ? rankedOrder[rankedIdx - 1] : null;
+const nextJuris =
+  rankedIdx >= 0 && rankedIdx < rankedOrder.length - 1
+    ? rankedOrder[rankedIdx + 1]
+    : null;
+const allJuris = realJurisdictions(data);
+const siblingJuris =
+  allJuris
+    .filter(j => j.juris_id !== juris.juris_id && j.county === juris.county)
+    .sort((a, b) => a.name.localeCompare(b.name, "en-US"))[0] ??
+  allJuris
+    .filter(j => j.juris_id !== juris.juris_id && j.region === juris.region)
+    .sort((a, b) => a.name.localeCompare(b.name, "en-US"))[0] ??
+  prevJuris ??
+  nextJuris;
 
 const summaries = SB1117_SIZES.map(s =>
   summarizeSB1117(data, juris.juris_id, s)
@@ -371,6 +396,51 @@ const faqSchema = {
         href="/posts/sb-1117-kills-750-sq-ft-cliff/">The 750 sq ft cliff</a
       >
     </p>
+
+    {
+      siblingJuris && (
+        <NextReads
+          links={[
+            {
+              href: `/sb-1117/${siblingJuris.juris_id.toLowerCase()}/`,
+              label: `SB 1117 savings in ${siblingJuris.name}`,
+            },
+            {
+              href: "/fee-index/",
+              label: "California ADU Fee Index",
+            },
+          ]}
+          cta={TOOLS["property-tax"]}
+          subscribe={{
+            href: "/fee-index/#index-alert-heading",
+            label: `Get an email when ${juris.name}'s fees change`,
+          }}
+        />
+      )
+    }
+
+    {
+      (prevJuris || nextJuris) && (
+        <PrevNext
+          prev={
+            prevJuris
+              ? {
+                  href: `/sb-1117/${prevJuris.juris_id.toLowerCase()}/`,
+                  label: `SB 1117 savings in ${prevJuris.name}`,
+                }
+              : null
+          }
+          next={
+            nextJuris
+              ? {
+                  href: `/sb-1117/${nextJuris.juris_id.toLowerCase()}/`,
+                  label: `SB 1117 savings in ${nextJuris.name}`,
+                }
+              : null
+          }
+        />
+      )
+    }
   </main>
   <Footer />
 </Layout>
