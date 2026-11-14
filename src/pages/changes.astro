@@ -22,6 +22,18 @@ const formatDate = (iso: string) => {
   const names = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
   return `${d} ${names[m - 1]} ${y}`;
 };
+
+// Content loop (stage 2): each entry's jurisdiction names link to their
+// fee tables. Same name normalisation as the first-mention plugin —
+// "X County (unincorporated)" -> "X County", "City of X" -> "X". A name
+// with no matching jurisdiction renders as plain text, never a guess.
+const normalizeJurisName = (n: string) =>
+  n.toLowerCase().replace(/\(unincorporated\)/g, "").replace(/^city of /i, "").replace(/\s+/g, " ").trim();
+const feeSlugByName = new Map(
+  (feesData.jurisdictions as any[])
+    .filter(j => j.juris_id !== "LA-BASE")
+    .map(j => [normalizeJurisName(j.name), j.juris_id.toLowerCase()])
+);
 ---
 
 <Layout title={title} description={description}>
@@ -47,7 +59,24 @@ const formatDate = (iso: string) => {
           <h2 class="mt-1 text-xl font-semibold">{e.headline}</h2>
           <p class="mt-2 opacity-80">{e.detail}</p>
           <p class="mt-2 text-sm opacity-60">
-            {e.jurisdictions.join(" · ")}
+            {e.jurisdictions.map((name: string, i: number) => {
+              const slug = feeSlugByName.get(normalizeJurisName(name));
+              return (
+                <>
+                  {i > 0 && " · "}
+                  {slug ? (
+                    <a
+                      href={`/fees/${slug}/`}
+                      class="text-accent underline decoration-dashed underline-offset-4"
+                    >
+                      {name}
+                    </a>
+                  ) : (
+                    name
+                  )}
+                </>
+              );
+            })}
           </p>
         </article>
       ))}
