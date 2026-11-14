@@ -1,6 +1,6 @@
 # Source: Every Line Item — California ADU Fee Index. https://everylineitem.com/fee-index/
 # License: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) — free to reuse with attribution.
-# Reference date: 2026-11-14 (generated at build time from src/data/fees.json)
+# Reference date: 2026-11-15 (generated at build time from src/data/fees.json)
 # Scope: verified rows only — 653 verified line items across 163 jurisdictions. Unverified rows are excluded, never estimated.
 # Amount at 800 sq ft: computed with the same math as the site calculator (800 sq ft ADU; 1,600 sq ft primary dwelling for prorated lines). Blank = the row has no computable amount at 800 sq ft. A range is shown as low-high.
 jurisdiction,county,fee_name,category,rate,amount_800_sqft,status,source_url,last_verified,effective_date
