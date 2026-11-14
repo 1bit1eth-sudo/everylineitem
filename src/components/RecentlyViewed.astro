@@ -1,0 +1,56 @@
+---
+/**
+ * "Recently viewed" (content-loop device G): the last three pages the reader
+ * opened, shown on home and hub pages. Reads only from localStorage
+ * (key `eli-recent`, written by the recorder in Layout.astro); nothing is
+ * sent to a server. The section hides itself when there is nothing to show.
+ */
+---
+
+<section
+  id="recently-viewed"
+  class="mt-8 hidden"
+  aria-label="Recently viewed"
+>
+  <h2 class="text-xl font-semibold">Recently viewed</h2>
+  <ul id="recently-viewed-list" class="mt-3 space-y-2"></ul>
+</section>
+
+<script>
+  function renderRecentlyViewed() {
+    const section = document.querySelector<HTMLElement>("#recently-viewed");
+    const list = document.querySelector<HTMLElement>("#recently-viewed-list");
+    if (!section || !list) return;
+    let recent: { href: string; title: string }[] = [];
+    try {
+      recent = JSON.parse(
+        window.localStorage.getItem("eli-recent") || "[]"
+      ) as { href: string; title: string }[];
+    } catch {
+      recent = [];
+    }
+    const current = window.location.pathname;
+    const shown = recent
+      .filter(r => r.href !== current && typeof r.href === "string")
+      .slice(0, 3);
+    if (shown.length === 0) {
+      section.classList.add("hidden");
+      return;
+    }
+    list.innerHTML = "";
+    for (const r of shown) {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = r.href;
+      a.textContent = r.title.replace(/\s*\|\s*Every Line Item\s*$/, "");
+      a.className =
+        "text-accent underline decoration-dashed underline-offset-4 hover:opacity-75";
+      li.append(a);
+      list.append(li);
+    }
+    section.classList.remove("hidden");
+  }
+
+  renderRecentlyViewed();
+  document.addEventListener("astro:page-load", renderRecentlyViewed);
+</script>
