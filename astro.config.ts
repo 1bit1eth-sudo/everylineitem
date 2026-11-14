@@ -17,6 +17,8 @@ import {
   transformerNotationWordHighlight,
 } from "@shikijs/transformers";
 import { transformerFileName } from "./src/utils/transformers/fileName";
+import remarkFirstMention from "./src/utils/remark-first-mention";
+import { loopBidScanner } from "./src/lib/loopBidScanner";
 import { calcJurisdiction, calcSB1117, jurisAreas } from "./src/lib/feeCalc";
 import { generateFeeCsvFiles } from "./src/lib/csvExport";
 import { generateEstimateXlsxFiles } from "./src/lib/estimateXlsx";
@@ -67,6 +69,36 @@ const isThinPage = (pathname: string) =>
 // 작업 3 (2026-11-14): verified 행 2건 미만인 페이지도 사이트맵에서 뺀다
 // (템플릿의 noindex 조건과 같은 fees.json 원본 기준).
 const feesData = JSON.parse(readFileSync("./src/data/fees.json", "utf8"));
+
+// Content loop (device D): first-mention link targets, from fees.json —
+// every jurisdiction's display name to its fee page, plus the Fee Index.
+// Names are normalised the way prose writes them ("City of Los Angeles"
+// -> "Los Angeles", "X County (unincorporated)" -> "X County"). A name
+// shared by two jurisdictions keeps the first; that is warned about here
+// so an ambiguous link never slips in silently.
+const firstMentionTargets = [
+  ...feesData.jurisdictions
+    .filter((j: { juris_id: string }) => j.juris_id !== "LA-BASE")
+    .map((j: { juris_id: string; name: string }) => ({
+      name: j.name
+        .replace(/\s*\(unincorporated\)\s*$/i, "")
+        .replace(/^City of\s+/i, "")
+        .trim(),
+      href: `/fees/${j.juris_id.toLowerCase()}/`,
+    })),
+  { name: "Fee Index", href: "/fee-index/" },
+];
+{
+  const seenNames = new Map<string, string>();
+  for (const t of firstMentionTargets) {
+    const prev = seenNames.get(t.name);
+    if (prev && prev !== t.href)
+      console.warn(
+        `[content-loop] ambiguous first-mention name "${t.name}": ${prev} vs ${t.href} — keeping the first`
+      );
+    else seenNames.set(t.name, t.href);
+  }
+}
 
 // Public CSV, generated at build time from fees.json (verified rows only).
 // Writes public/downloads/ (dated + latest + legacy q3 alias) so `astro
@@ -237,6 +269,7 @@ export default defineConfig({
   site: config.site.url,
   integrations: [
     mdx(),
+    loopBidScanner,
     sitemap({
       filter: page =>
         (config.features?.showArchives !== false ||
@@ -263,6 +296,7 @@ export default defineConfig({
       remarkPlugins: [
         remarkToc,
         [remarkCollapse, { test: "Table of contents" }],
+        [remarkFirstMention, { targets: firstMentionTargets }],
       ],
       rehypePlugins: [rehypeCallouts],
     }),
