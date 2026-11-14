@@ -2,6 +2,51 @@
   "entries": [
 {
         "date": "2026-11-15",
+        "detail": "Covina: city development impact fees verified — FY26-27 DIF Schedule (eff. 7/1/2026; Res. CC 2024-057) per-dwelling base $25,358 for the >1,200-1,900 sq ft primary tier (park land $4,517 + park improvements $3,011 + community/rec centers $1,161 + library $1,585 + general government $1,420 + police $422 + fire $384 + streets $11,392 + traffic signals $1,315 + 0.6% admin $151; components re-summed and match the printed total exactly). ADUs of 750+ sq ft pay (ADU sq ft / primary sq ft) x base per Res. CC 2024-057 Sec. 8; ADUs under 750 sq ft pay $0. 800 sq ft ADU at the 1,600 sq ft default primary = $12,679. Covina verified rows 1 → 2, so the /fees/covina/ page reaches the 2-verified-rows threshold and its noindex lifts. Verified rows sitewide 658 → 659.",
+        "headline": "Covina: city development impact fees verified — $25,358 per-dwelling base (prorated for ADUs 750+ sq ft); city reaches 2 verified rows",
+        "items_added": 1,
+        "jurisdictions": [
+          "Covina"
+        ]
+    },
+{
+        "date": "2026-11-15",
+        "detail": "Coachella: sanitation capacity charge verified at $0 for a standard ADU (COACHELLA-NEW-01). CVWD Regulations Governing Sanitation Service (Ord. 1427.7 Sec. 5-1, 2025) charge no sanitation capacity charge when an ADU uses the home's existing street sewer lateral and/or water meter connections; a separate connection triggers a proportionate charge against the $4,533 one-time Sanitation Capacity Charge (CVWD Sewer Service Rates, eff. July 1, 2025) -- e.g. an 800 sq ft ADU with a 1,600 sq ft primary home pays $2,266.50. Applies only to parcels in CVWD's service area (south of Avenue 56); the City of Coachella Sanitary District serves parcels north of Avenue 56. Coachella verified rows 1 \u2192 2, so the /fees/coachella/ page reaches the 2-verified-rows threshold and its noindex lifts. Verified rows sitewide 657 \u2192 658.",
+        "headline": "Coachella: CVWD sanitation capacity charge verified \u2014 $0 for a standard ADU sharing existing connections; city reaches 2 verified rows",
+        "items_added": 1,
+        "jurisdictions": [
+          "Coachella"
+        ]
+    },
+{
+        "date": "2026-11-15",
+        "detail": "Claremont: Accessory Second Unit (ADU) Permit verified at $1,030 flat (CLAREMONT-NEW-01) — Citywide User Fee Schedule adopted June 23, 2026, effective July 1, 2026, Community Development - Planning, Land Use Review item 73: 'Accessory Second Unit Permit $1,030.00 Fixed.' 'Accessory Second Unit' is the schedule's term for the ADU permit required by Claremont Municipal Code §16.333.050(A); the City's Planning Permits page lists the Accessory Dwelling Unit Permit Application. Fixed fee, no valuation or per-sq-ft component. Claremont verified rows 1 → 2, so the /fees/claremont/ page reaches the 2-verified-rows threshold and its noindex lifts. Verified rows sitewide 656 → 657.",
+        "headline": "Claremont: ADU permit verified — $1,030 flat; city reaches 2 verified rows",
+        "items_added": 1,
+        "jurisdictions": [
+          "Claremont"
+        ]
+    },
+{
+        "date": "2026-11-15",
+        "detail": "Chino: city development impact fees for ADUs verified at $8.20/sq ft (CHINO-NEW-01) — Res. No. 2025-030, FY 2025-26 DIF, §10 Accessory Dwelling Units, 'Total Cost per Square Foot for ADUs (751–1,200 SF)' $8.20 (Law Enforcement $0.25 + Fire Protection $0.56 + Circulation $1.83 + Storm Drainage $0.96 + Water Distribution $1.10 + Sewer Collection $0.23 + General Facilities $0.07 + Public Use $2.02 + Parks $1.17; printed components sum to $8.19, the resolution's published total is $8.20). $6,560 on an 800 sq ft ADU; $0 at 750 sq ft or less under Gov. Code §66311.5. Citywide schedule (outside The Preserve); The Preserve has a separate ADU DIF schedule ($16.30/sq ft). A 3% DIF administrative fee applies to the non-park portion and is not included in the $8.20 rate. Adopted 17 Jun 2025, effective 16 Aug 2025 (60 days after adoption, Gov. Code §66017). No FY 2026-27 DIF adjustment resolution was located. Chino verified rows 1 → 2, so the /fees/chino/ page reaches the 2-verified-rows threshold and its noindex lifts. Verified rows sitewide 655 → 656.",
+        "headline": "Chino: city ADU development impact fees verified — $8.20/sq ft (was 1 verified row); city reaches 2 verified rows",
+        "items_added": 1,
+        "jurisdictions": [
+          "Chino"
+        ]
+    },
+{
+        "date": "2026-11-15",
+        "detail": "Calexico: Fire facilities development impact fee verified at $712 per dwelling unit (CALEXICO-NEW-01, per-dwelling base; an ADU pays proportionally per Gov. Code §66311.5 — $356 at the 1,600 sq ft default primary for an 800 sq ft ADU; $0 at 750 sq ft or less). Source: City of Calexico 6th Cycle Housing Element Update, Section 3, Table 3-9 (Fire Facilities, Single Family Home per unit $712), corroborated by California State Auditor Report 2021-805 (Oct 2022, current fee charged $712). Confidence B: the underlying DIF schedule is 2021-vintage and its PDF could not be extracted; the Housing Element was revised in 2026 and still publishes $712, and the Apr 15, 2026 temporary fee schedule covered planning/building/encroachment fees only, not impact fees. Calexico verified rows 1 → 2, so the /fees/calexico/ page reaches the 2-verified-rows threshold and its noindex lifts. Verified rows sitewide 654 → 655.",
+        "headline": "Calexico: fire facilities impact fee verified — $712 per dwelling unit; city reaches 2 verified rows",
+        "items_added": 1,
+        "jurisdictions": [
+          "Calexico"
+        ]
+    },
+{
+        "date": "2026-11-15",
         "detail": "Kern County (unincorporated): Kern High School District 35% share verified at $1.88/sq ft (KERN-NEW-02), computed as 35% of the $5.38 SAB Level I maximum (Jan 28, 2026). The Greenfield USD 2026 Fee Justification Study (Apr 28, 2026; Res. No. 26-15 adopted May 13, 2026) states the allocation agreement with KHSD -- Greenfield 65% = $3.50 of the maximum -- and covers unincorporated Kern County; the remaining 35% is KHSD's share by the same agreement. KHSD's FY 2024-25 annual report confirms the district levies the statutory maximum ($5.17/sq ft in effect then). 800 sq ft = $1,504; combined with KERN-NEW-01 (Greenfield $3.50) the school fee totals $5.38/sq ft, the Level I cap, for Greenfield-territory parcels. Confidence B: the $1.88 figure is computed, not stated directly by KHSD -- no KHSD-published $1.88 figure was located (KHSD's own rate page still posts no rate). Same computed basis as BAKERSFIELD-NEW-01, verified 2026-11-13. Kern County verified rows 1 → 2, so the /fees/kern-county/ page reaches the 2-verified-rows threshold and its noindex lifts. Verified rows sitewide 653 → 654.",
         "headline": "Kern County: Kern High school-district share verified — $1.88/sq ft (was to_verify); county reaches 2 verified rows",
         "items_added": 0,
