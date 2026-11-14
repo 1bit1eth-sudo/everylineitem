@@ -1,0 +1,94 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Footer from "@/components/Footer.astro";
+import LinkButton from "@/components/LinkButton.astro";
+import RecentlyViewed from "@/components/RecentlyViewed.astro";
+
+const title = "Tools | Every Line Item";
+const description =
+  "Free ADU cost tools: check a contractor quote, compare fees by city, estimate the added property tax, and download a blank cost ledger.";
+---
+
+<Layout title={title} description={description}>
+  <Header />
+
+  <Breadcrumb />
+
+  <main id="main-content" class="app-layout pb-8">
+    <h1 class="text-3xl font-bold sm:text-4xl">Tools</h1>
+    <p class="mt-4 text-lg opacity-80">
+      Free tools built on the same verified fee data as the rest of this
+      site. No account, no email required.
+    </p>
+
+    <RecentlyViewed />
+
+    <div class="mt-8 space-y-8">
+      <section>
+        <h2 class="text-xl font-semibold">
+          <LinkButton
+            href="/compare/"
+            class="text-accent underline decoration-dashed underline-offset-4"
+          >
+            Compare fees by city
+          </LinkButton>
+        </h2>
+        <p class="mt-2 opacity-80">
+          Map any ADU bid onto the same six-phase ledger we use for every
+          city — spot missing stages, allowances that can move, and questions
+          to ask before you sign.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold">
+          <LinkButton
+            href="/property-tax/"
+            class="text-accent underline decoration-dashed underline-offset-4"
+          >
+            ADU property tax calculator
+          </LinkButton>
+        </h2>
+        <p class="mt-2 opacity-80">
+          Estimate the added property tax for a California ADU. Only the new
+          construction is reassessed — pick your county and added value.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold">
+          <LinkButton
+            href="/bid-scanner/"
+            class="text-accent underline decoration-dashed underline-offset-4"
+          >
+            Bid Scanner
+          </LinkButton>
+        </h2>
+        <p class="mt-2 opacity-80">
+          Paste a contractor quote. It is sorted into the six phases,
+          flagged where it looks off, and turned into questions to ask.
+          Nothing you paste leaves your browser.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold">
+          <LinkButton
+            href="/worksheet/"
+            class="text-accent underline decoration-dashed underline-offset-4"
+          >
+            Six-phase cost worksheet
+          </LinkButton>
+        </h2>
+        <p class="mt-2 opacity-80">
+          Download a blank six-phase ADU cost ledger as CSV and import it
+          into Google Sheets. No email required.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
