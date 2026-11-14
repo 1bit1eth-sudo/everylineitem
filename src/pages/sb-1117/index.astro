@@ -15,6 +15,7 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
 import LinkButton from "@/components/LinkButton.astro";
+import RecentlyViewed from "@/components/RecentlyViewed.astro";
 
 // The plain-English explainer is scheduled (pubDatetime); until it is live,
 // point at the published 750 sq ft cliff explainer instead of a 404.
@@ -119,6 +120,8 @@ const listSchema = {
         href="/methodology/">How we price &rarr;</LinkButton
       >
     </p>
+
+    <RecentlyViewed />
 
     <div class="mt-8 overflow-x-auto">
       <table class="w-full border-collapse text-sm">
