@@ -2,6 +2,41 @@
   "entries": [
 {
       "date": "2026-11-14",
+      "detail": "Carlsbad: Affordable Housing Impact Fee (CARLSBAD-NEW-03) verified as $0 for a standalone ADU — the $2,925 per-unit figure in Master Fee Schedule FY 2026-27 #1140 is the CMC 21.85.060 Inclusionary Housing Impact Fee, which applies only to residential projects whose discretionary-approval application was deemed complete before May 21, 1993, so a 2026 ADU cannot be charged it. City staff state 'The inclusionary housing ordinance does not apply to ADUs' (Planning Commission staff report, Lopez Residence ADU, June 18, 2025), and ADUs may instead satisfy inclusionary requirements (CMC 21.85.070.B; IB-157, Sept 2025). The $2,925 figure is kept in the row notes as the non-ADU reference amount. Verified rows sitewide 645 → 646.",
+      "headline": "Carlsbad: Affordable Housing Impact Fee does not apply to ADUs — $0 (was $2,925 to_verify)",
+      "items_added": 0,
+      "jurisdictions": ["Carlsbad"]
+    },
+{
+      "date": "2026-11-14",
+      "detail": "Carlsbad: Sewer General Capacity Fee verified — $1,294 for a new detached ADU (CARLSBAD-NEW-02). The EDU question is settled from published sources: CMC Table 13.10.020(c)(4) (Ord. CS-207, adopted 26 Mar 2013) assigns 1.00 EDU to a housing accommodation designed for occupancy by a single person or one family, and an ADU meets that definition (Gov. Code §65852.2(j)(1)), so one ADU is 1 EDU at the Master Fee Schedule FY 2026-27 rate of $1,294 per EDU (eff. Sept 1, 2026). State law allows a proportionate capacity charge for a new detached ADU (§65852.2(f)(5)); no new-connection charge applies to an ADU within existing space (§65852.2(f)(4)). Sewer benefit-area fees stay parcel-specific and unencoded. Verified rows sitewide 644 → 645.",
+      "headline": "Carlsbad: sewer General Capacity Fee verified — $1,294 (1 EDU per ADU)",
+      "items_added": 0,
+      "jurisdictions": ["Carlsbad"]
+    },
+{
+      "date": "2026-11-14",
+      "detail": "Carlsbad: Waste Management Plan (C&D) fee verified — $45 per permit (CARLSBAD-NEW-14). Master Fee Schedule FY 2026-27, Section 2 (eff. Sept 1, 2026): 'Waste Management Plan (C&D) fee, per permit $45'. The plan applies to a new ADU: the city's Construction & Demolition Waste Diversion & Recycling Guide states the C&D requirement covers 'all demolitions and new construction, additions and alterations' and that CALGreen requires a waste management plan before construction starts (city B-59 form, before permit approval). Verified rows sitewide 643 \u2192 644.",
+      "headline": "Carlsbad: waste management plan fee verified — $45 per permit",
+      "items_added": 0,
+      "jurisdictions": ["Carlsbad"]
+    },
+{
+      "date": "2026-11-14",
+      "detail": "AUHSD Resolution No. 2025/26-F-08 (adopted 7 May 2026) and its 2026 Fee Justification Study confirm the $2.69/sq ft high-school share for Savanna-area parcels: the study's fee-sharing section names Savanna School District among the five feeder elementary districts in the Ed. Code 17623(a) allocation agreement, with AUHSD collecting 50% of the $5.38 cap. New verified row FI-549 pairs with FI-547 (Savanna ESD $2.585) for a combined $5.275/sq ft ($4,220 on 800 sq ft). The Buena Park draft post's southern school-fee passages were corrected to match (Centralia/Cypress areas $5.38, Savanna $5.275; Magnolia ESD still unverified). Verified rows sitewide 642 -> 643.",
+      "headline": "Buena Park: Anaheim Union HSD share verified for Savanna-area parcels — $2.69/sq ft (FI-549)",
+      "items_added": 1,
+      "jurisdictions": ["Buena Park"]
+    },
+{
+      "date": "2026-11-14",
+      "detail": "Oxnard School District adopted Resolution No. 26-05 on Aug 5, 2026 (public hearing, agenda item B.2; vote 5-0 per meeting video roll call -- the agenda-packet copy is an unsigned draft with blank vote lines, and no signed resolution or approved Aug 5 minutes were located). Section 14 levies $3.55/sq ft residential (66% of the $5.38 SAB cap); Section 23 makes it effective 60 days from adoption, Oct 4, 2026. FI-325 updated $3.41 -> $3.55. Oxnard Union HSD's 2026 adoption was not found (no 2026 study or resolution in Granicus or general search), so its share stays $1.76 (FI-548, new verified row; 34% of the $5.17 cap). Combined Oxnard school fee is now $5.31/sq ft ($4,248 on 800 sq ft, was $4,136); the Oxnard post and the school-fee ranking were corrected to match. Post total $308,000 unchanged ($112 inside $1,000 rounding). Verified rows sitewide 641 -> 642.",
+      "headline": "Oxnard: Oxnard SD school fee rises to $3.55/sq ft (Res. 26-05); OUHSD share $1.76 verified (FI-548)",
+      "items_added": 1,
+      "jurisdictions": ["Oxnard"]
+    },
+{
+      "date": "2026-11-14",
       "detail": "Work 3 (AdSense 'low value content' response): /fees/ pages with fewer than 2 verified fee rows are now noindex and excluded from the sitemap — 34 pages (Bellflower, Calexico, Chino, Claremont, Coachella, Covina, Davis, El Centro, Encinitas, Garden Grove, Glendora, Inglewood, Kern County, La Mesa, Los Altos, Los Gatos, Lynwood, Montebello, Monterey Park, Moorpark, Mountain View, Pico Rivera, Redwood City, Rosemead, Sacramento County, San Bernardino, San Fernando, Santa Cruz County, San Diego County, Temple City, Thousand Oaks, Tracy, Walnut, Whittier). LA-BASE has no page. The condition lifts itself when a page reaches 2 verified rows; no fee data changed. Verified rows sitewide unchanged at 641.",
       "headline": "Thin fee pages removed from search index — 34 pages now noindex (fewer than 2 verified rows)",
       "items_added": 0,
@@ -109,7 +144,7 @@
     },
 {
       "date": "2026-11-13",
-      "detail": "Antelope Valley Union High School District (9-12) school developer fee verified at $1.34/sq ft (Resolution No. 2024-25-16, adopted Nov 21, 2024, effective Jan 20, 2025) - the district's 26% share of the Level 1 maximum; with Lancaster SD's $3.98 (FI-317) the combined school fee is $5.32/sq ft, within the 2026 Level 1 cap of $5.38. No 2026 AVUHSD increase resolution was found, so $1.34 stands as the operative adopted rate. The 2024 news figure of $4.08 for AVUHSD was wrong - it was never the district's share. Six current development impact fees verified from the Citywide Fee Schedule effective October 1, 2025, Section 3 (superseding the stale 2021 Appendix B): traffic signal $1,399, traffic $2,227, park development $3,153, administrative offices $75, corporate yard $71, open space $372 per dwelling unit - all encoded with dwelling-base proration (800 sq ft ADU at the 1,600 sq ft default primary: $3,648.50; $0 at 750 sq ft and under). Not encoded, with reasons: drainage fee is now $0.48 per sq ft of lot (lot-size dependent, no ADU rule published); park in-lieu fee is bedroom-dependent ($591/$887/$1,184); biological fee is $770 per gross acre; LA County traffic fee is $1,869 per p.m. peak-hour trip in a bounded area only. The building permit valuation table is still not in the city's public fee schedule - the room-addition plan check band ($1,034 for 501-1,000 sq ft) is for additions, not new detached ADUs, so no permit row was added. Lancaster now has 8 fee rows, all verified; verified rows sitewide 538 to 545.",
+      "detail": "Antelope Valley Union High School District (9-12) school developer fee verified at $1.34/sq ft (Resolution No. 2024-25-16, adopted Nov 21, 2024, effective Jan 20, 2025) - the district's 26% share of the Level 1 maximum; with Lancaster SD's $3.98 (FI-317) the combined school fee is $5.32/sq ft, within the 2026 Level 1 cap of $5.38. No 2026 AVUHSD increase resolution was found, so $1.34 stands as the operative adopted rate. The 2024 news figure of $4.08 for AVUHSD was wrong - it was never the district's share. Six current development impact fees verified from the Citywide Fee Schedule effective October 1, 2025, Section 3 (superseding the stale 2021 Appendix B): traffic signal $1,399, traffic $2,227, park development $3,153, administrative offices $75, corporate yard $71, open space $372 per dwelling unit - all encoded with dwelling-base proration (800 sq ft ADU at the 1,600 sq ft default primary: $3,648.50; $0 at 750 sq ft and under). Not encoded, with reasons: drainage fee is now $0.48 per sq ft of lot (lot-size dependent, no ADU rule published); park in-lieu fee is bedroom-dependent ($591/$887/$1,184); biological fee is $770 per gross acre; LA County traffic fee ($1,578.17 per p.m. peak-hour trip, Appendix B) is not encoded — whether it applies to ADUs is unstated. The building permit valuation table is still not in the city's public fee schedule - the room-addition plan check band ($1,034 for 501-1,000 sq ft) is for additions, not new detached ADUs, so no permit row was added. Lancaster now has 8 fee rows, all verified; verified rows sitewide 538 to 545.",
       "headline": "Lancaster: AVUHSD school fee and current DIF verified - 1 verified row to 8",
       "items_added": 7,
       "jurisdictions": ["Lancaster"]
