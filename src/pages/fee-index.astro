@@ -9,6 +9,8 @@ import Footer from "@/components/Footer.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
 import FeeAlertSignup from "@/components/FeeAlertSignup.astro";
 import LinkButton from "@/components/LinkButton.astro";
+import NextReads from "@/components/NextReads.astro";
+import { TOOLS } from "@/lib/related";
 
 const title = "California ADU Fee Index — Q3 2026 | Every Line Item";
 const jurisCount = (feesData.jurisdictions as any[]).filter(j => j.juris_id !== "LA-BASE").length;
@@ -331,6 +333,14 @@ const facts = [
         Fee change log &rarr;
       </LinkButton>
     </div>
+
+    <NextReads
+      links={[
+        { href: "/sb-1117/", label: "SB 1117 savings by city" },
+        { href: "/methodology/", label: "How we verify" },
+      ]}
+      cta={TOOLS.compare}
+    />
   </main>
   <Footer />
 </Layout>

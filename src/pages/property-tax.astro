@@ -17,6 +17,18 @@ import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
+import NextReads from "@/components/NextReads.astro";
+import { getCollection } from "astro:content";
+import { getSortedPosts } from "@/utils/getSortedPosts";
+import { postsForTool } from "@/lib/related";
+
+// Content loop (device B): related posts, picked by tag from the post
+// collection — no fixed list.
+const toolPosts = postsForTool(
+  getSortedPosts(await getCollection("posts")),
+  "property-tax",
+  3
+);
 
 const title = "ADU Property Tax Calculator | Every Line Item";
 const description =
@@ -88,7 +100,9 @@ const linkClass = "text-accent underline decoration-dashed underline-offset-4";
     />
   </Fragment>
   <Header />
-  <Breadcrumb />
+  <Breadcrumb
+    trail={[{ href: "/tools/", label: "Tools" }, { label: "Property Tax" }]}
+  />
   <main id="main-content" class="app-layout pb-8">
     <h1 class="my-4 text-3xl font-bold sm:text-4xl">
       How Much Extra Property Tax Will an ADU Add?
@@ -541,6 +555,8 @@ const linkClass = "text-accent underline decoration-dashed underline-offset-4";
         Report and are re-checked when the BOE publishes a new edition.
       </p>
     </section>
+
+    <NextReads title="Related reading" links={toolPosts} />
   </main>
   <Footer />
 </Layout>

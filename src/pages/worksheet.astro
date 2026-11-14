@@ -1,10 +1,13 @@
 ---
-import { getEntry, render } from "astro:content";
+import { getEntry, render, getCollection } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
 import Main from "@/components/Main.astro";
 import Footer from "@/components/Footer.astro";
+import NextReads from "@/components/NextReads.astro";
+import { getSortedPosts } from "@/utils/getSortedPosts";
+import { postsForTool } from "@/lib/related";
 import config from "@/config";
 
 const worksheet = await getEntry("pages", "worksheet");
@@ -16,6 +19,14 @@ if (!worksheet) {
 }
 
 const { Content } = await render(worksheet);
+
+// Content loop (device B): related posts, picked by tag from the post
+// collection — no fixed list.
+const toolPosts = postsForTool(
+  getSortedPosts(await getCollection("posts")),
+  "worksheet",
+  3
+);
 ---
 
 <Layout
@@ -26,10 +37,14 @@ const { Content } = await render(worksheet);
 >
   <Header />
 
-  <Breadcrumb />
+  <Breadcrumb
+    trail={[{ href: "/tools/", label: "Tools" }, { label: "Worksheet" }]}
+  />
 
   <Main pageTitle={worksheet.data.title} class="app-prose">
     <Content />
+
+    <NextReads title="Related reading" links={toolPosts} />
   </Main>
 
   <Footer />

@@ -28,6 +28,48 @@ const t = useTranslations(locale);
       >
         {t.notFound.goHome}
       </LinkButton>
+      <form
+        action="/search/"
+        method="get"
+        role="search"
+        class="mt-2 flex gap-2"
+      >
+        <label for="not-found-search" class="sr-only">Search</label>
+        <input
+          id="not-found-search"
+          name="q"
+          type="search"
+          placeholder={t.a11y.searchPlaceholder}
+          class="rounded border border-border bg-transparent px-3 py-2"
+        />
+        <button
+          type="submit"
+          class="bg-accent rounded px-4 py-2 font-semibold text-white"
+        >
+          Search
+        </button>
+      </form>
+      <p class="mt-6 text-sm opacity-80">Or start from a hub:</p>
+      <div class="mt-2 flex flex-wrap justify-center gap-4">
+        <LinkButton
+          href="/fees/"
+          class="underline decoration-dashed underline-offset-4"
+        >
+          Fees by City
+        </LinkButton>
+        <LinkButton
+          href="/posts/"
+          class="underline decoration-dashed underline-offset-4"
+        >
+          Posts
+        </LinkButton>
+        <LinkButton
+          href="/compare/"
+          class="underline decoration-dashed underline-offset-4"
+        >
+          Compare fees
+        </LinkButton>
+      </div>
     </div>
   </main>
 

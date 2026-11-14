@@ -12,6 +12,7 @@ import Footer from "@/components/Footer.astro";
 import Socials from "@/components/Socials.astro";
 import LinkButton from "@/components/LinkButton.astro";
 import FeeAlertSignup from "@/components/FeeAlertSignup.astro";
+import RecentlyViewed from "@/components/RecentlyViewed.astro";
 import changelog from "@/data/fee-changelog.json";
 import { getSortedPosts } from "@/utils/getSortedPosts";
 import { useTranslations } from "@/i18n";
@@ -483,6 +484,8 @@ const formatShortDate = (d: string | Date) =>
         </aside>
       </div>
     </section>
+
+    <RecentlyViewed />
 
     {/* TRUST — every number has a source document */}
     <section aria-labelledby="trust-heading" class="border-border border-b pt-12 pb-6">

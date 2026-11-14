@@ -5,6 +5,7 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
 import LinkButton from "@/components/LinkButton.astro";
+import RecentlyViewed from "@/components/RecentlyViewed.astro";
 
 const jurisdictions = feesData.jurisdictions
   .filter(j => j.juris_id !== "LA-BASE")
@@ -36,6 +37,8 @@ const description = `Government ADU fees for ${jurisdictions.length} California 
       State law bars impact fees on ADUs of 750 sq ft or less (Gov. Code
       &sect;66311.5) — that cliff is drawn on every page.
     </p>
+
+    <RecentlyViewed />
 
     {[...byRegion.entries()].map(([region, list]) => (
       <section class="mt-10" id={region.toLowerCase().replace(/\s+/g, "-")}>
