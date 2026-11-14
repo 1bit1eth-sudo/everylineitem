@@ -81,6 +81,8 @@ const ssrHTML = sideBySideHTML(
     {
       (["a", "b"] as const).map(side => {
         const defJuris = side === "a" ? DEFAULT_A : DEFAULT_B;
+        const defName =
+          data.jurisdictions.find(j => j.juris_id === defJuris)?.name ?? defJuris;
         const areas = jurisAreas(data, defJuris);
         return (
           <div class="space-y-4">
@@ -101,6 +103,20 @@ const ssrHTML = sideBySideHTML(
                 ))}
               </select>
             </label>
+
+            {/* Content loop (stage 2): tool -> data page. The link follows
+                the selected jurisdiction — updated in update() below. Every
+                option here has a fee page (illustrative LA-BASE is excluded
+                from the selects). */}
+            <p class="text-sm">
+              <a
+                id={`jsc-fee-${side}`}
+                href={`/fees/${defJuris.toLowerCase()}/`}
+                class="text-accent underline decoration-dashed underline-offset-4"
+              >
+                See {defName} verified fees &rarr;
+              </a>
+            </p>
 
             <div class="flex flex-col gap-2 text-sm font-medium">
               <span>
@@ -208,7 +224,22 @@ const ssrHTML = sideBySideHTML(
   const areaSelA = document.getElementById("jsc-area-a") as HTMLSelectElement | null;
   const areaWrapB = document.getElementById("jsc-area-b-wrap") as HTMLElement | null;
   const areaSelB = document.getElementById("jsc-area-b") as HTMLSelectElement | null;
+  const feeLinkA = document.getElementById("jsc-fee-a") as HTMLAnchorElement | null;
+  const feeLinkB = document.getElementById("jsc-fee-b") as HTMLAnchorElement | null;
   const results = document.getElementById("jsc-results");
+
+  // Content loop (stage 2): keep each side's fee-table link on the
+  // selected jurisdiction. The server-rendered defaults are already
+  // correct; this only follows the selects.
+  function syncFeeLink(
+    link: HTMLAnchorElement | null,
+    sel: HTMLSelectElement | null
+  ) {
+    if (!link || !sel) return;
+    link.href = `/fees/${sel.value.toLowerCase()}/`;
+    const opt = sel.options[sel.selectedIndex];
+    if (opt) link.textContent = `See ${opt.text} verified fees →`;
+  }
 
   function syncArea(
     jurisSel: HTMLSelectElement,
@@ -246,6 +277,8 @@ const ssrHTML = sideBySideHTML(
 
   function update() {
     if (!data || !selA || !selB || !sqftA || !sqftB || !results) return;
+    syncFeeLink(feeLinkA, selA);
+    syncFeeLink(feeLinkB, selB);
     if (sqftAVal) {
       sqftAVal.textContent = `${Number(sqftA.value).toLocaleString("en-US")} sq ft`;
     }
