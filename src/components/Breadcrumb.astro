@@ -7,6 +7,13 @@ import config from "@/config";
 const locale = Astro.currentLocale ?? config.site.lang;
 const t = useTranslations(locale);
 
+// `trail` overrides the URL-derived crumbs (used by the tool pages, whose
+// hub is /tools/ rather than their own URL parent). Items without `href`
+// render as the current-page text.
+type Crumb = { href?: string; label: string };
+type Props = { trail?: Crumb[] };
+const { trail } = Astro.props;
+
 // Strip base prefix and trailing slash, then locale prefix so segments
 // reflect the logical page path only.
 const pathWithoutBase = stripBase(Astro.url.pathname).replace(/\/+$/, "");
@@ -34,7 +41,12 @@ const navLabels: Record<string, string> = {
 
 // if breadcrumb is Home > Posts > [page] <etc>
 // replace Posts with localized "Posts (page number)"
-if (breadcrumbList[0] === "posts") {
+// Only for the paginated list (/posts/, /posts/2/ ...). A post detail page
+// (/posts/<slug>/) keeps Home > Posts > <slug>.
+if (
+  breadcrumbList[0] === "posts" &&
+  (breadcrumbList[1] === undefined || !isNaN(Number(breadcrumbList[1])))
+) {
   breadcrumbList.splice(
     0,
     2,
@@ -68,31 +80,53 @@ if (breadcrumbList[0] === "tags" && !isNaN(Number(breadcrumbList[2]))) {
       <span aria-hidden="true" class="opacity-80">&raquo;</span>
     </li>
     {
-      breadcrumbList.map((breadcrumb, index) =>
-        index + 1 === breadcrumbList.length ? (
-          <li>
-            <span
-              class:list={["capitalize opacity-75", { lowercase: index > 0 }]}
-              aria-current="page"
-            >
-              {/* make the last part lowercase in Home > Tags > some-tag */}
-              {navLabels[breadcrumb] ?? decodeSegment(breadcrumb)}
-            </span>
-          </li>
-        ) : (
-          <li class="flex items-center gap-x-1">
-            <a
-              href={getRelativeLocaleUrl(locale, breadcrumb)}
-              class="capitalize opacity-70"
-            >
-              {navLabels[breadcrumb] ?? decodeSegment(breadcrumb)}
-            </a>
-            <span aria-hidden="true" class="opacity-70">
-              &raquo;
-            </span>
-          </li>
-        )
-      )
+      trail
+        ? trail.map((crumb, index) =>
+            index + 1 === trail.length ? (
+              <li>
+                <span class="capitalize opacity-75" aria-current="page">
+                  {crumb.label}
+                </span>
+              </li>
+            ) : (
+              <li class="flex items-center gap-x-1">
+                <a href={crumb.href} class="capitalize opacity-70">
+                  {crumb.label}
+                </a>
+                <span aria-hidden="true" class="opacity-70">
+                  &raquo;
+                </span>
+              </li>
+            )
+          )
+        : breadcrumbList.map((breadcrumb, index) =>
+            index + 1 === breadcrumbList.length ? (
+              <li>
+                <span
+                  class:list={[
+                    "capitalize opacity-75",
+                    { lowercase: index > 0 },
+                  ]}
+                  aria-current="page"
+                >
+                  {/* make the last part lowercase in Home > Tags > some-tag */}
+                  {navLabels[breadcrumb] ?? decodeSegment(breadcrumb)}
+                </span>
+              </li>
+            ) : (
+              <li class="flex items-center gap-x-1">
+                <a
+                  href={getRelativeLocaleUrl(locale, breadcrumb)}
+                  class="capitalize opacity-70"
+                >
+                  {navLabels[breadcrumb] ?? decodeSegment(breadcrumb)}
+                </a>
+                <span aria-hidden="true" class="opacity-70">
+                  &raquo;
+                </span>
+              </li>
+            )
+          )
     }
   </ul>
 </nav>
