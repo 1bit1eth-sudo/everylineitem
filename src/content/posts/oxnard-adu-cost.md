@@ -1,6 +1,6 @@
 ---
 title: "Oxnard ADU Fees 2026: Ventura County's Coastal Fee Profile"
-description: "An 800 sq ft detached ADU in Oxnard priced phase by phase — $308,000 floor. Ventura County's coastal HCD #19 city keeps the standard 750 sq ft cliff in ordinance Sec. 15-183, runs permits on a valuation schedule it won't price out per square foot, and splits its $4,136 school fee across two districts."
+description: "An 800 sq ft detached ADU in Oxnard priced phase by phase — $308,000 floor. Ventura County's coastal HCD #19 city keeps the standard 750 sq ft cliff in ordinance Sec. 15-183, runs permits on a valuation schedule it won't price out per square foot, and splits its $4,248 school fee across two districts."
 pubDatetime: 2026-11-12T01:00:00Z
 author: "Every Line Item"
 tags: ["adu cost", "oxnard", "california", "permit fees", "2026"]
@@ -8,7 +8,7 @@ draft: false
 series: ca-adu
 seriesCurrent: oxnard-adu-cost
 verifiedPublished: "12 Nov 2026"
-lastVerified: "9 Oct 2026"
+lastVerified: "14 Nov 2026"
 nextReview: "Jan 2027"
 ogImage: "https://everylineitem.com/images/pinterest/oxnard-adu-cost.png"
 keyFacts:
@@ -16,7 +16,7 @@ keyFacts:
   totalCost: "$308,000*"
   costPerSqFt: "$385"
   permitFee: "verify with city (valuation schedule confirmed; 800 SF example not priced)"
-  schoolFee: "$4,136 (Oxnard SD $3.41 + OUHSD ~$1.76)"
+  schoolFee: "$4,248 (Oxnard SD $3.55 + OUHSD ~$1.76)"
   impactFee: "Exempt under 750 sq ft; proportional at 750+ (base not published)"
   sewerWater: "Capacity charges only on new connection/meter upsizing — verify with city"
   freePlans: "County-sourced pre-approvals (Ventura + San Diego)"
@@ -29,11 +29,11 @@ faqs:
   - question: "Does Oxnard charge impact fees on ADUs?"
     answer: "Only above the cliff. Municipal Code Sec. 15-183 says no fees on ADUs under 750 square feet; at 750 and above, the ADU pays a proportion of residential fees based on the ADU-to-primary-dwelling area ratio (Ordinance No. 2979). The city's DIF program covers drainage, wastewater, water, traffic, growth capital, and mobility fees. The base dwelling amounts are not published, so we excluded DIF from the total. One caution: the code text online predates a December 16, 2025 ADU ordinance revision (PZ 23-5383) that may not be reflected yet — the fee provisions' current wording is unconfirmed."
   - question: "How much are school district fees on an ADU in Oxnard?"
-    answer: "$4,136 on 800 sq ft — $5.17 per square foot, split across two districts: the Oxnard School District (K–8) at $3.41 and the Oxnard Union High School District (9–12) at roughly $1.76. OUHSD charges school impact fees on new construction (including ADUs) above 500 sq ft, so an 800 sq ft ADU definitely pays. We could not confirm either district's adopted 2026 rate at the state's $5.38 ceiling; $5.17 is the confirmed effective rate. Depending on address, the elementary district may be Rio, Hueneme, or Pleasant Valley instead of Oxnard SD."
+    answer: "$4,248 on 800 sq ft — $5.31 per square foot, split across two districts: the Oxnard School District (K–8) at $3.55 and the Oxnard Union High School District (9–12) at roughly $1.76. Oxnard SD adopted the increase in Resolution No. 26-05 (August 5, 2026), effective October 4, 2026. OUHSD has not adopted a 2026 increase that we could find, so its share stays at the 2024 level and the combined fee is $5.31, not the state's $5.38 ceiling. OUHSD charges school impact fees on new construction (including ADUs) above 500 sq ft, so an 800 sq ft ADU definitely pays. Depending on address, the elementary district may be Rio, Hueneme, or Pleasant Valley instead of Oxnard SD."
   - question: "Does Oxnard have pre-approved ADU plans?"
     answer: "Yes, by acceptance. The city's Building & Engineering division accepts pre-approved ADU plans from the Ventura County and San Diego County programs, consistent with AB 1332. The benefit is time, not money: review is compressed to 30 days, but there is no plan-check fee discount."
 ---
-> **Published:** 12 Nov 2026 · **Last verified:** 9 Oct 2026 · **Next review:** Jan 2027
+> **Published:** 12 Nov 2026 · **Last verified:** 14 Nov 2026 · **Next review:** Jan 2027
 > Cost figures are re-checked against permit records quarterly. Changes are
 > logged in [Corrections](/corrections/).
 
@@ -53,7 +53,7 @@ The city's fee lines are also listed on the [Oxnard fee page](/fees/oxnard/), wi
 | Building permit (valuation-based) | **not counted (verify with city)** |
 | ADU planning review | **$1,705** |
 | DIF — exempt under 750; proportional at 750+ | **not counted (verify with city)** |
-| School fee (two districts) | **$4,136** |
+| School fee (two districts) | **$4,248** |
 | Sewer / water capacity charges | **not counted (verify with city)** |
 
 \* *Floor, not total: the building permit figure, the proportional DIF amount, and sewer/water capacity charges are excluded because we could not verify them from official documents.*
@@ -83,8 +83,8 @@ Every fee line we found, with exactly what it is and where it came from.
 | ADU planning review | **$1,705** | Same fee schedule, item S-046 — "ACCESSORY DWELLING UNIT REVIEW." Counted in the total |
 | DIF — ADU under 750 SF | **$0** | Municipal Code Sec. 15-183 (Ord. No. 2979): no fees on ADUs under 750 sq ft |
 | DIF — ADU 750 SF or larger | not counted | Same section: proportional to primary-dwelling area ratio. City DIF program (Sec. 15-165): drainage, wastewater, water, traffic, growth capital, mobility. **Base dwelling fee amounts not published — verify with city**. Note: Sec. 15-183 text predates the Dec 16, 2025 ADU ordinance revision (PZ 23-5383); fee provisions' current wording unconfirmed |
-| School fee — Oxnard SD (K–8) | **$2,728** | $3.41/sq ft × 800 — district's 2024 developer fee study (66% share), effective 11/24/2024 |
-| School fee — Oxnard Union HSD (9–12) | **$1,408** | ~$1.76/sq ft × 800 — district's 2024 justification study (range $1.50–$2.07). OUHSD charges on new construction above 500 sq ft, so 800 sq ft pays. **2026 $5.38 adoption by either district not found** |
+| School fee — Oxnard SD (K–8) | **$2,840** | $3.55/sq ft × 800 — Resolution No. 26-05 (adopted Aug 5, 2026; 66% of the $5.38 SAB cap), effective Oct 4, 2026 |
+| School fee — Oxnard Union HSD (9–12) | **$1,408** | ~$1.76/sq ft × 800 — district's 2024 justification study (range $1.50–$2.07). OUHSD charges on new construction above 500 sq ft, so 800 sq ft pays. **Oxnard SD adopted the 2026 increase (Res. 26-05); OUHSD 2026 adoption not found — its share stays at the 2024 level** |
 | Sewer tie-in (physical install) | not counted | Sewer lateral install $470 (existing) / $1,175–$1,485 (new main) — physical connection cost, not capacity charge. Verify whether ADU triggers it |
 | Sewer capacity charge | not counted | Sec. 15-197: capacity fees apply on **new connection or meter upsizing only** — an ADU on the existing connection should not trigger them. ADU-specific language not found. Verify with city |
 | Water capacity charge | not counted | Same new-connection-only rule; ADU-specific amount not found. Verify with city |
@@ -99,7 +99,7 @@ The cliff mechanics are standard-issue California: under 750 sq ft, no fees; at 
 
 ## A school fee paid to two districts
 
-Oxnard's $4,136 school fee arrives in two envelopes. The Oxnard School District (K–8) charges **$3.41 per square foot** — $2,728 on 800 — from its 2024 developer fee study, representing 66% of the combined rate. The Oxnard Union High School District (9–12) charges roughly **$1.76** — $1,408 on 800 — within its 2024 justification study's $1.50–$2.07 range. The OUHSD side has a clean trigger: new construction, ADUs included, above 500 sq ft pays — 800 sq ft is in. The unconfirmed piece is the 2026 update: the state ceiling moved to $5.38, and we found no adopted 2026 resolution from either district. Two more caveats for address-checking: some Oxnard addresses fall in the Rio, Hueneme, or Pleasant Valley elementary districts instead of Oxnard SD, and the split ratio follows inter-district agreements. $4,136 is the confirmed combined rate for the standard case.
+Oxnard's $4,248 school fee arrives in two envelopes. The Oxnard School District (K–8) charges **$3.55 per square foot** — $2,840 on 800 — 66% of the state's $5.38 ceiling, adopted in Resolution No. 26-05 on August 5, 2026 and effective October 4, 2026. The Oxnard Union High School District (9–12) charges roughly **$1.76** — $1,408 on 800 — within its 2024 justification study's $1.50–$2.07 range. The OUHSD side has a clean trigger: new construction, ADUs included, above 500 sq ft pays — 800 sq ft is in. The unconfirmed piece is the OUHSD 2026 update: no 2026 study or adoption resolution from OUHSD was found, so its share stays at the 2024 level and the combined fee is $5.31 per square foot, not the $5.38 ceiling — if OUHSD adopts, its share becomes $1.83 and the combined fee $4,304. Two more caveats for address-checking: some Oxnard addresses fall in the Rio, Hueneme, or Pleasant Valley elementary districts instead of Oxnard SD, and the split ratio follows inter-district agreements. $4,248 is the confirmed combined rate for the standard case.
 
 ## Sewer and water: only if you touch the connection
 
@@ -118,7 +118,7 @@ Oxnard does not maintain its own pre-approved ADU plan library — it **accepts 
 | Building permit | not counted (valuation method unpublished) | carried |
 | ADU planning review | $1,705 | carried |
 | DIF | exempt under 750; proportional at 750+ (amount not published) | carried |
-| School fee | $4,136 (two districts) | $4,304 |
+| School fee | $4,248 (two districts) | $4,304 |
 | Sewer / water capacity | new connection/meter only | carried |
 | Pre-approved ADU plans | accepted from Ventura + San Diego County (30-day review) | none |
 
@@ -126,7 +126,7 @@ The $12,000 gap to the baseline is soft-cost math — design, the $1,705 plannin
 
 ## A note on SB 1117
 
-Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. Oxnard's Sec. 15-183 proportional formula cannot survive that math unchanged — an 800 sq ft ADU would owe fees on 50 sq ft, not 800. The open question is whether the December 2025 ordinance revision (PZ 23-5383) already moved the city toward marginal math; the January 2027 quarterly review will check the current code text. School fees are outside SB 1117's impact-fee definition and stay at $4,136 pending the districts' 2026 resolutions.
+Signed September 2026, effective January 2027: for a homeowner's first two ADUs, impact fees may apply only to square footage above 750, calculated marginally. Oxnard's Sec. 15-183 proportional formula cannot survive that math unchanged — an 800 sq ft ADU would owe fees on 50 sq ft, not 800. The open question is whether the December 2025 ordinance revision (PZ 23-5383) already moved the city toward marginal math; the January 2027 quarterly review will check the current code text. School fees are outside SB 1117's impact-fee definition and stay at $4,248 — Oxnard SD adopted its 2026 increase; OUHSD's is still pending.
 
 ## Disclaimer
 
