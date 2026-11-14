@@ -44,6 +44,18 @@ const toolPosts = postsForTool(
   <Main pageTitle={worksheet.data.title} class="app-prose">
     <Content />
 
+    {/* Content loop (stage 2): tool -> data page. The worksheet has no
+        jurisdiction of its own, so it points at the fee tables hub. */}
+    <p class="mt-6 text-sm opacity-80">
+      Fill the medians from your city's verified fee table —{" "}
+      <a
+        href="/fees/"
+        class="text-accent font-semibold underline decoration-dashed underline-offset-4"
+      >
+        Browse fee tables &rarr;
+      </a>
+    </p>
+
     <NextReads title="Related reading" links={toolPosts} />
   </Main>
 
