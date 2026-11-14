@@ -18,6 +18,13 @@ import SeriesNav from "@/components/SeriesNav.astro";
 import { POST_SEO } from "@/data/postSeo";
 import EmailSignup from "@/components/EmailSignup.astro";
 import KeyFacts from "@/components/KeyFacts.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import NextReads from "@/components/NextReads.astro";
+import feesData from "@/data/fees.json";
+import {
+  relatedByTags,
+  toolForPost,
+} from "@/lib/related";
 import config from "@/config";
 
 export async function getStaticPaths() {
@@ -97,6 +104,29 @@ const seriesCurrentId = seriesCurrent ?? post.id;
 
 const { Content } = await render(post);
 
+// Content loop (devices A + B + C): breadcrumb, and a next-read block.
+// Same-topic link = the post sharing the most tags (then newest), excluding
+// this post and the two adjacent posts already shown below. Deeper link =
+// this post's own fee page when the post is a jurisdiction's cost breakdown
+// (fees.json post_slug), else the Fee Index. Tool = tag-mapped (see
+// src/lib/related.ts). All from data — no fixed list.
+const sortedPosts = getSortedPosts(await getCollection("posts"));
+const adjacentIds = new Set(
+  [prevPost?.id, nextPost?.id].filter(Boolean) as string[]
+);
+const relatedCandidates = sortedPosts.filter(p => !adjacentIds.has(p.id));
+const relatedPost = relatedByTags(relatedCandidates, post, 1)[0] ?? null;
+const feeJuris = (feesData as any).jurisdictions.find(
+  (j: any) => j.post_slug === post.id && j.juris_id !== "LA-BASE"
+);
+const deeperLink = feeJuris
+  ? {
+      href: `/fees/${feeJuris.juris_id.toLowerCase()}/`,
+      label: `${feeJuris.name} ADU fees`,
+    }
+  : { href: "/fee-index/", label: "California ADU Fee Index" };
+const postTool = toolForPost(post);
+
 let ogImageUrl: string | undefined;
 
 if (typeof initOgImage === "string") {
@@ -132,6 +162,8 @@ const headDescription = seo?.description ?? description;
   modDatetime={modDatetime}
 >
   <Header />
+
+  <Breadcrumb />
 
   <BackButton />
 
@@ -193,6 +225,15 @@ const headDescription = seo?.description ?? description;
     <hr class="my-8 border-dashed" />
 
     <AdjacentPostNav {prevPost} {nextPost} />
+
+    {
+      relatedPost && (
+        <NextReads
+          links={[relatedPost, deeperLink]}
+          cta={postTool}
+        />
+      )
+    }
   </main>
   <Footer />
 </PostLayout>
