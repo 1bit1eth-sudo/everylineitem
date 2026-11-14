@@ -1,0 +1,48 @@
+---
+import IconArrowLeft from "@/assets/icons/IconArrowLeft.svg";
+import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
+
+/**
+ * Previous / next nav inside one hub (content-loop device E). Same visual
+ * language as the posts' AdjacentPostNav: label line + title line.
+ */
+type Link = { href: string; label: string };
+
+type Props = {
+  prev?: Link | null;
+  next?: Link | null;
+};
+
+const { prev, next } = Astro.props;
+---
+
+<nav
+  aria-label="Previous and next page"
+  class="my-8 grid grid-cols-1 gap-6 sm:grid-cols-2"
+>
+  {
+    prev && (
+      <a href={prev.href} class="flex w-full gap-1 hover:opacity-75">
+        <IconArrowLeft class="inline-block flex-none rtl:rotate-180" />
+        <div>
+          <span>Previous</span>
+          <div class="text-accent/85 text-sm">{prev.label}</div>
+        </div>
+      </a>
+    )
+  }
+  {
+    next && (
+      <a
+        href={next.href}
+        class="flex w-full justify-end gap-1 text-end hover:opacity-75 sm:col-start-2"
+      >
+        <div>
+          <span>Next</span>
+          <div class="text-accent/85 text-sm">{next.label}</div>
+        </div>
+        <IconArrowRight class="inline-block flex-none rtl:rotate-180" />
+      </a>
+    )
+  }
+</nav>
