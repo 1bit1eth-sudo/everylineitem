@@ -8,8 +8,27 @@ import NextReads from "@/components/NextReads.astro";
 import { siteInfoNextReads, TOOLS } from "@/lib/related";
 import Footer from "@/components/Footer.astro";
 import config from "@/config";
+import feesData from "@/data/fees.json";
+import { parseVerified, formatVerified } from "@/utils/formatVerified";
 
 const about = await getEntry("pages", "about");
+
+// Coverage line — computed from fees.json at build time so it can never
+// go stale (the hardcoded "641 verified fee lines" went stale the day
+// PR #259 merged). Same counting as the homepage: LA-BASE excluded,
+// verified rows only for the date.
+const jurisCount = (feesData.jurisdictions as any[]).filter(
+  j => j.juris_id !== "LA-BASE"
+).length;
+const verifiedCount = (feesData.fee_items as any[]).filter(
+  i => i.status === "verified" && i.juris_id !== "LA-BASE"
+).length;
+const latestVerifiedRaw = feesData.fee_items
+  .filter(i => i.status === "verified")
+  .map(i => i.last_verified as string)
+  .filter(Boolean)
+  .sort((a, b) => parseVerified(b) - parseVerified(a))[0];
+const latestVerified = formatVerified(latestVerifiedRaw);
 
 if (!about) {
   throw new Error(
@@ -31,6 +50,10 @@ const { Content } = await render(about);
   <Breadcrumb />
 
   <Main pageTitle={about.data.title} class="app-prose">
+    <p class="text-sm opacity-70">
+      {jurisCount} jurisdictions · {verifiedCount} verified fee lines · last
+      checked {latestVerified}
+    </p>
     <Content />
 
     <NextReads links={siteInfoNextReads("/about/")} cta={TOOLS.compare} />
