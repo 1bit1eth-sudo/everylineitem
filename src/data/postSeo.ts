@@ -465,7 +465,7 @@ export const POST_SEO: Record<string, PostSeo> = {
   "lancaster-adu-cost": {
     title: "Lancaster ADU Fees 2026: Permit Fees Not Published",
     description:
-      "An 800 sq ft detached ADU in Lancaster, phase by phase: $305,000 floor. The permit valuation table isn't public and the DIF table is from 2021.",
+      "An 800 sq ft detached ADU in Lancaster, phase by phase: $310,000 floor. Permit fees unpublished; current DIF schedule and both school districts confirmed.",
   },
   "adu-solar-title-24-explained": {
     title: "Do ADUs Need Solar in California? Title 24, Explained",

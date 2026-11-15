@@ -2,6 +2,15 @@
   "entries": [
 {
         "date": "2026-11-15",
+        "detail": "Lancaster ADU cost post published (verified 13 Nov 2026): school fees confirmed for both districts — Lancaster SD $3.98 + AVUHSD $1.34 = $5.32/sq ft ($4,256 at 800 sq ft) — and the current DIF schedule (eff. 10/1/2025) $7,297 per dwelling unit, prorated to $3,651 at 800 sq ft against the 1,600 sq ft default primary. Total $305,000 → $310,000. Building permit fee remains unpublished; sewer/water capacity charges unverified and excluded.",
+        "headline": "Lancaster ADU cost post published — $310,000 floor for an 800 sq ft detached ADU",
+        "items_added": 0,
+        "jurisdictions": [
+          "Lancaster"
+        ]
+    },
+{
+        "date": "2026-11-15",
         "detail": "Covina: city development impact fees verified — FY26-27 DIF Schedule (eff. 7/1/2026; Res. CC 2024-057) per-dwelling base $25,358 for the >1,200-1,900 sq ft primary tier (park land $4,517 + park improvements $3,011 + community/rec centers $1,161 + library $1,585 + general government $1,420 + police $422 + fire $384 + streets $11,392 + traffic signals $1,315 + 0.6% admin $151; components re-summed and match the printed total exactly). ADUs of 750+ sq ft pay (ADU sq ft / primary sq ft) x base per Res. CC 2024-057 Sec. 8; ADUs under 750 sq ft pay $0. 800 sq ft ADU at the 1,600 sq ft default primary = $12,679. Covina verified rows 1 → 2, so the /fees/covina/ page reaches the 2-verified-rows threshold and its noindex lifts. Verified rows sitewide 658 → 659.",
         "headline": "Covina: city development impact fees verified — $25,358 per-dwelling base (prorated for ADUs 750+ sq ft); city reaches 2 verified rows",
         "items_added": 1,
