@@ -560,7 +560,7 @@ export const POST_SEO: Record<string, PostSeo> = {
   "adu-soft-costs-ranked": {
     title: "ADU Soft Costs Ranked: 26 California Cities",
     description:
-      "Permits, plan check, school, impact, and utility fees for an 800 sq ft ADU across 26 California cities, from Lancaster's $3,000 to Ontario's $26,003.",
+      "Permits, plan check, school, impact, and utility fees for an 800 sq ft ADU across 26 California cities, from Santa Maria's $4,000 floor to Ontario's $26,003.",
   },
   "sb-1117-final-checklist": {
     title: "25 Days to SB 1117: The Final Checklist | Every Line Item",

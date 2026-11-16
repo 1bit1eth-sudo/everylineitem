@@ -72,8 +72,8 @@ The content calendar for this post listed the range as **$1,006 to $7,541** — 
 Ranked above are the sixteen cities whose posts carry a permitFee keyFacts value. Excluded, with reasons:
 
 - **No keyFacts field (older posts):** San Diego, San Francisco, San Jose, Sacramento, Santa Maria — these posts predate the Key Facts feature, so their permit figures live in the post bodies, not in a comparable frontmatter field. (For reference: the San Diego post publishes ~$16,500 for City of San Diego plan check + inspection; the Bay Area comparison publishes ~$19,500 for San Francisco and $5,103 for San Jose. A future edition will fold these in once their posts carry keyFacts.)
-- **Not a number:** Lakewood ("County schedule\*") and San Bernardino ("Verify with city").
-- **No post yet:** Lancaster and Santa Ana are researched in our fee matrix but their full posts are not yet published.
+- **Not a number:** Lakewood ("County schedule\*") and San Bernardino ("Verify with city") — and Lancaster, whose building permit valuation table is not in the city's public index (post published 15 Nov 2026; school and impact fees confirmed, permit unpublished).
+- **No post yet:** Santa Ana is researched in our fee matrix but its full post is not yet published (18 Nov 2026).
 
 ## What changes January 1, 2027
 
