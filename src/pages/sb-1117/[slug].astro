@@ -21,6 +21,8 @@ import NextReads from "@/components/NextReads.astro";
 import PrevNext from "@/components/PrevNext.astro";
 import { sb1117HubOrder } from "@/lib/hubOrder";
 import { TOOLS } from "@/lib/related";
+import Sb1117CityContext from "@/components/Sb1117CityContext.astro";
+import { sb1117CityContext, unchangedSentence } from "@/lib/sb1117City";
 
 const data = feesData as unknown as FeeData;
 
@@ -81,6 +83,7 @@ const s800 = summaries.find(s => s.sqft === 800)!;
 const isArea = detail.byArea.length > 0;
 const anyUncertain = summaries.some(s => s.uncertain.high > 0);
 const maxSavings = Math.max(...summaries.map(s => s.savings.high));
+const ctx = !noindex ? sb1117CityContext(data, juris, detail) : null;
 
 const longTitle = `${juris.name} ADU Fees Under SB 1117: 2026 vs 2027`;
 const title =
@@ -114,6 +117,14 @@ const faqs = [
     q: `Should I wait until January 2027 to pull an ADU permit in ${juris.name}?`,
     a: `This page compares fees only. ${maxSavings > 0 ? `In ${juris.name} the verified impact-fee difference is up to ${fmtUSD0(maxSavings)} at the sizes shown.` : `In ${juris.name} we found no verified impact-fee difference at the sizes shown.`} Waiting also has costs — schedule changes, construction-price movement, financing — and SB 1117 applies to a homeowner's first two ADUs. Weigh both before deciding.`,
   },
+  ...(ctx
+    ? [
+        {
+          q: `Which ${juris.name} ADU fees does SB 1117 not change?`,
+          a: unchangedSentence(juris.name, ctx),
+        },
+      ]
+    : []),
   {
     q: `Does SB 1117 change anything for ADUs of 750 sq ft or less?`,
     a: `No. ADUs of 750 sq ft or less already owe $0 in impact fees under Gov. Code §66311.5. SB 1117 changes what happens above 750 sq ft: impact fees apply only to the square footage over 750 instead of the whole unit.`,
@@ -328,6 +339,20 @@ const faqSchema = {
               : `We have not published verified fee figures for ${juris.name} yet. We publish a line only after reading its official source document.`}
           </p>
         </div>
+      )
+    }
+
+    {
+      ctx && (
+        <Sb1117CityContext
+          name={juris.name}
+          slug={slug}
+          county={juris.county}
+          region={juris.region}
+          summaries={summaries}
+          ctx={ctx}
+          inForce={inForce}
+        />
       )
     }
 
