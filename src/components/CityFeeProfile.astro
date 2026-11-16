@@ -60,7 +60,9 @@ const largest = largestSentence(p);
             Verified government fees on an {PROFILE_SQFT} sq ft ADU, {scope}
             {p.peerScope === "region" ? " region" : ""} —{" "}
             {p.peerCount > p.peers.length
-              ? `top ${p.peers.length - 1} of ${p.peerCount} plus this page`
+              ? p.selfAppended
+                ? `top 7 of ${p.peerCount} plus this page`
+                : `top ${p.peers.length} of ${p.peerCount}`
               : `all ${p.peerCount} we track`}{" "}
             — same math as the{" "}
             <a

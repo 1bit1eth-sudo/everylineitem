@@ -45,6 +45,8 @@ export interface CityProfile {
   /** Peers in scope before the table is cut to 8 rows (includes this city). */
   peerCount: number;
   peerHigher: number;
+  /** True when this city ranks below the top 8 and is appended to the table. */
+  selfAppended: boolean;
   categories: {
     category: string;
     label: string;
@@ -122,12 +124,12 @@ export function cityProfile(d: FeeData, jurisId: string): CityProfile | null {
   const peerCount = peers.length;
   const peerHigher = peers.filter(x => !x.self && x.total > own.total).length;
   // Keep the table short but always include this city.
+  const selfIdx = peers.findIndex(p => p.self);
+  const selfAppended = peers.length > 8 && selfIdx >= 8;
   if (peers.length > 8) {
-    const selfRow = peers.find(p => p.self);
-    const top = peers.filter(p => !p.self).slice(0, 7);
-    peers = [...top, ...(selfRow ? [selfRow] : [])].sort(
-      (a, b) => b.total - a.total
-    );
+    peers = selfAppended
+      ? [...peers.slice(0, 7), peers[selfIdx]]
+      : peers.slice(0, 8);
   }
 
   const area = own.area;
@@ -199,6 +201,7 @@ export function cityProfile(d: FeeData, jurisId: string): CityProfile | null {
     peerScope,
     peerCount,
     peerHigher,
+    selfAppended,
     categories,
     largest: largestLine
       ? { item: largestLine.item, amount: largestLine.low }
