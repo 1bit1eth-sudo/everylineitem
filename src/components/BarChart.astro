@@ -1,0 +1,127 @@
+---
+/**
+ * Build-time horizontal bar chart (inline SVG, no JavaScript, no external
+ * requests). Bars are computed from the same verified data as the page, so
+ * the chart can never disagree with the list next to it.
+ *
+ * - `value` sets the solid bar. Optional `low` draws the solid bar to `low`
+ *   and a lighter segment from `low` to `value` (for low–high spans).
+ * - Each row links to `href` when given.
+ */
+interface Item {
+  label: string;
+  value: number;
+  low?: number;
+  href?: string;
+}
+interface Props {
+  id: string;
+  title: string;
+  caption: string;
+  items: Item[];
+  /** Value formatter label for the end of each bar. */
+  valueLabel?: (item: Item) => string;
+}
+const { id, title, caption, items, valueLabel } = Astro.props;
+const fmt = (n: number) => "$" + Math.round(n).toLocaleString("en-US");
+const labelOf =
+  valueLabel ??
+  ((i: Item) =>
+    i.low != null && i.low !== i.value
+      ? `${fmt(i.low)}–${fmt(i.value)}`
+      : fmt(i.value));
+
+const W = 720;
+const labelW = 240;
+const valueW = 150;
+const barMax = W - labelW - valueW - 16;
+const rowH = 30;
+const top = 8;
+const H = top + items.length * rowH + 8;
+const max = Math.max(...items.map(i => i.value), 1);
+const scale = (v: number) => Math.max(2, (v / max) * barMax);
+const clip = (s: string, n = 27) =>
+  s.length > n ? s.slice(0, n - 1) + "…" : s;
+const summary = items.map(i => `${i.label}: ${labelOf(i)}`).join("; ");
+---
+
+<figure class="bar-chart my-6" aria-labelledby={`${id}-cap`}>
+  <svg
+    viewBox={`0 0 ${W} ${H}`}
+    width="100%"
+    role="img"
+    aria-labelledby={`${id}-title ${id}-desc`}
+    preserveAspectRatio="xMinYMin meet"
+  >
+    <title id={`${id}-title`}>{title}</title>
+    <desc id={`${id}-desc`}>{summary}</desc>
+    {
+      items.map((it, i) => {
+        const y = top + i * rowH;
+        const solid = it.low != null ? scale(it.low) : scale(it.value);
+        const full = scale(it.value);
+        const row = (
+          <g>
+            <text x={labelW - 8} y={y + 19} text-anchor="end" class="bc-label">
+              {clip(it.label)}
+            </text>
+            {it.low != null && it.low !== it.value && (
+              <rect
+                x={labelW}
+                y={y + 6}
+                width={full}
+                height={18}
+                rx="3"
+                class="bc-span"
+              />
+            )}
+            <rect
+              x={labelW}
+              y={y + 6}
+              width={solid}
+              height={18}
+              rx="3"
+              class="bc-bar"
+            />
+            <text x={labelW + full + 6} y={y + 19} class="bc-value">
+              {labelOf(it)}
+            </text>
+          </g>
+        );
+        return it.href ? <a href={it.href}>{row}</a> : row;
+      })
+    }
+  </svg>
+  <figcaption id={`${id}-cap`} class="mt-2 text-sm opacity-70">
+    {caption}
+  </figcaption>
+</figure>
+
+<style>
+  .bar-chart svg {
+    max-width: 100%;
+    height: auto;
+    font-family: inherit;
+  }
+  .bc-label {
+    font-size: 13px;
+    fill: var(--foreground);
+  }
+  .bc-value {
+    font-size: 13px;
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+    fill: var(--foreground);
+  }
+  .bc-bar {
+    fill: var(--accent);
+  }
+  .bc-span {
+    fill: var(--accent);
+    opacity: 0.35;
+  }
+  .bar-chart a:hover .bc-label,
+  .bar-chart a:focus .bc-label {
+    text-decoration: underline;
+  }
+</style>
