@@ -38,19 +38,19 @@ School district boundaries, not city limits, set your ADU school fee. We compare
 
 **5. San Francisco — $3,032** ($3.79/sq ft; SFUSD, verified against the city's development impact fee register).
 
-**6. Lancaster — $3,184\*** (Lancaster School District only; the high-school district's rate is unconfirmed and not counted).
+**6. Oceanside — $3,832\*** (the district's fee resolution number and effective date are unconfirmed).
 
-**7. Oceanside — $3,832\*** (the district's fee resolution number and effective date are unconfirmed).
+**7. Palo Alto — $3,832** ($4.79/sq ft; Palo Alto Unified, from audited district financials).
 
-**8. Palo Alto — $3,832** ($4.79/sq ft; Palo Alto Unified, from audited district financials).
+**8. Sacramento — $4,104** ($5.13/sq ft; Sacramento City Unified).
 
-**9. Sacramento — $4,104** ($5.13/sq ft; Sacramento City Unified).
+**9–13. $4,136 tier — Downey, Garden Grove, Oakland, Riverside, Salinas.** Five cities, identical to the dollar: the $5.17/sq ft SAB cap, the 2024-era standard. Downey cites a 2024 district rate through the city.
 
-**10–14. $4,136 tier — Downey, Garden Grove, Oakland, Riverside, Salinas.** Five cities, identical to the dollar: the $5.17/sq ft SAB cap, the 2024-era standard. Downey cites a 2024 district rate through the city.
+**14. Ontario — $4,192** ($5.24/sq ft).
 
-**15. Ontario — $4,192** ($5.24/sq ft).
+**15. Oxnard — $4,248** ($5.31/sq ft; Oxnard SD $3.55 adopted in Resolution No. 26-05, effective Oct 4, 2026, plus OUHSD ~$1.76 at its 2024 level — the only city in this ranking whose two districts sit on different cap vintages).
 
-**16. Oxnard — $4,248** ($5.31/sq ft; Oxnard SD $3.55 adopted in Resolution No. 26-05, effective Oct 4, 2026, plus OUHSD ~$1.76 at its 2024 level — the only city in this ranking whose two districts sit on different cap vintages).
+**16. Lancaster — $4,256** ($5.32/sq ft combined; Lancaster SD $3.98 + AVUHSD $1.34 — both districts confirmed 13 Nov 2026, within the $5.38 cap).
 
 **17–28. $4,304 tier — Anaheim, Burbank\*, Campbell, Fullerton, Glendale, Long Beach, San Bernardino, San Jose, Santa Ana, Torrance, Fontana\*, Santa Maria\*.** Twelve cities at the 2026 SAB Level 1 maximum of $5.38/sq ft — the modal outcome in California. Campbell reaches the cap by stacking two districts (Campbell Union K-8 $3.77 + Campbell Union High $1.61); it ties the cap rather than breaking it. Notes: Burbank's $5.38 assumes Resolution 1-27 passed (unconfirmed; falls to $4,136 at the prior rate); Santa Maria's figure is the verified Level 1 rate (a conditional Level 2 of $7,984 was published but never verified against a current adopted resolution, so it is not the ranked figure).
 
