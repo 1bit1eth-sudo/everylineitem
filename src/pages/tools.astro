@@ -5,10 +5,20 @@ import Breadcrumb from "@/components/Breadcrumb.astro";
 import Footer from "@/components/Footer.astro";
 import LinkButton from "@/components/LinkButton.astro";
 import RecentlyViewed from "@/components/RecentlyViewed.astro";
+import feesData from "@/data/fees.json";
+
+// Coverage line, computed from fees.json at build time (same counting as
+// /about/: LA-BASE excluded, verified rows only) so it cannot go stale.
+const jurisCount = (feesData.jurisdictions as any[]).filter(
+  j => j.juris_id !== "LA-BASE"
+).length;
+const verifiedCount = (feesData.fee_items as any[]).filter(
+  i => i.status === "verified" && i.juris_id !== "LA-BASE"
+).length;
 
 const title = "Tools | Every Line Item";
 const description =
-  "Free ADU cost tools: check a contractor quote, compare fees by city, estimate the added property tax, and download a blank cost ledger.";
+  "Free California ADU cost tools: check a contractor quote line by line, compare city fees, estimate the added property tax, and download a blank cost ledger.";
 ---
 
 <Layout title={title} description={description}>
@@ -19,8 +29,10 @@ const description =
   <main id="main-content" class="app-layout pb-8">
     <h1 class="text-3xl font-bold sm:text-4xl">Tools</h1>
     <p class="mt-4 text-lg opacity-80">
-      Free tools built on the same verified fee data as the rest of this
-      site. No account, no email required.
+      Free tools built on the same verified fee data as the rest of this site.
+      No account, no email required. Each one answers a different question you
+      will have while planning a California ADU, from "is this quote complete?"
+      to "what will this add to my tax bill?"
     </p>
 
     <RecentlyViewed />
@@ -32,13 +44,14 @@ const description =
             href="/compare/"
             class="text-accent underline decoration-dashed underline-offset-4"
           >
-            Compare fees by city
+            Compare builds and check a quote
           </LinkButton>
         </h2>
         <p class="mt-2 opacity-80">
-          Map any ADU bid onto the same six-phase ledger we use for every
-          city — spot missing stages, allowances that can move, and questions
-          to ask before you sign.
+          Map any ADU bid onto the same six-phase ledger we use for every city —
+          spot missing stages, allowances that can move, and questions to ask
+          before you sign. The same page puts two published build scenarios side
+          by side and compares government fees between jurisdictions.
         </p>
       </section>
 
@@ -67,9 +80,9 @@ const description =
           </LinkButton>
         </h2>
         <p class="mt-2 opacity-80">
-          Paste a contractor quote. It is sorted into the six phases,
-          flagged where it looks off, and turned into questions to ask.
-          Nothing you paste leaves your browser.
+          Paste a contractor quote. It is sorted into the six phases, flagged
+          where it looks off, and turned into questions to ask. Nothing you
+          paste leaves your browser.
         </p>
       </section>
 
@@ -83,11 +96,128 @@ const description =
           </LinkButton>
         </h2>
         <p class="mt-2 opacity-80">
-          Download a blank six-phase ADU cost ledger as CSV and import it
-          into Google Sheets. No email required.
+          Download a blank six-phase ADU cost ledger as CSV and import it into
+          Google Sheets. No email required.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold">
+          <LinkButton
+            href="/fee-index/"
+            class="text-accent underline decoration-dashed underline-offset-4"
+          >
+            California ADU Fee Index
+          </LinkButton>
+        </h2>
+        <p class="mt-2 opacity-80">
+          Every verified government fee line in one table, with rankings for an
+          800 sq ft ADU and a CSV download, so you can see where your city sits
+          before you open its fee schedule.
         </p>
       </section>
     </div>
+
+    <section class="mt-12">
+      <h2 class="text-2xl font-semibold">Which tool to use when</h2>
+      <ul class="mt-4 list-disc space-y-2 pl-6 opacity-90">
+        <li>
+          <strong>Before you talk to anyone:</strong> look up your city on the{
+            " "
+          }
+          <a
+            href="/fees/"
+            class="text-accent underline decoration-dashed underline-offset-4"
+            >fee tables</a
+          >{" "}
+          and the <a
+            href="/fee-index/"
+            class="text-accent underline decoration-dashed underline-offset-4"
+            >Fee Index</a
+          >. Government fees are the part of the budget you cannot negotiate,
+          and they change with size: under California law, an ADU of 750 sq ft
+          or less pays no impact fees, and one under 500 sq ft pays no school
+          fees.
+        </li>
+        <li>
+          <strong>When the first bid arrives:</strong> paste it into the{" "}
+          <a
+            href="/bid-scanner/"
+            class="text-accent underline decoration-dashed underline-offset-4"
+            >Bid Scanner</a
+          >{" "}
+          or copy it into the{" "}
+          <a
+            href="/worksheet/"
+            class="text-accent underline decoration-dashed underline-offset-4"
+            >six-phase worksheet</a
+          >. Both sort the lines into the same six phases, which makes a phase
+          the bid leaves out easy to see.
+        </li>
+        <li>
+          <strong>When you have two bids:</strong> use{" "}
+          <a
+            href="/compare/"
+            class="text-accent underline decoration-dashed underline-offset-4"
+            >Compare</a
+          >{" "}
+          to line them up phase by phase, so you can see which phases account for
+          the difference between them.
+        </li>
+        <li>
+          <strong>Before you commit:</strong> run the{" "}
+          <a
+            href="/property-tax/"
+            class="text-accent underline decoration-dashed underline-offset-4"
+            >property tax calculator</a
+          >. California reassesses only the new construction, so the added tax
+          depends on the value the ADU adds, not on the value of the whole
+          property.
+        </li>
+      </ul>
+    </section>
+
+    <section class="mt-12">
+      <h2 class="text-2xl font-semibold">Where the numbers come from</h2>
+      <p class="mt-4 opacity-90">
+        Fee figures come from official documents: city and county fee schedules,
+        school district developer-fee resolutions, and utility capacity charges.
+        The fee data behind these tools currently covers{" "}
+        {jurisCount} California jurisdictions and {verifiedCount} verified fee lines.
+        A fee we could not verify from an official source is shown as "verify with
+        city" and left out of every total. Construction ranges are modeled from published
+        benchmarks, not contractor quotes; the <a
+          href="/methodology/"
+          class="text-accent underline decoration-dashed underline-offset-4"
+          >methodology</a
+        >{" "}
+        explains every source and assumption, and changes are logged on{" "}
+        <a
+          href="/corrections/"
+          class="text-accent underline decoration-dashed underline-offset-4"
+          >Corrections</a
+        >.
+      </p>
+    </section>
+
+    <section class="mt-12">
+      <h2 class="text-2xl font-semibold">What these tools are not</h2>
+      <p class="mt-4 opacity-90">
+        None of these tools is a quote, an appraisal or legal advice. They are
+        for planning and for asking better questions. Fee schedules change,
+        often on July 1 or January 1, so confirm the current figures with your
+        city's building department, your school district and your utility before
+        you budget, and get itemized bids from licensed California contractors.
+        See the{" "}
+        <a
+          href="/disclaimer/"
+          class="text-accent underline decoration-dashed underline-offset-4"
+          >disclaimer</a
+        >{" "}
+        for the full terms. The Bid Scanner runs in your browser: the text you paste
+        is not sent to our server.
+      </p>
+    </section>
   </main>
 
   <Footer />

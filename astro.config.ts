@@ -274,6 +274,10 @@ export default defineConfig({
     mdx(),
     loopBidScanner,
     sitemap({
+      // /bid-scanner/ is a static file in public/ (not an Astro route), so
+      // the integration never sees it. It is a live, canonical, indexable
+      // tool page linked from /tools/ and the homepage; list it explicitly.
+      customPages: [`${config.site.url.replace(/\/$/, "")}/bid-scanner/`],
       filter: page =>
         (config.features?.showArchives !== false ||
           !page.endsWith("/archives/")) &&

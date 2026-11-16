@@ -27,7 +27,10 @@ const filteredPosts = posts.filter(postFilter);
 const monthFormatter = new Intl.DateTimeFormat(locale, { month: "long" });
 ---
 
-<Layout title={`${t.pages.archivesTitle} | ${config.site.title}`}>
+<Layout
+  title={`${t.pages.archivesTitle} | ${config.site.title}`}
+  description={`Month-by-month archive of all ${filteredPosts.length} Every Line Item articles on California ADU costs, permit and impact fees, and ADU law.`}
+>
   <Header />
 
   <Breadcrumb />
