@@ -1,0 +1,233 @@
+---
+// Published phase medians for the three regional anchors (inland, LA County,
+// coastal; 800 sq ft detached, mid-grade), rendered from aduScenarios.ts.
+// No new figures: every number here is in a published post.
+import {
+  ADU_SCENARIOS,
+  PHASES,
+  BENCHMARK_SOURCES,
+  type AduScenario,
+} from "@/data/aduScenarios";
+
+const ids = ["inland-800", "detached-800", "coastal-800"];
+const cols = ids
+  .map(id => ADU_SCENARIOS.find(s => s.id === id))
+  .filter((s): s is AduScenario => Boolean(s));
+
+const colLabel: Record<string, string> = {
+  "inland-800": "Inland",
+  "detached-800": "LA County",
+  "coastal-800": "Coastal",
+};
+const usd = (n: number) => "$" + Math.round(n).toLocaleString("en-US");
+const k = (n: number) => "$" + Math.round(n / 1000) + "k";
+const pct = (n: number) => Math.round(n * 100) + "%";
+const phaseSum = (s: AduScenario) =>
+  PHASES.reduce((a, p) => a + s.phases[p.id], 0);
+
+// Spread between inland and coastal, per phase — where geography matters most.
+const inland = cols[0];
+const coastal = cols[cols.length - 1];
+const spreads = PHASES.map(p => ({
+  label: p.label,
+  diff: coastal.phases[p.id] - inland.phases[p.id],
+  ratio: coastal.phases[p.id] / inland.phases[p.id],
+})).sort((a, b) => b.ratio - a.ratio);
+const totalDiff = coastal.total - inland.total;
+const biggestAbs = [...spreads].sort((a, b) => b.diff - a.diff)[0];
+
+// Stacked bar chart, one row per anchor.
+const W = 640;
+const labelW = 120;
+const barW = W - labelW - 70;
+const rowH = 34;
+const H = 10 + cols.length * rowH + 40;
+const maxTotal = Math.max(...cols.map(phaseSum));
+const shades = [0.25, 0.4, 0.55, 0.7, 0.85, 1];
+const desc = cols
+  .map(
+    s =>
+      `${colLabel[s.id]}: ${PHASES.map(p => `${p.label} ${k(s.phases[p.id])}`).join(", ")}; total ${usd(s.total)}`
+  )
+  .join(". ");
+const linkCls = "text-accent underline decoration-dashed underline-offset-4";
+---
+
+<h2 id="phase-medians">Published phase medians, 800 sq ft detached</h2>
+<p>
+  These are the six-phase medians already published in the series — the middle
+  of each band on the sheet. Each column sums to its post's all-in total.
+</p>
+<div class="overflow-x-auto">
+  <table>
+    <thead>
+      <tr>
+        <th>Phase</th>
+        {cols.map(s => <th class="text-right">{colLabel[s.id]}</th>)}
+      </tr>
+    </thead>
+    <tbody>
+      {
+        PHASES.map(p => (
+          <tr>
+            <td>{p.label}</td>
+            {cols.map(s => (
+              <td class="text-right tabular-nums">
+                {usd(s.phases[p.id])}{" "}
+                <span class="opacity-60">
+                  ({pct(s.phases[p.id] / s.total)})
+                </span>
+              </td>
+            ))}
+          </tr>
+        ))
+      }
+      <tr>
+        <td><strong>All-in total</strong></td>
+        {
+          cols.map(s => (
+            <td class="text-right tabular-nums">
+              <strong>{usd(s.total)}</strong>
+              <span class="block text-xs opacity-60">
+                {usd(s.costPerSqFt)}/sq ft
+              </span>
+            </td>
+          ))
+        }
+      </tr>
+      <tr>
+        <td>Source post</td>
+        {
+          cols.map(s => (
+            <td class="text-right text-sm">
+              <a class={linkCls} href={s.href}>
+                read
+              </a>
+              <span class="block text-xs opacity-60">
+                verified {s.lastVerified}
+              </span>
+            </td>
+          ))
+        }
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<svg
+  viewBox={`0 0 ${W} ${H}`}
+  class="my-4 w-full"
+  role="img"
+  aria-labelledby="bm-chart-t bm-chart-d"
+>
+  <title id="bm-chart-t">Six-phase split of three 800 sq ft ADU medians</title>
+  <desc id="bm-chart-d">{desc}</desc>
+  {
+    cols.map((s, i) => {
+      const y = 10 + i * rowH;
+      let x = labelW;
+      return (
+        <g>
+          <text x="0" y={y + 17} font-size="13" fill="currentColor">
+            {colLabel[s.id]}
+          </text>
+          {PHASES.map((p, j) => {
+            const w = (s.phases[p.id] / maxTotal) * barW;
+            const r = (
+              <rect
+                x={x}
+                y={y + 4}
+                width={w}
+                height="18"
+                class="fill-accent"
+                opacity={shades[j]}
+              >
+                <title>
+                  {p.label}: {usd(s.phases[p.id])}
+                </title>
+              </rect>
+            );
+            x += w;
+            return r;
+          })}
+          <text x={x + 6} y={y + 17} font-size="12" fill="currentColor">
+            {k(s.total)}
+          </text>
+        </g>
+      );
+    })
+  }
+  {
+    PHASES.map((p, j) => (
+      <g
+        transform={`translate(${(j % 3) * 210}, ${H - 26 + Math.floor(j / 3) * 16})`}
+      >
+        <rect
+          width="10"
+          height="10"
+          y="-9"
+          class="fill-accent"
+          opacity={shades[j]}
+        />
+        <text x="14" font-size="11" fill="currentColor">
+          {p.label.replace(/ \(.*\)/, "")}
+        </text>
+      </g>
+    ))
+  }
+</svg>
+
+<h2 id="where-region-matters">Where the region changes the bill</h2>
+<p>
+  Coastal and inland medians differ by {usd(totalDiff)} on the same 800 sq ft model.
+  The largest dollar gap is in {biggestAbs.label.toLowerCase()} ({
+    usd(biggestAbs.diff)
+  }). Proportionally, {spreads[0].label.toLowerCase()} moves most: the coastal median
+  is {Math.round((spreads[0].ratio - 1) * 100)}% above inland, against {
+    Math.round((spreads[spreads.length - 1].ratio - 1) * 100)
+  }% for {spreads[spreads.length - 1].label.toLowerCase()}.
+</p>
+
+<h2 id="use-with-a-quote">How to read a contractor quote against these</h2>
+<ol>
+  <li>
+    Put the quote's lines into the six phases with the blank <a
+      href="/worksheet/">worksheet</a
+    >. If a quote folds soft costs or site work into one line, split them before
+    comparing.
+  </li>
+  <li>
+    Compare each phase's share, not just the total. In the LA County median,
+    systems + interior is {pct(cols[1].phases.systems / cols[1].total)} of the bill.
+    A quote far off that share is worth a question: it can mean a different scope
+    (finish grade, appliances, utility runs) rather than a different price.
+  </li>
+  <li>
+    Check government fees separately. Soft costs here include permits and plan
+    check as a lump; your city's actual line items are in the <a
+      href="/fee-index/">ADU Fee Index</a
+    > and the per-city fee pages.
+  </li>
+  <li>
+    Scale with care. Smaller units do not scale down linearly: the published 400
+    sq ft detached median is {
+      usd(ADU_SCENARIOS.find(s => s.id === "detached-400")!.costPerSqFt)
+    }/sq ft against {usd(cols[1].costPerSqFt)}/sq ft at 800 sq ft — see <a
+      href="/posts/400-sq-ft-adu-cost-california/"
+      >why fixed costs eat a small ADU</a
+    >.
+  </li>
+</ol>
+
+<p class="text-sm opacity-70">
+  Underlying sources cited in every series post: {
+    BENCHMARK_SOURCES.map((s, i) => (
+      <>
+        {i > 0 && " · "}
+        <a class={linkCls} href={s.href} target="_blank" rel="noopener">
+          {s.label}
+        </a>
+      </>
+    ))
+  }. Method: <a href="/methodology/">methodology</a>.
+</p>
