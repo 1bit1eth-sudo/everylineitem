@@ -32,6 +32,14 @@ The most valuable messages we get are from contractors and estimators telling us
 
 ## Change log
 
+### 16 November 2026 — Solar post corrected: CEC sizing, five exceptions, existing-system rule
+
+**Changed:** The solar post, published today, misstated four points from the California Energy Commission's Title 24 rules. (1) System sizing: the post said Equation 150.1-C alone decides the size; the required size is the smaller of the Equation 150.1-C result and the SARA-based size (18 W/sq ft for a steep roof, 14 W/sq ft for a low-slope roof). (2) Exceptions: the post said three; §150.1(c)14 has five — the snow-load, pre-2020 plans, and battery-storage exceptions (25% reduction, JA12, at least 7.5 kWh) are added, and the "panels can go anywhere" point is moved out of the exceptions list because it is a placement option, not an exception. (3) Existing systems: the post said a main house's existing panels may already satisfy the ADU requirement; the CEC's 2025 ADU FAQs answer that question "No" — new modules must be added to the existing system, as part of the ADU permit, sized to §150.1(c)14, on the same parcel, with the utility's permission. (4) Solar-ready: the post did not mention §110.10(a)1, which applies only to newly constructed single-family homes in subdivisions of ten or more units, not to a new ADU on an existing parcel. No figures change.
+
+**Reason:** Re-read of the CEC's 2025 Energy Code ADU FAQs and Energy Code Ace §150.1(c)14 on the morning of publication; the errors were found 15 minutes before the 10:05 publish and corrected the same day.
+
+**Source:** California Energy Commission, 2025 Energy Code ADU FAQs; Energy Code Ace, Title 24, Part 6, §150.1(c)14 and §110.10(a)1.
+
 ### 14 November 2026 — Sacramento cliff corrected: $5,728 → $5,347 (CDD-0419, July 2026 revision)
 
 **Changed:** The Sacramento 800 sq ft ADU impact-fee cliff is **$5,347**, not $5,728. The city's CDD-0419 ADU Fee Estimate, revised 2026-07-12, prices the 750 sq ft column at STA Mitigation Fee + 2% admin $1,154.64 + Park Development Impact Fee $2,617.50 + SAFCA Development Impact Fee $1,575 = **$5,347.14**. The SB 1117 savings estimate for Sacramento is ~$5,013 (marginal fee on the 50 sq ft above 750 is ~$334). The stale $5,728 is corrected in five posts: the 750 sq ft cliff explainer, the California impact-fees explainer, the SB 1117 cliff post, the SB 1117 countdown post (published today with the corrected figure), and the SB 1117 final checklist (scheduled 7 Dec 2026). The Sacramento city post and its fee rows already carried $5,347.14 (FI-133, verified 13 Nov 2026) — the error survived only in the cross-post citations. No other city's figures change.
