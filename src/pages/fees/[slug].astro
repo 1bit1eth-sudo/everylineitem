@@ -18,6 +18,9 @@ import NextReads from "@/components/NextReads.astro";
 import PrevNext from "@/components/PrevNext.astro";
 import { feeHubOrder } from "@/lib/hubOrder";
 import { TOOLS } from "@/lib/related";
+import CityFeeProfile from "@/components/CityFeeProfile.astro";
+import { cityProfile, compareSentence, largestSentence } from "@/lib/cityProfile";
+import { summarizeSB1117, fmtSpan } from "@/lib/sb1117Pages";
 
 export async function getStaticPaths() {
   return feesData.jurisdictions
@@ -226,6 +229,19 @@ const description = verifiedLines.length > 0
     ? `ADU fees in ${juris.name}, CA — ${skippedVerifiedLines.length} verified fee rates on file (dollar amounts need your project's valuation). Every figure links to its official source.`
   : `ADU fees in ${juris.name}, CA — our researchers are verifying every line item against official sources. The 750 sq ft state-law cliff, explained.`;
 
+// City-specific profile (2026-11-17 AdSense/indexing pass): rank, county
+// neighbours, category split, worked example and source list — verified
+// rows only, computed here so the page text is unique to this city.
+const profile = verifiedLines.length > 0 ? cityProfile(feesData as any, juris.juris_id) : null;
+const profileLargest = profile ? largestSentence(profile) : null;
+// This city's own SB 1117 numbers at 1,000 sq ft, for the 2027 box.
+const sb1000 = summarizeSB1117(feesData as any, juris.juris_id, 1000);
+const sbCitySentence = !sb1000.hasImpactLines
+  ? `${juris.name} has no verified impact-fee line on file, so SB 1117 changes nothing we can compute here.`
+  : sb1000.savings.high > 0
+    ? `For a 1,000 sq ft ADU in ${juris.name}, verified impact fees go from ${fmtSpan(sb1000.current)} to ${fmtSpan(sb1000.futureCarried)}.`
+    : `At 1,000 sq ft, ${juris.name}'s verified impact fees do not change under SB 1117.`;
+
 const faqs = [
   {
     q: `Are impact fees waived for ADUs under 750 sq ft in ${juris.name}?`,
@@ -233,8 +249,27 @@ const faqs = [
   },
   {
     q: `Where do these ${juris.name} ADU fee numbers come from?`,
-    a: "Every line item links to the official source document — the city or county fee schedule, the school district's developer-fee resolution, or the utility district's charges — with the date we last verified it. We publish no fee modeled, no fee guessed.",
+    a:
+      profile && profile.sources.length > 0
+        ? `From ${profile.sources.length} official document${profile.sources.length === 1 ? "" : "s"}, listed under "Documents behind ${juris.name}'s figures" with the date each was checked. Every line in the table links to its own source. Nothing is modeled or estimated.`
+        : "Every line item links to the official source document — the city or county fee schedule, the school district's developer-fee resolution, or the utility district's charges — with the date we last verified it. We publish no fee modeled, no fee guessed.",
   },
+  ...(profile
+    ? [
+        {
+          q: `How do ${juris.name}'s ADU fees compare with nearby jurisdictions?`,
+          a: compareSentence(profile),
+        },
+      ]
+    : []),
+  ...(profileLargest
+    ? [
+        {
+          q: `What is the biggest single ADU fee in ${juris.name}?`,
+          a: profileLargest,
+        },
+      ]
+    : []),
   ...(schoolLine
     ? [
         {
@@ -585,14 +620,13 @@ const faqSchema = {
       </div>
     )}
 
+    {profile && <CityFeeProfile profile={profile} />}
     <div class="mt-8 rounded-lg border border-border px-4 py-3">
       <p class="font-semibold">What changes on January 1, 2027</p>
       <p class="mt-1 text-sm opacity-90">
-        Two state laws rewrite parts of this table. <strong>SB 1117</strong>{" "}
-        (Chapter 809) re-bases covered impact fees for up to two ADUs on only
-        the square footage above 750 — at 800 sq ft, most impact-fee lines
-        shrink to a 50 sq ft basis. School developer fees and water/sewer
-        connection or capacity charges are not covered and do not change.{" "}
+        <strong>SB 1117</strong> (Chapter 809) charges covered impact fees for up
+        to two ADUs on a lot only on the area above 750 sq ft;
+        school and connection fees do not change. {sbCitySentence}{" "}
         <strong>AB 956</strong> (Chapter 791) makes two detached ADUs per
         single-family lot a ministerial approval.{" "}
         <a class="text-accent font-semibold underline decoration-dashed underline-offset-4" href={`/sb-1117/${juris.juris_id.toLowerCase()}/`}>{juris.name}: 2026 vs 2027, line by line &rarr;</a>{" "}
