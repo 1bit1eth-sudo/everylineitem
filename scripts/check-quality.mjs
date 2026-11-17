@@ -11,7 +11,7 @@ import path from "node:path";
 
 const DIST = path.resolve("dist");
 const WARN_RULES = new Set(["E1", "E2", "E3", "E9", "E10"]);
-const hits = { E1: [], E2: [], E3: [], E4: [], E5: [], E6: [], E7: [], E8: [], E9: [], E10: [] };
+const hits = { E1: [], E2: [], E3: [], E4: [], E5: [], E6: [], E7: [], E8: [], E9: [], E10: [], E11: [] };
 const DESC = {
   E1: "Every fee item has an http(s) source_url",
   E2: "Every fee item has a last_verified (checked) date",
@@ -23,6 +23,7 @@ const DESC = {
   E8: "Home, fee-index, changes, and the public CSV agree with fees.json (numeric consistency)",
   E9: "Indexable pages: <title> is 60 characters or fewer",
   E10: "Indexable pages: meta description is 160 characters or fewer",
+  E11: "No last_verified in the future; each jurisdiction's stored last_verified equals the newest verification date across its VERIFIED fee items",
 };
 
 const fees = JSON.parse(await readFile("src/data/fees.json", "utf8"));
@@ -34,6 +35,53 @@ for (const f of fees.fee_items) {
 for (const j of fees.jurisdictions) {
   if (!/^https?:\/\//.test(j.fee_schedule_url ?? "") || !String(j.last_verified ?? "").trim())
     hits.E3.push(`${j.juris_id}`);
+}
+
+// E11: date standard (2026-11-18). A last_verified dated after today is a
+// future claim and fails the build; a jurisdiction's stored last_verified
+// must equal the newest verification date across its VERIFIED fee items —
+// the same value the /fees/ and /sb-1117/ page headers and the sitemap
+// <lastmod> compute from the data. Scheduled publication dates must never
+// be stored in last_verified.
+{
+  const MONTHS = { Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5, Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11 };
+  const parseVerified = (s) => {
+    const v = String(s ?? "").trim();
+    const iso = /^(\d{4})-(\d{2})-(\d{2})$/.exec(v);
+    if (iso) return Date.UTC(+iso[1], +iso[2] - 1, +iso[3]);
+    const human = /^(\d{1,2}) ([A-Za-z]{3}) (\d{4})$/.exec(v);
+    if (human && MONTHS[human[2]] !== undefined)
+      return Date.UTC(+human[3], MONTHS[human[2]], +human[1]);
+    return 0;
+  };
+  const now = new Date();
+  const dayStart = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
+  for (const f of fees.fee_items) {
+    const v = String(f.last_verified ?? "").trim();
+    if (!v) continue;
+    const t = parseVerified(v);
+    if (!t) hits.E11.push(`${f.item_id}: unparseable last_verified "${v}"`);
+    else if (t > dayStart) hits.E11.push(`${f.item_id}: future last_verified "${v}"`);
+  }
+  const maxByJuris = new Map();
+  for (const f of fees.fee_items) {
+    if (f.status !== "verified") continue;
+    const t = parseVerified(f.last_verified ?? "");
+    if (t && (!maxByJuris.has(f.juris_id) || t > maxByJuris.get(f.juris_id)))
+      maxByJuris.set(f.juris_id, t);
+  }
+  for (const j of fees.jurisdictions) {
+    const v = String(j.last_verified ?? "").trim();
+    if (!v) continue;
+    const t = parseVerified(v);
+    if (!t) hits.E11.push(`${j.juris_id}: unparseable last_verified "${v}"`);
+    else if (t > dayStart) hits.E11.push(`${j.juris_id}: future last_verified "${v}"`);
+    const mx = maxByJuris.get(j.juris_id);
+    if (mx && t && t !== mx) {
+      const iso = new Date(mx).toISOString().slice(0, 10);
+      hits.E11.push(`${j.juris_id}: stored last_verified "${v}" != newest verified row ${iso}`);
+    }
+  }
 }
 
 async function walk(dir) {
