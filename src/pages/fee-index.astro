@@ -121,11 +121,6 @@ const jurisWithVerified = new Set(
   items.map(i => i.juris_id as string)
 ).size;
 
-// Citation for the CSV dataset, reused by the visible text and the copy
-// button (via data-citation) so the two can never drift apart.
-const citation =
-  "Source: Every Line Item — California ADU Fee Index, Q3 2026. everylineitem.com/fee-index/";
-
 // Trust line — newest verification date across the verified line items
 // behind this index. Verified-only: to_verify items contribute no figure
 // here, so their dates must not set the index's "last verified" date.
@@ -134,6 +129,13 @@ const latestVerifiedRaw = items
   .filter(Boolean)
   .sort((a, b) => parseVerified(b) - parseVerified(a))[0];
 const latestVerified = formatVerified(latestVerifiedRaw);
+
+// Citation for the CSV dataset, reused by the visible text and the copy
+// button (via data-citation) so the two can never drift apart. The data
+// as-of date is part of the citation itself, so a reused figure stays
+// traceable to the edition it came from.
+const citation =
+  `Source: Every Line Item — California ADU Fee Index, Q3 2026 (data as of ${latestVerified}). everylineitem.com/fee-index/`;
 
 const facts = [
   {
@@ -159,7 +161,7 @@ const facts = [
   {
     stat: `${(feesData.jurisdictions as any[]).length - 1} × ${items.length}`,
     label: "Coverage",
-    desc: "Jurisdictions tracked and verified line items behind this index. Every figure links to the official source document it came from — no estimates.",
+    desc: "Jurisdictions tracked and verified line items behind this index. Every figure links to the official source document it came from — rates are verified, dollar totals are computed from those rates, and nothing is estimated by us.",
   },
 ];
 ---
