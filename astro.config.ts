@@ -174,11 +174,14 @@ const noindexSB1117Pages = new Set(
     .map((j: { juris_id: string }) => `/sb-1117/${j.juris_id.toLowerCase()}/`)
 );
 
-// lastmod for the 211 sitemap URLs that are not posts. Every value comes
+// lastmod for the sitemap URLs that are not posts. Every value comes
 // from a real record — nothing is invented, and a page with no record simply
 // keeps no lastmod:
-// - /fees/<slug>/ and /sb-1117/<slug>/: that jurisdiction's last_verified
-//   date in fees.json (the day its fees were last checked).
+// - /fees/<slug>/ and /sb-1117/<slug>/: the newest verification date across
+//   that jurisdiction's VERIFIED fee items, computed from the data. The
+//   stored juris.last_verified is never read here — it once held scheduled
+//   publication dates, which produced future <lastmod> values. (E11 in
+//   check-quality.mjs keeps the stored value in sync with this computation.)
 // - Data hubs (/, /fee-index/, /fees/, /compare/, /sb-1117/): the newest
 //   verification date across VERIFIED fee items — the same scope the
 //   homepage "last verified" trust line already displays.
@@ -194,18 +197,21 @@ const toISODate = (t: number) =>
   t > 0 ? new Date(t).toISOString() : undefined;
 
 const pageLastmod = new Map<string, string>();
-for (const j of feesData.jurisdictions) {
-  const t = parseVerified(j.last_verified as string);
-  // A last_verified dated in the future (e.g. set to a scheduled post's
-  // publication slot: Alhambra 27 Nov 2026, Ontario 24 Nov 2026,
-  // Westminster 21 Nov 2026) is not a modification that has happened yet,
-  // and a future <lastmod> is invalid — those pages keep no lastmod until
-  // the date passes. Fixing the stored date itself is a data task, not
-  // this change.
-  if (!t || t > Date.now()) continue;
+const verifiedMaxByJuris = new Map<string, number>();
+for (const i of feesData.fee_items as {
+  juris_id: string;
+  status: string;
+  last_verified: string;
+}[]) {
+  if (i.status !== "verified") continue;
+  const t = parseVerified(i.last_verified ?? "");
+  if (t && (!verifiedMaxByJuris.has(i.juris_id) || t > verifiedMaxByJuris.get(i.juris_id)!))
+    verifiedMaxByJuris.set(i.juris_id, t);
+}
+for (const [jurisId, t] of verifiedMaxByJuris) {
   const iso = toISODate(t);
   if (!iso) continue;
-  const slug = (j.juris_id as string).toLowerCase();
+  const slug = jurisId.toLowerCase();
   pageLastmod.set(`/fees/${slug}/`, iso);
   pageLastmod.set(`/sb-1117/${slug}/`, iso);
 }
@@ -266,6 +272,14 @@ for (const slug of [
 ]) {
   const d = gitDate(`src/content/pages/${slug}.md`);
   if (d) pageLastmod.set(`/${slug}/`, d);
+}
+// Astro pages (not content pages): same git-date rule.
+for (const [page, file] of [
+  ["/property-tax/", "src/pages/property-tax.astro"],
+  ["/tools/", "src/pages/tools.astro"],
+] as const) {
+  const d = gitDate(file);
+  if (d) pageLastmod.set(page, d);
 }
 
 export default defineConfig({

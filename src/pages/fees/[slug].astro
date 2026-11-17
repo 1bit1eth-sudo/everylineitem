@@ -8,7 +8,7 @@ import {
   categoryLabel,
   fmtUSD,
 } from "@/lib/feeCalc";
-import { formatVerified } from "@/utils/formatVerified";
+import { formatVerified, parseVerified } from "@/utils/formatVerified";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
@@ -114,6 +114,22 @@ const verifiedRowCount = (feesData as any).fee_items.filter(
     i.juris_id === juris.juris_id && i.status === "verified"
 ).length;
 const thinFeePage = verifiedRowCount < 2;
+// Date standard (2026-11-18): the page header "Last verified" is the
+// newest verification date across this jurisdiction's VERIFIED fee items,
+// computed from the data — never the stored juris.last_verified, which
+// drifted from the table (39 places) and once held scheduled publication
+// dates. The stored value is kept in sync by the E11 build gate.
+const lastVerifiedISO = (() => {
+  const ts = (feesData as any).fee_items
+    .filter(
+      (i: { juris_id: string; status: string }) =>
+        i.juris_id === juris.juris_id && i.status === "verified"
+    )
+    .map((i: { last_verified: string }) => parseVerified(i.last_verified ?? ""));
+  return ts.length
+    ? new Date(Math.max(...ts)).toISOString().slice(0, 10)
+    : null;
+})();
 const verifiedTotalLow = isAreaJuris
   ? Math.min(...areaTotals.map(t => t.low))
   : areaTotals[0].low;
@@ -233,7 +249,7 @@ const faqs = [
   },
   {
     q: `Where do these ${juris.name} ADU fee numbers come from?`,
-    a: "Every line item links to the official source document — the city or county fee schedule, the school district's developer-fee resolution, or the utility district's charges — with the date we last verified it. We publish no fee modeled, no fee guessed.",
+    a: "Every line item links to the official source document — the city or county fee schedule, the school district's developer-fee resolution, or the utility district's charges — with the date we last verified it. Rates come from those documents; dollar totals are computed by applying the verified rates to our standard 800 sq ft ADU, and the assumption is stated where it matters. Charges we cannot verify are left out, never estimated by us.",
   },
   ...(schoolLine
     ? [
@@ -280,13 +296,14 @@ const faqSchema = {
       ) : (
         <>We have not published verified fee figures for {juris.name} yet.
         Our researchers verify every line item against its official source
-        document before publishing — no fee modeled, no fee guessed.</>
+        document before publishing — and charges we cannot verify are left
+        out, never estimated by us.</>
       )}
     </p>
     <p class="mt-3 text-sm opacity-70">
       Every figure links to its official source document.
-      {juris.last_verified && (
-        <> Last verified {formatVerified(juris.last_verified)}.</>
+      {lastVerifiedISO && (
+        <> Last verified {formatVerified(lastVerifiedISO)}.</>
       )}{" "}
       Fees are re-verified on a rolling schedule (next full pass Dec 2026).{" "}
       {/^https?:\/\//.test(juris.fee_schedule_url ?? "") && (
@@ -541,7 +558,8 @@ const faqSchema = {
         <p class="mt-2 opacity-80">
           Our researchers are working through {juris.name}'s official fee
           schedules now. We publish a line item only after we have read the
-          source document — no fee modeled, no fee guessed. Check back soon, or run the
+          source document — charges we cannot verify are left out, never
+          estimated by us. Check back soon, or run the
           calculator for the statewide baseline in the meantime.
         </p>
         <p class="mt-4">
