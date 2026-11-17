@@ -32,6 +32,14 @@ The most valuable messages we get are from contractors and estimators telling us
 
 ## Change log
 
+### 17 November 2026 — Encinitas school fee corrected: $3,832 → $4,304 (both districts now at the Level I cap)
+
+**Changed:** The Encinitas post's school fee is **$4,304**, not $3,832. Both districts serving Encinitas parcels have raised their rates since the post was published: Encinitas Union SD is $2.55/sq ft (as of July 1, 2026) and San Dieguito Union HSD is $2.83/sq ft (current page, superseding the older $2.52). Together they reach the 2026 SAB Level I maximum of $5.38/sq ft — $4,304 on an 800 sq ft ADU. The post's total stays ~$322,000 at published precision (phase sum $322,344; ~$403/sq ft), and the premium over the LA County baseline is now ~$2,300, not $2,000.
+
+**Reason:** Both rates were verified against the districts' own pages in late October 2026 (FI-535, FI-536) but the published post still carried the pre-increase $4.79 combined rate.
+
+**Source:** Encinitas Union SD, Developer Fee Collection/Payment Policy; San Dieguito Union HSD, Developer Fees page.
+
 ### 16 November 2026 — Solar post corrected: CEC sizing, five exceptions, existing-system rule
 
 **Changed:** The solar post, published today, misstated four points from the California Energy Commission's Title 24 rules. (1) System sizing: the post said Equation 150.1-C alone decides the size; the required size is the smaller of the Equation 150.1-C result and the SARA-based size (18 W/sq ft for a steep roof, 14 W/sq ft for a low-slope roof). (2) Exceptions: the post said three; §150.1(c)14 has five — the snow-load, pre-2020 plans, and battery-storage exceptions (25% reduction, JA12, at least 7.5 kWh) are added, and the "panels can go anywhere" point is moved out of the exceptions list because it is a placement option, not an exception. (3) Existing systems: the post said a main house's existing panels may already satisfy the ADU requirement; the CEC's 2025 ADU FAQs answer that question "No" — new modules must be added to the existing system, as part of the ADU permit, sized to §150.1(c)14, on the same parcel, with the utility's permission. (4) Solar-ready: the post did not mention §110.10(a)1, which applies only to newly constructed single-family homes in subdivisions of ten or more units, not to a new ADU on an existing parcel. No figures change.

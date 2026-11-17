@@ -1,6 +1,6 @@
 # Source: Every Line Item — California ADU Fee Index. https://everylineitem.com/fee-index/
 # License: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) — free to reuse with attribution.
-# Reference date: 2026-11-15 (generated at build time from src/data/fees.json)
+# Reference date: 2026-11-17 (generated at build time from src/data/fees.json)
 # Scope: verified rows only — 659 verified line items across 163 jurisdictions. Unverified rows are excluded, never estimated.
 # Amount at 800 sq ft: computed with the same math as the site calculator (800 sq ft ADU; 1,600 sq ft primary dwelling for prorated lines). Blank = the row has no computable amount at 800 sq ft. A range is shown as low-high.
 jurisdiction,county,fee_name,category,rate,amount_800_sqft,status,source_url,last_verified,effective_date
@@ -313,7 +313,7 @@ Long Beach,Los Angeles,"Development Impact Fees - Fire, Parks & Police (ADU rate
 Long Beach,Los Angeles,Building Combination Permit + Building Plan Check (800 sq ft),plan_check_permit,"$2,886.45",2886,verified,https://www.longbeach.gov/globalassets/finance/media-library/documents/city-budget-and-finances/budget/budget-documents/fy-26-adopted-budget/43-fy-26-adopted-fee-adjustments,6 Oct 2026,
 Long Beach,Los Angeles,LBUSD Developer Fee (residential),school,$5.38/sq ft,4304,verified,https://www.lbschools.net/departments/business-and-finance/facilities-development-planning/developer-fees,6 Oct 2026,
 Long Beach,Los Angeles,Sewer Capacity Charge (actual ADU permit charge),utility_capacity,$208.98,209,verified,https://www.longbeach.gov/globalassets/lbcd/media-library/documents/building--safety/assembly-bill-2234/permit---adu,6 Oct 2026,
-Los Altos,Santa Clara,"School district developer fee (MVLA HSD, residential)",school,$1.72/sq ft,1376,verified,https://www.mvla.net/business-services-home,2026-10-16,2026
+Los Altos,Santa Clara,"School district developer fee (MVLA HSD, residential)",school,$1.79/sq ft,1432,verified,https://www.mvla.net/business-services-home,2026-11-16,2026-11-13
 Los Altos Hills,Santa Clara,Pathway Development Impact Fee (ADU),impact,$0,0,verified,https://losaltoshills.ca.gov/DocumentCenter/View/8086/2026-Impact-Fee-Schedule,2026-10-19,
 Los Altos Hills,Santa Clara,Recreation In-Lieu Fee,impact,$0,0,verified,https://losaltoshills.ca.gov/DocumentCenter/View/8086/2026-Impact-Fee-Schedule,2026-10-19,
 Los Altos Hills,Santa Clara,Storm Drainage Fee,impact,$0,0,verified,https://losaltoshills.ca.gov/DocumentCenter/View/8086/2026-Impact-Fee-Schedule,2026-10-19,
