@@ -1,0 +1,4 @@
+# Download spreadsheets and CSVs are tools for readers, not standalone
+# search results. Block indexing without changing HTML pages.
+/downloads/*
+  X-Robots-Tag: noindex
