@@ -1,6 +1,16 @@
 {
   "entries": [
 {
+        "date": "2026-11-17",
+        "detail": "ADU permit-fee ranking published (verified 13 Nov 2026): sixteen cities ranked for an 800 sq ft detached ADU, Riverside $1,006 to Oakland $12,800–$19,200 — a 19x spread; nine of sixteen figures carry an asterisk (partial, estimated, or modeled). Lancaster is listed as 'not a number' (permit table unpublished) and Santa Ana as 'no post yet' (18 Nov 2026). Corrections in the same run: Encinitas school fee $3,832 → $4,304 (EUSD $2.55 + SDUHSD $2.83 = $5.38 cap; total stays ~$322,000); Los Altos MVLA high-school share FI-223 $1.72 → $1.79/sq ft (Resolution No. 26/27-6, effective 2026-11-13; draft post total $303,712 → $303,768). Fee Index link added to every /fees/ jurisdiction page. Homepage Videos updated to the two latest published Shorts (SB 1117 countdown, solar Title 24). Verified rows sitewide unchanged at 659 (rate corrections, no new rows).",
+        "headline": "ADU permit fees ranked: $1,006 to $19,200 for the same 800 sq ft — plus Encinitas and Los Altos school-fee corrections",
+        "items_added": 0,
+        "jurisdictions": [
+          "Encinitas",
+          "Los Altos"
+        ]
+    },
+{
         "date": "2026-11-16",
         "detail": "ADU solar explainer published (verified 9 Oct 2026): Title 24 photovoltaics are required only for new-construction detached ADUs; the 1.8 kW sizing floor, the 80 sq ft solar-access exit, panels may go anywhere on the property or through community solar, and the §150.0(s) battery-ready rule applies to new detached ADUs over 125 amps. 2026 published pricing $2.30–$4.00/W implies roughly $4,100–$14,000 for a 1.8–3.5 kW ADU system before incentives; the federal 30% tax credit is gone as of late 2025. Pre-publication corrections to three scheduled ranking posts after the Lancaster fee confirmation (13 Nov 2026): Lancaster paper cost ~$3,000 → ~$7,907 floor (school $4,256 both districts + DIF $3,651 prorated) in the soft-costs ranking (now 8th; Santa Maria cheapest at ~$4,000 floor); Lancaster school fee $3,184 → $4,256 (16th) in the school-fee ranking; permit-fee ranking notes Lancaster's permit table is unpublished.",
         "headline": "ADU solar (Title 24) explainer published — when new detached ADUs need PV, the 1.8 kW floor and the battery-ready rule",
