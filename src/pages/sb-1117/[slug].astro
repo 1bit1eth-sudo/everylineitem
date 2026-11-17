@@ -74,7 +74,10 @@ const verifiedAny = hasVerifiedRows(data, juris.juris_id);
 // Also noindex when every verified impact line is $0 (e.g. a city-wide ADU
 // exemption): true, but too thin to stand as its own search result.
 const chargesImpact = summaries.some(s => s.current.high > 0);
-const noindex = !verifiedAny || !hasImpact || !chargesImpact;
+// 2026-11-17 live audit (owner-approved): every /sb-1117/<city> page is
+// noindex, follow. The unique comparison belongs on /fees/<city>/; the
+// hub /sb-1117/ stays indexed. Visitor-facing content is unchanged.
+const noindex = true;
 
 const detail = summaries.find(s => s.sqft === 1000)!;
 const s800 = summaries.find(s => s.sqft === 800)!;
