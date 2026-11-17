@@ -315,9 +315,9 @@ const videos = [
   {
     kind: "Short",
     date: "Nov 17, 2026",
-    title: "SB 1117: 44 Days Left — Ontario ADUs Save Up to $27,457",
-    dek: "SB 1117 takes effect January 1, 2027: for a homeowner's first two ADUs, impact fees apply only above 750 sq ft — Ontario saves up to $27,457.",
-    url: "https://youtube.com/shorts/fTgjs4dY7PQ",
+    title: "California ADU Permit Fees, Ranked: $1,006 to $19,200",
+    dek: "Riverside $1,006 to Oakland $12,800–$19,200 for the same 800 sq ft ADU — a 19x spread for the identical stack of paper. SB 1117 doesn't touch permit fees.",
+    url: "https://youtube.com/shorts/PzJtrw4A7cM",
   },
   {
     kind: "Short",
@@ -518,7 +518,7 @@ const formatShortDate = (d: string | Date) =>
           </p>
           <p class="mt-3 text-sm opacity-70">
             {jurisCount} jurisdictions · every figure links to
-            its official source · last verified {latestVerified} · no email needed.{" "}
+            its official source · Fees last verified: {latestVerified} · no email needed.{" "}
             <LinkButton
               class="underline decoration-dashed underline-offset-4"
               href="/methodology/"
@@ -614,7 +614,7 @@ const formatShortDate = (d: string | Date) =>
         Every number on this page has a source document.
       </h2>
       <p class="mt-3 max-w-3xl">
-        No estimated fees, no "typical ranges" from a sales brochure. Every fee here traces to an official source — a city fee schedule, a school district resolution, a utility tariff — and the whole dataset is re-verified on a published schedule. Every Line Item is an independent publication: no builder, modular company, or lender has paid for, reviewed, or influenced any figure here.
+        No fee estimated by us, no "typical ranges" from a sales brochure. Every fee rate here traces to an official source — a city fee schedule, a school district resolution, a utility tariff — and the whole dataset is re-verified on a published schedule. Where a city publishes a rate instead of a pre-computed ADU total, we apply that rate to our standard 800 sq ft ADU and show the assumption. Every Line Item is an independent publication: no builder, modular company, or lender has paid for, reviewed, or influenced any figure here.
       </p>
       <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <div class="border-border rounded-lg border p-4">
@@ -625,7 +625,7 @@ const formatShortDate = (d: string | Date) =>
         <div class="border-border rounded-lg border p-4">
           <div class="text-3xl font-bold tabular-nums">{verifiedCount}</div>
           <div class="mt-1 text-sm font-semibold">Verified fee line items</div>
-          <p class="mt-1 text-sm opacity-70">Each fee checked against the document it came from — no fee modeled, no fee guessed. Construction costs are modeled separately and labeled as such on the quote checker.</p>
+          <p class="mt-1 text-sm opacity-70">Each fee rate is checked against the document that set it. Dollar totals are computed from those verified rates for our standard 800 sq ft ADU, with the assumption shown; charges we cannot verify are left out. Construction costs are modeled separately and labeled as such on the quote checker.</p>
         </div>
         <div class="border-border rounded-lg border p-4">
           <div class="text-3xl font-bold tabular-nums">Dec 2026</div>
@@ -669,7 +669,7 @@ const formatShortDate = (d: string | Date) =>
           <ul class="mt-4 space-y-4">
             {changelog.entries.slice(0, 3).map(e => (
               <li class="border-b border-border pb-4">
-                <p class="text-sm font-mono tabular-nums opacity-60">{e.date}</p>
+                <p class="text-sm font-mono tabular-nums opacity-60">Published: {e.date}</p>
                 <p class="font-semibold">{e.headline}</p>
                 <p class="mt-1 text-sm opacity-70 line-clamp-3">{e.detail}</p>
               </li>
@@ -759,6 +759,56 @@ const formatShortDate = (d: string | Date) =>
       </p>
     </section>
 
+    {/* RANKINGS — the leaderboard pages, surfaced on the homepage.
+        Permit endpoints are the ranking post's own published figures
+        (16 cities, 800 sq ft); school and cliff figures are computed
+        in the frontmatter from fees.json, never typed in. The school
+        ranking post itself publishes Nov 29, so the school card links
+        to the live explainer until then — no link to an unpublished page. */}
+    <section aria-labelledby="rankings-heading" class="border-border border-b pt-12 pb-6">
+      <h2 id="rankings-heading" class="text-2xl font-semibold">
+        Ranked: the same ADU, city by city
+      </h2>
+      <p class="mt-3 max-w-3xl">
+        One unit, every city — ranked by a single line item, so the spread is the city's, not the model's.
+      </p>
+      <div class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <a
+          href="/posts/adu-permit-fees-ranked/"
+          class="border border-border rounded-lg p-4 hover:border-accent transition-colors"
+        >
+          <p class="font-mono text-sm opacity-60">Permit fees</p>
+          <p class="mt-1 font-semibold">$1,006 to $19,200</p>
+          <p class="mt-1 text-sm opacity-70">
+            Riverside to Oakland for the same 800 sq ft ADU — a 19x spread across 16 cities. Most figures carry an asterisk; the ranking explains what each one means.
+          </p>
+          <p class="mt-2 text-sm font-semibold text-accent">See the ranking &rarr;</p>
+        </a>
+        <a
+          href="/posts/adu-school-fees-explained/"
+          class="border border-border rounded-lg p-4 hover:border-accent transition-colors"
+        >
+          <p class="font-mono text-sm opacity-60">School fees</p>
+          <p class="mt-1 font-semibold">{fmtUSD(schoolLow)} to {fmtUSD(schoolHigh)}</p>
+          <p class="mt-1 text-sm opacity-70">
+            {lowJuris} to {highJuris} for the same 800 sq ft ADU — a {schoolRatio}× spread across {schoolRows.length} jurisdictions with verified school fees, set by district boundaries, not city limits.
+          </p>
+          <p class="mt-2 text-sm font-semibold text-accent">Why school fees vary &rarr;</p>
+        </a>
+        <a
+          href="/compare/"
+          class="border border-border rounded-lg p-4 hover:border-accent transition-colors"
+        >
+          <p class="font-mono text-sm opacity-60">The 750 sq ft cliff</p>
+          <p class="mt-1 font-semibold">{fmtUSD(topCliff)} at 751 sq ft</p>
+          <p class="mt-1 text-sm opacity-70">
+            In {topCliffJuris}, an ADU at 751 sq ft owes {fmtUSD(topCliff)} in impact fees that a 750 sq ft ADU does not — the largest verified cliff in the index.
+          </p>
+          <p class="mt-2 text-sm font-semibold text-accent">Find your city's cliff &rarr;</p>
+        </a>
+      </div>
+    </section>
+
     {/* HOW MUCH DOES AN ADU COST — the head query, answered from the
         published city breakdowns. Every figure is computed in the
         frontmatter; vocabulary is deliberately varied (backyard home,
@@ -768,7 +818,7 @@ const formatShortDate = (d: string | Date) =>
         How much does an ADU cost in California?
       </h2>
       <p class="mt-3 max-w-3xl">
-        Across the {cityCount} city breakdowns published on this site, an 800 sq ft detached backyard home runs {fmtUSD(cityMin)}–{fmtUSD(cityMax)} all-in, with a median of {fmtUSD(cityMedian)}. The build itself is modeled — $288,000 across the six phases plus $14,000 in design — while the government charges are verified line items for that city: school district assessments, impact levies, permit and utility charges, each traced to the official document that set it. Every total is a floor: charges we cannot verify are left out, never estimated.
+        Across the {cityCount} city breakdowns published on this site, an 800 sq ft detached backyard home runs {fmtUSD(cityMin)}–{fmtUSD(cityMax)} all-in, with a median of {fmtUSD(cityMedian)}. The build itself is modeled — $288,000 across the six phases plus $14,000 in design — while the government charges are verified line items for that city: school district assessments, impact levies, permit and utility charges, each traced to the official document that set it. Every total is a floor: charges we cannot verify are left out, never estimated by us.
       </p>
       <p class="mt-3 max-w-3xl">
         Use the range to sanity-check a bid before you sign: if a quote lands far outside it, ask which phase or which charge explains the gap — then check that charge against the official schedule.{" "}
@@ -795,7 +845,7 @@ const formatShortDate = (d: string | Date) =>
         One square foot can switch impact fees on. In {topCliffJuris}, an ADU at 751 sq ft owes {fmtUSD(topCliff)} in impact fees that a 750 sq ft ADU does not — the largest verified cliff in the index. State law exempts ADUs of 750 sq ft or less from impact fees; above that line, fees are prorated against the primary dwelling. From 1 January 2027, SB 1117 narrows the cliff further: for the first two ADUs on a parcel, only the area above 750 sq ft is taxed. <a href="/sb-1117/" class="text-accent font-semibold">See what SB 1117 saves in your city &rarr;</a>
       </p>
       <p class="mt-3 max-w-3xl">
-        Every fee figure links to the official document it came from — a city fee schedule, a school district resolution, a utility's charges — with the date we last checked it. Figures we cannot verify from an official source are marked "verify with city" and left out of every total, never estimated. {verifiedCount} verified line items across {jurisCount} jurisdictions, last checked {latestVerified}. <a href="/methodology/" class="text-accent font-semibold">How we verify &rarr;</a>
+        Every fee figure links to the official document it came from — a city fee schedule, a school district resolution, a utility's charges — with the date we last checked it. Figures we cannot verify from an official source are marked "verify with city" and left out of every total, never estimated by us. {verifiedCount} verified line items across {jurisCount} jurisdictions, last checked {latestVerified}. <a href="/methodology/" class="text-accent font-semibold">How we verify &rarr;</a>
       </p>
     </section>
 

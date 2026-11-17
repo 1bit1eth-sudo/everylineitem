@@ -11,7 +11,7 @@ import {
   hasVerifiedRows,
   daysUntilSB1117,
 } from "@/lib/sb1117Pages";
-import { formatVerified } from "@/utils/formatVerified";
+import { formatVerified, parseVerified } from "@/utils/formatVerified";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
@@ -33,6 +33,21 @@ export async function getStaticPaths() {
 }
 
 const { juris } = Astro.props;
+// Date standard (2026-11-18): same jurisdiction-level definition as
+// /fees/[slug] — newest verification date across the jurisdiction's
+// VERIFIED fee items, computed from the data. The stored
+// juris.last_verified is kept in sync by the E11 build gate.
+const lastVerifiedISO = (() => {
+  const ts = (feesData as any).fee_items
+    .filter(
+      (i: { juris_id: string; status: string }) =>
+        i.juris_id === juris.juris_id && i.status === "verified"
+    )
+    .map((i: { last_verified: string }) => parseVerified(i.last_verified ?? ""));
+  return ts.length
+    ? new Date(Math.max(...ts)).toISOString().slice(0, 10)
+    : null;
+})();
 // Link the explainer only once it is live; it is scheduled (pubDatetime) and
 // would 404 on these pages until then.
 const explainerLive = (await getCollection("posts"))
@@ -176,11 +191,9 @@ const faqSchema = {
     </p>
     <p class="mt-3 text-sm opacity-70">
       Verified rows only; every line links to its official source.
-      {
-        juris.last_verified && (
-          <> Last verified {formatVerified(juris.last_verified)}.</>
-        )
-      }{" "}
+      {lastVerifiedISO && (
+        <> Last verified {formatVerified(lastVerifiedISO)}.</>
+      )}{" "}
       <LinkButton
         class="underline decoration-dashed underline-offset-4"
         href="/methodology/"
