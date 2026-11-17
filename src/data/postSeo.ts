@@ -402,7 +402,7 @@ export const POST_SEO: Record<string, PostSeo> = {
   "sb-1117-kills-750-sq-ft-cliff": {
     title: "On Jan 1, 2027, California Kills the 750 Sq Ft Cliff",
     description:
-      "SB 1117, signed Sept 29, 2026, rewrites the ADU impact-fee rule: from Jan 1, 2027, cities may charge fees only on square footage above 750 — not the whole unit.",
+      "SB 1117, signed Sept 29, 2026, charges ADU impact fees only on square footage above 750 from Jan 1, 2027, with city-by-city savings and what does not change.",
   },
   "sb-1117-wait-or-permit-now": {
     title: "SB 1117: Should You Wait Until January to Permit Your ADU?",

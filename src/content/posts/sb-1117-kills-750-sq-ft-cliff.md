@@ -1,6 +1,6 @@
 ---
 title: "On Jan 1, 2027, California Kills the 750 Sq Ft Cliff — Here's What You'd Save"
-description: "SB 1117, signed Sept 29, 2026, rewrites the ADU impact-fee rule: from Jan 1, 2027, cities may charge fees only on square footage above 750 — not the whole unit. City-by-city savings table: Palo Alto ~$18,090 → ~$1,130; Anaheim ~$10,411 → a fraction. What changes, what doesn't, and the December-vs-January permit question."
+description: "SB 1117, signed Sept 29, 2026, charges ADU impact fees only on square footage above 750 from Jan 1, 2027, with city-by-city savings and what does not change."
 pubDatetime: 2026-10-12T01:00:00Z
 modDatetime: 2026-10-26T01:00:00Z
 author: "Every Line Item"
