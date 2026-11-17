@@ -29,7 +29,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "https://www.sandiego.gov/development-services/forms-publications/information-bulletins/501",
-      "last_verified": "12 Nov 2026",
+      "last_verified": "13 Nov 2026",
       "status": "to_verify"
     },
     {
@@ -55,7 +55,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "https://www.carlsbadca.gov/home/showpublisheddocument/27129/639208527170300000",
-      "last_verified": "2026-11-05",
+      "last_verified": "2026-11-14",
       "status": "to_verify"
     },
     {
@@ -94,7 +94,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "https://www.cityofpaloalto.org/files/assets/public/v/5/development-services/planning-review/6.-planning-fees/fy27-impact-fee-information-sheet.pdf",
-      "last_verified": "3 Oct 2026",
+      "last_verified": "13 Nov 2026",
       "status": "to_verify"
     },
     {
@@ -120,7 +120,7 @@
       "valuation_psf": 400,
       "valuation_basis": "$320,000 ÷ 800 sq ft (SF post worked example)",
       "fee_schedule_url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_building/0-0-0-92612",
-      "last_verified": "5 Oct 2026",
+      "last_verified": "6 Oct 2026",
       "status": "conflict"
     },
     {
@@ -159,7 +159,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "https://www.burbankca.gov/documents/d/financial-services/fy-2026-27-adopted-fee-schedule-final-revised",
-      "last_verified": "7 Oct 2026",
+      "last_verified": "14 Nov 2026",
       "status": "to_verify"
     },
     {
@@ -185,7 +185,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "https://ANAHEIM.NET/DocumentCenter/View/39709/Building-Permit-Fees?bidId=",
-      "last_verified": "7 Oct 2026",
+      "last_verified": "13 Nov 2026",
       "status": "verified"
     },
     {
@@ -224,7 +224,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "https://www.cityofsantamaria.org/home/showpublisheddocument/26642/639215444670700000",
-      "last_verified": "2026-10-06",
+      "last_verified": "2026-11-13",
       "status": "to_verify"
     },
     {
@@ -614,7 +614,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "https://lahabraca.gov/DocumentCenter/View/15575/Building-Permit-Fees-FY-2025-2026",
-      "last_verified": "2026-10-15",
+      "last_verified": "2026-11-13",
       "status": "verified"
     },
     {
@@ -627,7 +627,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "https://www.costamesaca.gov/government/departments-and-divisions/community-development/planning/accessory-dwelling-units-adu/pre-engineered-adus",
-      "last_verified": "2026-10-15",
+      "last_verified": "2026-11-13",
       "status": "verified"
     },
     {
@@ -744,7 +744,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "https://losaltosca.api.civicclerk.com/v1/Meetings/GetAttachmentFile(fileId=7014)",
-      "last_verified": "2026-10-16",
+      "last_verified": "2026-11-16",
       "status": "verified"
     },
     {
@@ -783,7 +783,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "https://www.kernpublicworks.com/services/development/building-inspection/pre-approved-accessory-dwelling-units",
-      "last_verified": "2026-11-09",
+      "last_verified": "2026-11-15",
       "status": "verified"
     },
     {
@@ -835,7 +835,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "https://stgenpln.blob.core.windows.net/document/Fees_Building.pdf",
-      "last_verified": "2026-11-09",
+      "last_verified": "2026-11-11",
       "status": "verified"
     },
     {
@@ -848,7 +848,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "https://arcadiaca.gov/Document%20Center/Government/Development%20Services/Building%20Services/Assembly%20Bill%202234/7558.pdf?t=202512081123430",
-      "last_verified": "2026-10-16",
+      "last_verified": "2026-11-13",
       "status": "verified"
     },
     {
@@ -874,7 +874,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "http://hayward.prod.acquia-sites.com/sites/default/files/documents/Adopted-FY-2023-Master-Fee-Schedule.pdf",
-      "last_verified": "2026-10-16",
+      "last_verified": "2026-11-10",
       "status": "verified"
     },
     {
@@ -887,7 +887,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "http://www.coachella.org/departments/finance/tax-payment-information/development-impact-fees-annual-reports",
-      "last_verified": "2026-10-16",
+      "last_verified": "2026-11-15",
       "status": "verified"
     },
     {
@@ -952,7 +952,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "https://palmdale.granicus.com/services/legistar/download/pdf/4272499/Atch_FY_2026-27_Proposed_Master_Schedule_of_Fees_and_Penalties.pdf",
-      "last_verified": "2026-10-17",
+      "last_verified": "2026-11-13",
       "status": "verified"
     },
     {
@@ -978,7 +978,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "https://docs.bakersfieldcity.us/weblink/0/edoc/1307201/Fees_Effective%2012-08-2016.pdf",
-      "last_verified": "2026-10-17",
+      "last_verified": "2026-11-13",
       "status": "verified"
     },
     {
@@ -1115,7 +1115,7 @@
       "county": "San Diego",
       "fee_schedule_url": "https://www.chulavistaca.gov/home/showpublisheddocument/2488/639184998602300000",
       "juris_id": "CHULA-VISTA",
-      "last_verified": "25 Oct 2026",
+      "last_verified": "19 Oct 2026",
       "name": "Chula Vista",
       "post_slug": "chula-vista-adu-cost",
       "primary_sqft_default": null,
@@ -1128,7 +1128,7 @@
       "county": "Los Angeles",
       "fee_schedule_url": "https://ww2.cityofpasadena.net/2025%20Agendas/May_19_25/AR%2013%20Attachment%20A.pdf",
       "juris_id": "PASADENA",
-      "last_verified": "31 Oct 2026",
+      "last_verified": "13 Nov 2026",
       "name": "Pasadena",
       "post_slug": "pasadena-adu-cost",
       "primary_sqft_default": null,
@@ -1180,7 +1180,7 @@
       "county": "Los Angeles",
       "fee_schedule_url": "https://www.alhambraca.gov/DocumentCenter/View/7697/Master-Fee-Schedule-Effective-03-01-26",
       "juris_id": "ALHAMBRA",
-      "last_verified": "27 Nov 2026",
+      "last_verified": "19 Oct 2026",
       "name": "Alhambra",
       "post_slug": "alhambra-adu-cost",
       "primary_sqft_default": null,
@@ -1193,7 +1193,7 @@
       "county": "Santa Clara",
       "fee_schedule_url": "http://www.campbellca.gov/DocumentCenter/View/29705/FY-2027-Master-Fee-Schedule---Effective-July-1-2026",
       "juris_id": "CAMPBELL",
-      "last_verified": "2 Nov 2026",
+      "last_verified": "10 Nov 2026",
       "name": "Campbell",
       "post_slug": "campbell-adu-cost",
       "primary_sqft_default": null,
@@ -1206,7 +1206,7 @@
       "county": "Los Angeles",
       "fee_schedule_url": "https://www.downeyca.org/our-city/departments/amended-fy-19-20-user-fees",
       "juris_id": "DOWNEY",
-      "last_verified": "9 Oct 2026",
+      "last_verified": "13 Nov 2026",
       "name": "Downey",
       "post_slug": "downey-adu-cost",
       "primary_sqft_default": null,
@@ -1259,7 +1259,7 @@
       "county": "Los Angeles",
       "fee_schedule_url": "https://www.cityoflancasterca.org/our-city/departments-services/finance/citywide-fee-schedules",
       "juris_id": "LANCASTER",
-      "last_verified": "9 Oct 2026",
+      "last_verified": "13 Nov 2026",
       "name": "Lancaster",
       "post_slug": "lancaster-adu-cost",
       "primary_sqft_default": null,
@@ -1285,7 +1285,7 @@
       "county": "San Bernardino",
       "fee_schedule_url": null,
       "juris_id": "ONTARIO",
-      "last_verified": "24 Nov 2026",
+      "last_verified": "19 Oct 2026",
       "name": "Ontario",
       "post_slug": "ontario-adu-cost",
       "primary_sqft_default": null,
@@ -1298,7 +1298,7 @@
       "county": "Ventura",
       "fee_schedule_url": "https://oxnardca.api.civicclerk.com/v1/Meetings/GetAttachmentFile(fileId=21438)",
       "juris_id": "OXNARD",
-      "last_verified": "9 Oct 2026",
+      "last_verified": "14 Nov 2026",
       "name": "Oxnard",
       "post_slug": "oxnard-adu-cost",
       "primary_sqft_default": null,
@@ -1317,7 +1317,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "https://sanbernardino.gov/DocumentCenter/View/341/Schedule-of-Fees---Building--Safety-Division-PDF",
-      "last_verified": "28 Oct 2026",
+      "last_verified": "19 Oct 2026",
       "status": "verified"
     },
     {
@@ -1382,7 +1382,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "https://www.westminster-ca.gov/home/showpublisheddocument/9167/638887968590430000",
-      "last_verified": "21 Nov 2026",
+      "last_verified": "19 Oct 2026",
       "status": "verified"
     },
     {
@@ -1408,7 +1408,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "http://ci.moreno-valley.ca.us/departments/financial-mgmt-svcs/fin-pdf/FeeSchedule.pdf",
-      "last_verified": "2026-10-18",
+      "last_verified": "2026-11-08",
       "status": "verified"
     },
     {
@@ -1421,7 +1421,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "https://pwds.oc.gov/sites/ocpwocds/files/2024-07/OC%20Development%20Services%20Fee%20Schedule%2024-27_0.pdf",
-      "last_verified": "2026-10-18",
+      "last_verified": "2026-11-13",
       "status": "verified"
     },
     {
@@ -1434,7 +1434,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "https://www.smcgov.org/media/157829/download?inline=",
-      "last_verified": "2026-10-18",
+      "last_verified": "2026-10-23",
       "status": "verified"
     },
     {
@@ -1538,7 +1538,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "https://fmsbonds-wpoffload.s3.amazonaws.com/PROD/wp-content/uploads/2026/07/06133447/CALEXICO-USD-COPS-POS.pdf",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-11-15",
       "status": "verified"
     },
     {
@@ -1603,7 +1603,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "https://www.chino.k12.ca.us/developer-fees",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-11-15",
       "status": "verified"
     },
     {
@@ -1772,7 +1772,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "https://www.cityofvacaville.gov/home/showpublisheddocument/209/638499808795470000",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-11-09",
       "status": "verified"
     },
     {
@@ -1811,7 +1811,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "https://www.newportbeachca.gov/government/departments/community-development/planning-division/applications-forms-and-fees/development-impact-fees",
-      "last_verified": "2026-10-20",
+      "last_verified": "2026-10-23",
       "status": "verified"
     },
     {
@@ -1876,7 +1876,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "https://Burlingame.org/DocumentCenter/View/4777/Burlingame-Master-Fee-Schedule-FY2024-25?bidId=",
-      "last_verified": "2026-10-20",
+      "last_verified": "2026-10-23",
       "status": "verified"
     },
     {
@@ -1941,7 +1941,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "https://covinaca.gov/wp-content/uploads/2024/07/Resolution-CC-2024-057_-Nexus-Study_-CIP_-Schedule.pdf",
-      "last_verified": "2026-10-20",
+      "last_verified": "2026-11-15",
       "status": "verified"
     },
     {
@@ -1967,7 +1967,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "https://mccmeetingspublic.blob.core.usgovcloudapi.net/folsomca-meet-3a4a6348fb6e406bbb4479b092aba62f/ITEM-Attachment-001-31b238f23863471a8f8f3fdad7c7799a.pdf",
-      "last_verified": "2026-10-20",
+      "last_verified": "2026-10-23",
       "status": "verified"
     },
     {
@@ -1993,7 +1993,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "https://www.claremontca.gov/Business-Development/Planning-and-Land-Use/Planning-Permits",
-      "last_verified": "2026-10-21",
+      "last_verified": "2026-11-15",
       "status": "verified"
     },
     {
@@ -2136,7 +2136,7 @@
       "valuation_psf": null,
       "valuation_basis": null,
       "fee_schedule_url": "https://codelibrary.amlegal.com/codes/los_angeles/latest/lamc/0-0-0-172789",
-      "last_verified": "11 Nov 2026",
+      "last_verified": "13 Nov 2026",
       "status": "to_verify"
     }
   ],
