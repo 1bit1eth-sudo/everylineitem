@@ -315,9 +315,9 @@ const videos = [
   {
     kind: "Short",
     date: "Nov 17, 2026",
-    title: "SB 1117: 44 Days Left — Ontario ADUs Save Up to $27,457",
-    dek: "SB 1117 takes effect January 1, 2027: for a homeowner's first two ADUs, impact fees apply only above 750 sq ft — Ontario saves up to $27,457.",
-    url: "https://youtube.com/shorts/fTgjs4dY7PQ",
+    title: "California ADU Permit Fees, Ranked: $1,006 to $19,200",
+    dek: "Riverside $1,006 to Oakland $12,800–$19,200 for the same 800 sq ft ADU — a 19x spread for the identical stack of paper. SB 1117 doesn't touch permit fees.",
+    url: "https://youtube.com/shorts/PzJtrw4A7cM",
   },
   {
     kind: "Short",
@@ -757,6 +757,56 @@ const formatShortDate = (d: string | Date) =>
           Browse all tools &rarr;
         </a>
       </p>
+    </section>
+
+    {/* RANKINGS — the leaderboard pages, surfaced on the homepage.
+        Permit endpoints are the ranking post's own published figures
+        (16 cities, 800 sq ft); school and cliff figures are computed
+        in the frontmatter from fees.json, never typed in. The school
+        ranking post itself publishes Nov 29, so the school card links
+        to the live explainer until then — no link to an unpublished page. */}
+    <section aria-labelledby="rankings-heading" class="border-border border-b pt-12 pb-6">
+      <h2 id="rankings-heading" class="text-2xl font-semibold">
+        Ranked: the same ADU, city by city
+      </h2>
+      <p class="mt-3 max-w-3xl">
+        One unit, every city — ranked by a single line item, so the spread is the city's, not the model's.
+      </p>
+      <div class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <a
+          href="/posts/adu-permit-fees-ranked/"
+          class="border border-border rounded-lg p-4 hover:border-accent transition-colors"
+        >
+          <p class="font-mono text-sm opacity-60">Permit fees</p>
+          <p class="mt-1 font-semibold">$1,006 to $19,200</p>
+          <p class="mt-1 text-sm opacity-70">
+            Riverside to Oakland for the same 800 sq ft ADU — a 19x spread across 16 cities. Most figures carry an asterisk; the ranking explains what each one means.
+          </p>
+          <p class="mt-2 text-sm font-semibold text-accent">See the ranking &rarr;</p>
+        </a>
+        <a
+          href="/posts/adu-school-fees-explained/"
+          class="border border-border rounded-lg p-4 hover:border-accent transition-colors"
+        >
+          <p class="font-mono text-sm opacity-60">School fees</p>
+          <p class="mt-1 font-semibold">{fmtUSD(schoolLow)} to {fmtUSD(schoolHigh)}</p>
+          <p class="mt-1 text-sm opacity-70">
+            {lowJuris} to {highJuris} for the same 800 sq ft ADU — a {schoolRatio}× spread across {schoolRows.length} jurisdictions with verified school fees, set by district boundaries, not city limits.
+          </p>
+          <p class="mt-2 text-sm font-semibold text-accent">Why school fees vary &rarr;</p>
+        </a>
+        <a
+          href="/compare/"
+          class="border border-border rounded-lg p-4 hover:border-accent transition-colors"
+        >
+          <p class="font-mono text-sm opacity-60">The 750 sq ft cliff</p>
+          <p class="mt-1 font-semibold">{fmtUSD(topCliff)} at 751 sq ft</p>
+          <p class="mt-1 text-sm opacity-70">
+            In {topCliffJuris}, an ADU at 751 sq ft owes {fmtUSD(topCliff)} in impact fees that a 750 sq ft ADU does not — the largest verified cliff in the index.
+          </p>
+          <p class="mt-2 text-sm font-semibold text-accent">Find your city's cliff &rarr;</p>
+        </a>
+      </div>
     </section>
 
     {/* HOW MUCH DOES AN ADU COST — the head query, answered from the
