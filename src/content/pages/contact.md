@@ -1,6 +1,6 @@
 ---
 title: Contact
-description: How to reach Every Line Item — corrections, privacy questions, and partnerships.
+description: "How to reach Every Line Item for a fee correction, a privacy request, or a partnership: what to include, where it is logged, and how we reply."
 ---
 
 **Email:** [corrections@everylineitem.com](mailto:corrections@everylineitem.com)
@@ -25,6 +25,23 @@ description: How to reach Every Line Item — corrections, privacy questions, an
 - **Partnerships** — we work with nonprofits, journalists, and builders on data, not lead swaps. See [About](/about/) for how the site makes money.
 
 We read every message and reply when a response is needed. For corrections with an official source attached, we aim to verify within a few business days.
+
+## What to include in a correction
+
+The most useful message names one page and attaches the official source. Please include:
+
+- The page URL (for example a `/fees/` or `/sb-1117/` city page, or a post).
+- The jurisdiction and the fee or line that looks wrong.
+- The official source: a city or county fee schedule, a school district developer-fee resolution, or a utility district charge sheet, with a link or a PDF and the date on the document.
+- The figure you expected and the date you checked it.
+
+Figures we cannot verify from an official source are not used in totals. Confirmed changes are updated on the page and logged in public at [Corrections](/corrections/). How a figure is produced, and what we do not claim, is on [Methodology](/methodology/).
+
+## What we do not handle here
+
+This inbox is not a bid desk, a permit desk, or a lawyer. We do not give project quotes, legal or financial advice, or contractor referrals, and we do not sell or share messages as leads. For the limits of the figures themselves, see the [Disclaimer](/disclaimer/). For how email and advertising data are handled, see the [Privacy Policy](/privacy/).
+
+There is no phone line or chat. The address above is the contact for every category — corrections, privacy, and partnership questions included. Partnerships, if any, are limited to data work with nonprofits, journalists, and builders; they are never contractor referrals or lead generation.
 
 ## Send a direct message
 
