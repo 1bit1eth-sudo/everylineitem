@@ -1,0 +1,227 @@
+---
+// City-specific SB 1117 context: 2026 vs 2027 chart, what stays the same,
+// and how this saving compares with nearby jurisdictions. Build-time only.
+import type { SB1117Summary } from "@/lib/sb1117Pages";
+import { fmtSpan } from "@/lib/sb1117Pages";
+import {
+  unchangedSentence,
+  usd0,
+  type SB1117CityContext,
+} from "@/lib/sb1117City";
+
+interface Props {
+  name: string;
+  slug: string;
+  county: string;
+  region: string;
+  summaries: SB1117Summary[];
+  ctx: SB1117CityContext;
+  inForce: boolean;
+}
+const { name, slug, county, region, summaries, ctx, inForce } = Astro.props;
+
+// Grouped bars: 2026 (high end) vs 2027 carried (high end) per size.
+const W = 640;
+const labelW = 90;
+const valW = 90;
+const barMax = W - labelW - valW - 10;
+const maxV = Math.max(1, ...summaries.map(s => s.current.high));
+const groupH = 46;
+const H = 10 + summaries.length * groupH + 20;
+const scale = (v: number) => Math.max(v > 0 ? 2 : 0, (v / maxV) * barMax);
+const before = inForce ? "Old rule" : "Permit in 2026";
+const after = inForce ? "SB 1117" : "Permit in 2027";
+const chartDesc = summaries
+  .map(
+    s =>
+      `${s.sqft.toLocaleString("en-US")} sq ft: ${fmtSpan(s.current)} vs ${fmtSpan(s.futureCarried)}`
+  )
+  .join("; ");
+const s1000 = summaries.find(s => s.sqft === 1000)!;
+const s1200 = summaries.find(s => s.sqft === 1200)!;
+// Per-sq-ft impact fees: the saving is the 750 sq ft no longer charged, so it
+// is (almost) flat across sizes. Say so only when the data shows it.
+const flatSaving =
+  s1000.savings.high > 0 &&
+  Math.abs(s1200.savings.high - s1000.savings.high) <= 5;
+const scopeLabel = ctx.peerScope === "county" ? `${county} County` : region;
+const linkCls = "text-accent underline decoration-dashed underline-offset-4";
+---
+
+<section class="mt-10" aria-labelledby="sb-chart-heading">
+  <h2 id="sb-chart-heading" class="text-2xl font-semibold">
+    {name}: impact fees before and after, by size
+  </h2>
+  <p class="mt-2 text-sm opacity-80">
+    {
+      s1000.savings.high > 0
+        ? `At 1,000 sq ft the verified saving in ${name} is ${fmtSpan(s1000.savings)}; at 1,200 sq ft it is ${fmtSpan(s1200.savings)}.`
+        : `In ${name} the verified impact-fee lines give no computable saving at these sizes.`
+    }
+    {
+      flatSaving &&
+        ` The saving hardly moves with size: SB 1117 stops charging the first 750 sq ft, so what disappears is the same 750 sq ft worth of fees at any size above the line.`
+    }
+  </p>
+  <svg
+    viewBox={`0 0 ${W} ${H}`}
+    class="mt-4 w-full max-w-2xl"
+    role="img"
+    aria-labelledby={`sbc-t-${slug} sbc-d-${slug}`}
+  >
+    <title id={`sbc-t-${slug}`}>
+      {name} verified impact fees, {before} vs {after}
+    </title>
+    <desc id={`sbc-d-${slug}`}>{chartDesc}</desc>
+    {
+      summaries.map((s, i) => {
+        const y = 10 + i * groupH;
+        const a = s.current.high;
+        const b = s.futureCarried.high;
+        return (
+          <g>
+            <text x="0" y={y + 22} font-size="13" fill="currentColor">
+              {s.sqft.toLocaleString("en-US")} sq ft
+            </text>
+            <rect
+              x={labelW}
+              y={y + 2}
+              width={scale(a)}
+              height="16"
+              rx="2"
+              fill="currentColor"
+              opacity="0.35"
+            />
+            <text
+              x={labelW + scale(a) + 6}
+              y={y + 15}
+              font-size="12"
+              fill="currentColor"
+            >
+              {usd0(a)}
+            </text>
+            <rect
+              x={labelW}
+              y={y + 21}
+              width={scale(b)}
+              height="16"
+              rx="2"
+              class="fill-accent"
+            />
+            <text
+              x={labelW + scale(b) + 6}
+              y={y + 34}
+              font-size="12"
+              fill="currentColor"
+            >
+              {usd0(b)}
+            </text>
+          </g>
+        );
+      })
+    }
+    <g transform={`translate(${labelW}, ${H - 8})`}>
+      <rect width="12" height="10" y="-9" fill="currentColor" opacity="0.35"
+      ></rect>
+      <text x="16" font-size="12" fill="currentColor">{before}</text>
+      <rect x="140" width="12" height="10" y="-9" class="fill-accent"></rect>
+      <text x="156" font-size="12" fill="currentColor">{after}</text>
+    </g>
+  </svg>
+  <p class="mt-1 text-xs opacity-60">
+    High end of each verified range; areas or ranges are shown in the table
+    above.
+  </p>
+</section>
+
+<section class="mt-10" aria-labelledby="sb-stays-heading">
+  <h2 id="sb-stays-heading" class="text-2xl font-semibold">
+    What stays the same in {name}
+  </h2>
+  <p class="mt-2 opacity-90">{unchangedSentence(name, ctx)}</p>
+  {
+    ctx.unchanged.length > 0 && (
+      <ul class="mt-3 list-disc ps-6 text-sm">
+        {ctx.unchanged.map(u => (
+          <li>
+            {u.label}: {usd0(u.amount)} at 1,000 sq ft, same in 2026 and 2027
+          </li>
+        ))}
+        <li>
+          Impact fees: {usd0(ctx.impact)} at 1,000 sq ft under 2026 rules — the
+          only part SB 1117 re-bases
+        </li>
+      </ul>
+    )
+  }
+  <p class="mt-2 text-sm opacity-70">
+    Line-by-line figures and their sources:{" "}
+    <a class={linkCls} href={`/fees/${slug}/`}>all {name} ADU fees</a>.
+  </p>
+</section>
+
+{
+  ctx.peers.length > 1 && (
+    <section class="mt-10" aria-labelledby="sb-peers-heading">
+      <h2 id="sb-peers-heading" class="text-2xl font-semibold">
+        SB 1117 savings near {name}
+      </h2>
+      <p class="mt-2 opacity-90">
+        {ctx.peerRank === 1
+          ? `Of the ${ctx.peerTotal} ${scopeLabel} jurisdictions with verified, charged impact fees, ${name} has the largest computed SB 1117 saving at 1,000 sq ft.`
+          : `${name} is #${ctx.peerRank} of ${ctx.peerTotal} ${scopeLabel} jurisdictions with verified, charged impact fees, ranked by computed SB 1117 saving at 1,000 sq ft.`}
+      </p>
+      <div class="mt-4 overflow-x-auto">
+        <table class="w-full border-collapse text-sm">
+          <caption class="mb-2 text-left text-xs opacity-60">
+            {ctx.peerTotal > ctx.peers.length
+              ? ctx.selfAppended
+                ? `Top 7 of ${ctx.peerTotal} in ${scopeLabel}, plus this page. 1,000 sq ft ADU, verified rows only.`
+                : `Top ${ctx.peers.length} of ${ctx.peerTotal} in ${scopeLabel}. 1,000 sq ft ADU, verified rows only.`
+              : `All ${ctx.peerTotal} in ${scopeLabel}. 1,000 sq ft ADU, verified rows only.`}
+          </caption>
+          <thead>
+            <tr class="border-border border-b text-left">
+              <th class="py-2 pe-3 font-semibold">Jurisdiction</th>
+              <th class="py-2 pe-3 text-right font-semibold">{before}</th>
+              <th class="py-2 pe-3 text-right font-semibold">{after}</th>
+              <th class="py-2 text-right font-semibold">Saving</th>
+            </tr>
+          </thead>
+          <tbody>
+            {ctx.peers.map(p => (
+              <tr
+                class:list={[
+                  "border-border border-b",
+                  p.self && "font-semibold",
+                ]}
+              >
+                <td class="py-2 pe-3">
+                  {p.self ? (
+                    p.juris.name
+                  ) : (
+                    <a
+                      class={linkCls}
+                      href={`/sb-1117/${p.juris.juris_id.toLowerCase()}/`}
+                    >
+                      {p.juris.name}
+                    </a>
+                  )}
+                </td>
+                <td class="py-2 pe-3 text-right tabular-nums">
+                  {fmtSpan(p.current)}
+                </td>
+                <td class="py-2 pe-3 text-right tabular-nums">
+                  {fmtSpan(p.futureCarried)}
+                </td>
+                <td class="py-2 text-right tabular-nums">
+                  {p.savingsHigh > 0 ? usd0(p.savingsHigh) : "$0"}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  )
+}
