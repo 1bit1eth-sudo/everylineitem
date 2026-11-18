@@ -7,6 +7,8 @@ import Main from "@/components/Main.astro";
 import Footer from "@/components/Footer.astro";
 import ButtondownForm from "@/components/ButtondownForm.astro";
 import config from "@/config";
+import BenchmarkPhaseTable from "@/components/BenchmarkPhaseTable.astro";
+import { ADU_SCENARIOS } from "@/data/aduScenarios";
 
 const benchmarks = await getEntry("pages", "benchmarks");
 
@@ -17,6 +19,40 @@ if (!benchmarks) {
 }
 
 const { Content } = await render(benchmarks);
+
+const la = ADU_SCENARIOS.find(s => s.id === "detached-800")!;
+const usd = (n: number) => "$" + Math.round(n).toLocaleString("en-US");
+const faqs = [
+  {
+    q: "What does an 800 sq ft detached ADU cost in California?",
+    a: `Our published medians for an 800 sq ft mid-grade detached ADU are $300,000 inland ($375/sq ft), ${usd(la.total)} in Los Angeles County ($${la.costPerSqFt}/sq ft) and $380,000 in the coastal band ($475/sq ft). Each figure is broken into six phases in the table on this page.`,
+  },
+  {
+    q: "Which phase is the largest share of an ADU budget?",
+    a: `Systems + interior — kitchen, bathroom, electrical, plumbing, heat pump, insulation, drywall, flooring and fixtures. In the LA County median it is ${usd(la.phases.systems)} of ${usd(la.total)}, about ${Math.round((la.phases.systems / la.total) * 100)}%.`,
+  },
+  {
+    q: "Are these benchmarks contractor bids?",
+    a: "No. Medians are the scenario figures published in our cost posts, built from permit valuations and published phase cost shares; low/high bands are modeled around them. Use them to question a quote, not to replace one.",
+  },
+  {
+    q: "Do the benchmarks include city permit and impact fees?",
+    a: "Only as part of the soft-costs lump. Fees vary by city far more than construction does — check your city's line items in the ADU Fee Index.",
+  },
+  {
+    q: "How often are the benchmarks updated?",
+    a: "Quarterly. The current quarter is 2026 Q3 (September 2026). Each median above shows the date its source post was last verified.",
+  },
+];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map(f => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
 ---
 
 <Layout
@@ -25,13 +61,47 @@ const { Content } = await render(benchmarks);
   ogImage={benchmarks.data.ogImage}
   canonicalURL={benchmarks.data.canonicalURL}
 >
+  <Fragment slot="head">
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={JSON.stringify(faqSchema)}
+    />
+  </Fragment>
   <Header />
 
   <Breadcrumb />
 
   <Main pageTitle={benchmarks.data.title} class="app-prose">
     <Content />
+    <BenchmarkPhaseTable />
+    <h2 id="faq">Common questions</h2>
+    {
+      faqs.map(f => (
+        <>
+          <h3>{f.q}</h3>
+          <p>{f.a}</p>
+        </>
+      ))
+    }
+    <h2 id="get-the-sheet">Get the quarterly CSV</h2>
+    <p>
+      The medians above are free on this page. If you want the low/high bands as
+      a CSV each quarter, leave your email. Unsubscribe anytime; we do not sell
+      your information to contractors. See the <a href="/privacy/"
+        >Privacy Policy</a
+      >.
+    </p>
     <ButtondownForm username="everylineitem" tag="benchmarks" />
+    <h2 id="related">Related</h2>
+    <ul>
+      <li>
+        <a href="/worksheet/">Six-phase cost worksheet</a> — blank CSV, no email required
+      </li>
+      <li><a href="/compare/">Compare two ADU scenarios</a></li>
+      <li><a href="/methodology/">Methodology</a></li>
+      <li><a href="/corrections/">Corrections</a></li>
+    </ul>
   </Main>
 
   <Footer />

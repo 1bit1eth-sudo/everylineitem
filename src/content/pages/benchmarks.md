@@ -1,33 +1,20 @@
 ---
 title: ADU benchmark sheet
-description: Get quarterly regional benchmark ranges for each phase of the six-phase ADU cost ledger.
+description: Six-phase ADU cost medians for inland, LA County and coastal California, with how to compare a contractor quote against them.
 ---
 
-We model phase-level cost ranges by region and update them on a quarterly cadence. The benchmark sheet is the companion to the blank [six-phase worksheet](/worksheet/) — worksheet for your quote, benchmarks for the regional context around it.
+The benchmark sheet puts regional context around the blank [six-phase worksheet](/worksheet/): the worksheet holds your quote, the benchmarks show where each phase usually lands for the same size and region. The tables below are the published medians; the quarterly CSV adds modeled low/high bands around them.
 
 ## Current quarter
 
-**2026 Q3** (September 2026). Anchors match the published series: inland median **$300k ($375/sf)**, LA County median **$320k ($400/sf)**, coastal median **$380k ($475/sf)** for an 800 sq ft mid-grade detached model. Soft costs remain consistent with the ~**$28–40k** LA County band in the soft-costs post; inland/coastal phase medians come from the coastal-vs-inland table.
+**2026 Q3** (September 2026). Anchors match the published series: inland median **$300k ($375/sf)**, LA County median **$320k ($400/sf)**, coastal median **$380k ($475/sf)** for an 800 sq ft mid-grade detached model. Soft costs remain consistent with the ~**$28–40k** LA County band in the [soft-costs post](/posts/adu-soft-costs-permits-california/); inland/coastal phase medians come from the [coastal-vs-inland table](/posts/coastal-vs-inland-adu-cost-california/).
 
-## What's on the sheet
+## What the quarterly sheet adds
 
-For each of the six phases (soft costs, site work + foundation, framing + structure, building envelope, systems + interior, landscaping + hardscape), the sheet lists:
+For each of the six phases (soft costs, site work + foundation, framing + structure, building envelope, systems + interior, landscaping + hardscape), the CSV lists:
 
 - A modeled low / median / high range for inland Southern California
 - The same ranges for the coastal band
 - Notes on what usually moves a phase outside the band (slope, utility distance, finish grade)
 
-**Medians** are the published scenario numbers from the posts. **Low / high** are modeled ranges around those medians — not RSMeans takeoffs and not fake precision. Same methodology as the posts.
-
-## Get the benchmark sheet
-
-Enter your email in the form below and we'll send the current quarterly ranges (CSV). Unsubscribe anytime. The blank worksheet stays free without email; the regional benchmark sheet is the emailed deliverable.
-
-By subscribing you agree we may email you the sheet and related updates. We do not sell your information to contractors. See the [Privacy Policy](/privacy/).
-
-## Related
-
-- [Six-phase cost worksheet](/worksheet/) — blank CSV, no email required
-- [Methodology](/methodology/)
-- [Corrections](/corrections/)
-- [Privacy Policy](/privacy/)
+**Medians** are the published scenario numbers from the posts (the tables on this page). **Low / high** are modeled ranges around those medians — not RSMeans takeoffs and not fake precision. Same methodology as the posts.
