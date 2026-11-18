@@ -170,7 +170,7 @@ Every figure on this page is a **modeled median, not a quote.** Here is exactly 
 | Input | Source |
 | --- | --- |
 | Construction valuation R-3 VB $175.92/sq ft | [IB-077 Construction Valuation (city)](https://www.longbeach.gov/globalassets/lbcd/media-library/documents/building--safety/information-bulletins/ib-077) |
-| Building permit $1,080 + $4.98/$1,000 over $100k; Combo 150%; Plan check 75% | [FY26 Adopted Budget — Fee Adjustments (city)](https://www.longbeach.gov/globalassets/finance/media-library/documents/city-budget-and-finances/budget/budget-documents/fy-26-adopted-budget/43-fy-26-adopted-budget/43-fy-26-adopted-fee-adjustments) |
+| Building permit $1,080 + $4.98/$1,000 over $100k; Combo 150%; Plan check 75% | [FY26 Adopted Budget — Fee Adjustments (city)](https://www.longbeach.gov/globalassets/finance/media-library/documents/city-budget-and-finances/budget/budget-documents/fy-26-adopted-budget/43-fy-26-adopted-fee-adjustments) |
 | ADU impact-fee rates: Fire $241.74, Parks $1,781.39, Police $342.86 | [Development Impact Fee schedule, eff. 10/01/18 (city)](https://clbepiuat.longbeach.gov/globalassets/lbcd/media-library/documents/fee-schedules/development-impact-fees) |
 | ADU impact-fee notice citing LBMC 18.17/18.18/18.22/18.23 | [ADU Garage Conversion Submittal Packet (city)](https://www.longbeach.gov/globalassets/lbcd/media-library/documents/adus/adu-garage-conversion-submittal-packet) |
 | Transportation fee tiers ($236.25 / $663.75 / $1,125; no ADU row) | [ADU Garage Conversion Submittal Packet — DIF notice (city)](https://www.longbeach.gov/globalassets/lbcd/media-library/documents/adus/adu-garage-conversion-submittal-packet) |
