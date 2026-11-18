@@ -49,6 +49,10 @@ Holding this schema fixed is the single most important methodological decision o
 
 ## How a figure is produced
 
+<figure>
+<img src="/images/charts/how-a-figure-is-produced.svg" width="640" height="460" loading="lazy" decoding="async" alt="Five steps: define the scenario, anchor to permit records, allocate across six phases, sanity-check per square foot, publish a median with the variables that move it." />
+</figure>
+
 1. **Define the scenario.** Square footage, jurisdiction, construction type, site condition, finish grade — all fixed and stated in the post.
 2. **Anchor to permit records.** Pull declared construction valuations for comparable recent builds in the same jurisdiction. This sets the plausible total.
 3. **Allocate across the six phases.** Use published phase-level cost shares, adjusted for the specific scenario.
@@ -83,6 +87,11 @@ California law draws a hard line on many **impact fees** (not connection or capa
 
 - An ADU with **750 square feet of interior livable space or less** generally cannot be charged impact fees by a local agency, special district, or water corporation.
 - Above 750 sq ft, any such impact fees must be charged **proportionately** relative to the square footage of the primary dwelling.
+
+<figure>
+<img src="/images/charts/sb-1117-750-rule.svg" width="640" height="470" loading="lazy" decoding="async" alt="Diagram: through 2026 a 1,000 sq ft ADU pays impact fees on the whole unit; from January 1, 2027, under SB 1117, only on the 250 sq ft above 750 for a homeowner's first two ADUs." />
+<figcaption>From January 1, 2027, SB 1117 limits impact fees on a homeowner's first two ADUs to the area above 750 sq ft. See <a href="/sb-1117/">SB 1117 savings by city</a>.</figcaption>
+</figure>
 
 See [Government Code §66311.5](https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?chapter=13&division=1.&lawCode=GOV&part=&title=7.) and the [HCD ADU Handbook](https://www.hcd.ca.gov/building-standards/adu/handbook). School developer fees sit under a **separate** Education Code framework (with a distinct ~500 sq ft threshold in current law) — always verify with the school district.
 

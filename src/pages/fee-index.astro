@@ -10,6 +10,7 @@ import Breadcrumb from "@/components/Breadcrumb.astro";
 import FeeAlertSignup from "@/components/FeeAlertSignup.astro";
 import LinkButton from "@/components/LinkButton.astro";
 import NextReads from "@/components/NextReads.astro";
+import BarChart from "@/components/BarChart.astro";
 import { TOOLS } from "@/lib/related";
 
 const title = "California ADU Fee Index — Q3 2026 | Every Line Item";
@@ -95,6 +96,18 @@ const topCliffs = [...cliff.entries()]
   .slice(0, 5);
 
 const fmt = (n: number) => "$" + Math.round(n).toLocaleString("en-US");
+
+// Charts (built at compile time from the same maps as the lists above).
+const chartStacks = ranked.slice(0, 10).map(([j, v]) => ({
+  label: names[j],
+  value: v,
+  href: feeSlug(j),
+}));
+const chartCliffs = [...cliff.entries()]
+  .filter(([, v]) => v > 0)
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 10)
+  .map(([j, v]) => ({ label: names[j], value: v, href: feeSlug(j) }));
 
 // One-line stats for copying — every jurisdiction's combined school fee
 // on an 800 sq ft ADU, from verified line items only. Same jurisStack
@@ -304,6 +317,25 @@ const facts = [
         </ol>
       </section>
     </div>
+
+    <h2 class="mt-12 text-2xl font-semibold">The top ten, charted</h2>
+    <p class="mt-2 max-w-3xl text-sm opacity-70">
+      The same verified line items, drawn to scale. Bars are built when the
+      site is published, so they move whenever a figure is re-verified. Tap a
+      name to open its fee table.
+    </p>
+    <BarChart
+      id="chart-stacks"
+      title="Heaviest verified government fee stacks on an 800 sq ft ADU (top 10)"
+      caption={`Verified government fees on an 800 sq ft ADU, top 10 of ${ranked.length} jurisdictions with at least three verified line items. Totals are confirmed floors: a jurisdiction with fewer verified lines can look cheaper than it is.`}
+      items={chartStacks}
+    />
+    <BarChart
+      id="chart-cliffs"
+      title="Biggest 750 sq ft impact-fee cliffs (top 10)"
+      caption="Verified impact fees that apply at 751 sq ft and drop to $0 at 750 sq ft under Gov. Code §66311.5 (rules in force before SB 1117 takes effect on January 1, 2027)."
+      items={chartCliffs}
+    />
 
     <h2 class="mt-12 text-2xl font-semibold">How to read this</h2>
     <div class="mt-4 max-w-3xl space-y-3 opacity-80">

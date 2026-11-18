@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" viewBox="0 0 640 470" width="640" height="470" role="img" aria-labelledby="t d">
+<title id="t">Which square feet of an ADU pay impact fees, before and after SB 1117</title>
+<desc id="d">Through December 31, 2026: an ADU of 750 sq ft or less pays no impact fees, and a 1,000 sq ft ADU is charged on the whole unit, proportionately. From January 1, 2027, for a homeowner's first two ADUs, a 1,000 sq ft ADU is charged only on the 250 sq ft above 750.</desc>
+<rect width="640" height="470" fill="#ffffff"/>
+<text x="20" y="34" font-size="21" font-weight="700" fill="#282728">Which square feet pay impact fees?</text>
+<line x1="500" y1="56" x2="500" y2="390" stroke="#282728" stroke-dasharray="4 4"/>
+<text x="500" y="52" text-anchor="middle" font-size="14" fill="#282728">750 sq ft</text>
+<text x="20" y="84" font-size="17" font-weight="700" fill="#282728">Through Dec 31, 2026</text>
+<text x="188" y="114" text-anchor="end" font-size="17" fill="#282728">700 sq ft ADU</text>
+<rect x="200" y="96" width="280" height="26" rx="3" fill="#d4d4d4"/>
+<text x="200" y="142" font-size="15" fill="#5a5a5a">No impact fees (750 sq ft or less)</text>
+<text x="188" y="174" text-anchor="end" font-size="17" fill="#282728">1,000 sq ft ADU</text>
+<rect x="200" y="156" width="400" height="26" rx="3" fill="#006cac"/>
+<text x="200" y="202" font-size="15" fill="#5a5a5a">Charged on all 1,000 sq ft (proportionate)</text>
+<text x="20" y="240" font-size="17" font-weight="700" fill="#282728">From Jan 1, 2027 (SB 1117, first two ADUs)</text>
+<text x="188" y="270" text-anchor="end" font-size="17" fill="#282728">700 sq ft ADU</text>
+<rect x="200" y="252" width="280" height="26" rx="3" fill="#d4d4d4"/>
+<text x="200" y="298" font-size="15" fill="#5a5a5a">No impact fees</text>
+<text x="188" y="330" text-anchor="end" font-size="17" fill="#282728">1,000 sq ft ADU</text>
+<rect x="200" y="312" width="300" height="26" rx="3" fill="#d4d4d4"/>
+<rect x="500" y="312" width="100" height="26" rx="3" fill="#006cac"/>
+<text x="200" y="358" font-size="15" fill="#5a5a5a">Charged only on the 250 sq ft above 750</text>
+<rect x="20" y="404" width="16" height="16" fill="#d4d4d4"/><text x="42" y="417" font-size="14" fill="#282728">not subject to impact fees</text>
+<rect x="300" y="404" width="16" height="16" fill="#006cac"/><text x="322" y="417" font-size="14" fill="#282728">square feet that can be charged</text>
+<text x="20" y="450" font-size="13" fill="#5a5a5a">Impact fees only (Gov. Code §66311.5). School, permit and connection fees are separate.</text>
+<text x="20" y="466" font-size="13" fill="#5a5a5a">Diagram: everylineitem.com, CC BY 4.0</text>
+</svg>

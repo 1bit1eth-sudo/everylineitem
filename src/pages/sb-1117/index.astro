@@ -16,6 +16,7 @@ import Footer from "@/components/Footer.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
 import LinkButton from "@/components/LinkButton.astro";
 import RecentlyViewed from "@/components/RecentlyViewed.astro";
+import BarChart from "@/components/BarChart.astro";
 
 // The plain-English explainer is scheduled (pubDatetime); until it is live,
 // point at the published 750 sq ft cliff explainer instead of a 404.
@@ -45,6 +46,13 @@ const ranked = [...rows].sort(
 );
 const withSavings = ranked.filter(r => r.s1000.savings.high > 0);
 const top = withSavings[0];
+// Chart: the ten largest computable savings at 1,000 sq ft, same rows as the table.
+const chartSavings = withSavings.slice(0, 10).map(r => ({
+  label: r.j.name,
+  value: r.s1000.savings.high,
+  low: r.s1000.savings.low,
+  href: `/sb-1117/${r.j.juris_id.toLowerCase()}/`,
+}));
 
 const title = "SB 1117 ADU Impact Fee Savings by City (2027)";
 const description = `How SB 1117 changes ADU impact fees from January 1, 2027 in ${rows.length} California cities and counties. Ranked by savings at 1,000 sq ft.`;
@@ -122,6 +130,37 @@ const listSchema = {
     </p>
 
     <RecentlyViewed />
+
+    <figure class="my-8">
+      <img
+        src="/images/charts/sb-1117-750-rule.svg"
+        width="640"
+        height="470"
+        loading="lazy"
+        decoding="async"
+        class="h-auto w-full max-w-2xl rounded-lg border border-border"
+        alt="Diagram: through 2026 a 1,000 sq ft ADU pays impact fees on the whole unit; from January 1, 2027, under SB 1117, only on the 250 sq ft above 750. ADUs of 750 sq ft or less pay none in both periods."
+      />
+      <figcaption class="mt-2 text-sm opacity-70">
+        What changes on January 1, 2027, for a homeowner's first two ADUs.
+        Impact fees only; school, permit and connection fees are not affected.
+      </figcaption>
+    </figure>
+
+    {
+      chartSavings.length > 0 && (
+        <>
+          <h2 class="mt-10 text-2xl font-semibold">Largest savings at 1,000 sq ft</h2>
+          <BarChart
+            id="chart-sb1117-savings"
+            title="Largest SB 1117 impact-fee savings on a 1,000 sq ft ADU (top 10)"
+            caption={`Top 10 of ${withSavings.length} jurisdictions with a computable saving, from verified impact-fee lines only. Light segments show a range (fee ranges in the source, or different area schedules). Full table below.`}
+            items={chartSavings}
+          />
+        </>
+      )
+    }
+
 
     <div class="mt-8 overflow-x-auto">
       <table class="w-full border-collapse text-sm">
