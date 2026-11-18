@@ -28,8 +28,11 @@ export default [
       "public/scripts/**/*.js",
       "src/lib/loopBidScanner.ts",
       "src/lib/feeCalc.ts",
+      // eslint-plugin-astro lints the script island as a virtual path
       "src/components/FeeCalculator.astro",
+      "src/components/FeeCalculator.astro/**",
       "src/components/JurisdictionCompare.astro",
+      "src/components/JurisdictionCompare.astro/**",
     ],
     rules: { "no-console": "off" },
   },
