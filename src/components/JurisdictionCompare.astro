@@ -13,14 +13,23 @@ import {
 // Same public-data strip as FeeCalculator.astro: internal memos never ship,
 // and post links only go to published posts.
 type RawFeeItem = Record<string, unknown>;
-const rawData = rawFeesJson as unknown as { fee_items: RawFeeItem[] } & Record<string, unknown>;
-const publishedPostIds = new Set((await getCollection("posts")).filter(postFilter).map(p => p.id));
+const rawData = rawFeesJson as unknown as { fee_items: RawFeeItem[] } & Record<
+  string,
+  unknown
+>;
+const publishedPostIds = new Set(
+  (await getCollection("posts")).filter(postFilter).map(p => p.id)
+);
 const feesJson = {
   ...rawData,
   jurisdictions: (rawData.jurisdictions as RawFeeItem[]).map(j =>
-    j.post_slug && !publishedPostIds.has(j.post_slug as string) ? { ...j, post_slug: "" } : j
+    j.post_slug && !publishedPostIds.has(j.post_slug as string)
+      ? { ...j, post_slug: "" }
+      : j
   ),
-  fee_items: rawData.fee_items.map(({ internal_notes: _internal, ...publicItem }) => publicItem),
+  fee_items: rawData.fee_items.map(
+    ({ internal_notes: _internal, ...publicItem }) => publicItem
+  ),
 } as unknown as FeeData;
 
 const data = feesJson as unknown as FeeData;
@@ -33,8 +42,7 @@ const MAX_SQFT = 1200;
 const CLIFF_SQFT = data.rules.impact_exempt_max_sqft; // 750
 const cliffPct = ((CLIFF_SQFT - MIN_SQFT) / (MAX_SQFT - MIN_SQFT)) * 100;
 
-const regionLabel = (r: string) =>
-  r === "SoCal" ? "Southern California" : r;
+const regionLabel = (r: string) => (r === "SoCal" ? "Southern California" : r);
 const regions = [...new Set(data.jurisdictions.map(j => j.region))];
 const jurisOptions = (region: string) =>
   data.jurisdictions
@@ -71,9 +79,9 @@ const ssrHTML = sideBySideHTML(
       role="note"
     >
       <strong class="font-semibold">Figures reflect current 2026 rules.</strong>
-      From Jan 1, 2027, SB 1117 changes impact fees for your first two ADUs
-      (only the area above 750 sq ft counts) — the single-city calculator
-      above shows the 2027 comparison for each city.
+      From Jan 1, 2027, SB 1117 changes impact fees for your first two ADUs (only
+      the area above 750 sq ft counts) — the single-city calculator above shows the
+      2027 comparison for each city.
     </div>
   </div>
 
@@ -82,13 +90,18 @@ const ssrHTML = sideBySideHTML(
       (["a", "b"] as const).map(side => {
         const defJuris = side === "a" ? DEFAULT_A : DEFAULT_B;
         const defName =
-          data.jurisdictions.find(j => j.juris_id === defJuris)?.name ?? defJuris;
+          data.jurisdictions.find(j => j.juris_id === defJuris)?.name ??
+          defJuris;
         const areas = jurisAreas(data, defJuris);
         return (
           <div class="space-y-4">
             <label class="flex flex-col gap-2 text-sm font-medium">
               <span>{side === "a" ? "City A" : "City B"}</span>
-              <select id={`jsc-juris-${side}`} class={selectClass} data-combobox>
+              <select
+                id={`jsc-juris-${side}`}
+                class={selectClass}
+                data-combobox
+              >
                 {regions.map(region => (
                   <optgroup label={regionLabel(region)}>
                     {jurisOptions(region).map(j => (
@@ -141,8 +154,8 @@ const ssrHTML = sideBySideHTML(
                   style={`left: ${cliffPct}%`}
                   aria-hidden="true"
                 >
-                  <div class="bg-amber-500/70 mx-auto h-full w-px"></div>
-                  <div class="text-amber-700 dark:text-amber-400 absolute top-full -translate-x-1/2 text-[0.65rem] font-semibold whitespace-nowrap">
+                  <div class="mx-auto h-full w-px bg-amber-500/70" />
+                  <div class="absolute top-full -translate-x-1/2 text-[0.65rem] font-semibold whitespace-nowrap text-amber-700 dark:text-amber-400">
                     750 cliff
                   </div>
                 </div>
@@ -194,8 +207,8 @@ const ssrHTML = sideBySideHTML(
       <span class="text-sm font-normal opacity-70">sq ft</span>
     </span>
     <span class="text-xs font-normal opacity-70">
-      Only used to prorate dwelling-base impact fees (ADU ÷ primary). The
-      1,600 sq ft default is an assumption, not a verified figure.
+      Only used to prorate dwelling-base impact fees (ADU ÷ primary). The 1,600
+      sq ft default is an assumption, not a verified figure.
     </span>
   </label>
 
@@ -213,19 +226,41 @@ const ssrHTML = sideBySideHTML(
   const dataEl = document.getElementById("fee-data");
   const data = dataEl ? JSON.parse(dataEl.textContent || "null") : null;
 
-  const selA = document.getElementById("jsc-juris-a") as HTMLSelectElement | null;
-  const selB = document.getElementById("jsc-juris-b") as HTMLSelectElement | null;
-  const sqftA = document.getElementById("jsc-sqft-a") as HTMLInputElement | null;
-  const sqftB = document.getElementById("jsc-sqft-b") as HTMLInputElement | null;
+  const selA = document.getElementById(
+    "jsc-juris-a"
+  ) as HTMLSelectElement | null;
+  const selB = document.getElementById(
+    "jsc-juris-b"
+  ) as HTMLSelectElement | null;
+  const sqftA = document.getElementById(
+    "jsc-sqft-a"
+  ) as HTMLInputElement | null;
+  const sqftB = document.getElementById(
+    "jsc-sqft-b"
+  ) as HTMLInputElement | null;
   const sqftAVal = document.getElementById("jsc-sqft-a-val");
   const sqftBVal = document.getElementById("jsc-sqft-b-val");
-  const primaryInput = document.getElementById("jsc-primary") as HTMLInputElement | null;
-  const areaWrapA = document.getElementById("jsc-area-a-wrap") as HTMLElement | null;
-  const areaSelA = document.getElementById("jsc-area-a") as HTMLSelectElement | null;
-  const areaWrapB = document.getElementById("jsc-area-b-wrap") as HTMLElement | null;
-  const areaSelB = document.getElementById("jsc-area-b") as HTMLSelectElement | null;
-  const feeLinkA = document.getElementById("jsc-fee-a") as HTMLAnchorElement | null;
-  const feeLinkB = document.getElementById("jsc-fee-b") as HTMLAnchorElement | null;
+  const primaryInput = document.getElementById(
+    "jsc-primary"
+  ) as HTMLInputElement | null;
+  const areaWrapA = document.getElementById(
+    "jsc-area-a-wrap"
+  ) as HTMLElement | null;
+  const areaSelA = document.getElementById(
+    "jsc-area-a"
+  ) as HTMLSelectElement | null;
+  const areaWrapB = document.getElementById(
+    "jsc-area-b-wrap"
+  ) as HTMLElement | null;
+  const areaSelB = document.getElementById(
+    "jsc-area-b"
+  ) as HTMLSelectElement | null;
+  const feeLinkA = document.getElementById(
+    "jsc-fee-a"
+  ) as HTMLAnchorElement | null;
+  const feeLinkB = document.getElementById(
+    "jsc-fee-b"
+  ) as HTMLAnchorElement | null;
   const results = document.getElementById("jsc-results");
 
   // Content loop (stage 2): keep each side's fee-table link on the
@@ -268,10 +303,7 @@ const ssrHTML = sideBySideHTML(
     return Number.isFinite(n) && n > 0 ? n : 1600;
   }
 
-  function areaOf(
-    wrap: HTMLElement,
-    sel: HTMLSelectElement
-  ): string | null {
+  function areaOf(wrap: HTMLElement, sel: HTMLSelectElement): string | null {
     return wrap && !wrap.hidden && sel.value ? sel.value : null;
   }
 
@@ -301,7 +333,7 @@ const ssrHTML = sideBySideHTML(
         primarySqft()
       );
     } catch (err) {
-// eslint-disable-next-line no-console
+      // eslint-disable-next-line no-console
       console.error("[jurisdiction-compare]", err);
     }
   }

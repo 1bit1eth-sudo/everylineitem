@@ -12,15 +12,24 @@ import {
 
 // Strip internal memos from the client bundle — internal_notes never ships.
 type RawFeeItem = Record<string, unknown>;
-const rawData = rawFeesJson as unknown as { fee_items: RawFeeItem[] } & Record<string, unknown>;
+const rawData = rawFeesJson as unknown as { fee_items: RawFeeItem[] } & Record<
+  string,
+  unknown
+>;
 // Only link to posts that are actually published (scheduled posts 404 until their date).
-const publishedPostIds = new Set((await getCollection("posts")).filter(postFilter).map(p => p.id));
+const publishedPostIds = new Set(
+  (await getCollection("posts")).filter(postFilter).map(p => p.id)
+);
 const feesJson = {
   ...rawData,
   jurisdictions: (rawData.jurisdictions as RawFeeItem[]).map(j =>
-    j.post_slug && !publishedPostIds.has(j.post_slug as string) ? { ...j, post_slug: "" } : j
+    j.post_slug && !publishedPostIds.has(j.post_slug as string)
+      ? { ...j, post_slug: "" }
+      : j
   ),
-  fee_items: rawData.fee_items.map(({ internal_notes: _internal, ...publicItem }) => publicItem),
+  fee_items: rawData.fee_items.map(
+    ({ internal_notes: _internal, ...publicItem }) => publicItem
+  ),
 } as unknown as FeeData;
 
 const data = feesJson as unknown as FeeData;
@@ -37,8 +46,7 @@ const CLIFF_SQFT = data.rules.impact_exempt_max_sqft; // 750
 // Tick position for the 750 sq ft cliff mark on the slider (percent).
 const cliffPct = ((CLIFF_SQFT - MIN_SQFT) / (MAX_SQFT - MIN_SQFT)) * 100;
 
-const regionLabel = (r: string) =>
-  r === "SoCal" ? "Southern California" : r;
+const regionLabel = (r: string) => (r === "SoCal" ? "Southern California" : r);
 
 const regions = [...new Set(data.jurisdictions.map(j => j.region))];
 
@@ -57,8 +65,8 @@ const selectClass =
     </h2>
     <p class="text-foreground/80 mt-2 text-sm">
       Pick a jurisdiction and a size. Every line below comes from that city's
-      published fee schedule — with the source linked, and the 750&nbsp;sq&nbsp;ft
-      cliff drawn where state law draws it.
+      published fee schedule — with the source linked, and the
+      750&nbsp;sq&nbsp;ft cliff drawn where state law draws it.
     </p>
     <div
       class="mt-3 rounded-md border border-amber-500/40 bg-amber-500/10 px-3 py-2 text-sm"
@@ -125,11 +133,9 @@ const selectClass =
           style={`left: ${cliffPct}%`}
           aria-hidden="true"
         >
+          <div class="mx-auto h-full w-px bg-amber-500/70"></div>
           <div
-            class="bg-amber-500/70 mx-auto h-full w-px"
-          ></div>
-          <div
-            class="text-amber-700 dark:text-amber-400 absolute top-full -translate-x-1/2 text-[0.65rem] font-semibold whitespace-nowrap"
+            class="absolute top-full -translate-x-1/2 text-[0.65rem] font-semibold whitespace-nowrap text-amber-700 dark:text-amber-400"
           >
             750 cliff
           </div>
@@ -163,12 +169,16 @@ const selectClass =
       </span>
       <span class="text-xs font-normal opacity-70">
         Only used to prorate dwelling-base impact fees (ADU ÷ primary). The
-        1,600 sq ft default is an assumption, not a verified figure — enter
-        your home's actual size.
+        1,600 sq ft default is an assumption, not a verified figure — enter your
+        home's actual size.
       </span>
     </label>
 
-    <label id="fee-area-wrap" class="flex flex-col gap-2 text-sm font-medium" hidden>
+    <label
+      id="fee-area-wrap"
+      class="flex flex-col gap-2 text-sm font-medium"
+      hidden
+    >
       <span>Area schedule</span>
       <select id="fee-area" class={selectClass}></select>
       {/* Note text is set per jurisdiction by syncAreaSelect() below. */}
@@ -198,8 +208,8 @@ const selectClass =
   >
     <h3 class="text-base font-semibold">Email me this report (PDF)</h3>
     <p class="text-foreground/80 mt-1 text-sm">
-      Get this exact fee breakdown — your chosen jurisdiction and size — as
-      a one-page PDF. No spam. No phone call. Unsubscribe anytime.
+      Get this exact fee breakdown — your chosen jurisdiction and size — as a
+      one-page PDF. No spam. No phone call. Unsubscribe anytime.
     </p>
     <form
       id="fee-report-form"
@@ -228,19 +238,14 @@ const selectClass =
         Send PDF
       </button>
     </form>
-    <p
-      id="fee-report-status"
-      class="mt-2 text-sm"
-      aria-live="polite"
-      hidden
-    ></p>
+    <p id="fee-report-status" class="mt-2 text-sm" aria-live="polite" hidden>
+    </p>
     <iframe
       name="fee-report-iframe"
       title="Email signup"
       class="hidden"
       aria-hidden="true"
-      tabindex="-1"
-    ></iframe>
+      tabindex="-1"></iframe>
   </div>
 </section>
 
@@ -257,13 +262,25 @@ const selectClass =
 
   const dataEl = document.getElementById("fee-data");
   const data = JSON.parse(dataEl ? dataEl.textContent || "{}" : "{}");
-  const jurisSel = document.getElementById("fee-juris") as HTMLSelectElement | null;
-  const sqftInput = document.getElementById("fee-sqft") as HTMLInputElement | null;
+  const jurisSel = document.getElementById(
+    "fee-juris"
+  ) as HTMLSelectElement | null;
+  const sqftInput = document.getElementById(
+    "fee-sqft"
+  ) as HTMLInputElement | null;
   const sqftVal = document.getElementById("fee-sqft-val");
-  const primaryInput = document.getElementById("fee-primary") as HTMLInputElement | null;
-  const areaWrap = document.getElementById("fee-area-wrap") as HTMLElement | null;
-  const areaSel = document.getElementById("fee-area") as HTMLSelectElement | null;
-  const areaNoteEl = document.getElementById("fee-area-note") as HTMLElement | null;
+  const primaryInput = document.getElementById(
+    "fee-primary"
+  ) as HTMLInputElement | null;
+  const areaWrap = document.getElementById(
+    "fee-area-wrap"
+  ) as HTMLElement | null;
+  const areaSel = document.getElementById(
+    "fee-area"
+  ) as HTMLSelectElement | null;
+  const areaNoteEl = document.getElementById(
+    "fee-area-note"
+  ) as HTMLElement | null;
   const results = document.getElementById("fee-results");
 
   function jurisAreas(jurisId: string): string[] {
@@ -297,7 +314,10 @@ const selectClass =
     const primary = primaryInput ? Math.round(Number(primaryInput.value)) : NaN;
     return {
       primarySqft: Number.isFinite(primary) && primary > 0 ? primary : 1600,
-      area: areaSel && areaWrap && !areaWrap.hidden && areaSel.value ? areaSel.value : null,
+      area:
+        areaSel && areaWrap && !areaWrap.hidden && areaSel.value
+          ? areaSel.value
+          : null,
     };
   }
 
@@ -489,7 +509,7 @@ const selectClass =
           true
         );
       } catch (err) {
-// eslint-disable-next-line no-console
+        // eslint-disable-next-line no-console
         console.error("[fee-report]", err);
         setStatus(
           "Couldn't generate the PDF in this browser — but your email was still sent. Sorry about that.",
