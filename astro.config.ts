@@ -59,7 +59,9 @@ const isThinPage = (pathname: string) =>
   /^\/tags\//.test(pathname) ||
   /^\/posts\/\d+\/$/.test(pathname) ||
   /^\/search\/?$/.test(pathname) ||
-  /^\/embed\//.test(pathname);
+  /^\/embed\//.test(pathname) ||
+  // 2026-11-17: all /sb-1117/<city>/ pages are noindex; keep the hub /sb-1117/.
+  /^\/sb-1117\/.+\//.test(pathname);
 
 // Fee pages with no fee rows at all are noindex (see src/pages/fees/[slug].astro);
 // keep them out of the sitemap too. Computed with the same calculator the fee
