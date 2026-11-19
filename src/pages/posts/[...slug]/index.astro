@@ -150,6 +150,18 @@ const ogImage = ogImageUrl
 const seo = POST_SEO[post.id];
 const headTitle = seo?.title ?? `${title} | ${config.site.title}`;
 const headDescription = seo?.description ?? description;
+
+// FAQ answers are plain text, except a few that carry a Markdown link.
+// Escape HTML, then linkify [text](url) so those render as real links.
+const renderFaqAnswer = (text: string) =>
+  text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(
+      /\[([^\]]+)\]\(([^)\s]+)\)/g,
+      '<a href="$2" class="text-accent font-semibold">$1</a>'
+    );
 ---
 
 <PostLayout
@@ -207,6 +219,24 @@ const headDescription = seo?.description ?? description;
     >
       <Content />
     </article>
+
+    {
+      post.data.faqs?.length ? (
+        <section aria-labelledby="post-faq-heading" class="mt-10">
+          <h2 id="post-faq-heading" class="text-2xl font-semibold">
+            Frequently asked questions
+          </h2>
+          <div class="mt-6 max-w-3xl space-y-6">
+            {post.data.faqs.map(faq => (
+              <div>
+                <h3 class="text-lg font-semibold">{faq.question}</h3>
+                <p class="mt-1" set:html={renderFaqAnswer(faq.answer)} />
+              </div>
+            ))}
+          </div>
+        </section>
+      ) : null
+    }
 
     <EmailSignup idPrefix="post-signup" class="mt-10" />
 
