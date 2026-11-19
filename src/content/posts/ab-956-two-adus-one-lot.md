@@ -69,7 +69,7 @@ Three caveats that survive both bills:
 
 ## Sources
 
-- AB 956, **Chapter 791, Statutes of 2026** — official chaptered text, California Legislative Information (leginfo.legislature.ca.gov), reviewed Oct 14, 2026. All statutory figures in this post (two detached ADUs, §66323(a)(2) and (b), 800 sq ft, 4-ft setbacks, 16/18-ft height framework, Civil Code §§714.3 and 4751 "zoned to allow" rewording, Sep 29, 2026 approval, Jan 1, 2027 effective date) are drawn from the chaptered text.
+- AB 956, **Chapter 791, Statutes of 2026** — official chaptered text, California Legislative Information (https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB956), reviewed Oct 14, 2026. All statutory figures in this post (two detached ADUs, §66323(a)(2) and (b), 800 sq ft, 4-ft setbacks, 16/18-ft height framework, Civil Code §§714.3 and 4751 "zoned to allow" rewording, Sep 29, 2026 approval, Jan 1, 2027 effective date) are drawn from the chaptered text.
 - Governor's office announcement of the Sep 29, 2026 bill signings (signature confirmation).
 - AB 956 enrolled-bill summaries: [OpenScope Studio](https://openscopestudio.com/ab-956-two-detached-adus-at-single-family-homes-and-hoa-limits/) · [Brownstein Hyatt Farber Schreck](https://www.bhfs.com/insight/california-enacts-another-wave-of-2026-housing-bills/) · [Mondaq](https://www.mondaq.com/unitedstates/real-estate/1850424/governor-newsom-signs-key-housing-bills-into-law) · California YIMBY, [The Homework — October 7, 2026](https://cayimby.org/news-events/homework-newsletter/the-homework-october-7-2026/).
-- Our related coverage: [SB 1117 kills the 750 sq ft cliff](/posts/sb-1117-kills-750-sq-ft-cliff/) · [3 ADU laws taking effect Jan 1, 2027](/posts/3-adu-laws-january-2027/) (publishes Oct 29).
+- Our related coverage: [SB 1117 kills the 750 sq ft cliff](/posts/sb-1117-kills-750-sq-ft-cliff/) · [3 ADU laws taking effect Jan 1, 2027](/posts/3-adu-laws-january-2027/).

@@ -71,7 +71,7 @@ None of our thirteen cities levies a distinct "electric capacity charge" on ADUs
 
 ## The SB 1196 footnote
 
-There's a fourth utility bill coming: **time**. Some ADU owners currently wait 9–12 months after construction for the utility to energize the unit. SB 1196, signed in 2026, requires California utilities to set a firm connection-application deadline starting in 2027. It doesn't change the dollar cost — it changes the carrying cost of a finished, unrentable ADU. Price the wait into your pro forma, not just the wire.
+There's a fourth utility bill coming: **time**. Some ADU owners currently wait 9–12 months after construction for the utility to energize the unit. SB 1196, signed in 2026, requires the CPUC to set timelines, with penalties, for electrical corporations to process these hookup requests by September 30, 2027. It doesn't change the dollar cost — it changes the carrying cost of a finished, unrentable ADU. Price the wait into your pro forma, not just the wire.
 
 ## What to ask before you budget
 
