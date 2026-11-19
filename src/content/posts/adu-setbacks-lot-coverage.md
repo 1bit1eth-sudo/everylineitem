@@ -46,9 +46,11 @@ Here is where owners get surprised. The setback cap limits how far from the *edg
 
 A typical interaction:
 
-- Your lot is 5,000 sq ft with a 45% lot coverage limit: the building footprint (house + ADU + garage) cannot exceed 2,250 sq ft.
-- Your existing house covers 1,800 sq ft. That leaves 450 sq ft of footprint for the ADU — even though the setback rules would happily let you build bigger.
-- Or FAR caps total floor area across stories, which can force a single-story design even where a second story would otherwise be allowed.
+| What           | The numbers            | Result                                  |
+| -------------- | ---------------------- | --------------------------------------- |
+| Lot coverage   | 5,000 sq ft lot at 45% | Footprint capped at 2,250 sq ft         |
+| Existing house | Covers 1,800 sq ft     | 450 sq ft of footprint left for the ADU |
+| FAR            | Caps total floor area  | Can force a single-story design         |
 
 These rules can shrink the ADU well below what setbacks alone would permit.
 
@@ -70,7 +72,7 @@ Front setbacks work the same way. Cities can impose front-yard setback standards
 
 Setbacks and coverage do not just change your floor plan — they can change your fee math. Two effects matter:
 
-**1. The 750 sq ft cliff saves impact fees — not school fees.** California law exempts ADUs of 750 sq ft or less from development impact fees (Gov. Code §66311.5(c)(1)(A)). School fees are a separate line with a separate ruler: only ADUs under 500 sq ft of interior livable space are exempt, so a 749 sq ft ADU still pays school fees on its full area, up to $5.38 per sq ft. Dropping from 800 to 749 sq ft removes the impact fee, but the school fee stays — the large school-fee saving comes from dropping below 500 sq ft, not 750. Run both sizes through your city's fee schedule before assuming bigger is better.
+**1. The 750 sq ft cliff saves impact fees — not school fees.** California law exempts ADUs of 750 sq ft or less from development impact fees (Gov. Code §66311.5(c)(1)(A)). [School fees](/posts/adu-school-fees-explained/) are a separate line with a separate ruler: only ADUs under 500 sq ft of interior livable space are exempt, so a 749 sq ft ADU still pays school fees on its full area, up to $5.38 per sq ft. Dropping from 800 to 749 sq ft removes the impact fee, but the school fee stays — the large school-fee saving comes from dropping below 500 sq ft, not 750. From January 2027, [SB 1117](/sb-1117/) changes the 750 sq ft line again: impact fees will apply only to the area above 750 sq ft, so on an 800 sq ft ADU only 50 sq ft is taxed. Run both sizes through [your city's fee schedule](/compare/) before assuming bigger is better.
 
 **2. Lost square footage is lost rent.** A smaller ADU commands less rent and appraises for less. If the forced-downsize drops you from 800 to 600 sq ft, the fee savings may not compensate for the rent you lose over a decade. Model it both ways.
 
