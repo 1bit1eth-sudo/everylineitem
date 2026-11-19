@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-/* eslint-disable no-console */
 // Build quality gate (runs after `astro build`; a non-zero exit fails the build).
 // Rules come from the relay decision log (2026-10-26 08:07 / 11:17: fees aligned to
 // official sources with a checked date) and the common site rules (no internal notes,
