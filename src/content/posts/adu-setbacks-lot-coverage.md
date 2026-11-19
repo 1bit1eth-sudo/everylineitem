@@ -70,7 +70,7 @@ Front setbacks work the same way. Cities can impose front-yard setback standards
 
 Setbacks and coverage do not just change your floor plan — they can change your fee math. Two effects matter:
 
-**1. Dropping below the 750 sq ft cliff saves real money.** California law exempts ADUs of 750 sq ft or less from impact fees and school district fees. If coverage rules force you from an 800 sq ft design down to 749 sq ft, you may lose a few square feet of space — and gain thousands of dollars in fee savings. Run both sizes through your city's fee schedule before assuming bigger is better.
+**1. The 750 sq ft cliff saves impact fees — not school fees.** California law exempts ADUs of 750 sq ft or less from development impact fees (Gov. Code §66311.5(c)(1)(A)). School fees are a separate line with a separate ruler: only ADUs under 500 sq ft of interior livable space are exempt, so a 749 sq ft ADU still pays school fees on its full area, up to $5.38 per sq ft. Dropping from 800 to 749 sq ft removes the impact fee, but the school fee stays — the large school-fee saving comes from dropping below 500 sq ft, not 750. Run both sizes through your city's fee schedule before assuming bigger is better.
 
 **2. Lost square footage is lost rent.** A smaller ADU commands less rent and appraises for less. If the forced-downsize drops you from 800 to 600 sq ft, the fee savings may not compensate for the rent you lose over a decade. Model it both ways.
 
