@@ -85,4 +85,4 @@ If your city charges a flat impact fee, the single most useful question you can 
 
 - SB 1117, Chapter 809, Statutes of 2026 (chaptered text), California Legislative Information, checked 2 November 2026: https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB1117
 - Gov. Code §66311.5, California Legislative Information: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=66311.5
-- All fee figures: the site's verified fee data (fees.json), re-verified 2 November 2026; source documents are linked from each jurisdiction's fee page.
+- All fee figures: the site's verified fee data, re-verified 2 November 2026; source documents are linked from each jurisdiction's fee page.

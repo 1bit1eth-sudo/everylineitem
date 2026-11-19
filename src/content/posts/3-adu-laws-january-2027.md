@@ -1,6 +1,6 @@
 ---
 title: "3 ADU Laws Taking Effect Jan 1, 2027 (and What Changes on Your Block)"
-description: "SB 1117 kills the 750 sq ft impact-fee cliff, SB 1196 forces utility connection deadlines, and AB 956 allows two detached ADUs per lot. All signed Sep 29, 2026 — all effective Jan 1, 2027. What each one changes for your project."
+description: "SB 1117 kills the 750 sq ft impact-fee cliff, SB 1196 orders the CPUC to set electric hookup timelines, and AB 956 allows two detached ADUs per lot. All effective Jan 1, 2027. What each one changes for your project."
 pubDatetime: 2026-10-29T01:00:00Z
 author: "Every Line Item"
 tags: ["adu", "legislation", "sb-1117", "sb-1196", "ab-956", "california", "2026"]
@@ -10,7 +10,7 @@ lastVerified: "29 Oct 2026"
 nextReview: "Jan 2027"
 faqs:
   - question: "What ADU laws take effect January 1, 2027 in California?"
-    answer: "Three signed Sep 29, 2026: SB 1117 (impact fees on ADUs over 750 sq ft are charged only on the square footage above 750, for the first two ADUs on a lot); SB 1196 (the CPUC must set firm utility connection timelines for ADUs, with penalties for utilities that miss them); and AB 956 (cities must ministerially approve up to two detached ADUs on single-family lots, up from one). All three take effect Jan 1, 2027."
+    answer: "Three signed in late September 2026: SB 1117 (impact fees on ADUs over 750 sq ft are charged only on the square footage above 750, for the first two ADUs on a lot); SB 1196 (by September 30, 2027, the CPUC must set timelines, with penalties, for electrical corporations to process requests to energize small energization projects — projects that need no line extension or upgrade, which can include ADU hookups, though the law does not name ADUs); and AB 956 (cities must ministerially approve up to two detached ADUs on single-family lots, up from one). All three take effect Jan 1, 2027."
   - question: "Should I wait until 2027 to pull my ADU permit?"
     answer: "It depends on your project. If your ADU is 750–900 sq ft, SB 1117 could save you thousands in impact fees — waiting may pay. If you are building under 750 sq ft, nothing changes (already exempt). If utility connection speed is your bottleneck, SB 1196's timelines help only after the CPUC writes the rules. Permits pulled in 2026 are assessed under 2026 rules regardless."
   - question: "Does AB 956 mean I can build two detached ADUs right now?"
@@ -19,7 +19,7 @@ faqs:
 
 > **Published:** 29 Oct 2026 · **Last verified:** 29 Oct 2026 · **Next review:** Jan 2027
 
-On September 29, 2026, Governor Newsom signed a stack of housing bills. Three of them rewrite the economics of building an ADU — and all three take effect **January 1, 2027**, barely two months from now.
+In late September 2026, Governor Newsom signed a stack of housing bills — SB 1117 and AB 956 on September 29, SB 1196 on September 27. Three of them rewrite the economics of building an ADU — and all three take effect **January 1, 2027**, barely two months from now.
 
 Here is what each one does, in the order it hits your budget.
 
@@ -37,11 +37,11 @@ Here is what each one does, in the order it hits your budget.
 
 ## 2. SB 1196 — the utility wait gets a deadline
 
-**What:** The California Public Utilities Commission must establish **clear timelines** for utility service connection requests for ADUs — and penalties for utilities that miss them. (Signed Sep 29–30, 2026; supported by the Casita Coalition.)
+**What:** By **September 30, 2027**, the California Public Utilities Commission must establish **timelines** for electrical corporations to respond to and process requests to energize "small energization projects" — and the penalties for missing them. The final text does not mention ADUs; it covers projects that need no distribution or service-line extension or upgrade, including ones whose only upgrade is a new electric meter. (Chapter 684, Statutes of 2026; approved September 27, 2026; supported by the Casita Coalition.)
 
 **The problem it targets:** ADU owners waiting **9–12 months** after construction completes for power — the subject of our [SB 1196 Short](https://www.youtube.com/shorts/McJLL_cNSTY). The building is done; the meter is not.
 
-**What changes on your block:** Starting 2027, you can submit the utility hookup request **at the same time as the building permit application** — running the two queues in parallel instead of in sequence. For small energization projects not requiring grid upgrades (which covers most ADUs), the CPUC timelines plus penalties should compress the post-construction wait substantially.
+**What changes on your block:** When the CPUC sets these timelines, it must require electrical corporations to accept the energization application **at the same time as the building permit application** — running the two queues in parallel instead of in sequence. That arrives through CPUC rules due by September 30, 2027, not automatically on January 1. For ADU hookups that need no grid upgrade, the timelines plus penalties should shorten the post-construction wait once they apply.
 
 **Caveat:** The law directs the CPUC to write the rules; the actual timelines depend on that rulemaking. The direction is set, the numbers are not yet.
 
@@ -65,6 +65,12 @@ Here is what each one does, in the order it hits your budget.
 | Utility connection is your bottleneck | **Watch the CPUC** — timelines help, but rules are still being written |
 | You want two detached ADUs | **Wait for Jan 1** — AB 956 is not effective until then |
 | Permit ready now, ADU under 750 sq ft | **Pull it** — nothing in these laws improves your position by waiting |
+
+## Sources
+
+- SB 1117, Chapter 809, Statutes of 2026 — chaptered text, California Legislative Information: https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB1117
+- SB 1196, Chapter 684, Statutes of 2026 — chaptered text, California Legislative Information: https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB1196
+- AB 956, Chapter 791, Statutes of 2026 — chaptered text, California Legislative Information: https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB956
 
 ## The bottom line
 

@@ -62,7 +62,7 @@ Here is what the phases actually look like, with honest ranges:
 
 **Pre-approved plans: the honest version.** AB 1332's 30-day site-specific review is real, and cities like Riverside (Dwell Riverside), Salinas, Garden Grove, and Anaheim publish the plan sets. But "site-specific" still means soils, grading, setbacks, utilities, fire access, and foundation — the parts most likely to generate corrections. The 30 days cover the unchanged plan details, not the site. Expect the program to save you 4–8 weeks of design and one plan-check round, not to teleport you to issuance.
 
-**The utility hookup.** Finished ADU, no meter, no power — and waits of 9–12 months documented in legislative testimony. SB 1196 (effective Jan 1, 2027) orders the CPUC to set hard hookup deadlines and lets applicants file the hookup request alongside the building permit. Until then, **start the utility conversation during design, not after final inspection.** It is the longest phase with the least visibility, and it starts the day you first call, not the day you finish building.
+**The utility hookup.** Finished ADU, no meter, no power — and waits of 9–12 months documented in legislative testimony. SB 1196 (effective Jan 1, 2027) requires the CPUC to set electric hookup timelines, with penalties, by September 30, 2027 — including letting applicants file the energization request alongside the building permit. Until then, **start the utility conversation during design, not after final inspection.** It is the longest phase with the least visibility, and it starts the day you first call, not the day you finish building.
 
 ## How to protect your schedule
 

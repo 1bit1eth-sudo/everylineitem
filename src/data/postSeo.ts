@@ -67,7 +67,7 @@ export const POST_SEO: Record<string, PostSeo> = {
   "3-adu-laws-january-2027": {
     title: "3 ADU Laws Taking Effect Jan 1, 2027",
     description:
-      "SB 1117 kills the 750 sq ft impact-fee cliff, SB 1196 forces utility connection deadlines, and AB 956 allows two detached ADUs per lot.",
+      "SB 1117 kills the 750 sq ft impact-fee cliff, SB 1196 orders CPUC hookup timelines, and AB 956 allows two detached ADUs per lot.",
   },
   "750-sq-ft-cliff-explained": {
     title: "The 750 Sq Ft Cliff: Why 50 Sq Ft Can Cost $10,000",
