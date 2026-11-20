@@ -149,7 +149,12 @@ const faqSchema = {
 };
 ---
 
-<Layout title={title} description={description} noindex={noindex}>
+<Layout
+  title={title}
+  description={description}
+  noindex={noindex}
+  ogImage={`/images/og/${slug}.png`}
+>
   <Fragment slot="head">
     <script
       type="application/ld+json"
