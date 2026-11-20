@@ -49,6 +49,12 @@ Three rules:
 2. **It is not a slush fund.** Contingency covers unknowns. If you knew about the panel upgrade before you signed, that belongs in the base budget, not contingency.
 3. **Unused contingency is savings.** If you finish without drawing it, you keep it. Contractors price risk into bids whether or not it materializes; your contingency only costs you if you spend it.
 
+## What $38,400 actually covers
+
+Take the middle case: a $320,000 build with a 12% reserve of $38,400. Suppose the excavator hits bad soil — over-excavation and engineered fill run $5,000–$15,000, so call it $10,000. The reserve falls to $28,400. A second surprise of the same size leaves $18,400. At 10% ($32,000) the same two draws leave $12,000; at 15% ($48,000) they leave $28,000. That is the point of sizing the reserve before you sign: two ordinary surprises should not end the project.
+
+If your three bids are $289,000, $318,000 and $341,000, run them through our [comparison tool](/compare/) with the same contingency added to each — the cheapest bid on paper is not always the cheapest once the reserve is counted.
+
 ## The honest number formula
 
 From our [bid-reading guide](/posts/how-to-read-adu-bid/):
