@@ -16,6 +16,7 @@ import Footer from "@/components/Footer.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
 import LinkButton from "@/components/LinkButton.astro";
 import RecentlyViewed from "@/components/RecentlyViewed.astro";
+import { parseVerified, formatVerified } from "@/utils/formatVerified";
 
 // The plain-English explainer is scheduled (pubDatetime); until it is live,
 // point at the published 750 sq ft cliff explainer instead of a 404.
@@ -45,6 +46,16 @@ const ranked = [...rows].sort(
 );
 const withSavings = ranked.filter(r => r.s1000.savings.high > 0);
 const top = withSavings[0];
+
+// Newest verification date across the verified impact-fee rows this hub
+// ranks, so the page states how fresh its figures are (same scope as the
+// homepage trust line: verified rows only).
+const sb1117LatestVerifiedRaw = (data.fee_items as any[])
+  .filter(i => i.status === "verified" && i.category === "impact")
+  .map(i => i.last_verified as string)
+  .filter(Boolean)
+  .sort((a, b) => parseVerified(b) - parseVerified(a))[0];
+const sb1117LatestVerified = formatVerified(sb1117LatestVerifiedRaw);
 
 const title = "SB 1117 ADU Impact Fee Savings by City (2027)";
 const description = `How SB 1117 changes ADU impact fees from January 1, 2027 in ${rows.length} California cities and counties. Ranked by savings at 1,000 sq ft.`;
@@ -84,8 +95,8 @@ const listSchema = {
       SB 1117 ADU Fee Savings, City by City
     </h1>
     <p class="text-lg opacity-80">
-      {inForce ? "Since" : "From"} January 1, 2027, impact fees on a homeowner's first
-      two ADUs apply only to the square footage above 750 — not the whole unit. How
+      {inForce ? "Since" : "From"} January 1, 2027, SB 1117 (Chapter 809, Stats. 2026) limits impact fees on a homeowner's first
+      two ADUs to the square footage above 750 — not the whole unit. How
       much that moves depends entirely on how your city charges.
       {
         top && (
@@ -106,7 +117,8 @@ const listSchema = {
     <p class="mt-3 text-sm opacity-70">
       {rows.length} jurisdictions with verified impact-fee lines;
       {" "}{withSavings.length} show a computable saving. Verified rows only, every
-      figure linked to its source on the city page. School, permit and utility fees
+      figure linked to its source on the city page. Impact-fee figures last
+      verified {sb1117LatestVerified}. School, permit and utility fees
       do not change. For the City of Los Angeles fee table, see{" "}
       <a
         class="text-accent underline decoration-dashed underline-offset-4"
