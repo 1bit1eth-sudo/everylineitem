@@ -33,6 +33,20 @@ const description =
 const ogImage =
   "https://everylineitem.com/images/pinterest/400-vs-800-adu-cost.png";
 
+// The compare page is an interactive tool (quote checker, fee calculator,
+// cliff calculator, two-city comparison), so it carries WebApplication
+// schema in addition to the site-wide WebSite schema in the Layout.
+const webAppSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "Check your contractor quote",
+  description,
+  url: "https://everylineitem.com/compare/",
+  applicationCategory: "FinanceApplication",
+  operatingSystem: "Web",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+};
+
 const comparePayload = {
   scenarios: ADU_SCENARIOS,
   phases: PHASES,
@@ -132,6 +146,13 @@ const inputClass =
 ---
 
 <Layout title={title} description={description} ogImage={ogImage}>
+  <Fragment slot="head">
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={JSON.stringify(webAppSchema)}
+    />
+  </Fragment>
   <Header />
   <Breadcrumb
     trail={[{ href: "/tools/", label: "Tools" }, { label: "Compare" }]}

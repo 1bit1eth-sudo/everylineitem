@@ -130,6 +130,49 @@ const latestVerifiedRaw = items
   .sort((a, b) => parseVerified(b) - parseVerified(a))[0];
 const latestVerified = formatVerified(latestVerifiedRaw);
 
+// Dataset schema for the Fee Index itself: the citable dataset behind the
+// page and the public CSVs. dateModified/temporalCoverage use the newest
+// verified date across the verified rows behind the index (same scope as
+// the trust line). The CSV is CC BY 4.0 per the Terms page.
+const datasetSchema = {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  name: "California ADU Fee Index — Q3 2026",
+  description,
+  url: "https://everylineitem.com/fee-index/",
+  creator: {
+    "@type": "Organization",
+    name: "Every Line Item",
+    url: "https://everylineitem.com/",
+  },
+  license: "https://creativecommons.org/licenses/by/4.0/",
+  dateModified: new Date(parseVerified(latestVerifiedRaw))
+    .toISOString()
+    .slice(0, 10),
+  temporalCoverage: new Date(parseVerified(latestVerifiedRaw))
+    .toISOString()
+    .slice(0, 10),
+  spatialCoverage: { "@type": "Place", name: "California, United States" },
+  keywords: [
+    "ADU",
+    "accessory dwelling unit",
+    "California",
+    "impact fees",
+    "school fees",
+    "permit fees",
+  ],
+  variableMeasured: [
+    "School impact fees",
+    "Development impact fees",
+    "Permit and plan check fees",
+  ],
+  distribution: [csvNames.dated, csvNames.latest, csvNames.legacy].map(n => ({
+    "@type": "DataDownload",
+    contentUrl: `https://everylineitem.com/downloads/${n}`,
+    encodingFormat: "text/csv",
+  })),
+};
+
 // Citation for the CSV dataset, reused by the visible text and the copy
 // button (via data-citation) so the two can never drift apart. The data
 // as-of date is part of the citation itself, so a reused figure stays
@@ -167,6 +210,13 @@ const facts = [
 ---
 
 <Layout title={title} description={description}>
+  <Fragment slot="head">
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={JSON.stringify(datasetSchema)}
+    />
+  </Fragment>
   <Header />
   <Breadcrumb />
   <main id="main-content" class="app-layout pb-8">
