@@ -86,6 +86,20 @@ const faqSchema = {
   })),
 };
 
+// The property-tax page is an interactive calculator, so it carries
+// WebApplication schema alongside the FAQPage schema above.
+const webAppSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "ADU property tax calculator",
+  description:
+    "Estimate the added property tax on a California ADU: the assessor taxes only the market-value increment the ADU adds, at your parcel's Tax Rate Area rate.",
+  url: "https://everylineitem.com/property-tax/",
+  applicationCategory: "FinanceApplication",
+  operatingSystem: "Web",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+};
+
 const selectClass =
   "border-border bg-background focus:border-accent focus:ring-accent w-full rounded-md border px-3 py-2 text-base font-normal focus:ring-1 focus:outline-none";
 const linkClass = "text-accent underline decoration-dashed underline-offset-4";
@@ -97,6 +111,11 @@ const linkClass = "text-accent underline decoration-dashed underline-offset-4";
       type="application/ld+json"
       is:inline
       set:html={JSON.stringify(faqSchema)}
+    />
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={JSON.stringify(webAppSchema)}
     />
   </Fragment>
   <Header />
