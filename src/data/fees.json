@@ -873,7 +873,7 @@
       "primary_sqft_default": null,
       "valuation_psf": null,
       "valuation_basis": null,
-      "fee_schedule_url": "http://hayward.prod.acquia-sites.com/sites/default/files/documents/Adopted-FY-2023-Master-Fee-Schedule.pdf",
+      "fee_schedule_url": "https://www.hayward-ca.gov/sites/default/files/2026-07/Adopted-FY2027-Master-Fee-Schedule-and-Hourly-Rates-Effective-260701.pdf",
       "last_verified": "2026-11-10",
       "status": "verified"
     },
