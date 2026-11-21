@@ -199,6 +199,24 @@ footer.site a{color:var(--muted-fg)}
       <li id="fee-page-item" class="hidden"><a id="fee-page-link" href="/fees/">Verified fees for your jurisdiction</a></li>
       <li><a href="/downloads/adu-benchmark-ranges-2026-q3.csv">Benchmark ranges (CSV, Q3 2026)</a> · <a href="/downloads/adu-fee-index-2026-q3.csv">Fee index (CSV, Q3 2026)</a></li>
     </ul>
+
+    <!-- Scope box: mirrors src/components/EstimateScopeBox.astro (tool="bid-scanner").
+         This file is static HTML, so the Astro component cannot be imported here.
+         Keep the wording and the check date (16 Nov 2026) in sync with the component. -->
+    <h3>What this estimate includes — and what it doesn&rsquo;t</h3>
+    <p><strong>Included:</strong></p>
+    <ul>
+      <li><strong>Verified government fees for your jurisdiction</strong> — permit, plan check, impact, and school fees, each linked to the official fee schedule. <a href="/fees/">See verified fees by city</a>.</li>
+      <li><strong>Construction in six modeled steps</strong> — soft costs, site, framing, envelope, systems, landscaping — from the Q3 2026 benchmark ranges for an 800 sq ft mid-grade ADU. <a href="/downloads/adu-benchmark-ranges-2026-q3.csv">Benchmark ranges (CSV)</a>.</li>
+    </ul>
+    <p><strong>Not included:</strong></p>
+    <ul>
+      <li><strong>Soil and geotechnical work</strong>, slope stabilization, and special civil works — site conditions vary by parcel.</li>
+      <li><strong>Utility capacity upgrades</strong> — a new water, sewer, or electrical service — beyond the standard connection fees.</li>
+      <li><strong>Ordinance or fee-schedule changes after the check date below</strong> — fees are re-verified on a rolling basis, not in real time.</li>
+      <li><strong>Design choices, finish grade, and a contractor&rsquo;s actual bid</strong> — modeled ranges are not quotes.</li>
+    </ul>
+    <p>Fee figures last verified against official sources on <strong>16 Nov 2026</strong>. Verify the current figures with the city, the school district, and the utility before you budget or build. <a href="/methodology/">Methodology</a> · <a href="/disclaimer/">Disclaimer</a> · <a href="/fee-index/">Fee Index</a></p>
   </section>
 
   <details>
