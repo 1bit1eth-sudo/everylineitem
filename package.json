@@ -7,6 +7,7 @@
   },
   "scripts": {
     "dev": "node scripts/decode-pinterest-pins.mjs && astro dev",
+    "audit": "node scripts/audit-everylineitem.mjs",
     "build": "node scripts/decode-pinterest-pins.mjs && node scripts/generate-og-cards.mjs && astro check && astro build && pagefind --site dist && cp -r dist/pagefind public/ && cp dist/sitemap-index.xml dist/sitemap.xml && node scripts/check-quality.mjs",
     "preview": "astro preview",
     "sync": "astro sync",
