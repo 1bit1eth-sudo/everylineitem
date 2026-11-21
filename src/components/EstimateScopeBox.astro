@@ -1,0 +1,115 @@
+---
+// EstimateScopeBox — what an estimate on this site includes and excludes,
+// plus the date the underlying fee data was last checked.
+//
+// Used below the results on the quote checker (Bid Scanner) and the
+// property-tax calculator. The `tool` prop adjusts the first "included"
+// line to what that tool's number is actually built from; the exclusions
+// and the check date are shared, because both tools draw on the same
+// fee data and the same modeled construction benchmarks.
+//
+// The check date is the newest verification date across verified fee rows
+// (same scope as the Fee Index: to_verify rows contribute no figure here).
+// It is computed at build time from fees.json, so it never goes stale on
+// its own — it moves when the data does.
+//
+// NOTE: the Bid Scanner page itself is a static HTML file
+// (public/bid-scanner/index.html), so it cannot import this component.
+// It carries the same box as plain HTML markup, with a comment pointing
+// back here. Keep the wording and the check date in sync.
+import feesData from "@/data/fees.json";
+import { parseVerified, formatVerified } from "@/utils/formatVerified";
+
+type Props = {
+  tool?: "bid-scanner" | "property-tax";
+};
+
+const { tool = "bid-scanner" } = Astro.props;
+
+const latestVerifiedRaw = (
+  feesData.fee_items as Array<{ status: string; last_verified: string }>
+)
+  .filter((i) => i.status === "verified")
+  .map((i) => i.last_verified)
+  .filter(Boolean)
+  .sort((a, b) => parseVerified(b) - parseVerified(a))[0];
+const latestVerified = formatVerified(latestVerifiedRaw);
+---
+
+<section
+  class="border-border mt-8 rounded-md border p-4"
+  aria-labelledby="estimate-scope"
+>
+  <h2 id="estimate-scope" class="text-lg font-semibold">
+    What this estimate includes — and what it doesn&rsquo;t
+  </h2>
+
+  <h3 class="text-foreground/70 mt-4 text-xs font-semibold tracking-wide uppercase">
+    Included
+  </h3>
+  {
+    tool === "bid-scanner" ? (
+      <ul class="mt-2 list-disc space-y-1 ps-5 text-sm">
+        <li>
+          <strong class="font-semibold">Verified government fees for your jurisdiction</strong> —
+          permit, plan check, impact, and school fees, each linked to the official fee
+          schedule.{" "}
+          <a href="/fees/" class="underline">See verified fees by city</a>.
+        </li>
+        <li>
+          <strong class="font-semibold">Construction in six modeled steps</strong> — soft costs,
+          site, framing, envelope, systems, landscaping — from the Q3 2026 benchmark ranges
+          for an 800 sq ft mid-grade ADU.{" "}
+          <a href="/downloads/adu-benchmark-ranges-2026-q3.csv" class="underline">
+            Benchmark ranges (CSV)
+          </a>
+          .
+        </li>
+      </ul>
+    ) : (
+      <ul class="mt-2 list-disc space-y-1 ps-5 text-sm">
+        <li>
+          <strong class="font-semibold">Your county&rsquo;s Tax Rate Area (TRA) rate</strong>{" "}
+          and the added value you enter — the assessor taxes only the market-value increment
+          the ADU adds, not the whole property.
+        </li>
+        <li>
+          <strong class="font-semibold">Verified government fees for the same ADU</strong>, on
+          the fee calculator — each linked to the official fee schedule.{" "}
+          <a href="/compare/" class="underline">Compare fees by city</a>.
+        </li>
+      </ul>
+    )
+  }
+
+  <h3 class="text-foreground/70 mt-4 text-xs font-semibold tracking-wide uppercase">
+    Not included
+  </h3>
+  <ul class="mt-2 list-disc space-y-1 ps-5 text-sm">
+    <li>
+      <strong class="font-semibold">Soil and geotechnical work</strong>, slope stabilization,
+      and special civil works — site conditions vary by parcel.
+    </li>
+    <li>
+      <strong class="font-semibold">Utility capacity upgrades</strong> — a new water, sewer, or
+      electrical service — beyond the standard connection fees.
+    </li>
+    <li>
+      <strong class="font-semibold">Ordinance or fee-schedule changes after the check date below</strong>{" "}
+      — fees are re-verified on a rolling basis, not in real time.
+    </li>
+    <li>
+      <strong class="font-semibold">Design choices, finish grade, and a contractor&rsquo;s actual bid</strong>{" "}
+      — modeled ranges are not quotes.
+    </li>
+  </ul>
+
+  <p class="text-foreground/80 mt-4 text-sm">
+    Fee figures last verified against official sources on{" "}
+    <strong class="font-semibold">{latestVerified}</strong>. Verify the current figures with
+    the city, the school district, and the utility before you budget or build.{" "}
+    <a href="/methodology/" class="underline">Methodology</a> ·{" "}
+    <a href="/disclaimer/" class="underline">Disclaimer</a> ·{" "}
+    <a href="/fee-index/" class="underline">Fee Index</a>
+  </p>
+</section>

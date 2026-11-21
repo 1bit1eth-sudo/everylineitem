@@ -17,6 +17,7 @@ import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
+import EstimateScopeBox from "@/components/EstimateScopeBox.astro";
 import NextReads from "@/components/NextReads.astro";
 import { getCollection } from "astro:content";
 import { getSortedPosts } from "@/utils/getSortedPosts";
@@ -381,6 +382,8 @@ const linkClass = "text-accent underline decoration-dashed underline-offset-4";
         This is planning math, not an assessment. Only your county assessor
         sets the added value.
       </p>
+
+      <EstimateScopeBox tool="property-tax" />
     </section>
 
     <section class="mt-10" aria-labelledby="how-it-works">
