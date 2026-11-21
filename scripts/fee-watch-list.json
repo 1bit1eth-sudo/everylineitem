@@ -1,0 +1,91 @@
+{
+  "_selection": {
+    "as_of": "2026-11-22",
+    "source": "src/data/fees.json",
+    "criterion": "Top 10 jurisdictions by count of verified fee items, among jurisdictions whose recorded fee_schedule_url is an external official URL (everylineitem.com self-reference excluded; LAKEWOOD and ONTARIO have no fee_schedule_url and are excluded). Ties broken by juris_id ascending. \".gov etc.\" means the official fee schedule as recorded in fees.json — some are hosted on official non-.gov domains (county document store, water-district site, code publisher).",
+    "max_calls_per_run": 10,
+    "note": "The watch list is the fee_schedule_url per jurisdiction, not per fee item. The monitor checks whether the official schedule page changed, so a human can re-verify the rows that cite it."
+  },
+  "jurisdictions": [
+    {
+      "juris_id": "SAN-LUIS-OBISPO-COUNTY",
+      "name": "San Luis Obispo County",
+      "county": "San Luis Obispo",
+      "fee_schedule_url": "https://www.slocounty.ca.gov/departments/planning-building/forms-documents/fees",
+      "verified_fee_items": 29,
+      "jurisdiction_status": "verified"
+    },
+    {
+      "juris_id": "SANTA-CLARA-COUNTY",
+      "name": "Santa Clara County (unincorporated)",
+      "county": "Santa Clara",
+      "fee_schedule_url": "https://stgenpln.blob.core.windows.net/document/Fees_Building.pdf",
+      "verified_fee_items": 20,
+      "jurisdiction_status": "verified"
+    },
+    {
+      "juris_id": "PASADENA",
+      "name": "Pasadena",
+      "county": "Los Angeles",
+      "fee_schedule_url": "https://ww2.cityofpasadena.net/2025%20Agendas/May_19_25/AR%2013%20Attachment%20A.pdf",
+      "verified_fee_items": 19,
+      "jurisdiction_status": "verified"
+    },
+    {
+      "juris_id": "BUENA-PARK",
+      "name": "Buena Park",
+      "county": "Orange",
+      "fee_schedule_url": "https://eocwd.com/wp-content/uploads/2026/07/OC-SAN-TABLE-A-B-2026-27.pdf",
+      "verified_fee_items": 17,
+      "jurisdiction_status": "verified"
+    },
+    {
+      "juris_id": "ALHAMBRA",
+      "name": "Alhambra",
+      "county": "Los Angeles",
+      "fee_schedule_url": "https://www.alhambraca.gov/DocumentCenter/View/7697/Master-Fee-Schedule-Effective-03-01-26",
+      "verified_fee_items": 16,
+      "jurisdiction_status": "verified"
+    },
+    {
+      "juris_id": "LA-CITY",
+      "name": "City of Los Angeles",
+      "county": "Los Angeles",
+      "fee_schedule_url": "https://codelibrary.amlegal.com/codes/los_angeles/latest/lamc/0-0-0-172789",
+      "verified_fee_items": 14,
+      "jurisdiction_status": "to_verify"
+    },
+    {
+      "juris_id": "CARLSBAD",
+      "name": "Carlsbad",
+      "county": "San Diego",
+      "fee_schedule_url": "https://www.carlsbadca.gov/home/showpublisheddocument/27129/639208527170300000",
+      "verified_fee_items": 13,
+      "jurisdiction_status": "to_verify"
+    },
+    {
+      "juris_id": "ARCADIA",
+      "name": "Arcadia",
+      "county": "Los Angeles",
+      "fee_schedule_url": "https://arcadiaca.gov/Document%20Center/Government/Development%20Services/Building%20Services/Assembly%20Bill%202234/7558.pdf?t=202512081123430",
+      "verified_fee_items": 12,
+      "jurisdiction_status": "verified"
+    },
+    {
+      "juris_id": "MARIN-COUNTY",
+      "name": "Marin County",
+      "county": "Marin",
+      "fee_schedule_url": "https://cdaportal2.marincounty.org/MarinBuildingPermits/Home/FeeExplanation",
+      "verified_fee_items": 12,
+      "jurisdiction_status": "verified"
+    },
+    {
+      "juris_id": "BEVERLY-HILLS",
+      "name": "Beverly Hills",
+      "county": "Los Angeles",
+      "fee_schedule_url": "https://www.beverlyhills.org/DocumentCenter/View/12862/FY-2025-2026-Taxes-Fees-and-Charges-PDF?bidId=",
+      "verified_fee_items": 11,
+      "jurisdiction_status": "verified"
+    }
+  ]
+}
