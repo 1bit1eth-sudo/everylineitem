@@ -1,0 +1,234 @@
+{
+  "$comment": "Schema example for src/data/fees.json — the site's core fee ledger (798 fee items, 164 jurisdictions as of 2026-11-22). JSON has no comments, so the field documentation lives in 'field_guide' below. The 'example' records are real rows copied verbatim from fees.json (FI-320 and ALHAMBRA); they show the exact structure every data addition or edit must follow. This file is documentation, not data — never import it into the build, and never copy it over fees.json.",
+  "example": {
+    "applies_to": "all",
+    "area": "General City",
+    "base": null,
+    "category": "impact",
+    "confidence": "A",
+    "dwelling_base": true,
+    "effective_date": "Jul 2026",
+    "fee_name": "Development impact fee - General City (per-dwelling base)",
+    "internal_notes": "No direct official URL cited in the post; document named in source_note. The ~$18,798 worked ADU example from the post was rejected (computed, assumes 1,600 sq ft primary dwelling); this is the exact official per-dwelling base.",
+    "item_id": "FI-320",
+    "juris_id": "ONTARIO",
+    "last_verified": "19 Oct 2026",
+    "max_sqft": null,
+    "method": "flat",
+    "min_sqft": 750,
+    "notes": "Per-dwelling base for the General City area schedule. General City and Ontario Ranch are mutually exclusive area schedules — a parcel pays one, not both (Res. 2025-010; Ontario Ranch DIF schedule eff. 7/1/2026). ADUs of 750+ sq ft pay (ADU sq ft / primary sq ft) x base per Development Code Sec. 5.03.010.G.1 (Ord. 3296); ADUs under 750 sq ft pay $0. At the 1,600 sq ft default primary, an 800 sq ft ADU pays $18,798. For this rule, 'impact fee' covers only Mitigation Fee Act and Quimby Act fees (water/sewer connection charges excluded).",
+    "rate_high": null,
+    "rate_low": 37595,
+    "source_note": "City Council Resolution 2025-010, 100% phase effective 7/1/2026",
+    "source_url": "https://content.ontarioca.gov/sites/default/files/2026-05/R2025-010%20Development%20Impact%20Fee%20Calculation%20and%20Updated%20Development%20Impact%20Fee%20Schedule.pdf",
+    "status": "verified",
+    "step": null,
+    "threshold": null
+  },
+  "field_guide": {
+    "fee_items": {
+      "applies_to": {
+        "required": true,
+        "rule": "'all' today. A district or area qualifier when a row covers only part of a jurisdiction.",
+        "type": "string"
+      },
+      "area": {
+        "required": false,
+        "rule": "Area-schedule qualifier (e.g. 'General City' vs 'Ontario Ranch') when a jurisdiction has mutually exclusive schedules.",
+        "type": "string|null"
+      },
+      "base": {
+        "required": false,
+        "rule": "Flat base amount (valuation methods).",
+        "type": "number|null"
+      },
+      "cap": {
+        "required": false,
+        "rule": "Dollar cap on the fee.",
+        "type": "number|null"
+      },
+      "category": {
+        "required": true,
+        "rule": "One of: plan_check_permit, impact, school, water_sewer, utility_capacity, planning, construction_tax, permit.",
+        "type": "string"
+      },
+      "confidence": {
+        "required": true,
+        "rule": "A | B | C. A verified row must have A, B or C — never null or empty.",
+        "type": "string"
+      },
+      "dwelling_base": {
+        "required": false,
+        "rule": "True when the row is a per-dwelling base, not a per-sq-ft rate.",
+        "type": "boolean"
+      },
+      "effective_date": {
+        "required": false,
+        "rule": "When the rate took effect. ISO ('2026-11-13') or human ('Jul 2026').",
+        "type": "string|null"
+      },
+      "fee_name": {
+        "required": true,
+        "rule": "Reader-facing name of the fee.",
+        "type": "string"
+      },
+      "internal_notes": {
+        "required": false,
+        "rule": "Editor-only. Never rendered to readers.",
+        "type": "string|null"
+      },
+      "item_id": {
+        "required": true,
+        "rule": "Unique id. 'FI-###' for the original series, '<JURIS>-NEW-##' for later additions.",
+        "type": "string"
+      },
+      "juris_id": {
+        "required": true,
+        "rule": "Must match a jurisdictions[].juris_id.",
+        "type": "string"
+      },
+      "last_verified": {
+        "required": true,
+        "rule": "The date a human checked the source against the official document. ISO ('2026-11-16') or human ('19 Oct 2026'). Never in the future.",
+        "type": "string"
+      },
+      "max_sqft": {
+        "required": false,
+        "rule": "Highest sq ft the row applies to.",
+        "type": "number|null"
+      },
+      "method": {
+        "required": true,
+        "rule": "One of: flat, per_sqft, pct_valuation, valuation_step, valuation_table.",
+        "type": "string"
+      },
+      "min_sqft": {
+        "required": false,
+        "rule": "Lowest sq ft the row applies to. 750 / 751 is the SB 1117 cliff line (impact fees: $0 at or under 750 sq ft).",
+        "type": "number|null"
+      },
+      "notes": {
+        "required": false,
+        "rule": "Reader-facing note (SB 1117 effect, what is excluded).",
+        "type": "string|null"
+      },
+      "rate_high": {
+        "required": false,
+        "rule": "Upper end of a range. Null for a single rate.",
+        "type": "number|null"
+      },
+      "rate_low": {
+        "required": "for flat / per_sqft / pct_valuation",
+        "rule": "The rate. Null for valuation_table / valuation_step, where the rate lives in the table. Never negative. $0 is a legitimate value (exemption, shared connection, no such fee) — never treat $0 as an error.",
+        "type": "number|null"
+      },
+      "source_note": {
+        "required": true,
+        "rule": "What the source says, in plain words: resolution or ordinance number, effective date, and the exact figure.",
+        "type": "string"
+      },
+      "source_url": {
+        "required": true,
+        "rule": "External http(s) URL to the official document (.gov, city/county code, school-district or utility official document). Never an everylineitem.com URL (no self-citation). Never empty on a verified row.",
+        "type": "string"
+      },
+      "status": {
+        "required": true,
+        "rule": "verified | to_verify | illustrative | conflict. Only 'verified' rows feed the published totals.",
+        "type": "string"
+      },
+      "step": {
+        "required": false,
+        "rule": "Step size for valuation_step.",
+        "type": "number|null"
+      },
+      "threshold": {
+        "required": false,
+        "rule": "Sq ft or valuation threshold the row applies from. May be a descriptive string (e.g. '800 sq ft ADU').",
+        "type": "number|string|null"
+      }
+    },
+    "jurisdictions": {
+      "county": {
+        "required": true,
+        "rule": "County name.",
+        "type": "string"
+      },
+      "fee_schedule_url": {
+        "required": true,
+        "rule": "The jurisdiction's official fee schedule URL (external http(s)). Never an everylineitem.com URL. Two jurisdictions (LAKEWOOD, ONTARIO) still lack one — that is a known gap, not a pattern to copy.",
+        "type": "string"
+      },
+      "juris_id": {
+        "required": true,
+        "rule": "Unique id, matches fee_items[].juris_id.",
+        "type": "string"
+      },
+      "last_verified": {
+        "required": true,
+        "rule": "Same date rules as fee_items.last_verified.",
+        "type": "string"
+      },
+      "name": {
+        "required": true,
+        "rule": "Display name.",
+        "type": "string"
+      },
+      "post_slug": {
+        "required": false,
+        "rule": "City-series post slug, or null before the post is published.",
+        "type": "string|null"
+      },
+      "primary_sqft_default": {
+        "required": false,
+        "rule": "Default primary-dwelling sq ft used by valuation formulas, or null.",
+        "type": "number|null"
+      },
+      "region": {
+        "required": true,
+        "rule": "SoCal | NorCal | Central.",
+        "type": "string"
+      },
+      "source_note": {
+        "required": false,
+        "rule": "Note on the fee schedule source, when the URL alone does not say enough.",
+        "type": "string"
+      },
+      "status": {
+        "required": true,
+        "rule": "verified | to_verify | illustrative | conflict.",
+        "type": "string"
+      },
+      "valuation_basis": {
+        "required": false,
+        "rule": "How the modeled valuation was derived, or null.",
+        "type": "string|null"
+      },
+      "valuation_psf": {
+        "required": false,
+        "rule": "Modeled valuation $/sq ft, or null.",
+        "type": "number|null"
+      }
+    }
+  },
+  "jurisdictions_example": {
+    "county": "Los Angeles",
+    "fee_schedule_url": "https://www.alhambraca.gov/DocumentCenter/View/7697/Master-Fee-Schedule-Effective-03-01-26",
+    "juris_id": "ALHAMBRA",
+    "last_verified": "19 Oct 2026",
+    "name": "Alhambra",
+    "post_slug": "alhambra-adu-cost",
+    "primary_sqft_default": null,
+    "region": "SoCal",
+    "status": "verified",
+    "valuation_basis": null,
+    "valuation_psf": null
+  },
+  "source": {
+    "as_of": "2026-11-22",
+    "fee_items": 798,
+    "file": "src/data/fees.json",
+    "jurisdictions": 164,
+    "note": "The field in this file is 'last_verified', not 'checked_date' — that is the name the pack's 'checked_date' refers to."
+  }
+}
