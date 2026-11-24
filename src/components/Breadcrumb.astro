@@ -67,6 +67,50 @@ if (breadcrumbList[0] === "tags" && !isNaN(Number(breadcrumbList[2]))) {
     }`
   );
 }
+
+// BreadcrumbList JSON-LD (rendered after the nav). Computed here in the
+// frontmatter rather than in an inline IIFE in the template: eslint-plugin-astro
+// could not parse the IIFE ("'}' expected" at EOF), which failed CI lint.
+const jsonLdOrigin = "https://everylineitem.com";
+const abs = (href: string) =>
+  href.startsWith("http")
+    ? href
+    : `${jsonLdOrigin}${href.startsWith("/") ? href : `/${href}`}`;
+const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+// Proper names for hyphenated tool/data sections, which the visible
+// breadcrumb only capitalizes ("Sb-1117", "Fee-index").
+const jsonLdLabels: Record<string, string> = {
+  "sb-1117": "SB 1117",
+  "fee-index": "Fee Index",
+  "property-tax": "Property Tax",
+};
+let crumbs: { name: string; item: string }[];
+if (trail) {
+  crumbs = trail.map(c => ({
+    name: c.label,
+    item: c.href ? abs(c.href) : Astro.url.href,
+  }));
+} else {
+  const segments = currentUrlPath.split("/").slice(1).filter(Boolean);
+  crumbs = segments.map((seg, i) => ({
+    name: cap(jsonLdLabels[seg] ?? navLabels[seg] ?? decodeSegment(seg)),
+    item:
+      i + 1 === segments.length
+        ? Astro.url.href
+        : abs("/" + segments.slice(0, i + 1).join("/") + "/"),
+  }));
+}
+const jsonLdList = [{ name: t.nav.home, item: `${jsonLdOrigin}/` }, ...crumbs];
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: jsonLdList.map((c, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: c.name,
+    item: c.item,
+  })),
+};
 ---
 
 <nav class="app-layout mt-8 mb-1" aria-label="breadcrumb">
@@ -131,60 +175,16 @@ if (breadcrumbList[0] === "tags" && !isNaN(Number(breadcrumbList[2]))) {
   </ul>
 </nav>
 
-{/* BreadcrumbList mirrors the visible trail above, so crawlers and AI
+{
+  /* BreadcrumbList mirrors the visible trail above, so crawlers and AI
     search get the same page hierarchy readers see. JSON-LD in the body is
     valid; the component is used on every non-home page. Trail-prop pages
     (tool pages) use their explicit trail; the rest derive it from the URL,
     with cumulative paths for intermediate items and the current page URL
-    for the last item. */}
-{
-  (() => {
-    const origin = "https://everylineitem.com";
-    const abs = (href: string) =>
-      href.startsWith("http")
-        ? href
-        : `${origin}${href.startsWith("/") ? href : `/${href}`}`;
-    const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
-    // Proper names for hyphenated tool/data sections, which the visible
-    // breadcrumb only capitalizes ("Sb-1117", "Fee-index").
-    const jsonLdLabels: Record<string, string> = {
-      "sb-1117": "SB 1117",
-      "fee-index": "Fee Index",
-      "property-tax": "Property Tax",
-    };
-    let crumbs: { name: string; item: string }[];
-    if (trail) {
-      crumbs = trail.map(c => ({
-        name: c.label,
-        item: c.href ? abs(c.href) : Astro.url.href,
-      }));
-    } else {
-      const segments = currentUrlPath.split("/").slice(1).filter(Boolean);
-      crumbs = segments.map((seg, i) => ({
-        name: cap(jsonLdLabels[seg] ?? navLabels[seg] ?? decodeSegment(seg)),
-        item:
-          i + 1 === segments.length
-            ? Astro.url.href
-            : abs("/" + segments.slice(0, i + 1).join("/") + "/"),
-      }));
-    }
-    const list = [{ name: t.nav.home, item: `${origin}/` }, ...crumbs];
-    const schema = {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: list.map((c, i) => ({
-        "@type": "ListItem",
-        position: i + 1,
-        name: c.name,
-        item: c.item,
-      })),
-    };
-    return (
-      <script
-        type="application/ld+json"
-        is:inline
-        set:html={JSON.stringify(schema)}
-      />
-    );
-  })()
+    for the last item. */
 }
+<script
+  type="application/ld+json"
+  is:inline
+  set:html={JSON.stringify(breadcrumbSchema)}
+/>

@@ -962,7 +962,9 @@ const formatShortDate = (d: string | Date) =>
 
     {/* LATEST + VIDEOS — single column: the page container is max-w-3xl
         (768px), so a two-column split starved the Latest titles to ~110px
-        and clipped the price. Stacking gives Latest the full 736px. */}
+        and clipped the price. Stacking gives Latest the full 736px.
+        Below sm each Latest row stacks date / title / price: the 3-column
+        grid with a nowrap price pushed the 390px layout out to 431px. */}
     <section aria-label="Latest posts and videos" class="pt-12 pb-6">
       <div class="grid gap-10">
         <div>
@@ -972,12 +974,12 @@ const formatShortDate = (d: string | Date) =>
               <li>
                 <a
                   href={`/posts/${id}/`}
-                  class="grid grid-cols-[5.5rem_1fr_auto] gap-4 py-4 items-baseline hover:bg-black/5 transition-colors"
+                  class="flex flex-col gap-1 py-4 hover:bg-black/5 transition-colors sm:grid sm:grid-cols-[5.5rem_minmax(0,1fr)_auto] sm:items-baseline sm:gap-4"
                 >
                   <span class="text-sm tabular-nums opacity-60">
                     {formatShortDate(data.pubDatetime)}
                   </span>
-                  <span>
+                  <span class="min-w-0">
                     <span class="block font-semibold text-lg leading-snug">
                       {data.title}
                     </span>
@@ -986,7 +988,7 @@ const formatShortDate = (d: string | Date) =>
                     </span>
                   </span>
                   {data.keyFacts?.totalCost && (
-                    <span class="text-right font-mono font-semibold text-accent whitespace-nowrap">
+                    <span class="font-mono font-semibold text-accent whitespace-nowrap sm:text-right">
                       {data.keyFacts.totalCost}
                     </span>
                   )}
