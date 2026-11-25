@@ -438,7 +438,7 @@ const formatShortDate = (d: string | Date) =>
     <section id="hero" aria-labelledby="hero-heading" class="border-border border-b pt-8 pb-6">
       <div class="grid gap-8 lg:grid-cols-2 lg:gap-12">
         <div>
-          <p class="text-sm font-mono uppercase tracking-wide opacity-60">
+          <p class="text-sm font-mono uppercase tracking-wide opacity-75">
             CA ADU Costs
           </p>
           <h1 id="hero-heading" class="my-4 text-3xl font-bold sm:my-6 sm:text-4xl">
@@ -513,7 +513,7 @@ const formatShortDate = (d: string | Date) =>
               See my fees &rarr;
             </button>
           </form>
-          <p class="mt-3 text-sm opacity-70">
+          <p class="mt-3 text-sm text-foreground/70">
             Browse fees by region:{" "}
             {feeRegions.map((r, idx) => (
               <span>
@@ -534,7 +534,7 @@ const formatShortDate = (d: string | Date) =>
               All cities &rarr;
             </a>
           </p>
-          <p class="mt-3 text-sm opacity-70">
+          <p class="mt-3 text-sm text-foreground/70">
             {jurisCount} jurisdictions · every figure links to
             its official source · Fees last verified: {latestVerified} · no email needed.{" "}
             <LinkButton
@@ -581,7 +581,7 @@ const formatShortDate = (d: string | Date) =>
               $0; every figure links to the district's official document.
             </p>
           </div>
-          <div class="hidden sm:grid sm:grid-cols-[1fr_6rem_5rem] gap-4 px-4 py-2 border-b border-border text-sm font-semibold opacity-60">
+          <div class="hidden sm:grid sm:grid-cols-[1fr_6rem_5rem] gap-4 px-4 py-2 border-b border-border text-sm font-semibold opacity-75">
             <span>Jurisdiction</span>
             <span class="text-right">Rate</span>
             <span class="text-right">800 sq ft</span>
@@ -612,7 +612,7 @@ const formatShortDate = (d: string | Date) =>
             ))}
           </div>
           <div class="px-4 py-3 text-sm">
-            <span class="opacity-60">Cheapest 5 and priciest 5 of {schoolRows.length} jurisdictions with verified school fees. Each figure is one jurisdiction's combined school fee — elementary and high-school shares summed — and the low end leaves out jurisdictions where only one share is verified (the Fee Index counts {schoolFees.length} district line items — some jurisdictions have more than one district).</span>{" "}
+            <span class="opacity-75">Cheapest 5 and priciest 5 of {schoolRows.length} jurisdictions with verified school fees. Each figure is one jurisdiction's combined school fee — elementary and high-school shares summed — and the low end leaves out jurisdictions where only one share is verified (the Fee Index counts {schoolFees.length} district line items — some jurisdictions have more than one district).</span>{" "}
             <a href="/compare/" class="text-accent font-semibold">
               Look up your jurisdiction &rarr;
             </a>{" "}
@@ -656,13 +656,13 @@ const formatShortDate = (d: string | Date) =>
           <p class="mt-1 text-sm opacity-70">The calculator, the index, and the dataset are open. No signup stands between you and a number.</p>
         </div>
       </div>
-      <p class="mt-6 text-sm opacity-70">
+      <p class="mt-6 text-sm text-foreground/70">
         Who runs this site, how to reach us, and how we fix mistakes:{" "}
         <a href="/about/" class="text-accent font-semibold">About &rarr;</a>{" "}
         <a href="/contact/" class="text-accent font-semibold">Contact &rarr;</a>{" "}
         <a href="/corrections/" class="text-accent font-semibold">Corrections policy &rarr;</a>
       </p>
-      <p class="mt-2 text-sm opacity-70">
+      <p class="mt-2 text-sm text-foreground/70">
         Questions or a correction? Email{" "}
         <a href="mailto:corrections@everylineitem.com" class="text-accent font-semibold">
           corrections@everylineitem.com
@@ -678,7 +678,7 @@ const formatShortDate = (d: string | Date) =>
           <h2 id="changes-heading" class="text-2xl font-semibold">
             What changed
           </h2>
-          <p class="mt-2 text-sm opacity-70">
+          <p class="mt-2 text-sm text-foreground/70">
             The fee change log — every verification event, newest first.{" "}
             <a href="/changes/" class="text-accent font-semibold">
               Full log &rarr;
@@ -687,7 +687,7 @@ const formatShortDate = (d: string | Date) =>
           <ul class="mt-4 space-y-4">
             {changelog.entries.slice(0, 3).map(e => (
               <li class="border-b border-border pb-4">
-                <p class="text-sm font-mono tabular-nums opacity-60">Published: {e.date}</p>
+                <p class="text-sm font-mono tabular-nums opacity-75">Published: {e.date}</p>
                 <p class="font-semibold">{e.headline}</p>
                 <p class="mt-1 text-sm opacity-70 line-clamp-3">{e.detail}</p>
               </li>
@@ -735,13 +735,13 @@ const formatShortDate = (d: string | Date) =>
           { n: "6", label: "Landscaping & hardscape", desc: "What the site looks like when the crew leaves." },
         ].map(p => (
           <div class="border border-border rounded-lg p-4">
-            <p class="font-mono text-sm opacity-60">{p.n}</p>
+            <p class="font-mono text-sm opacity-75">{p.n}</p>
             <p class="mt-1 font-semibold">{p.label}</p>
             <p class="mt-1 text-sm opacity-70">{p.desc}</p>
           </div>
         ))}
       </div>
-      <p class="mt-4 text-sm opacity-70">
+      <p class="mt-4 text-sm text-foreground/70">
         Bids hide the most in phase 1.{" "}
         <a href="/posts/how-to-read-adu-bid/" class="text-accent font-semibold">
           Learn to read a bid &rarr;
@@ -754,7 +754,7 @@ const formatShortDate = (d: string | Date) =>
 
     {/* FEE INDEX BAND — the data edition */}
     <section aria-labelledby="fee-index-heading" class="border-border border-b pt-12 pb-6">
-      <p class="text-sm font-semibold tracking-wide uppercase opacity-60">
+      <p class="text-sm font-semibold tracking-wide uppercase opacity-75">
         The California ADU Fee Index — Q3 2026
       </p>
       <h2 id="fee-index-heading" class="mt-2 text-2xl font-semibold">
@@ -795,7 +795,7 @@ const formatShortDate = (d: string | Date) =>
           href="/posts/adu-permit-fees-ranked/"
           class="border border-border rounded-lg p-4 hover:border-accent transition-colors"
         >
-          <p class="font-mono text-sm opacity-60">Permit fees</p>
+          <p class="font-mono text-sm opacity-75">Permit fees</p>
           <p class="mt-1 font-semibold">$1,006 to $19,200</p>
           <p class="mt-1 text-sm opacity-70">
             Riverside to Oakland for the same 800 sq ft ADU — a 19x spread across 16 cities. Most figures carry an asterisk; the ranking explains what each one means.
@@ -806,7 +806,7 @@ const formatShortDate = (d: string | Date) =>
           href="/posts/adu-school-fees-explained/"
           class="border border-border rounded-lg p-4 hover:border-accent transition-colors"
         >
-          <p class="font-mono text-sm opacity-60">School fees</p>
+          <p class="font-mono text-sm opacity-75">School fees</p>
           <p class="mt-1 font-semibold">{fmtUSD(schoolLow)} to {fmtUSD(schoolHigh)}</p>
           <p class="mt-1 text-sm opacity-70">
             {lowJuris} to {highJuris} for the same 800 sq ft ADU — a {schoolRatio}× spread across {schoolRows.length} jurisdictions with verified school fees, set by district boundaries, not city limits.
@@ -817,7 +817,7 @@ const formatShortDate = (d: string | Date) =>
           href="/compare/"
           class="border border-border rounded-lg p-4 hover:border-accent transition-colors"
         >
-          <p class="font-mono text-sm opacity-60">The 750 sq ft cliff</p>
+          <p class="font-mono text-sm opacity-75">The 750 sq ft cliff</p>
           <p class="mt-1 font-semibold">{fmtUSD(topCliff)} at 751 sq ft</p>
           <p class="mt-1 text-sm opacity-70">
             In {topCliffJuris}, an ADU at 751 sq ft owes {fmtUSD(topCliff)} in impact fees that a 750 sq ft ADU does not — the largest verified cliff in the index. Flat per-dwelling fees are prorated against the primary dwelling, and where a city prices by area this is the highest area.
@@ -900,7 +900,7 @@ const formatShortDate = (d: string | Date) =>
       </div>
       <div class="mt-6 grid gap-8 md:grid-cols-3">
         <nav aria-label="Browse by city">
-          <h3 class="text-sm font-mono uppercase tracking-wide opacity-60 border-b border-border pb-2">
+          <h3 class="text-sm font-mono uppercase tracking-wide opacity-75 border-b border-border pb-2">
             By city
           </h3>
           <div class="mt-4 grid gap-6 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
@@ -924,7 +924,7 @@ const formatShortDate = (d: string | Date) =>
           </div>
         </nav>
         <nav aria-label="Browse by build type">
-          <h3 class="text-sm font-mono uppercase tracking-wide opacity-60 border-b border-border pb-2">
+          <h3 class="text-sm font-mono uppercase tracking-wide opacity-75 border-b border-border pb-2">
             By build type
           </h3>
           <ul class="mt-4 space-y-1.5">
@@ -941,7 +941,7 @@ const formatShortDate = (d: string | Date) =>
           </ul>
         </nav>
         <nav aria-label="Browse money questions">
-          <h3 class="text-sm font-mono uppercase tracking-wide opacity-60 border-b border-border pb-2">
+          <h3 class="text-sm font-mono uppercase tracking-wide opacity-75 border-b border-border pb-2">
             Money questions
           </h3>
           <ul class="mt-4 space-y-1.5">
@@ -976,7 +976,7 @@ const formatShortDate = (d: string | Date) =>
                   href={`/posts/${id}/`}
                   class="flex flex-col gap-1 py-4 hover:bg-black/5 transition-colors sm:grid sm:grid-cols-[5.5rem_minmax(0,1fr)_auto] sm:items-baseline sm:gap-4"
                 >
-                  <span class="text-sm tabular-nums opacity-60">
+                  <span class="text-sm tabular-nums opacity-75">
                     {formatShortDate(data.pubDatetime)}
                   </span>
                   <span class="min-w-0">
@@ -1013,7 +1013,7 @@ const formatShortDate = (d: string | Date) =>
                 rel="noopener"
                 class="block border border-border rounded-lg p-4 hover:border-accent transition-colors"
               >
-                <div class="text-sm opacity-60 mb-1">
+                <div class="text-sm opacity-75 mb-1">
                   {v.kind} &middot; {v.date}
                 </div>
                 <div class="font-semibold text-accent">{v.title}</div>
@@ -1033,7 +1033,7 @@ const formatShortDate = (d: string | Date) =>
           </div>
           <div class="border-border mt-6 rounded-lg border px-4 py-3">
             <p class="font-semibold">2026 ADU benchmark sheet</p>
-            <p class="mt-1 text-sm opacity-90">
+            <p class="mt-1 text-sm text-foreground/90">
               Quarterly cost ranges for every build on this site, in one CSV.
               Free download, no email needed. Use it to sanity-check a bid:
               compare your quote's phase totals to the inland/coastal ranges.
@@ -1092,4 +1092,3 @@ const formatShortDate = (d: string | Date) =>
   });
 </script>
 
-<script is:inline src="/scripts/juris-filter.js"></script>
