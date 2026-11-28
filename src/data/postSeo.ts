@@ -518,7 +518,7 @@ export const POST_SEO: Record<string, PostSeo> = {
       "For standard California ADUs, no: state law bars owner-occupancy requirements. JADUs are the exception, limited to JADUs sharing a bathroom with the home.",
   },
   "sb-1117-should-you-rush-permit": {
-    title: "36 Days to SB 1117: Rush Your Permit Before Jan 1?",
+    title: "35 Days to SB 1117: Rush Your Permit Before Jan 1?",
     description:
       "SB 1117 takes effect Jan 1, 2027. If your city has a steep 750 sq ft impact-fee cliff, waiting for January's marginal rates could save you five figures.",
   },

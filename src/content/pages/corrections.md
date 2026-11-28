@@ -32,6 +32,22 @@ The most valuable messages we get are from contractors and estimators telling us
 
 ## Change log
 
+### 28 November 2026 — Parking guide corrected: six exemptions under §66322, not five under §66314
+
+**Changed:** The ADU parking guide's exemption count and citation are corrected: California bars cities from imposing ADU parking requirements in **six** cases under Gov. Code **§66322(a)(1)-(6)**, not five under §66314(d)(10)-(11). The sixth case — the ADU permit applied for together with a permit for a new single-family dwelling — only counts when one of the first five also applies. The garage-conversion answer is also corrected: a city **may not require replacement of parking spaces demolished or converted to build an ADU** (§66314(d)(11)); what it may require, at most, is one space for the ADU itself (§66314(d)(10)). The post previously said replacement parking "may be required" with flexible placement.
+
+**Reason:** Re-read of the Government Code ADU parking provisions (verified against the code text 1 Nov 2026; confirmed against the live post 25 Nov 2026): the exemption list lives in §66322(a), while §66314(d)(10)-(11) holds the one-space maximum and the no-replacement rule. The error was live from publication (22 Nov 2026) and had been crawled by Google.
+
+**Source:** California Government Code §66322(a)(1)-(6); §66314(d)(10)-(11).
+
+### 28 November 2026 — SB 1117 rush-permit SEO title corrected: 36 days → 35 days
+
+**Changed:** The search/social title for the SB 1117 rush-permit post now reads **"35 Days to SB 1117: Rush Your Permit Before Jan 1?"**, matching the post itself. The post body and headline were corrected to 35 days when the post published on 27 Nov 2026, but the separate SEO-title override still carried the 26 Nov count of 36 days.
+
+**Reason:** The 27 Nov publish updated the post title, description, and body to 35 days but missed the SEO-title override in `src/data/postSeo.ts`.
+
+**Source:** Post's own publish-date arithmetic (27 Nov 2026 → 1 Jan 2027 = 35 days).
+
 ### 17 November 2026 — Encinitas school fee corrected: $3,832 → $4,304 (both districts now at the Level I cap)
 
 **Changed:** The Encinitas post's school fee is **$4,304**, not $3,832. Both districts serving Encinitas parcels have raised their rates since the post was published: Encinitas Union SD is $2.55/sq ft (as of July 1, 2026) and San Dieguito Union HSD is $2.83/sq ft (current page, superseding the older $2.52). Together they reach the 2026 SAB Level I maximum of $5.38/sq ft — $4,304 on an 800 sq ft ADU. The post's total stays ~$322,000 at published precision (phase sum $322,344; ~$403/sq ft), and the premium over the LA County baseline is now ~$2,300, not $2,000.
